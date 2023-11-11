@@ -1,0 +1,1 @@
+[https://kubernetes.io/zh/docs/tasks/access-application-cluster/configure-access-multiple-clusters/](https://kubernetes.io/zh/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)

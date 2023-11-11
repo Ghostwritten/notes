@@ -1,0 +1,4 @@
+ - [javascript 1.简介与入门](https://blog.csdn.net/xixihahalelehehe/article/details/120210917?spm=1001.2014.3001.5501)
+ - [javascript 2.用法](https://blog.csdn.net/xixihahalelehehe/article/details/120215959?spm=1001.2014.3001.5501)
+ - [JavaScript 3.Chrome 浏览器中执行 JavaScript](https://ghostwritten.blog.csdn.net/article/details/120249576)
+ - [JavaScript 4. 输出](https://ghostwritten.blog.csdn.net/article/details/120263559)

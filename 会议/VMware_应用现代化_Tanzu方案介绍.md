@@ -1,0 +1,31 @@
+
+官网：[https://tanzu.vmware.com/tanzu](https://tanzu.vmware.com/tanzu)
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/e98478d12c5648ddae65e7fd2d953586.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/ef28b2e3b162447bba37d9ecd6cc8cc5.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/78d0f941a1b14a4da683041291be0bee.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/40a71e32199c48cdb6d8a4d6c4ab54d9.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/d9684494500e4ba0b8f1f6edb170a37a.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2c1fcd39c7194b3387fa71c96b463616.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/e07804112db64ba68b1419e7036aeb90.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/6a2e2319f2b34d1b926d596ec042a7c1.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/a1aa1553b78343b3b8c5eab94a5a7859.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/400f051feca04c52b49fce2c8ce20089.png)
+
+ - [craig mcluckie的博客](https://cmcluck.medium.com/)
+ - [joe beda的github](https://github.com/jbeda)
+ - [joe beda介绍](https://devopsloop.io/speakers/joe-beda)
+ - [brendan buerns的github](https://github.com/brendandburns)
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/f9a8304046c14f19a8a6371981401e61.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/51d8acb00a58440096453e580f61b0ab.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/87f33dea1c4d48988836f135bbc3b881.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/21b07e14204c4b4d9474c75c75396417.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/7330901ddde649b08482293c1bea1e21.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/a3a4e909c73d4da4a50b98e7bfcf10a7.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/182ede2215894ff5ac168971b8555020.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/0ac160925a3d4461824e2ec30a5b1db3.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/e417e037a6874887b9eca4521ef4d588.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/6d36213013334240a39c823703e9a5c1.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/5b933eabe590439b94e75d9237e62edf.png)
+

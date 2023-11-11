@@ -1,0 +1,1 @@
+[/Shell中while循环的陷阱, 变量实效, 无法赋值变量](https://justcode.ikeepstudying.com/2018/02/shell%EF%BC%9A-shell%E4%B8%ADwhile%E5%BE%AA%E7%8E%AF%E7%9A%84%E9%99%B7%E9%98%B1-%E5%8F%98%E9%87%8F%E5%AE%9E%E6%95%88-%E6%97%A0%E6%B3%95%E8%B5%8B%E5%80%BC%E5%8F%98%E9%87%8F/)
