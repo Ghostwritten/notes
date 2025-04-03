@@ -1,7 +1,7 @@
 #  grafana 安装
 tags: grafana
 
-![](https://img-blog.csdnimg.cn/9702e18f3d4247149383694da446dd81.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/22f4851a28b092f1c34449beafee0ae6.png)
 
 
 

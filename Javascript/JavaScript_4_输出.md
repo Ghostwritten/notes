@@ -1,7 +1,7 @@
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ada439259de24b25ada6dabda62007fd.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/72a9461e9101ab71a6f7c72f37e19cde.png)
 
 
 ##  1. 简介
@@ -29,7 +29,7 @@ window.alert(5 + 6);
 </html>
 ```
 输出
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1be3b8d1eda44356813e0ad81ef2f07c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c6f42d58055556c1694dac330abd709b.png)
 
 ##  3. 操作 HTML 元素
 请使用 "id" 属性来标识 HTML 元素，并 innerHTML 来获取或插入元素内容：
@@ -51,7 +51,7 @@ document.getElementById("demo").innerHTML = "段落已修改。";
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cca4a0ea64aa4568bcb42d3a8f91264c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/97bee8f9857cb13f7cc8a91e8ada9f76.png)
 ##  4. 写到 HTML 文档
 
 ```bash
@@ -73,7 +73,7 @@ document.write(Date());
 
 
 输出
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b49c73764e0c42fbac07c7d5af6025ba.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/520f8dc08daf0d6454fb4d24b0b6520f.png)
 第二例
 
 ```bash
@@ -97,8 +97,8 @@ function myFunction() {
 </html>
 ```
 输出
-![在这里插入图片描述](https://img-blog.csdnimg.cn/14c7fca289734f3ab35c6b11451b202e.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/90b572f8245a4b3881f5bd00b28b9c47.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8bf6e9eac35d4c01d2d714751a6dc985.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ac0f3c3481dd76ab784fa0d213391984.png)
 
 ##  5. 写到控制台
 如果您的浏览器支持调试，你可以使用 `console.log()` 方法在浏览器中显示 JavaScript 值。
@@ -123,5 +123,5 @@ console.log(c);
 </html>
 ```
 实例 console 截图：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/62e3a6571b974e0db54de86ed48d8685.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d65f294bc1368f4dcd267e8c6b0f2a16.png)
 

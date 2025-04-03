@@ -11,7 +11,7 @@ ping 能够以毫秒为单位显示发送请求到返回应答之间的时间量
  - ping  域名
  - ping  IP 地址
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/79dfb080b34c40e689960d64752015a0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1674a3a845a6d71c5cb151b88c5f9b6a.png)
 
 
 如图所示，使用 ping 命令检查到 IP 地址 210.43.16.17 的计算机的连通性，该例为连接正常。共发送了四个测试数据包，正确接收到四个数据包。

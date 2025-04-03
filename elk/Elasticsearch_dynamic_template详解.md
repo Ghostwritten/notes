@@ -14,7 +14,7 @@
  - long_ 开头的都设置成 long 类型
 
 模板按顺序进行处理-第一个匹配模板达到要求。可以使用PUT mapping API将新的模板附加到列表的尾部。如果新的模板与现有的模板同名，它将会替换旧的版本。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201111145819494.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/71166239720d2cdfe023237f8e4177cd.png#pic_center)
 ## 2. 匹配规则参数
 ### 2.1 match_mapping_type（匹配映射类型）
 `match_mapping_type`通过动态字段映射检测数据类型的匹配，换句话说，就是Elasticsearch认为该字段应该具有的数据类型。只能自动检测以下数据类型：`boolean`(布尔类型),`date`(日期),`double`(浮点型),`long`(长整型),`object`(对象类型),`string`(字符类型)。同时，它也接受*来匹配所有数据类型。

@@ -224,7 +224,7 @@ $ perf report
 
 接着，找到我们关注的 app 进程，按回车键展开调用栈，你就会得到下面这张调用关系图：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210617105313323.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5d86d479aa8f13e5eddbab2cd0ca94ea.png)
 这个图里的 swapper 是内核中的调度进程，你可以先忽略掉。我们来看其他信息，你可以发现， app 的确在通过系统调用 `sys_read()` 读取数据。并且从 `new_sync_read` 和 `blkdev_direct_IO`  能看出，进程正在对磁盘进行直接读，也就是**绕过了系统缓存**，每个读请求都会从磁盘直接读，这就可以解释我们观察到的 iowait 升高了。
 
 看来，罪魁祸首是 app 内部进行了磁盘的直接 `I/O` 啊！下面的问题就容易解决了。我们接下来应该从代码层面分析，究竟是哪里出现了直接读请求。查看源码文件 [app.c](https://github.com/feiskyer/linux-perf-examples/blob/master/high-iowait-process/app.c)，你会发现它果然使用了 `O_DIRECT` 选项打开磁盘，于是绕过了系统缓存，直接对磁盘进行读写。

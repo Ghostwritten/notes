@@ -28,7 +28,7 @@
 实际上，磁盘读写的最小单位是**扇区**，然而扇区只有 **512B** 大小，如果每次都读写这么小的单位，效率一定很低。所以，文件系统又把连续的扇区组成了**逻辑块**，然后每次都以**逻辑块**为最小单元，来管理数据。常见的逻辑块大小为 **4KB**，也就是由连续的 **8 个扇区**组成。
 
 理解目录项、索引节点以及文件数据的关系
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210707174104408.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8c7268a030c2baf9a15c45b68f2cc79c.png)
 第一，目录项本身就是一个内存缓存，而索引节点则是存储在磁盘中的数据。在前面的 Buffer 和 Cache 原理中，我曾经提到过，为了协调慢速磁盘与快速 CPU 的性能差异，文件内容会缓存到页缓存 Cache 中。那么，你应该想到，这些索引节点自然也会缓存到内存中，加速文件的访问。
 
 第二，磁盘在执行文件系统格式化时，会被分成三个**存储区域，超级块、索引节点区和数据块区**。其中
@@ -41,7 +41,7 @@
 **目录项、索引节点、逻辑块以及超级块**，构成了 Linux 文件系统的四大基本要素。不过，为了支持各种不同的文件系统，Linux 内核在**用户进程**和**文件系统**的中间，又引入了一个抽象层，也就是**虚拟文件系统 VFS**（Virtual File System）。
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210707174923504.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a5ed508dd7da1fcda47f5aef22c2a5cf.png)
 
 通过这张图，你可以看到，在 VFS 的下方，Linux 支持各种各样的文件系统，如 Ext4、XFS、NFS 等等。按照存储位置的不同，这些文件系统可以分为三类。
 

@@ -3,7 +3,7 @@ tags: ConfigMap,对象
 <!-- catalog: ~ConfigMap~ -->
 
 
-[![在这里插入图片描述](https://img-blog.csdnimg.cn/83cf609310b6438390323994a4ed4dc2.png)](https://www.rottentomatoes.com/m/1084398-life_is_beautiful)
+[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2b723b27764f3b528c9e8ea48eec8472.png)](https://www.rottentomatoes.com/m/1084398-life_is_beautiful)
 
 *“早安！公主！”          ——《美丽人生》*
 
@@ -407,10 +407,10 @@ kubectl create -f https://kubernetes.io/examples/pods/pod-configmap-volume-speci
 very
 ```
 #### 4.4.3 将 ConfigMap 数据添加到数据卷中的特定文件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201125210939982.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020112521095867.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020112521110166.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201125211124301.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b1df43a5b30df56a72db450cfd616501.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/48ff9a65a2db13fd0a72b1888161a24d.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e9458387a229ca710d9c7c5917f9ae54.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/52ed7c0bae39a1c06875971e93dd008c.png#pic_center)
 
 
 ### 4.6 pod引用configmap示例

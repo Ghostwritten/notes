@@ -3,7 +3,7 @@ tags: javascript
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/af26356f07ac490f8880ff843285c0dc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/324fe8935f5a19e8f00f09e173a2c4a2.png)
 
 ##  
 
@@ -114,8 +114,8 @@ function myFunction(name,job){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5f60ead7e05f4394a479bb39f2de6ae3.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/17e29e006a804797abbe9f00d9a04696.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eeb3e1554ec1b9e780e96c7fc8f29d8d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a66628ef162061f61fb540ec1191185c.png)
 ###  3.1 参数规则
 
  - JavaScript 函数定义显式参数时没有指定数据类型。
@@ -314,7 +314,7 @@ document.getElementById("demo").innerHTML=myFunction(4,3);
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/005093712ad742e5af8e1e3e292f09e9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5bf4cb294ecb239afd5a4034cebe23eb.png)
 ##  5. 局部 JavaScript 变量
 在 JavaScript 函数内部声明的变量（使用 var）是局部变量，所以只能在函数内部访问它。（该变量的作用域是局部的）。
 
@@ -769,7 +769,7 @@ document.getElementById("demo").innerHTML = x(5, 5);
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/473db40930a24810a4126a7fc06374f1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1c5d83626c8ce45eeec0b6b980140ed2.png)
 另一个方法：
 
 ```bash
@@ -829,7 +829,7 @@ function myFunction(){
 </html>
 ```
 输出
-![在这里插入图片描述](https://img-blog.csdnimg.cn/589a53c3c85c4a54928a7366ee81d749.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f0e74de4ee2781437a1acb2c4fcc89da.gif#pic_center)
 闭包函数
 
 ```bash
@@ -858,7 +858,7 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/589a53c3c85c4a54928a7366ee81d749.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f0e74de4ee2781437a1acb2c4fcc89da.gif#pic_center)
 变量 add 指定了函数自我调用的返回字值。
 
 自我调用函数只执行一次。设置计数器为 0。并返回函数表达式。

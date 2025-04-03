@@ -3,7 +3,7 @@
 我们首先要增添端口,以使得Nginx可以和客户端建立起一个TCP连接,那么监听端口的这个指令尼,叫listen;它是放在我们的server配置块下的;通过监听的端口或者地址;我们其实已经可以决定有哪些匹配上我们TCP四元簇的地址连接对应的server块的相关指令去处理相应的请求;
 
 下面我们来简单看下listen指令提供的简单功能;
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3a3170da9f114abb92d4a20068d85c7f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8d899da0e928fc463829f33fe71cd7a9.png)
 我们可以看到listen指令它的语法主要有三类:
 
 (1):监听一个地址加上相应的端口:`listen address[:port]`

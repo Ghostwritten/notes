@@ -1,4 +1,4 @@
-![在这里插入图片描述](https://img-blog.csdnimg.cn/21bc16a65d2041e4ba1be2ab204da10e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/30d332f07b9cbcc81e052ff509a59786.png)
 
 
 
@@ -24,15 +24,15 @@
 
 目前，社区有多种 Commit Message 的规范，例如 [jQuery](https://jquery.com/)、[Angular](https://angular.io/) 等。我将这些规范及其格式绘制成下面一张图片，供你参考：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d9e4b58e4bab49adae006b7af39c2b7f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/486eb5c8e2ba59cd44116e6a1c626eb3.png)
 在这些规范中，Angular 规范在功能上能够满足开发者 commit 需求，在格式上清晰易读，目前也是用得最多的。Angular 规范其实是一种语义化的提交规范（Semantic Commit Messages），所谓语义化的提交规范包含以下内容：
 - `Commit Message` 是语义化的：Commit Message 都会被归为一个有意义的类型，用来说明本次 commit 的类型。
 - `Commit Message` 是规范化的：Commit Message 遵循预先定义好的规范，比如 Commit Message 格式固定、都属于某个类型，这些规范不仅可被开发者识别也可以被工具识别。
 
 为了方便你理解 Angular 规范，我们直接看一个遵循 Angular 规范的 commit 历史记录，见下图：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f79679618f9440c099bacde1c8dfc272.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9d7c0c06657a9ae13ab7a0a93b666042.png)
 再来看一个完整的符合 Angular 规范的 Commit Message，如下图所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7a44fe54a3904a11a1a9bf5ee146b452.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e691dc7903cf67e7a5ee9937c88e294a.png)
 通过上面 2 张图，我们可以看到符合 `Angular Commit Message` 规范的 `commit` 都是有一定格式，有一定语义的。
 
 ## 4. 怎么写出符合 Angular 规范的 Commit Message
@@ -78,9 +78,9 @@ Breaks foo.bar api, foo.baz should be used instead
 #### 4.1.1 type
 我在这里列出了 Angular 规范中的常见 type 和它们所属的类别，你在提交 Commit Message 的时候，一定要注意区分它的类别。举个例子，我们在做 Code Review 时，如果遇到 Production 类型的代码，一定要认真 Review，因为这种类型，会影响到现网用户的使用和现网应用的功能。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2360a892b779458e956a4f5e6d3b280b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/267b51c6dad9daa5245a8fc1cd4bbbc1.png)
 有这么多 type，我们该如何确定一个 commit 所属的 type 呢？这里我们可以通过下面这张图来确定。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ff4995c04e4c4f32b9191c6f2d66a17f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b756ac1d5404995d414d345b0f62b52d.png)
 如果我们变更了应用代码，比如某个 Go 函数代码，那这次修改属于代码类。在代码类中，有 4 种具有明确变更意图的类型：feat、fix、perf 和 style；如果我们的代码变更不属于这 4 类，那就全都归为 refactor 类，也就是优化代码。
 
 如果我们变更了非应用代码，例如更改了文档，那它属于非代码类。在非代码类中，有 3 种具有明确变更意图的类型：test、ci、docs；如果我们的非代码变更不属于这 3 类，那就全部归入到 chore 类。
@@ -183,11 +183,11 @@ This reverts commit 079360c7cfc830ea8a6e13f4c8b8114febc9b48a.
 ###  7.1 git rebase 命令介绍
 git rebase 的最大作用是它可以重写历史。
 我们通常会通过 `git rebase -i <commit ID>`使用 git rebase 命令，-i 参数表示交互（interactive），该命令会进入到一个交互界面中，其实就是 Vim 编辑器。在该界面中，我们可以对里面的 commit 做一些操作，交互界面如图所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/829bd15a4d7f4e71b8912636b80c6b12.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/69d9a1bc76b45e00730371964b27bc76.png)
 这个交互界面会首先列出给定`<commit ID>`之前（不包括，越下面越新）的所有 commit，每个 commit 前面有一个操作命令，默认是 `pick`。我们可以选择不同的 commit，并修改 commit 前面的命令，来对该 commit 执行不同的变更操作。
 
 `git rebase` 支持的变更操作如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/52b472cb035d41f59fa5b910576d9305.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/de9491801236a2ca3e99566724e404e7.png)
 在上面的 7 个命令中，`squash` 和 `fixup` 可以用来合并 commit。例如用 squash 来合并，我们只需要把要合并的 commit 前面的动词，改成 squash（或者 s）即可。你可以看看下面的示例：
 
 
@@ -304,9 +304,9 @@ fc70a21 feat(user): add create user function
 $ git rebase -i 7157e9e
 ```
 执行命令后，我们会进入到一个交互界面，在该界面中，我们可以将需要合并的 4 个 commit，都执行 squash 操作，如下图所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/85dac6886fd045feabb2022892acb87e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bad9b93294da0e1d31000d0e41d5a9f8.png)
 修改完成后执行:wq 保存，会跳转到一个新的交互页面，在该页面，我们可以编辑 Commit Message，编辑后的内容如下图所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fb6db662526649849283a765aa4478dd.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ecbd6a3cb9e1771afa0ff861515ca1f0.png)
 #开头的行是 git 的注释，我们可以忽略掉，在 `rebase` 后，这些行将会消失掉。修改完成后执行`:wq` 保存，就完成了合并提交操作。
 
 除此之外，这里有 2 个点需要我们注意：
@@ -366,7 +366,7 @@ $ git log –oneline
 2. 更新最近一次提交的 Commit Message
 在当前 Git 仓库下执行命令：`git commit --amend`，后会进入一个交互界面，在交互界面中，修改最近一次的 Commit Message，如下图所示：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ecc8b24c6f614b3e98aed10426646df7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8be7e74f0ebe636bc675cef242f30119.png)
 修改完成后执行`:wq` 保存，退出编辑器之后，会在命令行显示，该 commit 的 message 的更新结果如下：
 
 ```bash
@@ -402,9 +402,9 @@ a38f808 docs(docs): append test line 'update$i' to README.md
 
 2. 修改倒数第 3 次提交 commit 的 message。
 在 Git 仓库下直接执行命令 `git rebase -i 55892fa`，然后会进入一个交互界面。在交互界面中，修改最近一次的 Commit Message。这里我们使用 `reword` 或者 `r`，保留倒数第 3 次的变更信息，但是修改其 message，如下图所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d8fcaa159e0141408197fecb23a5e017.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1c8db2a91791efc514d8f5a4a13fdd5f.png)
 修改完成后执行`:wq` 保存，还会跳转到一个新的交互页面，如下图所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bf0aea620c3f4d7389b4a822d49a6861.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dd4f3d52a722dffb484b247f196ae20b.png)
 修改完成后执行`:wq` 保存，退出编辑器之后，会在命令行显示该 commit 的 message 的更新结果：
 
 
@@ -428,7 +428,7 @@ Successfully rebased and updated refs/heads/master.
 ## 9. Commit Message 规范自动化
 其实，到这里我们也就意识到了一点：Commit Message 规范如果靠文档去约束，就会严重依赖开发者的代码素养，并不能真正保证提交的 commit 是符合规范的。那么，有没有一种方式可以确保我们提交的 Commit Message 一定是符合规范的呢？有的，我们可以通过一些工具，来自动化地生成和检查 Commit Message 是否符合规范。另外，既然 Commit Message 是规范的，那么我们能不能利用这些规范来实现一些更酷的功能呢？答案是有的，我将可以围绕着 Commit Message 实现的一些自动化功能绘制成了下面一张图。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d5712a0d3dca49719f3b2e1fa53b8e08.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ed76e4bf04a3d23a06a4260e154a7669.png)
 这些自动化功能可以分为以下 2 类：
 
 - Commit Message 生成和检查功能：生成符合 Angular 规范的 Commit Message、Commit Message 提交前检查、历史 Commit Message 检查。
@@ -468,7 +468,7 @@ Angular 规范中，Commit Message 包含三个部分：`Header`、`Body` 和 `F
 
 ### 11.1 第一题
 1. 创建git-test项目
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b2e80e22670c4e16b52112191b1c4d86.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2bbf7df70e365ef8773dd026e8e11c0e.png)
 2. 本地安装git
 配置yum源
 ```bash
@@ -523,7 +523,7 @@ $ cat /root/.ssh/id_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDjE+yheOYdN0YfgqzuS1PyTqwdUAbP3C7iP1zuWFutdaS5RCRNaljusudgE2BQ//ttuAg/CjecNFq9HoM320pU9jO6kq1ZpK6limdZUz7a5LWMMpfP6/i+oJYf8okwajbVXz80zkGN0P/I6F+/uiThOeN0fKboYHiRLvI44AdvUvO0nhzqUxC05umprIVfsf/p/JnS2FUsMd5rfzkLonCeMzfW19dhf1wqV5MOD+JsTdoog32Ir9Iwlpgu+o2TiuVVI/BMUqv92wJyGKngeOaAmKmf6zeqGfWvJpjcorgVZiLiOyomGw3AbwLSntjGq9KrSviULZWGLcigKFr7oyvcOE2Qv4F2wv2cVJBrXA3wMjpCt4wOPksk8v5HGOIsG7F5AQcIV/dLn01z/RIrdVzUrr9g8EXtwyNfpJ+15lKu5+de3tWb2ZHWncqoY50G7oeBnC5S9aKRwitkPhuodfPcaPmYPbfysimY9GMbeUEX8ynnZMkTzpDXXD4KP3G1YQ0= 1zoxun1@gmail.com
 ```
 拷贝公钥至github ssh
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2a3a67b3590d4740bbe410cce2d7d3d5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4369c80ceaa335e7245cbdfc0660a341.png)
 
 4.  测试添加第一个 commit
 

@@ -1,6 +1,6 @@
 
 ## 1. 聚合（Aggregation）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020111116143492.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/106a1b2fa9b05b846efdd4af2cb88c43.png#pic_center)
 Elasticsearch 除搜索以外，提供的针对 ES 数据进行统计分析的功能
 
  - 实时性
@@ -15,16 +15,16 @@ Elasticsearch 除搜索以外，提供的针对 ES 数据进行统计分析的�
 
  - 无需再客户端自己去实现分析逻辑
 ### 1.1 Kibana 可视化报表
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201111161615383.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ca79e284cce354b4577c125b795f77eb.png#pic_center)
 ### 1.2 聚合的分类
  - `Bucket Aggregation` - 一些列满足特定条件的文档的集合
  - `Metric Aggregation` - 一些数学运算，可以对文档字段进行统计分析
  - `Pipeline Aggregation` - 对其他的聚合结果进行二次聚合
  - `Matrix Aggregation` - 支持对多个字段的操作并提供一个结果矩阵
 ### 1.3 Bucket & Metric
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201111161817441.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c6690b7a3e97f2d825675867a71f6543.png#pic_center)
 #### 1.3.1 Bucket
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201111161906128.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/79fcecbb19ce2523c2e3bd6ab6a3171a.png#pic_center)
 #### 1.3.2 Metric
 Metric 会基于数据集计算结果，除了支持在字段上进行计算，同样也支持在脚本（painless script）产生的结果之上进行计算
 大多数 Metric 是数学计算，仅输出一个值
@@ -36,9 +36,9 @@ Metric 会基于数据集计算结果，除了支持在字段上进行计算，�
 
 
 ### 1.4 Demo
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020111116232768.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201111162426325.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201111162458171.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b7442122e98551ef6a947858f8e9154e.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5816ffdbf767770c4b7a38a820470c67.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4a05480582908425771748b3b90d344b.png#pic_center)
 参考资料：
 极客时间：Elasticsearch核心技术与实战
 相关阅读：

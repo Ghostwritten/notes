@@ -450,6 +450,6 @@ gitbook install
 }
 ```
 效果：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0f48c3573a5a40859d00cfe115788d85.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0430191b52931b803907f25d0860aee0.png)
 
 

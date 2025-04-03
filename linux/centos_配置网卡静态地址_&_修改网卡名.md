@@ -83,5 +83,5 @@ DNS1=192.168.211.2
 ```bash
 reboot
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/084f9f346c3246e0bd66466bfbd5dc6b.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d06b01ebcb9015748e246d07a4b687c2.gif#pic_center)
 

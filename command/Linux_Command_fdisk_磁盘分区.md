@@ -3,7 +3,7 @@ tags: lvm
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/83979b13d65f4161a5c10ce3fa4b2f0c.jpeg#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9c7a22da42a2c0f9545240da38ade1cf.jpeg#pic_center)
 
 ##  1. 简介
 [fdisk](https://man7.org/linux/man-pages/man8/fdisk.8.html) 代表（用于“固定磁盘或格式化磁盘”）是Linux/Unix系统中最常用的基于命令行的磁盘操作实用程序。借助 fdisk 命令，您可以使用其自己的用户友好的基于文本的菜单驱动界面查看、创建、调整大小、删除、更改、复制和移动硬盘驱动器上的分区。

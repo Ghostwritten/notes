@@ -18,10 +18,10 @@
 ## 3. 避免查询时脚本
 可以在 Index 文档时，使用 `Ingest Pipeline`，计算并写入某个字段
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/202103151408428.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2fdd1802d49fc0a3d6d9cb2cad7d8f0e.png)
 ## 4. 常见的查询性能问题 - 使用 Query Context
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210315140944196.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0056b85f881dac1c29036035466c9b6c.png)
 ## 5. 聚合文档消耗内存
 
  - 聚合查询会消耗内存，特别是针对很大的数据集进行聚合运算
@@ -29,11 +29,11 @@
  - 当需要使用不同的 `Query Scope`，可以使用 `Filter Bucket`
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210315141421852.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a1207ba229442cdbe3d21fd6f1d4a9a8.png)
 ## 6. 通配符开始的正则表达
 通配符开头的正则，性能非常糟糕，需避免使用
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210315141510931.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/89371973401aa3976fed4531e8bf587f.png)
 ## 7. 优化分片
 
  - 避免 Over Sharing

@@ -23,7 +23,7 @@ Elliots 的计划始于一个冒险的举动：他必须故意让自己处于危
 当我们第一次切换到他的屏幕时，我们看到他一直在使用[Volatility Framework](https://www.volatilityfoundation.org/)——最广泛使用的内存取证工具。此时，Elliot 已经将内存从受感染的系统转储到名为“out.mem”的文件中，并将其移至干净的分析系统中。他现在正在运行一系列分析步骤以搜索 Dark Army 的恶意软件。
 
 为什么 Elliot 会依赖内存取证而不是其他工具或技术？Dark Army 可能已经用 Rootkit 感染了他的系统，从而有效地将他们的恶意软件隐藏在操作系统和其他软件之外。内存分析可以提供对系统证据的低级、纯正视图。内存中的人工制品还可以提供对近期活动的洞察，包括恶意软件的使用，这些活动可能不会在其他地方保存。
-![Elliot 使用 Volatility 在内存中寻找 rootkit 的证据](https://img-blog.csdnimg.cn/b8eaed00597241d09e69b01a23eb5551.png)
+![Elliot 使用 Volatility 在内存中寻找 rootkit 的证据](https://i-blog.csdnimg.cn/blog_migrate/acc148d0e9df7037bea308ff5e1cd06a.png)
 | Elliot 使用 Volatility 在内存中寻找 rootkit 的证据 |
 |--|--|
 所有这些镜头都是基于对我在家庭实验室中构建并感染了 rootkit 的 Linux 系统的真实内存映像的分析。让我们来看看每个命令。
@@ -58,7 +58,7 @@ vol.py -f out.mem --profile=kali --pid=39238 linux_psaux
 ```
 
 列出有关 PID `39238` 的基本详细信息 - 由上一个命令标识的 Python 进程。它的论点肯定看起来很可疑：
-![Volatility 进程列表插件“linux_psaux”的输出，揭示了一个基于 Python 的后门](https://img-blog.csdnimg.cn/7f257ba0341741b9ade5e2033018eb8c.png)
+![Volatility 进程列表插件“linux_psaux”的输出，揭示了一个基于 Python 的后门](https://i-blog.csdnimg.cn/blog_migrate/62bcbb3fe207368247feb3c2b4ff6aa5.png)
 | Volatility 进程列表插件“linux_psaux”的输出，揭示了一个基于 Python 的后门 |
 |--|--|
 
@@ -82,42 +82,42 @@ Elliot 可能对之前与黑暗军队的交易有所了解，但他不能确定�
 
 无论时机如何，我都想确保我们捕获了漏洞发现过程的准确元素。首先是找到一个可以用来执行恶意代码的错误。
 
-![漏洞研究的行业工具：afl-fuzz 和 gdb](https://img-blog.csdnimg.cn/36d0e2af486c42bfa22b35b5629335c0.png)
+![漏洞研究的行业工具：afl-fuzz 和 gdb](https://i-blog.csdnimg.cn/blog_migrate/131c5d95588b6f794320b15b385ddbbc.png)
 | 漏洞研究的行业工具：afl-fuzz 和 gdb |
 |--|--|
 
 这张照片包括两个窗口：背景是[American Fuzzy Lop](https://lcamtuf.coredump.cx/afl/) (afl-fuzz)，前景是[GNU 调试器](https://www.sourceware.org/gdb/)(gdb)。`Afl-fuzz` 是一个“fuzzer”——一种自动生成大量无效数据、通过应用程序输入运行并监控崩溃和其他错误的工具。`afl-fuzz` 除了因其强大的功能而受到 bug 猎人的欢迎外，它在运动中看起来真的很酷（尤其是对于控制台应用程序），所以我认为它非常适合这个场景。
 
 请注意窗口顶部的文本：`american fuzzy lop 1.83b` (evince)。“evince”是被模糊测试的应用程序的标题——它是许多 Linux 发行版的默认 PDF 查看器。这告诉我们 Elliot 计划将他的漏洞利用嵌入到文档文件中。
-![afl-fuzz 屏幕的原始模型](https://img-blog.csdnimg.cn/ba91dda5ebc64c44b05b23a507e05556.png)
+![afl-fuzz 屏幕的原始模型](https://i-blog.csdnimg.cn/blog_migrate/d1fd5b7493f6edd730c2e188c96902a3.png)
 | afl-fuzz 屏幕的原始模型 |
 |--|--|
 
 一个模糊器可能会识别出几十个崩溃；下一步是评估其中哪些可能导致可利用的漏洞。这就是前台窗口中的 gdb 调试器发挥作用的地方。根据提示，我们可以看到 Elliot 正在使用一个插件“ [gdp-peda](https://github.com/longld/peda) ”，它为漏洞利用开发提供了有用的功能。
 
 他首先使用 gdb “run” 命令重播 afl-fuzz 识别的崩溃场景之一：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a610dbb9bfd34220abbb956ebbd78167.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/58f146b57d4deaaf58327ff09c042cc0.png)
 Gdb 报告分段错误：
-![加载由 afl-fuzz 生成的格式错误的输入之一后，evince 中的分段错误](https://img-blog.csdnimg.cn/8fa75370ddb34c68842fac85eb80e823.png)
+![加载由 afl-fuzz 生成的格式错误的输入之一后，evince 中的分段错误](https://i-blog.csdnimg.cn/blog_migrate/cf8bebb2663e73a67da4bdc6e9a4bbcd.png)
 |加载由 afl-fuzz 生成的格式错误的输入之一后，evince 中的分段错误 |
 |--|--|
 
 这个漏洞可以利用吗？Elliot 将进行进一步的分析，以检查系统在崩溃时的状态。在我最初的模型中，我设计了更多他在 gdb 中运行附加命令的屏幕。这些最终被削减了时间：
 
-![原始模型 — Elliot 使用 gdb-peda 进行了一些额外的崩溃分析](https://img-blog.csdnimg.cn/6ca23d39937448fc8bb8a790075aa85f.png)
+![原始模型 — Elliot 使用 gdb-peda 进行了一些额外的崩溃分析](https://i-blog.csdnimg.cn/blog_migrate/b171a1a8aa5e16a8f1bcdf05f4f098d2.png)
 |原始模型 — Elliot 使用 gdb-peda 进行了一些额外的崩溃分析 |
 |--|--|
 作为记录，不，我实际上并没有在“evince”中发现任何可利用的漏洞。`afl-fuzz` 和 `gdb` 屏幕都是基于这些工具的真实使用，但我选择（并重命名）另一个有很多崩溃错误的二进制文件作为目标）。
 
 下一个屏幕是在另一个时间跳跃之后出现的。Elliot 正在编写基于 Python 的漏洞利用代码，该代码利用了他从模糊测试中发现的错误之一。该窗口包含 shellcode，以及对携带有效负载的 PDF 文件名的引用：“ecoin_vuln_notes.pdf”。
-![Elliot 用于“evince”的 PDF 漏洞利用中的 Shellcode](https://img-blog.csdnimg.cn/c9765fc42bbe4d0ca41d035d0365512b.png)
+![Elliot 用于“evince”的 PDF 漏洞利用中的 Shellcode](https://i-blog.csdnimg.cn/blog_migrate/fd6c13866154ce3509d0697048101943.png)
 |Elliot 用于“evince”的 PDF 漏洞利用中的 Shellcode |
 |--|--|
 
 在完成漏洞利用并合并它需要传递的任何恶意软件后，Elliot 可以将文件复制回受感染的系统。那么就等着黑暗军团上钩了。
 ## 回击（隧道中的隧道）
 一名黑暗军队的操作员，负责检查一个装满被盗文件的收件箱的枯燥工作，打开了 Elliot 的 PDF。“evince”查看器启动，稍稍延迟后，显示文件——Ecoin Loans 的普通广告。他不知情且毫无戒心地关闭了文件并继续进行。当然，这足以触发 Elliot 的攻击并进行第一阶段的攻击。
-![一名黑暗军队操作员上钩并打开了 Elliot 的 PDF](https://img-blog.csdnimg.cn/15af291557f042699da8e777d0b4f4d1.png)
+![一名黑暗军队操作员上钩并打开了 Elliot 的 PDF](https://i-blog.csdnimg.cn/blog_migrate/59421b24d3ba6f2d443f3294d6b82806.png)
 |一名黑暗军队操作员上钩并打开了 Elliot 的 PDF |
 |--|--|
 在背景中，我们看到了 Dark Army 基于 Web 的控制面板的一部分。该站点是 Elliot 的最终目标：通过适当的访问级别，它将提供监控和管理其在世界各地的所有受感染系统的能力。当然，该站点不仅位于互联网上——它还位于 Dark Army 的专用网络上。Elliot 需要通过操作员受感染的系统进行隧道传输，并一路窃取他的登录凭据。
@@ -126,7 +126,7 @@ Gdb 报告分段错误：
 
 我们在另一个时间跳转后返回到 Elliot 的屏幕。期间，Elliot 利用他在运营商系统上的立足点设置了 iodine 并窃取 SSH 密钥，并安装了额外的恶意软件。
 
-![Elliot 连接到 Dark Army 操作员的受感染系统](https://img-blog.csdnimg.cn/25e5e8b929e94e418a4a538f0112e409.png)
+![Elliot 连接到 Dark Army 操作员的受感染系统](https://i-blog.csdnimg.cn/blog_migrate/8cd83988592b6a2cd4927cd7ef78e57f.png)
 |Elliot 连接到 Dark Army 操作员的受感染系统 |
 |--|--|
 
@@ -153,7 +153,7 @@ SSH 选项“`-D 22381`”选项通过连接设置 SOCKS 代理，绑定到本�
 
 Elliot 攻击的第一阶段——屏幕上没有显示——在“garyhost”上放置了一个击键记录器。在下一个屏幕中，我们看到 Elliot 正在搜索它迄今为止捕获的数据。
 
-![Elliot 搜索键盘记录器输出文件。ARG 的粉丝可能想尝试连接到该 IP……](https://img-blog.csdnimg.cn/6c24dbefed964e3794fd2a4919095feb.png)
+![Elliot 搜索键盘记录器输出文件。ARG 的粉丝可能想尝试连接到该 IP……](https://i-blog.csdnimg.cn/blog_migrate/66e17e9275200b575c8a82d762fac6e5.png)
 |Elliot 搜索键盘记录器输出文件。ARG 的粉丝可能想尝试连接到该 IP…… |
 |--|--|
 Elliot 将三个命令串在一起
@@ -181,15 +181,15 @@ garyhost[ENTR]
 huntr[BS]er3[BS]2[ENTR]
 ```
 键盘记录序列“[BS]”代表退格——所以 Gary 的密码是“hunter2”。看起来 Dark Army 可以更好地为其内部 Web 应用程序强制执行强凭据（或两因素身份验证）。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f64387b2bae74cfbb1ab3d0b8afda555.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9929e6cf23b5447a69d68205ee6c0021.png)
 Elliot 登录。密码有效。他现在拥有黑暗军队——或者至少是他们基础设施的关键部分。通过访问他们基于 Web 的控制面板，他可以看到他们在全球范围内进行黑客攻击的真实规模和范围。
-![黑暗军队主控制面板的原始模型](https://img-blog.csdnimg.cn/f266b170ff9c4f83b216699a48b1d748.png)
+![黑暗军队主控制面板的原始模型](https://i-blog.csdnimg.cn/blog_migrate/1250c264d9e67778cc31a723fadb0953.png)
 |黑暗军队主控制面板的原始模型 |
 |--|--|
 
 请注意地图左侧列出的组织。黑暗军团显然一直很忙。其中许多反映了政府机构和非营利组织在现实世界中遭受了归因于中国民族国家黑客和其他威胁团体的妥协。
 安全研究人员可能会认识到，我们的设计深受“Beta Bot”恶意软件控制面板的启发，如下所示：
-![“Beta Bot”僵尸网络的基于 Web 的控制面板](https://img-blog.csdnimg.cn/2f55788325394cdfa1a985a0818b587b.png)
+![“Beta Bot”僵尸网络的基于 Web 的控制面板](https://i-blog.csdnimg.cn/blog_migrate/57b3e28eff420c604040bb5aede603fc.png)
 |黑暗军队主控制面板的原始模型 |
 |--|--|
 
@@ -203,5 +203,5 @@ Elliot 登录。密码有效。他现在拥有黑暗军队——或者至少是�
 
  - [https://medium.com/@ryankazanciyan](https://medium.com/@ryankazanciyan)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/38b719891f2a4f6ca6d276eccf35be19.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/615100fe64c3583b9e4b07b35d7edf34.gif#pic_center)
 

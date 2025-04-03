@@ -1,4 +1,4 @@
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2a40cdf5513b4b408b11de1b5cc8817a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e1e9076977d523604b5dfc223b127b18.png)
 
 
 
@@ -556,7 +556,7 @@ hello   1/1     Running   0          108s
 ```
 
 ## 6. 添加应用生命周期管理插件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f470fc7b64c942ac88f5b0525f28635c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d01bd7864d2ab75088a1506a65344829.png)
 Deploy the subscription operators to the hub cluster.
 ```bash
 $ kubectl config use-context ${CTX_HUB_CLUSTER}

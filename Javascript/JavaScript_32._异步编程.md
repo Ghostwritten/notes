@@ -1,7 +1,7 @@
 #  JavaScript 32. 异步编程
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3b88aea4be7c4ba193408738e52fcbbc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/03d2e9bc5c0bc5a891cd05e9591b506d.png)
 
 
 ##  1. 异步的概念
@@ -12,7 +12,7 @@
 简单来理解就是：同步按你的代码顺序执行，异步不按照代码顺序执行，异步的执行效率更高。
 
 以上是关于异步的概念的解释，接下来我们通俗地解释一下异步：异步就是从主线程发射一个子线程来完成任务。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/51cfee78be2c46d096ce6b94404255e5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c3fd8ec0988c400d18f69459ebcb6e30.png)
 ## 2. 什么时候用异步编程
 在前端编程中（甚至后端有时也是这样），我们在处理一些简短、快速的操作时，例如计算 1 + 1 的结果，往往在主线程中就可以完成。主线程作为一个线程，不能够同时接受多方面的请求。所以，当一个事件没有结束时，界面将无法处理其他请求。
 
@@ -47,7 +47,7 @@ setTimeout(print, 3000);
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8e8331fdb5044bffaf9b0739664bf6a9.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/07798de9d5a757b536fc1bc807007998.gif#pic_center)
 这段程序中的 `setTimeout` 就是一个消耗时间较长（3 秒）的过程，它的第一个参数是个回调函数，第二个参数是毫秒数，这个函数执行之后会产生一个子线程，子线程会等待 3 秒，然后执行回调函数 `"print"`，在命令行输出 `"RUNOOB!"`。
 
 当然，JavaScript 语法十分友好，我们不必单独定义一个函数 print ，我们常常将上面的程序写成：
@@ -82,7 +82,7 @@ document.getElementById("demo2").innerHTML="RUNOOB-2!";
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/850e6de0906d48ed9ae2971f8aedf0c3.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f023648c27fa1c943e39f430c6de6f9a.gif#pic_center)
 
 ## 4. 异步 AJAX
 除了 setTimeout 函数以外，异步回调广泛应用于 AJAX 编程。有关于 AJAX 详细请参见：[https://www.runoob.com/ajax/ajax-tutorial.html](https://www.runoob.com/ajax/ajax-tutorial.html)
@@ -139,7 +139,7 @@ xhr.send();
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3875875e6a48460da22f521b9d26d217.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a610d1f27e2d04a95d558076fefb36b1.png)
 `XMLHttpRequest` 的 `onload` 和 `onerror` 属性都是函数，分别在它请求成功和请求失败时被调用。如果你使用完整的 [jQuery](https://jquery.com/) 库，也可以更加优雅的使用异步 AJAX：
 
 ```bash
@@ -168,5 +168,5 @@ $(document).ready(function(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c3059c3fbfa944e69e5bda702d258675.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9255589cdb8274eb2e7bdb6e1efd3c9e.gif#pic_center)
 

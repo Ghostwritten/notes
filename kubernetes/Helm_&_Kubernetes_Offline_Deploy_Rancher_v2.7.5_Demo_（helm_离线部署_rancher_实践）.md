@@ -1,5 +1,5 @@
 
-![](https://img-blog.csdnimg.cn/5ddd4c7532e44ba5a5c3c181366d31de.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/c5da12b2f1a11f697f173a5de1a2427e.png)
 
 
 
@@ -49,9 +49,11 @@ Rancher Server 默认设计为安全的，并且需要 SSL/TLS 配置。
 安装 helm
 
 ```bash
-wget https://get.helm.sh/helm-v3.11.0-linux-amd64.tar.gz
-tar zxvf helm-v3.11.0-linux-amd64.tar.gz 
+wget https://get.helm.sh/helm-v3.13.2-linux-amd64.tar.gz
+tar -xzvf helm-v3.13.2-linux-amd64.tar.gz
 cp linux-amd64/helm /usr/local/bin/
+helm version
+rm -rf linux-amd64 helm-v3.13.2-linux-amd64.tar.gz
 ```
 查看版本
 
@@ -468,6 +470,7 @@ rancher-webhook   ClusterIP   10.255.90.146    <none>        443/TCP          22
 webhook-service   ClusterIP   10.255.198.145   <none>        443/TCP          22m
 
 ```
+修改svc 类型为nodeport，这里80与443 端口分别暴露为30012 与 30013，注意查看是否与集群内其他svc 存在冲突。
 修改内容：
 
 ```bash
@@ -558,7 +561,7 @@ rancher   <none>   rancher.ghostwritten.com   192.168.23.45   80, 443   54m
 
 - 1`92.168.23.45 rancher.ghostwritten.com`
 
-![](https://img-blog.csdnimg.cn/adb9ca73e90244d6b33a5504b2688a29.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/3a1290ba2c8886cf6f1c95617176a9f1.png)
 
 获取密码
 
@@ -567,23 +570,23 @@ $ kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='
 6xn88btlppbjgpktnvl5mf4mrvcqz498qv27q6kqkjq4jnddng4qqx
 ```
 界面输入密码点击后，获取新密码。
-![](https://img-blog.csdnimg.cn/a0714aeb7a3740b79fa359e5abe13bdb.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/a5ba76517d35e287bc39aba0410d5d0f.png)
 
 新密码：`gVCladEKFq9oViCa`
 访问：`https://rancher.ghostwritten.com:30013`
 
 ### 11.1 首页预览
-![](https://img-blog.csdnimg.cn/185716dee34f47b78349f1f56eaa342b.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/88265591413443739210e89f1d3b053d.png)
 ### 11.2  查看集群信息
 
 点击 local 集群，查看集群信息
-![](https://img-blog.csdnimg.cn/d7e7b07bde414435b18846af9eaf824f.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/90d46b4964408b330ab5a0f2fbeeb8e6.png)
 ### 11.3 查看项目空间
-![](https://img-blog.csdnimg.cn/5e6f7cabf90f401fb1363d3778d43767.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/19541d045bbcf5fea639986bb715b8a1.png)
 
 ###  11.4 查看节点信息
 
-![](https://img-blog.csdnimg.cn/0f633c95e49045c0969a413b545f7006.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/d5ec7d0cbbf6c0deb9a83a28da1eb208.png)
 参考：
 - [https://juejin.cn/post/6943494889564962823](https://juejin.cn/post/6943494889564962823)
 - [离线安装 rancher](https://ranchermanager.docs.rancher.com/zh/getting-started/installation-and-upgrade/other-installation-methods/air-gapped-helm-cli-install/install-rancher-ha)

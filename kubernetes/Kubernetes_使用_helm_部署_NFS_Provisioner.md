@@ -1,5 +1,5 @@
 
-![](https://img-blog.csdnimg.cn/c528624e28304115a12ce5d72fb2ec55.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/5aced646ff2f33e521bbb1e58b2a18bc.png)
 
 
 
@@ -77,7 +77,7 @@ helm.go:84: [debug] Get "https://objects.githubusercontent.com/github-production
 ```
 手动去下载 [nfs-subdir-external-provisioner-4.0.18.tgz](https://artifacthub.io/packages/helm/nfs-subdir-external-provisioner/nfs-subdir-external-provisioner)
 
-![](https://img-blog.csdnimg.cn/98f01a90a2f146409b6c9982d27f2615.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/33a4bc49f7307d833f7d0b1dae952ce6.png)
 再指定本地 helm charts 包执行部署
 
 ```bash
@@ -603,8 +603,8 @@ storageclass.storage.k8s.io/nfs-client   cluster.local/nfs-subdir-external-provi
 ###  nodepot 
 
 界面访问：http://192.168.10.61:32000
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c9e318deb5894473a3b140f0c953a2e5.png)
-![](https://img-blog.csdnimg.cn/d58ccc2f2b1c41568d5e8b3090b09ed4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9d3093aa80168e07be6dcfa41f4e3a93.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/aca06e82f28ef65d28e150f9a475768e.png)
 
 ### ingress
 修改 `values.yaml` 的`service`

@@ -7,7 +7,7 @@
 ## 1. 什么是 Docker Swarm？
 Docker Swarm 解释： Docker Swarm 是一组物理机或虚拟机，它们运行 Docker 应用程序并已配置为加入集群。将一组机器集群在一起后，您仍然可以运行您习惯的 Docker 命令，但它们现在将由集群中的机器执行。集群的活动由 swarm manager 控制，加入集群的机器称为节点。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d8add64370f14f3eaec98e770f6c4613.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8399003f3769ac6ae09c373b0c35e6c5.png)
 
 
 ## 2. Docker Swarm 是做什么用的？

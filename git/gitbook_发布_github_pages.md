@@ -7,7 +7,7 @@
 
 例如：`git-handbook`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/67bc98ea3dc940f4b64f8eaafc18c7ce.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3a3ad1759d23fc0ede1ba8c6701bf24c.png)
 
 
 # 2. 本地创建github仓库
@@ -89,9 +89,9 @@ git push -u origin gh-pages
 
 master与gh-pages的不同之处：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b5cfa68279de48cc88cab77ed5f47da1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0686c53b7d0afb3e246a9b5ebb31618f.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a2a16b88fea5461190b16e7cc95e3730.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0a7ad328a8a439518bc2918f44a34399.png)
 
 
 ## 3.6 验证
@@ -100,31 +100,31 @@ master与gh-pages的不同之处：
 
 这里我配置了自己的域名，`ghostwritten*.github.io`* 重定向到了个人站点 [`smoothies.com.cn`](http://smoothies.com.cn/)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c48994a89acd420e88016ac22b3c08fb.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d38333e29c5246268c0ca62f46549df4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/16ec0e5922dfce49c527a6d836f81204.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/55b447badb3620f5bff5170d173022d9.png)
 
 
 # 4. 推送至gitbook仓库
 
 [注册gitbook](https://www.gitbook.com/)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3d0b909a5e5b451eb23223b10d84447f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/55fdfe196eaf34ebe6b5838557109bce.png)
 
 
-![\[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-JraiYmau-1654254554721)(https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7e0c6659-b34f-4105-9d50-daa086d748e3/Untitled.png)\]](https://img-blog.csdnimg.cn/acfbc7f2cad94300946a289bdfadfada.png)
+![\[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-JraiYmau-1654254554721)(https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7e0c6659-b34f-4105-9d50-daa086d748e3/Untitled.png)\]](https://i-blog.csdnimg.cn/blog_migrate/75ad07af6d517503ed0af3a830fd72b2.png)
 
 
 与仓库同名
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ca57276b4ce74ba5a80a0b9fe8957067.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e7f55634883711192f1832b78051fc86.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a1ac11d91cd94300a7b4c4b5c2c1723a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/75de4764aa19251a0b31dcbbcb2ca0ac.png)
 
 
 # 5. github action：master 同步 gh-pages
 
 ## 5.1 新建 Person Access Token
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0c60d11c17fd47fbbfef45f75c6927cc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a182dfc16df43a6f453fb084a1821aa9.png)
 
 
 复制**`Person Access Token`**
@@ -133,7 +133,7 @@ master与gh-pages的不同之处：
 
 创建secret：`ACTIONS_DEPLOY_KEY` ，value填写**`Person Access Token`**
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c3db9b903ab24ee58c53750eeaccef95.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cc13c9ee06f870c1b225aefadbc68dad.png)
 
 
 ## 5.3 编写 .github/workflows/main.yml 
@@ -197,5 +197,5 @@ git push origin master
 ```
 
 ## 5.5 验证
-![在这里插入图片描述](https://img-blog.csdnimg.cn/61449c51451d4d5abe8b8646fa2d658f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e121a524aae73221ab675f96c25106a2.png)
 

@@ -13,7 +13,7 @@
  - [英文文档](https://docs.python.org/3/libra)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cd87778918a2486296ceb4148a9edc58.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f6b2a56e1dc5ad2ff3f9d49587e767aa.png)
 
 ##  2. 子类
 用`collections.__all__`查看所有的子类，一共包含9个
@@ -1003,6 +1003,6 @@ UserDict将常规字典存储在名为 的实例属性中.data。然后它围绕
  - [pyhon tuple 元组](https://blog.csdn.net/xixihahalelehehe/article/details/104486159?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164942350116782248567035%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=164942350116782248567035&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-1-104486159.nonecase&utm_term=%E5%85%83%E7%BB%84&spm=1018.2226.3001.4450)
  - [python 面向对象](https://blog.csdn.net/xixihahalelehehe/article/details/106245475?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164942364216780271534896%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=164942364216780271534896&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-1-106245475.nonecase&utm_term=%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B&spm=1018.2226.3001.4450)
  
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bfef2b0846964030aa34c8073c8bfc1f.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b1950c7b75a63332d9caa267f0f86bbb.gif#pic_center)
 
 

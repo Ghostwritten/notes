@@ -1,7 +1,7 @@
 #  JavaScript 30. JSON
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3a9f921275af42768afdb70fb836a03c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6357525f4f7ec94e0433c93fd70fa3b1.png)
 
 
 ## 1. 什么是 JSON?

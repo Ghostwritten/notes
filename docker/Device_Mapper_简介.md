@@ -21,7 +21,7 @@
 用户空间相关部分主要负责配置具体的策略和控制逻辑，比如逻辑设备和哪些物理设备建立映射，怎么建立这些映射关系等，包含 device mapper 库和 dmsetup 工具。对用户空间创建删除 device mapper 设备的操作进行封装。
 
 内核中主要提供完成这些用户空间策略所需要的机制，负责具体过滤和重定向 IO 请求。通过不同的驱动插件，转发 IO 请求至目的设备上。附上 Device Mapper 架构图。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210415191935352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bf15b44e2955bd42a29f61b1d9b3a3a9.png)
 ##  3. Device Mapper 技术分析
 `Device Mapper` 作为 Linux 块设备映射技术框架，向外部提供逻辑设备。包含三个重要概念，映射设备（`mapped device`），映射表（`map table`），目标设备（`target device`）。
 
@@ -29,7 +29,7 @@
 映射表存储映射设备和目标设备的映射关系。
 目标设备可以是映射设备或者物理设备，如果目标设备是一块映射设备，则属于嵌套，理论上可以无限迭代下去。
 简而言之，Device Mapper 对外提供一个虚拟设备供使用，而这块虚拟设备可以通过映射表找到相应的地址，该地址可以指向一块物理设备，也可以指向一个虚拟设备。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210415192036731.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eb9c4d26c2907a34bf295ffc68e2ddd9.png)
 映射表，是由用户空间创建，传递到内核空间。映射表里有映射设备逻辑的起始地址、范围、和表示在目标设备所在物理设备的地址偏移量以及Target 类型等信息（注：这些地址和偏移量都是以磁盘的扇区为单位的，即 512 个字节大小，所以，当你看到 128 的时候，其实表示的是 128*512=64K）。
 
 映射驱动在内核空间是插件，`Device Mapper` 在内核中通过一个一个模块化的 Target Driver 插件实现对 IO 请求的过滤或者重新定向等工作，当前已经实现的插件包括软 `Raid`、加密、多路径、镜像、快照等，这体现了在 Linux 内核设计中策略和机制分离的原则。
@@ -47,9 +47,9 @@
 当容器删除一个低层 branch 文件时，只是在顶层 branch 对该文件进行重命名并隐藏，实际并未删除文件，只是不可见。
 
 下图所示，容器层所见 file1 文件为镜像层文件，当需要修改 file1 时，会从镜像层把文件复制到容器层，然后进行修改，从而保证镜像层数据的完整性和复用性。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021041519283856.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c990f610179807c8ae5b4e9d2d9f7295.png)
 下图所示，当需要删除 file1 时，由于 file1 是镜像层文件，容器层会创建一个 .wh 前置的隐藏文件，从而实现对 file1 的隐藏，实际并未删除 file1，从而保证镜像层数据的完整性和复用性。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210415192856765.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/731c3a3cf9878d905864a81934c737c0.png)
 `devicemapper` 支持在块级别（`block`）写复制。
 
 `Snapshot`（快照技术）：关于指定数据集合的一个完全可用拷贝，该拷贝包括相应数据在某个时间点（拷贝开始的时间点）的映像。快照可以是其所表示的数据的一个副本，也可以是数据的一个复制品。而从具体的技术细节来讲，快照是指向保存在存储设备中的数据的引用标记或指针。
@@ -59,10 +59,10 @@
 它是什么意思呢？你可以联想一下我们计算机中的内存管理中用到的——“虚拟内存技术”——操作系统给每个进程 N 多 N 多用不完的内址地址（32 位下，每个进程可以有最多 2GB 的内存空间），但是呢，我们知道，物理内存是没有那么多的，如果按照进程内存和物理内存一一映射来玩的话，那么，我们得要多少的物理内存啊。所以，操作系统引入了虚拟内存的设计，意思是，我逻辑上给你无限多的内存，但是实际上是实报实销，因为我知道你一定用不了那么多，于是，达到了内存使用率提高的效果。（今天云计算中很多所谓的虚拟化其实完全都是在用和“虚拟内存”相似的 Thin Provisioning 的技术，所谓的超配，或是超卖）。
 
 好了，话题拉回来，我们这里说的是存储。看下面两个图，第一个是 `Fat Provisioning`，第二个是 Thin Provisioning，其很好的说明了是个怎么一回事（和虚拟内存是一个概念）。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210415193841939.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210415193925814.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/24cdb6ef2e326fca216487f5bcd1e098.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fa022e585ebd3445ca96ac1ba71c9f36.png)
 下图中展示了某位用户向服务器管理员请求分配 10TB 的资源的情形。实际情况中这个数值往往是峰值，根据使用情况，分配 2TB 就已足够。因此，系统管理员准备 2TB 的物理存储，并给服务器分配 10TB 的虚拟卷。服务器即可基于仅占虚拟卷容量 1/5 的现有物理磁盘池开始运行。这样的“始于小”方案能够实现更高效地利用存储容量。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210415193944723.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7baa7c5f809fc2c9aff309b37144d7b4.png)
 那么，Docker 是怎么使用 `Thin Provisioning` 这个技术做到像 UnionFS 那样的分层镜像的呢？答案是，Docker 使用了 `Thin Provisioning` 的 `Snapshot` 的技术。下面一篇我们来介绍一下 `Thin Provisioning` 的 `Snapshot`。
 
 

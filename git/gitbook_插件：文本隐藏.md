@@ -83,7 +83,7 @@ npm i gitbook-plugin-click-reveal
 </div>
 ```
 ### 2.3 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9abfc11027b2438e9f35a61d48b14399.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fff177fad06ac33f6a756b3a88923240.gif#pic_center)
 
 ##  3. hide-element 插件
 [hide-element 插件](https://www.npmjs.com/package/gitbook-plugin-hide-element)：可以隐藏不想看到的元素，比如导航栏中 Published by GitBook
@@ -192,5 +192,5 @@ markdown中示例代码：
 <!--endsec-->
 ```
 效果图3：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7500722cf84b4776a7a5cd8fc8e2458b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0e270e903a84679032eab872d6b3b4f8.png)
 

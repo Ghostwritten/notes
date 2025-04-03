@@ -14,26 +14,26 @@ MySQL 主从复制是指数据可以从一个MySQL数据库服务器主节点复
 
 ##  3. MySQL 主从形式
 ### 3.1 一主一从
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ebff74408d444370ba32efe1726b5764.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c08dc379e66be3c0ee804248a796826e.png)
 ### 3.2 一主多从
 提高系统的读性能
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a52df7381749473b9774d960f516fa5f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1f6acb89cbb2efd5056ac8d78ad8d2c9.png)
 一主一从和一主多从是最常见的主从架构，实施起来简单并且有效，不仅可以实现HA，而且还能读写分离，进而提升集群的并发能力。
 
 ### 3.3 多主一从 （从5.7开始支持）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c9e449d8b6754b7693c760c5e26cb80c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/37dd7a265d21717443cd6f447f741770.png)
 多主一从可以将多个mysql数据库备份到一台存储性能比较好的服务器上。
 
 ### 3.4 双主复制
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dad0ec23039b4025951803633adb16c8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d58299820f741e4187f74e51fdc64b39.png)
 双主复制，也就是互做主从复制，每个master既是master，又是另外一台服务器的slave。这样任何一方所做的变更，都会通过复制应用到另外一方的数据库中。
 ###  3.5 级联复制
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c0baed62cf7e44908dfe5841adc69226.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f7104916aca48fd1040912f2d9a691e9.png)
 级联复制模式下，部分slave的数据同步不连接主节点，而是连接从节点。因为如果主节点有太多的从节点，就会损耗一部分性能用于replication，那么我们可以让3~5个从节点连接主节点，其它从节点作为二级或者三级与从节点连接，这样不仅可以缓解主节点的压力，并且对数据一致性没有负面影响。
 
 ##  4. MySQL 主从复制原理
 MySQL主从复制涉及到三个线程，一个运行在主节点（log dump thread），其余两个(I/O thread, SQL thread)运行在从节点，如下图所示:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7916247d0fcc447aa4c406b1aa9ae44b.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_17,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b1c360c075370eddecfc09769b3c4063.png)
 ###  4.1 主节点 binary log dump 线程
 当从节点连接主节点时，主节点会创建一个`log dump` 线程，用于发送bin-log的内容。在读取bin-log中的操作时，此线程会对主节点上的bin-log加锁，当读取完成，甚至在发动给从节点之前，锁会被释放。
 
@@ -46,7 +46,7 @@ SQL线程负责读取relay log中的内容，解析成具体的操作并执行�
 ## 5. 复制过程
 要实施复制，首先必须打开Master 端的binary log（bin-log）功能，否则无法实现。
 因为整个复制过程实际上就是Slave 从Master 端获取该日志然后再在自己身上完全顺序的执行日志中所记录的各种操作。如下图所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b8cc14f2e5154e30bc4d04b34d23f2fd.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_17,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7f2ec4c420d81945b37717a728788453.png)
 复制的基本过程如下：
 
  - 从节点上的I/O 进程连接主节点，并请求从指定日志文件的指定位置（或者从最开始的日志）之后的日志内容；
@@ -58,11 +58,11 @@ MySQL 主从复制默认是异步的模式。MySQL增删改操作会全部记录
 
 ###  6.1 异步模式（mysql async-mode）
 异步模式如下图所示，这种模式下，主节点不会主动`push bin log`到从节点，这样有可能导致`failover`的情况下，也许从节点没有即时地将最新的bin log同步到本地。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ad3ee61f967346db81494fd6376e24fd.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_17,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/41a7c3f0ab9a05a4a5735e9dda72afbf.png)
 
 ###  6.2 半同步模式(mysql semi-sync)
 这种模式下主节点只需要接收到其中一台从节点的返回信息，就会`commit`；否则需要等待直到超时时间然后切换成异步模式再提交；这样做的目的可以使主从数据库的数据延迟缩小，可以提高数据安全性，确保了事务提交后，binlog至少传输到了一个从节点上，不能保证从节点将此事务更新到db中。性能上会有一定的降低，响应时间会变长。如下图所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f2feea507d3c46f7b859daebc658b629.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_17,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5535a6789277cd0eee8e29314b5ab816.png)
 半同步模式不是mysql内置的，从`mysql 5.5`开始集成，需要master 和slave 安装插件开启半同步模式。
 
 ###  6.3 全同步模式

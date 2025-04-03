@@ -19,7 +19,7 @@ Index Templates 帮助你设定 `Mapping` 和 `Settings`，并按照一定的规
 
 ### 2.1 index template格式
 `index_patterns` 索引名称 `[“*”] [“test*”]` 表示
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201110112137109.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2342655c7d904c32f36dde52b801ad00.png#pic_center)
 
 ### 2.2 Index Template 工作方式
 当一个索引被新创建时

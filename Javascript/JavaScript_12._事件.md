@@ -1,7 +1,7 @@
 #  JavaScript 12. 事件
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fbc96dfe956448d081ef4643d701352c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7d8cf590e2964ec9e2b9436360a7a6be.png)
 
 
 ##  1. 简介
@@ -40,7 +40,7 @@ HTML 元素中可以添加事件属性，使用 JavaScript 代码来添加 HTML 
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/05b35a76738a4e4baae8907f3aebecaa.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/69e90cb48a97de6768fcb1c859c79b38.png)
 实例2
 
 ```bash
@@ -58,8 +58,8 @@ HTML 元素中可以添加事件属性，使用 JavaScript 代码来添加 HTML 
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7a2ef22457d942a182b5d7c98bbb09c3.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/122f578a2c2b4492aff5136fb438d5c5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4f81ced24eccccce79d4d64ccb9a49f8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/72a90e26bdcbee6fe2d662422ac820e5.png)
 实例3
 
 ```bash
@@ -84,7 +84,7 @@ function displayDate(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/31aa5799ae3943c5b0b01c71970d6a83.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8b70cc582210f869c03d4b943de8a34c.png)
 ##  2. 常见的HTML事件
 |事件|	描述
 |--|--|

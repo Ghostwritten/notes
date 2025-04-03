@@ -1,7 +1,7 @@
 接下来我们来介绍reload重载配置文件的真相;
 
 　　当我们更改了nginx配置文件的时候,我们都会执行`nginx -s reload`;那么我们执行这条命令的原因是希望nginx不能停止服务,始终还在处理新的请求的同时,把nginx的配置文件平滑的从旧的`nginx.conf`更新为新的nginx.conf;这样的一个功能对nginx来说非常的有必要,但是我们往往会发现,在我们执行之后,会发现nginx的worker进程的数量变多了;这是因为老的nginx配置的worker进程它长时间没有退出;当我们使用`stream`做四层反向代理的时候;可能这种场景会更多;下面我们通过来分析下nginx的reload流程来看一看nginx到底做了些什么?所谓优雅的退出和立即退出有怎么样的差别?
-![在这里插入图片描述](https://img-blog.csdnimg.cn/507e4280b4b146fdaa2b38277816003d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fe31896766d226f35bc15edc281aa9a8.png)
 reload流程
 
 　　　
@@ -17,7 +17,7 @@ reload流程
 
  - 第六步:老的worker子进程在收到QUIT信号以后尼,它首先会关闭监听句柄,处理完当前连接后就会结束进程;这个时候新的连接只会到新的worker子进程;虽然新的worker子进程开启,老worker子进程的关闭它们之间有个时间差,但是时间是非常快速的;
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6524cdf8df5048ab91e6d4e5b48b532b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3e779396c66b3c7be35dbfb0a7264728.png)
 比如原先有四个绿色的worker子进程;它们使用了老的配置,当我们更改了`nginx.conf`配置文件以后;向master父进程发送`SIGHUP`信号或者执行`nginx -s reload`;master父进程会用新的配置文件启动四个黄色的worker子进程;所以此时四个新的黄色的worker子进程与四个旧的worker子进程是并存的;老的worker子进程在正常的情况下在处理完老的请求连接以后会关闭这个连接和老的worker子进程;但是在异常的情况下,比如说一些请求出问题了,客户端长时间没有处理,就会导致这个请求长时间占用在这个worker子进程上面,而这个worker子进程会一直存在,当然一些新的连接已经跑在了黄色的worker子进程中了,所以影响并不会很大,唯一会导致绿色的woker子进程会长时间存在,但也只会影响已经存在的连接而不会影响新的连接;这个时候有没有什么办法来处理尼？实际上nginx新的版本中提供了一个新的配置项`worker_shutdown_timeout` 表示最长会等待多长时间,也就是说master进程在启用黄色的worker子进程以后尼,它会加一个定时器worker_shutdown_timeout 定时器到期了以后尼如果worker子进程还没有退出尼那就立刻强制把老的worker子进程给退出掉;
 
 以上就是nginx平滑启动新的nginx配置文件的流程;
@@ -33,7 +33,7 @@ reload流程
 对于某些请求 Nginx 无法做到优雅地关闭 worker 进程，比如当 Nginx 代理 websocket 协议的时候，在 websocket 后面进行通讯的 `frame` 桢里面，Nginx 是不解析他的桢的；Nginx 做 TCP 层或者 UDP 层反向代理的时候，也没有办法识别一个请求需要经历多少报文才算是结束；但是对于 HTTP 请求，Nginx 可以做到，所以优雅地关闭主要针对的是 HTTP 请求。
 
 接下来我们去看一下优雅地关闭 worker 进程都有哪些流程。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d2ff23dbca294a3dac4bd74d11f5e6aa.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/40916e419b64e85d44a1102d8f1366db.png)
 首先第一步会设置一个定时器，在 nginx.conf 中可以配置一个 `worker_shutdown_timeout`，配置完 `worker_shutdown_timeout` 之后，会加一个标志位，表示进入优雅关闭流程了。
 
 第二步会先关闭监听句柄，要保证所在的 worker 进程不会再去处理新的连接。

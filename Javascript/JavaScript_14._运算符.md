@@ -1,7 +1,7 @@
 #  JavaScript 14. 运算符
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0f7b1fe3265f4be5886379e430a76cec.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c1ee811755f5fa88ff585aa7e88ee801.png)
 
 
 ##  1. 算术运算符
@@ -79,7 +79,7 @@ function myFunction()
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/17f84532d0674b30acb9d79c7cb24a93.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0d4289c064fdf5935519188d389df7b6.png)
 
  如何使用
 可以在条件语句中使用比较运算符对值进行比较，然后根据结果来采取行动：
@@ -135,8 +135,8 @@ function myFunction()
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/328824c2bd5d4b65bb10a8b35027b22b.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/119f2335133a4fb8a443cfcc9d5e4798.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3e9b9b3791534f54c6662250fd14c98c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/37b0c0d641125a2ad0245fbedc5c07a3.png)
 ##  6. 用于字符串的 + 运算符
 
 ```bash

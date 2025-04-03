@@ -19,14 +19,14 @@
  - 定目标 做一次分享，开发具体项目，参加考试
 
 ## 4. 从开源到上市
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201030140936644.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2d95a907c7fcc15fc6a8c45c7602ddb6.png#pic_center)
 
 ## 5. elastic客户
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201030141015243.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/de84e833cb0172670ecbc3c3d9a9bdd5.png#pic_center)
 ## 6. elastic简介
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201030141104644.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7fce73bf95ea46be1899bb26915e0d13.png#pic_center)
 ## 7. Lucene起源
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201030141141462.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d01c41f595665bf64a1cff4e06c092d4.png#pic_center)
 这个看着很帅气的男人他叫Doug Cutting，是Lucene的创始人，同时他也是Hadoop的创始人，被称为Hadoop之父。重点还是来看下Lucene有哪些特点：
 
 （1）基于Java语言开大的搜索引擎类库
@@ -38,9 +38,9 @@
 类库的接口学习成本高
 原生并不支持水平扩展（这对于搜索引擎来说是一个非常大的问题）
 ## 8. elastic诞生
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201030141219422.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/664ec0099fc7cdc150f283dfe18e67d0.png#pic_center)
 ## 9. ElasticSearch分布式架构
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201030141343983.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/27b36484dcee86d584e922cc42b42247.png#pic_center)
 集群规模可以从单个节点扩展至数百个节点
 高可用 & 水平扩展：从服务和数据两个维度
 支持不同的节点类型：支持Hot & Warm架构
@@ -111,20 +111,20 @@ Lucene 8.0
  2. 性能优化，更快的Top K
 
 ## 13. elastic stack 生态圈
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201030141952307.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3737fde5bdb3483ce3d6374264315edd.png#pic_center)
 ## 14. logstash 数据处理管道
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201030142224511.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6b9de7df1e90cf0d0a703aae1595ec6b.png#pic_center)
 [功能特性介绍](https://www.elastic.co/cn/logstash)
 [实用介绍](https://www.elastic.co/cn/blog/a-practical-introduction-to-logstash)
 
 ## 15. kibana可视化分析利器
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201030142449376.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/aa2b03ba0331b2b8789e066c0829e4a5.png#pic_center)
 
 [功能特性介绍](https://www.elastic.co/cn/kibana)
 ## 16. elastic发展
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201030142847537.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d040f123a5eda06e82999f43d47689f3.png#pic_center)
 ## 17. BEATS 轻量数据采集器
-![,color_FFFFFF,t_70#pic_center)](https://img-blog.csdnimg.cn/20201030143147210.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![,color_FFFFFF,t_70#pic_center)](https://i-blog.csdnimg.cn/blog_migrate/26aa8f21dad0ceea86fb278df8c7c26c.png#pic_center)
 ## 18. X-pack 商业化套件
 ## 19. 应用场景
 网站搜索
@@ -135,12 +135,12 @@ Lucene 8.0
 应用性能监控
 web抓取舆情
 ## 20. 日志管理
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201030143540618.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1e2b260bf9962c2cc4ab20458525d244.png#pic_center)
 ## 21. elastic与数据库集成
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201030143610967.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/38d72b9dfbee6f2c3e71d198915eaa56.png#pic_center)
 
 
 
 ## 22. 指标分析与日志分析
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201030143721358.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0cb950ceba1ff62f297a4015c8349e02.png#pic_center)
 

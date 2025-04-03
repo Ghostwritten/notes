@@ -10,5 +10,5 @@
 
 
 下图展示了 Git 的工作流程：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/afc7d09d708c450ba63811d0c2ad0441.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/96a50aae7dd0506805d2ed5ad045a1d5.png)
 

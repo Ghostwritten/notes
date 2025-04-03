@@ -27,7 +27,7 @@ DDoS（Distributed Denial of Service） 则是在 DoS 的基础上，采用了�
    hping3 tcpdump curl。
 
 本次案例用到三台虚拟机，我画了一张图来表示它们之间的关系。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c5a769e331e647be8daaa6487b159f99.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/27c8baf85b36ffea459a16bfd190b522.png)
 你可以看到，其中一台虚拟机运行 Nginx ，用来模拟待分析的 Web 服务器；而另外两台作为 Web 服务器的客户端，其中一台用作 DoS 攻击，而另一台则是正常的客户端。使用多台虚拟机的目的，自然还是为了相互隔离，避免“交叉感染”。**由于案例只使用了一台机器作为攻击源，所以这里的攻击，实际上还是传统的 DoS ，而非 DDoS。**
 
 ##  3. 案例分析
@@ -97,7 +97,7 @@ $ tcpdump -i eth0 -n tcp port 80
 ...
 ```
 这个输出中，Flags [S] 表示这是一个 SYN 包。大量的 SYN 包表明，这是一个 SYN Flood 攻击。如果你用上一节讲过的 Wireshark 来观察，则可以更直观地看到 SYN Flood 的过程：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/47b53ba6140340b2b127c77eedcc1dcd.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a41494716bae311d80a2ce3cd54a9dd7.png)
 实际上，SYN Flood  正是互联网中最经典的 DDoS 攻击方式。从上面这个图，你也可以看到它的原理：
 
  - 即客户端构造大量的 SYN 包，请求建立 TCP 连接；
@@ -107,7 +107,7 @@ $ tcpdump -i eth0 -n tcp port 80
 
 参考下面这张 TCP 状态图，你能看到，此时，服务器端的 TCP 连接，会处于 SYN_RECEIVED 状态：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a06670fd13244cf281bcad53ece7f04d.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c60c08ec095ea9ea5760b4a0dfe08b01.png)
 这其实提示了我们，查看 TCP 半开连接的方法，关键在于 `SYN_RECEIVED` 状态的连接。我们可以使用 netstat ，来查看所有连接的状态，不过要注意，SYN_REVEIVED 的状态，通常被缩写为 `SYN_RECV`。我们继续在终端一中，执行下面的 netstat 命令：
 
 ```bash

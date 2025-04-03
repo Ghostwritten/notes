@@ -32,24 +32,24 @@
  - ○ Match / Match Phrase / Highlight / Sorting / 分页
 
 ## 考试题型
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322164805645.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d76bd81df4d5b261130f0286f405eb1f.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322164823909.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322164837593.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2f813fa9d4da6b0865225d73bc4a27c7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/da6e6d3b37951afa4f9624b32ff3aa59.png)
 ## 考试建议
 ● 仔细阅读考纲，记住每个考点的官方文档位置
 ● 有时间可以将相关的教程视频进行快速的回顾
 ● 考试之前，适当的动手做一些实战，需要理解每一个考点，切勿死记硬背
 
 ## 考纲
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322164916697.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9674ebe757f172babed2a7e061f92499.png)
 ### 索引数据
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322164939197.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/569f9e497f2ce25146654756daed2c9a.png)
 ### 查询
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322165156160.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8a170474002b2c0b06d8560cf9279eb5.png)
 ## 聚合
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322165232622.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5bbf3b786e77d8fe94407019429e9019.png)
 ### 映射与分词
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322165317941.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-## ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322165706749.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d99eca6b81eb9964108e30868e791721.png)
+## ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/49cf2c90cb15b25110e4d3d3427ba4b4.png)
 

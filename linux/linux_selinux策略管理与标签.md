@@ -101,5 +101,5 @@ semanage port -m -t gopher_port -p tcp 71
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f83763541592452294366d320af38f16.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6932ae7f357d8af44a887c45a1edd4d6.gif#pic_center)
 

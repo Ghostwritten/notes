@@ -9,6 +9,6 @@ Linux 命令是在命令行上运行的程序或实用程序。命令行是接�
 
 大多数Linux命令都有一个帮助页面，我们可以使用 flag 调用它-h。大多数时候，标志是可选的。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9afa23d94f0e472cae99dc269ec70ab2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7bdd81a05689483800c04b8421434ea4.png)
 
 

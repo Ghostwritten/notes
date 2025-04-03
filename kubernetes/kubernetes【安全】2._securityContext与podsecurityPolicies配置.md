@@ -9,10 +9,10 @@
 ----
 
 ## 1. 介绍
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210514140920852.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/202105141409585.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210514141050142.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210514141138804.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4bc523e5abc030ff2deca2500756562e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6349eb45fcd2566a6f4ab317f716c9f4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/53e3670cce7d0cf7cbcd41ca415d61a0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c8c8d4a4f31cb7bfd3965f2b9e83651d.png)
 参考链接：
 [https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#before-you-begin](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#before-you-begin)
 
@@ -162,10 +162,10 @@ Events:
 
 
 ## 4. Privileged Containers
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210515231135395.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210515231243387.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a5343780192a0a63097983897a0f9514.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d262d165cf209d19fea38901b2b74317.png)
 ## 5. Create Privileged Containers
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210515231407815.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ad0a7f46c629b153814bff6136da51e3.png)
 
 ```c
 #非root用户测试执行sysctl命令
@@ -268,12 +268,12 @@ kernel.hostname = attacker
 
 
 ## 6. PrivilegeEscalation
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210515232409858.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210515232446237.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b00acedbd363bfe982cb26ebfb84d5af.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4d6793331629c9642c309607cbdd3cfc.png)
 
 ## 7. Practice - Disable PriviledgeEscalation
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210515232455714.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/47d0decf46c1803013b82acd91b524f7.png)
 
 ```c
 root@master:~/cks/securitytext# vim pod.yaml 
@@ -368,13 +368,13 @@ nonvoluntary_ctxt_switches:	10
 
 ```
 ## 8. PodSecurityPolicies
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021051523354412.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021051523360734.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210515233653646.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1e70523c738da2eb07db582fd8cae91a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/77855a84dfb28eae41950f55167db785.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5e097a0f04b647045c142df562fcff0e.png)
 
 ##  9. Create and enable PodSecurityPolicy
 [pod-security-policy](https://kubernetes.io/docs/concepts/policy/pod-security-policy/)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210515233718292.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8433068411e788457a61c1bd4c6203f5.png)
 
 ```c
 root@master:~/cks/securitytext# vim /etc/kubernetes/manifests/kube-apiserver.yaml
@@ -473,7 +473,7 @@ Error from server (Forbidden): error when creating "pod.yaml": pods "pod" is for
 
 
 总结：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210516000543890.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210516000554695.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210516000614534.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a33a6ab206a3653d5c1658d867863898.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c71208150f7ea2301be01b8f61043a00.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d54b4543d97b2c83175b3049b36c75ac.png)
 

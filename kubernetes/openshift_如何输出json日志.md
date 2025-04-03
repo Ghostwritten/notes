@@ -108,7 +108,7 @@ spec:
  - 在列表的底部，找到`structured`的条目。 `elements,` including `structured.hostName`
    `structured.message,` and `structured.level`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e71bc8f5373a4acf97ea80569ffc193d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9ef16ee17c752d6ed15c0a05f623ad1d.png)
 每种具有不同JSON格式的日志输入类型都在Elasticsearch数据库中创建一个新索引，以处理不同的`structured.*`数据。通过“Apache”、“Google”等标准JSON格式组织日志来节约资源。
 
 ## 4. 清理日志查询，方便故障处理

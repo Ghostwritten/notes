@@ -7,7 +7,7 @@ access日志记录了Nginx非常重要的信息,我们可以使用Nginx来分析
 有一款工具叫[GoAccess](https://goaccess.io/),它可以以图像化的方式通过WebSoxket协议实时的把access.log的变迁反应到浏览器中方便我们分析问题;接下来我们来演示如何使用GoAccess工具来分析Nginx的access.log的日志中。
 
 样板：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2fd4796169f24683aa7d2ad8c4848c36.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/03e11914a4a05ba010cee19c0175a821.png)
 默认access.log
 
 ```bash
@@ -54,7 +54,7 @@ $ goaccess nginx/logs/host.access.log  -o /opt/openresty/nginx/html/report.html 
 ```
 默认goaccess在开启实时`real-time-html`后会监听端口`7890`的websocket，如果服务器不允许请求7890端口，你就看不到那个页面是实时更新的——你会发现访问的页面最后更新时间始终不变。这一点人很多忽略了，很多人以为是哪个生成html静态文件是实时更新的，其实根本不是，那个文件本身一旦生成就不动了，真正更新的实时内容是从websocket过来的。
 访问代理域名后缀加`/report.html`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/624191ffacab4576be65af6298e63227.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1696d3adc457920c63cbf7ae4d88b04c.png)
 当我访问一次`http://192.168.211.100:8080/`，goaccess界面会自动更新。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c7c079c74ddd48d4916398ff0ec20afc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ba92ad74d0fcb401c245cf8b948b5571.png)
 

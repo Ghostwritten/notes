@@ -5,7 +5,7 @@ tags: Auditing,对象
 
 
 [
-![《银翼杀手2049》](https://img-blog.csdnimg.cn/200a416c3d284ce7bf106f6a1124778e.png)](https://bladerunner.fandom.com/wiki/Blade_Runner_2049)
+![《银翼杀手2049》](https://i-blog.csdnimg.cn/blog_migrate/158382f6a6af0d97ed6a449a98fb1bcd.png)](https://bladerunner.fandom.com/wiki/Blade_Runner_2049)
 
 {% youtube %}
 https://www.youtube.com/watch?v=HXtLTxo30SY
@@ -32,7 +32,7 @@ https://www.youtube.com/watch?v=HXtLTxo30SY
  - Applications, controllers, and operators that send requests through a kube client
  - Even the API server itself
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0d4bfcbdd0b243ea9008839200fc9855.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d522a949a15cc79f641671135997e9c6.png)
 
 
  Auditing允许集群管理员回答以下问题：

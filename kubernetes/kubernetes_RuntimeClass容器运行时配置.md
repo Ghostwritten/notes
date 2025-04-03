@@ -4,7 +4,7 @@ tags: 对象,RuntimeClass
 
 
 [
-![在这里插入图片描述](https://img-blog.csdnimg.cn/69d0c9376d7c42499e70ab86f82205c8.png)](https://movie.douban.com/subject/1291560/)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e581917cb24bda64c23a4e499a0c51d7.png)](https://movie.douban.com/subject/1291560/)
 
 *《龙猫》*
 
@@ -18,7 +18,7 @@ tags: 对象,RuntimeClass
 
 您还可以使用`RuntimeClass`在相同的容器运行时但使用不同的设置来运行不同的Pod。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2eee8c8d6bc549f994bbe4aeb16371eb.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/277a996ce351e389d250821a6e78cc2b.png)
 
 此同时，越来越多的容器运行时也想接入到 Kubernetes 中。如果还是按 rkt 和 Docker 一样内置支持的话，会给 Kubernetes 的代码维护和质量保障带来严重挑战。
 
@@ -36,7 +36,7 @@ tags: 对象,RuntimeClass
 ## 2. RuntimeClass 的工作流程
 了解决上述提到的问题，社区推出了 `RuntimeClass`。它其实在 `Kubernetes v1.12` 中就已被引入，不过最初是以 CRD 的形式引入的。`v1.14` 之后，它又作为一种内置集群资源对象 `RuntimeClass` 被引入进来。`v1.16` 又在 `v1.14` 的基础上扩充了 `Scheduling` 和 `Overhead` 的能力。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f3d5f8a3e733483f95f3b53fa2d40228.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/64710da5986373a4b8949d243cc37592.png)
 
 下面以 `v1.16` 版本为例，讲解一下 `RuntimeClass` 的工作流程。如上图所示，左侧是它的工作流程图，右侧是一个 YAML 文件。
 
@@ -53,7 +53,7 @@ YAML 文件包含两个部分：上部分负责创建一个名字叫 runv 的 `R
 
 ## 3. RuntimeClass 功能介绍
 ### 3.1 RuntimeClass结构体定义
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b13bb23d0a0747e3a1c417a1446bdde8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7b1a3d959a680761e41e35efaaa3e3ea.png)
 
 我们还是以 `Kubernetes v1.16` 版本中的 `RuntimeClass` 为例。首先介绍一下 `RuntimeClass` 的结构体定义。
 
@@ -66,16 +66,16 @@ YAML 文件包含两个部分：上部分负责创建一个名字叫 runv 的 `R
  - 第三个字段Scheduling 也是在 v1.16 中被引入的，该 Scheduling 配置会被自动注入到 Pod 的
    nodeSelector 中。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8c46fdddba6a40f886cb51a0d54a2a2c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2ae18b6874743a1fafb0163d38aaf6fa.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/45f8cfb9bf7040f08005d5a340595863.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8e96c0458b2b5be5c1fd02619f8a4303.png)
 
 在 Pod 中引用 `RuntimeClass` 的用法非常简单，只要在 `runtimeClassName` 字段中配置好 RuntimeClass 的名字，就可以把这个 `RuntimeClass` 引入进来。
 
 
 ### 3.2 Scheduling 结构体的定义
 Scheduling 表示调度，但这里的调度不是说 RuntimeClass 对象本身的调度，而是会影响到引用了 RuntimeClass 的 Pod 的调度。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c1044aca8f75426a97df1ad41cb11769.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9a45a253b8e4cae10e98a2a5d10794d0.png)
 
 `Scheduling` 中包含了两个字段，`NodeSelector` 和 `Tolerations`。这两个和 Pod 本身所包含的 NodeSelector 和 Tolerations 是极为相似的。
 
@@ -84,12 +84,12 @@ NodeSelector 代表的是支持该 RuntimeClass 的节点上应该有的 label �
 Tolerations 表示 RuntimeClass 的容忍列表。一个 Pod 引用该 RuntimeClass 之后，admission 也会把 toleration 列表与 Pod 中的 toleration 列表做一个合并。如果这两处的 Toleration 有相同的容忍配置，就会将其合并成一个。
 
 ### 3.3 为什么引入 Pod Overhead？
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ef97cab895d4471d81833d75549b6cf1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3f6a8b9d76af0677308d782696690931.png)
 
 上图左边是一个 `Docker Pod`，右边是一个 `Kata Pod`。我们知道，Docker Pod 除了传统的 container 容器之外，还有一个 pause 容器，但我们在计算它的容器开销的时候会忽略 pause 容器。对于 Kata Pod，除了 container 容器之外，`kata-agent`, `pause`, `guest-kernel` 这些开销都是没有被统计进来的。像这些开销，多的时候甚至能超过 100MB，这些开销我们是没法忽略的。
 
 这就是我们引入 `Pod Overhead` 的初衷。它的结构体定义如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ed5809230c514b83b03c053a8b6a45be.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/081801b7254da260141d384f2246d92e.png)
 
 它的定义非常简单，只有一个字段 `PodFixed`。它这里面也是一个映射，它的 key 是一个 `ResourceName`，value 是一个 Quantity。每一个 Quantity 代表的是一个资源的使用量。因此 PodFixed 就代表了各种资源的占用量，比如 CPU、内存的占用量，都可以通过 PodFixed 进行设置。
 
@@ -116,7 +116,7 @@ Pod Overhead 的使用场景主要有三处：
 
 
 ## 4. 多容器运行时示例
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e940a1225d114fecac09c2776321b544.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/652c4214609c52c022741daf85538685.png)
 
 目前阿里云 `ACK` 安全沙箱容器已经支持了多容器运行时，我们以上图所示环境为例来说明一下多容器运行时是怎么工作的。
 
@@ -127,19 +127,19 @@ Pod Overhead 的使用场景主要有三处：
 runv 的流程与 runc 的流程类似。也是先将请求到达 kube-apiserver，然后再到达 kubelet，再把请求到达 cri-plugin，cri-plugin 最终还回去匹配 containerd 的配置文件，最终会找到通过 Shim API runtime v2 去创建 containerd-shim-kata-v2，然后由它创建一个 Kata Pod。
 
 下面我们再看一下 `containerd` 的具体配置。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c6e9508d19dc473285454d21f620e146.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dfff92cee52d769e4101ca18b9d943d4.png)
 
 `containerd` 默认放在 `[file:///etc/containerd/config.toml]()` 这个位置下。比较核心的配置是在 `plugins.cri.containerd` 目录下。其中 runtimes 的配置都有相同的前缀 `plugins.cri.containerd.runtimes`，后面有 runc, runv 两种 RuntimeClass。这里面的 runc 和 runv 和前面 RuntimeClass 对象中 Handler 的名字是相对应的。除此之外，还有一个比较特殊的配置 `plugins.cri.containerd.runtimes.default_runtime`，它的意思是说，如果一个 Pod 没有指定 RuntimeClass，但是被调度到当前节点的话，那么就默认使用 runc 容器运行时。
 
 下面的例子是创建 runc 和 runv 这两个 RuntimeClass 对象，我们可以通过 kubectl get runtimeclass 看到当前所有可用的容器运行时
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b1b9398b1b284bcba1b90e81126e79fa.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/88bfb52c34acaeb31a339fcc6c9716f8.png)
 
 下图从左至右分别是一个 runc 和 runv 的 Pod，比较核心的地方就是在 `runtimeClassName` 字段中分别引用了 runc 和 runv 的容器运行时。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ca6927f3780d4acca6e2a5c5a51b120c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/94787512d840bd6a36250bc8d4686646.png)
 
 最终将 Pod 创建起来之后，我们可以通过 kubectl 命令来查看各个 Pod 容器的运行状态以及 Pod 所使用的容器运行时。我们可以看到现在集群中有两个 Pod：一个是 runc-pod，另一个是 runv-pod，分别引用的是 runc 和 runv 的 RuntimeClass，并且它们的状态都是 Running。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210510110759473.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/84b81a669bd71943b9138e10ff9214a0.png)
 ## 5. 总结
 本文的主要内容就到此为止了，这里为大家简单总结一下：
 

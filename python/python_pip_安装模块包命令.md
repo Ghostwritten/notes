@@ -4,7 +4,7 @@
 ---
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fcb89b52e00b445d87196563f9306582.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/12cff82855f84158595e38934f741460.png#pic_center)
 ##  1. 简介
 [pip](https://pypi.org/project/pip/) 是Python的包安装程序。您可以使用 pip 从Python 包索引和其他索引安装包。
 

@@ -27,7 +27,7 @@
  - 当有新文档写入时，会生成新的 Segment, 查询时会同时查询所有的 Segment，并且对结果汇总。Luncene中有个文件，用来记录所有的 Segment 的信息，叫做 `Commit Point`
  - 删除的文档信息，保存在”.del” 文件中
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303163125820.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bd9ab6add62f801d1fe335dd2cd379f1.png)
 ## 4. 什么是refresh
 
  - 将 `Index buffer` 写入 `Segment` 的过程叫做 `Refresh`。Refresh 不执行 `fsync` 操作
@@ -35,13 +35,13 @@
    后，数据就可以被搜索到了。这也就是为什么 ES 被称为**近实时搜索**
  - 如果系统有大量的数据写入，那就会产生很多的 Segment
  - `Index Buffer` 被占满时，会触发 Refresh, 默认值是 JVM 的 10%
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303163347876.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e46cf8aaac8b3bacfb01e5d663f6daa0.png)
 ## 5. 什么是Transaction Log
  - Segment 写入磁盘的过程相对耗时，借助文件系统缓存，Refresh 时，先将 `Segment` 写入`缓存`以开放查询
  - 为了保证数据不会丢失。所有在 Index 文档时，同时写 `Transaction Log`，高版本开始，ra 默认落盘。每个分片都有一个`Transaction Log`
  - 当 ES Refresh 时，Index Buffer 被清空，Transaction Log 不会清空
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303163728623.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2725633dcda6c7dde935783d7c983342.png)
 ## 6. 什么是flush
 ES Flush & Lucene Commit
 
@@ -50,7 +50,7 @@ ES Flush & Lucene Commit
  - 清空（删除）Transaction Log
  - 默认 30 分钟调用一次
  - Transaction Log 满（默认 512M）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303163947668.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bece4aa13fad86019b399ce0e8e85c66.png)
 ## 7. 什么是merge
 Segment 很多，需要定期被合并
  - 减少 Segment/ 删除已经删除的文档

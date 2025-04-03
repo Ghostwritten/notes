@@ -122,7 +122,7 @@ $ fio --name=replay --filename=/dev/sdb --direct=1 --read_iolog=sdb.bin
 ##  2. I/O 性能优化
 得到 I/O 基准测试报告后，再用上我们上一节总结的性能分析套路，找出 I/O 的性能瓶颈并优化，就是水到渠成的事情了。当然，  想要优化 I/O 性能，肯定离不开 Linux 系统的 I/O 栈图的思路辅助。你可以结合下面的 I/O 栈图再回顾一下。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/img_convert/a6de34b3b8017b8746b160f72d8afec2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dd98da333d27dc50cd4015a34a1e2b3e.png)
 ##  3. 应用程序优化
 
 首先，我们来看一下，从应用程序的角度有哪些优化 I/O 的思路。应用程序处于整个 I/O 栈的最上端，它可以通过系统调用，来调整 I/O 模式（如顺序还是随机、同步还是异步）， 同时，它也是 I/O 数据的最终来源。在我看来，可以有这么几种方式来优化应用程序的 I/O 性能。

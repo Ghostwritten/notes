@@ -1,5 +1,5 @@
 #  vscode 快捷键与配置
-![](https://img-blog.csdnimg.cn/5a87a619092a4a20b79459cf8a00d330.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/b35b29644401054057573c36e0dcd72d.png)
 
 
 

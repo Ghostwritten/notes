@@ -8,7 +8,7 @@
 
 　　理解Nginx模块,
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1c4d7add41ca4a369ff9ce84876c7066.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/06e45d938244a8953509500d32e6b2df.png)
 
  - (1):首先我们要保证它是编译到我们nginx的`binary`的二进制文件的;
  - (2):其次我们要了解,这个nginx模块究竟提供了哪些配置项?
@@ -16,57 +16,57 @@
  - (4):这个模块提供了哪些变量?
 
 　　接下来,我们以实际的场景来给大家演示如何看这四点
-　　![在这里插入图片描述](https://img-blog.csdnimg.cn/0c2d5c0d6b604abf8c712d34def30d65.png)
+　　![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/226cd2aca72d4396ed2ef3091269d705.png)
 我们在官方文档的`documentation`中可以看到,所有的官方模块都有完善的说明:
 
 　　 比如,我们在做`gzip`压缩的时候,我们可以找到一个叫`ngx_http_gzip_module`；
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6b5b0df8b9444268987e772849edb1d6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e98546ef6866bf116394df0688e5c38e.png)
 我们打开这个链接可以看到对这个链接的简要描述,以及它所支持的配置,即指令,
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/91c39eb2b80a4f9fb471cda7c6c1822e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/68de3873b32890901162f79fd7c0b75d.png)
 　比如指令`gzip on |off` 以及相关描述.
 
 在最下方 ,放了相关的变量;
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/625ce8d262ce4a98bc17cbe87614ca0c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d6009f322fe6872d452e65a74039b86a.png)
 那么以上四点怎么看尼?我们可以看编译以及源码的方式去看每一个配置项被提供的;
 　　　　首先我们开始编译时,我们在它的源代码根目录下,会执行`./configure --with --without` 甚至用`--add-module`引入nginx的第三方模块的方式,把我们的nginx编译到nginx中;但我怎么确定它确实编译到我们的nginx中了尼?
 
 　　　　我们可以在`configure`以后,到`objs`目录下,在此目录下会生成一个文件,叫`ngx_modules.c`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cd3490f0f42143ef96ebdbf5a2a50156.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3909089aa23b1bf10317c6601704b15e.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/60fc8dc5e924485a961df73e5bd46678.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a995dee5d2d7a0b66ed533f025f00943.png)
 我们可以看到一个数组,叫`ngx_modules[]`,这个数组中是包含了所有编译进nginx中中的模块;在这里我们找一找刚才的`gzip`
 输入 /gzip 再按住Enter 可以查询;
 (1):我们可以找到这个gzip模块已经被编译到`nginx`中了;
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c4995659b16e4937a657a0efac066e6c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/54eb264e5a118f3a3c5d4d6833f236f1.png)
 (2):我们再看这个gzip模块究竟提供了哪些指令了尼?
 　我们看到它的源代码中,一个叫command的这样的一个数据结构;
 `src/http/modules` 存放模块的源代码
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/81c03d45ac4741759aa078ba6bcef654.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/452c21141ede0a13956f4cb60e2040fc.png)
 　打开以后在这个源文件中我们搜索`ngx_command_t`这样的一个结构体,它是每个模块里面唯一的;
 
 　　　　   这个结构体是一个数组;数组中的每一个 成员是它所支持的指令名:
 
 　　　　　每个指令名后面携带的参数表示他可以跟几个参数,这个参数什么样的类型,是空间类的还是时间类的;
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1257be235666465f8680ee10dafa3b4f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/354d319eaf0f98364a30a5ba54ea1e47.png)
  　　　　 这样我们就确定了它支持哪些指令;
 
 　　　　  所以即使它没有在官方文档中去说明我们也可以看到;
 
 　　　　  接下来我们再看下nginx模块是如何被定定义的?
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8eaaa0b70db245f9b531c41db3817171.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/67b2ed71e3ddd696662d0e4631e927e2.png)
 `ngx_module_t` 用来说明每一个模块的结构体,这个结构体中有一个成员叫`commands` 也就是`ngx_command_t` 也就是我们刚刚在源代码中看到的`ngx_command_t`;而`ngx_command_t`这个数组中,每一个元素就是一个指令,以及它所处理的方法以及这些指令可以跟些什么样的参数;`ngx_module_t`是通用的模块;但是我们看到,但是我们实际上有许多不同类型的应用;比如HTTP,比如`stream`这是完全不同的应用;那么每一类应用都有许多模块组成,所以我们把模块又细分为子模块;`ngx_core_module_t` 就是核心模块;`ngx_http_module_t`就是http模块等,都必须遵循同样的规则;每一类子模块它会重新定义一些新的规则;比如`ngx_http_module_t` 这个http模块定义了八个回调方法;
 
 而`ngx_event_module`事件模块它又定义了事件操作相关的方法;
 
 再回头看`ngx_module_t` 它会定义所有模块的一个顺序,因为它里面有个`index`序号;这个模块的顺序仍然非常重要;它会决定有些模块如果跟其它模块是冲突的话,先生成的模块会阻碍后生成的模块发挥作用,这个我们后面再说,`nginx`的模块首先要做到高内聚,也就是说相应独立的功能是在同一个模块代码中的;它的抽象是做的非常好的;比如说我们刚才所说的`ngx_module_t`中的command 它就定义了很多配置;它的启停回调方法
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4656eb71b8e64e37add567fff782b79d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c47d50c8013a310f9b27da2dd4d63f91.png)
 有一些定制化的需求,如果希望在集群刚刚启动的时候,做一些什么样的事情,完全可以在这些回调方法中去做,或者说我们找到一些第三方模块;它们就在启停的地方完成了相应的工作;
 
 　　Nginx模块拥有非常好的设计;nginx模块是我们理解诸多特性的一个基础;
@@ -79,7 +79,7 @@
 　　上一节中我们谈到了`ngx_module_t` 是每一个模块必须具备的数据结构;其中它有一个成员叫`type`;这个type其实也就定义了这个模块它是属于哪一种类型的模块;
 
 　　那么一共有哪些类型的模块?
-![在这里插入图片描述](https://img-blog.csdnimg.cn/457ce7e40ed64c9a95b0b799ccb7a39a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/783643ee226318fc4ac4e38b47bf327d.png)
 
  - (1):第一类模块叫`ngx_core_module`  叫**核心模块**;核心模块里面会有一类核心模块;比如`events`,`http`,`mail`或者`stream`;它们本身会定义出新的类型模块;所以可以看出来nginx框架代码并没有定义出什么http业务或者`stream`业务而是通过某一类`ngx_core_module`它可以独立的去定义出新的子类型模块;我们可以看出nginx的灵活性是非常强的;如果新出了一类应用可以新增一个`ngx_core_module`来定义新的模块;
 
@@ -93,9 +93,9 @@
 　　下面我通过之前在编译nginx的时候所看到的源代码文件给大家分析下这些目录是怎样对应到子类型模块中的;
 
 　　现在我们进入我们nginx的安装目录,在安装目录中我们先看下,有个src目录;之前我们没有详细的介绍src目录;
-![在这里插入图片描述](https://img-blog.csdnimg.cn/788bd765871840ffa4f8eb03b74852d0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/398814c4dc99fe2354eddb96bbb6904c.png)
 而官方提供的非框架的也就是一些可有可无的模块我们把它放到了`modules`目录下;
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a18672337c3741e794845aba0c3528c6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8cd82ff606a9936c49ec9e84f4f218e0.png)
 可以看到这里有许多模块,我们谈到这些模块分为三类:
 
  - (1):处理请求生成响应的模块;不带关键字叫`filter`和`upsteam`的;

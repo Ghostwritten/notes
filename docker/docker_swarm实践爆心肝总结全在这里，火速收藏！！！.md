@@ -1,5 +1,5 @@
 #  Docker Swarm 快速入门
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bf38c9ff60d642be92bc6f2f613062a5.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/21f1ca3790c3d8ceb5ed50a0ae77e18a.jpeg#pic_center)
 <font color=	#40E0D0 size=4 face="楷体">"这是一个非常棒的docker swarm学习历程。我把一个国外的docker精简实践教学进行了简略的翻译，比起国内博客学习的总结性文章，它更注重让小白在实战背景下容易理解与感悟，激发萌新自我疏理总结实战演练下的小细节。"</font>
 
 ---
@@ -7,7 +7,7 @@
 
 ----
 ## 1. docker swarm爱之初体验
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7905104b66e04d94bd55f48ab22afcc2.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_19,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/35bf7e6c68472c2f2448e31fdfa5615a.png)
 
 
 将单主机Docker主机转换为多主机Docker swarm集群模式。默认情况下，Docker作为一个隔离的单节点工作。所有容器仅部署在引擎上。群模式将它变成了一个多主机集群感知引擎。
@@ -227,7 +227,7 @@ verify: Service converged
 
 ---
 ##  2. Overlay网络恋习
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c405b141e06d4e4dadc3315051be5f58.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_19,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/04aecccd8b37b911a53dcee0ac95c215.png)
 
 
 默认情况下，Docker作为一个隔离的单节点工作。所有容器仅部署在引擎上。群模式将它变成了一个多主机集群感知引擎。
@@ -324,7 +324,7 @@ Total requests: 2
 IP count: 
 ```
 ##  3. docker swam集群实现负载均衡与服务发现美
-![在这里插入图片描述](https://img-blog.csdnimg.cn/81455e09f76f4621a3938aa6f5d156e2.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_19,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9a4b7592b41e372e928b0f7ac084ab63.png)
 
 ### 3.1 初始化集群
 第一个节点（manager）：
@@ -472,7 +472,7 @@ CONTAINER ID        IMAGE                                COMMAND                
 
 ---
 ##  4. 跨swarm集群应用滚床单更新
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0485b0468aee405589a2343aed3507a3.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_19,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8e7f400b9f65873458e1b941b22cc151.png)
 
 
 服务可以动态更新，以控制各种设置和选项。在内部，Docker管理如何应用更新。对于某些命令，Docker将停止、删除和重新创建容器。对于管理连接和正常运行时间来说，让所有容器一次性停止是一个重要的考虑因素。
@@ -1421,12 +1421,12 @@ docker run -d -p 9000:9000 --name=portainer \
 ###  10.3 界面访问Portainer Dashboard
 随着Portainer的运行，现在可以通过UI访问仪表板并管理集群。仪表板运行在Port 9000上，可以通过这个链接访问
 第一个屏幕要求您为admin用户创建一个密码
-![在这里插入图片描述](https://img-blog.csdnimg.cn/98e7aedc653b484e9fc051eb7e118f22.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_15,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/527a0a5bede708e1777186ddeeb75f04.png)
 配置完成后，第二个屏幕将要求您使用定义的密码登录到仪表板。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fcdcb920db414ecfa80a0d1e3521ea10.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_15,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3534daa58e038904f4f9f9bbe7ff401b.png)
 ###  10.4 部署模板
 Portainer的众多特性之一是，它可以基于预定义的容器部署服务。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a88a12923bb24a5e8b91036eb262c51f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3dec8559c8390ab21e7f01a08820c4c0.png)
 在这种情况下，您将部署nginx模板。
 
  - 通过“应用模板”页签查看可用的模板。
@@ -1439,5 +1439,5 @@ Portainer的众多特性之一是，它可以基于预定义的容器部署服�
 ###  10.5 管理容器
 将部署一个Nginx实例。使用指示板，您将看到状态并能够控制集群。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20b32d2434024bafbf8a1d4bb8e0f6a1.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/89f8786688eee5bad0ede23e580a2dfd.png)
 

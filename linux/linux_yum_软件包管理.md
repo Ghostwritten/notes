@@ -3,7 +3,7 @@
 ----
 ## 1 yum介绍
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a6102e2a578c4cb988b60f1ef94abff5.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0512cf4af2db81bfd6a44451d1179ff7.png#pic_center)
 
 
 

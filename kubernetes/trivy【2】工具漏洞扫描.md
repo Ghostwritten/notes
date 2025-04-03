@@ -6,7 +6,7 @@ tags: trivy,安全
 
 ---
 
-[![在这里插入图片描述](https://img-blog.csdnimg.cn/f4d46ead81ff47a58fb0c860cfee7b62.png#pic_center)](https://www.rottentomatoes.com/tv/for_all_mankind)
+[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d96da1e444ae631760e0fce84990c29b.png#pic_center)](https://www.rottentomatoes.com/tv/for_all_mankind)
 
 上一篇我们[了解 trivy 安装教程](https://blog.csdn.net/xixihahalelehehe/article/details/126019559)，接下来我们熟悉 trviy 命令的场景运用。
 

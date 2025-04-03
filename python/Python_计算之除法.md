@@ -102,5 +102,5 @@ a= 95 b= 20 c= (0.75, 4.0)
  - [Python除法：四舍五入，地板除，取整，取小数](http://www.juzicode.com/python-note-divide/)
  - [python 内置函数](https://blog.csdn.net/xixihahalelehehe/article/details/104913051)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b9b03d01a9a64e558f74663b591bf9f1.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4b9a14d867d96996fabb019528b11a12.gif#pic_center)
 

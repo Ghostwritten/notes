@@ -16,7 +16,7 @@
 
 ##  1. 什么是GitOps
 GitOps 最早是在2017年由 Weaveworks 创立提出，它是一种进行 Kubernetes 集群管理和应用程序交付的方式。GitOps 使用 Git 作为声明性基础设施和应用程序的单一事实来源。GitOps 的核心思想是拥有一个 Git repository，包含目标环境中当前所需基础设施的声明性描述，以及使目标环境与 Git repository 中描述的状态相匹配的自动化过程。借助 GitOps，可以针对 Git  repository 与集群中运行的内容之间的任何差异发出警报，如果存在差异，Kubernetes reconcilers会根据情况自动更新或回滚集群。以 Git 作为 pipeline 的中心，开发人员可以使用自己熟悉的工具发出PR，以加速和简化 Kubernetes 中应用程序部署和操作任务。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f9a67a64d30b49f8a71614e6c524fed0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9417fb0aa14942e1423ba478f81eb4fe.png)
 
 构建云原生应用的运营模式
 GitOps 可以概括为以下两点：
@@ -75,10 +75,10 @@ GitOps 构建并迭代了从 DevOps 和站点可靠性工程中汲取的想法�
  - Weave Cloud 'Deployment Synchronizer'（安装到集群）检测到集群已过期。它从配置存储库中提取更改的清单并将新功能部署到生产中。
 
 启用 GitOps 的 CICD 管道：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bc2a8565a7f448b18b8de99478782964.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ae978a5d586e4120a5828d6268c276a8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/60a6ebc465907621431859fc844834a5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9b4d7f3f0f6d67ddbed5a0a97a5f5d52.png)
 GitOps 是一个面向发布的操作和功能模型。您向客户交付新功能的速度在一定程度上取决于您的团队在此周期中各个阶段的完成速度。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e2a87d0d9b8f49fb8fc3e0500d22ca3a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c7d67c0f5c09ed6f0dc467c4f770559f.png)
 ##  7. GitOps 是如何工作的呢？
 ###  7.1 把环境配置作为 Git repository
 GitOps 以代码库为核心来组织部署。我们需要至少有两个仓库：应用程序库和环境配置库。应用程序库包含应用程序的源代码和部署应用程序的 manifests。环境配置库包含部署环境当前所需基础架构的所有部署manifests。它描述了哪些应用程序和基础设施服务（消息代理、服务网格、监控工具等）应该在部署环境中以何种配置和版本运行等内容。
@@ -89,7 +89,7 @@ GitOps 以代码库为核心来组织部署。我们需要至少有两个仓库�
 传统的 CI/CD pipeline由外部事件触发，比如新代码被推送到应用程序库时，就触发了。
 
 而基于 Pull 的部署方法，引入了operator。它通过不断将环境配置库中的期望状态与部署环境中的实际状态进行比较来接管pipeline的角色。当发现差异时，operator会更新部署环境中的状态以匹配环境配置库。此外，它还可以监控 `image registry` ，以查找要部署的新镜像版本。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5189ef7743af4296827eaa9fed807fea.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/19d815a519b62396f98e14fc3ba68393.png)
 基于 pull 模型的部署不仅能做到环境配置库更改时更新环境；
 
 `operator`也能做到当实际环境与环境配置库中存在差异时进行还原。
@@ -108,11 +108,11 @@ GitOps 以代码库为核心来组织部署。我们需要至少有两个仓库�
 
 也可以将 YAML 的模板存储在应用程序库中。构建新版本时，可以使用模板在环境配置库中生成 YAML。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b16508116ec44c6e80359bdc96e3cf41.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/995fa96fed2d3cd1624290bd0a6740f2.png)
 对环境配置库的更改会触发部署`pipeline`。pipeline负责将环境配置库中的所有manifests应用到基础设施。这就需要我们更关注部署权限细分及控制。同时，这种方式无法自动注意到环境及其所需状态的任何偏差。我们需要额外的监控报警方式，来保障环境与环境存储库中描述的内容一致。
 
 对于大多数应用程序来说，只使用一个应用程序库和一个环境配置库是不现实的。GitOps 也能应对。可以设置多个构建 pipeline 来更新环境配置库。然后就像上两个描述过程一样，自动化 GitOps 工作流程开始并部署应用程序。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f56f02de9f0646918f4d4a05da8f6223.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6b9cc6f26543bb1c2fbb1fb940e515de.png)
 我们需要在环境配置库中使用独立的分支，来管理多个环境。选择设置 operator 或者构建pipeline，自动化 GitOps 工作流程开始并部署应用程序。
 
 ---

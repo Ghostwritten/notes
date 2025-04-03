@@ -4,22 +4,22 @@
 
 ----
 ## 1. 介绍
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524155758892.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d33ff661b05a9b1f0599237ccbf73443.png)
 **audit logs introduction**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524155902175.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524160021264.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524160108228.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524160231451.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524160321830.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524160403240.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524160715804.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/189432627f98be5e56097a059c367a58.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/20e009d2dbbe3c566c0a1a862e830229.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/70dbbb6ba10cfc1e59d27dc22a0e87fc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f17880a317319660d2364fedaf6336c6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6ca7a584c5719c98216ebdec03e834f8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/db0625be8466ddc5bc311760462ee8d3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a13cbb6f749c7cdef30e7ab4a20d508e.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021052416082456.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524161149916.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0f654d2089f3cdd82cc0865920784385.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/20a4ac16ef70ecdddb0e8dbeba1706a5.png)
 ##  2. Apiserver启用“Audit Logging”
 官方链接：
 [https://kubernetes.io/docs/tasks/debug-application-cluster/audit/](https://kubernetes.io/docs/tasks/debug-application-cluster/audit/)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524161231108.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a60b283cd05f7101116210f749926dab.png)
 
 ```c
 root@master:/etc/kubernetes/manifests# mkdir /etc/kubernetes/auditing
@@ -175,7 +175,7 @@ root@master:/etc/kubernetes/manifests# tail /etc/kubernetes/audit/logs/audit.log
 
 ```
 ##  3. 创建Secret 审查 Audit Logs
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524162948841.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/88d21b51ceed9ddcd85492f912c8a734.png)
 
 ```c
 root@master:/etc/kubernetes/manifests# k create secret generic very-secure --from-literal=user=admin
@@ -220,8 +220,8 @@ root@master:/etc/kubernetes/manifests# cat /etc/kubernetes/audit/logs/audit.log 
 
 ```
 ##   4. 创建高级审计（Audit）策略
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021052416340988.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524163538518.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3d2def023c553d7b8d09daa89b31e635.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c9111815775c92afe24aeac7de055d78.png)
 
 ```c
 root@master:/etc/kubernetes/audit# cat policy.yaml 
@@ -372,7 +372,7 @@ root@master:/etc/kubernetes/manifests# tail /etc/kubernetes/audit/logs/audit.log
 
 ##  5. 审查API access 历史
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524170748951.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9f3ab216c07824d88d11a65d758a098e.png)
 
 ```c
 root@master:/etc/kubernetes/manifests# k create sa very-crazy-sa

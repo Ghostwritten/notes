@@ -4,7 +4,7 @@ tags: config,对象
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6eb6db2df289460ea4e964fa82d0127e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3c12b7e99ec982e6cfb98774403703bf.png)
 
 
 ##  1. 方法

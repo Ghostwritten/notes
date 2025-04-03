@@ -14,9 +14,9 @@
 
  - ○ 综合性的 Hands-on Task
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322163732401.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0a6fc3fcde6e7a3da24f6b52dbaee89f.png)
 ## 2. 考试覆盖内容
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322163754870.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eee1cf0ef572739bac25e9df853ee7f6.png)
 ## 3. 注册
 ● 注册报名：
 https://training.elastic.co/exam/elastic-certified-engineer
@@ -33,11 +33,11 @@ https://training.elastic.co/exam/elastic-certified-engineer
 ● 预约考试时间
 ● 提前 48 小时，取消考试
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322163904759.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c8256311a69ad29e5bec70fa7b73a6a2.png)
 ## 5. 预约时间 – PSI 网站
 ● 安装插件
 ● 发送确认邮件和验证
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322163929756.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d1ca307e0863ad9fda21e739c3ab604b.png)
 ## 6. 考试过程
 ● 远程考试
 ○ 提前 20 分钟，环境准备与检查
@@ -58,10 +58,10 @@ https://training.elastic.co/exam/elastic-certified-engineer
 
 
 ## 8. 考试环境
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322164018384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322164028182.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322164038978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021032216423841.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322164250196.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322164302618.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/414d1bb7131013f1088b1a7ac6948aed.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a3a1bdc7948d8ca77d8d54f13bc59d95.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cf070747eecbf79a0282c8a7799ebff8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3f532f3859c0d5d114cb923766eeec24.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/19d9838f2cba01983a818d90b5292d61.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e8595095b8d1468b2b9fa22799eca313.png)
 

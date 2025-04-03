@@ -187,6 +187,6 @@ $ cat /dev/null > /var/log/wtmp
 $: > /var/log/messages    有同样的效果， 但不会产生新的进程.（因为:是内建的）
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d5b02e4b6d8c4c02a061a73a305feae4.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a21a20f1176c48162f69e3fe53b29220.gif#pic_center)
 
 

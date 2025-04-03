@@ -1,6 +1,6 @@
 #  Go 通过 import 导入包
 
-![](https://img-blog.csdnimg.cn/b0660d2d9e374297a601b870392b72b1.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/49deb5b59523366d2dcc04dfbabbf095.png)
 
 
 
@@ -130,7 +130,7 @@ import (
 
 为了验证这个过程，我在创建中创建一个 vendor 目录后，就开启了 vendor 模式了，我在 main.go 中随便导入一个包 pkg，由于这个包是我随便指定的，当然会找不到，找不到就会报错， Golang 会在报错信息中打印中搜索的过程，从这个信息中，就可以看到 Golang 的包查找优先级了。
 
-![](https://img-blog.csdnimg.cn/20200403013720794.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![](https://i-blog.csdnimg.cn/blog_migrate/94c21999fcf8dbf61f2099af51790e57.png)
 如果使用 go modules
 
 你导入的包如果有域名，都会先在 $GOPATH/pkg/mod 下查找，找不到就连网去该网站上寻找，找不到或者找到的不是一个包，则报错。
@@ -139,7 +139,7 @@ import (
 
 还有一点很重要，当你的项目下有 vendor 目录时，不管你的包有没有域名，都只会在 vendor 目录中想找。
 
-![](https://img-blog.csdnimg.cn/20200403013730170.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![](https://i-blog.csdnimg.cn/blog_migrate/61f55444d66d672d7a69e61d4f62ff61.png)
 通常vendor 目录是通过 go mod vendor 命令生成的，这个命令会将项目依赖全部打包到你的项目目录下的 verdor 文件夹中。
 
 参考：

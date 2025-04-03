@@ -71,6 +71,17 @@ curl-7.29.0-35.el7.x86_64
 # rpm -qi curl-7.29.0-35.el7.x86_64 | egrep "Vendor|Packager"
 ```
 
+
+### 3.7 查询命令来源
+
+```bash
+$ whereis redis-cli
+redis-cli: /usr/bin/redis-cli /usr/share/man/man1/redis-cli.1.gz
+
+$ rpm -qf /usr/bin/redis-cli
+redis-7.0.4-1.el7.remi.x86_64
+```
+
 参考：
 	
 

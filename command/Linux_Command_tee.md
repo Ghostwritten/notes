@@ -9,7 +9,7 @@
 Linux tee命令用于读取标准输入的数据，并将其内容输出成文件。
 tee指令会从标准输入设备读取数据，将其内容输出到标准输出设备，同时保存成文件。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a3de4dde357c4a8a95d3757e47d82e51.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6d9e24b85768dccc4a9468a8f61c8b90.png)
 
 ## 2. 参数
 

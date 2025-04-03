@@ -2,7 +2,7 @@
 
 ----
 ## 1. 日志类应用的部署结构
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312103540818.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f3a56d2126d881b12b1ac8dad43751fe.png)
 ## 2. 什么是 Hot & Warm Architecture
 什么是 Hot & Warm Architecture
 
@@ -19,11 +19,11 @@
  - 用于数据的写入
  - Indexing 对 CPU 和 IO 都有很高的要求。所以需要使用高配置的机器
  - 存储的性能要好。建议使用 SSD
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312103746376.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ba584beb0321db3619b9c1bba5e60ef8.png)
 ## 4. Warm Nodes
  - 用于保存只读的索引，比较旧的数据
  - 通常使用大容量的磁盘（通常是 Spinning Disks）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312103814188.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/569b19d8bcd395cbf93760aa9d1e07db.png)
 ## 5. 配置 Hot & Warm Architecture
 使用 Shard Filtering，步骤分为以下几步
  - 标记节点 （Tagging）
@@ -53,14 +53,14 @@ bin/elasticsearch  -E node.name=hotnode -E cluster.name=geektime -E path.data=ho
 # 标记一个 warm 节点
 bin/elasticsearch  -E node.name=warmnode -E cluster.name=geektime -E path.data=warm_data -E node.attr.my_node_type=warm -E network.host=192.168.211.61 -E http.port=9201 -E discovery.seed_hosts=192.168.211.61:9300,192.168.211.61:9301 -E cluster.initial_master_nodes=192.168.211.61:9300
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312111300418.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c59b63ecbe90222ef1aa6bc6390ea6d0.png)
 运行kibana
 
 ```bash
 [elastic@slave1 kibana-7.3.1-linux-x86_64]$ ./bin/kibana
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312111715783.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/493460ac24aaa26a384a8306088bcd6d.png)
 
 
 
@@ -156,7 +156,7 @@ ES 的节点可能分布在不同的机架
  - 如果一个索引相同的主分片和副本分片，同时在这个机架上，就 有可能导致数据的丢失
  - 通过 Rack Awareness 的机制，就可以尽可能避免将同一个索引 的主副分片同时分配在一个机架的节点上
  - 一个机架断电，数据可以恢复
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312104533811.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/42ac7b52af62de58c543754481c7c49d.png)
 ### 6.1 标记 Rack 节点 + 配置集群
  - `cluster.routing.allocation.awareness.attributes": "my_rack_id`
 表示将主从副本分配到不同rack节点上
@@ -340,7 +340,7 @@ my_index1 0     r      UNASSIGNED
 
 GET _cluster/allocation/explain?pretty
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312135451488.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e5bfc7a48249b3933c2c6f25daa8f725.png)
 ## 7. Shard Filtering
 
  - `node.attr` - 标记节点

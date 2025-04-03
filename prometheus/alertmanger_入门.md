@@ -3,7 +3,7 @@ tags: alertmanager
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3da8fd69d61744d392743b1c606f4b0d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dbd9153d8fc6c30686a816108aa6652f.png)
 
 
 ##  1. 简介
@@ -66,7 +66,7 @@ Alermanager会将数据保存到本地中，默认的存储路径为`data/`。�
 
 #### 2.1.4 查看状态
 Alertmanager启动后可以通过9093端口访问，`http://192.168.211.50:9093`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fadbce72da934b79b14ac7f813a148aa.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b277610ee5e8b1c397253725b20cddeb.png)
 
 
 
@@ -148,9 +148,9 @@ cat /dev/zero>/dev/null
 ```
 
 等待Prometheus告警进行触发状态：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e4a55e4de73f49a59873bb4ebf0a174d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1aefd4952bc5360aa65c8e036aaf909c.png)
 查看Alertmanager UI此时可以看到Alertmanager接收到的告警信息。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4bd373ac31c14f3499ec847d84bd0225.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/351b76efa4d1a894b44077ce3e2d4981.png)
 
 
 

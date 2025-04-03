@@ -4,7 +4,7 @@
 
 ---
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/67d4c860574e4379ae407a1a5948c5dd.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4bdb9eb5e8aec0bc5651ec42a6bc4c4d.gif#pic_center)
 
 ## 1. 简介
 从2.6.31内核开始，Linux内核自带了一个性能分析工具perf，能够进行函数级与指令级的热点查找。通过它，应用程序可以利用 PMU，tracepoint 和内核中的特殊计数器来进行性能统计。它不但可以分析指定应用程序的性能问题 (per thread)，也可以用来分析内核的性能问题，当然也可以同时分析应用代码和内核，从而全面理解应用程序中的性能瓶颈。
@@ -102,7 +102,7 @@ perf top主要用于实时分析各个函数在某个性能事件上的热度，
 模块函数与内核函数，甚至能够定位到热点指令。默认的性能事件为cpu cycles。
 #### 2.2.2 输出格式
 perf top
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201029111526560.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7b45c145619f1140bd6545d340acbac4.png#pic_center)
 
  - 第一列：符号引发的性能事件的比例，默认指占用的cpu周期比例。
  - 第二列：符号所在的DSO(Dynamic Shared Object)，可以是应用程序、内核、动态链接库、模块。

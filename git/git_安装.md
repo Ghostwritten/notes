@@ -40,6 +40,10 @@ git version 1.7.1
 1. 安装依赖
 
 ```bash
+yum -y upgrade
+```
+
+```bash
 sudo yum -y install wget make autoconf automake cmake perl-CPAN libcurl-devel libtool gcc gcc-c++ glibc-headers zlib-devel git-lfs telnet lrzsz jq expat-devel openssl-devel
 ```
 2. 安装 Git
@@ -47,9 +51,9 @@ sudo yum -y install wget make autoconf automake cmake perl-CPAN libcurl-devel li
 ```bash
 
 cd /tmp
-wget --no-check-certificate https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.40.0.tar.gz
-tar -xvzf git-2.40.0.tar.gz
-cd git-2.40.0/
+wget --no-check-certificate https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.45.0.tar.gz
+tar -xvzf git-2.45.0.tar.gz
+cd git-2.45.0/
 ./configure
 make
 sudo make install
@@ -67,7 +71,7 @@ source  $HOME/.bashrc
 
 ```bash
 $ git --version          # 输出 git 版本号，说明安装成功
-git version 2.40.0
+git version 2.45.0
 ```
 
 ```bash
@@ -106,7 +110,7 @@ git lfs install --skip-repo
 [http://sourceforge.net/projects/git-osx-installer/](http://sourceforge.net/projects/git-osx-installer/)
 
 安装界面如下所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/48583b7722194580a2a8d44a1fcd3b6d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3b976b821b31f7f24230fe4ec9e02ebb.png)
 
 ##  6. Git 配置
 Git 提供了一个叫做 `git config` 的工具，专门用来配置或读取相应的工作环境变量。
@@ -154,5 +158,5 @@ $ vim ~/.gitconfig
 
 ---
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/409e253d36e74a148d8c3b46ff1d0d1e.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f09f35a7318e39d06f32b3f37a281bc9.gif#pic_center)
 

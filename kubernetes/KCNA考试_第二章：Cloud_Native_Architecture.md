@@ -35,7 +35,7 @@
 云本地架构可以为日益复杂的应用程序和用户日益增长的需求提供解决方案。 其基本思想是将应用程序分解为更小的部分，从而使它们更易于管理。 不是在一个应用程序中提供所有功能，而是有多个解耦的应用程序在网络中彼此通信。 如果我们坚持之前的例子，你可以为你的用户界面，你的结帐和其他一切有一个应用程序。 这些小型的、独立的、具有明确定义的功能范围的应用程序通常被称为微服务。  
  
 这使得拥有多个团队成为可能，每个团队都拥有应用程序的不同功能，但也可以单独操作和扩展它们。 例如，如果有很多人试图购买产品，你就能够扩展具有大量负载的服务，比如购物车和结帐。
-  ![在这里插入图片描述](https://img-blog.csdnimg.cn/a8bacab928564138850413a1a3062bfc.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+  ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/661dd23a202deca9f5e9a51c2845ef58.png)
 Monolithic vs Microservices Architecture
 云本地架构可以有很多优点，但是集成起来也很复杂，因此必须满足一些需求才能高效地工作。
 
@@ -69,7 +69,7 @@ Monolithic vs Microservices Architecture
 另一方面，垂直扩展（[Vertical scaling](https://blog.csdn.net/xixihahalelehehe/article/details/120778634?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164811337616780264040376%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=164811337616780264040376&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-1-120778634.nonecase&utm_term=horizontal%20scaling&spm=1018.2226.3001.4450)）描述底层硬件大小的变化，它只适用于裸金属的某些硬件限制，但也适用于虚拟机。通过允许虚拟机和进程消耗更多的CPU和内存，可以很容易地扩展它们，上限是由底层硬件的计算和内存容量定义的。硬件本身可以扩展，例如，通过添加更多的RAM，但只有在所有RAM插槽被占用时才可以。
 为了说明垂直和水平缩放之间的区别，想象你必须携带一个你拿不起来的重物。你可以锻炼肌肉自己扛，但你的身体有力量的上限。这是垂直扩展。你也可以打电话给你的朋友，请他们帮助你，分享工作。这是水平扩展。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/352460e250954e2b82e327903e494430.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/93855db649bb120fd0c156d4e9a81877.png)
 水平vs垂直缩放
 在各种环境中配置自动伸缩需要配置实例(虚拟机或容器)的最小和最大限制，以及触发伸缩的度量。为了配置正确的伸缩，您经常需要运行许多(接近生产环境的)负载测试，并在伸缩应用程序时分析行为和负载平衡。
 依赖于基于使用情况的按需定价模型的云环境为自动伸缩提供了非常有效的平台，能够在几秒钟内提供大量资源，甚至在资源暂时不需要的情况下将其扩展到零。

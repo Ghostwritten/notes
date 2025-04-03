@@ -22,7 +22,7 @@ ES 提供了类似关系型数据库中 Join 的实现。使用 Join 数据类�
 
 ## 3. 示例1
 ###  3.1 设置 Mapping
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210306203346577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/399a9cea19e712725025d0b284c1e81a.png)
 
 ```bash
 DELETE my_blogs
@@ -53,7 +53,7 @@ PUT my_blogs
 ```
 
 ### 3.2 索引父文档
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210306203455420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8964d8024ab6fd16bc892cc73165138a.png)
 
 ```bash
 #索引父文档
@@ -85,7 +85,7 @@ PUT my_blogs/_doc/blog2
 当指定文档时候，必须指定它的父文档 ID
 
  - 使用 route 参数来保证，分配到相同的分片
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210306203545949.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/934cb20326695409d7fcbda3abeb9bae.png)
 
 ```bash
 #索引子文档

@@ -2,7 +2,7 @@
 tags: alertmanager
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e4a0e351ffc64c74bfcc35ff70f10a90.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f2d56dac91db1c135844111154fa6a23.png)
 
 
 ##  1. 前言
@@ -11,12 +11,12 @@ Prometheus的报警功能主要是利用Alertmanager这个组件。当Alertmanag
 使用prometheus进行告警分为两部分：Prometheus Server中的告警规则会向Alertmanager发送。然后，Alertmanager管理这些告警，包括进行重复数据删除，分组和路由，以及告警的静默和抑制。
 
 ##  2. 架构
-![Alertmanager 告警图](https://img-blog.csdnimg.cn/8ccf20670f684e018bf9fe903c4131f6.png)
+![Alertmanager 告警图](https://i-blog.csdnimg.cn/blog_migrate/d4daf652d06d4347d754deee8cfe5e80.png)
 
-![Alertmanager 逻辑图](https://img-blog.csdnimg.cn/093be54b4e574396a6058c596fde0b16.png)
+![Alertmanager 逻辑图](https://i-blog.csdnimg.cn/blog_migrate/21af8407c51a87094a0859845eb22481.png)
 ##  3. 特性
 Alertmanager除了提供基本的告警通知能力以外，还主要提供了如：分组、抑制以及静默等告警特性：
-![Alertmanager特性](https://img-blog.csdnimg.cn/cbde8666fcab4917bb4ff07ea5741d2c.png)
+![Alertmanager特性](https://i-blog.csdnimg.cn/blog_migrate/353d2967ff38d38e71403cf736b9669e.png)
 ###  3.1 group（分组）
 分组机制可以将详细的告警信息合并成一个通知。在某些情况下，比如由于系统宕机导致大量的告警被同时触发，在这种情况下分组机制可以将这些被触发的告警合并为一个告警通知，避免一次性接受大量的告警通知，而无法对问题进行快速定位。
 例如，当集群中有数百个正在运行的服务实例，并且为每一个实例设置了告警规则。假如此时发生了网络故障，可能导致大量的服务实例无法连接到数据库，结果就会有数百个告警被发送到Alertmanager。

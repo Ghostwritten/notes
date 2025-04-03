@@ -3,11 +3,11 @@
 　　这里我们访问我们之前搭建的一个静态资源Web服务器;
 
 　　我们可以访问它,这个IP对应着我们的Nginx服务器;我们访问这个服务器的时候对它抓包
-　　![在这里插入图片描述](https://img-blog.csdnimg.cn/a9a698f91d6c41aa836b92261199a284.png)
+　　![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e24015ffcba2f0855687f9639323c1fb.png)
 首先,我们下载安装Wireshark这么一个网络分析器;然后对Nginx这个所在的ip和对应的端口进行抓包;
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9078f99845574c0c9386f86e05fb0033.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/34ee802c4b7aa2faef39900f0e0e4357.png)
 [Wireshark 使用入门 参考网络链接](https://www.cnblogs.com/cocowool/p/wireshark_tcp_http.html)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3b0c2456f650490987a270dbd2a887bf.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/def14ccef1f430053e29484f748f82d7.png)
  192.168.1.114是我们客户端的ip
 
 　　180.101.49.42 是我们nginx服务器端的ip,我们对它进行三次握手时,会首先向它发送一个SYN包;
@@ -19,7 +19,7 @@
  - TCP 层主要做的是进程与进程之间通讯这件事。
  - IP 层主要解决机器与机器之间怎样互相找到的问题。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5e1179095af840dda671490e11686e06.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bf4848448183e7c1e54cd30d85c49326.png)
 **三次握手也就是 windows 先向 Nginx 发送了一次 [SYN]，那么相反的 Nginx 所在的服务器也会向 windows 发送一个 [SYN]，这个时候 Nginx 是没有感知到的，因为这个连接还是处于半打开的状态。直到这台 windows 服务器再次发送 [ACK] 到 Nginx 所在的服务器之上时，Nginx 所在的操作系统才会去通知 Nginx 我们收到了一个读事件，这个读事件对应是建立一个新连接，所以此时 Nginx 应该调用 Accept 方法去建立一个新的连接。**
 
 以上我们通过 Wireshark 抓包演示了正常的三次握手是怎么样引发一个读事件来使得 Nginx 去处理这样一个读事件来建立新的连接的。

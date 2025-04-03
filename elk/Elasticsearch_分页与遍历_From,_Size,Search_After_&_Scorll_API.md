@@ -7,7 +7,7 @@
 
  - From ： 开始位置
  - Size：期望获取文档的总数
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210304113134973.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ecc292f917393523a39db2b2442365e4.png)
 from与size设置超过10000会报错
 ## 2. 分布式系统中深度分页的问题
 ES 天生就是分布式，查询信息，但是数据分别保存在多个分片，多台机器，ES 天生就需要满足排序的需要（按照相关性算分）
@@ -15,7 +15,7 @@ ES 天生就是分布式，查询信息，但是数据分别保存在多个分�
 
  - 会在每个分片上先获取 1000 个文档。然后，通过 `Coordinating Node` 聚合所有结果。最后在通过排序选取前 1000个文档
  - 页数越深，占用内容越多。为了避免深度分页带来的内存开销。ES 有个设定，默认限定到 10000 个文档
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210304113506778.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4b3b26f3b0f109b7eb1ca986ed5e21d4.png)
 
 ```bash
 POST tmdb/_search

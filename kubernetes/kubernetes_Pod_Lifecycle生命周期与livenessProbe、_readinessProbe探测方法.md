@@ -4,7 +4,7 @@ tags: Pod,探针,健康检测
 
 
 [
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3a330d60c83345aba9bb379affd2a492.png)](https://www.rottentomatoes.com/m/ex_machina)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e79b43b4d84b39bac891772c16665111.png)](https://www.rottentomatoes.com/m/ex_machina)
 
 
 
@@ -34,7 +34,7 @@ Pod 的生命周期是 PodStatus 对象，其中包含一个phase字段。
 ## 2. Ready 状态
 在 K8s 中，Pod 的 Ready 字段用来标识是否已经就绪，它是由 kubelet 直接管理的， Ready 状态被记录在了 Pod Manifest 的 `status.conditions` 字段下。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ce2556b4cc1247f4ad726366645b2a45.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4b9a81ef2cba4408564c86f92ab5c86f.png)
 你也可以通过 `kubectl get pods` 来查看 Pod 是否处于 Ready 状态。
 
 ```bash
@@ -53,7 +53,7 @@ postgres-7745b57d5d-5lbzz   1/1     Running   3 (5h32m ago)   15d
 
 除了因为资源不足导致业务不可用以外，还有一类典型的场景：在进行水平扩容时，由于新创建的 Pod 的业务进程需要的启动时间较长（例如对于大型的 Java 应用，往往需要数分钟的启动时间），如果在业务启动时就将 Pod 标记为 Ready 状态并接收外部请求流量，将会有部分请求得到错误的返回，如下图所示。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a3178ef236904abba40d87658f1224fd.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/32549aa53a57140927718a3a657e2214.png)
 所以，这两种情况都引出了一个非常有意思的场景：因为业务进程处于运行状态，Pod 和容器也处于 Running 状态，所以 K8s 会认为当前 Pod 是就绪的。但实际上，业务可能正处于“** 启动中”或者出现“**资源不足”的情况，暂时无法对外提供服务。
 
 这两个例子告诉我们，在一般情况下，Pod 就绪（Ready）不等于业务健康。那么，如何才能让 K8s 感知到业务真实的健康状态呢？这时候我们就需要用到 K8s 探针。
@@ -136,7 +136,7 @@ spec:
  - `successThreshold` 的含义是只要探针成功 1 次就代表探针成功了，Pod 状态为 Ready 表示可以接收外部请求。
  - `timeoutSeconds` 代表探针的超时时间为 1 秒。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fdb4c3cc90314473bc2d3325e38205ab.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e97e8f3914ba5d2153811d5ec888006a.png)
 
 
 综合这些配置信息，我们可以得出几个重要的数字。在 Pod 启动之后，如果在 60 秒内（`initialDelaySeconds + failureThreshold * periodSeconds`） 不能通过健康检查， Pod 将处于非就绪状态。
@@ -144,12 +144,12 @@ spec:
 当 Pod 处于正常的运行状态时，如果业务突然产生故障，健康检查会在 50 秒内（`failureThreshold * periodSeconds`） 识别出业务的不健康状态；当 Pod 业务恢复健康时，健康检查会在 10 秒内（`successThreshold * periodSeconds`） 识别出业务已恢复。
 
 Readiness 探针的一个非常重要的作用是，它负责找出业务状态不健康的 Pod，并且将它从 Service EndPoints 列表移除，使它无法接收到外部请求。如果 Pod 的 Readiness 探针一直无法通过，那么 Pod 将一直无法接收外部请求，如下图所示。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/35e6ab90cf5c42e4ae80c103d546bb8e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4bd7005dfe024a9fa6ae5c407fab5e21.png)
 请注意，当 Readiness 探针向业务应用发出请求时，如果在超时时间内没有收到回复，或者收到的回复的状态码大于 400，那么认为本次探测失败。试想一下，如果这时候业务已经无法自行恢复了，比如产生了死锁，此时 Readiness 探针也已经感知到业务不可用了。
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/951c78c06cfd47e6aea90edd919a8a7e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9520f455b7175dcac1799b28bac8c252.png)
 那我们能否更进一步，让 K8s 帮我们自动重启 Pod 来恢复业务呢？这就是我接下来要介绍的 Liveness 探针。
 
 ### 5.2 LivenessProbe
@@ -175,7 +175,7 @@ spec:
 ```
 Liveness 探针和 Readiness 探针非常类似，Liveness 探针是通过 livenessProbe 字段来配置的，livenessProbe 字段下面的每个字段的作用和 Readiness 探针都几乎一致，这里就不再赘述了。当 Liveness 探针失败时，它将自动重启业务不健康的 Pod，如下图所示。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4464974b88a140239aecbf9ee6edcead.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/906e3aa235a6de7704f4f44301131f4a.png)
 需要注意的是，Liveness 和 Readiness 探针是独立并行的，它们之间并没有相互等待关系。
 
 ### 5.3 StartupProbe 
@@ -214,7 +214,7 @@ spec:
 StartupProbe 是通过 startupProbe 字段来配置的。在这个例子中，Pod 启动之后 10 秒会开始第一次探测，如果至少有 1 次探测成功，那么 StartupProbe 探针就成功，接下来才会继续启动 Readiness 和 Liveness 探针。在我们刚才提到的 Java 应用的例子中，我们可以为 StartupProbe 配置足够大的 `initialDelaySeconds` 来让业务有足够的时间完成启动过程。
 
 如果一个工作负载内同时定义了这三种探针，情况会变得有些复杂，你可以结合下面这张图来理解。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3fa7282808664c04a56a38b621e3796d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/05105d2aa856d367b75ccb84a49a4ac6.png)
 Pod 启动时，三种探针的执行顺序主要可以分成三个阶段。
 
  - 第一阶段：Pod 已启动，容器已启动，业务进程正在启动中，此时 StartupProbe 开始工作，由于 StartupProbe
@@ -222,9 +222,9 @@ Pod 启动时，三种探针的执行顺序主要可以分成三个阶段。
    第二阶段：随着时间推移，StartupProbe 探针成功，Readine 和 Liveness 探针开始并行工作，此时由于 Readine 探针还未成功，当前 Pod 的容器仍然处于 Not Ready(0/1) 的状态。
    第三阶段：随着 Readine 和 Liveness 的探测成功，当前 Pod 的容器转为 Ready(1/1) 的状态，Service EndPoints 将 Pod 加入到列表当中，Pod 开始接收外部请求。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3c79af0246494c4193b99e7ed8af4f40.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/57d1d56a726142e9b6a84d6d51f21546.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/001c888b92884085a823679df06a29a4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/be6a413efd5dd9222c9710e959a25964.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3f84bb4704e03cf4564a08eee66005e7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a1b841c2fe4fa7f95a1ca56e9124b06a.png)
 
 ## 6. 什么时候应该使用活动探针与就绪探针？
 如果您的Container中的进程在遇到问题或变得不正常时能够自行崩溃，则不一定需要进行活动调查；kubelet将根据Pod的自动执行正确的操作`restartPolicy`。
@@ -276,7 +276,7 @@ startupProbe:
 ```
 幸亏有启动探测，应用程序将会有最多 5 分钟(30 * 10 = 300s) 的时间来完成它的启动。 一旦启动探测成功一次，存活探测任务就会接管对容器的探测，对容器死锁可以快速响应。 如果启动探测一直没有成功，容器会在 300 秒后被杀死，并且根据 restartPolicy 来设置 Pod 状态。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7465ae7606a3468fb3c8c18e4ebfe5e6.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2f4a3d339b0c4be1eaa98c276a7cad96.gif#pic_center)
 
 ## 8. 探测方法
 ### 8.1 http 探测

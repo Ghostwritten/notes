@@ -1,11 +1,11 @@
 
-![](https://img-blog.csdnimg.cn/283519f8a4974c4a9a6a6d29470ccc13.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/deb91d22ba0e16189a189d542384e20b.png)
 
 
 ## 介绍
 [CodeGeeX](https://codegeex.cn/)是一个具有130亿参数的多编程语言代码生成预训练模型，使用超过二十种编程语言训练得到。 基于CodeGeeX开发的插件可以实现通过描述生成代码、补全代码、代码翻译等一系列功能。 CodeGeeX同样提供可以定制的提示模式（Prompt Mode），构建专属的编程助手
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b756c58f51194f268cc2df7062cf8b40.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2b566ac0925df1c687d9323ffb98166b.png)
 
 ## 特性
 - 自动代码生成  
@@ -17,7 +17,7 @@
 ## 安装
 - [https://codegeex.cn/downloadGuide#vscode](https://codegeex.cn/downloadGuide#vscode)
 ## 在线demo
-![](https://img-blog.csdnimg.cn/605bbda9d4664d17a96fb27ec912f48b.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/98fb225063151093388e0a811989fb94.png)
 
 ## 生成代码
 
@@ -28,14 +28,14 @@
 - 翻译模式: 选择代码，然后按下Ctrl+Alt+T激活翻译模式，CodeGeeX会把该代码翻译成匹配您当前编辑器语言的代码。点击翻译结果上方的use code插入。您还可以在设置中选择您希望插入的时候如何处理被翻译的代码，您可以选择注释它们或者覆盖它们。
 - 提示模式（实验功能）: 选择需要作为输入的代码，按Alt/Option+t触发提示模式，会显示预定义模板列表，选择其中一个模板，即可将代码插入到模板中进行生成。 这个模式高度自定义，可以在设置中 Prompt Templates修改或添加模板内容，为模型加入额外的提示。
 
-![](https://img-blog.csdnimg.cn/d414ccab38054f32aeb0335e033d39af.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/e1001dc7ae68971c05296446ffe89ed0.png)
 ### Add comment 添加注释
-![](https://img-blog.csdnimg.cn/d09d0041ef9d4e4e8ce66f221c64cc67.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/541e0f709a619648a000b4bdbe384e12.png)
 
 ## 隐匿模式
 在该模式中，CodeGeeX将在您停止输入时，从光标处开始生成（右下角CodeGeeX图标转圈表示正在生成）。生成完毕之后会以灰色显示，按Tab即可插入生成结果。 在生成多个候选的情况下，可以使用`Alt/Option+[ 或 ]`在几个候选间进行切换。如果你对现有建议不满意，可以使用`Alt/Option+N`去获得新的候选。可以在设置中改变Candidate Num（增加个数会导致生成速度相对变慢）。注意：生成总是从当前光标位置开始，如果您在生成结束前移动光标位置，可能会导致一些bugs。我们正在努力使生成速度变得更快以提升用户体验。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/917236e991cd4b64bfda5fda9401eeaa.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/462809b0d02db10e6e7bf2404d51fcb1.gif#pic_center)
 
 
 ### interactive mode 交互模式
@@ -48,19 +48,19 @@ login 登陆账号
 Prompt mode 灵活功能
 ### Translation mode 代码转换
 代码咨询
-![](https://img-blog.csdnimg.cn/0bd67435e60c45059ff0b143a9d332b2.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/18157bacd2bc356e2bbda7833a116e40.png)
 			翻译模式：
 贴入一段待翻译代码，`Ctrl+Alt+T`/ `ctrl+option+T`激活
 翻译模式，根据提示选择该代码语言，CodeGeeX会匹配到当前编辑器语言。
 点击 use code^插入代码。可以在设置中选择注释或者覆盖原来的代码。
-![](https://img-blog.csdnimg.cn/410dfe1c751c4bebb0bfa2665b34638e.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/04ea5eed63a4ba3bc8d6d77aba4f549c.png)
 
 提示模式：
 预先写好自定义模板文件（如上）
 在输入中加入额外提示例子，按Option/ Alt+T进入提示模式，选择特定模板生成代码。
 ## 插件配置
 @ext:AMiner.codegeex
-![](https://img-blog.csdnimg.cn/b9440848d5d444dabb950d8adf2a19f9.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/bf5503f575e6762cce32c268b8f7367b.png)
 
 Candidate Num，The candidate list of code.   The more the slower the inference.
 候选编号，代码的候选列表。推理越慢
@@ -101,20 +101,20 @@ Check this if you want to get suggestions only in need by pressing alt/option+\ 
 
 
 ## 原理
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a1207d0de5e4471bb5ba1958a5327628.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cb123eea3e77449b903a1af1385cc0f7.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/25a8f6671b3f43798f058c2051c8dd42.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/35b9b90593b84f63aa64c4e70c694378.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f21752f38d07453bbaca2fe29419f567.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b8e7680289c04eb8aa22736014d07cc0.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5557a6d1cc9c4b5f8da4add8122d1095.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cc864d0197d34bff9a74b5a441309fee.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5ca0ed65d2fe4cb897c3dd4ad63174d4.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6a02de92971146afb6e9966e9c02dd65.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bcac1471796b40c78f030980982cc5ac.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/42dfda5b6c50441ba4f4002fbb8a866d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4833b8b35e344ceda77bf31850a5d242.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0664bed4e75840c8a33cae0de12decb7.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/edf450f060bf4fa2a9778d6ea7b9a884.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/28404b5cd40048efa7a75c1533108ce3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/22c5587de1cc1671aa79cc3a6655c08f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e7817a53475b42b480fe4498672cfe5e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1bd70737c4d507ceb950d55fcfbdc9f8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/46fe6f07cc14680ff76da5f865fc4031.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2235c037bb4d1fa63a0ed8ca719ff6b1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c8df991f3b237019f970c27f6a66ab0e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fd7e51a12d833539ac933a6735d0736e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/16837156b22f000a6ff1bdc6f618b287.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3981475e60e7d9fb9aacbe7374fe04b1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5d2fc8c22be46435600fefcf864b2942.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bf850e32634eb96f20f30bf780136539.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/748a6fd53c7d71cc03741c0c64e7e70d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3fedd10bfdbef8a5506a57df0951770d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b070cd95b08b71e62cbede3ed0edf53a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/43d72e17427ec7cf2d7116123cc71a15.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5699fca0abd5b3ecb60af7c67765fa85.png)
 

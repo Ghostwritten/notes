@@ -1,6 +1,6 @@
 #  python 进程
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9c1f8396c4c24b8d9eed38f10c5627f1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d5097373ba1a15eafc080b50430c2064.png)
 
 
 

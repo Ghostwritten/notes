@@ -8,91 +8,91 @@
 
 ###  1.1 第一阶段
 双击
-![在这里插入图片描述](https://img-blog.csdnimg.cn/59fa7655ae464d639d644e8320d2cfdb.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/597d266233ee4241863bc98d8a5d4448.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/10d467123300f495374bc63b78f38930.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e8873f96aed9752bdf1cd4a3a0493758.png)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2b7cf8e9de264e908fd6d29baee38159.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/267e4a243fd04449b34e0909181ebc08.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f9af6c21249a7a4e1a06d68891e4a7c2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ea099997b1a6d31cb55e881c85d94f66.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c7fd4be6790d4ca5aa4033226d8c9b54.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/574b74034c2cf4519d1254070b6b8559.png)
 - 192.168.21.91
 - 443
 - root
 - 2023bsg.
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1d5c796acdb84c57997f24969a36f28d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/29409d7d5325adfcf06ed4f71234b33d.png)
 用户密码：root/2023bsg.
-![在这里插入图片描述](https://img-blog.csdnimg.cn/226617e81d744096b490b3ea8e9153f6.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0ad6f931450745fea9599e448d13a088.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/179fa5cabbc6d9b70e4c5d19e4b358e8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6b70ee739d5b15b4af23b085ab66f6be.png)
 - 虚拟机名字：vMware vCenter Server01
 - root密码：2023Bsg.
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dab429f2323f40038929bb69c336a0ac.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6f9d09709a0d47558b6e7d44368d5e0e.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/aa817f9e10dc47b38b40bb88875d9af0.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b6a53d18eebb4f12a38d41874344d284.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4392f36b834647ddafce1442e029ae41.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ad3ac009b2124ea6b66ba516bea3732c.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2a3a08760df04b988ae0e25f29cb2a90.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e4cc6f06b2ce663e510a293133c2263a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/66b1b6c948d370b77511c9638378373f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1d4bfc32a4d7ae3f0ede261a9ad7663d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d34ac5a49a27018fb4ccceae704a598a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2da1775733f771920229fad5d7dc6e99.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/701de9822824ff0a92ac0e7034d47385.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c674792a6eabb8b0ecf3dc57e5a16585.png)
 ### 1.2  第二阶段
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4e9b59e4f6e84874a944e6dee3931d33.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fef488a6aa94433c9b79c711e1f9bbc6.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cfb083a10e4d4f579e1819540a61a2db.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dee54062bac4440b814527cc76cbbdbe.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7962730a16c238d8fe489b16ff8e9122.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/742aa9d99bbb51ac36b77e8cfe234c2a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b4cce5bb47d537cfec85ba0758c354c9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b455caffe26ab230feadc9e60296ad95.png)
 域名：bsg.shanghai
-![在这里插入图片描述](https://img-blog.csdnimg.cn/30f09f63fce3478790e98982ad11618d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/22065c7f69b943c4b7451ddd9b0045d2.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7e9780e0c8fc4c068deeee9149bde368.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cf8e1a730a3b4343bb2010d8693cc55a.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d2f7a95391ac4283821ab6902f798672.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2c7f74787fbb8f0c4387470e1e4c46df.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7b3a4669d5ef010bb24041185ee59a91.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/aa0ad23426e6daf659d9bce7afbb4965.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4b9697b0a02acdc0e03eaacc2ff6b69f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/81bae270cb3666a5129e46cfc99d631b.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8029fbfc2c0e431b90c2267265f44f02.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c639226411cc7b1848214250e52c4e7a.png)
 
 下载证书
 https://192.168.21.100/certs/download.zip
 
 解压
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2903c11fc75842188c7700f2e2de0318.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0548487f298ec8ae7b3136956f072cca.png)
 google 浏览器点击“`settting`”，选择 “`privacy and security`”, 再点击“`security`”
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a7ba9ea1e351469a9842b499c659829c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2888c6c2a446889493a4850ea53ed4f6.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/57275ae9fa7148b6ae0f7062c341dff0.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b37513051eb649a1b4e467157cdb3a46.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f49f47614a364349a789d173732006de.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4ff4fad992e74e228caf077a08e171ee.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/394d8b60d5694e85b5741cfb3d8dda3e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0cf0d0f3207b72867d2f216ab4aaef5f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/792f63b9ad2172a418d4841c56fa1cf0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/386b2dc283b26f859e212aa41efa579c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e74efa693782d7f61c8b79045b9c5f73.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/05f5951d61cef3ae2bc379dd33b97e70.png)
 倒入证书成功后，重启浏览器。
 
 访问：`https://192.168.21.100`，小锁上锁成功。
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c13b116eae91483db372af98d38ba446.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1197160055754b7cb982855b2d7b33f0.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/87903c501bef48a989ee371915fa92f2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c088e1dbecf013b4a165786eac2c7dcb.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5eb1753db15e05c06ba1f4edcf67af91.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cbaaa92edcbe27d50b19702cbc8ab619.png)
 bsg.shanghai\administrator
 2023Bsg.
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e3a4f1def51e4d99b30107c0bd57ae08.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cdd659d01c3916d201f953c2729e6138.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/df899393416e4005978b471306f3513d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/12d21318aa1d4e60955bc9c9796ff0af.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/eb491a2f90df47b5907a25868dd32a30.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2873043896d54e77b860f946960adb7d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0ece280f999c4e3c9215aeaa9604b4fb.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/158a0ade0046484d9adef333b08633a7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cac5ec99c018ed55f89f8f4c5cf4e3ab.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1b12b7acb35595d983292df567ebe295.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/73197f0b190e7df9ccb28f95bcf21ba6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e76b01081de2c1f0a327e650e50aa5d6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b2f085b1dbeeb826225d6bac2275cc7d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c3682e799c6617bd719b9d87a39823de.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/860a73bfef084b98a614cdbebfce99d6.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8b2837ddf551484da639aec3077b7d22.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fdbd667c4e8343ce87ccaf33baefee0f.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/121855e5171445e0881c4d09858f19b8.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/34c52c1162d34c5aad3b7d60fb9d630e.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/23cb80c5a3cc41e3ae20d069320cde5a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/adbdb18b993917d4ec2e5e2b33775acc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e39bc5dfb2125135f99f165ebc7528fa.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eeb60b36b2593a1dabfca1f6cbf76c0a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a3b334fb4789bb7b629e770e09e6dced.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9c365626d5e21a1a287683495f7f25e7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8bc35cfaf8e729996e375689d8a4b37c.png)
 
 
 ## 2. exsi 查看 vcenter
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/01736867536d44a5a09c18b3b0e4f45c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5cee80e98505f81e0463326c09a0f728.png)
 
 vcenter 部署结束。
 ##  3. 部署 DNS server
@@ -154,18 +154,18 @@ sudo systemctl reload unbound
 
 ### 3.3 vcenter 配置域名访问
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e0f8105f571048a694dba01a75810521.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5ff0b9c75161c7a788430c6188937804.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c0475d141b73443c9f93dd50d8ccc8f0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6f6207063491c89083a45077776c7d95.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f28cba9c9e744b3f9b60be9271725617.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6a1bf2fd8a432ad34e41c626f5e3192a.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9c68848c15b6488abf217011674bbc6f.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0642ae27d4834857bae9f9b61806b241.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6519e2d4d6894dfea4044aa459734c27.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cd6afe48843d4c4ca7a636fc9bf09b5e.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f49024f32d5744ebbb4b219665710f41.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/513ae4d41edd4925a2d8560754ac084f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/19d03abffa4a4275935ff1bdbb40b5a7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cbf0405d09d16dff9de0d51dda491de5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/aea8bc04d005fe5668c41be7743619b8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/267ca6507f7b76cfc94d8756a3d019ff.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6f6ae4d7b0fa57a70a6ee08dc143fbe7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5eae9acae1b1a9cc05fd526583e8b053.png)
 
 ```bash
 ❯ nslookup tanzu01.bsg.demo 192.168.21.2
@@ -177,12 +177,12 @@ Address: 192.168.21.100
 ```
 测试域名登陆 vcenter
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b1599b80ce1c4c54aa3915989706d2c0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/99cebe3a84d982bbb245f9e6cad919dc.png)
 登陆
 用户：`bsg.shanghai\administrator`
 密码： `2023Bsg.`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/65ed1b613d85407a800071df4bf8ae6d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6c6ec7f7cc804ef385efd20df0b29dba.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6f7d76acc2e44688a6c2318c85a7c24f.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/45441ebe25ac42e7908e53b4ec09fbbd.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c9a423366308f78f3d6015ec348c314f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/87909e2374e6783fd2b09c1eaf3b91f0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2da31f1791b83a3a973f50355cc15f83.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/858bf199a6d8473349827cc10316a4be.png)
 

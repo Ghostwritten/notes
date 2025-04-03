@@ -3,8 +3,8 @@
 - 不同的题库会有不同的试题，但大致都需要3-4个独立的集群环境。
 - 有的集群1-2个节点
 - 有的集群3-4个节点
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201027110400904.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201027110411659.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6f84049452fe162bccd861532048da2f.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a7c53717cf5600f6d0054c332bcffc07.png#pic_center)
 考虑到很多同学没有参加过类似的psi的在线考试，所以多看几遍：心里有数，考试才不紧张。
 - Elastic文档的位置，考试不允许google、bing等搜索，文档是唯一的参考方式。常见的操作建议烂熟于心，稍微复杂点的建议对文档烂熟于心，直接o（1）时间锁定文档。
 - 考试环境介绍，包含：主机节点访问方式，集群介绍等。
@@ -27,7 +27,7 @@
 ## 3. Elasticsearch单节点集群环境tar部署
 ### 3.1 Elasticsearch 7.2.0 版本下载地址
 [https://www.elastic.co/cn/downloads/past-releases#elasticsearch](https://www.elastic.co/cn/downloads/past-releases#elasticsearch)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201029104139506.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/23b1b5f19ccfba12c713b116d968f08c.png#pic_center)
 
 选择 Linux版本，就可以完成下载。tar包或rpm包
 
@@ -263,7 +263,7 @@ $ /elasticsearch-7.2.0_2/bin/elasticsearch -d
 ### 5.1 下载安装包
 [https://www.elastic.co/cn/downloads/past-releases#kibana](https://www.elastic.co/cn/downloads/past-releases#kibana)
 如图所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201027122503793.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7de4ed3bcf49107276def922822b9d87.png#pic_center)
 ### 5.2 解压安装包
 ### 5.3 修改kibana.yml配置
 - 设定kibana端口
@@ -283,7 +283,7 @@ elasticsearch.hosts: ["http://172.17.0.17:9200"]
 nohup ./bin/kibana --allow-root & > /dev/null 2>&1
 ```
 访问http://1172.17.0.17:5601/
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201028161730274.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ff742576542ccde8b3265cce2131e9b8.png#pic_center)
 
 ## 6. 注意事项
 ### 6.1 我上面讲的都是考试实际考试的环境。
@@ -300,5 +300,5 @@ bin/elasticsearch -E node.name=cluster0node -E cluster.name=cluster0 -E path.dat
 [吃透Elasticsearch 堆内存](https://blog.csdn.net/laoyang360/article/details/79998974)
 
 更多Elastic认证细节内容，请报名@毅铭天下
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201027122802856.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dc70f2706542e36394eb932dde8c81f0.png#pic_center)
 

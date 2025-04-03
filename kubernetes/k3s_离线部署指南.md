@@ -1,6 +1,6 @@
 #  k3s 离线部署指南
 tags：部署
-![](https://img-blog.csdnimg.cn/5873141bfbc34aa0944db6d8b0aaa57a.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/747705381099aac372fcd636273eeede.png)
 
 
 

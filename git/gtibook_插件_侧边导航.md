@@ -40,7 +40,7 @@ npm i gitbook-plugin-chapter-fold
 }
 ```
 效果图：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3e0526de8fc146699d4d168c1fcb23c6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c966d601ea201277411f367c1313c047.png)
 ## 2. expandable-chapters 插件
 安装
 
@@ -63,7 +63,7 @@ npm i gitbook-plugin-expandable-chapters
 ```
 效果图：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2d6d5d663a00472284b19ee3bc514000.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/39947d2c5e31f886a40407afcaf7edb5.png)
 
 ## 3. expandable-chapters-small 插件
 安装
@@ -86,7 +86,7 @@ npm i gitbook-plugin-expandable-chapters-small
 }
 ```
 效果图：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b46746ade94d4eedac39a105cf913f1d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/13bed2e8c0efa83a6a82253b4e3a64a7.png)
 ## 4. sidebar-style 插件
 安装
 ```bash
@@ -109,7 +109,7 @@ npm i gitbook-plugin-sidebar-style
 }
 ```
 效果图：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9517ef86c6a04e2fab078ea157ab9259.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/751b029b4bcd55f31c6e742ae9122803.png)
 
 ## 5. splitter 插件
 安装
@@ -118,6 +118,6 @@ npm i gitbook-plugin-splitter
 ```
 
 侧边栏宽度可调节
-![在这里插入图片描述](https://img-blog.csdnimg.cn/19e230a4ac9f4b998c37785f22fa5119.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ac30a98143d4bda9d5cd6636ecdf9eaf.gif#pic_center)
 
 

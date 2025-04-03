@@ -25,7 +25,7 @@ Argo 生态目前主要由四个子项目组成，包括：
 ## 2. Argo CD 介绍
 
 Argo CD 旨在提供一个声明式持续交付 (CD) 工具。**Argo CD 支持多种配置管理工具，包括 ksonnet /jsonnet，[kustomize](https://blog.csdn.net/xixihahalelehehe/article/details/111223923?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164085068916780366534627%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=164085068916780366534627&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-1-111223923.nonecase&utm_term=kustomize&spm=1018.2226.3001.4450) 和 [Helm](https://helm.sh/) 等。Argo CD 扩展了声明式和基于 Git 的配置管理的优势，以在不影响安全性和合规性的情况下加速应用程序的部署和生命周期管理**。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ae8ba276c57741bdbdbd01af2061797a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3cb646e62125e4e2a4c8adee568c3544.png)
 
 
 ##  3. Argo CD 适用场景
@@ -57,7 +57,7 @@ Argo CD 旨在提供一个声明式持续交付 (CD) 工具。**Argo CD 支持�
  - 用于覆盖 Git 中的 ksonnet/helm 参数的参数覆盖
 
 ## 5.  Argo CD 架构
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8b781df8963a41589b18301c09a63201.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/08d39f4731bd043aa60235d5ad4c3d23.png)
 ## 6.  Argo CD 组成
 从整体上看，Argo CD 有三个主要的组成部分：`API Server` 、`Repository Server` 、`Application Controller`。
 

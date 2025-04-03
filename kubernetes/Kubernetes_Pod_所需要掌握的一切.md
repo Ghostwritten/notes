@@ -1,5 +1,5 @@
 
-![](https://img-blog.csdnimg.cn/ffbbf05047784d69b0922b180ce0dd41.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/6aad7f0bd8c5063c955849771bf1d369.png)
 
 
 
@@ -33,6 +33,7 @@ spec:
 ```bash
 kubectl apply -f simple-pod.yaml
 ```
+
 
 ###  创建一个 执行命令的 pod
 
@@ -158,6 +159,51 @@ kubectl run -i -t busybox --image=busybox --restart=Never
 启动 cron 作业计算 π 后2000位，每5分钟打印一次.
 kubectl run pi --schedule="0/5 * * * ?" --image=perl --restart=OnFailure -- perl -Mbignum=bpi -wle 'print bpi(2000)'
 ```
+
+## pod 调度
+
+### nodeName
+
+```bash
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: nginxtest
+  name: nginxtest
+  namespace: cs-sit
+spec:
+  nodeName: k8s-node07
+  containers:
+  - image: nginx:latest
+    name: nginxtest
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginxtest-svc
+  namespace: cs-sit
+spec:
+  type: NodePort
+  selector:
+    run: nginxtest
+  ports:
+    - name: nginxtest-svc
+      protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30011
+
+```
+### k8s 高级调度 亲和力和反亲和力、绑定标签、污点容忍污点
+
+- [k8s 高级调度 亲和力和反亲和力、绑定标签、污点容忍污点](https://blog.csdn.net/xixihahalelehehe/article/details/108864999)
+
+### 将 Pod 指派给节点（官方）
+- [将 Pod 指派给节点](https://kubernetes.io/zh-cn/docs/concepts/scheduling-eviction/assign-pod-node/)
+
 ##  Pod 存储
 - [配置 Pod 以使用 PersistentVolume 作为存储](https://blog.csdn.net/xixihahalelehehe/article/details/107877700)
 
@@ -171,8 +217,8 @@ kubectl run pi --schedule="0/5 * * * ?" --image=perl --restart=OnFailure -- perl
 
 ##  Pod 状态分析
 - [kubernetes pod 状态报错分析](https://blog.csdn.net/xixihahalelehehe/article/details/129728630)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1c667ea08e12452b8bd570cb0bd99049.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/37aec9d37dd44ab59714b4547f3b44ec.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cc34f3a2625b86fe92f72545bc8aa0bb.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8cc70753120d1c2f168b071c1cc0839b.png)
 
 
 ##  client-go 开发管理 pod
@@ -186,12 +232,12 @@ kubectl run pi --schedule="0/5 * * * ?" --image=perl --restart=OnFailure -- perl
 
 
 ##  pod 完整生命周期
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6d9f451249974a7ab0e27b8cda138985.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4f8f0d8771b7d94836b233afb5c72882.png)
 
 ##  pod 状态机制
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/93797763f18144f0a87682f6a6f99767.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/de777429d71f5fefa4ae0978deb8aa1e.png)
 
 ## 基于 tain 的 Evctions
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9587e35d53a64f7bba15c601bab95e59.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fab917b6ee5da723364c1080c873d537.png)
 

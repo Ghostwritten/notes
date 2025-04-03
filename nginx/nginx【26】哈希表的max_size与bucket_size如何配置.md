@@ -1,7 +1,7 @@
 **Nginx容器**是许多nginx高级功能的实现基础,即使我们不需要编辑第三方模块或者查看nginx的源代码;但我们需要变更我们的nginx配置文件,以达到最大化的性能;
 
 　　我们也需要了解Nginx容器是怎么样使用的;下面我们来看下nginx最主要的内部容器;
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fff2f92a84cc49ef9100156e7e760be7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b190d3f05f6cdcff39d306e397e3d4d1.png)
 
  - (1):首先就是**数组**,也就是`ngx_array_t`;这里的数组和我们平常所理解的数组还是有所不同的;它是**多块连续内存**,其中每一块连续内存中可以存放很多**元素**;
 
@@ -21,19 +21,19 @@
 　　　　我们只是从它的实现层面来看;和正常的哈希表是相似的;就是每一个元素会顺序的放到一块连续的内存当中;每一个元素它的key同样是通过哈希函数来映射的;
 
 　　如下:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/44ee4f069ecb4b54a5e7449f75a9eeab.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/48b0ae82d2926bd08182d2ea6e1f29e9.png)
 这是一段存放哈希表内容的连续内存;那么如下的一个结构体就是哈希表的描述;
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b1e9a4ed6e14446cb75b5e8d4f411a7f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/59f9447e4aa401655a61466c452631b4.png)
 　每一段大小的内容如下:
-　![在这里插入图片描述](https://img-blog.csdnimg.cn/6a9065ef567545a89641b494f4e72287.png)
+　![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/606932550649095c40a785909a855180.png)
 它的name就是它的key;它的value是一个指针;指向我们实际的内容:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6f16c7ad19b841bfbba91ab256f5ea1c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0fd91354552d8f85835d3163b622e0ec.png)
 　一个key和另外一个key是连续放在一起的;这和大部分的哈希表是一样的;
 
 　　　　完整图示如下:
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f1829f2ad2d9499ea978eb9cc7fc329c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/67971883966f27c89fba0f676f232b1b.png)
 **哈希表与通常的哈希表有哪里不同尼?**
 
 　　　　它的应用场景不同,它仅仅应用于**静态不变的内容**,也就是说我们在运行过程中,这个哈希表通常是不会出现插入和删除的;

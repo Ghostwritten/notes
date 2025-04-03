@@ -2,7 +2,7 @@
 tags: exporters
 <!-- catalog: ~consul-exporter~ -->
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/54c022fdd0fb48abaa50a967d723fe60.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e90ea686cdca543ca9563be7f75a4574.png)
 
 
 

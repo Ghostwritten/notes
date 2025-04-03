@@ -525,6 +525,6 @@ $ cat SUMMARY-GitBook-auto-summary.md
  - [mofhu/GitBook-auto-summary](http://frank-the-obscure.me/GitBook-auto-summary/)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5caf2d895e41482ab69e909f8a0c8353.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a05990eea953ef0b10dcc7bebd81eae2.gif#pic_center)
 
 

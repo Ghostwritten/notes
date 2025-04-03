@@ -127,7 +127,7 @@ tput rc
 ```bash
 tput setb 6 tput setf 4
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a46b018c77be4693b6d5b0af5b263250.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d57053c7ac645adcacccaf52228f36ba.png)
 要反显当前的颜色方案，只需执行tput rev。
 
 有时，仅为文本着色还不够，也就是说，您想要通过另一种方式引起用户的注意。可以通过两种方式达到这一目的：一是将文本设置为粗体，二是为文本添加下划线。
@@ -167,7 +167,7 @@ done
 
 exit 0
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3d7ec0a227da451797729bc917a5f301.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_13,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/18d897923986180ca830e47295a81e82.png)
 ### 5.3 格式传参输出
 
 ```bash
@@ -220,7 +220,7 @@ format_output "Yesterday Once more" 2 5 1 1
 
 exit 0
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/da271b6d90a54f52b0eb0e8d4f843978.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3355d8a70ed8e87badb038535767f853.png)
 ###  5.4 光标定位输出
 
 ```bash
@@ -256,7 +256,7 @@ tput rc
 
 exit 0
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e15daa51887d4b9c828f498660d85724.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_19,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/48c9a87d1fc86d9d43321aa8ab99feda.png)
 ###  5.5 输出艺术字体
 
 ```bash
@@ -417,7 +417,7 @@ root@test1:~/shell/tput# echo; tput setaf 1; figlet -c -f roman Happy; tput seta
       done
     done
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/237295b1bf174717b906c3b18b9f0790.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/551ca437bae2537abadf2711979ea178.gif#pic_center)
 
 
 参考：

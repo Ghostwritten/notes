@@ -231,5 +231,5 @@ on your
 $ find ./ -type f -name "*.txt" |xargs chmod 777
 $ find ./ -type f -name "*.txt" -exec chmod 777 {} ;
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/48d0ec97e4b948238ac68617ac4ee59f.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2acc4f84def5ae5b72b4b0cdf82f0297.gif#pic_center)
 

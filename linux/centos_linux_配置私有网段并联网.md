@@ -7,14 +7,14 @@ vcenter 创建两台虚拟机A 、B，如何创建虚拟机请参考[这里](htt
 虚拟机 A 具备两个网络接口，外网接口为 `ens192` ip：`192.168.22.6/20`，网关为`192.168.21.1`，另一个接口配置私有网段 `10.60.254.254/16` 
 
 10.60.254.254./16 可用地址范围
-![在这里插入图片描述](https://img-blog.csdnimg.cn/424ccab5c4754f10bbcff515e7e7d597.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/17dd8914d0735e8f117b5095690683f3.png)
 
 
 我们在虚拟机添加网卡
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fb36257f4286435dbfd890cbb72f010a.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f419ba4693ea4194bbead79931f9154d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/befa145a07914827b5861a8cf1fc997a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/55b4cd50d4b5cf6696282dd242d6ce2f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/735bb863817ae7832cec6ea6b6df91fd.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d4e557c892430e435d7b3abde5eb3b61.png)
 
 
 

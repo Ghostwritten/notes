@@ -45,7 +45,7 @@ Swap 其实是把系统的可用内存变大了。这样，即使服务器的内
 
 剩余内存，则使用 `pages_free` 表示。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210705153556233.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/02cd4452d45e7c8e486231118c20f48d.png)
 **kswapd0** 定期扫描内存的使用情况，并根据剩余内存落在这三个阈值的空间位置，进行内存的回收操作。
 
  - **剩余内存小于页最小阈值**，说明进程可用内存都耗尽了，只有内核才可以分配内存。
@@ -71,7 +71,7 @@ pages_high = pages_min*3/2
 
 而同一个 Node 内部的内存空间，实际上又可以进一步分为不同的内存域（Zone），比如**直接内存访问区（DMA）**、**普通内存区（NORMAL）、伪内存区（MOVABLE）**等，如下图所示
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210705154206669.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d90a1b934eea1a1a9bbb49e352788a39.png)
 先不用特别关注这些内存域的具体含义，我们只要会查看阈值的配置，以及缓存、匿名页的实际使用情况就够了。既然 NUMA 架构下的每个 Node 都有自己的本地内存空间，那么，在分析内存的使用时，我们也应该针对每个 Node 单独分析。
 
 你可以通过 numactl 命令，来查看处理器在 Node 的分布情况，以及每个 Node 的内存使用情况。比如，下面就是一个 numactl 输出的示例：

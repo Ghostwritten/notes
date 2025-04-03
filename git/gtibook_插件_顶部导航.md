@@ -3,7 +3,7 @@
 
 ---
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/aedb97a6c33f433e99cb94d38f4fc5ff.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f06ae2dec0b7c4f601630ab01ed1b243.gif#pic_center)
 
 
 ## 1. NavBar 插件
@@ -52,7 +52,7 @@ $ git clone https://github.com/jchamath/gitbook-plugin-navbar.git
 }
 ```
 ###  1.3  效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b428c5d2cebd4e0ebd134efc26f0bf85.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bc442a369ce852134d215b8de0513803.png)
 ### 1.4 评价
 简约，但嵌入页面有些呆板，与不能隐藏，没有下拉菜单功能。
 
@@ -110,7 +110,7 @@ npm i gitbook-plugin-theme-door
 ```
 
 ###  2.3 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3fe97c6fdd3a4963ab6a88be84b18eca.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d21b8f88e5484af409e186247a58555a.png)
 
 ### 2.4 评价
 可在此基础二次自定义开发。目前默认主题不太友好。不能隐藏，没有下拉菜单功能。

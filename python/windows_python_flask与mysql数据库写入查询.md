@@ -4,7 +4,7 @@ tags: flask
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2e08a19e3e8b495ea858999591dc9edb.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/849d772ae01589cc9a65670092ace2aa.png)
 
 
 mysql客户端：
@@ -21,13 +21,13 @@ $ docker run --name first-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d do
 
 ### 2. 创建并初始化一个库
 连接数据库
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200718170425152.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f86c58af24f6e9bd17d38ec4d9f259db.png)
 创建一个数据库mysqltest
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200718170530575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9e01d4380c4a1811aa769e46cd9db1e8.png)
 创建一个表
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200718170703524.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/13709d99329e1c67d50c6799e11feb24.png)
 添加一个user表
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200718170732269.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/717bc190eb332049c28c08fed3a579a1.png)
 ### 2.1 查询并可以添加数据库信息的脚本
 
 ```python
@@ -96,7 +96,7 @@ if __name__ == '__main__':
  {'age': 30, 'email': 'xiaoli@qq.com', 'id': 5, 'name': 'xiaoli', 'sex': 'mam'}]
 ```
 查看数据库user表
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200718171159625.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5abc201f1fb2cde061a82c13000aef0a.png)
 ### 2.2 提交页面表单信息到数据库
 #### 2.2.1 app.py
 ```python
@@ -210,12 +210,12 @@ if __name__ == '__main__':
 </html>
 ```
 执行后，界面访问`http://ip:5000/show_add_user`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020071817370880.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/45795eddf76101caa093d2a1b0b93ca8.png)
 输入用户信息，
 提交后返回成功
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200718173812280.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/51c3fa91e0c4ecc4f544990170e1c26b.png)
 查看数据库user表信息，添加成功。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200718173900902.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3463380f53ec141ed437ebd6876b9ec8.png)
 
 更多阅读：
 

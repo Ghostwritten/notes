@@ -43,9 +43,9 @@ Value            1
 在web UI上可以看到用CLI API创建的key
 mV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
 在web UI上创建一个“duan”的key：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020082117491280.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d8ccac56cdd810b4c4b355457a3a854f.png#pic_center)
 在web UI上创建一个“duan”的key：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200821175006908.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4b97f03eec34e476f93a66b5dc8ded08.png#pic_center)
 
 ```bash
 / # consul kv get redis/spectre

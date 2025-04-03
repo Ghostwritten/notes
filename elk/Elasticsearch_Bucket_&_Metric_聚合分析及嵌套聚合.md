@@ -5,13 +5,13 @@
 
  - Metric 一些系列的统计方法
  - Bucket 一组满足条件的文档
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305185028503.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7f5b434fb23957d460342d4233cfd775.png)
 
 ## 2. Aggregation 的语法
 Aggregation 属于 Search 的一部分。一般情况下，建议将其 Size 指定为 0
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305110909164.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/603585b046a4420b23964425e4d4c704.png)
 demo
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305110920541.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f5c25bdad84dc93f8710f5ecf4c4ca61.png)
 ## 3. Mertric Aggregation
 单值分析：只输出一个分析结果
  - `min，max，avg，sum`
@@ -302,7 +302,7 @@ POST employees/_search
  - 数字类型：`Range 、Date Range、Histogram / Data Histogram`
 
 支持嵌套：也就在桶里在做分桶
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305112245995.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b6147426f884db8ff974ff0d7046babe.png)
 
 ### 4.1 Terms Aggregation
 字段需要打开 fielddata，才能进行 Terms Aggregation
@@ -836,7 +836,7 @@ POST employees/_search
 }
 ```
 ### 4.10 优化Terms聚合性能
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305191339625.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8ee9851f6ac216f8b9385b1aecf99665.png)
 
 
 ## 5. Range & Histogram聚合
@@ -961,7 +961,7 @@ POST employees/_search
 }
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305192224437.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/982114882583748aef98c9ed0aff9d22.png)
 ### 5.4 多次嵌套。根据工作类型分桶，然后按照性别分桶，计算工资的统计信息
 
 ```bash
@@ -993,7 +993,7 @@ POST employees/_search
 ```
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305192352275.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ea411761e6e92ee75146822c1d34ae77.png)
 
 
 

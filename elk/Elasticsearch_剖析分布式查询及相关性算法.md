@@ -12,7 +12,7 @@ Query - then - Fetch
 
  - 用户发出搜索请求到 ES 节点。节点收到请求后，会以 `Coordinating` 节点的身份，在 6 个主副分片中随机选择 3个分片，发送查询请求
  - 被选中的分片执行查询，进行排序。然后，每个分片都会返回 `From + Size` 个排序后的文档 Id 和排序值给 `Coordinating`节点
- - ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303165031830.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+ - ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/de905f748e33ff1ca822edc40be46e9e.png)
 
 
 ## 3. Fetch 阶段

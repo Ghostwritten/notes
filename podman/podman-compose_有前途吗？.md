@@ -1,5 +1,5 @@
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d9859c4720ff4078b39b2bf9cec94bac.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/50e94b1a09f43ed7824a323660ab5199.png)
 
 
 
@@ -54,12 +54,12 @@ Docker Compose 具有更多功能。它与 Docker 和 Podman 兼容，因此更�
 ```bash
 sudo -H pip3 install --upgrade pip
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cf358d50a13744b8aba47675f6ae4963.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e42f4f6b295b167fee2cb8fadb2d42bb.png)
 
 ```bash
 pip3 install podman-compose
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cf3901641b0d4ba3b33ce1ad6ad5bbc0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ae6992fcf379f9f8cb0ef72d2a3092ec.png)
 仅为当前用户安装，请添加`--user`标志：
 
 ```bash
@@ -70,7 +70,7 @@ GitHub 上提供了 [Podman Compose](https://github.com/containers/podman-compos
 ```bash
 sudo pip3 install https://github.com/containers/podman-compose/archive/devel.tar.gz
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0f4b221fec8f497d8d6cb096970b26ad.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4a5297342d4839b4452efa7a3d3965e9.png)
 ### 5.2 python 安装
 
 ```bash
@@ -123,9 +123,9 @@ podman-compose up &
 ```bash
 podman pod ls
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/70bde05c48574e60a19ad5d4cb91b449.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b3e353fc3b1e38450916839efad33de6.png)
 6. 访问：`http://localhost:32400/web`，浏览器会将您重定向到 Plex 登录页面。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7a55aefcf45e4592bb77761f32ce9eb8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a339841877065a0cba506ffa1f73eb1a.png)
 
 参考：
 - [Podman Compose - Managing Containers](https://phoenixnap.com/kb/podman-compose)

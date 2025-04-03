@@ -167,8 +167,8 @@ $ kubectl port-forward --address 0.0.0.0 service/argocd-server -n argocd 9080:44
 
 这样在浏览器中就可以 `ArgoCD dashboard` ，这是 `username` 是 `admin`,  以及 password 便可以前面提到的『获取密码』章节 。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/36ec404b49524d8fbcb7e6f391941309.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3d8a0e1a09754631bf3cc2ac89e489cc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7582391121c4941a2792650ce71f3f26.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d84eaf6727268bc667dc06bb73fd8fa0.png)
 命令行访问：
 如果你不喜欢通过浏览器进行操作，那也可以使用 Argo CD 提供的 CLI 工具。
 
@@ -223,12 +223,12 @@ argocd app create argo-cd-demo --repo https://github.com/Ghostwritten/argo-cd-de
  - `--dest-namespace` 应用要部署的目标 namespace
 
 UI界面创建app
-![在这里插入图片描述](https://img-blog.csdnimg.cn/adc75832ff7843e680e651a75abcd328.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/caf3fa252f4143f595262ab318c6ceae.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/90e7165f2ddb416cb80085b0483dc57e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c5e883f24e51fd03e7fcf1f6e0c32bf9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ede0a78ada1b203febe8516d595874fc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7afdab06540d65e8cc9b7b4296b5326c.png)
 ### 4.2 查看状态
 当 Application 创建完成后，也可以直接在 UI 上看到具体信息：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/98e1c8f807bf42de94d09688ef94f808.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/920a96af37fb5eb8bc49e6689864330f.png)
 或者通过 argocd 在终端下进行查看：
 
 ```bash
@@ -254,7 +254,7 @@ apps   Deployment  kustomize  argo-cd-demo  OutOfSync  Missing
 
 ###  4.3 sync
 可以在 UI 上点击 SYNC 按钮，或者通过 argocd CLI 来触发同步操作。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/346e9fef11584720be7a3be6c46f77c6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3c7a9f1e24ec2a1eef9037b07f43201b.png)
 命令：
 
 ```bash
@@ -291,9 +291,9 @@ GROUP  KIND        NAMESPACE  NAME          STATUS  HEALTH       HOOK  MESSAGE
 apps   Deployment  kustomize  argo-cd-demo  Synced  Progressing        deployment.apps/argo-cd-demo created
 ```
 同步成功后，在 UI 上也能看到当前应用和同步的状态。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/48c55c986ff741c1a45f47bcd7332664.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0198daa07b2af60e884bed06a171b115.png)
 点击查看详情，可以看到应用部署的拓扑结构：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c72c082a422c4f4aa8787c4edcade5d2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0706c6ca29c94bf1f46a8d651c6901f1.png)
 
 
 命令行：
@@ -374,7 +374,7 @@ replicaset.apps/argo-cd-demo-7b69cdbcb   2         2         2       9m19s
 
 ### 5.2 查看状态
 此时当 Sync 再次触发后，我们也就可以看到最新的部署拓扑了。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f83bb4f686c84cb09d3abbf7487f2f1c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dcf66a672f59120b08052d94056a6703.png)
 
 参考链接：
 [https://mp.weixin.qq.com/s/E4OOiHKhUBV-pykkZEP5Ng](https://mp.weixin.qq.com/s/E4OOiHKhUBV-pykkZEP5Ng)

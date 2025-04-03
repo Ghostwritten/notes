@@ -11,7 +11,7 @@
  - 目录文件有很多文件和子目录
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021033014132060.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/16bf6904c6377f38b389af3b20ed25a9.png)
 
 
 ## 2. 关系型数据库的范式化设计
@@ -21,7 +21,7 @@
 数据库余额范式化，就需要 Join 越多的表
  - 范式化节省了储存空间，但是储存空间越来越便宜
  - 范式化简化了更新，但是数据 “读” 取操作可能越多
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210306195831127.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bc1b282e6cb45187bf1f427c74823737.png)
 
 ## 3. Denormalization
 反范式化设计
@@ -52,7 +52,7 @@ Elasticsearch 并不擅长处理关联关系，我们一般采用以下四种方
 
  - 在每个博客的问下中都保留作者的信息
  - 如果作者信息发生变化，需要修改相关的博客文档
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210306200110594.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3393a95f47ec65d6932731546f3e3e70.png)
 ### 5.1 设置blog的mapping
 ```bash
 PUT /blog
@@ -167,9 +167,9 @@ POST blog/_search
 }
 ```
 ## 6. 案例 2：包含对象数组的文档
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210306200819118.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4383f58509c333e2799eba408cdb1f75.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210306200832778.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ec706f1221aeafb5e7d163b73d4b53db.png)
 ###  6.1 电影的Mapping信息
 
 ```bash
@@ -271,7 +271,7 @@ POST my_movies/_search
  - 使用 Nested 和 Properties 关键词，将所有 actors 索引到对个分隔的文档
  - 在内部，Nested 文档会被保存在两个 Lucene 文档中，查询时做 join 处理
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210306201454511.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/41543783a936a1f5b33e42514e0ff9c1.png)
 ### 7.1 PUT my_movies
 
 ```bash

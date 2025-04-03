@@ -17,13 +17,13 @@
 
 　　我们先来看下一个典型的配置块的嵌套什么样的?
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/076aa62d0c71460fbe6fcab6bb4ff03b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ad004aaa9552b7da8d12b0165fdfefda.png)
 在`http{}`之前有一个`main`;如果看事件模块,配置进程一些它们的上下文都是在main中的;重点来看`http`下面的;可能会有`upstream`或者`split_clients`;这是某一个模块,包括`map`或者`geo`都是一些为了http模块它自己可以定义一些自己的配置块,http,server,location这三个是非常核心的,这是http的框架来定义的;因为我们要处理一个请求的时候需要先按照请求中的指示的**域名**,比如host找到相应的**server块**;然后再根据我们的**url**找到某一个**location**,根据这个location下这个具体的指令来处理请求,所以在这样一个典型的配置块的嵌套中尼,我们会发现很多冲突和奇怪的指令;
 
 　　那么下面来看一看;首先什么叫指令的**context**;
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1b368d7d36434bd9b7c7af1f85413493.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/71d588cabac1ecf4709bd6d3eb08cdd7.png)
 　我们在做下声明:比如`log`模块 我们记录`access.log` 模块;它有两个指令:
-　![在这里插入图片描述](https://img-blog.csdnimg.cn/be50c7cafe5d43b3a1b8c304cdcd3b42.png)
+　![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/693e366ec245f0b93003904df2d3b532.png)
 　　　　
 
  - (1):`log_format`:我们看到log_format的时候可以看到,它的`context`,也就是上下文能够出现的配置块是http;所以如果把log_format放在我们刚才所说的server,或者location中尼,我们nginx检查配置文件会报语法失败,压根就不会让我们启动;
@@ -52,7 +52,7 @@
 　　　　因为`server_rewrite`阶段和`rewrite`阶段只有我们的`http_result`模块才有可能提供;而`content`阶段一般是反向代理;或者其它我们在这一部分的课程中会介绍到五个content模块,像这些content模块它们提供了一些方法;只能是动作类指令的,当然我们通过源码也可以判断出来,但是相对来说,动作类指令并不是很多;
 
 我们现在先来介绍下存储值的指令:它们有一些什么不同的地方?
-![在这里插入图片描述](https://img-blog.csdnimg.cn/84516e54cd134e1aaf72922b6fd7d8ae.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/26301c96a01d812b7484d8e09a9329ed.png)
 先我们看下这个`listen:8080`;listen这个指令 它只能出现在`server`这个`context`中,所以非常简单;
 
 　第二个我们看下`alias`这个指令:虽然它可以出现在很多地方,比如说server中或者http中;但是在我们这个 配置中尼,我们只在了`location`中出现了,这个也非常容易理解;因为当一个请求匹配到  /dlib的时候,那么alias就产生作用了;
@@ -63,7 +63,7 @@
 但是我么在`location /{}` 去匹配所有的剩余的url的时候却没有定义`root`,这个时候尼,其实我们可以使用这个root的;
 
 这里就是所谓的子配置不存的时候尼,直接使用 父配置块;root在location中并不存在,但是在server中是存在的,我们直接引用这里;这是nginx中一个通用的配置规则;那么所有的指令只要它写明了它能够存在http,server,location下的时候尼,当子的不存的时候尼,直接引用父的配置的值;我们再看第四种:比如在
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1ef6dad5712644a597df0bf55fd12cb7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/778b8992b1d651663379e8e0019e454c.png)
 这个location中尼?重新定义一个root和access.log
 比如 
 
@@ -78,7 +78,7 @@ access.log logs/access.test.log main;
 
 当它们的子指令出现冲突的时候尼,究竟以哪一个为准;那么怎么样通过它的源码来看尼?其实非常简单,主要抓住以下四个点就可以了;
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/01bcb3fbc2d1440897235ce2e9cc24ba.png)　
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d42fc22b9ce34a266a0a33672396beaf.png)　
 
  - (1):第一个点我们需要判断这个指令是在哪一个块下生效的;生效:后面我们会讲到的11个阶段中;比如说有些指令可能会在server块下生效的;但大部分指令都是在location下生效的;
  - (2):指令允许出现在哪些块下? 比如access.log这条指令,可以看到它可以出现在http,server,location,if in location,limit_except等等很多地方

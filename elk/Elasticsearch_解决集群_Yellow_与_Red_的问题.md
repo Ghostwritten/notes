@@ -3,7 +3,7 @@
 
 ----
 ## 1. 集群健康度
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312172332996.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bbf1a52320f66c80f02275b3378c00a9.png)
 
 **分片健康**
 
@@ -21,7 +21,7 @@
 | GET _cluster/health/my_index      | 单个索引的健康状态（查看具体的索引）  |
 | GET _cluster/health?level=shards  | 分片级的索引              |
 | GET _cluster/allocation/explain   | 返回第一个未分配 Shard 的原因  |
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312172553372.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cb6c3edfdad3d9abf052320e4249b188.png)
 ## 3. 案例 1
 [Elasticsearch docker-compose部署hot、warm、cold的elasticsearch集群](https://ghostwritten.blog.csdn.net/article/details/114820354)
 
@@ -278,5 +278,5 @@ PUT mytest/_settings
  - 通过检查节点数，使用 ES 提供的相关 API，找到真正的原因
  - 可以指定 Move 或者 Reallocate 分片
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021031510343195.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/13167dbd244483ce73fbe37c2d2ce32c.png)
 

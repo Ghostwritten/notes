@@ -3,16 +3,16 @@
 
 ---
 ## 1. 介绍
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425185449694.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425185621584.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8905820457fb37994edaf01f51110454.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/82ef8eaac1fae71ec994942b439c1184.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425185743944.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/29723f7ca451c4469d563183534c9fb1.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425185845510.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/da2c3a46024b61386c2eeecbf84b214f.png)
 
 ## 2. Practice - Anonymous Access
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425185956297.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425190008318.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/255e9803f28062a840a6b6bd9fbf3a82.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/23a1a692dca366f00feefb073098fc16.png)
 
 ```bash
 root@master:~/cks/serviceaccount# curl https://localhost:6443
@@ -50,7 +50,7 @@ root@master:~/images# k get pods -n kube-system | grep api
 kube-apiserver-master                      1/1     Running   0          3s
 
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425194247517.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b88c4308f5ad7227fec6ded76fd6e387.png)
 
 ```bash
 root@master:~/cks/serviceaccount# vim /etc/kubernetes/manifests/kube-apiserver.yaml 
@@ -78,9 +78,9 @@ root@master:~/cks/serviceaccount# curl https://localhost:6443 -k
 }
 ```
 ## 3. Practice - Insecure Access
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425194521961.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425194710926.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425194805223.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/46cdee5a40b79e83d7784287ad6bd2f2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c56d190dfcce9e90e03d2c2692d82533.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/25fa8dcf9a92b2d4596835f2d1d6a3f5.png)
 
 ```bash
 root@master:~/cks/serviceaccount# curl https://localhost:6443 -k
@@ -127,13 +127,13 @@ root@master:~# curl http://localhost:8080
 ```
 
 ## 4. Practice - Manual API Request
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210426141859678.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a498d3b6b1d5b2977461bf8804e26341.png)
 
 ```bash
 root@master:/etc/kubernetes/pki# curl https://192.168.211.40:6443 --cacert ca --cert  ca.crt --key ca.key
 ```
 ## 5. Practice - External Apiserver Access
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210426143209717.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8c7d8598fe7015e03c0073e92b582051.png)
 
 ```bash
 root@master:/etc/kubernetes/pki# k edit svc
@@ -191,10 +191,10 @@ kube-public       Active   19h
 kube-system       Active   19h
 ```
 ## 6. NodeRestriction AdmissionController
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210426150839360.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210426151051581.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/59eedb81eabe46131da66fb742c78d77.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/99e94d6318ef6b05e296e06dc44e47fe.png)
 ## 7. Practice - Verify NodeRestriction
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210426151124766.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eb8244fc80ac5b4593c183ff55c8d984.png)
 
 ```bash
 root@master:~/cks/apiserver# vim /etc/kubernetes/manifests/kube-apiserver.yaml 

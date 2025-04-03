@@ -47,7 +47,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC6PcgwDYK//ZRdY48q8C1kKw7OsdGggUQff1GW/e3J
 pt9HhYq3f/ocvbnx0RHJcs1F82lYZZh7iLZwHhxV5L47pwHLs8YkJ5WM8PnRtOymS0JNuoaam+rXp5ORhY3+ATsk7bcNVA6eNLb2Z+IWKemdoSWs8Jt/XDthJ/B8Jp5z3kDmGsClZ0UHpsgPY/i2IrpXk= xxxxx@outlook.com
 
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cf044404647444ebb59f52be0d436f5b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0bbf619029d9f0ed43b649ab996a98a1.png)
 
 ##  4. 初始化mimipdf库
 在本地创建空项目[mimipdf](https://gitee.com/ghostwritten/mimipdf),并初始化git
@@ -84,7 +84,7 @@ git push origin master
 ##  6. 创建Gitee Pages
 gitee的`mimipdf`仓库中选择Service下的`Gitee Pages.`进入选择创建Pages.
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/32e9c694ef41462d9acfd64cf7a32212.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cf27f77ef2b2c90dbad80aea777a0145.png)
 当然，你必须有实名认证的条件
 
  - 真实姓名
@@ -92,9 +92,9 @@ gitee的`mimipdf`仓库中选择Service下的`Gitee Pages.`进入选择创建Pag
  - 身份证正反照片
  - 手持身份证
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cd4b6b2397bd428db8951c71a5524ce7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/68b5d929ea53f4b8ffc7f4831f3f25a2.png)
 当认证通过以后，最终可以生成如下内容(部署成功)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/801727ce7dd648f9919e6a4cbcbc267b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/af8e7a9e51836d315d4d55de5ce95dc1.png)
 直接点击启动即可。
 
 访问我的pdf书籍：
@@ -103,9 +103,9 @@ gitee的`mimipdf`仓库中选择Service下的`Gitee Pages.`进入选择创建Pag
 https://ghostwritten.gitee.io/mimipdf/web/viewer.html?file=LexingtonClassAircraftCarrier.pdf
 ```
 如图在线PDF：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f15d534d082b432480c9299086c0d835.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cea776537d68ccc44b255da32baaaf8c.png)
 
 ---
-![在这里插入图片描述](https://img-blog.csdnimg.cn/aeded96672dd466a988a15c18a1599eb.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/28ba386c58cd7dd3c6534bd73852f4d1.gif#pic_center)
 
 

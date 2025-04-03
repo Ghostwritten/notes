@@ -13,9 +13,9 @@
  - ○ 日志分散在很多机器，出了问题时，才发现日志被删了
  - ○ 很多运维人员是消防员，哪里有问题去哪里
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322105400341.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4ca175df0d02e9fdb8b956357584f3bf.png)
 ## 2. 集中化日志管理
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322105445940.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6ffa7c5401bfeea45f02637fead1984e.png)
 
 ## 3. **Filebeat 简介**
 ● 简介
@@ -28,13 +28,13 @@
 
  - ○ 保证数据至少被读取一次
  - ○ 处理多行数据，解析 JSON 格式 ，简单的过滤
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322105559877.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bac73ab99bda756927c11dece68b140f.png)
 ## 4. Filebeat 执行流程
 ● 定义数据采集：`Prospector` 配置。通过 `filebeat.yml`
 ● 建立数据模型： `Index Template`
 ● 建立数据处理流程：`Ingest Pipeline`
 ● 存储并提供可视化分析：ES + Kibana Dashboar
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322105951467.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/702900d0a7d45b4c1c60452c5d89069c.png)
 
 
 
@@ -103,8 +103,8 @@ nginx
 system
 
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322111521417.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322111737369.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0320713387d716a16158bc35092668c7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6e381450fe7e44edea67a6d106f68b7d.png)
 
 ```bash
 [root@master filebeat-7.3.1-linux-x86_64]#  ./filebeat setup --dashboards
@@ -114,7 +114,7 @@ Loaded dashboards
 [root@master filebeat-7.3.1-linux-x86_64]# ./filebeat -e
 
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322112957670.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1d25c5e8c60ed8cc4e07acb54bfe2c42.png)
 查看具体值，显示高亮，设置输出日志类型
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210322113351327.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/50e645fd7c277a1e65ebcaad91e302cc.png)
 

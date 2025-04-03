@@ -1,5 +1,5 @@
 # Jenkins Pipeline & Kubernetes 如何创建 pod
-![](https://img-blog.csdnimg.cn/8a26a5ea8d9a4c639478af2414447232.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/88f6cebf65caac96adb5d5da4880edf0.png)
 
 
 
@@ -16,7 +16,7 @@
 - `CD`: 持续部署（continuous deployment）是指能够自动提供持续交付管道中发布版本给最终用户使用的想法。根据用户的安装方式，可能是在云环境中自动部署、app 升级（如手机上的应用程序）、更新网站或只更新可用版本列表。
 - `Pipeline`: 将源代码转换为可发布产品的多个不同的 任务(task)和 作业(job)通常串联成一个软件“管道”，一个自动流程成功完成后会启动管道中的下一个流程。这些管道有许多不同的叫法，例如持续交付管道、部署管道和软件开发管道。
 
-![](https://img-blog.csdnimg.cn/5ab0e1e9b90c4c1db610fb26fef7722c.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/266c4482ae63d282d8c98fb9607e3f03.png)
 
 <font color=#FFA500 size=3 face="楷体">"下面我们将实践如何利用 `Jenkins` 强大的 `CI/CD` 特性来练习如何部署 `kubernetes` 应用作为开始。"</font>
  
@@ -25,26 +25,26 @@
 ## 2. Jenkins 插件
 
 ### 2.1 安装 Kubernets Plugin
-![](https://img-blog.csdnimg.cn/53a02d21a6d14fd3b7c1e64a7eac8569.png)
-![](https://img-blog.csdnimg.cn/41352ad25f7749438262c04688be3efa.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/85ffbc70017c5170fecbac9e534b8dc6.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/2e509990a6eb183e1ec588bf2ada0260.png)
 
 ### 2.2 安装 Docker Plugin
-![](https://img-blog.csdnimg.cn/ed37b096f7f440599320025b83dc15d9.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/58e89545bd2cab6e30beafde0c952506.png)
 
 ### 2.3 安装 Git Plugin
-![](https://img-blog.csdnimg.cn/1d7db233cd2b4bf099530a816722e886.png)
-![](https://img-blog.csdnimg.cn/299c4004d0e24994b30a2798fa8e5732.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/a1c38fca3f29826b19af1835b304b241.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/deec42052e83b8d56b9de42118878c4c.png)
 
 ##  3. Jenkins 配置 kubernetes credentials
 
 
-![](https://img-blog.csdnimg.cn/95b72a0b2f1944318721a1954f1cc976.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/e9f56768eaac16bf018256a0fca2fc18.png)
 
-![](https://img-blog.csdnimg.cn/67a2be912dfb4da9bed7f8b92b3ae7b3.png)
-![](https://img-blog.csdnimg.cn/000ab19ffea34f828c5c4bbd39a085ef.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/529414cdb0f4b0826135ee2dcdc98c82.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/e9ef4a341482abeede3f2533b12aef6d.png)
 
-![](https://img-blog.csdnimg.cn/7f4cc4bfa3d44f34910fc1c0aef3c83e.png)
-![](https://img-blog.csdnimg.cn/f8808f8cf8ed458b8e311627e6b4b0ae.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/93b399ac996bdaa5cd39c7c1a5730db7.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/daeaf679c68d2ff5c4e75421875ac75a.png)
 获取 `token`
 
 ```bash
@@ -67,19 +67,19 @@ metadata:
 type: kubernetes.io/service-account-token
 ```
 复制`token`内容至`secret`
-![](https://img-blog.csdnimg.cn/9455b95dae3848da810a7fc04ace2b4d.png)
-![](https://img-blog.csdnimg.cn/de0a6715d6c9447a89a8abd4d4f7e026.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/d7ccb9d59f630145c443cb08f50e143b.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/b3fe7350256b3e43f9be0c7426b6cbcc.png)
 - 具体可[官方添加 credentials 步骤](https://www.jenkins.io/doc/book/using/using-credentials/)
 
 
 ## 4. Jenkins 连接 minikube 集群
 我们需要配置 `manage Nodes and Clouds`
 
-![](https://img-blog.csdnimg.cn/fac0966f0dc8464ab0e02661ac8df199.png)
-![](https://img-blog.csdnimg.cn/c2ec3f363baa43a08e785cfca9769dfe.png)
-![](https://img-blog.csdnimg.cn/579887c879bc4812a81f857a74dc95a5.png)
-![](https://img-blog.csdnimg.cn/5a26ca6906784aa1bea36c1fdde9de61.png)
-![](https://img-blog.csdnimg.cn/fe3426256de547da846749fa3c394bd6.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/648eda825de3fba59598c580a9da195e.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/a3549190d416fd13b78fbe95195adeb5.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/ce81816e7487c75a993e38fe5e7e9868.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/221036164d07dd88e335b4a0076ea86d.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/03026e64f28abb87d6267827a896b2a7.png)
 
 
 - `name`: 定义集群名称即可。
@@ -184,10 +184,10 @@ yaml Pod 的 yaml 表示，以允许设置任何不支持的值作为字段
 ## 6. Jenkins Piepline 部署 pod 实例
 
 ### 6.1 创建一个简单 pod
-![](https://img-blog.csdnimg.cn/66b5dc6256d54feeb03cc527c358b970.png)
-![](https://img-blog.csdnimg.cn/31e79658161b410180d70c8e957e3b1e.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/e9536b3f4ccc95b9ecf8d585909a3c55.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/1f1260773c21a64717d101c639448a4d.png)
 创建一个 包含 `docker` 容器的 `pod` ，并且带有`build`标签。创建完后，使用`docker version`命令执行查看容器内`docker` 的版本信息。
-![](https://img-blog.csdnimg.cn/4cc94b617ee240388074d4662e03f122.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/c5034b58241f2ff2cad97d0914db43e4.png)
 `Pipeline script`：
 
 ```bash
@@ -207,10 +207,10 @@ podTemplate(label: 'build', containers: [
 ```
 
 点击执行“`build`”
-![](https://img-blog.csdnimg.cn/31869f99d03742fe8298946303ea6e62.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/7369904d160a30e1e91f6fc698d24c66.png)
 构建成功。
-![](https://img-blog.csdnimg.cn/9fb9257dae0548bea6ca6a8b7cb8249a.png)
-![](https://img-blog.csdnimg.cn/0af16dc404544b47a53ef8c21dbfc5e2.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/eb38930aa4eead657368697ba9b701ff.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/baae85fa3537839b3ad8bf5f4d7d57b2.png)
 `minikube` 集群查看部署结果：
 ```bash
 $ k get pods -n jenkins
@@ -262,7 +262,7 @@ $  k get pods -n jenkins | grep busybox
 busybox-2-c7blp-840k1-s5c5d   2/2     Running   0          20s
 ```
 我们尝试修改项目名称为`busybox2`
-![](https://img-blog.csdnimg.cn/f232a7f276ab467e8449f9c1dc55427e.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/81c54f24247744de6e65d6d736bc656a.png)
 输出结果
 ```bash
 $ k get pods -n jenkins | grep busybox
@@ -479,9 +479,9 @@ podTemplate(name: "build1",namespace: "one",yaml: '''
 - `yaml`根据`yamlMergeStrategy`的值进行合并。
 
 我通过界面`Dashboard > Manage > Jenkins > Configure Clouds`创建 `pod template`
-![](https://img-blog.csdnimg.cn/1dc0ad64dde94ca493902a05efb9fb60.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/0a80dcd8280fc1a781a2d09db3640d6a.png)
 
-![](https://img-blog.csdnimg.cn/53edc3e5999949429d71c9634757760f.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/35eeca90d7228cb0f0306c8f892a9b34.png)
 
 这里我只想将`maven`的镜像版本由`3.8.1-jdk-8`升级为`3.8.1-jdk-11`，在项目编写`pipeline script`：
 
@@ -671,7 +671,7 @@ Finished: SUCCESS
 
 ### 6.9 Pipeline script from SCM
 github 仓库：[https://github.com/jenkinsci/kubernetes-plugin.git](https://github.com/jenkinsci/kubernetes-plugin.git)
-![](https://img-blog.csdnimg.cn/c8d7aedc930f44f5a6f3b90360b30d9e.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/df49bcac798d391c2119687c8295957b.png)
 
 
 - `examples/containerLog.groovy`
@@ -733,7 +733,7 @@ podTemplate(yaml: '''
 
 示例：利用 [Ghostwritten/jenkins-shared-library](https://github.com/Ghostwritten/jenkins-shared-library) 作为我的共享库，点击配置`Dashboard` > `Manage Jenkins` > `Configure System`
 
-![](https://img-blog.csdnimg.cn/8f8ee1ca76d24db3a408e2a725344e71.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/afa9de92a7a33af529a62e3d977de72f.png)
 
 
 `pod` 模板位置：`jenkins-shared-library/src/com/kubernetes/PodTemplates.groovy`
@@ -1330,7 +1330,7 @@ podTemplate(name: "testing", namespace: "default", yaml: '''
 ```
 `Pipeline Steps`:
 
-![](https://img-blog.csdnimg.cn/c7dcda69ea93476eac294d5af2f5cfc0.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/5ebf96567f85feb5e93d89f46b77c4d5.png)
 构建成功，太棒啦。😋
 
 ### 7.3  git 拉取仓库 & kaniko 构建镜像 & 推送入库
@@ -1575,7 +1575,7 @@ You should consider upgrading via the '/usr/local/bin/python -m pip install --up
 Finished: SUCCESS
 ```
 登陆 [dockerhub](https://hub.docker.com/repository/docker/ghostwritten/kaniko-python-docker) 查看新构建的镜像。
-![](https://img-blog.csdnimg.cn/27f0b152a57849ccba97da3e39a9a375.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/bc7c927a989545854cf1951e5a99cf55.png)
 大功告成。
 
 关于在`Jenkins Pipeline` 中部署 `pod` 与构建镜像的实践到这里暂告一段落。但这一切还只是刚刚开始。`Jenkins Pipeline`可以实现许多功能，我们可以利用`jenkins`设置代码`push`的触发条件，当`push` 代码后自动触发审查、构建、推送、测试、部署等等。还可以结合关于触发 `ArgoCD` 的 Jenkins 管道，完成对`Kubernetes` 集群的部署，[Argo CD](https://argo-cd.readthedocs.io/en/stable/)是用于`Kubernetes`的声明性`GitOps`持续交付工具，`Argo CD`可在指定的目标环境中自动部署所需的应用程序状态，应用程序部署可以在Git提交时跟踪对分支，标签的更新，或固定到清单的特定版本。
@@ -1612,7 +1612,7 @@ java.io.IOException: http://192.168.10.90:8080/tcpSlaveAgentListener/ is invalid
 
 将`agents` 改为 `Random`
 
-![](https://img-blog.csdnimg.cn/7ee1c50538ef419f9bfab36a4eda2244.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/bcafea66c610fce6affd20684d64c968.png)
 
 
 

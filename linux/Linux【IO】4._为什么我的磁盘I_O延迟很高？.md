@@ -14,7 +14,7 @@
 
 
 今天的案例需要两台虚拟机，其中一台是案例分析的目标机器，运行 Flask 应用，它的 IP 地址是 192.168.0.10；而另一台作为客户端，请求单词的热度。我画了一张图表示它们的关系，如下所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210713160024364.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d555c1b3032996416dd3506dd8c7e7ff.png)
 
 ```bash
 $ docker run --name=app -p 10000:80 -itd feisky/word-pop 
@@ -261,5 +261,5 @@ sys    0m0.000s
 
 ## 4. 讨论
 我们通过 iostat ，确认磁盘 I/O 已经出现了性能瓶颈，还用 pidstat 找出了大量磁盘 I/O 的进程。但是，随后使用 strace 跟踪这个进程，却找不到任何 write 系统调用。这是为什么呢？
-![在这里插入图片描述](https://img-blog.csdnimg.cn/img_convert/d829f76167216e781359a09bcb3d7e64.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b5373d76126ebb65b52adb441f22cc53.png)
 

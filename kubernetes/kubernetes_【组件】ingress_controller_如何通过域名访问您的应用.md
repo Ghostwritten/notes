@@ -2,7 +2,7 @@
 tags: 资源对象, Ingress
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/63c31adcf6324e26a50cc6a1e80eb929.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f0fe6f25d57b0b4c37e9f417640c15f2.png)
 
 
 

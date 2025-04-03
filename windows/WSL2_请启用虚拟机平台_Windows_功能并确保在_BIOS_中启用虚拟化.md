@@ -1,4 +1,4 @@
-![在这里插入图片描述](https://img-blog.csdnimg.cn/885200e31d05416eac4cd634b5e13b04.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fab7def36e9de5349b4cb99badca14d5.png)
 
 ```bash
 bcdedit /set hypervisorlaunchtype auto

@@ -34,32 +34,32 @@ Warning  FailedCreate  11s (x14 over 53s)  replication-controller  Error creatin
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7d9a5624e47d47498694a455fee6bd1a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e1dfd16fdf5537c25e20cd564e1e35b3.png)
 ### 2.1 metav1.status是什么？
 
 
 我们首先看一下代码的依赖去向
-![在这里插入图片描述](https://img-blog.csdnimg.cn/db67dd36c4e94f4396af31188f1e890e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f0bbe8842141bbc808baaf69235e84b5.png)
 metav1是什么包，还记得在上一篇文章我提到过吧
 meta 是字面标签的意思，v1表达的是版本。
 包v1包含所有版本都通用的API类型，但它们分为两类，一类是对外的，也就是能为我们开发定制的，另一部分是内部的。总之，我们纵观全览，这个包定义了k8s许多资源对象。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/82e105dea56942969cbc0badf897b767.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e4b9f166b90faa3ae6345c0eb56e050f.png)
 `status.message`这里描述的是设定操作状态的描述。根据代码功能需求的描述`"Images using latest tag are not allowed"`，正是我们需要表达的。
 
 ### 2.2 admissionReview.Response.Result是什么？
 它的来源是"`k8s.io/api/admission/v1beta1`"，地址是[https://pkg.go.dev/k8s.io/api/admission/v1beta1](https://pkg.go.dev/k8s.io/api/admission/v1beta1)，搜索`AdmissionReview`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/45c46fca065944ad8155fa34e90f84ff.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4d0e0fde306b7e25d34aaf1eece3fb68.png)
 
 `AdmissionReview`与`ImageReview`大同小异，这是定义对象类型、请求属性、返回属性。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/02b8800823bb41ff907c9590a088d517.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3a5fe6c622068df0abd988f861b5184b.png)
 
 `admissionReview.Response.Allowed` 是一个布尔值
 `admissionReview.Response.Result`代表的是`*metav1.Status`类型，然而status的结构体又是包含什么呢？如图：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0e3957e31d394b939b2b9af91aa557e1.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/aa7996cfc96960737c7934108836ff51.png)
 `meta.status.message`表达的是对此状态的一种描述。正好对于代码的输出内容：`"Images using latest tag are not allowed"`
 
 再往上分析一下`usingLatest`，即假如存在usingLatest，就将是否允许运用拉取的布尔值设置为false，并输出一个关于存在`lastest`的描述性问题。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/05049adedf0342a1a630c1abb90ac013.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8368c20adcb813be014d042c45b71fb8.png)
 `usingLatest`来自`rules.IsUsingLatestTag(container.Image)`，根据上篇文章[Kubernetes ImagePolicyWebhook与ValidatingAdmissionWebhook【2】Image_Policy.go源码解析](https://blog.csdn.net/xixihahalelehehe/article/details/119811128?spm=1001.2014.3001.5501)，详细的分析，此函数
 
  - 当镜像仓库名称不对的时候返回：`false，err`；
@@ -67,7 +67,7 @@ meta 是字面标签的意思，v1表达的是版本。
  - 当仓库名正确并且不存在`lastest`的时候返回：`false，nill`
 
 这个有一个与`Image_Policy.go`不一样的地方，即镜像的获取方式。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ac7360378abb4dc092f8e3d8f02c2b12.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/33df46873cb2e27a424d4e9130e2e8e6.png)
 那么它们的区别是什么？
 `pod`来自`v1.Pod{}`,依赖包`k8s.io/api/core/v1`，`v1`代表稳定版本。
 `imageReview`来自`v1alpha1.ImageReview`，`aplha1`代表随时可能抛弃或者存在bug的版本，`ImageReview`这个结构体主要的目的是为了存放检查pod的镜像的各种存在可能性结果。而pod这个结构体主要的目的是为了存放或者说是描述运行pod的各种信息，包括容器一系列的细节。
@@ -83,10 +83,10 @@ meta 是字面标签的意思，v1表达的是版本。
  4. 最后打印接受或者拒绝此镜像的信息，并通过`http`返回`admissionReview`的json格式。
 
 那么这里有一个问题来了。`RegistryWhitelist`的逻辑判断是怎么实现的呢？
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c869c25bf49b4fbe8f7b8e0be64ffae5.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0d5ac4b9dd80d7bdf91674c681f30ec2.png)
 `rules.IsFromWhiteListedRegistry`来自rules目录下from_whitelisted_registry.go，**rules目录下的代码是定制逻辑判断规则细节的地方。而`validating_admission.go`整体看来是对此规则运行的一层包装。**
 代码如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8bb357814e1848bea29629882615e014.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dc715d1cab21128d992a8e0a040f59b8.png)
 
  - `reference.ParseNormalizedNamed(image)`在上篇文章中，我们已经做过分析。是对镜像格式严谨式的一次检查，并最终返回它完整的名字。即 `r.Name() + ":" + r.tag + "@" + r.digest.String()`
  - `res := strings.SplitN(named.Name(), "/", 2)`指定切割成两个字符串，如果`len(res)不等于2`表示没有仓库名，返回false

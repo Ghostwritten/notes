@@ -1,20 +1,20 @@
 
 
 ##  1. 界面安装
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9e3608e6304344c486093b900c5e4d85.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/650b65a87dcd4d45ba2868e4dc4e004c.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/efe12582f01440d497da548bf13542db.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b3d3926b1eaf43f4a22b841f9aa31ea6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ccf29ef6601b256e7b01a1ee0b6691b1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d5468a5b09b407f64b6e3345cd22da1e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f37592f71217bdbce32ea3562b2585e4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c2f2e0a7806e56d1a2fffcb5f538cc77.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fe941863a2174d9596dc2160f7639da5.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f0e0fd1ea9f342779feb8c310222aad5.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1cb3ca71847443268688b5825166ebb7.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ce64d5988c874542b5c49ecae83dbdb1.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9c298bf2c32e4937b42b22681ef9fed8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ae5a880a50f967766bef5f6597b1cd0a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e1cb0ace75eeca6304b785a82707e35e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/aece3cf56d4253713675cbc5080cdcc3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0e1b3192cdecb39c7279aa5d8206d475.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0933e00a690dd2f8857afb3fe438490b.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/322c15efe33f499fa6aab496764141b6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/76ebb5ab34585b683805970191ce58dd.png)
 重启reboot
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c236fb841e12443cbea0bf678d3fd390.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bbd71d74214caef82b1d674cc1ee2b35.png)
 
 ```bash
 [root@localhost ~]# cat /etc/sysconfig/network-scripts/ifcfg-ens192

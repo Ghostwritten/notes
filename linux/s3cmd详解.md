@@ -1,4 +1,4 @@
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020120917511545.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cdadb77f3bd8988bf13be53a9c615535.png#pic_center)
 
 
 ## 1. 安装

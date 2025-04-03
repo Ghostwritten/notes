@@ -34,7 +34,7 @@ NAPT 是目前最流行的 NAT 类型，我们在 Linux 中配置的 NAT 也是�
  - 要访问的目的服务器 baidu.com 的地址为 123.125.115.110。
 
 那么 SNAT 和 DNAT 的过程，就如下图所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2bdc38a970794084ad586db75a0584f7.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3c9488926ba25c69dace372b48e4cc6b.png)
 
 从图中，你可以发现：
 
@@ -48,7 +48,7 @@ Linux 内核提供的 Netfilter 框架，允许对网络数据包进行修改（
 
 其中，[iptables](https://blog.csdn.net/xixihahalelehehe/article/details/104895129?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162813176116780255259853%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=162813176116780255259853&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-1-104895129.pc_v2_rank_blog_default&utm_term=iptables%20&spm=1018.2226.3001.4450) 就是最常用的一种配置工具。要掌握 iptables 的原理和使用方法，最核心的就是弄清楚，网络数据包通过 Netfilter 时的工作流向，下面这张图就展示了这一过程。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0441e9e95d804aefb7d658245fe11ece.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a1b40b1288aeddce166bcf429d4f6afe.png)
 在这张图中，**绿色背景的方框，表示表（table），用来管理链。Linux 支持 4 种表，包括 filter（用于过滤）、nat（用于 NAT）、mangle（用于修改分组数据） 和 raw（用于原始数据包）等。**
 
 **跟 table 一起的白色背景方框，则表示链（chain），用来管理具体的 iptables 规则。每个表中可以包含多条链，比如：**
@@ -162,7 +162,7 @@ stab-prep
 ```
 本次案例还是我们最常见的 Nginx，并且会用 ab 作为它的客户端，进行压力测试。案例中总共用到两台虚拟机，我画了一张图来表示它们的关系。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e430a8391d4e40a9be17933efd84eebd.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6b86b639382dc24672411869853780d2.png)
 ## 8. 案例分析
 为了对比 NAT 带来的性能问题，我们首先运行一个不用 NAT 的 Nginx 服务，并用 ab 测试它的性能。在终端一中，执行下面的命令，启动 Nginx，注意选项 `--network=host` ，表示容器使用 Host 网络模式，即不使用 NAT：
 
@@ -371,7 +371,7 @@ $ perf report -g graph,0
 ```
 在 perf report 界面中，输入查找命令 / 然后，在弹出的对话框中，输入 nf_hook_slow；最后再展开调用栈，就可以得到下面这个调用图：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/04ae03789f69416a92414db268cbee6e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6eb43f1910412e1dcea54508d4cd2368.png)
 从这个图我们可以看到，nf_hook_slow 调用最多的有三个地方，分别是 ipv4_conntrack_in、br_nf_pre_routing 以及 iptable_nat_ipv4_in。换言之，nf_hook_slow 主要在执行三个动作。
 
  - 第一，接收网络包时，在连接跟踪表中查找连接，并为新的连接分配跟踪对象（Bucket）。

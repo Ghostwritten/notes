@@ -19,7 +19,7 @@
 
 ## 3. Elasticsearch Curator
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316105410206.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c169397d9f0f92ad558d8856cf376b0e.png)
 ● Elastic 官方推出的工具
 ○ 基于 python 的命令行工具
 ● 配置 Actions
@@ -31,7 +31,7 @@
 https://www.elastic.co/guide/en/elasticsearch/client/curator/current/index.htm
 
 ## 4. eBay Lifecycle Management Tool
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316105512161.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2d508c7563b3f3236b3fbd2b3fc98359.png)
 ● eBay Pronto team 自研图形化工具
 ○ 支持 Curator 的功能
 ○ 一个界面，管理多个 ES 集群
@@ -41,7 +41,7 @@ https://www.elastic.co/guide/en/elasticsearch/client/curator/current/index.htm
 ● 系统高可
 
 ## 5. 工具比较
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316105539521.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f15abacf3d0795b029500a9202c72b2b.png)
 ## 6. Index Lifecycle Management
 ● Elasticsearch 6.6 推出的新功能
 ○ 基于 X-Pack Basic License，可免费使用
@@ -51,12 +51,12 @@ https://www.elastic.co/guide/en/elasticsearch/client/curator/current/index.htm
 ○ Actio
 
 ## 7. ILM Policy
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316105633542.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/35749c6a81e73e50c9ac622eb6669bc8.png)
 ● 集群中支持定义多个 Policy
 ● 每个索引可以使用相同或不相同的 Policy
 
 ## 8. Index Lifecycle Policies 图形	
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316105717351.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b66cd7afdceef8db87f6618a8764826a.png)
 ● 通过 Kibana Management 设定
 ● Hot phase 是必须要的
 ○ 可以 enable rollover

@@ -1,6 +1,6 @@
 
 ## 1. 文档CURD基本操作
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201101212743544.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f9c0ab13ea1d61b872ee414abbe76e8f.png#pic_center)
 ### 1.1 元数据
 
  - _index：文档所属的索引名
@@ -197,8 +197,8 @@ post _bulk
 {"field1":"value1"}
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201101215649982.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201101215714691.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c5346fc68085a2c8cb14b3baad789d56.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/180aff6fad365830d36e71e4d3db5f05.png#pic_center)
 通过上图中实例操作，可以看出：
 
  - 1）对于索引“users”执行index操作，返回成功；
@@ -230,7 +230,7 @@ get /_mget
 }
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201101220247464.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d3342fb1661e6480ebb0748c587b18d7.png#pic_center)
 上图中，我们通过mget操作访问索引“users”中文档ID为“1”、“101”的文档信息，访问索引“shops”中文档ID为“1”的文档信息。其中两条均返回成功，而文档ID=101的文档信息没有找到。
 ### 2.3 msearch（批量查询）
 msearch通过一次Rest访问，对不同的索引进行不同的查询。
@@ -245,12 +245,12 @@ post users/_msearch
 {"query":{"match_all":{}}}
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020110122135396.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201101221539263.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201101221556458.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/91399f9eaf27dba45ce8cdb365d44fb2.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ac6549c74e3b579128fb55bd4784336e.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e57426c7e234bcb4c7241e0b66068a83.png#pic_center)
 通过上图中可以看出，此次批量查询一共执行了三段查询操作，第一次是针对索引users，查询文档ID大于等于1的文档信息，一共查询10条；第二次是查询索引users中所有的文档信息；第三条是查询索引shops中所有的文档信息。
 ## 3. 常见错误返回说明及注意事项 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201101222150144.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7216fcc6c1c94b32dbbaf4550ca10219.png#pic_center)
 ## 4. 注意
 
  - 1、对于Bulk  API、mget、msearch等批量操作的API，通过调用它们可以很好的提高性能，但是在调用时也不要过多的发送数据，否则也会容易导致ES集群过大的压力，造成性能的下降。那么过多的数据一般控制在多少为好呢？一般建议是`1000-5000`个文档，如果文档很大，可以适当减少队列，大小建议是5-15M，默认不能超过100M，否则会报错。

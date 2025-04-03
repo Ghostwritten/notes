@@ -4,7 +4,7 @@ tags: prometheus
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fee2265a3657479cb18042f065cb5607.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/76231a8296d5af622204f1c8a5c77219.png)
 
 
 ##  1. 前言
@@ -25,7 +25,7 @@ Prometheus是一种用于记录和处理任何纯数字时间序列的监控解�
 
 
 ##  3. 架构
-![Prometheus 组件和架构](https://img-blog.csdnimg.cn/b41476d794e74dda87b96feac016f014.png)
+![Prometheus 组件和架构](https://i-blog.csdnimg.cn/blog_migrate/524514e49cf1a93a9318eacb5ea53e3f.png)
 Prometheus 从检测作业中直接或通过中间推送网关从短期作业中抓取指标。它在本地存储所有抓取的样本，并对这些数据运行规则，以从现有数据聚合和记录新的时间序列或生成警报。Grafana或其他 API 使用者可用于可视化收集的数据。
 
 
@@ -100,9 +100,9 @@ Nagios 数据不支持自定义 Labels, 不支持查询，告警也不支持去�
 Nagios 是上世纪 90 年代的监控系统，比较适合小集群或静态系统的监控，显然 Nagios 太古老了，很多特性都没有，相比之下Prometheus 要优秀很多。
 
 对于常用的监控系统，如[Nagios](https://www.nagios.org/)、[Zabbix](https://www.zabbix.com/)的用户而言，往往并不能很好的解决上述问题。这里以Nagios为例，如下图所示是Nagios监控系统的基本架构：
-![Nagios监控系统](https://img-blog.csdnimg.cn/8bdd8a1bed7f47bead6ade361f624fd6.png)
+![Nagios监控系统](https://i-blog.csdnimg.cn/blog_migrate/a0a28e294eca418e16e5b7de287c6269.png)
 Nagios的主要功能是监控服务和主机。Nagios软件需要安装在一台独立的服务器上运行，该服务器称为监控中心。每一台被监控的硬件主机或者服务都需要运行一个与监控中心服务器进行通信的Nagios软件后台程序，可以理解为Agent或者插件。
-![Nagios主机监控页面](https://img-blog.csdnimg.cn/d077f58c09a24a739c9b14e8fffc4a7a.png)
+![Nagios主机监控页面](https://i-blog.csdnimg.cn/blog_migrate/5307d9f65044408897a2e4dc53305503.png)
 首先对于Nagios而言，大部分的监控能力都是围绕系统的一些边缘性的问题，主要针对系统服务和资源的状态以及应用程序的可用性。 例如：Nagios通过`check_disk`插件可以用于检查磁盘空间，`check_load`用于检查CPU负载等。这些插件会返回4种Nagios可识别的状态，0(OK)表示正常，1(WARNING)表示警告，2(CRITTCAL)表示错误，3(UNKNOWN)表示未知错误，并通过Web UI显示出来。
 
 对于Nagios这类系统而言，其核心是采用了测试和告警(check&alert)的监控系统模型。 对于基于这类模型的监控系统而言往往存在以下问题：

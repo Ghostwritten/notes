@@ -7,7 +7,7 @@ Helm 图表是[在 Kubernetes 中构建高效集群的最佳实践之一](https:
 
 Helm 图表使用模板方法来部署应用程序。模板为项目提供结构，适用于任何类型的应用程序。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/236c924c74944ce0ae649ce954f9fa77.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8a3a8584411425e9b47af5ff4db3d6ab.png)
 ##  2. 条件
 
  - 安装并配置了 Minikube 集群（请按照我们的指南[如何在 Ubuntu 上安装 Minikube](https://ghostwritten.blog.csdn.net/article/details/113527867)和[如何在 CentOS 上安装 Minikube](https://ghostwritten.blog.csdn.net/article/details/123796854)
@@ -23,7 +23,7 @@ Helm 图表使用模板方法来部署应用程序。模板为项目提供结构
 docker run -d --name my-ghost -p 2368:2368 ghost
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/996506d986324cf68022e79307afe53f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c68966ce54a21b9f9f46fe29e71563ff.png)
 后我们就可以通过 `http://localhost:2368` 访问 Ghost 博客了。
 
 ```bash
@@ -89,7 +89,7 @@ ghost   NodePort   10.97.232.158   <none>        80:30152/TCP   2m44s
 
 ```
 通过 `http://<nodeip>:31950` 访问到 `Ghost` ：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8c06ef1764c543369de6876780be5c5b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/189e0f3bbcd1bae6662aaaa7517d3942.png)
 清理 deployment
 
 ```bash
@@ -785,7 +785,7 @@ metadata:
 ```yaml
 echo '192.168.211.51	 ghost.k8s.local' >> /etc/hosts
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0245e238de4e4eaf919d2b66d40c193b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4716fa0ecac9721ae7a54932b9003a20.png)
 
 ##  7. 持久化
 上面我们使用的 Ghost 镜像默认使用 SQLite 数据库，所以非常有必要将数据进行持久化，当然我们要将这个开关给到用户去选择，修改 `templates/deployment.yaml` 模板文件，增加 volumes 相关配置：
@@ -1135,7 +1135,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqgcbG1iD0m/6KWZPu4uJv+vM7ZBfrbnCib6egfz8+
 
 ```
 并复制到github的设置页面的SSH keys
-![在这里插入图片描述](https://img-blog.csdnimg.cn/69f964cd8b7e42f7854407d3baed9834.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e65a6f62b4764302e91c9fe9eac33320.png)
 
 
 ```bash
@@ -1147,7 +1147,7 @@ $ git commit -m "add helm-demo"
 $ git remote add origin  https://github.com/Ghostwritten/helm-demo.git
 $ git push origin main
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d9402dab05b3445db077103fa50a859d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dc9af9a84a0984ca36ce2a7d37a12d9e.png)
 接下来为该仓库设置 `GitHub Pages`，首先在本地新建一个 `gh-pages` 分支：
 只将 `repo/stable/index.yaml` 文件保留到根目录下面，其他文件忽略，然后推送到远程仓库：
 
@@ -1165,7 +1165,7 @@ $ tree
 $ git push origin gh-pages
 ```
 在 `GitHub Pages` 页面选择使用 gh-pages 分支即可：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/733184a2036c4f05a7271451f6ad6407.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e9600048911bdc940d7723362b3cc5d2.png)
 现在我们就可以通过 `http://smoothies.com.cn/helm-demo/` 来获取我们的 Chart 包了。
 
 使用如下所示命令添加 repo 仓库：
@@ -1197,5 +1197,5 @@ helm install  hello-ghost  helm-demo/my-ghost
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d6ce9fa621b04e0a97101c5ff22136d3.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7e03b5c273a6306a783394e3b65c6a4b.gif#pic_center)
 

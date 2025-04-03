@@ -62,12 +62,12 @@ http {
 ./sbin/nginx -s reload
 ```
 界面
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e1af598a07f0402fae03ce8be657ad9c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/71c05883b1b35eff9f6d53567474d40b.png)
 ##  4. 模块
 ### 4.1 gzip压缩
 
 F12打开网络抓包，刷新
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c85f7781d87648cdaab381632f0fb904.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/873c162b58465fac579975cc6c80d624.png)
 首页传输的大小是26.6KB与文件的大小是一致的
 
 ```bash
@@ -115,9 +115,9 @@ http {
 ```
 
 界面查看，首页传输大小只有8KB
-![在这里插入图片描述](https://img-blog.csdnimg.cn/94eb7bfab79b4661aa7f9a7263965de4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f816605fa442b5a0f475203d29664077.png)
 从响应头我们看的gzip方法
-![在这里插入图片描述](https://img-blog.csdnimg.cn/867baf61974b4a6da148992f5e445a73.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/13ec9223f616c3bf10b9c4c1274f7738.png)
 
 ###  4.2 audoindex目录显示
 [http://nginx.org/en/docs/http/ngx_http_autoindex_module.html](http://nginx.org/en/docs/http/ngx_http_autoindex_module.html)
@@ -130,7 +130,7 @@ http {
         }
 ```
 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/590c9acfcea84b3bad20b0ca0aa9cdbc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ac4a14d760bd6867e240e20fa269647c.png)
 ### 4.3 limit_rate限制流量访问
 [limit_rate介绍](http://nginx.org/en/docs/http/ngx_http_core_module.html#limit_rate)
 试用场景：当某些客户访问大文件的时候，非常占用流量，但又要保持访问小文件的其他客户正常访问，所以就需要进行限速。
@@ -142,7 +142,7 @@ http {
     }
 
 **清理缓存**后，查看效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8b3692cd8791403cb7b0d7bf6ed2e5c7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/00d067c55536a23a9ea2f1d018aa3c15.png)
 之前是54ms，现在7s，慢了许多，但它能兼顾大部分客户耐心。
 
 ### 4.4  log_format日志格式

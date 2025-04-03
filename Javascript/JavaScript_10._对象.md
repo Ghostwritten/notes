@@ -1,7 +1,7 @@
 #  JavaScript 10. 对象
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3679aa6f76324a15851dc4a8ec97d5b9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5f302c854cc65b4746c207dd477e1ec6.png)
 
 
 
@@ -10,7 +10,7 @@ JavaScript 对象是拥有属性和方法的数据。
 真实生活中，一辆汽车是一个对象。
 
 对象有它的属性，如重量和颜色等，方法有启动停止等:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9064631831a04fc8840eeb0ceb170b60.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/275d58082315b0a8a14a756962896d1d.png)
 ##  1. JavaScript 对象
 
 ```bash

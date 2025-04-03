@@ -5,12 +5,12 @@
 ----------
 ##  1. 快速构建.gitlab-ci.yaml
 创建一个项目
-![.gitlab-ci.yaml](https://img-blog.csdnimg.cn/7f0262b91bd7466fbf692fb45acb221c.png)
+![.gitlab-ci.yaml](https://i-blog.csdnimg.cn/blog_migrate/4c628bed934245ac6aa58f63198b7582.png)
 创建一个模板.gitlab-ci.yaml
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dbd1bf6e707b4951b18b6a6ffa55d72b.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b00e626fdfeb4362b4b65088ff428d8a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f15656b30d8ced4665b036ac461a84f8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5fa8ef927293ccf95be7eafa577f1955.png)
 选择Getting-started模板
-![在这里插入图片描述](https://img-blog.csdnimg.cn/105b2525dc2d4c36bf62162ae378d65c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/65bb7750897cc3e2db14f9a60a23ca6a.png)
 
 ```bash
 stages:          # List of stages for jobs, and their order of execution
@@ -44,15 +44,15 @@ deploy-job:      # This job runs in the deploy stage.
     - echo "Deploying application..."
     - echo "Application successfully deployed."
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cbfbb50506a348358260645ef2a82345.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4b31aeef19377f7639c0c31a92d8eda9.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0a7e62feb557469bbcf98ff3230cc207.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1d9f9681033a47c3bb4d061590051794.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9bf8544cb1894477a3ce930daffd14be.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2ca97b4d221528ada2525af1d46689d3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/578fd32ad5b27655f1a1cccad1b55cdc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e5eb81166d71b470537f03715c0ac839.png)
 全部正常。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bc547a59ce0c45279ccfdfbccc7f24ef.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/880032dde4b64408bc7caa90956b0232.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/36cdf90219f148258befdbb93b6f240c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/60f600362aa877f4391f3b9a48090a2d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/82502938bc2f01eeae3bce57f4b4152e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a1b660743f4048b6c5d5644ca2925417.png)
 我们充分利用模板文件，可以为我们节省大量的时间。
 
 ## 2. python demo ci
@@ -152,7 +152,7 @@ check_interval = 0
 
 选择一个最接近你的需求的、并修改量小的.gitlab-ci.yaml模板
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9dde612636e6448b9cb6b9ae0e751753.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1df37c5942b58406b12e7c5d1f17ae9c.png)
 修改.gitlab-ci.yaml
 我的本地环境是`ubuntu:8.04`,本地可能没有`flask`，所以要在`.gitlab-ci.yaml`,装完就可以部署，两步走，即两个`stage`。
 .gitlab-ci.yaml
@@ -178,11 +178,11 @@ deploy-job:      # This job runs in the deploy stage.
 
 
 创建一个Dockerfile模板
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f14c770042364c65965be02067db1eb2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f7c0f7ed629fe06662515f9022532b46.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b33e434e7d744365b363a13fa5709521.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0885b6b66aed4379ab077d7d1fea3d51.png)
 修改Dockerfile
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5a2f8b631758428eaa19a0447a2a4a3d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/49cdd6762cc93e9eb1692bc4d34671e1.png)
 
 -----
 更多阅读：

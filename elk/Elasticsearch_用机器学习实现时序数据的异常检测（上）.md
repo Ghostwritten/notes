@@ -26,7 +26,7 @@
 ○ 和他人比 - 个体明显区别于其他的个体
 
 ## 4. 判定异常需要一定的指导
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319175646909.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/57c7eb36b197aa25754b47a599acf313.png)
 ## 5. 相关术语
 ● Elastic 平台的机器学习功能
 ○ Elastic 的ML，主要针对时序数据的异常检测和预测
@@ -53,10 +53,10 @@
 ● 出现在低概率区域，发现异
 
 ## 8. 模型与需要考虑任何的周期
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319175748759.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fd4d63ed941712b3f72a753555d92c58.png)
 
 ## 9. ES ML：单指标 / ES ML：单指标 / 种群分析
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319175826469.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/383325c2506479216285260957e96efd.png)
 
 ## 10. 单指标任务
 ● Create New Job
@@ -67,7 +67,7 @@
  - ○ Bucket Span （取决于用户的数据业务 /数据的采样时间 / 波动情况 / 需要预测的频率）
  - ○ Use full dat
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319175839287.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9bf077460e0e69eba90200de668b11bd.png)
 ## 11. Demo
 ● Create New Single Metric Job
 
@@ -78,7 +78,7 @@
  - ○ Saved Query
 
 ● 对数据实现预测
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319181024785.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cb4fd717f83a990469217ca049e89980.png)
 下载数据
 [https://download.elasticsearch.org/demos/machine_learning/gettingstarted/server_metrics.tar.gz](https://download.elasticsearch.org/demos/machine_learning/gettingstarted/server_metrics.tar.gz)
 
@@ -165,29 +165,29 @@ yellow open   server-metrics nE8SdaN4TTu4D95wvGLIjw   1   1     707995          
 ```
 
 创建数据索引
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319182918897.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/76ec81436d223e7439b2e5fc09aadb3f.png)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319182528202.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319183035951.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319183101560.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319183546167.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319183748481.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319183825325.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319184028292.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1748016d87d07ba6582eab03158d7f20.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b54307fa5e26c019f92359515d23c323.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/02b2ecd3ac89d0064de8803ec68aef72.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1a6a724c4000a6d34eeb1bc803a0fbe3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9160c5d3b40ea5d370702058882fec99.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9eb5b3a04e5b9b0ff1c59da13b883019.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/05a423f924757b81471a7b01e45313a7.png)
 定制化URL
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319184143902.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319184341998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319184400881.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319184523415.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319185014130.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319185115351.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e6452fb4eb4000037739468fe8d7999d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8eafe192a9bfb29e3388e970d8a908f3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/31b454abc9e69a6ea68ee06d027a5198.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a67daf19a0ada2aa6e848c1e064a3f5e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5a1c02f7f46a539ddaec7615a0e013a1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3f5ccd592e8fe1ce3c5af756b19cc740.png)
 再次创建job
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319185213398.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319185300592.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a2a8af7535342adaef9d2ca70ac5da6a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/56fc86ff050a7ab2f4c0a2d4347290be.png)
 获取一个新的数据结果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319185325452.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319185444488.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319185515680.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f626d577afdf483eb1df540084d542af.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5e2f01f921b6ea5c2458aca56cd6d1fd.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6862953bac14d2a3a65a15f9265eff30.png)
 
 

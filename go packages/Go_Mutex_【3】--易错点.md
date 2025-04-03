@@ -28,7 +28,7 @@ func foo() {
 ```
 运行的时候 panic：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c261a899cc564e56a50b2e689aa64c37.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/357309278727c7203d21c4882e2f980d.png)
 ##  Copy 已使用的 Mutex
 二种误用是 Copy 已使用的 Mutex。在正式分析这个错误之前，我先交代一个小知识点，那就是 Package sync 的同步原语在使用后是不能复制的。我们知道 Mutex 是最常用的一个同步原语，那它也是不能复制的。为什么呢？
 
@@ -61,10 +61,10 @@ func foo(c Counter) {
 
 怎么办呢？Go 在运行时，有死锁的检查机制（[checkdead()](https://golang.org/src/runtime/proc.go?h=checkdead#L4345)  方法），它能够发现死锁的 goroutine。这个例子中因为复制了一个使用了的 Mutex，导致锁无法使用，程序处于死锁的状态。程序运行的时候，死锁检查机制能够发现这种死锁情况并输出错误信息，如下图中错误信息以及错误堆栈：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5b71a99663744041b804b8f6d923aefa.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7c5e0b1d370320d5b27adc85a3e41c36.png)
 你肯定不想运行的时候才发现这个因为复制 `Mutex` 导致的死锁问题，那么你怎么能够及时发现问题呢？可以使用 **vet 工具**，把检查写在 `Makefile` 文件中，在持续集成的时候跑一跑，这样可以及时发现问题，及时修复。我们可以使用 `go vet` 检查这个 Go 文件：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3124e20d68c94cd5b1c5d72a0f31c130.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1f1b5338c265e8b07b82f541c3ddd312.png)
 你看，使用这个工具就可以发现 Mutex 复制的问题，错误信息显示得很清楚，是在调用 foo 函数的时候发生了 `lock value` 复制的情况，还告诉我们出问题的代码行数以及 `copy lock` 导致的错误。
 
 那么，vet 工具是怎么发现 `Mutex` 复制使用问题的呢？我带你简单分析一下。
@@ -125,7 +125,7 @@ func main() {
 ```
 写完这个 Mutex 重入的例子后，运行一下，你会发现类似下面的错误。程序一直在请求锁，但是一直没有办法获取到锁，结果就是 Go 运行时发现死锁了，没有其它地方能够释放锁让程序运行下去，你通过下面的错误堆栈信息就能定位到哪一行阻塞请求锁：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/58f4750a284149f0a5f2781d1690abb3.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a79015083c53557638163a380bfdb104.png)
 学到这里，你可能要问了，虽然标准库 Mutex 不是可重入锁，但是如果我就是想要实现一个可重入锁，可以吗？可以，那我们就自己实现一个。这里的关键就是，实现的锁要能记住当前是哪个 `goroutine` 持有这个锁。我来提供两个方案。
 
  - 方案一：通过 `hacker` 的方式获取到 `goroutine id`，记录下获取锁的 `goroutine id`，它可以实现 Locker接口。

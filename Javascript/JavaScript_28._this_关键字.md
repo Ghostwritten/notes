@@ -1,7 +1,7 @@
 #   JavaScript 28. this 关键字
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f72f892bb7414e938a24b6f736d9b043.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3dab9f78d1cb3d852e5961d417f808e7.png)
 
 
 
@@ -183,7 +183,7 @@ function myFunction() {
 </html>
 ```
 输出
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8933b0a15a8f4c6eac931692e5b04df9.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7b92ddafb2748d849da8b8fb6adea440.gif#pic_center)
 ## 7. 对象方法中绑定
 下面实例中，this 是 person 对象，person 对象是函数的所有者：
 

@@ -2,7 +2,7 @@
 tags: grafana
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/855252dacdec40f69c6e4d9fd4c9dde1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e7642cd534b8f5af960e3bc91d4019aa.png)
 
 
 ##  1. Grafana OSS
@@ -15,7 +15,7 @@ tags: grafana
 ## 2. 功能
 ###  2.1 Explore metrics, logs, and traces
 通过即席查询和动态钻取探索您的数据。拆分视图并并排比较不同的时间范围、查询和数据源。有关详细信息，请参阅探索。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/70b55c44b7374c6c9f00f35885b98dd6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e62fc3e468f7c00c575c19484b97df27.png)
 ###  2.2 Alerts（警报）
 如果您使用 Grafana Alerting，则可以通过许多不同的[警报通知器](https://grafana.com/docs/grafana/latest/alerting/contact-points/#list-of-notifiers-supported-by-grafana)发送警报，包括 PagerDuty、SMS、电子邮件、VictorOps、OpsGenie 或 Slack。
 

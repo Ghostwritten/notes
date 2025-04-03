@@ -17,19 +17,19 @@
 -----
 ## 2. 图片去水印
 下面这张图片带有水印，不可否认，这些烦人的小细节致使CSDN无法成为一流的博客平台，那么我们如何去掉它呢
-![在这里插入图片描述](https://img-blog.csdnimg.cn/297d8fa1696645d79cbb7b2bf2da58e4.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d5a7ae94b2d17db5b92cbc03d2536a81.png)
 在编辑的界面是这样的，我们只需要把下面这些去掉即可。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2b2c99d128d54af4a4c2f38db263b963.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ec7b895217826740f89876b18cdad605.png)
 现在令人糟糕的水印已经没了
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b2d4cbd216bf41bda398799e0cad81f9.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/41d9b19388808b33349e89e5e7c0df1d.png)
 ## 图片添加超链接
 
 ```bash
-[![在这里插入图片描述](https://img-blog.csdnimg.cn/83cf609310b6438390323994a4ed4dc2.png)](https://www.rottentomatoes.com/m/1084398-life_is_beautiful)
+[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2b723b27764f3b528c9e8ea48eec8472.png)](https://www.rottentomatoes.com/m/1084398-life_is_beautiful)
 
 ```
 效果：
-[![在这里插入图片描述](https://img-blog.csdnimg.cn/83cf609310b6438390323994a4ed4dc2.png)](https://www.rottentomatoes.com/m/1084398-life_is_beautiful)
+[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2b723b27764f3b528c9e8ea48eec8472.png)](https://www.rottentomatoes.com/m/1084398-life_is_beautiful)
 
 
 ## 3. 让文字带点彩色
@@ -78,7 +78,7 @@
 
 
 ## 5. 设计公众号
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f6eed9ac29bb4381931d34641094847b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ec2fc1ba4c16299d3a4ab6b896720bdd.png)
 
 ```bash
 <h6 align="center" 
@@ -98,7 +98,7 @@ style="color:red ; font-size:30px">爱死亡机器人</h6>
 <h3>图像背景</h3>
 </body>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e369595a9ecb4b8aa118b09a11a2f7da.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fc9bc7f0eb62ea481c908ccc11262ecc.png)
 
 
 ```c
@@ -128,7 +128,7 @@ Hi there! , I'm Ghostwritten, Cloud Native Developer</p><br /><p align="center" 
 <!--  catalog: ~Dashboard~ -->
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/eb942dc8ad41418598a348ccfb54fe3d.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a15ca640f2485e8f55136691ad57bd49.png#pic_center)
 
 
 

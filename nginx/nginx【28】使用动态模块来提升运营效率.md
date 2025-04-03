@@ -1,7 +1,7 @@
 接下来,我们来查看Nginx的动态模块,动态模块可以帮助我们在使用Nginx的时候,在升级Nginx的时候帮助我们减少编译环节;下面我们来看下动态模块在编译及使用的流程;
 
 　　我们再用一个例子,给大家演示下;
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3c15829df5be46359da1225a37f7faf5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ed5a305d652860582ead6577da78e9d6.png)
 们在使用动态模块之前,先来看下在不适用动态模块的方法里,我们是怎么样使用Nginx；
 
 　　首先我们在下载完nginx的源代码,提供了一个叫config的脚本,以及在源代码中介绍的auto目录;这里都在帮助nginx在建立编译系统;那么nginx源代码中提供了很多官方模块,但我们也可能添加许多的第三方模块,不管是官方模块还是第三方模块,这些模块的源码都会和Nginx的框架源码放到一起,进行编译,最后编译出一个nginx可执行文件;那么这是不使用动态模块的一种方式;
@@ -29,7 +29,7 @@
 　　这是动态模块的一个工作流程;
 
 　　接下来我们做一个简单的演示:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9bf0f254000d4c0c9b375c1d63465718.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/10e21e88932a13913a3d8c9e0c3dfbd9.png)
  在nginx的源代码目录中:
 
 　　我们先看下哪些模块是支持动态模块的;
@@ -222,7 +222,7 @@ $ ./configure --help
 ./configure --prefix=/usr/local/nginx --with-http_image_filter_module=dynamic
 ```
 执行`make`以后将  `ngx_http_image_filter_module.so`复制到 编译好的nginx目录中新建的`modules` 目录中;
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0159ec7632b64e60a1a458769e44f8e3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dcad4562a02580e9cf31fc085f242605.png)
 　配置文件中:
 
 首先添加:load_module 模块和对应的路径;
@@ -230,18 +230,18 @@ $ ./configure --help
 ```bash
 load_module modules/ngx_http_image_filter_module.so;
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/70b4f87475b444a0944d98cf45267dd4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/04c81c9754bc36bf47b6708d7c76d65e.png)
 然后对我们访问图片的目录 我们加上 image_filter resize 15 10;  即15*10这个像素;
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0ae290a4545c4de1affac5d9bf3c1c58.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1cf03ced6cf41fdc6b1765cd1cf431d3.png)
 添加图片文件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d023898b576d492b91992256c6a2778d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/48701bf6145ae7763170c8ca9350296d.png)
 访问这个文件图片:
 `--with-http_image_filter_module=dynamic` 这个模块指实时的把这个图片压缩成更小的一些图片;
 下面我们以动态模块的方式看看是否能将其变成更小的图片
 
 重新启动nginx,进行访问
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e3e62cfcb9f94337ac3ef2a523198ad0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e1a67dde24cd7bbcfd61f89c6af3bcc5.png)
 图片变小了,说明image_filte模块已经生效了;
 
 使用了动态模块,不需要删除nginx 二进制文件,进行热升级了,可以减少我们出错的效率,但是并非所有的模块都支持动态模块的加载;

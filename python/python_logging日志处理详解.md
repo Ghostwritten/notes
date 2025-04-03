@@ -6,7 +6,7 @@
 ## 1.介绍
 在 Python 中有一个标准的 logging 模块，我们可以使用它来进行标注的日志记录，利用它我们可以更方便地进行日志记录，同时还可以做更方便的级别区分以及一些额外日志信息的记录，如时间、运行模块信息等。
 ### 1.1 架构
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200517115746736.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3f6288c96c4692967cd981527873f364.png)
 
 
 整个日志记录的框架可以分为这么几个部分：
@@ -101,7 +101,7 @@ Handlers和Loggers可以使用Filters来完成比级别更复杂的过滤。Filt
 Logger可以包含一个或多个Handler和Filter，即Logger与Handler或Fitler是一对多的关系;
 一个Logger实例可以新增多个Handler，一个Handler可以新增多个格式化器或多个过滤器，而且日志级别将会继承。
 
-![](https://img-blog.csdnimg.cn/20200517123231979.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![](https://i-blog.csdnimg.cn/blog_migrate/a7561e22385db1d3e3b76bdfc95a4758.png)
 
 ## 2. 优点
 总的来说 logging 模块相比 print 有这么几个优点：

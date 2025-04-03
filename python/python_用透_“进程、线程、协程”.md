@@ -11,7 +11,7 @@
 进程-操作系统提供的抽象概念，是系统进行资源分配和调度的基本单位，是操作系统结构的基础。程序是指令、数据及其组织形式的描述，进程是程序的实体。程序本身是没有生命周期的，它只是存在磁盘上的一些指令,程序一旦运行就是进程。
 
 当程序需要运行时，操作系统将代码和所有静态数据记载到内存和进程的地址空间（每个进程都拥有唯一的地址空间，见下图所示）中，通过创建和初始化栈（局部变量，函数参数和返回地址)、分配堆内存以及与IO相关的任务，当前期准备工作完成，启动程序，OS将CPU的控制权转移到新创建的进程，进程开始运行。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201008221659540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fbd655b4f622f448c2c5b401e80a7484.png#pic_center)
 操作系统对进程的控制和管理通过PCB(Processing Control Block)，PCB通常是系统内存占用区中的一个连续存区，它存放着操作系统用于描述进程情况及控制进程运行所需的全部信息(进程标识号,进程状态,进程优先级,文件系统指针以及各个寄存器的内容等)，进程的PCB是系统感知进程的唯一实体。
 
 一个进程至少具有5种基本状态：初始态、执行状态、等待（阻塞）状态、就绪状态、终止状态
@@ -27,10 +27,10 @@
 
 操作系统对把CPU控制权在不同进程之间交换执行的机制成为上下文切换（context switch），即保存当前进程的上下文，恢复新进程的上下文，然后将CPU控制权转移到新进程，新进程就会从上次停止的地方开始。因此，进程是轮流使用CPU的，CPU被若干进程共享，使用某种调度算法来决定何时停止一个进程，并转而为另一个进程提供服务。
 **单核CPU双进程的情况** 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201008221810991.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a74d77719bee786a1e1d4b77e42418c3.png#pic_center)
 进程直接特定的机制和遇到I/O中断的情况下，进行上下文切换，轮流使用CPU资源.
 **双核CPU双进程的情况** 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201008221846295.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/02f3781e3c8bbd612dce671d28d9d883.png#pic_center)
 每一个进程独占一个CPU核心资源，在处理I/O请求的时候，CPU处于阻塞状态。
 
 ### 1.2 进程间数据共享
@@ -96,7 +96,7 @@ Total time:0.03138256072998047
 ## 2. 什么是线程
 线程-也是操作系统提供的抽象概念，是程序执行中一个单一的顺序控制流程，是程序执行流的最小单元，是处理器调度和分派的基本单位。一个进程可以有一个或多个线程，同一进程中的多个线程将共享该进程中的全部系统资源，如虚拟地址空间，文件描述符和信号处理等等。但同一进程中的多个线程有各自的调用栈和线程本地存储（如下图所示）。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201008222134841.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bfdaca9cc4a60a062b4a28b7e79fc4d7.png#pic_center)
 
 系统利用PCB来完成对进程的控制和管理。同样，系统为线程分配一个线程控制块TCB（Thread Control Block）,将所有用于控制和管理线程的信息记录在线程的控制块中，TCB中通常包括：
 
@@ -130,7 +130,7 @@ Total time:0.03138256072998047
 
 协程适用于IO阻塞且需要大量并发的场景，当发生IO阻塞，由协程的调度器进行调度，通过将数据流yield掉，并且记录当前栈上的数据，阻塞完后立刻再通过线程恢复栈，并把阻塞的结果放到这个线程上去运行。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201009111932899.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f980d6a9700763265f6c7c9cff8c727f.png#pic_center)
 
 下面，将针对在不同的应用场景中如何选择使用Python中的进程，线程，协程进行分析。
 
@@ -165,7 +165,7 @@ Cpython解释器在内存管理中采用引用计数，当对象的引用次数�
 
 无论是单核还是多核,一个进程永远只能同时执行一个线程(拿到 GIL 的线程才能执行，如下图所示)，这就是为什么在多核CPU上，Python 的多线程效率并不高的根本原因。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201009112434165.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e7eb2a999b7a43a5de008fcc26c785ae.png#pic_center)
 那是不是在Python中遇到并发的需求就使用多进程就万事大吉了呢？其实不然，软件工程中有一句名言：没有银弹！
 
 ### 4.2 何时用？
@@ -190,14 +190,14 @@ DMA(Direct Memory Access)是系统中的一个特殊设备，它可以协调完�
  - DMA完成数据传输，中断CPU
  - CPU从p2上下文切换到p1,继续执行p1‘’
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201009112652220.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/587c8dfd1c207b35e145dfda19589ef1.png#pic_center)
 Python多线程的表现（I/O密集型）
 
  - 线程Thread0首先执行，线程Thread1等待（GIL的存在）
  - Thread0收到I/O请求，将请求转发给DMA,DMA执行请求
  - Thread1占用CPU资源，继续执行
  - CPU收到DMA的中断请求，切换到Thread0继续执行
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201009112911177.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/07bfbb5066b236aa432a6767cd9bdb79.png#pic_center)
 与进程的执行模式相似，弥补了GIL带来的不足，又由于线程的开销远远小于进程的开销，因此，在IO密集型场景中，多线程的性能更高.
 
 实践是检验真理的唯一标准，下面将针对I/O密集型场景进行测试。

@@ -1,4 +1,4 @@
-![](https://img-blog.csdnimg.cn/7f9770d0330f4561ab081a46bffc3e26.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/92a272f0369af88641a32e1237211a48.png)
 
 
 
@@ -206,9 +206,9 @@ Successfully packaged chart and saved it to: /root/ghostwritten-kube-prometheus-
 
 创建 `Access token`
 
-![](https://img-blog.csdnimg.cn/2e7ef8c68dda4809b6b3c2e7ebb8ec18.png)
-![](https://img-blog.csdnimg.cn/ba83bbd6c7454174a63946d28dc5354f.png)
-![](https://img-blog.csdnimg.cn/a30375a22fe744a3b814f931dc2c58dc.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/79e475b202ed484ffa82b25b8c95b03d.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/9881551e1cf476b5f10c79bd147e8341.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/073037acf3bc09c958fbfc7c31361b8e.png)
 
 ```bash
 
@@ -222,7 +222,7 @@ Pushed: registry-1.docker.io/ghostwritten/ghostwritten-kube-prometheus-stack:45.
 Digest: sha256:20bb9e1e22d5bb422bd285a829061b58458adde6ebc26f5ee81cca8f31ef0729
 ```
 登陆 [DockerHub](https://hub.docker.com/) 验证是否上传成功。
-![](https://img-blog.csdnimg.cn/c5d225f1b2fc4bb094c4034da7a4fbd1.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/b1ed25d20c126106a39b008d964c34b6.png)
 
 
 ## 4. helm 安装定制化的 ghostwritten-kube-prometheus-stack

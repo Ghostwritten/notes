@@ -1,6 +1,6 @@
 #  javascript class 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7da4e3750f034ce2a109f00a1cb4630c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7c3f9559842ea2fcfa61345b4b2ded7f.png)
 
 
 
@@ -39,7 +39,7 @@ user.sayHi();
 ```
 
 ## 2. 浏览器支持
-![在这里插入图片描述](https://img-blog.csdnimg.cn/66057a16854746f6ac03ba9ca4f1970a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1d082e09d3a02cdc2f3a0b2e002e3f0b.png)
 ##  3. 使用类
 定义好类后，我们就可以使用 `new` 关键字来创建对象：
 

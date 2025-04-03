@@ -20,7 +20,7 @@ RedHat镜像仓库： https://access.redhat.com/containers
 
 ## 2. 私人阿里镜像加速器
 这里采用了阿里云的镜像加速器（需要阿里云账号进行登录），地址：阿里云 -> 容器镜像服务 -> 镜像工具 -> 镜像加速器。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6bf48bc4ce7f4d50b5d6f7dc928debd3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ab37926cf2307b8dcf395d4a907a0b71.png)
 
 
 ```bash

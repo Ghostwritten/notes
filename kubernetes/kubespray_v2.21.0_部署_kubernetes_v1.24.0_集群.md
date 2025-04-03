@@ -2,7 +2,7 @@
 
 
 
-![](https://img-blog.csdnimg.cn/100a92ddfc8040abaf1018b1ca8af58b.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/fde29b448aaad99652602232a7cbc92b.png)
 
 
 
@@ -362,7 +362,7 @@ $ ./install-cluster.sh
  installed](https://serverfault.com/questions/1114638/ansible-you-need-to-install-jmespath-prior-to-running-json-query-filter-bu)
  > - [https://github.com/kubernetes-sigs/kubespray/issues/9826](https://github.com/kubernetes-sigs/kubespray/issues/9826)，该 bug 计划在 2.21.1版本修复
 
-![](https://img-blog.csdnimg.cn/95c10998dbed46078f6d51b2840d5380.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/acca49c509e10b75f5f5c94eaf2ab274.png)
 
 最终部署成功：
 

@@ -2,7 +2,7 @@
 tags: flask
 <!--  catalog: ~flask route 路由~ -->
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/892cb8baacd344799796956c23ea493c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d43d5346842d295771820178de746293.png)
 
 
 
@@ -63,7 +63,7 @@ def hello(name):
     return 'Hello %s' % name
 ```
 name为随意字符串，结果输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200621163046431.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/09e52aba4a6fdaa43e04301b98671350.png)
 除了界面验证，我们也可以用命令行工具`ipython`测试：
 
 ```python

@@ -73,7 +73,7 @@ Kubernetes从`1.13`版本开始引入存储卷类型的设置（volumeMode=xxx�
 ◎ RBD（Ceph Block Device）
 ◎ VsphereVolume（alpha）
 下面的例子为使用块设备的PV定义：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201129213710618.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e2edd3a84e7a7720ff38714c91102f5b.png)
 #### 2.1.3 访问模式（Access Modes）
 对PV进行访问模式的设置，用于描述用户的应用对存储资源的访问权限。访问模式如下。
 ◎ `ReadWriteOnce`（RWO）：读写权限，并且只能被单个Node挂
@@ -81,7 +81,7 @@ Kubernetes从`1.13`版本开始引入存储卷类型的设置（volumeMode=xxx�
 ◎ `ReadOnlyMany`（ROX）：只读权限，允许被多个Node挂载。
 ◎ `ReadWriteMany`（RWX）：读写权限，允许被多个Node挂载。
 某些PV可能支持多种访问模式，但PV在挂载时只能使用一种访问模式，多种访问模式不能同时生效。表8.1描述了不同的存储提供者支持的访问模式。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201129213855583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0ef656f89415379367e17beee2e021d2.png)
 #### 2.1.4 存储类别（Class）
 PV可以设定其存储的类别，通过storageClassName参数指定一个StorageClass资源对象的名称。具有特定类别的PV只能与请求了该类别的PVC进行绑定。未设定类别的PV则只能与不请求任何类别的PVC进行绑定。
 #### 2.1.5 回收策略（Reclaim Policy）
@@ -127,7 +127,7 @@ spec:
 
 #### 2.1.6 挂载参数（Mount Options）
 在将PV挂载到一个Node上时，根据后端存储的特点，可能需要设置额外的挂载参数，可以根据PV定义中的`mountOptions`字段进行设置。下面的例子为对一个类型为`gcePersistentDisk`的PV设置挂载参数：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201129215010459.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4cff0172efbabf7cfff6eaa30d1a7c01.png)
 目前，以下PV类型支持设置挂载参数：
 ◎ AWSElasticBlockStore
 ◎ AzureDisk
@@ -145,7 +145,7 @@ spec:
 #### 2.1.7 节点亲和性（Node Affinity）
 PV可以设置节点亲和性来限制只能通过某些Node访问Volume，可以在PV定义中的nodeAffinity字段进行设置。使用这些Volume的Pod将被调度到满足条件的Node上。
 这个参数仅用于Local存储卷，例如：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201129215134639.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7f85d2540d469d8975e27f81bb1427d5.png)
 公有云提供的存储卷（如AWS EBS、GCE PD、Azure Disk等）都由公有云自动完成节点亲和性设置，无须用户手工设置.
 
 #### 2.1.8 预留 PersistentVolume
@@ -300,7 +300,7 @@ $ kubectl patch pv prometheus-pv  -p '{"metadata":{"finalizers":null}}'
 ## 3. PVC
 
 PVC作为用户对存储资源的需求申请，主要包括存储空间请求、访问模式、PV选择条件和存储类别等信息的设置。下例声明的PVC具有如下属性：申请`8GiB`存储空间，访问模式为`ReadWriteOnce`，PV 选择条件为包含标签“`release=stable`”并且包含条件为“`environment In [dev]`”的标签，存储类别为“`slow`”（要求在系统中已存在名为slow的StorageClass）：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201129220436689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/14fe343716dc213e21dad4c6d2895cca.png)
 PVC的关键配置参数说明如下。
 ◎ **资源请求（Resources）**：描述对存储资源的请求，目前仅支持`request.storage`的设置，即存储空间大小。
 ◎ **访问模式（Access Modes）**：PVC也可以设置访问模式，用于描述用户应用对存储资源的访问权限。其三种访问模式的设置与PV的设置相同。
@@ -372,15 +372,15 @@ PVC 可以理解为持久化存储的“接口”，它提供了对某种持久�
 
 ## 4. PV和PVC的生命周期
 我们可以将PV看作可用的存储资源，PVC则是对存储资源的需求，PV和PVC的相互关系遵循如图8.1所示的生命周期。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201129222145944.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ab7c0d46a92f0072fb1ee003848ebd6a.png)
 ### 4.1 资源供应
 Kubernetes支持两种资源的供应模式：`静态模式（Static）`和`动态模式（Dynamic）`。资源供应的结果就是创建好的PV。
 ◎ **静态模式**：集群管理员手工创建许多PV，在定义PV时需要将后端存储的特性进行设置。
 ◎ **动态模式**：集群管理员无须手工创建PV，而是通过StorageClass的设置对后端存储进行描述，标记为某种类型。此时要求PVC对存储的类型进行声明，系统将自动完成PV的创建及与PVC的绑定。**PVC可以声明Class为""，说明该PVC禁止使用动态模式。**
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201129222617596.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d5090674eed509d7b093085a729e0ad3.png)
 **图8.3描述了在动态资源供应模式下，通过StorageClass和PVC完成资源动态绑定（系统自动生成PV），并供Pod使用的存储管理机制。**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020112922271126.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4b05eab03e6ade4dc03cd502c346423e.png)
 
 PV和PVC的生命周期
 ```bash
@@ -653,7 +653,7 @@ kubectl patch storageclass standard -p '{"metadata": {"annotations":{"storagecla
 
 #### c. 标记一个 StorageClass 为默认
 在StorageClass的定义中设置一个`annotation`：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020112923002932.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3cfd5fce9cbc7d0cedc195eae30e609c.png)
 或者
 
 ```bash
@@ -683,7 +683,7 @@ gold (default)   kubernetes.io/gce-pd      1d
 
 ##  总结
 StorageClass 到底是干什么用的。这些概念之间的关系，可以用如下所示的一幅示意图描述：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d20224187b4e4771934ba71a253e5dfd.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f9297d1037cb7d6533a7901ab1957dc3.png)
 
 从图中我们可以看到，在这个体系中：
 

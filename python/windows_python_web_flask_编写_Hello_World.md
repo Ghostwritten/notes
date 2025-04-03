@@ -2,7 +2,7 @@
 tags: flask
 <!--  catalog: ~Windows Flask 编写 Hello Word~ -->
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f95cffd89c0e4a799d810de80f3e8f73.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cb2a7b65c0c5e8e118f054938915874d.png)
 
 
 
@@ -10,11 +10,11 @@ tags: flask
 ## 1. hello world项目
 ### 1.1 新建一个项目
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200619214037819.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7590035dc22c917e131174d3fbaf129c.png)
 
 在默认的app.py点击运行
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200619214230996.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200619214300116.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/59f1b2c4f2086a93577de54249f216e2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2d6d171e531bbdac88639a1e7ffd32a2.png)
 ### 1.2 hello world项目修改无效的原因
 修改返回内容，发现仍然是`“hello world”`，后来发现是端口占用
 
@@ -70,8 +70,8 @@ if __name__ == '__main__':
 ```
 重新运行
 **注意：要关闭之前的启动进程。CTRL + C或者点击重新运行。**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200619214918931.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200619214936765.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ff6ec26cdc9684b0d9ff8596b2fa3e75.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/defbe4cd8675c3eec2bcc0af024f98cd.png)
 
 app.py设置一个`html`内容
 
@@ -98,11 +98,11 @@ if __name__ == '__main__':
     app.run()
 ```
 重新运行：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200619215529315.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c73393b627906af9083f44508863908d.png)
 
 #### 1.3.2 自定义配置
 自定义项目名称、`static`静态文件位置、`templates`模板位置（一般不常用）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200621154725743.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5338d88833a844d4c2e8c80b9bb230c8.png)
 #### 1.3.3 调试模式
 在app.py修改
 ```python
@@ -110,16 +110,16 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 重新运行：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200621155135152.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4e4cd93a3704dc93be3edf18bafce543.png)
 #### 1.3.4 绑定IP和端口
 这里我设置本机的ip地址192.168.1.4，然后设置不被占用的端口
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200621160059640.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3b549033d3296a0501601e6a3210c736.png)
 重新运行：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200621160203232.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/baa30a1946fa84b43d1b3d03301d93ac.png)
 ### 1.4 templates的调用
 但是这样的格式，对于维护网页成本很高，当面对复杂的网页时，因此，可以利用我们的templates文件夹进行配置。
 在templates目录下创建一个hello.html文件，并复制刚才app.py中的html内容。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020061922002795.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ede6e5a8e8e954665309759b19cae903.png)
 然后app.py调用templates的文件。
 
 ```python
@@ -140,27 +140,27 @@ if __name__ == '__main__':
     app.run()
 ```
 重新运行：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200619220300202.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fae0cee4322106ade55db000bd285eca.png)
 如此看来，app.py非常简约。
 
 ### 1.5 templates的传参
 
 修改app.py设置变量
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200619220942765.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/56f807ea81d50d5e86703b37985fd64c.png)
 修改hello.py文件调用变量名
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200619221046798.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6cbcdedc39d1d21be6cdbdd00fb686c5.png)
 重新运行：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020061922110327.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2833ff4b69cfd13bb661258dca4c83b5.png)
 ### 1.6 static的访问
 将一张图片放到static目录下
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200619221630650.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0042779e1a4cc9e683014f0ffb4c34b3.png)
 我们不需要重启，可以直接访访问这张图片。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200619221735361.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e5cda9690e79d22dd09bd6d066e30d67.png)
 ### 1.7 html文件调用加载static目录的图片
 hello.html文件修改：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200619222250863.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f49c2ea0f49e43b3b181f458a91bc694.png)
 重新运行：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200619222338318.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/355830737ae0a43370e906d0dea5cea6.png)
 更多阅读：
 
  - [linux python web flask Hello World实战](https://blog.csdn.net/xixihahalelehehe/article/details/106111115)

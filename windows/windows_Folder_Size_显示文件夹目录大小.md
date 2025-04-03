@@ -8,5 +8,5 @@
 
 • 如果文件夹很大，则会在后台扫描它，同时允许用户执行其他任务。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a5239cdd42b84e338d7ed6f49d557a83.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d2fb775d0eea9b47d03942cc25f734d5.png)
 

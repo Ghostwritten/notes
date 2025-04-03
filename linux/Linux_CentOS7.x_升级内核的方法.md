@@ -1,5 +1,5 @@
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/912442790041453e84b67d0eef32c35a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6667e2441bdf315c2b10802cddccd4a5.png)
 
 
 
@@ -143,6 +143,25 @@ GRUB_TERMINAL_OUTPUT="console"
 GRUB_CMDLINE_LINUX="crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet net.ifnames=0 biosdevname=0"
 GRUB_DISABLE_RECOVERY="true"
 ```
+
+第三种
+
+```bash
+$ grub2-editenv list
+saved_entry=0 
+$ cat /boot/grub2/grub.cfg |grep "menuentry "
+menuentry 'CentOS Linux (6.4.10-1.el7.elrepo.x86_64) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-6.4.10-1.el7.elrepo.x86_64-advanced-f942e519-c3b9-417d-a6b2-d8aeefbf302f' {
+menuentry 'CentOS Linux (3.10.0-1160.105.1.el7.x86_64) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-3.10.0-1160.105.1.el7.x86_64-advanced-f942e519-c3b9-417d-a6b2-d8aeefbf302f' {
+menuentry 'CentOS Linux (3.10.0-1160.92.1.el7.x86_64) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-3.10.0-1160.92.1.el7.x86_64-advanced-f942e519-c3b9-417d-a6b2-d8aeefbf302f' {
+menuentry 'CentOS Linux (3.10.0-1160.el7.x86_64) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-3.10.0-1160.el7.x86_64-advanced-f942e519-c3b9-417d-a6b2-d8aeefbf302f' {
+menuentry 'CentOS Linux (0-rescue-0553efd8b8954aacb1422c02dee9c76a) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-0-rescue-0553efd8b8954aacb1422c02dee9c76a-advanced-f942e519-c3b9-417d-a6b2-d8aeefbf302f' {
+$ grub2-set-default 'CentOS Linux (6.4.10-1.el7.elrepo.x86_64) 7 (Core)'
+$ grub2-editenv list
+saved_entry=CentOS Linux (6.4.10-1.el7.elrepo.x86_64) 7 (Core)
+$ reboot
+
+```
+
 ## 7. 生产grub 配置文件
 
 ```bash
@@ -207,5 +226,32 @@ yum --enablerepo=elrepo-kernel install kernel-ml-devel kernel-ml -y
 awk -F\' '$1=="menuentry " {print i++ " : " $2}' /etc/grub2.cfg
 grub2-set-default 0　
 grub2-mkconfig -o /boot/grub2/grub.cfg
+```
+
+## 11. 查看当前的默认内核
+当前内核版本可能并不是重启后默认选取的内核版本，该如何确认默认的内核版本呢？
+
+要查看Linux系统在启动时默认选择的内核版本，您可以查看 GRUB（Grand Unified Bootloader）的配置文件。GRUB是用于多操作系统的引导加载程序，它包含有关系统引导过程的配置信息。
+
+以下是查看 GRUB 配置文件的方法：
+
+打开 GRUB 配置文件：
+
+```bash
+cat /etc/default/grub
+```
+您可以使用其他文本编辑器，如 vim 或 gedit，根据您的喜好选择。
+
+在文件中找到 GRUB_DEFAULT 行。该行指定 GRUB 在启动时默认选择的菜单项（内核版本）的索引。索引从0开始，表示第一个菜单项。
+
+查看 GRUB_DEFAULT 的值，它将是一个数字。该数字对应于 GRUB 菜单中列出的内核版本。
+
+保存并关闭文件。
+
+请注意，如果 GRUB_DEFAULT 的值为 "saved"，则系统将选择上一次成功引导的内核版本。在这种情况下，您可以查看 `/boot/grub/grubenv` 文件来获取保存的内核版本的索引。
+
+```bash
+sudo cat /boot/grub/grubenv | grep saved_entry
+
 ```
 

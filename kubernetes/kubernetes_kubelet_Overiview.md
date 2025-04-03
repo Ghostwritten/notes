@@ -3,7 +3,7 @@ tags: kubelet
 
 
 
-[![在这里插入图片描述](https://img-blog.csdnimg.cn/08a2b0e5db184c138f18ec7443ce2e13.png)](https://www.rottentomatoes.com/m/schindlers_list)
+[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fdb3fd7aa4b3636b730980e68f4c1454.png)](https://www.rottentomatoes.com/m/schindlers_list)
 *《辛德勒的名单》*
 
 {% youtube %}
@@ -22,7 +22,7 @@ kubelet 根据 `PodSpec` 工作。PodSpec 是描述 pod 的 YAML 或 JSON 对象
  - HTTP 服务器：kubelet 还可以侦听 HTTP 并响应一个简单的 API（当前未规范）以提交新的清单。
 
 ##  架构
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9474224a40a840c3822c838e1c2ed200.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8f03062492d13f1abc8bcb2181af3342.png)
 ##  参数
 
  - [kubelet Options](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/)

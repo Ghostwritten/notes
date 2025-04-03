@@ -36,7 +36,7 @@ initializerConfig 资源用于配置启用哪些初始化程序以及哪些资�
 下面是一张图，描述了上述三个对象的关系。
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a5710bbc3d4045319ecec6f5e24acbb8.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_17,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/771e4a1b3fc53ff4dab1b7cf5c30ea33.png)
 
 ## 3. initializers教程
 教程基于[https://github.com/kelseyhightower/kubernetes-initializer-tutorial](https://github.com/kelseyhightower/kubernetes-initializer-tutorial)，我对其进行了一些更新，使其更简单并在此处提交了所有代码[https://github.com/gyliu513/jay- work/tree/master/k8s/example/kube-initializer-tutorial](https://github.com/gyliu513/jay-%20work/tree/master/k8s/example/kube-initializer-tutorial)

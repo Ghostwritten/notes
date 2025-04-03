@@ -30,7 +30,7 @@ Mapping
  - 生产环境中索引应考虑禁止 `Dynamic Index Mapping`，避免过多字段导致 `Cluster State` 占用过多
  - 禁止索引自动创建的功能，创建时必须提供 `Mapping` 或通过 `Index Template` 进行设定
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210315164035766.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1154e1b354d3d072d0e9d053ddd8522a.png)
 ## 4. 使用要遵循一定的规范
 设置 `Slowlogs`，发现一些性能不好，甚至是错误的使用 `Pattern`
 
@@ -79,7 +79,7 @@ Full Cluster Restart
  - 关闭并更新所有节点
  - 先运行所有 Master 节点 / 再运行其他节点
  - 等集群变黄后打开 Shard Allocation
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316100229213.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/440ef3f013b665fbea33bacb7cbe5dae.png)
 ## 10. 移动分片
 从一个节点移动分片到另外一个节点
 使用场景：

@@ -47,7 +47,7 @@ npm i gitbook-plugin-anchor-navigation-ex
 ### h3
 ```
 右上角目录图标预览效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5b79f5986e4b4b47a7a04038e5334751.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/46efd14b791fe028e1e45686def4940e.png)
 
 ##  2. ancre-navigation 插件
 [ancre-navigation](https://www.npmjs.com/package/gitbook-plugin-ancre-navigation) 插件功能是：右上角悬浮导航和回到顶部按钮
@@ -66,7 +66,7 @@ npm i gitbook-plugin-anchor-navigation-ex
 }
 ```
 效果图：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3bccc5f4dfcf4532abd01483398574f0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/73194f63c6c2d9c0b4683a60a23fe7ce.png)
 ##  3. back-to-top-button 插件
 [back-to-top-button](https://www.npmjs.com/package/gitbook-plugin-back-to-top-button) 插件功能：当页面超过一屏幕时，会显示一个 回到顶部按钮
 安装
@@ -88,7 +88,7 @@ book.json配置：
 }
 ```
 效果图
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f2b2f33b78454026a3616a4cfb66b336.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/56052da4cf52c1f5c610e908b23b923e.png)
 
 ## 4. page-toc-button 插件
 [page-toc-button](https://www.npmjs.com/package/gitbook-plugin-page-toc-button) 插件功能：悬浮目录
@@ -121,9 +121,9 @@ npm i gitbook-plugin-anchor-navigation-ex
 
 效果图：
 页面toc按钮:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/85b4a7550d2541fc9ece6bd6b656de11.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d12511077c131279422d9b69b01e8219.png)
 页面toc菜单:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ae9494667c3f4a369a8c2cd16fe77e10.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f2fd36ab5f8afd9f9ad245b7f263b507.png)
 
 
 

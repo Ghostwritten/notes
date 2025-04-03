@@ -3,18 +3,18 @@
 
 ----
 ## 1. 介绍
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524151812443.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524151938281.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021052415210412.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0822eb28fa829402ded5b6fdcbec7c54.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1563864c296ef4e4e9c098ea180aef3e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d849c937b901ee6ce0baebf88235509f.png)
 ## 2. 容器安全加固方法
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524152220276.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524152324383.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524152450373.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021052415250598.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524152633930.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ea87ea595ac244fe73f766d9694519f1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0fd3725bb77adba316955317eeca3e91.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/695c83d11bd0fa63115a990f1ee37535.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7305eee9e0f976dee86ee11f6fd31109.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/93d54c88bd9263ea07ac742c27b253ad.png)
 ## 3. StartupProbe探针
 官方k8s:[https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524152703757.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7262459ee5e0470a6c891daa20cab84f.png)
 
 ```c
 root@master:~/cks/runtime-security# k run immutable --image=httpd -oyaml --dry-run=client > pod.yaml
@@ -125,7 +125,7 @@ command terminated with exit code 126
 ```
 ## 4. SecurityContext
 [emptydir](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524155251774.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6f7adf13691bdba62420214ceb52fa41.png)
 
 
 ```c

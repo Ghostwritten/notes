@@ -18,12 +18,12 @@ brew install weaveworks/tap/gitops
 Weave GitOps 可用于将多个应用程序部署到多个 Kubernetes 集群，每个应用程序在自己的单独存储库中都有部署清单。为了便于管理，我们将一个或多个集群的GitOps 自动化存储在单个配置存储库中。
 
 虽然您可以将自动化添加到任何现有存储库，包括带有应用程序部署清单的存储库，但我们建议为此目的使用新的或空的存储库，我们的指南将采用这种方法。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/830ffec9cc2143b099e2554d9a3abfdf.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1523d17eb7c8b67a444f7eb2a68dbcb4.png)
 ##  Fork podinfo 示例应用程序存储库
 们将对示例应用程序进行更改，以展示 GitOps 对账的实际效果。因此，我们将首先 fork podinfo 示例存储库。
 
 转到[https://github.com/wego-example/podinfo-deploy](https://github.com/wego-example/podinfo-deploy)并分叉存储库。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/59c18921b29e4d449f97e753a837d558.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5e7661a72cae46241f7edd6b578a7495.png)
 Podinfo是一个用 Go 编写的简单 Web 应用程序，由前端和后端组件组成；它旨在展示在 Kubernetes 中运行微服务的最佳实践。可以在[此处](https://github.com/stefanprodan/podinfo)找到完整的应用程序源。
 
 ```bash

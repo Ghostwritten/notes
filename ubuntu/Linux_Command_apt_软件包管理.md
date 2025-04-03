@@ -6,13 +6,13 @@ tags: 软件包管理
 
 ------------
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/403fbbebe54c4195b3eee17b6ab64188.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9815771ba01718fef09dc00df8ffb702.gif#pic_center)
 
 ##  1. 简介
 apt 是一个命令行实用程序，用于在 Ubuntu、Debian 和相关 Linux 发行版上安装、更新、删除和以其他方式管理 deb 包。[apt-get](https://linux.die.net/man/8/apt-get)它将和工具中最常用的命令apt-cache与某些选项的不同默认值相结合。
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f75a130c05ac4ed3b0367ac54a2349a5.webp#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2de25bf23eb584f43d3a23607166c33a.webp?x-image-process=image/format,png#pic_center)
 ## 2. apt  示例
 ### 2.1 apt search
 ```bash

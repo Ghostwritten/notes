@@ -29,7 +29,7 @@ book.json配置：
 > 注意：上面的 shortName 的值就是你在 disqus 上创建的 website 获得的唯一关键字。
 
 ### 1.3 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8d699b3d4f6c4d34b79bf0ea887f115a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/94bc04ce3a52aa559ccf77cc22d50a1b.png)
 
 ### 1.4 评论
 略感复杂，不够简约

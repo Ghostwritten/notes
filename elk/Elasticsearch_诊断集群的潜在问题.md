@@ -62,16 +62,16 @@ Elastic 有提供 Support Diagnostics Tool - [https://github.com/elastic/support
 ## 6. 阿里云 – EYOU 智能运维工具
 每天凌晨定时诊断，也可以自主诊断
 [https://help.aliyun.com/document_detail/90391.html](https://help.aliyun.com/document_detail/90391.html)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312171521326.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2a4eae016276be8fe0bfaa4ee59c8944.png)
 
 
 ## 7. 诊断 Shard 数
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312171553944.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0471f1f834bca50d24147c31e7d1233a.png)
 
 ## 8. 磁盘容量估算
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312171615997.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/97e3239beb10d1f1b9d7efc5077e3feb.png)
 
 ## 9. 多维度检测，构建自己的诊断工具
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312171715822.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/47a989bf3c517cb4e1b5b94113eca732.png)
 
 

@@ -1,7 +1,7 @@
 #  JavaScript 16. 循环语句
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/eeb2aa8171064d77b2682db9b07941cf.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bc5bd203734a5eb3fb368cbb2e265ec5.png)
 
 
 ##  1. 简介
@@ -83,7 +83,7 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1ff16b25f07e46ac9e3380e31508edb4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0c9bd7e5075546cbc3615ce565bd13a6.png)
 ###  2.1 语句 1
 通常我们会使用语句 1 初始化循环中所用的变量 (var i=0)。
 
@@ -180,7 +180,7 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1ed80b28a09542d8a301fa0fb1bd5569.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f62d0dcedfe6cb4593c3bb8a05d431b0.png)
 ##  4. while 循环
 ###  4.1 语法
 
@@ -219,7 +219,7 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d6274df6f1a640cfbd41456d62283186.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/03afc853e98ebce72ad43aeb367f38ec.png)
 ##  5. do/while 循环
 do/while 循环是 while 循环的变体。该循环会在检查条件是否为真之前执行一次代码块，然后如果条件为真的话，就会重复这个循环。
 
@@ -263,7 +263,7 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2b0be68d6606405988b57cf8f4211a6d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6891bba37cd1de1679779ce1704def6c.png)
 ##  6. 比较 for 和 while
 如果您已经阅读了前面那一章关于 for 循环的内容，您会发现 while 循环与 for 循环很像。
 
@@ -322,7 +322,7 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d02a35446db2400e95821741a1e1c917.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d4cf5e9aeb0f0bcb80326b60da101d67.png)
 由于这个 if 语句只有一行代码，所以可以省略花括号：
 
 ```bash
@@ -364,7 +364,7 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4f5f9fa77ba046488da1baf54d54cbca.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a303ad6bdf8e655b4f0663079f374ae2.png)
 for 实例
 
 ```bash

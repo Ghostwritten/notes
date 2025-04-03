@@ -102,7 +102,7 @@ bundle exec jekyll serve
 ```
 访问`http://127.0.0.1:4000/admin`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200701120907603.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/305bd250fa60c7deafc82f77681d5f86.png)
 ### 配置隐藏专栏
 在_config.yml配置
 
@@ -121,7 +121,7 @@ jekyll_admin:
 bundle exec jekyll serve
 ```
 访问`http://127.0.0.1:4000/admin`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020070112150696.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d4814f8aec3bd9ba099c1ef13e901960.png)
 ### 在线编写博客
 #### 标题
 
@@ -168,12 +168,12 @@ bundle exec jekyll serve
 ```
 #### 添加 New metadata field
 添加layout 分列布局
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200703003831401.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5c736b8f04f51ab8390ace6bc79476cd.png)
 效果显示；否则，会以网页的形式直接显示文章内容。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200703003859768.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4ef6d7f5870fca2d5626ac06bd97f361.png)
 添加时间轴，可以自定义发行日期。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200703004030730.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200703004050433.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/376486182e42b6f0d595a7f2ff56a137.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4bfa5d5dc9cef94a8099788cae91c398.png)
 ##  jekyll-paginate
 官网文档：[https://jekyllcn.com/docs/pagination/](https://jekyllcn.com/docs/pagination/)
 github：[https://github.com/jekyll/jekyll-paginate](https://github.com/jekyll/jekyll-paginate)

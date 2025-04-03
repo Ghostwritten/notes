@@ -108,7 +108,7 @@ Elasticsearch可以作为一个独立的单个搜索服务器（单节点）。
 注意：Elasticsearch7.X之后，默认主分片数为1，副本分片数为1。
 
 ### 2.9 对标mysql 加深概念理解
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201027104344988.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9872eb6c5eda75370ac79e0c3237eff5.png#pic_center)
 ## 3、Elasticsearch优势和特点
 - 分布式实时文件存储，可将每一个字段存入索引，使其可以被检索到。
 - 实时分析的分布式搜索引擎。分布式：索引分拆成多个分片，每个分片可有零个或多个副本。集群中的每个数据节点都可承载一个或多个分片，并且协调和处理各种操作； 负载再平衡和路由在大多数情况下自动完成。

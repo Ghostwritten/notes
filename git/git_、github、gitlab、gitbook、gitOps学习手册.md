@@ -1,5 +1,5 @@
 #  git 、github、gitlab、gitbook、gitOps
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c9dce8daed0b4b6d8035346599d88637.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ad5d7b1ddb1c4422dd094c27ed77079b.png)
 
 
 
@@ -7,7 +7,7 @@
 
 **新书在这：[《Gitbook Docs》](https://smoothies.com.cn/gitbook-docs/About.html)**
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e1a152c999614dcf96d460c486ea275b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/58673c2fc3a1016a33eb387364818c33.png)
 
 ---
 
@@ -44,6 +44,8 @@
  9. [github action 自动部署构建入门](https://ghostwritten.blog.csdn.net/article/details/120178280)【gitbook_updated】【备份】
  10. [GitHub Actions CI/CD Pipeline with Docker](https://ghostwritten.blog.csdn.net/article/details/121941351)
  11. [Github | 制作您的第一个开源合并请求](https://blog.csdn.net/xixihahalelehehe/article/details/129163609)【gitbook_updated】【备份】
+ 12. [GitHub 访问加速指南](https://ghostwritten.blog.csdn.net/article/details/129170643)
+ 13. [Github | 制作您的第一个开源合并请求](https://ghostwritten.blog.csdn.net/article/details/129163609)
  
 
 
@@ -51,11 +53,14 @@
 
  1. [gitlab 介绍](https://blog.csdn.net/xixihahalelehehe/article/details/125135110)【gitbook_updated】【备份】
  2. [gitlab快速入门](https://ghostwritten.blog.csdn.net/article/details/123032833)【gitbook_updated】【备份】
- 3. [gitlab 安装](https://ghostwritten.blog.csdn.net/article/details/121929582)【gitbook_updated】【备份】
+ 3. [Docker 部署 Gitlab-ce](https://ghostwritten.blog.csdn.net/article/details/121929582)【gitbook_updated】【备份】
  4. [gitlab-runner 部署](https://ghostwritten.blog.csdn.net/article/details/107755143)【gitbook_updated】【备份】
  5. [Gitlab 基础配置](https://ghostwritten.blog.csdn.net/article/details/121962870)【gitbook_updated】【备份】
  6. [Create a Continuous Integration (CI) Pipeline in Gitlab](https://blog.csdn.net/xixihahalelehehe/article/details/121941628?spm=1001.2014.3001.5501)【gitbook_updated】【备份】
  7. [gitlab 编排.gitlab-ci.yaml高级技巧](https://ghostwritten.blog.csdn.net/article/details/122092356)【gitbook_updated】【备份】
+ 8. [Gitlab 使用 docker buildx 多重构建镜像上传私有 Harbor与 Dockerhub](https://ghostwritten.blog.csdn.net/article/details/131733721)
+ 9. [配置 gitlab https 访问](https://ghostwritten.blog.csdn.net/article/details/131980960)
+ 10.[Gitlab-ce upgrade 16.0.1 to 17.3.1](https://blog.csdn.net/xixihahalelehehe/article/details/141856125?spm=1001.2014.3001.5501) 
 
 
 ##  gitbook

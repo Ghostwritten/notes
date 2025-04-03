@@ -68,6 +68,6 @@ beego 项目创建之后，我们就开始运行项目，首先进入创建的�
 ```
 
 这样我们的应用已经在 8080 端口(beego 的默认端口)跑起来了.你是不是觉得很神奇，为什么没有 nginx 和 apache 居然可以自己干这个事情？是的，Go 其实已经做了网络层的东西，beego 只是封装了一下，所以可以做到不需要 nginx 和 apache。让我们打开浏览器看看效果吧：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200803002054130.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/57fe23bed939428b20d1ed64be614997.png)
 参考资料：
 [https://www.kancloud.cn/hello123/beego/126094](https://www.kancloud.cn/hello123/beego/126094)

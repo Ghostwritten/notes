@@ -8,7 +8,7 @@
 ○ 支持与 Logstash 或 ES 集成
 ● 全品类 / 轻量级 / 开箱即用 / 可插拔
 / 可扩展 / 可视化
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210317152957563.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/32d16003d2ba5cc115975c3bb11496b2.png)
 ## 2. Metricbeat
 ● 用来定期搜集操作系统，软件的指标数据
 ○ Metric v.s Logs
@@ -110,10 +110,10 @@ system
 Loading dashboards (Kibana must be running and reachable)
 Loaded dashboards
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210318161826797.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210318161859670.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1abe55585720ad6c19f3889a8897bd9f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/415408b967102d181aa76a27443f5957.png)
 打开这个面板。发现没有数据，因为`metricbeats`没有运行
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210318161943204.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a071719c03936357b9b86dbc83d4ffae.png)
 配置mysql面板
 
 ```bash
@@ -145,7 +145,7 @@ curl localhost:8080/demo/add -d name=Bob -d email=bob@xyz.com -d tags=Mysql,Inte
 curl 'localhost:8080/demo/all'
 ```
 效果图
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210318162807496.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a28768b029d14ee580c36c1b34f4118b.png)
 
 
 
@@ -158,13 +158,13 @@ curl 'localhost:8080/demo/all'
 ○ load
 ○ memory
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210318162942633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dc6703eafc415c95d0edd90fd488f661.png)
 
 
 
 ### 2.5 Metricbeat Event
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210317153856839.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6c73ce6e609cbd4dec0af067495f39ab.png)
 
 ## 3. Packetbeat
 下载地址：[https://www.elastic.co/cn/downloads/beats/packetbeat](https://www.elastic.co/cn/downloads/beats/packetbeat)
@@ -240,7 +240,7 @@ Loaded dashboards
 [root@master packetbeat-7.11.2-linux-x86_64]# ./packetbeat 
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210318163849492.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a0ff3825ba4f84a7bf4378c1eaf30fd6.png)
 查看一些监控数据
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021031816393065.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a09dfc9e37e7b6ce16cab7c9d1a902d4.png)
 

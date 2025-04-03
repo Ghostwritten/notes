@@ -1,4 +1,4 @@
-![](https://img-blog.csdnimg.cn/9d30e8182af74353b531a2c09eb38b1d.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/a977f8959afbf3255656c54bb1e4c900.png)
 
 
 ## 1. Prometheus 简介
@@ -14,7 +14,7 @@
 - 支持多种类型的图表和仪表盘
 
 ## 3. Prometheus 架构图
-![](https://img-blog.csdnimg.cn/de16c89df85a4d9bb221702e048f1ee3.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/ea5eab060622a21c6e3e5bc185a0456e.png)
 
 组件说明：
 - `Prometheus Server`: 用于收集和存储时间序列数据；
@@ -36,7 +36,7 @@ Prometheus Operator 特性：
   - Prometheus Target Configuration：根据熟悉的Kubernetes标签查询，自动生成监控目标配置；无需学习普罗米修斯特定的配置语言。
 
 ## 5. Prometheus-Operator 架构图
-![](https://img-blog.csdnimg.cn/dc0e2df4d1004d68ae068c4c686fa1f6.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/4cb43ac5811c17eec8f490c58341d6af.png)
 
 这篇文章我将在kind部署的kubernets集群内通过 `helm` 工具安装定制化的 `Prometheus-Operator` 。
 
@@ -236,9 +236,9 @@ Successfully packaged chart and saved it to: /root/ghostwritten-kube-prometheus-
 ```
 ### 9.4  推送 helm package 至 GitHub Package
 登陆 `github` 创建一个`Token`，你可以在[这个链接](https://github.com/settings/tokens/new)创建，并勾选 `write:packages` 权限。
-![](https://img-blog.csdnimg.cn/0f6c4ee56f354e1a901a1ec79affb803.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/c9a0da429c4be511cfce2d1bd537da2a.png)
 点击“`Genarate token`”按钮生成 `Token` 并复制。
-![](https://img-blog.csdnimg.cn/a30375a22fe744a3b814f931dc2c58dc.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/073037acf3bc09c958fbfc7c31361b8e.png)
 
 ```bash
 $ helm registry login -u ghostwritten https://ghcr.io
@@ -253,8 +253,8 @@ Pushed: ghcr.io/ghostwritten/helm/ghostwritten-kube-prometheus-stack:45.2.0
 Digest: sha256:eecc4fcfc2dd3a65dedb692bfbfcd49d1e420e99e2b13aded22b136dae25e146
 ```
 查看位置 `ghostwritten-kube-prometheus-stack-45.2.0.tgz` 存放位置
-![](https://img-blog.csdnimg.cn/296b6feb414e402ea5bd17ebd702a80f.png)
-![](https://img-blog.csdnimg.cn/a5832c7869954f1682672022fd581684.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/98003c785c65f7ea3afe539fb9be51bc.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/72f2efe93650464b7968826cad7b3a2c.png)
 
 ### 9.5 推送 helm package 至私有 harbor 
 - [Centos 部署 harbor 镜像仓库实践](https://ghostwritten.blog.csdn.net/article/details/127920005)
@@ -300,7 +300,7 @@ cp /etc/containers/certs.d/harbor.ghostwritten.com/ca.crt /etc/pki/ca-trust/sour
 update-ca-trust extract 
 ```
 harbor 界面新建一个项目，名字为 helm
-![](https://img-blog.csdnimg.cn/f9c8f14448504f8fb9c75650d50f4a11.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/11491e58b1b114767783c664f6dc1d0e.png)
 将此项目添加 Helm 仓库:
 
 ```bash
@@ -330,7 +330,7 @@ Pushing ghostwritten-kube-prometheus-stack-45.2.0.tgz to harbor...
 Done.
 ```
 已上传成功，效果图如下：
-![](https://img-blog.csdnimg.cn/ef21414d50134f4094283453b81633c2.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/67d763beab3ae00424576c87ccd75783.png)
 
 
 
@@ -508,14 +508,14 @@ windows: C:\Windows\System32\drivers\etc\hosts 配置：
 192.168.10.29 grafana.demo.com prometheus.demo.com alertmanager.demo.com
 ```
 访问： `http://prometheus.demo.com`
-![](https://img-blog.csdnimg.cn/f1a35d85dc824721b53d3e7b75b6be7f.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/5319f7540f9c74235ca9e33925dbe9e8.png)
 访问：http://alertmanager.demo.com
-![](https://img-blog.csdnimg.cn/43e38a47b47e48668171458966a773e2.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/1c6a49ed4fe6f957f1e15d8b69cb5132.png)
 
 
 
 访问：`http://grafana.demo.com`
-![](https://img-blog.csdnimg.cn/b2da3421b48b43e79c3510e68e4b8d7a.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/c95ad63f8db1df0686cb24cbb2bab2d8.png)
 因为我第一次登陆`admin/admin`, 并没有登陆成功，通过`grafana-cli `命令修改 admin 密码为 `admin`：
 
 ```bash
@@ -542,9 +542,9 @@ INFO [02-28|10:24:48] Envelope encryption state                logger=secrets en
 Admin password changed successfully ✔
 ```
 再次`admin/admin` 登陆成功,直接跳转修改密码，我修改新的密码为 `12345678`
-![](https://img-blog.csdnimg.cn/e37f2c995873403c85fdd222ecf23bc2.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/513a9194428e78c91abf2a2a57e156d1.png)
 终于可以正常访问了。
-![](https://img-blog.csdnimg.cn/ff4445b41de54aa5acee93de89fa6a9e.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/88c6e736c23a10581be4005eaab31a88.png)
 
 
 ##  12. 清理应用

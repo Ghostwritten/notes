@@ -1,4 +1,4 @@
-![](https://img-blog.csdnimg.cn/41286edf08324f83ab7b74ecaa1997a5.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/207f66eeb6b796a7152f8bb978ae1485.png)
 
 
 
@@ -143,9 +143,9 @@ sysctl -p
 
 ## 5. 打快照
 打快照前一定先关机
-![](https://img-blog.csdnimg.cn/5324553a3a954a75a8dcbcb419472958.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/aeef0a3155559d8b47c2f1a009e9db76.png)
 1. 初始化系统 20230803
-![](https://img-blog.csdnimg.cn/97ecab8748494babaa233e7d3400e93b.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/ef215ee2eec761c4ce142e15c60eec2a.png)
 
 
 ## 6. 安装 git

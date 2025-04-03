@@ -14,7 +14,7 @@ POST /my_index/_forcemerge?max_num_segments=1
 
 
 ## 2. 什么是段
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210329100041931.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ba2053f4974f1c803d3b30a06a89cd1d.png)
 如图所示，自顶向下看，
 
  - 一个集群包含1个或多个节点；

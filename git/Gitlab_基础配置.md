@@ -40,57 +40,57 @@ irb(main):001:0> Notify.test_email('<xxxxxx>@139.com', '邮件标题', '邮件�
 Delivered mail 61b9f42db6726_4fc5a503772f@gitlab.example.com.mail (3732.4ms)
 => #<Mail::Message:154720, Multipart: false, Headers: <Date: Wed, 15 Dec 2021 13:57:01 +0000>, <From: Gitlab <zoxun@outlook.com>>, <Reply-To: Gitlab <noreply@gitlab.example.com>>, <To: 13522947651@139.com>, <Message-ID: <61b9f42db6726_4fc5a503772f@gitlab.example.com.mail>>, <Subject: 邮件标题>, <Mime-Version: 1.0>, <Content-Type: text/html; charset=UTF-8>, <Content-Transfer-Encoding: 7bit>, <Auto-Submitted: auto-generated>, <X-Auto-Response-Suppress: All>>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/288f517f0c6b4393b4d4b353c65aaaf0.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c98a53ae11e03dd7e90d5090e89b418a.png)
 
 ## 2. 注册账号
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ccaeed5c003545e1b539b9f89c7f657d.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/906755db8946c31857eed61dc0992b6d.png)
 填写自己的名字、邮箱、密码
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8f8fa5815ea34119b08387594974b24f.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/84ef9dd555787daf94c25d517ccfdc67.png)
 注册后等待管理员验证通过。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/78c98781a31e448e9b02589dedb268e1.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b517061080eb883fa6c82344136e04cf.png)
 
 登陆管理员，找到Admin
-![在这里插入图片描述](https://img-blog.csdnimg.cn/276c4667c5ab43e08d9a0fd9c140193e.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7a76c686c870a991f6cab1f62bdd58eb.png)
 找到管理user的界面
-![在这里插入图片描述](https://img-blog.csdnimg.cn/07fbabc1bb984c7496b0310d1af64ba5.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/38490e4e16207b6a017c40a5cc5301f2.png)
 发现新注册的用户
-![在这里插入图片描述](https://img-blog.csdnimg.cn/92df83142e144999b278959ae4d38ed2.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9cb07252bf6e7e2c462aef7a6bec0c35.png)
 点击通过或拒绝。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/63c8ff4f60bd44cd8bbe2fa25f7e7dcb.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dc4cb90d3996e63f4b88ebc92cdca840.png)
 通过后，你也可以对此用户进行限制访问或删除。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5a3ca6751b854940b3f8f14b3b64280a.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7951281a4db61951372e9cd1b79c37d8.png)
 通过后，租户登陆，选择用户角色
-![在这里插入图片描述](https://img-blog.csdnimg.cn/09563114b10d4eba9208539e56b5bdc0.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d523657e7da1a82f0fbb120701e5660d.png)
 创建项目或寻找项目
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dc5cab76de1a4cc8ae8a68e8166ec15d.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/25dff059fb166adfe7a47014ddcba0fe.png)
 与管理员界面的区别缺少admin的权限
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6e9038ff546a443c80256216fb60873a.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d925fcf2f4edf63b78b95c471d742938.png)
 回到管理员的user用户管理界面，发现xiaoming已经被激活。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/69b226d0be6a441593652b8b0b840f68.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/db2a8d20041289ffc236bad7d9a6383c.png)
 ##  3. 创建项目
 第一种
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0692fd9ac32849c7b054731a37422a96.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d21a666f1af967ea1b7268bb1ee21b0d.png)
 第二种
-![在这里插入图片描述](https://img-blog.csdnimg.cn/580b03edcb1b4d93821bf9681b0cbb41.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e3b518c3766e39db4bdc6c35a059f93f.png)
 第三种
-![在这里插入图片描述](https://img-blog.csdnimg.cn/79cfbf7b845542648e9989788d8b17a3.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5ddb10f4cf28f79b9b29f4314a8f6c8d.png)
 三类项目
 空白项目，导入项目，模板项目
 ###  3.1 创建空白项目
-![在这里插入图片描述](https://img-blog.csdnimg.cn/acad65c7524e4bd49656179514bc149d.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4565ba323ecb42edb21fb64e4354f28e.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/90635ac72d4e411f99b407e74c840da1.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e1d889d1d93ba617d20bc61bedecf4a4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fcf6e12d92476254cb68387974ac9ad0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/811317f5e67274b7b0cffe42f451769a.png)
 当我们在点击创建之前，如果点击了“`README`”，如下
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5828df8b774c4277872d4f0822a314c1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cecdbee1b0a424b01a1d830523ff6377.png)
 那创建出来的项目是这样的。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/09af3543a76e4f378036bdabf34290ff.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e6e2bd3984013b5c40755ee028f676fd.png)
 
 ### 3.2 创建模板项目
 当我们选择模板项目时，会有需要各类开发的模板项目供我们选择。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1c2790ce659249ec85607472672b21f0.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/82fc47f09ecc441f9b1d178fb904e233.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/26676e76d4270fdd3d9d468d64cf6a3d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c906be63580411c5810dad6980c8361b.png)
 这个关于`kubernets`的`gitbook`项目
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9e9539a19d4c42368130dcc7838e2444.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a6748da145bbe637894e74163156c42b.png)
 我们可以编写自己的`gitbook`了。
 ###  3.3 导入项目
 导入项目，适合以下场景：
@@ -98,48 +98,48 @@ Delivered mail 61b9f42db6726_4fc5a503772f@gitlab.example.com.mail (3732.4ms)
  - 项目迁移
  - 借用开源项目定制开发
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b5d49c11494c44a78c2e4a4539f353a1.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/78dfafa1105a8644caed5903308dc623.png)
 我们需要一个`token`,这个`token`来自于你选择的平台，而不是来自自己的`gitlab`平台，我这选择了`github`平台。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/092bd971997b4cb5af395b72f714fd2d.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6dfade9d10aa0ce010cfc8ecda956f19.png)
 我们现在去创建`token`，我们 登陆`github`，选择设置“`setting`”
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d3e14ade82d44cdea6364da48357e39e.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_9,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7421140443efe0cac2a6c3ac1902c687.png)
 找到“`developer settings`”
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3f0e2e15a36b4d69a68065c05e0bcf70.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/33d36221db9d43d28c9950bb7875dab8.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8c90a283b4dd12579b2cf034c35bff1b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/41c522fe8963e4ba23900c3ca71a65af.png)
 根据兴趣随便取
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ac9399914a314e258eb6604d4965eb24.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/127a9ac9a2fd502c3235fd2316b24682.png)
 我们创建出来了
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6a1a76b8a743468184c45d6f350a7f48.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/360f6fa0f1d25a2eda7759d203625ab8.png)
 
 复制到gitlab的这里
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4e4784c44ad94b188a38c23163f6b86a.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fdcff2237f29554e65eda9e188defbeb.png)
 
 获取到我的`github`账号下的项目列表，选择其中一个
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/74398520eaf24cc19fa17dfc93be4931.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/837d1c769a1b4e649954686a39740f34.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e4b737b6568b426587b3b5ffd7977000.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2fe95fce6dad5ca71d0d6f5d9526e8a5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2fb7f8d250a1ed50420d50ad4fec0b35.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/07b6fe7ac7050b333ab718826a1cd5e0.png)
 开始导入
-![在这里插入图片描述](https://img-blog.csdnimg.cn/34b28a1c4900406c935315fa0b6017c6.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8c6a13c658f4af707130529b180eab6a.png)
 导入完成。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d5ecb043be344ed78db2ee7c8216564c.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9897fc6a9882f148e0796069eccd4f75.png)
 查看gitlab导入的项目
-![在这里插入图片描述](https://img-blog.csdnimg.cn/df340e68606a40439c1963a78ac0841c.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ce48d6b33a4e84cf8c4bd5a92b6e3edb.png)
 查看项目内容，然后根据自己的需求开发属于你自己的项目吧。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f44cdc2fb13e4378aeb082d6166372a5.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c5fa105170cff30610db94513ab43e71.png)
 
 ## 4. 删除项目
 我们要删除这个项目
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ecfe9eef03424ab5945e01c833eea543.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fd802237fc8a41d3b6fdccf6ea496b84.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/214ab14b5a2546a7ad7f1eab1a875411.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/65a2a94cf08c16c8ce0d4d8dcd1b97b5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9baed6876f230e3fa0d60dae75bef56f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c8b8f48072b73e543c5d962f0c465ba7.png)
 再次确认
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4b9c8eac29d54e0fba30d9ca259e3583.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4ff8b0c811c4af4f8c4a3d8f888934a4.png)
 我们找不到了`gitlab-example-demo`了
-![在这里插入图片描述](https://img-blog.csdnimg.cn/29bbdae0f3124ee48a20b0d89fb601f1.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d28cc67c004fea2af32f9a609e2c0a31.png)
 ##  5. gitlab项目上传github
 github创建一个空项目
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b9fac4e6d6124b909e8af1ca4eba54cd.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bc0725edb86d9bc9983e26fea943a711.png)
 
 ```bash
 $ git clone http://gitlab.example.com:8081/root/gitlab-example-demo.git
@@ -168,7 +168,7 @@ To https://github.com/Ghostwritten/gitlab-example-demo.git
 Branch 'master' set up to track remote branch 'master' from 'hello'.
 
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/efc138591b7948eba18273c9de981fea.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f3b71c10c785614b541c0eee986e336f.png)
 
 ----
 相关阅读：

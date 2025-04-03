@@ -5,14 +5,14 @@ tags: Dashboard
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a4b4fbd73b3840f6b6ac34c94875613a.jpeg#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0d9e544aaf871293a53b54cc36197092.jpeg#pic_center)
 
 
 
 ## 1. 简介
 [Dashboard](https://kubernetes.io/zh-cn/docs/tasks/access-application-cluster/web-ui-dashboard/) 是基于网页的 Kubernetes 用户界面。 你可以使用 Dashboard 将容器应用部署到 Kubernetes 集群中，也可以对容器应用排错，还能管理集群资源。 你可以使用 Dashboard 获取运行在集群中的应用的概览信息，也可以创建或者修改 Kubernetes 资源 （如 Deployment，Job，DaemonSet 等等）。 例如，你可以对 Deployment 实现弹性伸缩、发起滚动升级、重启 Pod 或者使用向导创建新的应用。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/85aae71dd8484e958a57912daeb82d69.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6c0a6ec8662e99f8dfaf5baab47c6697.png)
 
 ##  2. 默认 dashboard 权限
 
@@ -33,7 +33,7 @@ Kubernetes Dashboard 支持几种不同的用户身份验证方式：
 ###  3.1 登录视图
 如果您使用的是推荐的最新安装，则默认情况下将启用登录功能。`--tls-cert-file`在任何其他情况下，如果您更喜欢手动配置证书，则需要将`--tls-cert-key`标志传递给 `Dashboard`。`HTTPS` 端点将暴露在Dashboard 容器的端口上`8443`。您可以通过提供`--port`标志来更改它。
 使用`Skip`选项将使 `Dashboard` 使用 Dashboard 使用的 `Service Account` 的权限。Skip自 1.10.1 起，按钮默认禁用。使用--enable-skip-login仪表板标志来显示它。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b443d6a8f5d648e3aa98bf3d5d758148.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/21f92fd1719698bbe39173ee16610863.png)
 ###  3.2 Authorization header
 通过 HTTP 访问 Dashboard 时，使用授权标头是使 Dashboard 充当用户的唯一方法。请注意，由于[普通 HTTP 流量容易受到MITM 攻击](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)，因此存在一些风险。
 
@@ -61,7 +61,7 @@ Kubernetes Dashboard 支持几种不同的用户身份验证方式：
 
 ###  3.5 Kubeconfig
 提供这种登录方法是为了方便。  kubeconfig 文件中仅支持 flag 指定`--authentication-mode`的身份验证选项。如果它被配置为使用任何其他方式，错误将显示在仪表板中。目前不支持外部身份提供者或基于证书的身份验证。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cf9a9bcb5bf8408793b309fb60f0722e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b781d93d0dab3a1ae97a91a9fb0f46c2.png)
 
 ##  4. 管理员权限
 您可以通过在下面创建来授予 Dashboard 的服务帐户完整的管理员权限`ClusterRoleBinding`。根据选择的安装方法复制 YAML 文件并另存为，即`dashboard-admin.yaml`. 用于`kubectl create -f dashboard-admin.yaml`部署它。之后，您可以使用Skip登录页面上的选项来访问仪表板。
@@ -190,7 +190,7 @@ service/kubernetes-dashboard        NodePort    10.96.43.126     <none>        4
 
 访问:`http://192.168.211.40:31010/`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7929d1cd89b34eccae2560038eb0b68b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/289eeb50864120c6b390fda463bad705.png)
 
 
 ```bash
@@ -221,11 +221,11 @@ token:      eyJhbGciOiJSUzI1NiIsImtpZCI6IjNROWFvUGhIWk9sYzBHT3JvOUJDb2wtX29Tc1Z0
 $ kubectl get secret -n kube-system  $(kubectl get serviceaccount  dashboard-admin   -n kube-system -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
 ```
 获取 token：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d715f9bd8f9544369594e46eaf044755.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cad945da67e8b0c7e30323f99b170871.png)
 
 
 访问 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/125963d789ce4220bac5520a0396718f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/381484bec2a113c3ea692286cfa7edd6.png)
 
 ###  6.2 kubeconfig 访问
 
@@ -338,8 +338,8 @@ users:
 $ sz /root/.dashboard-admin.conf
 ```
 访问：`https://192.168.211.40:31010/`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7d7974fe7fee49b4bfa58a02164f7b3c.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/379eb8ce1dea44b7b5a45b9cac0b0cf7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2fed2706644f9ef691cff2204ee07a97.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e10f6e2aa3b21e5e05cfbdc7e5dcba7c.png)
 
 
 ###  6.3 proxy 访问
@@ -386,7 +386,7 @@ Accessing the Kubernetes Dashboard
 kubectl get secret -n kubernetes-dashboard $(kubectl get serviceaccount admin-user -n kubernetes-dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4ef2d608fc5c42158ff5396804548650.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/99440ea73ce22a471880ae1ab0151ed1.png)
 赋值保存，执行公开 Kubernetes Dashboard 命令：
 
 ```bash
@@ -397,7 +397,7 @@ kubectl proxy
 代理激活后，您可以访问 Web UI，将您喜欢的浏览器指向以下地址：
 [http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy](http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b90307ae35724cc285d75b78b5952fc6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4166dfc8b62452bbbe04af6a7f0da17c.png)
 
 
 

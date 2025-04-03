@@ -304,7 +304,7 @@ POST employees/_search
 }
 ```
 返回输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305200356595.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b81c93a26db3a8d9c5e32ab9f09ac7fb.png)
 
 
 ### 2.5 global
@@ -507,7 +507,7 @@ POST employees/_search
 ```
 
 返回输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305201255620.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6be7606694111f63b4c5f0c16dddefe9.png)
 
 #排序 order
 #count and key
@@ -538,7 +538,7 @@ POST employees/_search
 }
 ```
 返回输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305201343893.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2a0987295f536d348ecff332aa70558c.png)
 
 
 

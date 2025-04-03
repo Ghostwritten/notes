@@ -4,7 +4,7 @@
 ## 1. 数据泄露
 5700 万用户数据泄漏
 1.08 亿条投注信息泄漏
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310170521246.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3f2b29813bc86cb8b5965d32cae939c4.png)
 ## 2. 原因分析
 
  - ES 在默认安装后，不提供任何形式的安全防护
@@ -16,7 +16,7 @@
  - 用户鉴权：指定哪个用户可以访问哪个索引
  - 传输加密
  - 日志审计
- - ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310171530901.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+ - ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2a57ef3aac1d9e4092bc946494f2febc.png)
 
 
 ## 4. 一些免费的方案
@@ -82,7 +82,7 @@ POST /_security/user/lsk
       }
 }
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310171920847.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bcd51dd76cdbefda24fa2a247fc0ca51.png)
 
 
 ## 10. 开启并配置 X-Pack 的认证与鉴权
@@ -148,7 +148,7 @@ elasticsearch.password: “changeme”
 ```bash
 ./bin/Kibana
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310175016716.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e62a47dba43848db14eb8739440848c6.png)
 ## 12. 测试
 ### 12.1 测试超级权限读写操作
 ```bash
@@ -165,22 +165,22 @@ POST orders/_bulk
 
 
 ### 12.2 创建 new Role
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210311142404485.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021031114274097.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210311142947268.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021031114310164.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9e849fe3c0b5b2b35f828a3def7927e6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ae0d417d48986291c5750243d0e16ada.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6a61c021619c59b7fdd9f234acb5b296.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6e0bb87ab8e2bdf417cce2d034430771.png)
 
 
 ### 12.3 创建 new user
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210311143215115.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a3eeb9053e6f1c2395dd185b5ab2a949.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210311143320305.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a97c78c2ba082fd16d9eb8addce0a668.png)
 创建成功
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210311143657220.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c9d6ec0b8bfb7677ab6c893ac4a7dc0f.png)
 
 ### 12.4 测试新用户登录
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210311143729476.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/43819e7fb8548c0cca53cb4895be0369.png)
 ### 12.5 测试新用户读写
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210311144424234.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210311144506930.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7a4dd2fcabbee090fc93c200ad73ab30.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/df2ef697213a120a923e2873e7f397d1.png)
 

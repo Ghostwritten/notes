@@ -51,7 +51,7 @@ ArchLinux系统：
 ## 3. 使用方法
 dstat的基本用法就是输入dstat命令，输出如下：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201009222659633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/07bd28b8948f137a44b3960da6e11d1c.png#pic_center)
 
 
 这是默认输出显示的信息：

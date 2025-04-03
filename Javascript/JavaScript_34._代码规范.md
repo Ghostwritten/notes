@@ -1,7 +1,7 @@
 #  JavaScript 34. 代码规范
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8ae10bd99c754dce8058cc11ee9e5bfb.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5b97dab725209cec3f637d6cc9d89811.png)
 
 
 ##  1. 简介

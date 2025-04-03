@@ -30,10 +30,10 @@ Linux 内核开源项目有着为数众多的参与者。 绝大多数的 Linux 
  - **直接记录快照，而非差异比较**
 
 [Git](https://git-scm.com/about) 和其它版本控制系统（包括 Subversion 和近似工具）的主要差别在于 Git 对待数据的方式。 从概念上来说，其它大部分系统以文件变更列表的方式存储信息，这类系统（CVS、Subversion、Perforce、Bazaar 等等） 将它们存储的信息看作是一组基本文件和每个文件随时间逐步累积的差异 （它们通常称作 基于差异（delta-based） 的版本控制）。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d12b5ce45bd940618eab21093db6df38.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e1bc4d47f52cf4524ab61ff946e23fe2.png)
 Figure 4. 存储每个文件与初始版本的差异.
 Git 不按照以上方式对待或保存数据。反之，Git 更像是把数据看作是对小型文件系统的一系列快照。 在 Git 中，每当你提交更新或保存项目状态时，它基本上就会对当时的全部文件创建一个快照并保存这个快照的索引。 为了效率，如果文件没有修改，Git 不再重新存储该文件，而是只保留一个链接指向之前存储的文件。 Git 对待数据更像是一个 快照流。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/84d6920fb09c4b0886d815af1757ac07.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2ad22a04c33c0bc27e1e5d1fc3d6bf4c.png)
 igure 5. 存储项目随时间改变的快照.
 这是 Git 与几乎所有其它版本控制系统的重要区别。 因此 Git 重新考虑了以前每一代版本控制系统延续下来的诸多方面。 Git 更像是一个小型的文件系统，提供了许多以此为基础构建的超强工具，而不只是一个简单的 VCS。 稍后我们在Git 分支讨论 Git 分支管理时，将探究这种方式对待数据所能获得的益处。
 
@@ -72,7 +72,7 @@ Git 中使用这种哈希值的情况很多，你将经常看到这种哈希值�
 
 这会让我们的 Git 项目拥有三个阶段：工作区、暂存区以及 Git 目录。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2cbc5bc2da8949a982a3a67eb6032328.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9c9b0c587cfc1ac358c5ec0210c3ef46.png)
 Figure 6. 工作目录、暂存区域以及 Git 仓库.
 
  - 工作区是对项目的某个版本独立提取出来的内容。 这些从 Git 仓库的压缩数据库中提取出来的文件，放在磁盘上供你使用或修改。

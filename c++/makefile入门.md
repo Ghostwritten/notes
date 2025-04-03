@@ -310,7 +310,7 @@ lib:test.o test1.o test2.o
 
 `GNU make` 中在这些变量中加入字符 "D" 或者 "F" 就形成了一系列变种的自动化变量，这些自动化变量可以对文件的名称进行操作。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d4783a81f02047feb65e9bb150824325.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0cc27a22f185e69ad3488660069cdfd4.png)
 ##  目标文件搜索（VPATH和vpath）
 
 我们之前列举的例子，所有的源文件基本上都是存放在与 Makefile 相同的目录下。只要依赖的文件存在，并且依赖规则没有问题，执行 make命令整个工程就会按照对我们编写规则去编译，最终会重建目标文件。那如果需要的文件是存在于不同的路径下，在编译的时候要去怎么办呢（不改变工程的结构）？这就用到了 Makefile 中为我们提供的目录搜索文件的功能。

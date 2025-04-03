@@ -1,5 +1,5 @@
 
-![](https://img-blog.csdnimg.cn/ff61b5901b10486eb385b2ff7d802a62.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/432ea802a6fe3e61117043adb40ea6f8.png)
 
 
 
@@ -112,7 +112,7 @@ help: Makefile
 我们经常会在 Makefile 命令中集成 shell 脚本，但如果 shell 脚本过于复杂，也会导致 Makefile 内容过多，难以阅读和维护。并且在 Makefile 中集成复杂的 shell 脚本，编写体验也很差。**对于这种情况，可以将复杂的 shell 命令封装在 shell 脚本中，供 Makefile 直接调用，而一些简单的命令则可以直接集成在 Makefile 中**。
 
 所以，最终我推荐的 Makefile 结构如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9efd5b63346b46d9901ec885db44b229.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9a3e3adf1ad2a6005b802b681f206457.png)
 在上面的 Makefile 组织方式中，根目录下的 Makefile 聚合了项目所有的管理功能，这些管理功能通过 Makefile 伪目标的方式实现。同时，还将这些伪目标进行分类，把相同类别的伪目标放在同一个 Makefile 中，这样可以使得 Makefile 更容易维护。对于复杂的命令，则编写成独立的 shell 脚本，并在 Makefile 命令中调用这些 shell 脚本。
 
 举个例子，下面是 IAM 项目的 Makefile 组织结构：

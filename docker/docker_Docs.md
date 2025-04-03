@@ -1,6 +1,6 @@
 ----------------书籍地址：[《Docker Docs》](https://smoothies.com.cn/docker-docs/Overview.html)--------------------------
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/54a2aa9004ba410b981c2163fe2ec8e4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/df72d975ed773e36f83b57bc44ec2897.png)
 
 
 
@@ -61,17 +61,24 @@
  16. [容器应用总是丢包如何分析？](https://ghostwritten.blog.csdn.net/article/details/119419498)【gitbook_updated】【备份】
 
  17. [docker 配置dns](https://ghostwritten.blog.csdn.net/article/details/114979382)【gitbook_updated】【备份】
+ 18. [Docker 代理](https://ghostwritten.blog.csdn.net/article/details/134115905)
 
 
 ### 仓库
  1.  [Docker Registry Overview](https://blog.csdn.net/xixihahalelehehe/article/details/125625184)【gitbook_updated】【备份】
- 2. [Docker Registry 仓库搭建并配置证书](https://ghostwritten.blog.csdn.net/article/details/105926147)【gitbook_updated】【备份】【爱死亡机器人】
- 3. [Docker 部署 registry UI 仓库](https://ghostwritten.blog.csdn.net/article/details/107406198)【gitbook_updated】【备份】
- 4. [Harbor 部署入门指南](https://ghostwritten.blog.csdn.net/article/details/121381151)【gitbook_updated】【备份】
- 5. [centos 7.9 部署 harbor 镜像仓库实践](https://ghostwritten.blog.csdn.net/article/details/127920005)【gitbook_updated】【备份】【爱死亡机器人】
- 6. [Podman 部署私有镜像仓库](https://ghostwritten.blog.csdn.net/article/details/127962045)【gitbook_updated】【备份】【爱死亡机器人】
+ 2. [Centos 7.9 Install Docker Insecure Registry](https://ghostwritten.blog.csdn.net/article/details/134633564)
+ 3. [docker 安装 registry & 仅证书认证](https://ghostwritten.blog.csdn.net/article/details/136256102)
+ 4. [Docker Registry 仓库搭建并配置证书](https://ghostwritten.blog.csdn.net/article/details/105926147)【gitbook_updated】【备份】【爱死亡机器人】
+ 5. [Docker 部署 registry UI 仓库](https://ghostwritten.blog.csdn.net/article/details/107406198)【gitbook_updated】【备份】
+ 6. [Docker 部署高可用 registry & keepalived](https://ghostwritten.blog.csdn.net/article/details/136252109)
+ 7. [别再拉镜像、打包镜像、推送镜像啦，直接搬运镜像仓库最佳姿势](https://ghostwritten.blog.csdn.net/article/details/136328119?spm=1001.2014.3001.5502)
+ 8. [Harbor 部署入门指南](https://ghostwritten.blog.csdn.net/article/details/121381151)【gitbook_updated】【备份】
+ 9. [centos 7.9 部署 harbor 镜像仓库实践](https://ghostwritten.blog.csdn.net/article/details/127920005)【gitbook_updated】【备份】【爱死亡机器人】
+ 10. [Podman 部署私有镜像仓库](https://ghostwritten.blog.csdn.net/article/details/127962045)【gitbook_updated】【备份】【爱死亡机器人】
 
+### 应用
 
+- [容器 ansible 伪装本地 ansible](https://ghostwritten.blog.csdn.net/article/details/135484717)
 ### CI/CD
 
  1. [Docker CI/CD Overiview](https://blog.csdn.net/xixihahalelehehe/article/details/125630059)【gitbook_updated】【备份】

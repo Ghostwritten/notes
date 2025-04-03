@@ -44,7 +44,7 @@ Pod级别的日志，默认是输出到标准输出和标志输入，实际上�
 ###  2.2 节点级别
 Node级别的日志 , 通过配置容器的`log-driver`来进行管理，这种需要配合[logrotare](https://linux.die.net/man/8/logrotate)来进行，日志超过最大限制，自动进行rotate操作。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210630153210590.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0453a8dfe49946494a7826ca98eb16dd.png)
 
 
 默认情况下，如果容器重启，kubelet 会保留被终止的容器日志。 如果 Pod 在工作节点被驱逐，该 Pod 中所有的容器也会被驱逐，包括容器日志。
@@ -68,7 +68,7 @@ Node级别的日志 , 通过配置容器的`log-driver`来进行管理，这种�
 ####  2.3.1 节点代理方式
 节点代理方式，在Node级别进行日志收集。一般使用`DaemonSet`部署在每个Node中。这种方式优点是耗费资源少，因为只需部署在节点，且对应用无侵入。缺点是只适合容器内应用日志必须都是标准输出。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210630154142207.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/512649cbaf1dc968a934f3e718eb5a90.png)
 `logging agent`一般都会以 `DaemonSet` 的方式运行在节点上，然后将宿主机上的容器日志目录挂载进去，最后由 logging-agent 把日志转发出去。举个例子，我们可以通过 Fluentd 项目作为宿主机上的 logging-agent，然后把日志转发到远端的 ElasticSearch 里保存起来供将来进行检索。
 
  - 优点：在于一个节点只需要部署一个 agent，并且不会对应用和 Pod 有任何侵入性。所以，这个方案，在社区里是最常用的一种。
@@ -78,7 +78,7 @@ Node级别的日志 , 通过配置容器的`log-driver`来进行管理，这种�
 也就是在Pod中跟随应用容器起一个日志处理容器，有两种形式：
 
 **一种是直接将应用容器的日志收集并输出到标准输出（叫做Streaming sidecar container），但需要注意的是，这时候，宿主机上实际上会存在两份相同的日志文件：一份是应用自己写入的；另一份则是sidecar的stdout和stderr对应的JSON文件**。这对磁盘是很大的浪费，所以说，除非万不得已或者应用容器完全不可能被修改。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210630154402185.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/27e2b79269d2d0dfefa34a37722b0d3f.png)
 
 ```bash
 apiVersion: v1
@@ -174,7 +174,7 @@ Mon Jan  1 00:00:02 UTC 2001 INFO 2
 
 **就是通过一个 sidecar 容器，直接把应用的日志文件发送到远程存储里面去。也就是相当于把方案一里的 logging agent，放在了应用 Pod 里**。这种方案的架构如下所示：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210630155629152.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f7966cf150606f3d2d653f9e3765fa53.png)
 
 在这种方案里，你的应用还可以直接把日志输出到固定的文件里而不是 stdout，你的 logging-agent 还可以使用 fluentd，后端存储还可以是 ElasticSearch。只不过， fluentd 的输入源，变成了应用的日志文件。一般来说，我们会把 fluentd 的输入源配置保存在一个 ConfigMap 里，如下所示：
  第一个文件包含用来配置 `fluentd` 的 ConfigMap。
@@ -250,7 +250,7 @@ spec:
       name: fluentd-config
 ```
 可以看到，这个 Fluentd 容器使用的输入源，就是通过引用我们前面编写的 ConfigMap 来指定的。这里我用到了 Projected Volume 来把 ConfigMap 挂载到 Pod 里。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021063016022826.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ca8359407d5efd180395c85c62a4b590.png)
 
 **需要注意的是，这种方案虽然部署简单，并且对宿主机非常友好，但是这个 sidecar 容器很可能会消耗较多的资源，甚至拖垮应用容器。并且，由于日志还是没有输出到 stdout 上，所以你通过 kubectl logs 是看不到任何日志输出的**。
 ## 3. 日志位置

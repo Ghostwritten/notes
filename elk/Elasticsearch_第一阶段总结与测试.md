@@ -1,20 +1,20 @@
 
 ## 1. 总结
 ### 1.1 产品与使用场景
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201111170944936.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d53573080ae7be9177a41926dde12dea.png#pic_center)
 ### 1.2  基础概念
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201111171006520.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/50deedc28459ef758f63e4a0e3293ad7.png#pic_center)
 ### 1.3  搜索与聚合
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201111171027466.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0d1c5ca3a6d3dfbe95a6d7a9a6d55b01.png#pic_center)
 ### 1.4  文档CRUD与 Index Mapping
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020111117110477.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d621bf797f46b8cd006cc9f919e84196.png#pic_center)
 ## 2.测试
 ### 2.1 测试1
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201111171208691.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201111171221390.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a88da22d040b334746c040a39ab0403a.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/24f52be3abbae629b0b076ae2037fe7c.png#pic_center)
 ### 2. 测试2
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201111171247934.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201111171256550.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1440218a978e3a92bfcea2e0632554f8.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3a6d240db96defb55378009457f8a6b9.png#pic_center)
 参考资料：
 极客时间：Elasticsearch核心技术与实战
 相关阅读：

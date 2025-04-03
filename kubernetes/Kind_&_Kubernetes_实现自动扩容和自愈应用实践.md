@@ -1,7 +1,7 @@
 # Kind & Kubernetes 自动扩容和自愈
 tags: 实践
 
-![](https://img-blog.csdnimg.cn/b230d0af392541b6a53bcbb52cc51e4a.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/555a4883a34f39bd07c63ca72eafdaf5.png)
 
 
 

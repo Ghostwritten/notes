@@ -1,5 +1,5 @@
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/663db059a15048ceb0c72c405dfca7b1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ac3f9ca1bbf7095b09728a14fa0e73b9.png)
 
 
 
@@ -7,14 +7,14 @@
 
 ##   添加 github credentials
 ###  HTTPS github credentials
-![在这里插入图片描述](https://img-blog.csdnimg.cn/93c2a9903f314b14a3f566cc21460cb3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4d99cbfa817af313bfc59a138db4d15f.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/88d13b894b714170bef5f0df5bf50155.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/42a574d7857e7aade0a62a3f6dc1c5d5.png)
 
 ###  ssh github credentials
 "`Credentials`" -> "`System`" -> "`Global credentials`" -> "`Add Credentials`",在“`kind`”字段下，单击下拉框，选择“`SSH Username with private key`”。提供你的用户名、私钥及密码码如下:
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/12feb422a0e5485991b8dd3ed3e4695b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/03f6fef471d15eedf1fe24deb8954216.png)
 `Passphrase` 通过 github `Settings` > `Developer settings` > `Tokens` 生成。
 
 Private Key 生成。

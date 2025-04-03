@@ -1,6 +1,6 @@
 
 #  docker 资源清理
-![在这里插入图片描述](https://img-blog.csdnimg.cn/21ed48d3bb2446d4ba54bddafa210995.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5621398d8eee079a52a494d7853d22c5.png)
 
 
 

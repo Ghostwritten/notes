@@ -1,6 +1,6 @@
 #  Go 代理加速配置
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b84b526a44c04d36892f09953a30da49.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fa67326692aa598821a5daf4d3d899c8.png)
 
 
 

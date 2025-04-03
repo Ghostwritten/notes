@@ -1,4 +1,4 @@
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201210191350374.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/89e5a95fadb3b6cf7ae09b63d843996d.jpeg#pic_center)
 
 ----
 
@@ -22,7 +22,7 @@ Kustomize 通过以下几种方式解决了上述问题：
 
 
 ### 1.3 架构
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200813002230815.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b41124558d80613a8320d487cfc96fbd.png#pic_center)
 
 ## 2. 术语
 

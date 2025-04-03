@@ -52,12 +52,12 @@ docker run -d -p 9000:9000 --name=portainer \
 ## 3. 访问 Portainer Dashboard
 随着Portainer的运行，现在可以通过UI访问仪表板并管理集群。仪表板运行在Port 9000上，可以通过这个链接访问
 第一个屏幕要求您为admin用户创建一个密码
-![在这里插入图片描述](https://img-blog.csdnimg.cn/98e7aedc653b484e9fc051eb7e118f22.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_15,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/527a0a5bede708e1777186ddeeb75f04.png)
 配置完成后，第二个屏幕将要求您使用定义的密码登录到仪表板。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fcdcb920db414ecfa80a0d1e3521ea10.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_15,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3534daa58e038904f4f9f9bbe7ff401b.png)
 ## 4. 部署模板
 Portainer的众多特性之一是，它可以基于预定义的容器部署服务。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a88a12923bb24a5e8b91036eb262c51f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3dec8559c8390ab21e7f01a08820c4c0.png)
 在这种情况下，您将部署nginx模板。
 
  - 通过“应用模板”页签查看可用的模板。
@@ -70,7 +70,7 @@ Portainer的众多特性之一是，它可以基于预定义的容器部署服�
 ## 5. 管理容器
 将部署一个Nginx实例。使用指示板，您将看到状态并能够控制集群。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20b32d2434024bafbf8a1d4bb8e0f6a1.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/89f8786688eee5bad0ede23e580a2dfd.png)
 
 参考：
 

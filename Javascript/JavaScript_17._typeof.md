@@ -1,7 +1,7 @@
 #  JavaScript 17. typeof
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6160232035a149cf849c64fcb4837476.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dce7cd9bcb2494fffa3674bf8dfae46e.png)
 
 
 ##  1. typeof 操作符

@@ -848,5 +848,5 @@ print(df.append(s,ignore_index = True))
  - [Pandas Tutorial](https://www.w3schools.com/python/pandas/default.asp)
  - [Python Pandas Tutorial (Part 1): Getting Started with Data Analysis - Installation and Loading Data](https://www.youtube.com/watch?v=ZyhVh-qRZPA)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b46b352c96f2405e8e54a29f3cab3d17.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3e680b2f927e14226de89f427204b8b1.gif#pic_center)
 

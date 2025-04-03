@@ -70,13 +70,13 @@ q：退出。
 ```bash
 # iotop
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210713141339678.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cf5c32962c124b00344cc8a52014ebc0.png)
 如果你想检查那个进程实际在做 I/O，那么运行 iotop 命令加上 -o 或者 --only 参数。
 
 ```bash
 # iotop --only
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210713141425853.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ce205a26fba83843fbc31129028b662f.png)
 细节：
 
  - `IO`：它显示每个进程的 I/O 利用率，包含磁盘和交换。

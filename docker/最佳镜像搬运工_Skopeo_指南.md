@@ -1,5 +1,5 @@
 #  最佳镜像搬运工 Skopeo 指南
-![](https://img-blog.csdnimg.cn/52fc503c3735422b9b4a9d5a4111e62c.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/df7a157f708748af650b90acb64bbf3d.png)
 
 
 

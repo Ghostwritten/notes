@@ -1,4 +1,4 @@
-![](https://img-blog.csdnimg.cn/e97409df002549e7bdf2566cea58692b.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/affffead06c83c144cb4de8014219a3c.png)
 
 
 
@@ -17,11 +17,11 @@ curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 helm 的每个[版本](https://github.com/helm/helm/releases)都为各种操作系统提供二进制版本
 
 ```bash
-$ wget https://get.helm.sh/helm-v3.11.0-linux-amd64.tar.gz
-$ tar -xzvf helm-v3.11.0-linux-amd64.tar.gz
-$ cp linux-amd64/helm /usr/local/bin/
-$ helm version
-version.BuildInfo{Version:"v3.11.0", GitCommit:"d14138609b01886f544b2025f5000351c9eb092e", GitTreeState:"clean", GoVersion:"go1.17.5"}
+wget https://get.helm.sh/helm-v3.13.2-linux-amd64.tar.gz
+tar -xzvf helm-v3.13.2-linux-amd64.tar.gz
+cp linux-amd64/helm /usr/local/bin/
+helm version
+rm -rf linux-amd64 helm-v3.13.2-linux-amd64.tar.gz
 ```
 
 

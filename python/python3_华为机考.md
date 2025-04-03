@@ -1,7 +1,7 @@
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/213f306473264f7783b4151875432c1f.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a188afb7781a1b0ca5150e605455f2ed.gif#pic_center)
 
 [华为机试](https://www.nowcoder.com/exam/oj/ta?page=1&tpId=37&type=37)
 

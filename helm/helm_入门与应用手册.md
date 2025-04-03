@@ -1,4 +1,4 @@
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6369c6e450e347e9b946bee0b23c0369.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b7a05c5686133e143ba3a890aae54781.png)
 
 #  Helm Docs
 

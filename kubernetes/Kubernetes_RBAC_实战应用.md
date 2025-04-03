@@ -4,23 +4,23 @@
 
 
 ## 1. 介绍
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425155507898.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/483ea073b627cb137b1908d1b7969547.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425155521747.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425155605770.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425155648425.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6f2986587b5e22f122d294b0ed1cd397.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bb38d286857006a8d42332b4a7865f27.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c9a6d1cd198405a903898c97db6f961d.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425155824676.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425155952760.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425160022491.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425160159374.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425160214887.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425160241563.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/09a2e7b464e9772e7e4c30da3c3a78cc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5c42fb0e2bb4cb04483f97a4fe72b0e3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e386b377b8b2425f02b951b2c6fa6841.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5d69c34e5f145e763dc336676843e642.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7e76cd44fe799f220e8516d6460a052b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dc1dc83593484e1e6742c9c5cb56ff2f.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425160302235.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425160413230.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c164a2a2ce6fd166c3b02b9f237c519b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/aa46de7fb75e2ed673096a2de4f5d5e4.png)
 ## 2. Practice - Role and Rolebinding
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425160515688.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2a9b80090b576f24a9f80eb9631960d8.png)
 
 ```c
 root@master:~/k8slib# k create ns red
@@ -92,7 +92,7 @@ no
 
 ```
 ## 3. Practice - ClusterRole and ClusterRoleBinding
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425161726755.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8e2d33682488cf0d818bb2623321089f.png)
 
 ```c
 root@master:~/k8slib# k create clusterrole deploy-deleter --verb delete --resource deployments
@@ -118,12 +118,12 @@ yes
 
 ```
 ## 4. Accounts and Users
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425162515399.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425162554246.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425162725469.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425162930210.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9dc19f999d43d5a6139010dcd79d7d0d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9e455ac254fef781d53b3cbed6714784.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4658b2ddc8b41f5bc6f82e5e0a1c9ebe.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a9825f17cf980c8a4bcf0e2b1da95e63.png)
 ## 5. Practice - CertificateSigningRequests
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425163036665.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c9805878587fde045b64817dbbd6abb9.png)
 
 ```c
 root@master:~/cks/RBAC# openssl genrsa -out jane.key 2048

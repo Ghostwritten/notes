@@ -4,7 +4,7 @@ tags: NetworkPolicy
 
 
 [
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3f7f29fb855943a2b9702efed119b286.png)](https://www.rottentomatoes.com/m/beautiful_mind)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/186cc2d834c590e1844af12e22ed6c99.png)](https://www.rottentomatoes.com/m/beautiful_mind)
 
 *《美丽心灵》是关于20世纪伟大数学家小约翰•福布斯-纳什的人物传记片。*
 
@@ -327,9 +327,9 @@ for pod := range 该Node上的所有Pod {
 
 实际上，iptables 只是一个操作 Linux 内核 `Netfilter` 子系统的“界面”。顾名思义，Netfilter 子系统的作用，就是 Linux 内核里挡在“网卡”和“用户态进程”之间的一道“防火墙”。它们的关系，可以用如下的示意图来表示：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/643a2fa74b4849b7b1bed659eb74b653.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6d698ab894112f4d99a9063b2c4ba4f2.png)
 可以看到，这幅示意图中，IP 包“一进一出”的两条路径上，有几个关键的“检查点”，它们正是 Netfilter 设置“防火墙”的地方。**在 iptables 中，这些“检查点”被称为：链（Chain）**。这是因为这些“检查点”对应的 iptables 规则，是按照定义顺序依次进行匹配的。这些“检查点”的具体工作原理，可以用如下所示的示意图进行描述：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f932bd4af1024cd08acd2e0e0ee9c4d7.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/571fe7d157a5459fd378d49720c5af66.png)
 可以看到，当一个 IP 包通过网卡进入主机之后，它就进入了 `Netfilter` 定义的流入路径（`Input Path`）里。在这个路径中，IP 包要经过路由表路由来决定下一步的去向。而在这次路由之前，Netfilter 设置了一个名叫 `PREROUTING` 的“检查点”。在 **Linux 内核的实现里，所谓“检查点”实际上就是内核网络协议栈代码里的 Hook**（比如，在执行路由判断的代码之前，内核会先调用 PREROUTING 的 Hook）。
 而在经过路由之后，IP 包的去向就分为了两种：
 
@@ -344,7 +344,7 @@ for pod := range 该Node上的所有Pod {
 
 需要注意的是，在有网桥参与的情况下，上述 Netfilter 设置“检查点”的流程，实际上也会出现在链路层（二层），并且会跟我在上面讲述的网络层（三层）的流程有交互。这些链路层的“检查点”对应的操作界面叫作 `ebtables`。所以，准确地说，数据包在 Linux Netfilter 子系统里完整的流动过程，其实应该如下所示:
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/93823ac95e1c4fcf9d48da2c19523a06.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/31b14a31015ddad98bf0bdc3d2a481ba.png)
 以看到，我前面为你讲述的，正是上图中绿色部分，也就是网络层的 iptables 链的工作流程。另外，你应该还能看到，每一个白色的“检查点”上，还有一个绿色的“标签”，比如：raw、nat、filter 等等。在 iptables 里，这些标签叫作：表。比如，同样是 OUTPUT 这个“检查点”，filter Output 和 nat Output 在 iptables 里的语法和参数，就完全不一样，实现的功能也完全不同。所以说，iptables 表的作用，就是在某个具体的“检查点”（比如 Output）上，按顺序执行几个不同的检查动作（比如，先执行 nat，再执行 filter）.
 
 在理解了 iptables 的工作原理之后，我们再回到 NetworkPolicy 上来。这时候，前面由网络插件设置的、负责“拦截”进入 Pod 的请求的三条 iptables 规则，就很容易读懂了：

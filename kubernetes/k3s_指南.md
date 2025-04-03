@@ -1,5 +1,5 @@
 #  k3s 指南
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f7b98c296bf741b88c33f9cb822ce72a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6e7f223839799fe80ddb6fe6ab56363b.png)
 
 
 
@@ -50,8 +50,8 @@ K3s 是一个完全兼容的 Kubernetes 发行版，具有以下增强功能：
 - 内置Helm Charts管理机制
 - 内置L4/L7 LB支持
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9951d2777ae44b459ec66db4eaab934f.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b78381993fb546f096bcc955ccb49ddf.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/46befa9f5eabd1fa0d53c54e9391773c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/82cf4d25e1eeb1dcaae4309c3c7eed42.png)
 
 
 ##  架构
@@ -59,20 +59,20 @@ K3s 是一个完全兼容的 Kubernetes 发行版，具有以下增强功能：
 
 `k3s server`服务器节点定义为运行命令的机器（裸机或虚拟机） 。工作节点定义为运行`k3s agent`命令的机器。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6807380dd2764036be04684703b9719e.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dbf0a706f9b94b35bf02f1d151b27b50.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bc6b8e75cb850762067b122e0613a2af.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b54a73e4f556f12d7de3200587a6b9cd.png)
 
 ##  发展趋势
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e188c5547eb3409eacf8c41db841e506.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c59c873a85c9923387017ee16a28553c.png)
 ##  云边缘
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6e2257c06ebf4f7e80566811cad31bbf.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c66eddb625e8f6cefb7c1676f3da3d42.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a0a08356fad94f2ab68a2ae1e3c8d218.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/68f7eabd385e460a915814dcb38b4b0c.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/eee96fd96cdb4df7b63674f31f46d3b8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e2e5d920b064cce74b809b4edb9e7e04.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c60c6f94ae0e50e8856f35f4180c00d7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2c4cfed73a3837b5704fcf5a4d40bdb6.png)
 
 ##  k3s 周边
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7167ed0b732e4cb8a2dffc9febb95125.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d161a265853951d56a2331e8b37af6c4.png)
 
 
 
@@ -81,14 +81,14 @@ K3s 是一个完全兼容的 Kubernetes 发行版，具有以下增强功能：
 
 在此配置中，每个代理节点都注册到同一个服务器节点。K3s 用户可以通过调用服务器节点上的 K3s API 来操作 Kubernetes 资源。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a2df7a23977d466ea9e843d6373f084b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7ab92a918b10429d1add443a53f88ed6.png)
 ###  高可用
 单服务器集群可以满足各种用例，但对于 Kubernetes 控制平面的正常运行时间至关重要的环境，您可以在 HA 配置中运行 K3s。一个 HA K3s 集群包括：
 
 - 两个或多个服务于 Kubernetes API 并运行其他控制平面服务的服务器节点
 - 外部数据存储（与单服务器设置中使用的嵌入式 SQLite 数据存储相对）
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a0a12b45934c4ba3b01576a3bd84f218.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/287f7488b67f4d6595ca162f198f0d4d.png)
 
 ##  代理注册
 在高可用服务器配置中，每个节点还必须使用固定的注册地址向 Kubernetes API 注册，如下图所示。
@@ -96,7 +96,7 @@ K3s 是一个完全兼容的 Kubernetes 发行版，具有以下增强功能：
 注册后，代理节点直接与其中一个服务器节点建立连接。
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/409691f40b684d12b12712a76aff95d2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b54f9397c7919629c0e4ac86e2a356f8.png)
 
 代理节点注册到由`k3s agent`进程启动的 `websocket` 连接，连接由作为代理进程一部分运行的客户端负载均衡器维护。
 

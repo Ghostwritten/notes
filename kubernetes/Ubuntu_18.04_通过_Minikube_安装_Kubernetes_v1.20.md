@@ -1,6 +1,6 @@
 #  Ubuntu 18.04 通过 Minikube 安装 Kubernetes v1.20
 tags: kubernetes,部署,minikube
-[![在这里插入图片描述](https://img-blog.csdnimg.cn/a791f04c33564d8ca34f240c443356d4.png)](https://www.rottentomatoes.com/m/forrest_gump)
+[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c3508c1964f301113eedf597f2e43110.png)](https://www.rottentomatoes.com/m/forrest_gump)
 
 *Life was like a box of chocolates, you never know what you're going to get.*
 
@@ -48,7 +48,7 @@ sudo apt-get install -y docker.io kubectl kubeadm
 ```
 ## 5. 配置阿里云 Docker 镜像加速器
 这里采用了阿里云的镜像加速器（需要阿里云账号进行登录），地址：阿里云 -> 容器镜像服务 -> 镜像工具 -> 镜像加速器
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9a422fac211d4e33a34549010671fcac.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a9754d05acb0df5d07e10bf1873eb6f8.png)
 
 
 ```bash

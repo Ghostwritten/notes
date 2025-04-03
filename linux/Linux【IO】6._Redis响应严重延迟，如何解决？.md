@@ -34,7 +34,7 @@ redis 是最常用的键值存储系统之一，常用作数据库、高速缓�
 由于应用比较多，为了方便你运行，我把它们打包成了两个 Docker 镜像，并推送到了 [Github](https://github.com/feiskyer/linux-perf-examples/tree/master/redis-slow) 上。这样你就只需要运行几条命令，就可以启动了。
 
 今天的案例需要两台虚拟机，其中一台用作案例分析的目标机器，运行 Flask 应用，它的 IP 地址是 192.168.0.10；而另一台作为客户端，请求缓存查询接口。我画了一张图来表示它们的关系。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210719152906631.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0bf93e7727010d706f9900581c288cbe.png)
 首先，我们在第一个终端中，执行下面的命令，运行本次案例要分析的目标应用。正常情况下，你应该可以看到下面的输出：
 
 ```bash

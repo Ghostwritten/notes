@@ -3,7 +3,7 @@
 
 ----
 ## 1. 为啥需要 HTTPS
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210311162423315.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/376a042fb32bd858a6c0d6b69020b1fb.png)
 ## 2. 配置 Elasticsearch for HTTPS
 
 ```bash
@@ -51,7 +51,7 @@ elasticsearch.ssl.verificationMode: certificate
 [elastic@slave1 kibana-7.3.1-linux-x86_64]$ ./bin/kibana
 ```
 测试访问ES集群
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210311165941651.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1c8279623c2ac5cffb39abaa15755e95.png)
 ## 4. 配置使用 HTTPS 访问 Kibana
 
 ```bash
@@ -78,5 +78,5 @@ server.ssl.key: config/certs/ca.key
 
 ```
 访问[https://192.168.211.61:6501](https://192.168.211.61:6501)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210311171614527.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e87ff40e60c1c995c8abf23dbbe8de4f.png)
 

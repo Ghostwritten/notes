@@ -19,12 +19,12 @@ ElastiicSearch 的内置提供的 API
  - 改变 Mapping ， 增加子字段，使用英文分词器
  - 此时尝试对子字段进行查询
  - 虽然有数据已经存在，但是没有返回结果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210308095608396.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3c2b82270e97b1912b0fd2f538340fa6.png)
 
 执行 Update By Query
 尝试对 Multi-Fields 查询查询
 返回结果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210308095802892.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f85573d2a9f4dfae4797db544e6df171.png)
 
 ```bash
 # 写入文档
@@ -86,7 +86,7 @@ POST blogs/_update_by_query
 
  - ES 不允许在原有 Mapping 上对字段类型进行修改
  - 只能创建新的索引，并设定正确的字段类型，在重新导入数据
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210308102033951.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/92c7af95678653ad909c1e6a3bdbd3eb.png)
 
 ```bash
 

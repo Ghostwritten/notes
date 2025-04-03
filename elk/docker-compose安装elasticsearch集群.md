@@ -70,7 +70,7 @@ b291185b6516        elasticsearch:7.2.0      "/usr/local/bin/dock…"   6 minute
 bd4dbad9737c        lmenezes/cerebro:0.9.2   "/opt/cerebro/bin/ce…"   12 minutes ago      Up 4 minutes        0.0.0.0:9000->9000/tcp             cerebro
 
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201031170125723.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a545a27d36465112fb0b50ea7d2bc8a0.png#pic_center)
 ## 2. 创建两个节点的es集群
 
 ```bash
@@ -150,7 +150,7 @@ networks:
 
 访问`http://ip:9000`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201101153644984.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ebc7edad10728c16b921557094f3d07f.png#pic_center)
 
 更多阅读：
 

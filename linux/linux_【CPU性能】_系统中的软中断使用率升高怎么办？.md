@@ -101,7 +101,7 @@ root        16  0.0  0.0      0     0 ?        S    Oct10   0:01 [ksoftirqd/1]
 
 本次案例用到两台虚拟机，我画了一张图来表示它们的关系。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210617164502428.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c580dc41f96796da55a2d07d6b529938.png)
 你可以看到，其中一台虚拟机运行 Nginx ，用来模拟待分析的 Web 服务器；而另一台当作 Web 服务器的客户端，用来给 Nginx 增加压力请求。使用两台虚拟机的目的，是为了相互隔离，避免“交叉感染”。
 
 接下来，我们打开两个终端，分别 SSH 登录到两台机器上，并安装上面提到的这些工具。

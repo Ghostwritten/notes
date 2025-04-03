@@ -10,7 +10,7 @@
  - 从头到尾遍历网络抓取管道
  - 构建一个从 Web 获取工作机会并在控制台中显示相关信息的脚本
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/696b7cb8b9e54b2484475efb321ad33a.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e80e67f6d44e97a591304bfa456cf018.gif#pic_center)
 
 
 ##  1. Beautiful Soup 简介
@@ -398,7 +398,7 @@ with open("index2.html", "r") as f:
 $ python3 get_descendants.py 
 ['h2', 'ul', 'li', 'li', 'li', 'li', 'li', 'p', 'p']
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3d759692646645ff845392e5469fb9f5.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/038de3be1684dfe9380ba3321b19d469.gif#pic_center)
 
 ##  6. find_all( name , attrs , recursive , text , **kwargs )
 
@@ -884,5 +884,5 @@ with open("index2.html", "r") as f:
  - [python：BeautifulSoup 模块使用指南](https://www.jianshu.com/p/2b783f7914c6)
  - [Python BeautifulSoup – find all class](https://www.geeksforgeeks.org/python-beautifulsoup-find-all-class/)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/afe2e363b09947d7ac593663f185ee28.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/215ec1060ed41297804d7b2dde7ba0c8.gif#pic_center)
 

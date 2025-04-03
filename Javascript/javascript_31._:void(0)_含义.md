@@ -2,7 +2,7 @@
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5038ce7b4a734ccbb02c8bb9773066d0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cdb7980e896fe4584c64c55516cae3c7.png)
 
 
 ## 1.  简介
@@ -40,7 +40,7 @@ javascript:void(func())
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e3ca35651dd845feae31c7b734341dc3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6559d69e0d07b8e77d033778e055c775.png)
 ## 3. 实例2
 当用户链接时，void(0) 计算为 0，但 Javascript 上没有任何效果。
 
@@ -62,8 +62,8 @@ javascript:void(func())
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bfe5ea488134478e8a3b7fd79640b234.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e3469942b9c743a1928d282f5e33452b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2b1f1a59038c3e15ee1985794f266ea2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d9f8a0a3f69682b406cefa12255d0996.png)
 ## 4. 实例3
 以下实例中参数 a 将返回 `undefined` :
 
@@ -92,7 +92,7 @@ function getValue(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bde0f4b2fbfa40a9ace6275395d051d7.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7fa01bba3382595adcd3b9eea6135ba9.gif#pic_center)
 
 ## 5. href="#"与href="javascript:void(0)"的区别
 `#` 包含了一个位置信息，默认的锚是#top 也就是网页的上端。
@@ -111,7 +111,7 @@ function getValue(){
 <p id="pos">尾部定位点</p>
 ```
 输出
-![在这里插入图片描述](https://img-blog.csdnimg.cn/429258f0ddc2451c8313e5bf33c5874f.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d4460dcd78ece7406fe85214e479fae5.gif#pic_center)
 
 ```bash
 // 阻止链接跳转，URL不会有任何变化

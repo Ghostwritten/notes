@@ -1,5 +1,5 @@
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9cd80d9fea864a029e306ed747da40d9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/88e284eee41f9cf857ff11e32fe48301.png)
 [下载nginx](http://nginx.org/)
 
 ```shell

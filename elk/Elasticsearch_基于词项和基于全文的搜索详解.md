@@ -160,7 +160,7 @@ POST movies/_search
 
  - 索引和搜索时都会进行分词，查询字符串先传递到一个合适的分词器，然后生成一个供查询的词项列表
  - 查询会对每个词项逐个进行底层的查询，再将结果进行合并，并未每个文档生成一个算分
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201113144210801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8a15e008379f3fa68a306f3292c10b60.png#pic_center)
 参考资料：
 极客时间：Elasticsearch核心技术与实战
 相关阅读：

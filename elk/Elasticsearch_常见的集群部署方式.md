@@ -27,7 +27,7 @@
 
 ## 3. 单一职责的节点
 一个节点只承担一个角色
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312101449714.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3c5acaaa528e8383ee22866b1ed0cc17.png)
 ## 4. 单一角色：职责分离的好处
 Dedicated master eligible nodes：负责集群状态（cluster state）的管理
 
@@ -66,17 +66,17 @@ Dedicated ingest nodes: 负责数据处理
 
 ## 7. 基本部署：增减节点，水平扩展
 当磁盘容量无法满足需求时，可以增加数据节点；磁盘读写压力大时，增加数据节点
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312102646110.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/43362d05aed51840f115e33f530d16ef.png)
 
 
 ## 8. 水平扩展：Coordinating Only Node
 当系统中有大量的复杂查询及聚合时候，增加 Coordinating 节点，增加查询的性能
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312102706865.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/311ddecb4b08b5a5bbbd694df862b5dc.png)
 ## 9. 读写分离
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312102726758.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f8b5d8b9ebb46681752c04a48927f1d5.png)
 ## 10. 在集群里部署 Kibana
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021031210281127.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4d4299e920ea6460f1ed7972557d8f74.png)
 ## 11. 异地多活的部署
 集群处在三个数据中心；数据三写；GTM 分发读请求
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312102835358.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7908b992534dfba0737041a85a54a41a.png)
 

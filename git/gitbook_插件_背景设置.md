@@ -27,5 +27,5 @@ book.json配置：
 }
 ```
 ###  1.3 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a26778eaec6349a18a9d387579396a82.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f454dfb6b0849b40709ec6d06205ca2a.png)
 

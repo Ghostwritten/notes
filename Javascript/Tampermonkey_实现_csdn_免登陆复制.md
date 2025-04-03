@@ -4,7 +4,7 @@
 
 1. chrome 添加 [Tampermonkey 插件](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo/related?hl=zh-CN)
 2. 打开管理面板
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f7c17c8af2dc44de837b02a83f7c3f36.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/21de2642d5263c8003bf41bc20920ac9.png)
 
 
 3. 打开 [mdn web 文档](https://developer.mozilla.org/en-US/)   学习 [contenteditable](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)
@@ -22,7 +22,7 @@ codes.forEach(c => {
 });
 ```
 6.Tampermonkey 添加脚本
-![在这里插入图片描述](https://img-blog.csdnimg.cn/09de7b7bfbe44f37a37328e457e8892b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/85ce4dba2c31d7e2ef2f490828056ed4.png)
 ##  编写注释
 匹配URL
 
@@ -32,7 +32,7 @@ codes.forEach(c => {
 
 
 获取图标，在网页按F12，
-![在这里插入图片描述](https://img-blog.csdnimg.cn/14ffc106dfae43a38920903eb6b9fea9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/678d8513a750653da9e69601d1198346.png)
 注释内容：
 
 
@@ -47,10 +47,10 @@ codes.forEach(c => {
 // ==/UserScript==
 ```
 按`CTRL + s`（保存），效果展示
-![在这里插入图片描述](https://img-blog.csdnimg.cn/940c232a961c4137b0278e7a7a2966f1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9d3970348b27461c94cab9dbc71b5246.png)
 ## 编写代码
 代码美化
-![在这里插入图片描述](https://img-blog.csdnimg.cn/65792f6fa18b464f8d61d9436162475a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1757c32fc763e60e2709450ad400e6b6.png)
 最终代码：
 
 ```bash
@@ -76,7 +76,7 @@ codes.forEach(c => {
 
 ##  测试效果
 免登陆复制了
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fc10baf661c843c9b650782aabdaf30a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/18b001b39e30f223fa92047e0147abee.png)
 `WIN + v`（显示复制面板）
 
 参考：

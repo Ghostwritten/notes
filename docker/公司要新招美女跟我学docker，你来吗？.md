@@ -1,6 +1,6 @@
 #  Docker 快速入门
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/566192a1cfc84a339f1f31ff0d84a177.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9b2cb5018821c26a87d10ed8f56bb2c8.jpeg#pic_center)
 
 
 <font color=#FFA500 size=3 face="楷体">"这是一个非常棒的docker学习历程。我把一个国外的docker实践入门教学进行了简略的翻译，比起国内博客学习的总结性文章，它更注重让小白在实战背景下容易理解与感悟，激发萌新自我疏理总结实战演练下的小细节。"</font>

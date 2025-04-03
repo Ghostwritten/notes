@@ -1,4 +1,4 @@
-![](https://img-blog.csdnimg.cn/926789aec5eb4217aa03394d44ff765a.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/265af30d71a448e5d0d469cb7216cde0.png)
 
 
 
@@ -127,7 +127,13 @@ front-proxy-ca          Jul 15, 2033 09:08 UTC   9y
 
 ```
 
+另外还可以i执行该命令查询节点证书是否过期
 
+```bash
+ find / -type f \( -name "*.cert" -o -name "*.crt" \) -print 2>/dev/null | egrep -iv 'ca.crt$|ca-bundle.crt$|kubelet\/pods|var\/lib\/containerd|run\/containerd|backup' | xargs -L 1 -t -i bash -c 'openssl x509 -noout -text -in {}|grep After'
+```
+
+- [Replace vSphere with Tanzu Guest Cluster Certificates (95425)](https://kb.vmware.com/s/article/95425)
 
 ## 2. 证书过期临近更新操作
 

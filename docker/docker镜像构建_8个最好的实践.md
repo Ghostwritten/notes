@@ -13,62 +13,62 @@
 ---
 ## 1. 如何选择base image
 假如我构建一个node.js
-![在这里插入图片描述](https://img-blog.csdnimg.cn/74dcf334c3fb4cdaa9844ae03c9a007f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/63e53d334c47418f3fc7ff7ac19ab72f.png)
 ## 2. 如何使用latest tag
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b709c66e477f4ab6899caacb108e8733.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1d015dd9635120b3e5c94ad7f4f8dd0e.png)
 ##  3. 基于不同的操作镜像特性
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8eafa0ffb4884b69ac5ad7cbafb5da52.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/84f2f84b3ac04f5787769e36de0f7e58.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d2edd9a73b8647dcac8d81ff1146a8c7.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6b88c65d2f774e7eb3574499b88e1289.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/27f6da126bb74b52bdbc99dc3141f45a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1ad998762780dcdce90565ca5fda1441.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3dde30298d32231e4997c13993520e4d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ec5cee559f095b1d89cebe432732cea0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/105203d8f28e5ae8a7bf492f86df2dc7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/19be11769ac4f199404b4dd76d5ba4e6.png)
 ##  4. 如何优化的镜像层的缓存
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d7f8fdf75a3d40cf9561c92c6a4267f6.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3d89bd273f3b889f69c25cdf9abddc5b.png)
 镜像层的缓存在哪查看
 dockerhub
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e09a7b30770b448f93a997aa23aebf2d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ceefaedfe93dc8c009fbbb67017921b6.png)
 构建的时候
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5aa029e096e5486988b6094533331ccd.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ca5dd516bbe4e7c4d6d95579e075fbf8.png)
 docker history 命令
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1ccd2fdfae8b4be9b631d65e3e0f618a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d2b49611f00e2143dec0f8e4101b5537.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/37c7d974d9e24ee9a5cc071ce7e2734d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4cf982b2fe1743aba7f459610a495bdb.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/337e6ba50db8beae30cbd8978ee2c47e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f12c270452a4024b7e569cb787db1952.png)
 
 如何利用好缓存关键在于我们要重用在没有修改的地方不需要重新构建。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f97d4901d2964e0c83b44f87987d0d20.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/45488e68c6cd0f8640dfd5d12de6e9e9.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/adab20219ebb46b6a92e8893c27bbb6d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a00515b82da1495733cbd50daae66ad4.png)
 docker build构建的时候可以看到缓存的command层
-![在这里插入图片描述](https://img-blog.csdnimg.cn/858321a14bc64686919d4f3fbe06f66a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5ea5ab9839a2bc5ce66dd397accb1fc7.png)
 
 ##  5 .dockerignore丢弃一些垃圾文件
 当我们构建镜像的时候我们不需要项目的所有内容，来运行我们内部的应用程序，像目标或构建文件夹这样的自动生成的文件夹，我们不需要自述文件，因此，docker ignore文件是非常有必要的，
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3d4891926d0a4df184f1aacfd72e94c2.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3fdb1977f24e4ebc90a37f6cdf4d88be.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f935e7298535202b2516d64c90a75ff6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e97f1e64091db7ec420fd69fe5f8db6e.png)
 ## 6. 多阶段构建（Multi-Stage Builds）
 在运行容器的时候不需要测试依赖项、临时文件、开发环境工具、构建工具。但我们docker构建的时候却需要它们。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bd1a1eb140634693b3fedc606d4cc5f2.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dd9d390be8e6e3088d184c7728143525.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7fe2158e913f4716821cc1d545ee1efc.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/28cd652a71e84691b9a05521fdc9a872.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cac5289c295a4b628d19fae1e75c15f2.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ec25facf376e7ffdeca8314f8e812b66.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8c026a24dfcc7f258de43150cfcea339.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5aaba7984801311041e473e40b64631e.png)
 我们分成build和stage两个阶段
 build阶段是在以maven为base image并且取名为build的镜像构建打包
 stage阶段是在以tomcat为base image的镜像拷贝build镜像里生成新的包，并运行应用程序，第一阶段的依赖工具被丢弃。
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9f8b9e641bed4f28a7cf280bf9695a68.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0062fa4f21c0b78f6c8da87f1f1cf4f0.png)
 
 ##  7. 使用最小权限的用户
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b7175bcf32524a7cb1d365e9e43ca7c1.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/506b9f37aab1aed598544151cd8b81d5.png)
 有的镜像中已经捆绑了一个默认的专用用户，例如node:10-alpine中有node用户。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0fca548fa6234cb6997b486442622d93.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/002ad137ef385e55796a71c046773340.png)
 ## 8. 构建镜像时要扫描安全漏洞
 docker login 登陆仓库
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0a873c3a475646d39945d93c1a4fd5e1.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9691cc79d0afd65328d3064e24605c50.png)
 docker scan参数：
 
 ```bash
@@ -102,7 +102,7 @@ $ docker scan --json --group-issues myapp:1.0
 #显示指定级别的漏洞，只有高于此级别的漏洞才会显示出来
 $ docker scan --severity=medium  myapp:1.0
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dae84a539f3045c7bf7caf14e9ffd1c3.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b7cb6727ef1d488d80a87a1d353d8127.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f2cce91309eb47f4806e08d3b2647634.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f3b7babd83f4d52f6b72254b1f143579.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/88440cd1cd1cdc5d1fdc79d062d01068.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2e156b93f2d3c67cb7e95fd38c03ac86.png)
 

@@ -3,7 +3,7 @@ tags: prometheus
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a7fda7fd4eda4bc9a09dacd3c2aa031e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3e1686353c119a6e8b1b0a3e14a0c235.png)
 
 
 ## 1. 背景
@@ -62,7 +62,7 @@ Prometheus生态系统由多个组件组成，它们中的一些是可选的。�
  - `其他辅助性工具`：多种导出工具，可以支持Prometheus存储数据转化为HAProxy、StatsD、Graphite等工具所需要的数据存储格式。
 
 ## 5 架构
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020080717503311.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ba6d7729c4e145caee6ef750def725b2.png)
 如上图，Prometheus主要由以下部分组成：
 
  - Prometheus Server：用于抓取和存储时间序列化数据
@@ -304,7 +304,7 @@ prometheus      NodePort    10.101.255.236   <none>        9090:32584/TCP   42s
  http://<主机地址>:32583
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7c483df8bca745b493345de56fa94be2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f272bb245e0a97f823c09507e93b5b56.png)
 
 
 

@@ -28,7 +28,7 @@
 
 今天，源代码并不是版本控制系统中管理的唯一内容。为了充分利用云资源，基础设施作为代码(IaC)的原则开始流行起来。您可以在文件中描述基础设施，并使用云供应商的API来设置基础设施，而不是手动安装基础设施。这允许开发人员更多地参与基础设施的设置。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ff0167a7c7bc40e393b119976b71573a.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d2f42384f16b14855cbcb5764d245f77.gif#pic_center)
 
 
 ## 4. CI / CD

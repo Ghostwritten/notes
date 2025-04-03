@@ -34,7 +34,7 @@
    （4）非权威答案：在缓存中查询的结果。
   7. DNS的监听端口：tcp的53号端口，udp的53号端口。
 ## 3. DNS解析原理
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200606230118931.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/96a9eefb847a1099110aa23b5b2e89cd.png)
  
 
 （1）当用户在浏览器中输入www.qq.com域名访问该网站时，操作系统会先检查自己本地的hosts文件是否有这个网址映射关系，如果有，就先调用这个IP地址映射，完成域名解析。 
@@ -128,7 +128,7 @@ options {
 
 ### 6.4 修改区域文件/etc/named.rfc1912.zones
 配置文件说明：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200606231443103.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9d59d3bc9b39a5ca798fbfdbb0dc0d41.png)
  
 
 ```bash
@@ -165,7 +165,7 @@ $ cp -a named.loopback named.fan
  
 ### 6.5 修改上面的正向解析文件和反向解析文件
 解析文件named.*的说明：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/202006062321571.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d18e27782a3f7f62baa8e6030621c072.png)
  
 正向解析文件named.zheng的修改
 

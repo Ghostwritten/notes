@@ -75,6 +75,6 @@ print(x, "is my favorite fruit.")
 0000banana is my favorite fruit.
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7edff606c32b472480d5bb2b553ce3c5.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4c96ed3b8dc4bcb7c121476859f9ff62.gif#pic_center)
 
 

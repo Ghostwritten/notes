@@ -1,6 +1,6 @@
 # Linux Command tree 树状图
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c852b4a42628403e9f1671ddb1992c14.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b16450470a9be287540f20999079aad2.png)
 
 
 

@@ -1,7 +1,7 @@
 #  JavaScript 24. 表单
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/adaa8c8d87a8452495952a1ca0bcde50.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1b51b67527d7fd1276b2e33f9c1d6ead.png)
 
 
 ##  1. JavaScript 表单验证
@@ -54,7 +54,7 @@ onsubmit="return validateForm()" method="post">
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f78b2bead5234ddb9868d5c170bea9e5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0443421d44a43550e8fce61e1b518645.png)
 
 
 
@@ -100,8 +100,8 @@ function myFunction() {
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/22a7b99cd91d4ec7a8f2e7cf154d39be.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/513a869527ea4b0088e06488e9419c4a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8860f96ddd4a0b7e3d44f3a3df590074.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2b569526e363c5b31fc3a23ce191234e.png)
 ## 3. HTML 表单自动验证
 HTML 表单验证也可以通过浏览器来自动完成。
 
@@ -126,8 +126,8 @@ HTML 表单验证也可以通过浏览器来自动完成。
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/240c6ae1c00e44b79b745c5350dc83c1.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/da44afec9c654e6a9993ddd8b36dea67.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3602316f5c21ba5c2c17d5f089284492.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ff7f926958af92263efee548fe068f5f.png)
 
 > Internet Explorer 9 及更早 IE 浏览器不支持表单自动验证。
 
@@ -221,6 +221,6 @@ Email: <input type="text" name="email">
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4ca336a5d3d748d9835bcc4907229d61.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/56e8e7b4f64e4b6aa33a7af025a74b1e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c366fa8cee20d240fd671763e2147fee.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b81b62c11cf98b71b61d17f7f77f1332.png)
 

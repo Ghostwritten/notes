@@ -36,7 +36,7 @@ Domain-/Application-Specific特定的知识
  - Self-heal
 
 数据库常用维护任务
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2225cf1a7cfb42ed84568618046d36a1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/18375afc83f9e73e79d650a24a2d1299.png)
 与OpenShift互动
 Operators 利用自定义资源定义(crd)
 
@@ -61,11 +61,11 @@ Domain-specific knowledge
  =
 Operator
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/315ddb2a02ba4347b05a5ec123ebdefa.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/28f245c4bc419cab05d12dc897adcf92.png)
 [https://github.com/operator-framework](https://github.com/operator-framework)
 
 ##  3. Operator Components
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2dc2f9435e0e4fd8bc3041b54584b61c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e3b17453ba7edac926c3e5dd07c3d255.png)
 
  - Operator Deletion
  - Custom Resource Creation Using an Operator

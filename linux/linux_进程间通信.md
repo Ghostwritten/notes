@@ -72,12 +72,12 @@ int pipe(int fd[2]);      //成功返回0，出错返回-1
 经由参数fd返回两个文件描述符：fd[0]为读而打开，fd[1]为写而打开。
 
 #### 3、 下图展示了父子进程之间的管道通信关系：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200325204853594.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c0ce0cd177c8f0bd71f883a044a345fc.png)
 父进程的fd[1]端的输出通过管道可以连接到子进程的fd[0]端，从而实现通信。
 fork之后做什么取决于我们所需要的数据流方向。
 例如对于父进程到子进程管道，父进程关闭管道的fd[0]端，子进程关闭fd[1]端，就形成了一条单工的通信方式，只能由父进程发送至子进程：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200325204912507.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3000a81cecbd2bd9c819f95cc7887e9e.png)
 常见的Linux命令 `"|"` 其实就是匿名管道，表示把一个进程的输出传输到另外一个进程，如：
 
 ```bash
@@ -111,7 +111,7 @@ int mkfifoat(int fd, const char *path, mode_t mode);    //成功返回0，失败
 FIFO可以用于复制一系列shell命令中的输出流。这就防止了将数据写向中间磁盘文件。这类似于使用管道（|）来避免中间磁盘文件。
 
 考虑这样一个过程，它需要对一个经过过滤的输入流进行两次处理。下图展示了这种安排：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020032521295738.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b8a91cfe76b3a231d58faf50f83d38b0.png)
 使用FIFO和UNIX程序tee就可以实现这样的过程而无需使用临时文件（tee程序将其标准输入同时复制到标准输出以及其命令行中命名的文件）：
 
 ```bash
@@ -121,16 +121,16 @@ prog1 < infile | tee fifo1 | prog2
 ```
 
 创建FIFO，在后台启动prog3，从FIFO中读取数据。然后启动prog1，用tee将其输出发送到FIFO和prog2：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200325213038677.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6033a4881f7879998c78559d4a754cc1.png)
 实例2 使用FIFO进行客户进程-服务器进程通信：
 如果有一个服务器进程，它与很多客户进程有关，每个客户进程都可以将其请求写到一个该服务器进程创建的“众所周知”的FIFO中（所有客户进程都知道该FIFO的路径名）。下图展示了这种安排：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200325213131299.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2e799cd3dbdbdfa833d68139c7958589.png)
 这类问题在于服务器进程如何将回答送回各个客户进程。不能使用单个FIFO，因为客户进程不知道该何时去读属于它们自己的相应。
 
 一种解决办法就是：每个客户进程都在其请求中包含自身的进程ID。然后服务器进程为每个客户进程创建一个FIFO，用于回应：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200325213223316.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8f54b0837084f672ec5e649940e529bb.png)
 实例3
  mkfifo <pipename> 命令创建一个命名管道，如：
 
@@ -138,7 +138,7 @@ prog1 < infile | tee fifo1 | prog2
 mkfifo pipe
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200325213309889.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/64d851a84436c1233d639b60bd066621.png)
 
 ## 消息队列
 

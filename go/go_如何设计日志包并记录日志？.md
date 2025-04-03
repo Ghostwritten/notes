@@ -36,14 +36,14 @@
 - Info 级别的日志，可以协助我们 Debug，并记录一些有用的信息，供后期进行分析。
 
 通常一个日志包至少要实现 6 个级别，我给你提供了一张表格，按优先级从低到高排列如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e74b8a11efc54a52b42416209a25d075.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2f758f60f430ed890f704d4073dc68f8.png)
 有些日志包，例如 `logrus`，还支持 `Trace` 日志级别。Trace 级别比 Debug 级别还低，能够打印更细粒度的日志信息。在我看来，Trace 级别不是必须的，你可以根据需要自行选择。打印日志时，一个日志调用其实具有两个属性：
 
 - 输出级别：打印日志时，我们期望日志的输出级别。例如，我们调用 glog.Info("This is info message") 打印一条日志，则输出日志级别为 Info。
 - 开关级别：启动应用程序时，期望哪些输出级别的日志被打印。例如，使用 glog 时 -v=4 ，说明了只有日志级别高于 4 的日志才会被打印。
 
 如果开关级别设置为 L ，只有输出级别 >=L 时，日志才会被打印。例如，开关级别为 Warn，则只会记录 `Warn`、`Error` 、`Panic` 和 `Fatal` 级别的日志。具体的输出关系如下图所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f290482f7933473bb6ed8ea515765a43.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fccc78ae074442a52d0908e91ace866c.png)
 ### 3.3 支持自定义配置
 
 不同的运行环境，需要不同的日志输出配置，例如：开发测试环境为了能够方便地 Debug，需要设置日志级别为 Debug 级别；现网环境为了提高应用程序的性能，则需要设置日志级别为 Info 级别。又比如，现网环境为了方便日志采集，通常会输出 `JSON` 格式的日志；开发测试环境为了方便查看日志，会输出 `TEXT` 格式的日志。所以，我们的日志包需要能够被配置，还要不同环境采用不同的配置。通过配置，可以在不重新编译代码的情况下，改变记录日志的行为。
@@ -76,7 +76,7 @@
 ### 4.2 能够按级别分类输出
 
 为了能够快速定位到需要的日志，一个比较好的做法是将日志按级别分类输出，至少错误级别的日志可以输出到独立的文件中。这样，出现问题时，可以直接查找错误文件定位问题。例如，`glog` 就支持分类输出，如下图所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e9e0faea033640898f181202fd9723ad.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a74622244bb626704638d8c511a0484a.png)
 ### 4.3  支持结构化日志
 结构化日志（Structured Logging），就是使用 JSON 或者其他编码方式使日志结构化，这样可以方便后续使用 `Filebeat`、`Logstash Shipper` 等各种工具，对日志进行采集、过滤、分析和查找。就像下面这个案例，使用 `zap` 进行日志打印：
 
@@ -160,7 +160,7 @@ func main() {
 我们还可能需要从日志中分析某个接口的调用次数、某个用户的请求次数等信息，这就需要我们能够对日志进行处理。一般的做法是将日志投递到 Kafka，数据处理服务消费 Kafka 中保存的日志，从而分析出调用次数等信息。
 
 以上两种场景，分别需要把日志投递到 Elasticsearch、Kafka 等组件，如果我们的日志包支持将日志投递到不同的目的端，那会是一项非常让人期待的功能：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5de6c6515fc64fc48bcfce3a41a1f4c1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/da980c919a098090e695a1f83c0cac9a.png)
 如果日志不支持投递到不同的下游组件，例如 `Elasticsearch`、`Kafka`、`Fluentd`、`Logstash` 等位置，也可以通过 Filebeat 采集磁盘上的日志文件，进而投递到下游组件。
 
 ## 6. 设计日志包时需要关注的点
@@ -254,7 +254,7 @@ Panic 级别的日志在实际开发中很少用，通常只在需要错误堆�
 Fatal 是最高级别的日志，这个级别的日志说明问题已经相当严重，严重到程序无法继续运行，通常是系统级的错误。在开发中也很少使用，除非我们觉得某个错误发生时，整个程序无法继续运行。
 
 这里用一张图来总结下，如何选择 Debug、Info、Warn、Error、Panic、Fatal 这几种日志级别。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7af2c9f05144429b8e1309c60454bf35.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0e8ef934b5dc2d207f31b49e41d3d9a0.png)
 ### 7.3 如何记录日志内容？
 关于如何记录日志内容，我有几条建议：
 - 在记录日志时，不要输出一些敏感信息，例如密码、密钥等。
@@ -284,7 +284,7 @@ Fatal 是最高级别的日志，这个级别的日志说明问题已经相当�
 
 在业界，日志的收集、处理和展示，早已经有了一套十分流行的日志解决方案：EFK（Elasticsearch + Filebeat + Kibana）或者 ELK（Elasticsearch + Logstash + Kibana），EFK 可以理解为 ELK 的演进版，把日志收集组件从 Logstash 替换成了 Filebeat。用 Filebeat 替换 Logstash，主要原因是 Filebeat 更轻量级，占用的资源更少。关于日志处理架构，你可以参考这张图。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ca10903ee0d8402fab2ddf536f6b53e8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e7741c24169f317bcd6cb740f4d9b810.png)
 通过 log 包将日志记录在本地文件中（*.log 文件），再通过 `Shipper` 收集到 `Kafka` 中。Shipper 可以根据需要灵活选择，常见的 Shipper 有 `Logstash Shipper`、`Flume`、`Fluentd`、`Filebeat`。其中 Filebeat 和 Logstash Shipper 用得最多。Shipper 没有直接将日志投递到 Logstash indexer，或者 Elasticsearch，是因为 Kafka 能够支持更大的吞吐量，起到削峰填谷的作用。
 
 Kafka 中的日志消息会被 Logstash indexer 消费，处理后投递到 Elasticsearch 中存储起来。Elasticsearch 是实时全文搜索和分析引擎，提供搜集、分析、存储数据三大功能。Elasticsearch 中存储的日志，可以通过 Kibana 提供的图形界面来展示。Kibana 是一个基于 Web 的图形界面，用于搜索、分析和可视化存储在 Elasticsearch 中的日志数据。

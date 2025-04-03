@@ -2,15 +2,15 @@
 tags: flask
 <!--  catalog: ~flask 快速入门~ -->
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fb9f7bceb87645e1a50dc1a631c535a4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/63917fbbd23f690d56488c1382b913b1.png)
 
 
 
 
 ---
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200621185646962.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200621185702473.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c2626a1e4c237bb90e974073d74a204e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bb0a7c15757b2e86fdd6633be7551e9b.png)
 ## 1. 简介
 模板是一个包含响应文本的文件，其中个包含用站位变量表示的动态部分，其具体值只在请求的上下文中才能知道。
 
@@ -122,7 +122,7 @@ Hello,{{ name|capitalize }}
 ```
 
 Jinja2 变量过滤器
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200717180121882.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7b44d486c7e984b4d4a7e483b0d824e0.png)
 `safe` 过滤器最值得一提。出于安全考虑，默认情况下，`Jinja2` 会把所有变量的值进行转义。比如，如果变量的值为 `<h1>Hello World!</h1>`，Jinja2 会在渲染模板时，将其转义为：`&lt;h1&gt;Hello World!&lt;/h1&gt;`。完整的过滤器列表，请参见[官方文档](https://jinja.palletsprojects.com/en/2.10.x/templates/#builtin-filters)
 
 ### 3.3 控制结构
@@ -318,7 +318,7 @@ $ python app.py
  * Debugger is active!
  * Debugger PIN: 175-682-414
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200717184006610.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cef3434e3fd8fa6d439c15b4caeff3cf.png)
 HTML文件说明：
 
 **模板中使用←是HTML的实体，HTML实体除了用来转义HTML保留符号外，通常会被用来显示不容易通过键盘输入的字符。这里的←会显示为左箭头，另外，©用来显示版权标志。**
@@ -354,7 +354,7 @@ HTML文件说明：
 </html>
 ```
 效果：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020071718554689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5abf615d474f3e6a62d47cfb9e050cb2.png)
 ### 4.3 render_template_string()函数的使用
 
 **app.py**
@@ -400,4 +400,4 @@ if __name__ == "__main__":
     app.run(debug=True)
 ```
 测试结果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200717190615812.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/78dc15913ec2b196571a9c415aff1369.png)

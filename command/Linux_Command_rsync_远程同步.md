@@ -3,7 +3,7 @@
 
 
 ----
-![在这里插入图片描述](https://img-blog.csdnimg.cn/354bb73bca7648a78d9124af56376dc1.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7633dfea202fad342a24a0d2249a0d53.gif#pic_center)
 ## 1. 简介
 rsync命令是一个远程数据同步工具，可通过`LAN/WAN`快速同步多台主机间的文件。rsync使用所谓的“rsync算法”来使本地和远程两个主机之间的文件达到同步，这个算法只传送两个文件的不同部分，而不是每次都整份传送，因此速度相当快。
 ## 2. 语法

@@ -6,7 +6,7 @@ tags: 软件包管理
 
 ---
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6cc06511bf244d3a8e959b975c5d2fee.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/032777a9cefa8b668e719d5e18812e9d.gif#pic_center)
 
 ## 1. 简介
 DNF 命令(Dandified yum) 是基于 RedHat 的系统的传统YUM 包管理器的下一代版本。它是 Fedora 22、CentOS8 和 RHEL8 的默认包管理器。它旨在替代 YUM。它使用 RPM 和libsolv（由 OpenSUSE 维护）进行包管理。

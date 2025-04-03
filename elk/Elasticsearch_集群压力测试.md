@@ -75,11 +75,11 @@ esrally list tracks
 
 ## 7. Benchmark Reports
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210315142821741.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/39e2d0ece02ed4fc447c0a1449875640.png)
 ## 8. 运行一个测试
 [https://esrally.readthedocs.io/en/stable/t...](https://esrally.readthedocs.io/en/stable/tournament.html)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210315142940913.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f51dacac355ff8a30f868b3586f1becb.png)
 ## 9. 什么是压测的流程
 `Pipeline` 指的是压测的一个流程
 

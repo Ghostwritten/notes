@@ -1,7 +1,7 @@
 #  shell 清理日志
 tags: 任务
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dd1f4e4e136c45099a6e76fb6455f149.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e070abbfa1ebeb5c3de9a39911992847.gif#pic_center)
 ## 1
 
  - `clean_messages.sh`

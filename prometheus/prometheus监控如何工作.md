@@ -6,5 +6,5 @@
  6. 使用 Prometheus Monitoring with Docker 和 Kubernetes您还将更好地理解为什么监控您的应用程序/基础设施很重要。
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7f21cceae1f8488c889a2f5b0ed2b28d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e8ace8feb888c296e28c01a024f691fb.png)
 

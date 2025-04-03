@@ -1,10 +1,12 @@
 
 
-##  虚拟机挂载 iso
-![在这里插入图片描述](https://img-blog.csdnimg.cn/61208a5de569462c8bdf88afa77b02e2.png)
 
 
-## 挂载目录
+##  1. 虚拟机挂载 iso
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/be69485a3b76a43f8e9c874c605a3096.png)
+
+
+## 2. 挂载目录
 
 ```bash
 mkdir /mnt/cdrom
@@ -36,7 +38,7 @@ $ vim /etc/fstab
 /dev/sr0 /mnt/cdrom iso9660 defaults 0 0
 ```
 
-##  本地配置 yum
+##  3. 本地配置 yum
 本机配置 yum 源
 ```bash
 [BaseOS]
@@ -51,15 +53,43 @@ baseurl=file:///mnt/cdrom/AppStream
 enabled=1
 gpgcheck=0
 ```
-## 远程配置 yum
+## 4. 远程配置 yum
 
-###  httpd 
+###  4.1 httpd 第一种方法
 
+yum主机配置：
+```bash
+$ yum -y install httpd
+cp /mnt/cdrom/* /var/www/html/
+$ systemctl  restart  httpd
+```
+
+其他节点配置:
+
+```bash
+$ vim /etc/yum.repos.d/yum.repo
+[BaseOS]
+name=BaseOS
+baseurl=http://192.168.23.10:81/BaseOS
+enable=1
+gpgcheck=0
+
+[AppStream]
+name=AppStream
+baseurl=http://192.168.23.10:81/AppStream
+enabled=1
+gpgcheck=0
+
+$ yum repolist --verbose
+```
+
+### 4.2 httpd 第二种方法
+
+yum主机配置：
 ```bash
 $ yum -y install httpd
 
 $ vim /etc/httpd/conf/httpd.conf
-
 
 listen 81
 
@@ -74,23 +104,25 @@ listen 81
 	Require all granted      
 </Directory>
 
-
 $ systemctl  restart  httpd
 $ chcon -R --reference=/var/www  /mnt/cdrom  //调整SELinux属性
 ```
 
-其他节点L:
+其他节点配置:
 
 ```bash
-$ vim /etc/yum.repos.d/rh7dvd.repo
-[rh7dvd]
-Name=rh7dvd
-Baseurl=http://192.168.4.254/rh7dvd  
-Baseurl=ftp://192.168.4.254/rh7dvd  
-Baseurl=file///mnt
-Enabled=1
-Gpgcheck=0
-```
+$ vim /etc/yum.repos.d/yum.repo
+[BaseOS]
+name=BaseOS
+baseurl=http://192.168.23.10:81/BaseOS
+enable=1
+gpgcheck=0
 
-### nginx
+[AppStream]
+name=AppStream
+baseurl=http://192.168.23.10:81/AppStream
+enabled=1
+gpgcheck=0
+```
+### 3. nginx
 

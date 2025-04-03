@@ -35,7 +35,7 @@
 ##  4. 容器基础
 与普遍的看法相反，容器技术比人们预期的要古老得多。现代容器技术的最早祖先之一是`chroot`命令，它于1979年在Version 7 Unix中引入。chroot命令可用于将进程与根文件系统隔离开来，并基本上将文件从进程中“隐藏”起来，并模拟一个新的根目录。隔离环境是所谓的chroot监狱，在这种环境中，进程无法访问文件，但文件仍然存在于系统中。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fd2667c19a654de7a955a1f6e03ddb20.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c9ee23179e2c1119066ab93d985c02d9.png)
 **可以在文件系统的不同位置创建Chroot目录**
 
 虽然chroot是一项相当古老的技术，但它仍然在一些流行的软件项目中使用。我们今天拥有的容器技术仍然体现了这一概念，但是是一个现代化的版本，并且有很多特性。
@@ -56,7 +56,7 @@ Docker于2013年推出，成为building and running containers的代名词。虽
 乍一看，容器似乎与虚拟机非常相似，但是理解它们之间的差异是至关重要的。虽然虚拟机模拟一个完整的机器，包括操作系统和内核，但容器共享主机的内核，正如所述，它们只是独立的进程。
 虚拟机会带来一些开销，比如启动时间、大小或运行操作系统的资源使用情况。另一方面，容器实际上是进程，就像您可以在机器上启动的浏览器一样，因此它们启动得更快，占用的空间也更小。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ee5ae54292044affabc2b28727d162da.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ab87205213bc9c7f62c04b8ffea497b3.png)
 **传统部署vs虚拟化部署vs容器部署**
 在许多情况下，这不是使用容器或虚拟机的问题，而是使用这两种技术来从容器的效率中获益，但仍然使用虚拟机的更大隔离带来的安全优势。
 
@@ -81,7 +81,7 @@ Docker重用了所有组件来隔离进程，比如`namespaces`和`cgroup`，但
 Docker容器镜像是一个轻量级的、独立的、可执行的软件包，它包含运行应用程序所需的一切:代码、运行时、系统工具、系统库和设置。
 2015年，[Docker](https://www.docker.com/resources/what-container)使其流行起来的图像格式被捐赠给了新成立的开放容器倡议组织，也被称为 [OCI image-spec](https://github.com/opencontainers/image-spec)，可以在GitHub上找到。映像由文件系统包和元数据组成。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/06e2fd227b1b4c45bd7a6b0ff53f27c0.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1457ccb6eaeb76416bc825c4eccb3c9d.png)
 Container Images
 可以通过从一个名为`Dockerfile`的构建文件中读取说明来构建映像。这些说明几乎与在服务器上安装应用程序时使用的说明相同。下面是一个Dockerfile的例子，它包含了一个Python脚本:
 
@@ -131,7 +131,7 @@ docker pull my-registry.com/my-python-image
 Sysdig有一篇关于[如何避免大量安全问题和构建安全容器映像](https://sysdig.com/blog/dockerfile-best-practices/)的很棒的博客文章。
 一般来说，安全性并不是只能在容器层实现的。这是一个持续的过程，需要随时调整。云本地安全性的4C可以大致说明在使用容器时需要保护哪些层。确保覆盖每一层，因为它有效地保护了内部的一层。Kubernetes文档是理解层的一个很好的起点。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/67927473b2784becb9ed02295fce1338.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1c91ce616698b72cf39d03931f562ba0.png)
 The 4C's of Cloud Native Security, retrieved from the [Kubernetes documentation](https://kubernetes.io/docs/concepts/security/overview/) 
 
 ##  8. 容器编排
@@ -158,7 +158,7 @@ The 4C's of Cloud Native Security, retrieved from the [Kubernetes documentation]
 这使得容器之间的通信非常容易，而系统管理员不需要在主机和容器之间配置复杂的网络和路由。
 大多数覆盖网络还需要处理IP地址管理，如果手动实现，这将是大量的工作。在这种情况下，覆盖网络管理哪个容器获得哪个IP地址，以及流量如何流动以访问各个容器。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7ec0f41953aa4e4484e6c4728959f32a.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/79853f21549219e2f2bc28ba5a0e027a.png)
 大多数现代的容器网络实现都基于[容器网络接口(CNI)](https://github.com/containernetworking/cni)。CNI是一个可以用来编写或配置网络插件的标准，并且可以很容易地在各种容器编排平台上交换不同的插件。
 
 
@@ -180,7 +180,7 @@ The 4C's of Cloud Native Security, retrieved from the [Kubernetes documentation]
 由于网络是微服务和容器如此重要的一部分，因此对于开发人员和管理员来说，网络可能变得非常复杂和不透明。除此之外，当容器彼此通信时，还需要**监视**、**访问控制**或**网络流量加密**等许多功能。
 不必在应用程序中实现所有这些功能，只需启动第二个实现了这些功能的容器。用来管理网络流量的软件叫做代理。这是一个位于客户机和服务器之间的服务器应用程序，可以在网络流量到达服务器之前修改或过滤网络流量。受欢迎的代表是[nginx](https://www.nginx.com/), [haproxy](http://www.haproxy.org/)或[envoy](https://www.envoyproxy.io/)。
 更进一步，服务网格将代理服务器添加到架构中的每个容器中。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b73a535c57e2412697defe78f01441e3.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a77f2659acda527dcf0c16409ea6f566.png)
 从[Istio .io](https://istio.io/v1.10/docs/ops/deployment/architecture/)中检索
 现在可以使用代理来处理服务之间的网络通信。
 让我们以加密为例。如果两个或多个应用程序在彼此通信时应该加密它们的通信，那么就需要添加库、配置和管理数字证书，以证明所涉及的应用程序的身份。这可能是大量的工作，而且如果不特别小心的话，也可能容易出错。
@@ -193,16 +193,16 @@ The 4C's of Cloud Native Security, retrieved from the [Kubernetes documentation]
 ##  12. 容器存储
 从存储的角度来看，容器有一个明显的缺陷:它们是短暂的。要理解其确切含义，我们需要了解当容器从container images开始时发生了什么。
 一般来说，container images是只读的，由不同的层组成，这些层包括您在构建阶段添加的所有内容。这确保每次从映像启动容器时，都能获得相同的行为和功能。您可能可以想象，许多应用程序都需要编写文件。为了允许写入文件，当您从映像启动容器时，会在容器映像的顶部放置一个读写层。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/53f675035c1c4937b827fa778c065918.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/44e7a5f3075d2479abc504076a807750.png)
 容器层，从[Docker文档中检索](https://docs.docker.com/storage/storagedriver/)
 这里的问题是，当容器停止或删除时，这个读写层就会丢失。就像你的电脑在你关闭它的时候就会被删除一样。要持久化数据，您需要将其写入磁盘。
 如果容器需要在主机上持久化数据，可以使用卷来实现这一点。其概念和技术非常简单:不是隔离进程的整个文件系统，而是将驻留在主机上的目录传递到容器文件系统中。如果你认为这会削弱容器的隔离性，你是对的。当使用容器卷时，可以有效地访问主机文件系统。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1e048697f5554e27af7f69424141c948.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/af922e851293154abf3edcf474dfd28c.png)
 数据在同一主机上的两个容器之间共享
 
 当您编排许多容器时，在启动容器的主机上持久化数据可能不是惟一的挑战。通常，数据需要由在不同主机系统上启动的多个容器访问，或者当一个容器在不同主机上启动时，它仍然可以访问它的卷。
 像`Kubernetes`这样的容器编排系统可以帮助缓解这些问题，但总是需要一个连接到主机服务器的健壮存储系统。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/813a4559c8c04efe84e276f7e32f2b4d.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f36f69532b7d0cc1568a05b33143de0c.png)
 存储是通过中央存储系统提供的。服务器A和服务器B上的容器可以共享一个卷来读写数据
 
 为了跟上各种存储实现的不断增长，同样，解决方案是实现一个标准。[容器存储接口(CSI)](https://github.com/container-storage-interface/spec)提供了一个统一的接口，它允许附加不同的存储系统，无论它是云存储还是本地存储。

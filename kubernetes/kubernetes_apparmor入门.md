@@ -4,7 +4,7 @@ tags: apparmor,安全
 
 
 [
-![忠犬八公的故事](https://img-blog.csdnimg.cn/f2454476adb646508beae3729ee60ccc.png)](https://www.rottentomatoes.com/m/hachi_a_dogs_tale)
+![忠犬八公的故事](https://i-blog.csdnimg.cn/blog_migrate/87dcbd707358d25925fe5115242fb380.png)](https://www.rottentomatoes.com/m/hachi_a_dogs_tale)
 
 ## 1. 介绍
 AppArmor 是基于名称的访问控制的 Linux 安全模块实现。AppArmor 将单个程序限制为一组列出的文件和 posix 1003.1e 草案功能。

@@ -10,18 +10,18 @@
  - 不同语言
  - pinyin 字段的搜索
  - 还支持为搜索和索引指定不同的 analyzer
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201103190052914.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c925097f10bfd51f692589e928e93db1.png#pic_center)
 ## 2. Excat values(精词) v.s Full Text（全文本）
  - Excat Values ：包括数字 / 日期 / 具体一个字符串 （例如 “Apple Store”）
 **Elasticsearch 中的 keyword**
  - 全文本，非结构化的文本数据
 **Elasticsearch 中的 text**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201103190229443.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2cdd6c5e9e641790646ee5d05708618e.png#pic_center)
 ## 3. Excat values不需要分词
 Elaticsearch 为每一个字段创建一个倒排索引
 Exact Value 在索引时，不需要做特殊的分词处理
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201103193323356.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c7cd1c5f7382d50d3b4adb657980178f.png#pic_center)
 ## 4. 自定义分词器
 当 Elasticsearch 自带的分词器无法满足时，可以自定义分词器。通过自组合不同的组件实现：
 

@@ -1,6 +1,6 @@
 
 [如何使用 PC 健康检查应用程序](https://support.microsoft.com/en-us/windows/how-to-use-the-pc-health-check-app-9c8abd9b-03ba-4e67-81ef-36f37caa7844)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fab8baeace1b41ec914caf5fa7c8d680.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b6fa4bfc5167a2abe631925eee27a754.png)
 - T460s满足最低要求包括DX12 iGPU和TPM2.0（由芯片组提供，分立芯片为TPM1.2）
 - Microsoft 已确认 Windows 11 将仅支持第 8 代 CPU 及更高版本。因此，这消除了 T470(s) 和更旧的版本。
 

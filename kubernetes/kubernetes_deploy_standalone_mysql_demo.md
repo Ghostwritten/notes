@@ -1,5 +1,5 @@
 
-![](https://img-blog.csdnimg.cn/42002312e7a64b17bc5ed9ab0ddd8c2f.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/19e3147f47a98967a65629e2f454cf6e.png)
 
 
 ## deployment mysql standalone

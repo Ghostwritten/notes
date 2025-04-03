@@ -25,7 +25,7 @@ git remote prune origin
 ```bash
 git clone repolink
 ```
-![](https://img-blog.csdnimg.cn/69207dae53ea4315b5c30dce420b52bf.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/0793781e1da8aac2d30e097fb643ddf0.png)
 - 在一个回购上创建一个分支并在其副本上获取它
 - 从一个回购中删除该分支 
 - 当您在另一个仓库中列出分支时，它不会得到更新。
@@ -35,7 +35,7 @@ git branch
 git push origin HEAD
 git branch -r
 ```
-![](https://img-blog.csdnimg.cn/3f336eb1ebb446f88d13cb18a8294edb.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/17313b5e6eb839bb2cfde4d5c687818e.png)
 使用 `git fetch –prune`： 
 
 如果我们使用 prune 命令删除，该分支将在 2nd repo 中自动更新
@@ -43,7 +43,7 @@ git branch -r
 ```bash
 git fetch --prune
 ```
-![](https://img-blog.csdnimg.cn/7b5af25b6f1f42c09a6f74e0bd6b1c69.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/5a99da4ee2138feccd256f1194703099.png)
 假设在某些情况下您希望`*`只*执行prune并且不获取远程数据
 
 ```bash

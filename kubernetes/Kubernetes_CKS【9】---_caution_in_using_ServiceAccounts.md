@@ -2,12 +2,12 @@
 
 ---
 ## 1. 介绍
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425171138922.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425171429193.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3acf71396bec465ef44e68266020d245.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0fb3ff8711be78fab70618e15ec3ee57.png)
 
 
 ## 2. Practice - Pod uses custom ServiceAccount
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021042517153047.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8b1425e54f2728353620b8305ed021f0.png)
 
 
 
@@ -153,7 +153,7 @@ root@accessor:/run/secrets/kubernetes.io/serviceaccount# curl https://kubernetes
 
 
 ## 3. Practice - Disable ServiceAccount mounting
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425183812650.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c8cbd93139fca84dcc69216921f8e2d0.png)
 参考链接：
 [https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
 
@@ -233,7 +233,7 @@ root@master:~/cks/serviceaccount# k edit pod accessor
 
 
 ## 4. Practice - Limit ServiceAccounts using RBAC
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425184838883.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d01220e9e1eaa6f13fd91aa021460d71.png)
 
 ```bash
 root@master:~/cks/serviceaccount# k get pod
@@ -248,6 +248,6 @@ yes
 ```
 
 总结
-![在这里插入图片描述](https://img-blog.csdnimg.cn/202104251852497.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425185303776.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3ac714fcb33db7b9b8d24919cf9b4259.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fb0dea1a8a1ae7bc4f1e92ebb1d83b5c.png)
 

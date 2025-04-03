@@ -1,7 +1,7 @@
 #  JavaScript 15. 条件语句
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/44e9e6f34c1c43669993e9171164babe.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9b412411d4ce5ff625385c48d1f90a9b.png)
 
 ##  1. 简介
 在 JavaScript 中，我们可使用以下条件语句：
@@ -54,7 +54,7 @@ function myFunction(){
 ```
 
 x 的结果是：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b9277dfdcc83424794356e0d4516a8b5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0c5353aaea5dc36c140b631810b16191.png)
 
 ##  3. if...else 语句
 
@@ -101,7 +101,7 @@ function myFunction(){
 </script>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9cbc5c5cb5cb4863bd6e2c1c4db49968.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/27aef5ecf7c89d9d44d9553dd597696e.png)
 ##  4. if...else if...else 语句
 ### 4.1 语法
 

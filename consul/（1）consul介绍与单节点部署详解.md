@@ -26,9 +26,9 @@ Consul 是 HashiCorp 公司推出的开源工具，用于实现分布式系统�
  - server: 服务端, 保存配置信息, 高可用集群, 在局域网内与本地客户端通讯, 通过广域网与其它数据中心通讯。 每个数据中心的server 数量推荐为 3 个或是 5 个。
 
 Consul 客户端、服务端还支持夸中心的使用，更加提高了它的高可用性。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200510154030725.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1229eaee71ca20580b05509b544bd28c.png)
 Consul 工作原理：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200510154050732.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a2458f3489d3105d1f08ba0ca1b13437.png)
 
 ### 1.4 需要的端口
 |use  |	Default Ports  |
@@ -57,7 +57,7 @@ CentOS Linux 7 (Core) 192.168.1.155
 Consul 不同于 Eureka 需要单独安装，访问Consul 官网下载 Consul 的最新版本，我这里是 consul_1.7.3。
 
 根据不同的系统类型选择不同的安装包，从下图也可以看出 Consul 支持所有主流系统。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200510154443945.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/60cc86090c1becccd8db330be0ae917c.png)
 ### 2.1 linux安装
 
 ```bash
@@ -82,7 +82,7 @@ $ consul agent -dev -ui -client 0.0.0.0
  - -dev: 表示以开发模式运行Consul
 
  http://192.168.1.153:8500
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200510160159194.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a6315a02a27a3cb88e5e7ddb858dd812.png)
 
 **查看当前节点数量**
 ```bash
@@ -206,8 +206,8 @@ $ consul agent -dev -ui -client 0.0.0.0 -config-file /etc/consul.d/web.json -dat
  - `-config-dir`：指定service的配置文件和检查定义所在的位置•通常会指定为"某一个路径/consul.d"（**通常情况下，.d表示一系列配置文件存放的目录**）
  - `-data-dir`：提供一个目录用来存放agent的状态，所有的agent都需要该目录，该目录必须是稳定的，系统重启后都继续存在
  - `-config-file`：明确的指定要加载哪个配置文件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200510225019825.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020051023022844.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0c9db66d6d1a85bc37a94909636e98b7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/90b08672cf219cb1f539d482dd1e9eff.png)
 
 一旦服务注册成功之后，用户就可以通过DNS或HTTP API的方式查询服务信息。默认情况下，所有的服务都可以使用`NAME.service.consul`域名的方式进行访问。
 例如，可以使用`hello.service.consul`域名查询`hello`服务的信息：

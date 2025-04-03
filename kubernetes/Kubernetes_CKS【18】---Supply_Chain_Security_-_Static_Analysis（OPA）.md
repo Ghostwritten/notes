@@ -2,33 +2,33 @@
 
 ---
 ## 1. 介绍
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521103027758.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521103115435.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521103209601.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/71bf125138d525fe786fd6c1b11238bf.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a9ede8e538d2877607284b32d35099ad.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/99dbd9f1ec3de19999b8b62c8f0d80f7.png)
 
 **static analysis CI/CD**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521103350754.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/963a8960accf228da7779a25722f2154.png)
 **manual check**
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521103521209.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521103617298.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521103632553.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cb8e41cf190fa73d5e2eee1337d286c3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ec24fd81402696fee07c42f664867297.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0619e9f272337df7f7d7b333c6828f39.png)
 ##  2. Kubesec
 [Kubesec官网/](https://kubesec.io/)
 github：[https://github.com/shyiko/kubesec](https://github.com/shyiko/kubesec)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521103718806.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521104443432.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5dfd9c5d268853efecda91de5f607941.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7494444e32339f9fb9f8f746d96bdf1d.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521104423263.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/61e246604af32b62eb49cdcb37d89fb2.png)
 退出2格
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521104458954.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521104510199.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7412695bb793019bfea1f1e468c6200b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/47a185617ce61e3cf92af2ce1b0c3ca9.png)
 ##  3. OPA Conftest
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521104642528.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c15b8c3436d702a81b7a118b1cac98ad.png)
 
 ## 4. OPA Conftest for K8s YAML
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521104726938.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ee5e4ed972a57d891d083723d42fe779.png)
 
 ```bash
 root@node1:~/cks/static-analysis/conftest/kubernetes# ls
@@ -173,7 +173,7 @@ FAIL - deploy.yaml - main - Containers must provide app label for pod selectors
 
 
 ## 5. OPA Conftest for Dockerfile
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521110323680.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/72281a194faeb405660fb8149778819f.png)
 
 ```bash
 root@node1:~/cks/static-analysis/conftest/docker# ls 

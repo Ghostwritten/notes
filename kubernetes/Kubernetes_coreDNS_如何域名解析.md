@@ -1,6 +1,6 @@
 #  Kubernetes coreDNS 如何域名解析
 
-![](https://img-blog.csdnimg.cn/7c0130aa4b6f438097e033358a8c578e.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/4a800dd9bf2897e49939d9cf0773c287.png)
 
 
 

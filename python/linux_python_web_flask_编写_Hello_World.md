@@ -2,7 +2,7 @@
 tags: flask
 <!--  catalog: ~flask 编写 Hello World~ -->
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b3321190fb7e4863802a9cea764466e1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/382394ff8a15ad44a10851dc2c84d61a.png)
 
 
 
@@ -110,7 +110,7 @@ def hello_world():
 if __name__ == '__main__':
     app.run()
 ```
-![!\[在这里插入图片描述\](https://img-blog.csdnimg.cn/20200514112507443.png)!\[在这里插入图片描述\](https://img-blog.csdnimg.cn/20200514112506195.png](https://img-blog.csdnimg.cn/20200514112630992.png)
+![!\[在这里插入图片描述\](https://img-blog.csdnimg.cn/20200514112507443.png)!\[在这里插入图片描述\](https://img-blog.csdnimg.cn/20200514112506195.png](https://i-blog.csdnimg.cn/blog_migrate/5ace38466844f60b0c5cbb5f9cf9f1e9.png)
 
 
 更多阅读：

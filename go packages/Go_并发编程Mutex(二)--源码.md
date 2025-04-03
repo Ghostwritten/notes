@@ -10,7 +10,7 @@
 
 “**初版**”的 Mutex 使用一个 `flag` 来表示锁是否被持有，实现比较简单；后来照顾到新来的 goroutine，所以会让新的 goroutine 也尽可能地先获取到锁，这是第二个阶段，我把它叫作“**给新人机会**”；那么，接下来就是第三阶段“**多给些机会**”，照顾新来的和被唤醒的 goroutine；但是这样会带来饥饿问题，所以目前又加入了饥饿的解决方案，也就是第四阶段“**解决饥饿**”。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201021162933813.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/12d80e76a9837abd3823efdd4e3084d9.png#pic_center)
 
 ## 1. 初版的互斥锁
 你可能会想到，可以通过一个 `flag` 变量，标记当前的锁是否被某个 goroutine 持有。如果这个 flag 的值是 1，就代表锁已经被持有，那么，其它竞争的 goroutine 只能等待；如果这个 flag 的值是 0，就可以通过 `CAS`（compare-and-swap，或者 compare-and-set）将这个 flag 设置为 1，标识锁被当前的这个 goroutine 持有了。实际上，Russ Cox 在 2008 年提交的第一版 Mutex 就是这样实现的。
@@ -62,7 +62,7 @@ Mutex 结构体包含两个字段：
 
  - 字段 `key`：是一个 flag，用来标识这个排外锁是否被某个 goroutine 所持有，如果 key 大于等于1，说明这个排外锁已经被持有；
  - 字段 `sema`：是个信号量变量，用来控制等待 `goroutine` 的阻塞休眠和唤醒。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201021164737445.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/af5938a77c0961eb488201c3311757ac.png#pic_center)
 
 调用 Lock 请求锁的时候，通过 `xadd` 方法进行 CAS 操作（第 24 行），xadd 方法通过循环执行 CAS 操作直到成功，保证对 key 加 1 的操作成功完成。如果比较幸运，锁没有被别的 goroutine 持有，那么，Lock 方法成功地将 key 设置为 1，这个 goroutine 就持有了这个锁；如果锁已经被别的 goroutine 持有了，那么，当前的 goroutine 会把 key 加 1，而且还会调用 `semacquire` 方法（第 27 行），使用信号量将自己休眠，等锁释放的时候，信号量会将它唤醒。
 
@@ -142,7 +142,7 @@ Go 开发者在 2011 年 6 月 30 日的 `commit` 中对 `Mutex` 做了一次大
     )
 ```
 虽然 Mutex 结构体还是包含两个字段，但是第一个字段已经改成了 state，它的含义也不一样了。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201021171951158.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/90a36959e02915f80e581eb0288048ed.png#pic_center)
 state 是一个复合型的字段，一个字段包含多个意义，这样可以通过尽可能少的内存来实现互斥锁。**这个字段的第一位（最小的一位）来表示这个锁是否被持有，第二位代表是否有唤醒的 goroutine，剩余的位数代表的是等待此锁的 goroutine 数**。所以，state 这一个字段被分成了三部分，代表三个数据。
 
 请求锁的方法 `Lock` 也变得复杂了。复杂之处不仅仅在于对字段 state 的操作难以理解，而且代码逻辑也变得相当复杂。
@@ -189,7 +189,7 @@ for 循环是不断尝试获取锁，如果获取不到，就通过 `runtime.Sem
 
 请求锁的 goroutine 有两类，一类是新来请求锁的 `goroutine`，另一类是被唤醒的等待请求锁的 goroutine。锁的状态也有两种：加锁和未加锁。我用一张表格，来说明一下 goroutine 不同来源不同状态下的处理逻辑。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201021173751138.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c5c867207cdf01a7f228c313218025e0.png#pic_center)
 刚刚说的都是获取锁，接下来，我们再来看看释放锁。释放锁的 Unlock 方法也有些复杂，我们来看一下。
 
 
@@ -283,7 +283,7 @@ Mutex 不能容忍这种事情发生。所以，2016 年 Go 1.9 中 Mutex 增加
 为了避免代码过多，这里只列出当前的 Mutex 实现。想要理解当前的 Mutex，我们需要好好泡一杯茶，仔细地品一品了。当然，现在的 Mutex 代码已经复杂得接近不可读的状态了，而且代码也非常长，删减后占了几乎三页纸。但是，作为第一个要详细介绍的同步原语，我还是希望能更清楚地剖析 Mutex 的实现，向你展示它的演化和为了一个貌似很小的 feature 不得不将代码变得非常复杂的原因。
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7fb1b6e4f92143cebb8e746bc61777a8.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/08efa39e8961d1279ec55c905e13b9a3.png)
 
 当然，你也可以暂时略过这一段，以后慢慢品，只需要记住，**Mutex 绝不容忍一个 goroutine 被落下，永远没有机会获取锁。不抛弃不放弃是它的宗旨，而且它也尽可能地让等待较长的 goroutine 更有机会获取到锁**。
 

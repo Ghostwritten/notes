@@ -1,5 +1,5 @@
 #  Bash EOF 技巧
-![](https://img-blog.csdnimg.cn/e8fadc34a527477cbbc3d827cdccd9ac.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/57a7f04958e2f2eb54ed5c084e2f6375.png)
 
 
 

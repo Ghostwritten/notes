@@ -1,6 +1,6 @@
 #  python 模块 promethues_client 开发 exporter
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a74399206b294db89a8fbc0dc5478281.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/46998f0ccd64b8b44e59448ef99b9a5f.png)
 
 
 

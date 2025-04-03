@@ -1,7 +1,7 @@
 #  JavaScript 23. 使用误区
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7cf3203498a14793a3806a905951c8b2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/078d2742ea3ba00cc770849b0f5cbed5.png)
 
 
 ## 1. 赋值运算符应用错误
@@ -102,7 +102,7 @@ switch(x) {
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a898349055174ad1ad0d649087986120.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a4dc4f42aa3fe4899602e1399b67d20c.png)
 
 以下实例由于类型不一致不会执行 alert 弹窗：
 
@@ -253,7 +253,7 @@ World!";
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/00604b6a72ef42cf90a75e5794cba962.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4f5a0102fb1ff99410373d4fea27ca7d.png)
 字符串断行需要使用**反斜杠**(\)，如下所示:
 
 ```bash

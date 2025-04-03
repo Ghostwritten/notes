@@ -130,5 +130,5 @@ jekyll build --source _source --destination _deploy
 
  - [https://jekyllrb.com/docs/](https://jekyllrb.com/docs/)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0434d435f34249d580de83195c66b7f5.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/21a6ed38c88a74a8ed49d5bb4f6ca822.gif#pic_center)
 

@@ -4,7 +4,7 @@ tags: OPA,策略
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ca9435bb76cf4bdea2c5cf8055fc9803.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/db5bd7c8360576b656e6a0d154716943.png)
 
 
 
@@ -59,7 +59,7 @@ service/gatekeeper-webhook-service   ClusterIP   10.98.47.59   <none>        443
 
 ## 2. Deny All Policy
 任务
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210516231736609.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cdcc49bdb81e35e70ed4f8cd53b54719.png)
 
 ```c
 root@master:~/cks/opa# k get crd 
@@ -442,7 +442,7 @@ Events:              <none>
 
 
 ## 3. Enforce Namespace Labels
-![在这里插入图片描述](https://img-blog.csdnimg.cn/202105201423110.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a39188d0d5a9c6f89553bf3be98dfb5d.png)
 
 ```c
 root@master:~/cks/opa# vim template_label.yaml 
@@ -675,7 +675,7 @@ namespace/test created
 ```
 	
 ## 4. Enforce Deployment replica count
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210520153714413.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2db83eb5c3816eb6ac0b6d3e37f71efa.png)
 
 ```c
 root@master:~/cks/opa# cat template_replicas.yaml 
@@ -858,10 +858,10 @@ deployment.apps/test created
 
 ```
 ## 5. The Rego 练习
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210520162043625.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8621b0fcebcb7a8075ccec54f8bd805b.png)
 [rego playgroud](https://play.openpolicyagent.org/)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210520162434756.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/057af3c471ea621a45eb5b1e489d84b2.png)
 
 
 参考：

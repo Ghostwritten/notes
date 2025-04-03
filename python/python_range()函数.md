@@ -72,5 +72,5 @@ print(my_var)
 
  - [python 内置函数](https://blog.csdn.net/xixihahalelehehe/article/details/104913051)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bbad393270e04448bc8f1eaa022785eb.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9f94d9e45e37a33297f9fdffe3445b01.gif#pic_center)
 

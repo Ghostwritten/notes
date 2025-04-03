@@ -1,4 +1,4 @@
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1d96e39287444db8a9ad5a8617d7a682.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e751ea77db13408ebf9784fba1dece13.png)
 
 
 
@@ -12,11 +12,11 @@
 基于AI大模型对代码进行语义级翻译，支持多种编程语言互译，准确率高。 
 - 支持多种语言
 支持Python、Java、C++/C、JavaScript、Go等多种语言。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/618ee973eb5243b7b208f32726f9cb9c.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/639951d720ed4de288a380d1f1d790ad.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/76d6372b7953e02248c3295ca1ce7e98.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a68fa8fae9cbdd45c83b6cc77852df88.png)
 
 ###  GitHub Copilot 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a32028d0a20a4952b736b863a03a09d8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9dd766a37923d94b67aea73966b74e06.png)
 
 
 
@@ -35,7 +35,7 @@
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fb36ed3887d745ce9d65dc61621ea3a5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1673b956300266fa45aa7be417ba8b92.png)
 
 
 ## markdown
@@ -47,7 +47,7 @@
 [markdown-pdf](https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf)  扩展将Markdown文件转换为PDF，HTML，PNG或JPEG文件。
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/eadd662250f64bdc9745182e575da831.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/22953e1c4ab6f4524a3f6387f9226939.png)
 
 输出的 pdf 可以自定义 
 
@@ -64,7 +64,7 @@
 
 支持Mac/Windows/Linux！并支持配置目标文件夹。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/68e16c4d4ce1425bb98b6684541557c3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d23924a2afe3b67273b635fd39fa5d1a.png)
 
 将图片保存到当前文档的`img/文件名/`路径下
 
@@ -84,17 +84,19 @@
 
 插件使用说明：[https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/](https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/59a622128a734fdfa59d86638683b501.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cbe5a82e0b108bae712bf6d8af109011.png)
 ###  Markdown All in One
 
 [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) 插件具备所有你需要的Markdown（键盘快捷键，目录，自动预览等）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5bc9b3c985d247a8a4a00a3f53a853b1.png)
+
+command + shift + p ：搜索指定功能
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d0dcb9b98060b01e3cb7755f37b3a69b.png)
 
 markdown 更多参考：
 - [将 VS Code 打造成一个体验舒适的 Markdown 编辑器](https://blog.cxplay.org/works/vscode-to-markdown-editor/#%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85)
 ##  yaml
 ###  yaml
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2200159c48604cc1b380d43d57006aaa.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/295c706c795618bf19fb55b6c70de2f5.png)
 
 ## 笔记 
 
@@ -104,8 +106,8 @@ markdown 更多参考：
 
 Notes.notesLocation: 设置存储位置
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f343b98be74d433e8e3afab822588f43.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c60fefa600664c8e8ee3c7d40f5f8205.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bf89d4c291df51bf66125ba3f8085c49.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9330aaf831a4f8d5063e663dd409d731.png)
 
 ##  自动化
 
@@ -118,29 +120,29 @@ Notes.notesLocation: 设置存储位置
 - 配置保存文件时运行的多个命令
 - 触发命令运行的文件的正则表达式模式匹配
 - 同步和异步支持
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2a5e97a8f4724cbdb8607183274da0c6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1afb77fbf50fc8de3842b233ec8955f4.png)
 
 - [Using VS Code for notes taking](https://dev.to/theagilemonkeys/using-vs-code-for-notes-taking-3eof)
 ## 思维导图
 
 ###  vscode-mindmap
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4ccf0cd7c1ee499eb0426d41f6a51cbd.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ec1c0108de5aad3d135aee1a14353bc8.png)
 
 
 ##  开发
 
 ###  Visual Studio IntelliCode
-![在这里插入图片描述](https://img-blog.csdnimg.cn/350622c9ced84c3fac50fcec7053669f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/25f68cfd3c1ff43a188195b5adeddb72.png)
 
 ###  GitHub Repositories
  [GitHub Repositories](https://marketplace.visualstudio.com/items?itemName=GitHub.remotehub) 插件可以远程打开 github 仓库，浏览十分方便。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2dbc990154944a6590126f1bddc93273.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/37daacb9d3c20e9ef4b1cf04400cebd6.png)
 
 ## 云原生
 
 ###  docker
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/343d905e772b4e6bb1c7ba119ee113b2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/08f6ff6ccc660f3b4716fc9713fcf4b4.png)
 
 
 
@@ -149,13 +151,13 @@ Notes.notesLocation: 设置存储位置
 ###  mysql
 
 [mysql](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-mysql-client2) 插件是VSCode的数据库客户端，支持管理器MySQL/MariaDB、PostgreSQL、SQLite、Redis、ClickHouse、达梦、ElasticSearch，同时作为SSH客户端，让你的生产力发挥到极致！
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ed797c13913f4936b4b81bd808d6c3b2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d98a8a71348dcbe5c4aa4ac8c7a0356d.png)
 
 连接数据库
 
 - 打开数据库资源管理器面板，然后单击+按钮。
 - 选择你的数据库类型，输入连接配置，然后点击连接按钮.
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7bb2d6b6155640d5ad477a9c4ef3c5ed.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8d68521b9320b00d04a27e71a83b2346.png)
 创建两个面板是因为在某些情况下需要同时查看SQL和NoSQL数据，您可以通过长按将面板拖到另一个面板。
 
 管理库表
@@ -164,7 +166,7 @@ Notes.notesLocation: 设置存储位置
 - 单击表格旁边的按钮打开新表格视图。
 - 然后您可以在表视图上进行数据修改。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3ac24c49947248378ce8de7b01a0c74c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6bdea6b6c466b31ca912970335fed303.png)
 
 
 ##  娱乐
@@ -173,7 +175,7 @@ Notes.notesLocation: 设置存储位置
 [vscode-ycy](https://github.com/formulahendry/vscode-ycy) 插件除了每过一小时会自动弹出提醒页面，也可以按 F1, 然后输入 ycy: 打开提醒页面来打开提醒页面。
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3292f8f617de445692baf041332562dd.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/220593610ca476fc6b0fd0b2ba341d27.png)
 
 - [VSocde 中文社区](https://github.com/vscodecc)
 - [《Visual Studio Code 权威指南》](https://github.com/formulahendry/awesome-vscode-cn)

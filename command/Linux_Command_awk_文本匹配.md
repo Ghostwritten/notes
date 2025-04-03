@@ -23,7 +23,7 @@ AWK 工作流程可分为三个部分：
 ```bash
 awk 'BEGIN{ commands } pattern{ commands } END{ commands }'
 ```
-下面的流程图描述出了 AWK 的工作流程：![在这里插入图片描述](https://img-blog.csdnimg.cn/20200424234927558.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+下面的流程图描述出了 AWK 的工作流程：![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4837e8b48d97c17b8a1f2939465e71d2.png)
 
  - 1、通过关键字 BEGIN 执行 BEGIN 块的内容，即 BEGIN 后花括号 {} 的内容。
  - 2、完成 BEGIN 块的执行，开始执行body块。
@@ -539,6 +539,6 @@ array[1,2] = 600
 $ ip=$(kubectl get pod www -o yaml |grep podIP | awk '{split($0,a,":"); print a[2]}'); echo $ip
 10.32.0.6
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e94a6acb70e04d89b39edcc4c295fcea.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c0fef061f95e60f67d4851c88a81b2a4.gif#pic_center)
 
 

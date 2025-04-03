@@ -255,7 +255,7 @@ if __name__ == "__main__":
     main()
 ```
 运行结果如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200713003259381.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e245b68c1784c8c6f3f5d07cecf00736.png)
 可以看到，14 页只花了 2 秒钟就爬完了
 
 下面我们可以使用单线程来爬取，代码基本和上面的一样，加个单线程函数 代码如下:

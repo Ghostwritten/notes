@@ -9,7 +9,7 @@
 
 ---
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/da85ee92628e46319dccd87d806f38cc.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8d1f1794faebdf37b0b3701b4501b51d.png)
 ## 什么是kaniko
 [kaniko](https://github.com/GoogleContainerTools/kaniko#--single-snapshot) 是一种在容器或 [Kubernetes](https://kubernetes.io/) 集群内从 Dockerfile 构建容器镜像的工具。
 
@@ -27,7 +27,7 @@ kaniko 不依赖于 [Docker](https://www.docker.com/) 守护进程，而是完�
 
 ##  工作原理
 kaniko作为一个容器镜像运行，它接受三个参数：一个 Dockerfile ，一个构建上下文以及将镜像推送到的注册表。它在执行程序镜像中提取基本镜像的文件系统。然后，在Dockerfile中执行任何命令，快照用户空间中的文件系统。Kaniko在每个命令后都会将一层已更改的文件附加到基本镜像。最后，执行程序将新镜像推送到指定的注册表。由于Kaniko在执行程序镜像的用户空间中完全执行了这些操作，因此它完全避免了在用户计算机上需要任何特权访问。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/662196e5ebc34e169c80345401c65130.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2f47c4a6e6ee26ca174c770ca51709e7.png)
 
 
 

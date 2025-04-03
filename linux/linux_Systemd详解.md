@@ -21,7 +21,7 @@ Systemd 提供了 服务按需启动 的能力，使得特定的服务只有在�
 ### 1.4 统一管理服务日志
 
 Systemd 是一系列工具的集合， 包括了一个专用的系统日志管理服务：`Journald`。这个服务的设计初衷是克服现有 Syslog 服务的日志内容易伪造和日志格式不统一等缺点，Journald 用 二进制格式 保存所有的日志信息，因而日志内容很难被手工伪造。Journald 还提供了一个 journalctl 命令来查看日志信息，这样就使得不同服务输出的日志具有相同的排版格式， 便于数据的二次处理。
-![Systemd 的 Unit 文件](https://img-blog.csdnimg.cn/2020031316411121.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![Systemd 的 Unit 文件](https://i-blog.csdnimg.cn/blog_migrate/66c989beb3f1c0c49d08d85fb9247f27.png)
 
 ## 2.Systemd Unit
 
@@ -153,7 +153,7 @@ Also：当前 Unit enable/disable 时，同时 enable/disable 的其他 Unit
 Alias：当前 Unit 可用于启动的别名
 ```
 SysV-init 运行级别与 Systemd Target 对应的 Unit 文件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200313170024389.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f6ab63333e5ab4d6ec152580a6247847.png)
 通过 systemctl list-units --type=target 命令可以获取当前正在使用的运行目标
 
 ```powershell

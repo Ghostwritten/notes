@@ -11,7 +11,7 @@
 
  - 假设突然是不会发生的，不会阻塞正在尝试的操作。如果数据在读写中被修改，更新将会失败。应用程序决定如何解决冲突，例如重试更新，使用新的数据，或者将错误报告给用户
  - ES 采用的乐观并发控制
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021030510300027.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a62b27df6c644281be6636a89c911dc2.png)
 ## 2. ES 的乐观并发控制
 ES 中的文档是不可变更的。如果你更新一个文档，会将会文档标记为删除，同时增加一个全新当文档，同时文档的 version 字段加 1
 内部版本控制
@@ -23,7 +23,7 @@ ES 中的文档是不可变更的。如果你更新一个文档，会将会文�
 
  - version + version_type = external
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305105339482.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fa2eff34fa58f6f1c95d19c2561d01d9.png)
 ## 3. demo
 
 ```bash

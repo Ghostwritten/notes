@@ -5,7 +5,7 @@ tags: LimitRange
 
 
 
-[![在这里插入图片描述](https://img-blog.csdnimg.cn/f88a0d8b01114963a5907773602ca5bf.png#pic_center)](https://www.rottentomatoes.com/m/interstellar_2014)
+[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/21b5a59810fee254f7a7778dd0034c60.png#pic_center)](https://www.rottentomatoes.com/m/interstellar_2014)
 *《星际穿越》拍摄花絮*
 
 ##  1. LimitRange 为 namespace 配置默认的内存请求和限制

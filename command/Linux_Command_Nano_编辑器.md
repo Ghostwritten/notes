@@ -36,11 +36,11 @@ nano new_filename
 sudo nano -w /etc/apache2/apache2.conf
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3c8ff82a6283459a879fa2ed504295a6.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c29591cf24082a1274c04f7ff52cf68c.gif#pic_center)
 
 ###  3.2 Ctrl+o 保存文件
 按`Ctrl+o`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b40f0dbdc756481aafc7b105bfeda139.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eddd942007f3f60c6a3b0793da34ee62.gif#pic_center)
 
 ###  3.3 Ctrl+k 剪切 Ctrl+u 粘贴
 
@@ -48,16 +48,16 @@ sudo nano -w /etc/apache2/apache2.conf
 
  - 剪切和粘贴一整行。移动到要剪切的行，然后按`Ctrl+k`。现在该行已移动到剪贴板，要粘贴它，请转到要粘贴的位置，然后按`Ctrl+u`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1ecc4b6796074e03a3d456df67260626.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fbc83702ce0ecd9e979106c89eef3504.gif#pic_center)
 
 
  1. 剪切和粘贴选定的文本。选择要剪切的文本，然后按`Ctrl+k`。现在文本被移动到剪贴板。要粘贴它，请转到要粘贴的位置，然后按`Ctrl+u`。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/334bc3363cf049158247fa5f9f964d8c.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/efcd64df4273451899ead6eed9c134e3.gif#pic_center)
 
 ###  3.4 Ctrl+w 搜索文件中的单词
 按 Ctrl+w,它将询问要搜索的单词。输入单词
 它将搜索单词并将光标放在单词第一次出现的第一个字母上。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c8be300be84e4d62ad25657dec91c7c8.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b906f15b4e38a9bcfd02342888e29cb0.gif#pic_center)
 
 ###  3.5 Ctrl+t 替换
 在 nano 中启用拼写检查。首先，安装拼写检查包。
@@ -71,7 +71,7 @@ sudo apt install spell
 现在它会要求您替换不正确的单词
 在此处输入要替换的单词
 只要你按下回车键
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b44b6da8cd95483ebb93deed4febc42c.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c17476d1d01c7a7043ab858f2831cb2e.gif#pic_center)
 
 ###  3.6 CTRL + X 保存退出
 要退出编辑器，请按CTRL + X。如果有更改，它会询问您是否保存它们。输入Y表示Y es或N表示No，然后按Enter。但如果没有更改，您将立即退出编辑器。

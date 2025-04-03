@@ -1,6 +1,6 @@
 # 构建镜像开源工具 buildah
 tags: images
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ea898d04242948daab46a5770a6b2085.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2965681fd6e60db68ae14d58472adbb3.png)
 
 
 

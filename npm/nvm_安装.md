@@ -4,7 +4,7 @@
 
 ---
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2cc1218834534a1f8f2252ad55f9e625.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0ca98452d57b2a580869db4581af57f7.gif#pic_center)
 
 
 ## 1. nvm、node、npm 区别

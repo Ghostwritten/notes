@@ -1,5 +1,5 @@
 #  Podman 安装
-![在这里插入图片描述](https://img-blog.csdnimg.cn/91054e6110a14acb97c51f040781ae11.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/30975788e3e7b510b7413d90afa92c9d.png)
 
 
 

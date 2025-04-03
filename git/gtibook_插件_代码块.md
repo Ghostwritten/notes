@@ -2,7 +2,7 @@
 
 
 ---
-![在这里插入图片描述](https://img-blog.csdnimg.cn/28301dbce8fc446eb46091097440f9ec.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/588bd514e4ccf729dab2bf821d3897f7.gif#pic_center)
 
 ##  1. code 插件
 [code](https://www.npmjs.com/package/gitbook-plugin-code-pro) 代码添加行号&复制按钮
@@ -32,7 +32,7 @@ book.json配置：
 }
 ```
 ###  1.3 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8a9553603096433ab6ed05c17763d282.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b9cef4b07a2024da642d896510ba41dd.png)
 注意左侧行数编号和右上角的复制按钮
 
 ## 2. copy-code-button 插件
@@ -52,7 +52,7 @@ npm i gitbook-plugin-copy-code-button
 }
 ```
 ###  2.3 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f8f9dc9eec51415fae6581df951f462a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/85bca6ba77ef9b8699ef9cd95256287f.png)
 ##  3. klipse 插件
 [klipse](https://www.npmjs.com/package/gitbook-plugin-klipse) 插件是嵌入类似IDE的功能
 
@@ -74,7 +74,7 @@ npm i gitbook-plugin-klipse
 print [x + 1 for x in range(10)]
 ```
 ###  3.3 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bd19d85715844d6caf6068ad63995856.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ec4f16582bf96654624f98217c420af3.png)
 klipse 目前支持下面的语言：
 
  - javascript: evaluation is done with the javascript function eval and pretty printing of the result is done with pretty-format
@@ -160,31 +160,31 @@ prism-coy.min.css  prism-dark.css  prism-funky.css     prism.min.css        pris
 ```
 
 Okaidia `prismjs/themes/prism-okaidia.css`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4da072b057fc4ea8b42c012e90935fea.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2d500edac8bed00382c985d53db7c5eb.png)
 
 Solarized Light `prismjs/themes/prism-solarizedlight.css`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cf61554724bb4024a677227773a5de29.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4b04e8a3b43f31eaba33eb7fe17bbe36.png)
 
 Tomorrow `prismjs/themes/prism-tomorrow.css`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8e494b61f15f4aa89f1dcee4cdd5689c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1d53f38707b8108eb700fe4e63bd0bf9.png)
 
 Dark `prismjs/themes/prism-dark.css`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7198b062396b4a76bedd168153150e47.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3582d592aa654aa7b29bcd7634f418fc.png)
 
 Coy `prismjs/themes/prism-coy.css`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/94cb31d8711944a6bae30923be834c08.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c30d2a477c651e0fa26a31fb01e71291.png)
 
 #### 4.3.2 Atelierbram Themes
 [https://github.com/atelierbram/syntax-highlighting](https://github.com/atelierbram/syntax-highlighting)
 
 Base16 Ocean Dark `syntax-highlighting/assets/css/prism/prism-base16-ocean.dark.css`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1f3e7eb81dc94311b6db260eaa9fa3f3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2c1221c6fc8164dabd4db27f12b21915.png)
 
 Google Light `syntax-highlighting/assets/css/prism/prism-base16-google.light.css`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/54b7c2489d5e4c32bb94bcda7f0862c4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1ca1278afc6128c0a1b71629a18e8271.png)
 
 Xonokai `syntax-highlighting/assets/css/prism/prism-xonokai.css`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5528b121ac9246818981ddd6db4d17b0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e62457960ae212cd6557c80bfe26d03a.png)
 ##  5. prism-themes 插件
 当使用gitbook-plugin-prism时，[prism-themes](https://github.com/PrismJS/prism-themes) 插件提供了额外的主题。
 

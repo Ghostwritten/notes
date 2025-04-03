@@ -57,7 +57,7 @@ worksheet.insert_image('B5', 'img/1.jpg')    #在B5单元格插入图片
 workbook.close()    #关闭Excel文件
 ```
 输出:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200419164550935.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/40c4c39c4aa28854399270441091b91f.png)
 ## 3. 方法
 ### 3.1 Workbook类
 Workbook类定义：
@@ -119,7 +119,7 @@ worksheet4 = workbook.add_worksheet()                #Sheet4
 workbook.close()    #关闭Excel文件
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020041916534631.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d36e3d10679b484c7111273f98108a44.png)
 ### 3.2 Worksheet类
 
 Worksheet类代表了一个Excel工作表，是XlsxWriter模块操作Excel内容最核心的一个类，例如将数据写入单元格或工作表格式布局等。Worksheet对象不能直接实例化，取而代之的是通过Workbook对象调用`add_worksheet（）`方法来创建。
@@ -178,7 +178,7 @@ worksheet.write(6, 0, None)             # write_blank（）
 workbook.close()    #关闭Excel文件
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200419170703795.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8359afe0d717794ba305e1dcca971891.png)
 
 实例2：循环写入
 
@@ -224,7 +224,7 @@ import xlsxwriter
  workbook.close()
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200419210731969.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d103edf5236fbb9ba18d1051984fe11d.png)
 
 
  #### 3.2.2  `set_row（row，height，cell_format，options）`
@@ -249,7 +249,7 @@ worksheet.set_row(1, None, None, {'hidden': True})   #隐藏第2行单元格
 workbook.close()    #关闭Excel文件
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200419171353874.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/98258e8d121e9d4a7010cd5719bdbba7.png)
 
 #### 3.2.3  `set_column（first_col，last_col，width，cell_format，options）`
 作用为设置一列或多列单元格属性。
@@ -276,7 +276,7 @@ worksheet.set_column('C:D', 20)    #设置C到D列单元格宽度为20像素
 worksheet.set_column('E:G', None, None, {'hidden': 1})    #隐藏E到G列单元格
 workbook.close()    #关闭Excel文件
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200419172652434.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5025b1ae90d5ac930709ad0191677267.png)
 
 
 
@@ -287,7 +287,7 @@ workbook.close()    #关闭Excel文件
  参数image（string类型）为图片路径；
  参数options（dict类型）为可选参数，作用是指定图片的位置、比例、链接URL等信息。
  操作示例如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200419173107778.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b443989736f254611bffd7f58d0b8100.png)
 ### 3.3 Chart类
 
 Chart类实现在XlsxWriter模块中图表组件的基类，支持的图表类型包括面积、条形图、柱形图、折线图、饼图、散点图、股票和雷达等，一个图表对象是通过Workbook（工作簿）的add_chart方法创建，通过{type，’图表类型’}字典参数指定图表的类型，语句如下：
@@ -347,19 +347,19 @@ chart.set_x_axis({
 })
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200419193447328.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bdb868216821a85908a0b7e4ca2f3adf.png)
 #### 3.3.3 `set_size（options）`
 设置图表大小，如chart.set_size（{‘width’：720，’height’：576}），其中width为宽度，height为高度。
 
 #### 3.3.4 `set_title（options）`
 设置图表标题，如chart.set_title（{‘name’：’Year End Results’}）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200419193634744.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/af530355aad5ec226ace97a191deb323.png)
 #### 3.3.5 `set_style(style_id)`
 设置图表样式，style_id为不同数字则代表不同样式，如chart.set_style（37）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200419193805764.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/db2062c46e2d068c855a74e021ba63f1.png)
 #### 3.3.6 `set_table（options）`
 设置X轴为数据表格形式，如`chart.set_table（）`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200419193853674.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3cb6cf8a0b5c849363e79a1ada512f73.png)
 ## 4 实战
 ###  4.1 画线图
 
@@ -405,7 +405,7 @@ worksheet.insert_chart('A10',chart_col,{'x_offset':25,'y_offset':10})   #放置�
 workbook.close()
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200419213324897.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6641f03c735c4c049cc1561537b0786d.png)
 
 ### 4.2 定制自动化业务流量报表周报
 
@@ -518,7 +518,7 @@ workbook.close()    #关闭Excel文档
 
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200419205321924.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9ee25713169ca439e5588837606efefe.png)
 
 参考：
 

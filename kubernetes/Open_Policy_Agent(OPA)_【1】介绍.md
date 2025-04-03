@@ -6,7 +6,7 @@ tags: OPA,策略
 
 
 
-![----](https://img-blog.csdnimg.cn/94bc072d2080413184faf4a1c2df2ab2.png)
+![----](https://i-blog.csdnimg.cn/blog_migrate/eef3757d860cb5e5ad8724a902602b6f.png)
 
 ## 1. OPA 介绍
 开放策略代理（OPA，发音为“ oh-pa”）是一个开放源代码的通用策略引擎，它统一了整个堆栈中的策略执行。OPA提供了一种高级的声明性语言，使您可以将策略指定为代码和简单的API，以减轻软件决策的负担。您可以使用OPA在微服务，Kubernetes，CI / CD管道，API网关等中实施策略。
@@ -17,7 +17,7 @@ OPA 首次进入 `CNCF` 并成为 `sandbox` 级别的项目是在 2018 年， �
 
 
 **透过现象看本质，策略就是一组规则，请求发送到引擎，引擎根据规则来进行决策**。OPA 并不负责具体任务的执行，它仅负责决策，需要决策的请求通过 JSON 的方式传递给 OPA ，在 OPA 决策后，也会将结果以 JSON 的形式返回。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20b25d903a074023b733093e6fbc63f8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/71b1dd112f71996af1ad4eda943dade4.png)
 
 
 ##  2. OPA 解决了哪些问题
@@ -35,14 +35,14 @@ OPA通过评估查询输入以及针对策略和数据来生成策略决策。OP
  10.需要策略控制哪些资源可部署到 Kubernetes 中； 
 
 策略决策不仅限于简单的是/否或允许/拒绝答案。像查询输入一样，您的策略可以生成任意结构化数据作为输出。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bb67bc706e524598ad72c7d53de3519c.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fcc35a5d170ebb45b009767b03319214.png)
 但是对于这些场景或者软件来说，配置它们的策略是需要与该软件进行耦合的，彼此是不统一，不通用的。管理起来也会比较混乱，带来了不小的维护成本。
 
 OPA 的出现可以将各处配置的策略进行统一，极大的**降低了维护成本**。以及将策略与对应的软件/服务进行解耦，方便进行移植/复用。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bb6e1d6149d3406f92ea406d150d0a55.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/98b912bee8598f067d7e5a846e748755.png)
 
 假设您在具有以下系统的组织中工作：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0ae926de00e34e6492d4f81ea2597857.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6a990f1994bcb48158b8c06e8d68a35f.png)
 
 系统中包含三种组件：
 
@@ -99,11 +99,11 @@ OPA 的出现可以将各处配置的策略进行统一，极大的**降低了�
 每个规则都是由头部和主体组成。在 Rego 中，如果规则主体对于某些变量赋值为真，那么我们说规则头为真。可以通过绝对路径引用任何加载到 OPA 中的规则来查询它的值。规则的路径总是：data..（规则生成的所有值都可以通过全局 data 变量进行查询。例如，下方示例中的 `data.example.rules.any_public_networks`
 
 完整规则是将单个值分配给变量的 `if-then` 语句。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/19a6a370896d449caffc2ce320f1c058.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/74c1e0f88bc1b6b8d0a1c90bebfbf069.png)
 部分规则是生成一组值并将该组分配给变量的 `if-then` 语句
-![在这里插入图片描述](https://img-blog.csdnimg.cn/49233207e9d0437ab8c4e16c85dc7a37.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0509f1b05a809b67e9478676a0baa86c.png)
 逻辑或是要在 `Rego` 中定义多个具有相同名称的规则。（查询中将多个表达式连接在一起时，表示的是逻辑 AND）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2edfa8c07a724726b01f1ba307e88b0f.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/22b30e03a8855b654612a2d4a1ffbd48.png)
 
 ## 4. OPA 安装
 本节说明如何直接查询OPA并在自己的计算机上与其交互。

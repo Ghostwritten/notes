@@ -51,7 +51,7 @@ pktgen 在每个 CPU 上启动一个内核线程，并可以通过 `/proc/net/pk
 
 在使用 pktgen 测试网络性能时，需要先给每个内核线程 `kpktgend_X` 以及测试网卡，配置 pktgen 选项，然后再通过 pgctrl 启动测试。以发包测试为例，假设发包机器使用的网卡是 eth0，而目标机器的 IP 地址为 192.168.0.30，MAC 地址为 11:11:11:11:11:11。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ef7b412bbd9d4755b243b3783478fcb2.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9fa85dce9a1809b6e8c5b179cf544cf4.png)
 接下来，就是一个发包测试的示例。
 
 ```bash
@@ -237,7 +237,7 @@ Requests/sec:   9641.31
 Transfer/sec:      7.82MB
 ```
 这里使用 2 个线程、并发 1000 连接，重新测试了 Nginx 的性能。你可以看到，每秒请求数为 9641，吞吐量为 7.82MB，平均延迟为 65ms，比前面 ab 的测试结果要好很多。这也说明，性能工具本身的性能，对性能测试也是至关重要的。不合适的性能工具，并不能准确测出应用程序的最佳性能。当然，wrk 最大的优势，是其内置的 LuaJIT，可以用来实现复杂场景的性能测试。wrk 在调用 Lua 脚本时，可以将 HTTP 请求分为三个阶段，即 setup、running、done，如下图所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/58cb0be77bbc41c1bdd29b4a67604952.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bfb76a7fb7f6177b09107de2bfe7f2ef.png)
 比如，你可以在 setup 阶段，为请求设置认证参数（来自于 [wrk 官方示例](https://github.com/wg/wrk/blob/master/scripts/auth.lua)）
 
 

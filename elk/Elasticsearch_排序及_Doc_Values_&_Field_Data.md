@@ -24,7 +24,7 @@ POST /kibana_sample_data_ecommerce/_search
 }
 ```
 算分为空
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210304110626516.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e78e529e1cb8aed336f651b8064709de.png)
 
 ## 3. 多字段排序
 
@@ -51,7 +51,7 @@ POST /kibana_sample_data_ecommerce/_search
 GET kibana_sample_data_ecommerce/_mapping
 ```
 有相关性算分
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210304110821281.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/153e4cd110fc54b1ba477a9a54c57537.png)
 
 ## 4. 对 text 字段进行排序
 默认会报错，需打开fielddata
@@ -70,7 +70,7 @@ POST /kibana_sample_data_ecommerce/_search
   ]
 }
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210304111201174.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/956cb8bd677d7a9a375cc91032319705.png)
 
 ```bash
 

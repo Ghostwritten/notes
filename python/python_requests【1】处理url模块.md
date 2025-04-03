@@ -145,5 +145,5 @@ if __name__ == '__main__':
  - [realpython Python’s Requests Library (Guide)](https://realpython.com/python-requests/)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ce51ceada46c48a18c72becc2e16c1d2.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e13c43e289ce6c14c9def3ac741e61cf.gif#pic_center)
 

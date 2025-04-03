@@ -35,7 +35,7 @@ Shard Filtering / Write Load Balancer
  - `Index_options` 控制在创建倒排索引时，哪些内容 会被添加到倒排索引中。优化这些设置，一定程度 可以节约 CPU
  - 关闭 `_source`，减少 IO 操作；（适合指标型数据）
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021031511310272.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/32f4dbc3cc742afa36a4ad92a3b65c09.png)
 ## 5. 针对性能的取舍
 
  - 如果需要追求极致的写入速度，可以牺牲数据可靠性及搜索实时性以换取性能
@@ -90,6 +90,6 @@ Segment 没有写入磁盘，即便发生了当机，重启后，数据也能恢
 
 
 ## 11. 一个索引设定的例子
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210315113948413.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bf57097aba2dc5139b793de6ff70e990.png)
 
 

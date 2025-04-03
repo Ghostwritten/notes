@@ -9,7 +9,7 @@
 go client是k8s client中最古老的一个，具有很多特性。Client-go 没有使用Swagger生成器，它使用的是源于k8s项目中的源代码生成工具，这个工具的目的是要生成k8s风格的对象和序列化程序。
 
 该项目是一组包的集合，该包能够满足从REST风格的原语到复杂client的不同的编程需求。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021020310313294.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6c9bea5a8e984ee62e4a6bc62b455831.png)
 `RESTClient`是一个基础包，它使用`api-machinery`库中的类型作为一组REST原语提供对API的访问。作为对RESTClient之上的抽象，`_clientset_`将是你创建k8s client工具的起点。它暴露了公开化的API资源及其对应的序列化。
 
 注意：在 client-go中还包含了如discovery, dynamic, 和 scale这样的包，虽然本次不介绍这些包，但是了解它们的能力还是很重要的。

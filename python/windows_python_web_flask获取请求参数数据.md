@@ -2,13 +2,13 @@
 tags: flask
 <!--  catalog: ~flask 接口获取参数~ -->
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f8078c88020141bb9143de0334af567e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/370d1468a33dbc52a2ab524ff66f760a.png)
 
 
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200621174334172.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/157e8307b0d30c2cc0b8977f60255b32.png)
 
 设置一个路由url
 
@@ -23,13 +23,13 @@ if __name__ == '__main__':
     app.run(host='192.168.1.4')
 ```
 运行结果：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200621175118650.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/09223cc022596fab69b47d9bb6eee89c.png)
 可以看到打印的参数的信息
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200621175234790.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b560991049905c82d7b4b7807e4eeab4.png)
 ### 2. 获取请求中的header
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020062117572149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/943d57d6b2416bb5722a9c2e55ec0a61.png)
 ### 3. 获取请求中的user-Agent
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200621175931199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e5999385004abf20c90ab47e72ef4103.png)
 ### 4. 获取请求中一组json数据
 
 ```python
@@ -56,7 +56,7 @@ In [5]: requests.get(url, data=data)  #发起请求
 Out[5]: <Response [200]>
 ```
 如图，已获取客户端发出请求的数据。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200621180747150.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4440d4df7f550a6c269de405e01ea9e4.png)
 ### 5. 获取请求中的cookies
 
 ```python
@@ -81,7 +81,7 @@ In [8]: requests.get(url, data=data, cookies={"token":"tokenxxx"})
 Out[8]: <Response [200]>
 ```
 如图获取的`cookies`的值
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020062118150471.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d56c8c338816a5dbfd9e7a131220e7d3.png)
 ### 6. 获取请求中的form的值
 修改app.py文件
 ```python
@@ -94,15 +94,15 @@ if __name__ == '__main__':
     app.run(host='192.168.1.4')
 ```
 创建一个静态html文件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200621181900824.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2a0b2ce5da63d515117b80f1250c1f55.png)
 添加内容
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200621182420289.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/26cb0b9f17127026ba2889922cfdc9d6.png)
 重新运行获取表单：
 分别输入userxxx 与123456
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200621182929756.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/14bb492454e6e20db53fe73a46b9b7bc.png)
 如图，我们已经获取表单提交的客户信息。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200621182832839.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/21fc83c3f66765982b78e2d1941bafcf.png)
 
 更多阅读：
  - [linux python web flask 编写 Hello World](https://blog.csdn.net/xixihahalelehehe/article/details/106111115)

@@ -4,11 +4,11 @@
 
 ## 1. 原理
 [Python re 正则表达式](https://docs.python.org/3/library/re.html)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020052100014414.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/27062117e520422e2aacd9859ff30913.png)
 正则表达式的大致匹配过程是：依次拿出表达式和文本中的字符比较，如果每一个字符都能匹配，则匹配成功；一旦有匹配不成功的字符则匹配失败。如果表达式中有量词或边界，这个过程会稍微有一些不同，但也是很好理解的，看下图中的示例以及自己多使用几次就能明白。
 
 ##  2. 语法
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020052100021289.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/14fee623f9ace32fc6516373b99fb7db.png)
 ### 2.1 数量词的贪婪模式与非贪婪模式
 正则表达式通常用于在文本中查找匹配的字符串。Python里数量词默认是贪婪的（在少数语言里也可能是默认非贪婪），总是尝试匹配尽可能多的字符；非贪婪的则相反，总是尝试匹配尽可能少的字符。例如：正则表达式"ab*"如果用于查找"abbbc"，将找到"abbb"。而如果使用非贪婪的数量词"ab*?"，将找到"a"。
 ### 2.2 反斜杠的困扰
@@ -304,5 +304,5 @@ print(mo5.group())
  - [runoob Python 正则表达式](https://www.runoob.com/python/python-reg-expressions.html)
  - [Python Regex: re.search() VS re.findall()](https://www.geeksforgeeks.org/python-regex-re-search-vs-re-findall/)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/15e8e3ddf33f4431861f4f2926e57813.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/73b98450d13cdda7b7e4df9355d6d1d4.gif#pic_center)
 

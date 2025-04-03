@@ -30,5 +30,5 @@ func main() {
 $ go run ping.go
 ```
 浏览器访问：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020042917383850.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/47e10913b849e07201553a5a2e51949f.png)
 

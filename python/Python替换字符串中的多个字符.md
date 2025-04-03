@@ -151,5 +151,5 @@ HI, m nAmE Is MAr. I lIkE EbrAs And lOphOnEs.
 
  - [python 内置函数](https://blog.csdn.net/xixihahalelehehe/article/details/104913051)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/448b18a43f1d42578f093a015cd79cba.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/24b31ac173f842481ba1ac0b918bdda6.gif#pic_center)
 

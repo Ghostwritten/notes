@@ -14,10 +14,10 @@ vSphere支持多种虚拟磁盘格式，以下是一些常见的格式：
 
 如果您需要更高的性能，可以选择“懒惰填充”或“急切填充”格式。如果您需要节省存储空间，则可以选择“Thin Provisioning”格式。而如果您需要对非常规工作负载进行高效存储和检索，则可以选择“SeSparse”格式。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/70f233fe63444eb38910caa44975c931.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/749432c5a16fb5a99fb9fda0e3ef5928.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2ce28280533f416d950402f2e4b2b19d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/398ce83e005541309eaea7ec807a3520.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b907cf63cd7e44fe85150299332c8769.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2e87d0290a154f66b3407eb85dd5c6a8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cf273abaf1215d62ec753cfd696f362c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/48e7f39ab6fd08ccde0a099b15582bba.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ed218047ceac8bc85ce99df0bee7bc7e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e40e54672f6d84eea1a3dd7d4020f111.png)
 

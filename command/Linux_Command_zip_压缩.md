@@ -1,5 +1,5 @@
 #  Linux Command zip 压缩
-![](https://img-blog.csdnimg.cn/0f5e605ef19b48e294135941117e3fa3.gif#pic_center)
+![](https://i-blog.csdnimg.cn/blog_migrate/8654a15d5aebab39ca8768a5a45c3ae8.gif#pic_center)
 
 
 
@@ -115,7 +115,7 @@ zip -dv cp.zip a.c
  3. [Linux Command gzip 压缩](https://blog.csdn.net/xixihahalelehehe/article/details/104724596)
  4. [Linux Command zip 压缩](https://blog.csdn.net/xixihahalelehehe/article/details/125203106)
 
-![](https://img-blog.csdnimg.cn/7e96eec11002402d90ea6a40320b9b1d.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/a80e307359c4a367209c77d420e5f710.png)
 
 
 

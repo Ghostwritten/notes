@@ -1,4 +1,4 @@
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3ef577bddae9457e83a2b14b91d4e04b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fde3d71ef66a3b80c61cd54da2b11353.png)
 
 
 
@@ -69,3 +69,19 @@ windows： `C:\Windows\System32\drivers\etc\hosts`
 ```
 
 访问：`https://gitlab.demo.com`
+
+
+## 6. 配置 ca
+
+### linux 
+```bash
+cp ca-chain-bundle.crt /etc/pki/ca-trust/source/anchors/
+update-ca-trust extract
+curl https://gitlab.bsgchina.com
+trust list|grep bsgchina
+curl https://gitlab.bsgchina.com
+```
+
+### mac 
+
+- [如何在macOS系统安装根证书](https://help.aliyun.com/zh/ssl-certificate/support/install-a-root-certificate-on-macos)

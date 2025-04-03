@@ -2,7 +2,7 @@
 tags: exporters
 <!-- catalog: ~mysqld-exporter~ -->
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bb1bacbcc367426c9814e22294b76a24.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/560715f7a1765bde038e74809b17726f.png)
 
 
 

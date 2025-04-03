@@ -17,7 +17,7 @@ Kube-Bench是一款针对Kubernete的安全检测工具，从本质上来说，K
 
 ## 3. CIS Kubernetes Benchmark支持
 Kube-Bench支持的Kubernete测试规则定义在CIS Kubernetes Benchmark之中：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210615141333238.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/aa62d8230b8eacf3420679c80fed6530.png)
 默认配置下，Kube-Bench将根据目标设备上运行的Kubernete版本来确定要运行的测试集，但请注意，Kube-Bench不会自动检测OpenShift和GKE。
 
 ## 4. 工具下载
@@ -111,7 +111,7 @@ kube-bench --benchmark cis-1.4 run --targets master,node
 kube-bench --benchmark cis-1.5 run --targets master,node,etcd,policies
 ```
 下表中显示的是不同CIS Benchmark版本对应的有效目标：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021061514203112.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/899c2ead78e7c28287ba5ec8a190884b.png)
 ## 7. 实战
 ### 7.1 检查master
 
@@ -326,7 +326,7 @@ on the master node and set the below parameter.
 修改其中一个错误，借助CIS_Kubernetes_Benchmark_v1.6.0.pdf搜索
 链接：[https://pan.baidu.com/s/1C6vQSfDG0Twiy97QousbSQ](%E4%BF%AE%E6%94%B9%E5%85%B6%E4%B8%AD%E4%B8%80%E4%B8%AA%E9%94%99%E8%AF%AF%EF%BC%8C%E5%80%9F%E5%8A%A9CIS_Kubernetes_Benchmark_v1.6.0.pdf%E6%90%9C%E7%B4%A2%20%E9%93%BE%E6%8E%A5%EF%BC%9Ahttps://pan.baidu.com/s/1C6vQSfDG0Twiy97QousbSQ%20%E6%8F%90%E5%8F%96%E7%A0%81%EF%BC%9Ar6vn)
 提取码：r6vn
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210615142303379.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/88008e9620455949b6f2f755932c587f.png)
 
 ```bash
 root@master:~/cks/metadata# useradd etcd

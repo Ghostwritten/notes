@@ -11,7 +11,7 @@
  - `Character Filters` （针对原始文本处理，例如去除 html）
  - `Tokenizer`（按照规则切分为单词）
  - `Token Filter` （将切分的单词进行加工，小写，删除 stopwords，增加同义语）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201102140051984.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/47fb904ebc160f592ba41df125fc900c.png#pic_center)
 ## 3. Elastocsearch 的内置分词器
  - `Standard Analyzer` - 默认分词器，按词切分，小写处理
  - `Simple Analyzer` - 按照非字母切分（符号被过滤），小写处理
@@ -112,7 +112,7 @@ POST books/_analyze
 ```
 ### 3.2 Standard Analyzer
 
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201102141234399.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a02fb6d91b65aef0decc0f4f697d1c0c.png#pic_center)
 
 ```bash
 #standard
@@ -124,7 +124,7 @@ GET _analyze
 ```
 
 ### 3.3  Simple Analyzer
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201102141424270.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9915f2a5ed5dbdb46437f80d9e5872b1.png#pic_center)
 
 ```bash
 #simple 去除非字母的 ：2 -  xi
@@ -136,7 +136,7 @@ GET _analyze
 ```
 
 ### 3.4 Whitespace Analyzer
-![空格切分](https://img-blog.csdnimg.cn/20201102141656639.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![空格切分](https://i-blog.csdnimg.cn/blog_migrate/51f5645ba01360274d3f217f01f99c05.png#pic_center)
 
 
 ```bash
@@ -240,7 +240,7 @@ GET _analyze
 
 ```
 ### 3.5  Stop Analyzer
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201102141731268.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/817fc2e308cdc62ad7f369dfa4cc73b7.png#pic_center)
 
 ```bash
 GET _analyze
@@ -328,7 +328,7 @@ GET _analyze
 ```
 
 ### 3.6  Keyword Analyzer
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201102141834259.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/040cf5b3a8d3857ffb494076c65bdad0.png#pic_center)
 
 ```bash
 #keyword
@@ -353,7 +353,7 @@ GET _analyze
 ```
 
 ### 3.7 Pattern Analyzer
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201102141914186.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/209211483352892db91d9be5e496ef3f.png#pic_center)
 
 ```bash
 GET _analyze
@@ -363,7 +363,7 @@ GET _analyze
 }
 ```
 ### 3.8  Language Analyzer
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020110214200235.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c5590014ae3f946b447df5666ee02fc8.png#pic_center)
 
 ```bash
 #english
@@ -383,7 +383,7 @@ GET _analyze
 2. 他说的确实在理 / 这事的确定不下来
 
 ### 4.1 ICU Analyzer
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020110214243960.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/46e7021e9c0661d17c4354c6047ebe25.png#pic_center)
 安装的 es 安装插件
 
 ```bash

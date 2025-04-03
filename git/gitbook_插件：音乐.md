@@ -124,7 +124,7 @@ cat  assets/music/musicList.json
 gitbook install 
 ```
 ###  1.3 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/30245c1c4dc649b980dac9587ac30f6a.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c183ff8d1617a1802bfa516f54e3ec9e.gif#pic_center)
 
 ###  1.4 评论
 插件效果很好，但存在bug，影响logo暂时，子目录下拉显示等等。

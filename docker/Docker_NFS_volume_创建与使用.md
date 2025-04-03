@@ -2,7 +2,7 @@
 tags: 存储
 
 <!-- catalog: ~Docker NFS volume~ -->
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f28908e27ca741ab80460b9a9e66b2ae.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bc2fd008fba0243ec0f12ec60e5a1a5e.png)
 
 
 
@@ -36,14 +36,14 @@ docker volume create --driver local \
 ```
 下面的示例说明了如何创建一个名为`nfs-volume`. 该卷包含`/mnt/nfsdir`位于服务器上的目录，具有`rw`（读/写）权限。服务器的 IP 地址是`10.240.12.70`。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7b5eecdaf2cf485c8c21e61507b501a9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5697ea510048a54b8edf651b2544e379.png)
 列出可用的 Docker 卷。
 
 ```bash
 docker volume ls
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/964e97eb9d474c4b8c60af0a94bfa6cf.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a53029e71e664851ab81127c90a23fce.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ea1fa4c8c0dd9216b4da4b1e53cea299.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d9b648473ccf6237e66b3e5fb596bb44.png)
 ## 3. 在容器中挂载 NFS
 要将 NFS 卷挂载到容器中，请nfs-common在主机系统上安装软件包。
 
@@ -63,12 +63,12 @@ docker run -d -it \
 --mount source=[volume-name],target=[mount-point]\
 [image-name]
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9514e592f0fd43478ad88ebaa87d99bf.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b00cf5cbbc8bbcdeec518e110bd1beb8.png)
 
 ```bash
 docker inspect [container-name]
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/eaa0534caf834249961aecfbaa5e1756.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/190741a81f36328f76392f43512fb54d.png)
 
 ```bash
 docker exec -it [container-name] ls /mnt

@@ -1,5 +1,5 @@
 #  Kubernetes Admission Webhook Validating 与 mutating 实践
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4920792979f64dc9b969b882d7803f16.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d261b0f7293afabd681ad010299791d1.png)
 
 
 

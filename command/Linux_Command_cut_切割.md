@@ -4,7 +4,7 @@
 
 
 ---
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3f9909aef33c4218b8400b9d931e99a4.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dc2c3f1a8b8c2bdc15fcf1e67e6d4ef7.gif#pic_center)
 ## 1. 简介
 
 cut 命令从文件的每一行剪切字节、字符和字段并将这些字节、字符和字段写至标准输出。

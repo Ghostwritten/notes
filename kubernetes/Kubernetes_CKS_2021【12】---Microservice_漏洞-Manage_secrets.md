@@ -6,13 +6,13 @@
 ## 1. 介绍
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210427143342989.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3c6b6bfc2846377cf864704ab99566bc.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210427143645951.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210427143714572.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/12251882e934f6a92fabbea1ad9cacf8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/556874f97c0b6c28afa98125cec1c90d.png)
 ## 2. Create Simple Secret Scenario
 参考链接：[https://kubernetes.io/zh/docs/concepts/configuration/secret/#using-secrets](https://kubernetes.io/zh/docs/concepts/configuration/secret/#using-secrets)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210427143804876.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/771b261e269a95ca7e51088f512ee807.png)
 
 ```c
 root@master:~# k create secret generic secret1 --from-literal user=admin
@@ -92,7 +92,7 @@ admin
 
 
 ## 3. Hack Secrets in Docker
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210427154725952.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ae1c10dbc54580c78eadaaad55f71235.png)
 
 ```c
 root@master:~# k get pod -owide
@@ -131,7 +131,7 @@ admin
 ## 4. Hack Secrets in ETCD
 参考链接：
 [https://kubernetes.io/zh/docs/tasks/administer-cluster/configure-upgrade-etcd/#%E5%AE%89%E5%85%A8%E9%80%9A%E4%BF%A1](https://kubernetes.io/zh/docs/tasks/administer-cluster/configure-upgrade-etcd/#%E5%AE%89%E5%85%A8%E9%80%9A%E4%BF%A1)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210427155235982.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a1b6a98b4355fba6b46b4fbd4a287c28.png)
 
 ```bash
 root@master:~# ETCDCTL_API=3 etcdctl --endpoints https://192.168.211.40:2379   --cert /etc/kubernetes/pki/etcd/server.crt --key /etc/kubernetes/pki/etcd/server.key --cacert /etc/kubernetes/pki/etcd/ca.crt endpoint health
@@ -165,15 +165,15 @@ pas12345678Opaque"
 ## 5. ETCD Encryption
 参考链接：
 [https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210427161639228.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210427162824572.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/992ea956411d7cdc7f55320ac4d3214e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bffe4fd6f1f42dbe450a74d07d25c253.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210427163026455.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ba9bc3f4e64b6bcf28b57c4f120f540d.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210427163136377.png?xshadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/36dcf30693fa4c1343977cd4062ed089.png)
 ## 6. Practice - Encrypt ETCD
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210427163838875.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3351e5a06a86519fac4465ab10ef6fa6.png)
 
 ```c
 root@master:~# cd /etc/kubernetes/
@@ -435,7 +435,7 @@ root@master:~# k create secret generic very-secure --from-literal cc=1234
 secret/very-secure created
 root@master:~# ETCDCTL_API=3 etcdctl --endpoints https://192.168.211.40:2379   --cert /etc/kubernetes/pki/etcd/server.crt --key /etc/kubernetes/pki/etcd/server.key --cacert /etc/kubernetes/pki/etcd/ca.crt get  /registry/secrets/default/very-secure
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210428105618767.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/58777b0a84ee4a32ce66350f37582572.png)
 
 ```c
 root@master:~# k get secret very-secure -oyaml
@@ -477,7 +477,7 @@ default-token-s446z   kubernetes.io/service-account-token   3      1s
 very-secure           Opaque                                1      4m43s
 
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210428110204654.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0d9e9e694891401662cb87378e727428.png)
 
 ```bash
 root@master:/etc/kubernetes/etcd# cat ec.yaml
@@ -502,7 +502,7 @@ root      68173  0.0  0.0  14424  1040 pts/1    S+   02:10   0:00 grep --color=a
 
 root@master:/etc/kubernetes/manifests# mv ../kube-apiserver.yaml .
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210428111554483.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/aca0ec24cad769dfb67b05be87112f23.png)
 
 ```bash
 root@master:/etc/kubernetes/etcd# cat ec.yaml
@@ -612,5 +612,5 @@ secret/token-cleaner-token-lspdd replaced
 secret/ttl-controller-token-6vv9d replaced
 
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210428112001247.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9ec406f97465f6d7280104494e2170a9.png)
 

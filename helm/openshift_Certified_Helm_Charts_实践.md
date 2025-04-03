@@ -47,9 +47,9 @@ Red Hat已经创建了一个舵机海图存储库来提供Red Hat to provide Cer
 ### 3.1  View Quick Start
 1.Use the perspective switcher to switch to the `Developer` perspective
 2.Click `Add` and click `View all quick starts`:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5a71ab6ddf0c492eac6340e2eaa1323d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cf7fd60ecbddc3807aeda706cf25180b.png)
 3.在搜索框中，键入helm，然后在helm Chart Catalog卡中选择“Manage available content in the Helm Chart Catalog”。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/999079ebf0444c8e8770e950e3d4fc2c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/243e5c9582f7f84bb2c44eed47dd0f6a.png)
 4.遵循右边打开的五分钟介绍帮助中的步骤。
 
 ### 3.2  Install Helm Client
@@ -153,7 +153,7 @@ spec:
 
 > 注意，你的集群现在有社区贡献的专门为OpenShift制作的Helm Charts:
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7a9bc82ebb144f1d8489be47086dfe19.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/83e2ba546ebc1f203d52ba734178bb1e.png)
 8.Install the Helm Charts if you like.
 Red Hat community charts are likely to work on your cluster.
 

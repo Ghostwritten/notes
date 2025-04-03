@@ -311,5 +311,5 @@ $ find . -name "*.txt" | xargs grep "abc"
  - [xargs(1) — Linux manual page](https://man7.org/linux/man-pages/man1/xargs.1.html)
  - [How to Use the Linux xargs Command](https://phoenixnap.com/kb/xargs-command)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/02ed68580d694883901d7c2c866af945.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8d7d7bb4034d8cd1d803f52a6d898278.gif#pic_center)
 

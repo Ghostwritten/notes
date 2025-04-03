@@ -1,7 +1,7 @@
 #  kubernetes kube-scheduler 调度器
 tags: 组件
 
-![](https://img-blog.csdnimg.cn/8a733b52f5f846189b74513c7fc56df9.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/b1837159fcdb6dcbb512756aad79f71a.png)
 
 
 
@@ -40,7 +40,7 @@ kube-scheduler 给一个 pod 做调度选择包含两个步骤：
 调度器对一个 Pod 调度成功，实际上就是将它的 `spec.nodeName` 字段填上调度结果的节点名字。
 
 ## 3. 调度器工作原理
-![](https://img-blog.csdnimg.cn/9205dd589f4245d794aaeba1ea91fbe3.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![](https://i-blog.csdnimg.cn/blog_migrate/b5f14f4eb2a956432edaaf0dc2748f40.png)
 可以看到，**Kubernetes 的调度器的核心，实际上就是两个相互独立的控制循环**。
 
 其中，第一个控制循环，我们可以称之为 `Informer Path`。它的主要目的，是启动一系列 `Informer`，用来监听（Watch）Etcd 中 Pod、Node、Service 等与调度相关的 API 对象的变化。比如，当一个待调度 Pod（即：它的 nodeName 字段是空的）被创建出来之后，调度器就会通过 `Pod Informer` 的 `Handler`，将这个待调度 Pod 添加进调度队列。
@@ -74,7 +74,7 @@ Assume 之后，调度器才会创建一个 `Goroutine` 来异步地向 APIServe
 不过，随着 Kubernetes 项目发展到今天，它的默认调度器也已经来到了一个关键的十字路口。事实上，Kubernetes 现今发展的主旋律，是整个开源项目的“民主化”。也就是说，Kubernetes 下一步发展的方向，是组件的轻量化、接口化和插件化。所以，我们才有了 `CRI、CNI、CSI、CRD、Aggregated APIServer、Initializer、Device Plugin` 等各个层级的可扩展能力。可是，默认调度器，却成了 Kubernetes 项目里最后一个没有对外暴露出良好定义过的、可扩展接口的组件。
 
 Kubernetes 默认调度器的可扩展性设计，可以用如下所示的一幅示意图来描述：
-![](https://img-blog.csdnimg.cn/9eac5ae23c4144118371c1ce35de9093.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![](https://i-blog.csdnimg.cn/blog_migrate/ad2fa9e174cbf985f95faecb2db9a472.png)
 
 可以看到，默认调度器的可扩展机制，在 Kubernetes 里面叫作 `Scheduler Framework`。顾名思义，这个设计的主要目的，就是在调度器生命周期的各个关键点上，为用户暴露出可以进行扩展和实现的接口，从而实现由用户自定义调度器的能力。
 

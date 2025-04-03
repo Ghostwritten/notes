@@ -137,7 +137,7 @@ Kubernetes 就会立即触发这个 Deployment 的“滚动更新”，它跟 ku
 更进一步地，这意味着 kube-apiserver 在响应命令式请求（比如，kubectl replace）的时候，一次只能处理一个写请求，否则会有产生冲突的可能。而对于声明式请求（比如，kubectl apply），一次能处理多个写操作，并且具备 Merge 能力。
 
 ##  5. 以Istio 项目理解声明式API的意义
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0d2a65e8ace64277a6857ccec28ca89a.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/70f828d4aa2796d92cbbc29ffa7a720e.png)
 **Istio 最根本的组件，是运行在每一个应用 Pod 里的 Envoy 容器。**这个 Envoy 项目是 Lyft 公司推出的一个高性能 C++ 网络代理，也是 Lyft 公司对 Istio 项目的唯一贡献。
 
 而 Istio 项目，则把这个代理服务以 `sidecar 容器`的方式，运行在了每一个被治理的应用 Pod 中。我们知道，Pod 里的所有容器都共享同一个 Network Namespace。所以，**Envoy 容器就能够通过配置 Pod 里的 iptables 规则，把整个 Pod 的进出流量接管下来**。

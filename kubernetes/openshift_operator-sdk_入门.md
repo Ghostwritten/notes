@@ -266,5 +266,5 @@ operator-sdk new nginx-operator --api-version=example.com/v1alpha1 --kind=Nginx 
 
 
 ##  5. Operator 功能
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fa8c903e02084095b2fb08f2c09369d8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8091a466eb8f25521e5b8f9a26a84ec2.png)
 

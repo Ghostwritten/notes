@@ -72,7 +72,7 @@ src.rpm  tar.gz , spec
 
 ###  Set up the directory structure 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9da6445c63da4020b2a862e4dd7fe1ed.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b52fc9eab8c0c7877c7489825d486c34.png)
 
 ```bash
 rpmbuild --showrc | grep macros
@@ -128,7 +128,7 @@ mkdir: created directory ‘rpmbuild/SRPMS’
 
 
 ###  The introduction section
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dc45ca5bef374e1ebb0f071041576cd7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e1e013c0cec9b440c57a7307c8cc867c.png)
 source  BUILD
 BUILDROOT
 
@@ -165,7 +165,7 @@ web server.
 
 ###  The prep section
 准备阶段
-![在这里插入图片描述](https://img-blog.csdnimg.cn/218f4e91335e4f5ba5db06b4a6b5541f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fe0cae4328a148a242ba0ec43bdefd01.png)
 The prep section, short for prepare, defines the commands necessary to prepare for the build
 If you are starting with a compressed tar archive (a tarball) of the sources, the prep section needs
 to extract the sources
@@ -177,9 +177,9 @@ This example uses the %setup RPM macro, which knows about tar archives, to extra
 - 这个例子使用`%setup` RPM宏来解压缩文件，它知道tar存档
 
 ###  The build section
-![在这里插入图片描述](https://img-blog.csdnimg.cn/133c8285a15a4242842a6c8fede3d290.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9627a84c281e89f0a3b1e5f942a2b829.png)
 ###  the install section
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7db8728d43524c3cb82cf4a490b47a6a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/54aac4b85f9bf7c6857293acda6ded52.png)
 ###  脚本段
 - %pre 安装之前
 - %post安装之后
@@ -198,15 +198,15 @@ install -D /etc/nagios/nagios.cfg /tmp/nagios/nagios.cfg
 ```
 
 ### The clean section
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1f2fd057393f4b8eaa3d466881e4e230.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/95ac153632ce3e5d6af74dbdcfc9137c.png)
 ###  The files sections
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c2e280424bce4d9b9e62b6d77e60efbd.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/346c51a6fdaa4d87bef4c3ffce2c4132.png)
 ###  changelog 段
 定义日志版本更新说明
 
 
 Build RPMS with the rpmbuild command
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e8e28897ebbe425785c8d45fece2e00e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0cc4b5cfa747217228de1bac09d2339e.png)
 
 ```bash
 rpmbuild -bp nignx.spec
@@ -216,7 +216,7 @@ rpmbuild -ba nginx.spec
 ```
 
 ##  The spec file
-![在这里插入图片描述](https://img-blog.csdnimg.cn/51a4a3909b594cf49b24936b274ff15b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0064f8d2a17f782258dc987086ab34c6.png)
 
 > 在注视当中要用%%表示%
 
@@ -243,36 +243,36 @@ rpm2cpio nginx-1.0.14-3.src.rpm | cpio -id
 
 
 ##  defiining package information
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e3a0e870cf474f1caaec5d30dda5e043.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8acf212c5c604b35967d072d7980a264.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4282ae6cb5504dca86643d54ac798971.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/39cb2f36937548f08111a9192fd8b795.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bb52f594dc804848984d8a41feb261f4.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1762e8f7cb7a49aba83c2194fad72027.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/44bdc8dfb5b44a958c6c0096704074ea.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/df3a581677a84919ba52edc7047156d2.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/04bfc424f7ca4d588de4da4afb66353c.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e3c2c50f03a84c7a913c903243bc6512.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c4c0a3c07fc244e5a14f434297dd69db.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b370cb0f0a7c508b72c3f506125a15b3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/267d42a5b95320ed2366893aceba351d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c4d40c41d9a914647e94686241b348d3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/97d28ee6797235c0903bde3bfea2f450.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/acd2eedc8182a58e93fd1f1213445b53.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/82ff14671d9b042130f624f79e0c4da0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/82c63574664a4aaf9ac82c0c3feec3a4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b8ad596249edb83006bc188a0cfb2e12.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c49e22e90852e9147085015dda42c9e2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1714d5a555461dd41a21745e22da21d6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/487e4b553bcdf4b76ce7fdf0532007de.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6ce64ad3141f48d782800c2405d2cf2a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e82e916593c56691949eecc13f92932f.png)
 
 
 ```bash
 rpmbuild  --clean nginx.spec
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/71cfec8054b14415b167c820730f1172.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/508304963a37496fb42f389ced0904ff.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b64ab2461a134ed18b01d73145a7f445.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c0490398463e4195b92ff522edebfdf9.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ea29b785044c4e5fb52975905fbc5034.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/185ea9059eeb46b0ad5a14ff8a9e02d3.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7285ff91f8934f819fbda65af1b805fb.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a25a820658f8f7c8d037d6d74d9e18fa.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f23f0f81dc09e81bbde104ef841f04a3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/90541440eee510c9a588364e15ae937f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7d053e58886ddd3b11de281683896097.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6985fe9f65cabeeb0e92f962e06dea13.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c878b15dafa68c40ca0026df63f1a278.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/46e9957ec1987a8d8290a253a9d72d54.png)
 
 ```bash
 rpm -K xxx.rpm  #检查安装包的来源
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8fd8fd3c2df24cc1a45255e3c04057cf.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3f4e3864a110416892e41b65b27b344b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/393611c720af9c4b25314009d8fc622a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/73e7cfaa1703fb0cbbc80b3d55389b78.png)
 

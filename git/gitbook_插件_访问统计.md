@@ -58,9 +58,9 @@ npm i gitbook-plugin-ga
 }
 ```
 ###  2.2 获取 Token
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d362b8c32af1456aac89e202615e0e02.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ec1638ab23b548e1a965631d8de77abd.png)
 ###  2.3  效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/448bf5ad7360484ba08fd2a3d5f240cc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e29d2ef36ea0fd853f1a56f9b702c517.png)
 
 
 ##  3. pageview-count 插件
@@ -81,5 +81,5 @@ book.json配置：
 }
 ```
 ###  3.3 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/95f13918844b480da22534d8c9204670.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3fd5abf2018aa7bd963407e64f8b23d9.png)
 

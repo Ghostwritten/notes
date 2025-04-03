@@ -169,5 +169,5 @@ GitHub 团队的 GitHub 按用户计费。有关详细信息，请参阅“关�
  - [Gitbook Docs](https://smoothies.com.cn/gitbook-docs/About.html)
 
 ---
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7970903b14f54449bdae09904c6261e6.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/160a8d22d31c13d41ec36b8db8ceaf1e.gif#pic_center)
 

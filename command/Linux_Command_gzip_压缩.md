@@ -1,5 +1,5 @@
 #  Linux Command gzip 压缩
-![](https://img-blog.csdnimg.cn/448bd57d44444a28926eda6dc8c14438.gif#pic_center)
+![](https://i-blog.csdnimg.cn/blog_migrate/85b54082b006c96ade8e8c7c393eba3c.gif#pic_center)
 
 
 
@@ -146,7 +146,7 @@ $ ls dir1/
  4. [Linux Command zip 压缩](https://blog.csdn.net/xixihahalelehehe/article/details/125203106)
 
 
-![](https://img-blog.csdnimg.cn/ac11afd1d9c24d0c8e7f811508317db7.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/7155171cf01db09e2c8e535f26c80801.png)
 
 
 

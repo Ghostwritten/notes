@@ -563,10 +563,10 @@ $ docker run --pid=host -v /etc:/etc:ro -v /var:/var:ro -t aquasec/kube-bench:la
 [FAIL] 1.1.12 Ensure that the etcd data directory ownership is set to etcd:etcd (Automated)
 .............
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ed084899399b410a8f6e620fc969bcd9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/adfa666175f2ee4af0ab4f0f1ab9e3e3.png)
 案例2
-![在这里插入图片描述](https://img-blog.csdnimg.cn/46d6e79e208c47d8af42b9c92bdd3b26.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/da5c63c76adf4412abddcfcfcd3ec822.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b4f253b5a293426c0cf30cfe02230bb6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3bbea6ec0b07dd2b22f98b7be056fc4c.png)
 
 ```bash
 $ cat /etc/kubernetes/kubelet.conf
@@ -759,7 +759,7 @@ $ k create -f denynetwork.yaml
 ```
 
 ##  16. falco 检测输出日志格式
-![在这里插入图片描述](https://img-blog.csdnimg.cn/879907a57dcb4cadaeee5ac143d24e84.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d3bfc59ff64efeeb6712f181746fd155.png)
 
 ```bash
 $ ssh node1

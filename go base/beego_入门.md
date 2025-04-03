@@ -3,12 +3,12 @@ beego 是一个快速开发 Go 应用的 HTTP 框架，他可以用来快速开�
 
 ## 架构
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200803001231325.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c594fe9c664f728cc7c36815669e61ae.png)
 beego 是基于八大独立的模块构建的，是一个高度解耦的框架。当初设计 beego 的时候就是考虑功能模块化，用户即使不使用 beego 的 HTTP 逻辑，也依旧可以使用这些独立模块，例如：你可以使用 cache 模块来做你的缓存逻辑；使用日志模块来记录你的操作信息；使用 config 模块来解析你各种格式的文件。所以 beego 不仅可以用于 HTTP 类的应用开发，在你的 socket 游戏开发中也是很有用的模块，这也是 beego 为什么受欢迎的一个原因。大家如果玩过乐高的话，应该知道很多高级的东西都是一块一块的积木搭建出来的，而设计 beego 的时候，这些模块就是积木，高级机器人就是 beego。至于这些模块的功能以及如何使用会在后面的文档会逐一介绍。
 
 ## beego 的执行逻辑
 既然 beego 是基于这些模块构建的，那么他的执行逻辑是怎么样的呢？beego 是一个典型的 MVC 架构，他的执行逻辑如下图所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200803001351789.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fa965e4740a9060585fc75fbea54ccc6.png)
 ## beego 项目结构
 一般的 beego 项目的目录如下所示：
 ├── conf
@@ -46,6 +46,6 @@ go get -u github.com/astaxie/beego
 
 ## beego 的 git 分支
 beego 的 master 分支为相对稳定版本，dev 分支为开发者版本。大致流程如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200803001626750.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e8d986867c69459e49e0bb8f6ccc9944.png)
 参考：
 [https://www.kancloud.cn/hello123/beego/126092](https://www.kancloud.cn/hello123/beego/126092)

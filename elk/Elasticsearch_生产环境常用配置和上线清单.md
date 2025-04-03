@@ -7,11 +7,11 @@
 
  - 开发模式
  - 生产模式
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312155552891.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fc33bb0ae9a2efd808e19b3d147dc009.png)
 ## 2. Bootstrap Checks
 一个集群在 Production Mode 时，启动时必须通过所有 Bootstrap 检测，否则会启动失败
 Bootstrap Checks 可以分为两类：`JVM` & `Linux Checks`。Linux Checks 只针对 Linux 系统
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312155622346.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fe88bbaebad22b6e446f52a9e48d742a.png)
 [https://www.elastic.co/guide/en/elasticsea...](https://www.elastic.co/guide/en/elasticsearch/reference/master/bootstrap-checks.html)
 ## 3. JVM 设定
 从 ES 6 开始， 只支持 64 位 的 JVM
@@ -34,7 +34,7 @@ Bootstrap Checks 可以分为两类：`JVM` & `Linux Checks`。Linux Checks 只�
  - `Transient` 在集群重启后会丢失
  - `Persistent` 在集群中重启后不会丢失
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312163159113.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b09e1c07319b16b185967062ee813661.png)
 ## 5. 系统设置
 参照文档 “Setup Elasticsearch> Important System Configuration”
 

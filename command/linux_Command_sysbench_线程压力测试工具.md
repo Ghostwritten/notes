@@ -4,7 +4,7 @@
 
 ---
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2e32c32b17ae4a81ab71b5ab105b2107.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/84711ed17a78a04c2bcc37c4c24255e4.gif#pic_center)
 
 ## 1. 简介
  [sysbench](https://github.com/akopytov/sysbench) 是一个开源的、模块化的、跨平台的多线程性能测试工具，可以用来进行CPU、内存、磁盘I/O、线程、数据库的性能测试。目前支持的数据库有MySQL、Oracle和PostgreSQL。当前功能允许测试的系统参数有：

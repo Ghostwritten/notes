@@ -144,5 +144,5 @@ echo ""
                                                        docker ps
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5b0047b571ad45dfa8f78c8009cb5887.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ee4f14c2e02982283f906c580c0ee299.gif#pic_center)
 

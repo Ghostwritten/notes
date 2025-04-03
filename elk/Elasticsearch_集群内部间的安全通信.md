@@ -7,7 +7,7 @@
  - 验证身份 - 避免 Imposter Node
 Data/Cluster State
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210311145040206.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/115b5912d4e63064fd90dbdb3d120545.png)
 ## 2. 为节点创建证书
 TLS
 
@@ -22,12 +22,12 @@ TLS
 ## 3. 生成节点证书
 
  - bin/elasticsearch-certutil ca
-![4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)](https://img-blog.csdnimg.cn/20210311150045664.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)](https://i-blog.csdnimg.cn/blog_migrate/a165f519a2a73b45988718c3cb35717e.png)
 
 
  - bin/elasticsearch-certutil cert –ca elastic-stack-ca.p12
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210311150450113.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0e6765e77002dbc09c180cd7f50606e6.png)
 
 ## 4. 配置节点间通讯
 ```bash
@@ -64,7 +64,7 @@ bin/elasticsearch -E node.name=node1 -E cluster.name=geektime -E path.data=node1
 
 ```
 登录测试验证成功
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210311161828207.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cf68bd288efc1a9251afe6d3731654ce.png)
 
 
 

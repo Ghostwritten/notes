@@ -1,4 +1,4 @@
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201224114648736.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0620282117953916526d0b09683c3548.png)
 
 ---
 
@@ -28,7 +28,7 @@
  - `operator`：operator 是描述、部署和管理 kubernetes 应用的一套机制，从实现上来说，可以将其理解为 CRD配合可选的 webhook 与 controller 来实现用户业务逻辑，即 operator = CRD + webhook + controller。
 
 ## 3. 工作模式
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200822124509506.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bc21da920c59a12f2fa34d64182fff53.png#pic_center)
 
 
 ## 4.工作流程
@@ -43,7 +43,7 @@ SDK提供以下工作流程来开发新的Operator：
 Operator使用SDK在用户自定义的处理程序中以高级API处理监视资源的事件，并采取措施来reconcile（对比期望状态与实际状态）应用程序的状态。
 
 ## CRD关系图
-![在这里插入图片描述](https://img-blog.csdnimg.cn/202012241753552.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/efafce5ee55d7d1b0c7702cad97b77ef.png)
 
  - 1）`CRD` 
    CRD全称是CustomResourceDefinition，即自定义资源。CRD也是K8s的一种资源，创建一个CRD即在K8s中定义了一种新的资源类型，这个资源类型可以像K8s中的原生资源一样，既可以通过kubectl命令行，也可以通过访问apiserver来进行操作。
@@ -83,7 +83,7 @@ $ make install
 下载地址：
 [https://github.com/operator-framework/operator-sdk/tags](https://github.com/operator-framework/operator-sdk/tags)
 选择好版本
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201224101927414.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5f91143d2ce3285951e9a7c4f6b9c059.png)
 
 ### 创建app-operator项目
 使用SDK CLI创建和部署app-operator:

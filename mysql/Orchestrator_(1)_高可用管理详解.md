@@ -1,6 +1,6 @@
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ca517cb396224d7a9628b7adc962024f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c0ed4fddb58485f45655ead94ea2181b.png)
 
 
 ## 1. 简介
@@ -258,12 +258,12 @@ $ ./orchestrator http
 
 ```
 点击发现服务
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201228114438278.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c5e0522b1bc5adadb9b11d6db8edfaf1.png)
 加入mysql集群
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201228114228915.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c6ace8be3f6613f736775f82cfcd85f6.png)
 
 查看配置
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201227210138836.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/34b29ba9ec365b6c81d2ac8933f4f071.png)
 
 实例说明
 
@@ -292,14 +292,14 @@ Agent ：Agent实例
 其中Begin Downtime 会将实例标记为已停用，此时如果发生Failover，该实例不会参与。
 ```
 任意改变主从的拓扑结构：可以直接在图上拖动变更复制，会自动恢复拓扑关系： 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201227210751686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ea2905855ee5fbd8e60b1197f1ed3a2b.png)
 3.主库挂了之后自动Failover，如：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201227210811679.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7921b9b230aa788274c34152c3d0fe01.png)
 图中显示，当主挂掉之后，拓扑结构里自动剔除该主节点，选择一个最合适的从库提升成主库，并修复复制拓扑。在Failover过程当中，可以查看/tmp/recovery.log文件（配置文件里定死），里面包含了在Failover过程中Hooks执行的外部脚本，类似MHA的master_ip_failover_script参数。可以通过外部脚本进行相应的如：VIP切换、Proxy修改、DNS修改、中间件修改、LVS修改等等，具体的执行脚本可以根据自己的实际情况编写。
 
 4.Orchestrator高可用。因为在一开始就已经部署了3台，通过配置文件里的Raft参数进行通信。只要有2个节点的Orchestrator正常，就不会影响使用，如果出现2个节点的Orchestrator异常，则Failover会失败。2个节点异常的图如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201227211332187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/edcd6ccc4577e11b00beff3cd98b80f2.png)
 图中的各个节点全部显示灰色，此时Raft算法失效，导致Orch的Failover功能失败。相对比MHA的Manager的单点，Orchestrator通过Raft算法解决了本身的高可用性以及解决网络隔离问题，特别是跨数据中心网络异常。这里说明下Raft，通过共识算法：Orchestrator节点能够选择具有仲裁的领导者（leader）。如有3个orch节点，其中一个可以成为leader（3节点仲裁大小为2，5节点仲裁大小为3）。只允许leader进行修改，每个MySQL拓扑服务器将由三个不同的orchestrator节点独立访问，在正常情况下，三个节点将看到或多或少相同的拓扑图，但他们每个都会独立分析写入其自己的专用后端数据库服务器：
 
  - ① 所有更改都必须通过leader。
@@ -310,7 +310,7 @@ Agent ：Agent实例
  - ⑥ 要加入比日志保留允许的更长/更远的orchestrator节点或者数据库完全为空的节点，需要从另一个活动节点克隆后端DB。
 关于Raft更多的信息见：[https://github.com/github/orchestrator/blob/master/docs/raft.md](https://github.com/github/orchestrator/blob/master/docs/raft.md)
 Orchestrator的高可用有2种方式，第一种就是上面说的通过Raft（推荐），另一种是通过后端数据库的同步。详细信息见文档。文档里详细比较了两种高可用性部署方法。两种方法的图如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201227212417471.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/23ea20d2b99e0d8b9379a6eaecb4c1ff.png)
 到这里，Orchestrator的基本功能已经实现，包括主动Failover、修改拓扑结构以及Web上的可视化操作。
 
 ## 7.Web上各个按钮的功能说明
@@ -323,32 +323,32 @@ Orchestrator的高可用有2种方式，第一种就是上面说的通过Raft（
  - ⑥：Audit下的Recovery：故障恢复信息以及故障确认。
  - ⑦：Audit下的Agent：是一个在MySQL主机上运行并与orchestrator通信的服务，能够向orch提供操作系统，文件系统和LVM信息，以及调用某些命令和脚本。
  - ⑧：导航栏里的图标，对应左边导航栏的图标
-![5.Web上各个按钮的功能说明](https://img-blog.csdnimg.cn/20201227214813389.png)
+![5.Web上各个按钮的功能说明](https://i-blog.csdnimg.cn/blog_migrate/640558fcbc27cb7471c2aef0ab612ea5.png)
 
 第1行：集群别名的查看修改。
 第2行：pools。
 第3行：Compact display，紧凑展示
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201227214851840.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3600cdb2c3dd03ff3c30fd4953618cc1.png)
 第4行：Pool indicator，池指示器
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201227214910924.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2153953a23c71f75d6d74125957b7a96.png)
 第5行：Colorize DC，每个数据中心用不同颜色展示
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201227214926427.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/69bd071b4b37f8eb5650f024262640d3.png)
 第6行：Anonymize，匿名集群中的主机名
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201227214949446.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/62471a556413746db1699bbdf13ab34b.png)
 注意：左边导航栏里的图标
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201227215005744.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/99e3d7ce9343f1781b711733f44379fb.png)
 表示实例的概括：实例名、别名、故障检测和恢复等信息。
 
 ⑧：导航栏里的图标
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201227215803986.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1284e0965e89d4293def27b7ea38178d.png)
 表示是否禁止全局恢复。禁止掉的话不会进行Failover。
 
 ⑨：导航栏里的图标
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201227215820594.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/068a21bb9495387063cd01498202affa.png)
 ,表示是否开启刷新页面（默认60一次）。
 
 ⑩：导航栏里的图标
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020122721584393.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b6a58305515b1a4fc6142ccaaef6ed6d.png)
 ，表示MySQL实例迁移模式。
 
 Smart mode：自动选择迁移模式，让Orch自己选择迁移模式。

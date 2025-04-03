@@ -33,7 +33,7 @@ root@master:~/k8slib# cat compare
 b93857e8c38e433f3edd1ea5727c64b79e1898bcfb8b31a823024c06c2dc66b047482f28d8e89db5c1aae99532a7820dc0212b2aa5a51de3b9c94aa88514b372
 ```
 复制此sha512 hash至`compare`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210425153228226.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b680e3fd24c150374c0f11489dec6453.png)
 
 ```c
 root@master:~/k8slib# cat compare

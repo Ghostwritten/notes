@@ -1,5 +1,5 @@
 #  shell wait 等待命令
-![在这里插入图片描述](https://img-blog.csdnimg.cn/04d974d4de664eddb68664f8b32d9e7c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0bbbbc8e2dc5aafcf4306114e24340fa.png)
 
 
 
@@ -32,7 +32,7 @@ sleep 10 &
 echo $!
 echo $?
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dbe86551902941e3a64779c0c9db9968.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0a625e74daa9cd7480efe038f3581c34.png)
 该`$!`参数存储后台进程PID，同时`$?`存储退出状态。退出状态0表示命令成功完成。
 
 ### 3.2 单进程等待
@@ -51,8 +51,8 @@ jobs -l
 ```bash
 wait
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/aadc03dab27b4666a3622d944fa11aa2.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1d406048e51a42a6b033ae355a29ddbe.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/07b4f19a746f62c8b06614805a919c01.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b6f1afb7614ac416a3e65a0450f01348.png)
 10 秒后（由于sleep 10），控制台打印完成消息。
 
 ### 3.3 单进程 bash 等待
@@ -80,7 +80,7 @@ sudo chmod +x single_process.sh
 ```bash
 ./single_process.sh
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2ffa059772644780a60b0f9c8254eadb.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7a631781d057097c9ba9b8e88f78b4ed.png)
 后台进程在命令之前的任何时间完成`wait`，并且脚本继续。
 
 ### 3.4 多个进程等待
@@ -108,7 +108,7 @@ sudo chmod +x test.sh
 ```bash
 ./test.sh
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/096557d0ad424ecaa0b801966d784121.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5d29595324d4ffd84691c44a511ef6bf.png)
 由于进程在后台运行，所有三个进程都在十五秒内完成。
 
 4. 使用相同的脚本测试以下用例：
@@ -141,7 +141,7 @@ sudo chmod +x multi_wait.sh
 ```bash
 ./multi_wait.sh
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3702a72c11a04d4096dbb0c4f3691009.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/50a7fdd15f10615c7534f7adb6bb5095.png)
 该脚本需要两秒钟来完成第一个过程（由于sleep2）和三秒钟来完成第二个过程。这两个过程同时执行，都在三秒内完成。
 
 参考：

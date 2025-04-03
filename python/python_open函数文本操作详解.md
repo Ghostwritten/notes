@@ -31,7 +31,7 @@ open函数使用一个文件名作为唯一的强制参数，然后返回一个�
 
 ### 2.2 文件模式
 下面主要说一下open函数中的mode参数（如表1-1所示），通过改变mode参数 可以实现对文件的不同操作。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200807235248271.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a3797712f13f7f3357e8d317b8b5c361.png)
 这里主要是提醒一下‘b’参数的使用，一般处理文本文件时，是用不 到‘b’参数的，但处理一些其他类型的文件（二进制文件），比如mp3音乐或者图 像，那么应该在模式参数中增加‘b’，这在爬虫中处理媒体文件很常用。参 数‘rb’可以用来读取一个二进制文件。
 示例：
 `encoding='utf-8'`支持中文读写格式

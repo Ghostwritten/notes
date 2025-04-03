@@ -1,7 +1,7 @@
 #  JavaScript 8. 变量
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e6c553f908a24662af43baf9f7e13ca4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8bc8a39ad980a2c8f2853a4f95c4d7ff.png)
 
 
 
@@ -112,8 +112,8 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bc19a2a81992483aa5e1ae71cd3de963.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/36176e83e84c48908af041213611803b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/185a7d20287ef314b48681fd82b7d563.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/029f3659ef6cf133c691acb7cbc9c5fd.png)
 
 ##  4. 一条语句，多个变量
 您可以在一条语句中声明很多变量。该语句以 var 开头，并使用逗号分隔变量即可：
@@ -193,7 +193,7 @@ function myFunction()
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c96b1cab1dd947ecb9d6d786ce5855c0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cf7ff95453e18a180a7d2db64b72a682.png)
 ##  8. 局部变量
 
 ```bash

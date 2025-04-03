@@ -1,5 +1,5 @@
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/66349d08bd764f8fb5aee00f4b7ab480.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c6dbe50a28c396f77aeb24f7c7aeacf7.png)
 
 
 
@@ -34,7 +34,7 @@ pip install openai
 
 ##  实例1
 通过访问`https://beta.openai.com/account/api-keys`获取 `YOUR-APT-KEY`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c4be8a84e100402d89468625e9e9dace.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fe29bb380320e3049c9a7be8154df7c4.png)
 
 让我们开始使用 Python 代码与人工智能进行交互：
 

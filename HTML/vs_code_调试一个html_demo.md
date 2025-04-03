@@ -22,14 +22,14 @@
 </html>
 ```
 ## 2. 储存到一个工作区
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9f4a48474fb140d79932873e8e337c9b.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/95652dbee2d3bc06b0fd1dfc51e62958.png)
 
 ##  3. 安装Debugger for Chrome 插件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ff7cbe8a7f1a498b9b50f0ba138c1f7b.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f568aab1517e3d20866606146849d57e.png)
 ##  4. 生成并配置launch.json   
 按F5启动调试
 生成一个launch.json   
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c79576db9f6045f0986ce3dd6b885fb3.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a0a87969430374e18b204e5613d0c4b3.png)
 修改配置
 
 ```bash
@@ -54,5 +54,5 @@
 
 ##  5. 再次调试
 自动弹出chrome浏览器并指定html文件显示效果。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3927cfa3357443958cda70bc1ef5c529.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/476ff7a65ca271c789274bc83ced5fa3.png)
 

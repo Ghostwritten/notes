@@ -193,7 +193,7 @@ Serving book on http://localhost:4000
 
 ```
 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d1f24fa01cac4597b0d0bacfc7595816.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a9a84e8c6990be54c6351abcece5aa8b.png)
 图中侧栏`Introduction`的内容正是`README.md`的内容，`SUMMARY.md` 是编写界面侧栏的目录结构。
 ```bash
 $ cat README.md 

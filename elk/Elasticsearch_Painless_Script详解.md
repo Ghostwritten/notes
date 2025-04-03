@@ -93,7 +93,7 @@ Elasticsearch第一次看到一个新脚本，它会编译它并将编译后的�
 
 ## 6. 示例
 ### 6.1 案例 1：Script Processsor
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021031014174696.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0fe1bcd8c0957b364e296a19d4a98af1.png)
 
 ```bash
 # 增加一个 Script Prcessor
@@ -151,7 +151,7 @@ POST _ingest/pipeline/_simulate
 ```
 
 ### 6.2 案例 2：文档更新计数
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310141832499.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0e36d26d87f28adf033bfeed3a48950f.png)
 
 ```bash
 DELETE tech_blogs
@@ -178,7 +178,7 @@ POST tech_blogs/_search
 ```
 
 ### 6.3 案例 3：搜索时的 Script 字段
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310141933426.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/381147e1a2ddcab3b4c54d4dd1ca7640.png)
 
 ```bash
 GET tech_blogs/_search
@@ -201,7 +201,7 @@ GET tech_blogs/_search
 ```
 
 ### 6.4 Script :Inline v.s Stored
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310142007440.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f60076cbeb4630c471943f9d772642ff.png)
 
 ```bash
 #保存脚本在 Cluster State
@@ -274,7 +274,7 @@ Elasticsearch 会将甲苯编译后缓存在 Cache 中
 
  - Inline scripts 和 Stored Scripts 都会被缓存
  - 默认缓存 100 个脚本
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310142054766.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7318cda6aa0d692023d4164b9f30b8f4.png)
 
 
 

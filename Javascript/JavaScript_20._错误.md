@@ -1,7 +1,7 @@
 #  JavaScript 20. 错误
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3b4f425be9f949ca8fac29cf3a95545b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f9862edbe56f5055c0b8a524a3eac98e.png)
 
 
 ##  1. 简介
@@ -72,8 +72,8 @@ function message(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0992d3c2cffe44b2b0731bc0f778b442.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/42fa8dbc8fc645f59a50246a794e8eba.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c6bcb3f40bac6d203b1a129153386f1f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/31edddcb2a2ef4ffd1a818172c51f8a7.png)
 ##  4. finally 语句
 finally 语句不论之前的 try 和 catch 中是否产生异常都会执行该代码块。
 ### 4.1 实例
@@ -120,7 +120,7 @@ function myFunction() {
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6d82f5c22a2440c99015f92d9797210e.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b5f0f26c21919c06540c5286d0a5994d.gif#pic_center)
 
 ## 5. Throw 语句
 throw 语句允许我们创建自定义错误。

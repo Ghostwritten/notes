@@ -161,5 +161,5 @@ os.path.split('PATH')
 
  - [python 内置函数](https://blog.csdn.net/xixihahalelehehe/article/details/104913051)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0bd917e7997442b6a8d498db7d766984.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/852716e9e05197386f89c29ebcd8206a.gif#pic_center)
 

@@ -12,7 +12,7 @@ Selenium是一个用于测试网站的自动化测试工具，支持各种浏览
  - [帮助文档](https://selenium-python.readthedocs.io/)  
  -  [官网](https://www.selenium.dev/)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9f3a2f5b99514d2489d57af034f8b2a7.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ed37c9d7e71d0c4bf2c7ee95ed7a4df6.gif#pic_center)
 
 ##  2. 安装Selenium
 
@@ -708,7 +708,7 @@ sleep(15)
 
 driver.close()
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/734cb514bb5f46178b8ffd76330eec7c.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/56b98c67ec14fc804b129b3af81e0b71.gif#pic_center)
 
 ##  20. 窗口截图
 自动化用例是由程序去执行的，因此有时候打印的错误信息并不十分明确。如果在脚本执行出错的时候能对当前窗口截图保存，那么通过图片就可以非常直观地看出出错的原因。WebDriver提供了截图函数`get_screenshot_as_file()`来截取当前窗口。
@@ -879,6 +879,6 @@ https://www.google.com/gen_204?s=webaft&t=aft&a...
  - [https://zhuanlan.zhihu.com/p/111859925](https://zhuanlan.zhihu.com/p/111859925)
  - [http://www.selenium.org.cn/1694.html](http://www.selenium.org.cn/1694.html)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5bd131ce2e874e11868944b6bc87277c.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/de5d4b3ac3eaed8d1292399e542cf006.gif#pic_center)
 
 

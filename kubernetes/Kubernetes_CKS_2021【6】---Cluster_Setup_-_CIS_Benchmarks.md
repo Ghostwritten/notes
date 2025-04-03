@@ -11,9 +11,9 @@
 Kube-Bench是一款针对Kubernete的安全检测工具，从本质上来说，Kube-Bench是一个基于Go开发的应用程序，它可以帮助研究人员对部署的Kubernete进行安全检测，安全检测原则遵循[CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes/)。
 测试规则需要通过YAML文件进行配置，因此我们可以轻松更新该工具的测试规则。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210422113251111.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210422113309512.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210422113415853.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/57a1545c5e4a8afbc07575298199f617.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/306fb30a23c0407d0f3c73ee4a78e476.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/414792d4d5675fffde4d36f95b1c7d4e.png)
 
 ##  2. 本地测试
 
@@ -31,7 +31,7 @@ kube-bench --config-dir /data/software/kube-bench/cfg --config /data/software/ku
 
 ## 3. 容器测试
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210422154146136.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/246846eae5fab131739e00346b1719cb.png)
 
 参考链接：
 [https://github.com/aquasecurity/kube-bench#running-inside-a-container](https://github.com/aquasecurity/kube-bench#running-inside-a-container)
@@ -249,7 +249,7 @@ on the master node and set the below parameter.
 链接：[https://pan.baidu.com/s/1C6vQSfDG0Twiy97QousbSQ](https://pan.baidu.com/s/1C6vQSfDG0Twiy97QousbSQ) 
 提取码：r6vn 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210422162210278.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8cac91afc572ca9ac36937c1a830730c.png)
 
 
 ```bash

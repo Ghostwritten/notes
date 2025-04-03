@@ -16,27 +16,27 @@
 
 　　我们从下图可以看到,Cache Manager和Cache Loader各有一个进程;master进程是父进程,肯定只有一个进程;那么为什么worker进程会很多？主要是因为Nginx采用**事件驱动模型**以后,它希望每一个woker进程从头到尾占有一颗CPU,所以往往我们不止要把woker进程的数量配置与我们服务器上的CPU核数一样以外;我们还需要把每一个worker进程与某一颗CPU核绑定在一起;**这样可以更好的使用CPU核上的CPU缓存,来减少缓存失效的命中率;**
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/62ec711ce15649e493d5a08aa6b5b37c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2f82db832b063f06c800b8903f4a3304.png)
 Nginx的多进程模型,由master作为父进程启动许多子进程,Nginx的父子进程之间是通过信号管理的,现在我们通过一个简单的演示,来直观地看下这些父子进程以及信号之间是怎么样工作的?
 
 在Nginx配置当中,我启动了两个worker进程;
 
 　　使用ps命令  `ps -ef |grep nginx` 查看nginx 进程
-![在这里插入图片描述](https://img-blog.csdnimg.cn/58491bdf36f642b4a464257329fb7943.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/da7abe18d6d4563317dab783afa3538c.png)
 有一个master进程是root用户启动的,进程的id号为 `13517`;使用ps命令可以查看到当前进程的id和父进程的id;
 
 　　我们执行nginx的一个命令行命令就是 `nginx -s reload` 它会把之前的woker进程,包括cache进程,包括url的退出,再使用新的配置型去启动新的worker进程;
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f95ccdad5fce4a4bb4f6fa643eb6a538.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/37b89aa7ce43aaa47afa1f9c8b67d355.png)
 　我们可以看到之前的两个子进程 3718,3719已经不见了,新出的两个子进程为3729,3730
 
 　　**reload 和HUP信号它们的作用是相同的**;现在如果我们像Nginx的master 进程 `3714` 发送HUP信号;是不是会发生相同的结果尼?
-　　![在这里插入图片描述](https://img-blog.csdnimg.cn/1a9ecc0fcc8748558a37b75609019f57.png)
+　　![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9f7d97250f8a7e845029d040e376f8f8.png)
 我们可以看到发送信号HUP以后,之前的两个子进程都不在了,新启用的两个子进程;
 
 　　像quit,stop 对应的也有信号,那么如果我像一个worker进程发送一个退出的信号,那么这个worker进程就会退出;但是进程在退出时,会自动的向它的父进程(master进程)发送一个默认行为SIGCHLD信号;
 
 　　master进程收到了这样的一个信号以后,master进程就知道它的子进程退出了,它会新起一个worker进程,维持开启了的子进程个数的结构;
-　　![在这里插入图片描述](https://img-blog.csdnimg.cn/4f5065a690494a088b2c6fb0f9f36b42.png)
+　　![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f3281f6dd54400e32a8ca848e74167fb.png)
 SIGTERM    发送到进程的 TERM 信号用于要求进程终止。
 
 ##  使用信号管理Nginx的父子进程
@@ -44,7 +44,7 @@ Nginx是一个多进程的程序,多进程之间进行通讯可以使用共享�
 
 　　能够发送和处理信号的有master进程,worker进程和nginx命令行;
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/80b57025ae43477bbdb8a60ff6e36889.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/99d181be9f43fbd25ab04f2007f7d42c.png)
 我们先来看master进程,因为master进程会启动worker进程,所以它管理worker进程的方式首先是监控worker进程有没有发送CHLD信号,因为nginx操作系统中规定,当子进程终止的时候会向父进程CHLD信号;所以如果worker进程由于一些模块出现BUG,导致worker进程意外的终止掉;那么master进程可以立刻通过CHLD发现这样一个事件;重新把worker进程拉起;那么master进程还会通过接收一些信号;来管理worker进程;
 
 　　　　**master进程可以接收哪些信号尼?** TERM,INT,QUIT,HUP,USR1,USR2,WINCH;

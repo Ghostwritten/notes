@@ -167,5 +167,5 @@ cpu_model :Intel(R) i7-6600U 2.60GHz
  - [python os模块文件目录操作](https://blog.csdn.net/xixihahalelehehe/article/details/104253123)
  - [python sys模块](https://blog.csdn.net/xixihahalelehehe/article/details/106693564?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522165060724416782248546311%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=165060724416782248546311&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-1-106693564.nonecase&utm_term=sys&spm=1018.2226.3001.4450)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2e8a51e89bca4c9bb1e662d13e32c5a4.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3fe7aaeb75c49dfe932df00eb2dcbb77.gif#pic_center)
 

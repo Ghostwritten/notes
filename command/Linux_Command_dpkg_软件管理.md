@@ -4,7 +4,7 @@ tags: 软件包管理
 
 ---
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5884bd78dcbd41dd965db09c02681f32.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/30fe8e7419329895618a881d50951406.gif#pic_center)
 
 
 ##  1. 简介

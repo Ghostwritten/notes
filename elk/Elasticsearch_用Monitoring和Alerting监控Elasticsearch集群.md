@@ -10,27 +10,27 @@
  - ○ 减少负载和数据
  - ○ 当被监控集群出现问题，还能看到监控相关的数据
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319154120517.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319154210370.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d0637d6905b494751e659261599a86c4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d705619915e68687c82f893ec6c04b51.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319154237821.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319154301332.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7eb4ff8fa37a2ce1966646110725fb21.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/21a5d44aff21dd17f0a3357af1e7af9c.png)
 因为我需要钱来购买，因此选择30天试用即可
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319154554799.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021031915461892.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021031915464822.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/68ba4a214bb6d04ef2aca7bb3f58ede8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f2af588b3f23bbb88f5702f39e79a8e4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b61dcf817662d04c3d3241093aa9d5cc.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319154742792.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/926563d0542d227d2a3fc69680824fb8.png)
 
 
 ## 2. 配置 Monitoring
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319153842749.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/78e09544e67b309f7926ab488867fa1b.png)
 
 ## 3. Overall
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319153957827.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4aaca8a3dc66bc0d3ba946676aafc301.png)
 
 ## 4. Nodes
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319154011534.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/61a6bbb1c6bca7f5291b211ec6375a36.png)
 
 ## 5. Watcher for Alerting
 ● 需要 Gold 账户
@@ -40,12 +40,12 @@
 ○ `Condition` –查询是否满足条件（例如：大于 1000 条返回）
 ○ Actions – 执行相关操作（例如：发送
 ### 5.1 创建阈值告警
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319155232479.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cc358d69c0834a127895ac096736a879.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319155644112.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/73791dc95ecd8c4bd9de9437c61bb9e5.png)
 
 
 ### 5.2 创建高级监视
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319155946248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210319160051948.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6fa26527ac21acdc36e75bcae627ff09.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f72b0ad940ca73e2be417d14e0d48433.png)
 

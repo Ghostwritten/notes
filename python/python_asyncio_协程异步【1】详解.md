@@ -153,7 +153,7 @@ asyncio 模块最大特点就是，只存在一个线程，跟 JavaScript 一样
 由于代码的执行权在多个任务之间交换，所以看上去好像多个任务同时运行，其实底层只有一个线程，多个任务分享运行时间。表面上，这是一个不合理的设计，明明有多线程多进程的能力，为什么放着多余的 CPU 核心不用，而只用一个线程呢？但是就像前面说的，单线程简化了很多问题，使得代码逻辑变得简单，写法符合直觉。
 
 syncio 模块在单线程上启动一个事件循环（event loop），时刻监听新进入循环的事件，加以处理，并不断重复这个过程，直到异步任务结束。事件循环的内部机制，可以参考 JavaScript 的模型，两者是一样的。
-![https://www.wangbase.com/blogimg/asset/201911/bg2019112005.jpg](https://img-blog.csdnimg.cn/20200528110338627.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![https://www.wangbase.com/blogimg/asset/201911/bg2019112005.jpg](https://i-blog.csdnimg.cn/blog_migrate/4f100960556ab3d5604d5e14c447f8dd.png)
 ## 6. asyncio API基础
 下面介绍 asyncio 模块最主要的几个API。注意，必须使用 Python 3.7 或更高版本，早期的语法已经变了。
 

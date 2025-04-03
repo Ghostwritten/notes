@@ -1,7 +1,7 @@
 #  Linux Command vgextend 扩展卷组
 tags: 设备
 
-![](https://img-blog.csdnimg.cn/7467b9e33fb94337b378a539febc9f99.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/056c54ad2b45ae7f60892d62b1ba06eb.png)
 
 
 
@@ -15,14 +15,14 @@ LVM 是一个 Linux 系统，负责管理 Linux 系统中的文件系统和逻�
 
 为了更好地理解如何使用vgextend命令，我们将创建两个物理卷和一个卷组。完成后，我们将使用 vgextend 将一个物理卷添加到另一个物理卷的卷组中。
 ## 3. Creating Physical Volumes
-![](https://img-blog.csdnimg.cn/2d1be94f5b414a349bc6936f2675c9ad.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/76afbb85d54e61b0c3c5d17af51ada70.png)
 
 我们目前没有物理卷。我们需要一个块设备来初始化物理卷。我们可以使用以下命令列出块设备：
 ```bash
 $ pvs
 $ sudo lvmdiskscan
 ```
-![](https://img-blog.csdnimg.cn/b4c7b8d5ee62422990fa1ef6ad19c960.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/8d16dce0a9710db405e7d8baa0b779c3.png)
 
 由于我们需要创建两个物理卷，我们将使用`/dev/sda1`和`/dev/sdb1`。但在此之前，我们必须卸载块设备。
 
@@ -39,9 +39,9 @@ $ sudo umount /dev/sdb1
 $ sudo pvcreate /dev/sda1
 $ sudo pvcreate /dev/sdb1
 ```
-![](https://img-blog.csdnimg.cn/30acc3d17c034667bdb9e905ebd310c7.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/a111d4b14da94d44c97ae3335d632773.png)
 我们成功创建了物理卷，可以使用pvs命令进行确认。
-![](https://img-blog.csdnimg.cn/770eb781f35642c0a5221b73d54cb86c.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/03ea33f74b1b3d2587c99fa3a60a1187.png)
 
 
 ## 4. Creating Volume Groups
@@ -49,19 +49,19 @@ $ sudo pvcreate /dev/sdb1
 ```bash
 $ sudo vgs
 ```
-![](https://img-blog.csdnimg.cn/52e771f4d28140f198108bad55ba0d11.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/52c5909319ac0b4409e96e9986a8270a.png)
 我们现在可以继续为其中一个物理卷创建一个卷组，我们将通过向其中添加另一个物理卷来扩展其大小。因此，要为`/dev/sdb1`创建卷组，以下命令将是：
 ```bash
 $ sudo vgcreate volgroup1 /dev/sdb1
 ```
-![](https://img-blog.csdnimg.cn/bac656209ab84c80b8df0345dcf9540a.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/f527b7c059583ca2f2f889441a5fca88.png)
 我们将卷组命名为`volgroup`。我们可以使用 `vgs` 命令验证它。
-![](https://img-blog.csdnimg.cn/af42f0fe831e4d92a51276d86c4568f9.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/ada8b3192498fccf71bbfb524277f1de.png)
 要获取有关创建的卷组的更多详细信息，请使用以下`vgdisplay`命令：
 ```bash
 $ vgdisplay volgroup1
 ```
-![](https://img-blog.csdnimg.cn/d2a2fe0fd5034c509e9164457d9625c7.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/3ef610df07f0a069e1eff7615d8b64d7.png)
 
 ## 5. extend Volume Groups
 我们需要关注的是卷组的`Free PE`大小。我们目前有`1919` 免费 PE。要扩展这个大小，我们可以使用`vgextend`命令并添加我们其他物理卷的名称/dev/sda1作为参数。
@@ -70,9 +70,9 @@ $ vgdisplay volgroup1
 ```bash
 $ vgextend volgroup1 /dev/sda1
 ```
-![](https://img-blog.csdnimg.cn/0bdd433eb82d4e359fd546a10effd002.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/fdffeda864f7910b82d2f0489ac48e32.png)
 您应该会收到与上图中类似的成功消息，确认卷组已成功扩展。我们可以验证新的大小，如下所示：
-![](https://img-blog.csdnimg.cn/ed823de54c8948e98ed25c8447e74037.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/53493f4c975babf80740c30a96c3958f.png)
 您可以注意到我们新的免费 PE 大小从`1919`扩展到`2046`。这就是您可以轻松使用 vgextend Linux 命令通过添加物理卷来扩展卷组大小的方式。
 
 

@@ -162,7 +162,7 @@ $ grep -r 'root' *        #在当前目录及其子目录下搜索'rooot'行的�
 $ grep -l -r 'root' *     #在当前目录及其子目录下搜索'root'行的文件，但是不显示匹配的行，只显示匹配的文件
 
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f3c88b12d9ab4d8c98b11bfe261e5c0d.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5f64556d81f7ae06ee01f188f844ffdf.gif#pic_center)
 
 
 

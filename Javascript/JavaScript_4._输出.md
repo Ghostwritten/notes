@@ -34,7 +34,7 @@ window.alert(5 + 6);
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c0a06a27ff784e2296a07d2c846f8ea8.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_19,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b45a51748ae79748c82a0b8d50e54df8.png)
 ##  3. 操作 HTML 元素
 如需从 JavaScript 访问某个 HTML 元素，您可以使用 `document.getElementById(id)` 方法。
 
@@ -58,7 +58,7 @@ document.getElementById("demo").innerHTML="段落已修改。";
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/59389a2afff44bde9f75d3804eb37d8e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6583a656102020184d2aab50055cc111.png)
 以上 JavaScript 语句（在 <script> 标签中）可以在 web 浏览器中执行：
 
 `document.getElementById("demo")` 是使用 id 属性来查找 HTML 元素的 JavaScript 代码 。
@@ -83,7 +83,7 @@ document.write(Date());
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d241b97b760f4921a1f7db145d6bcff3.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bd285d4f7f067ca9c33d946de28ffcea.png)
 
 ```bash
 <!DOCTYPE html>
@@ -107,8 +107,8 @@ function myFunction()
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3f488929d2cc4c4bbc931d10dfcd1ae8.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_16,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8d15b75557eb415ebba17ef91c587e16.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/04324ccfbf910971e4235cbf86c5e770.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4028890760f7716e900a8184c4ed3f19.png)
 ##  4. 写到控制台
 如果您的浏览器支持调试，你可以使用 `console.log()` 方法在浏览器中显示 JavaScript 值。
 
@@ -131,5 +131,5 @@ console.log(c);
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/16e544793beb4b0bbbaa7ccd2af5b491.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7ec7d6f06b5100851b9f0aa8466f387c.png)
 

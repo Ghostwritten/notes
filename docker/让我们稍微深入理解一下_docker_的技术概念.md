@@ -4,7 +4,7 @@
 
 --------------
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9d6216d2bc174e6582a2df9afe84973c.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/059aaadc4a8af89f1f9e98a9c2523ba0.gif#pic_center)
 
 
 
@@ -59,12 +59,12 @@ docker 可以让开发者打包他们的应用以及依赖包到一个轻量级�
 容器时在 linux 上本机运行，并与其他容器共享主机的内核，它运行的一个独立的进程，不占用其他任何可执行文件的内存，非常轻量。
 
 虚拟机运行的是一个完成的操作系统，通过虚拟机管理程序对主机资源进行虚拟访问，相比之下需要的资源更多。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200317164822581.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/05a4daa6fb05c11b08373a41c7536080.png)
 ### 6、docker 版本
 Docker Community Edition（CE）社区版
 Enterprise Edition(EE) 商业版
 ### 7、docker 和 openstack 对比
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020031716532830.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9b5b286dbee0f156b221b72474b6123d.png)
 
 ### 8、容器在内核中支持 2 种重要技术
 
@@ -76,12 +76,12 @@ linux namespace是提供资源隔离的方案
  - 系统可为进程分配不同的namespace
  - 进程隔离，资源隔离
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0a2107337ea34514b8ff2c794f87656f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/62076ac577ef48ed8c531bd4213b5676.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/24d6854e4437f08aa6a245c86c1d6204.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d8bc253eb5a2f53e34460ac92430a09f.png)
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200317165513621.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4d5c4d8e0bb49a17f0d81540adef0f05.png)
 #### 2.control Group 控制组
 
 cgroup 的特点是：
@@ -136,7 +136,7 @@ docker 利用容器来运行应用，容器是从镜像创建的运行实例，�
 
 ## 二、docker 架构
 ### 1、总体架构
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020031717023073.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d85559bdfa25815b4b69b2a345cca92d.png)
 
  - distribution 负责与 docker registry 交互，上传洗澡镜像以及 v2 registry 有关的源数据
  - registry 负责 docker registry 有关的身份认证、镜像查找、镜像验证以及管理
@@ -148,7 +148,7 @@ docker 利用容器来运行应用，容器是从镜像创建的运行实例，�
 
 ### 2、docker 架构 2
 如果觉得上面架构图比较乱可以看这个架构：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200317170652961.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dc201ec3568b6e544a55007dcacd4147.png)
 从上图不难看出，用户是使用 `Docker Client` 与 `Docker Daemon` 建立通信，并发送请求给后者。
 
 而 `Docker Daemon` 作为 Docker 架构中的主体部分，首先提供 `Server` 的功能使其可以接受 `Docker Client` 的请求；而后 `Engine` 执行 Docker 内部的一系列工作，每一项工作都是以一个 `Job` 的形式的存在。
@@ -158,7 +158,7 @@ Job 的运行过程中，当需要容器镜像时，则从 `Docker Registry` 中
 而 `libcontainer` 是一项独立的容器管理包，`networkdriver` 以及 `execdriver` 都是通过 `libcontainer` 来实现具体对容器进行的操作。当执行完运行容器的命令后，一个实际的 Docker 容器就处于运行状态，该容器拥有独立的文件系统，独立并且安全的运行环境等。
 ### 3、docker 架构 3
 再来看看另外一个架构，这个个架构就简单清晰指明了 `server/client` 交互，容器和镜像、数据之间的一些联系。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200317170945947.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7e314e3a9f832e0dbe73ac2aa51126e9.png)
 这个架构图更加清晰了架构
 
 `docker daemon` 就是 docker 的守护进程即 `server` 端，可以是远程的，也可以是本地的，这个不是 `C/S` 架构吗，客户端 `Docker client` 是通过 `rest api` 进行通信。
@@ -192,7 +192,7 @@ docker daemon 的架构可以分为：`docker server、engine、job`。
 
 ### 3、docker server
 docker server 在 docker 架构中时专门服务于 docker client 的 server，该 server 的功能时：接受并调度分发 docker client 发送的请求，架构图如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200317172041595.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c69c6703137af83a169dd48abd5d4291.png)
  在 Docker 的启动过程中，通过包 `gorilla/mux`（golang 的类库解析），创建了一个 `mux.Router`，提供请求的路由功能。在 Golang 中，`gorilla/mux` 是一个强大的 URL 路由器以及调度分发器。该 mux.Router 中添加了众多的路由项，每一个路由项由**HTTP请求方法（PUT、POST、GET或DELETE）、URL、Handler** 三部分组成。
 
 若 Docker Client 通过 HTTP 的形式访问 Docker Daemon，创建完 mux.Router 之后，Docker 将 Server 的监听地址以及 mux.Router 作为参数，创建一个 `httpSrv=http.Server{}`，最终执行 `httpSrv.Serve()` 为请求服务。
@@ -221,7 +221,7 @@ Docker Registry 是一个存储容器镜像的仓库。而容器镜像是在容�
 ### 7、Graph
 **Graph 在 Docker 架构中扮演已下载容器镜像的保管者，以及已下载容器镜像之间关系的记录者。**一方面，Graph 存储着本地具有版本信息的文件系统镜像，另一方面也通过 GraphDB 记录着所有文件系统镜像彼此之间的关系。
 Graph 的架构如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200317172452571.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0b11e1018dcd5ef2282cc467a80997e7.png)
 其中，`GraphDB` 是一个构建在 `SQLite` 之上的小型图数据库，实现了节点的命名以及节点之间关联关系的记录。它仅仅实现了大多数图数据库所拥有的一个小的子集，但是提供了简单的接口表示节点之间的关系。
 
 同时在 Graph 的本地目录中，关于每一个的容器镜像，具体存储的信息有：**该容器镜像的元数据，容器镜像的大小信息，以及该容器镜像所代表的具体 rootfs**。
@@ -240,18 +240,18 @@ Graph 的架构如下：
 在 graphdriver 的初始化过程之前，有 4 种文件系统或类文件系统在其内部注册，它们分别是 `aufs`、`btrfs`、`vfs` 和 `devmapper`。而 Docker 在初始化之时，通过获取系统环境变量 DOCKER_DRIVER 来提取所使用 driver 的指定类型。**而之后所有的 graph 操作，都使用该 driver 来执行**。
 
 graphdriver 的架构如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200317172750819.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f89947de3ce393da965df9759804dd36.png)
 
 `networkdriver` 的用途是完成 Docker 容器网络环境的配置，其中包括 Docker 启动时为 Docker 环境创建网桥；Docker 容器创建时为其创建专属虚拟网卡设备；以及为 Docker 容器分配 IP、端口并与宿主机做端口映射，设置容器防火墙策略等。networkdriver 的架构如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200317172839131.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/74e7d121fb537f79b1d131ce095ce36f.png)
 `execdriver` 作为 Docker 容器的执行驱动，**负责创建容器运行命名空间，负责容器资源使用的统计与限制，负责容器内部进程的真正运行等**。在 execdriver 的实现过程中，原先可以使用 LXC 驱动调用 LXC 的接口，来操纵容器的配置以及生命周期，而现在 execdriver 默认使用 `native` 驱动，不依赖于 LXC。
 
 具体体现在 Daemon 启动过程中加载的 `ExecDriverflag` 参数，该参数在配置文件已经被设为 native 。这可以认为是 Docker 在 1.2 版本上一个很大的改变，或者说 Docker 实现跨平台的一个先兆。execdriver 架构如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200317173014383.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b7eaa863fc4578914fcef356dbdac442.png)
 ### 9、libcontainer
 libcontainer 是 Docker 架构中一个使用 Go 语言设计实现的库，**设计初衷是希望该库可以不依靠任何依赖，直接访问内核中与容器相关的 API。**
 
-正是由于 libcontainer 的存在，Docker 可以直接调用 libcontainer，而最终操纵容器的 `namespace、cgroups、apparmor`、**网络设备以及防火墙规则**等。这一系列操作的完成都不需要依赖LXC或者其他包。libcontainer架构如下![在这里插入图片描述](https://img-blog.csdnimg.cn/20200317173128272.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+正是由于 libcontainer 的存在，Docker 可以直接调用 libcontainer，而最终操纵容器的 `namespace、cgroups、apparmor`、**网络设备以及防火墙规则**等。这一系列操作的完成都不需要依赖LXC或者其他包。libcontainer架构如下![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/11a3be5e9b9dc49ac1699c3ab8210a3a.png)
 另外，`libcontainer` 提供了一整套标准的接口来满足上层对容器管理的需求。或者说，libcontainer 屏蔽了 Docker 上层对容器的直接管理。又由于 libcontainer 使用 Go 这种跨平台的语言开发实现，且本身又可以被上层多种不同的编程语言访问，因此很难说，未来的 Docker 就一定会紧紧地和 Linux 捆绑在一起。而于此同时，Microsoft 在其著名云计算平台 Azure 中，也添加了对 Docker 的支持，可见 Docker 的开放程度与业界的火热度。
 
 暂不谈 Docker，由于 libcontainer 的功能以及其本身与系统的松耦合特性，很有可能会在其他以容器为原型的平台出现，同时也很有可能催生出云计算领域全新的项目。
@@ -265,7 +265,7 @@ Docker 按照用户的需求与指令，订制相应的 Docker 容器：
  - 用户通过指定计算资源的配额，使得 Docker 容器使用指定的计算资源；
  - 用户通过配置网络及其安全策略，使得 Docker 容器拥有独立且安全的网络环境；
  - 用户通过指定运行的命令，使得 Docker 容器执行指定的工作。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200317173736319.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ced2c38bb3aa6dc30015c50bced4d34e.png)
 
 参考：
  - [docker万字详解](https://mp.weixin.qq.com/s?__biz=MzI1NDY0MTkzNQ==&mid=2247486863&idx=1&sn=d9f2ca6f86676d66620aa45bda9419c6&chksm=e9c35fefdeb4d6f9f4177a34ae869af0add428771e96342a5b61f820ee0cb441a2cf29d40b69&mpshare=1&scene=1&srcid=&sharer_sharetime=1572922732474&sharer_shareid=9e1d0f93025303e47ff2523f5ebf4078&key=f0016e59e9d353a1c927b16e68d48059a300cbef2c22f98539f21d35cd4f02682061bbff091ac0994ee23eae8b33fe793435e69f3356d2eec110f385761c1a9dbd5af380dbcd4f081f90dab52ea22963&ascene=1&uin=MjkwMDAzNTYzOQ==&devicetype=Windows%2010&version=62080079&lang=zh_CN&exportkey=AQGe90GjUFenNwIsZupLDE8=&pass_ticket=/7kx/uLmOCunzqxvArllKJ4VTeFnTz2XWXHdCJH5qlN3b9hHf/QFeHUYilXet1kJ)

@@ -1,6 +1,6 @@
 #  Go struc 结构体
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1252efbaf6f943c881140bd0698be3c7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cb4863c12831c4939b3c115127c90b28.png)
 
 
 

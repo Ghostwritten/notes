@@ -12,7 +12,7 @@ Linux 是一个多任务操作系统，它支持远大于 CPU 数量的任务同
 
 **CPU 寄存器，是 CPU 内置的容量小、但速度极快的内存。而程序计数器，则是用来存储 CPU 正在执行的指令位置、或者即将执行的下一条指令位置。它们都是 CPU 在运行任何任务前，必须的依赖环境，因此也被叫做 CPU 上下文。**
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210608173138456.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/103ebdb48329077237979074b6221079.png)
 **CPU 上下文切换，就是先把前一个任务的 CPU 上下文（也就是 CPU 寄存器和程序计数器）保存起来，然后加载新任务的上下文到这些寄存器和程序计数器，最后再跳转到程序计数器所指的新位置，运行新任务。**
 
 而这些保存下来的上下文，会存储在系统内核中，并在任务重新调度执行时再次加载进来。这样就能保证任务原来的状态不受影响，让任务看起来还是连续运行。
@@ -35,7 +35,7 @@ Linux 按照特权等级，把进程的运行空间分为内核空间和用户�
 
  - 内核空间（Ring 0）具有最高权限，可以直接访问所有资源；
  - 用户空间（Ring 3）只能访问受限资源，不能直接访问内存等硬件设备，必须通过系统调用陷入到内核中，才能访问这些特权资源。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210608173705817.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8f6affffc02591577ccef94c19282602.png)
 换个角度看，也就是说，进程既可以在用户空间运行，又可以在内核空间中运行。进程在用户空间运行时，被称为进程的用户态，而陷入内核空间的时候，被称为进程的内核态。从用户态到内核态的转变，需要通过系统调用来完成。比如，当我们查看文件内容时，就需要多次系统调用来完成：首先调用 `open()` 打开文件，然后调用 `read()` 读取文件内容，并调用 `write()` 将内容写到标准输出，最后再调用 `close()` 关闭文件。那么，系统调用的过程有没有发生 CPU 上下文的切换呢？答案自然是肯定的。
 
 
@@ -55,7 +55,7 @@ CPU 寄存器里原来用户态的指令位置，需要先保存起来。接着�
 因此，**进程的上下文切换就比系统调用时多了一步：在保存当前进程的内核状态和 CPU 寄存器之前，需要先把该进程的虚拟内存、栈等保存下来；而加载了下一进程的内核态后，还需要刷新进程的虚拟内存和用户栈**。如下图所示，保存上下文和恢复上下文的过程并不是“免费”的，需要内核在 CPU 上运行才能完成。
 
 如下图所示，保存上下文和恢复上下文的过程并不是“免费”的，需要内核在 CPU 上运行才能完成。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021060817511750.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0497a7b1d47c787e31a73fe6a6bb8283.png)
 根据 Tsuna 的测试报告，每次上下文切换都需要几十纳秒到数微秒的 CPU 时间。这个时间还是相当可观的，特别是在**进程上下文切换次数较多的情况下，很容易导致 CPU 将大量时间耗费在寄存器、内核栈以及虚拟内存等资源的保存和恢复上，进而大大缩短了真正运行进程的时间**。这也正是上一节中我们所讲的，**导致平均负载升高的一个重要因素**。
 
 另外，我们知道， Linux 通过 `TLB`（Translation Lookaside Buffer）来管理虚拟内存到物理内存的映射关系。当虚拟内存更新后，TLB 也需要刷新，内存的访问也会随之变慢。特别是在多处理器系统上，缓存是被多个处理器共享的，刷新缓存不仅会影响当前处理器的进程，还会影响共享缓存的其他处理器的进程。
@@ -310,6 +310,6 @@ RES:    2450431    5279697   Rescheduling interrupts
 
 今天，我通过一个 sysbench 的案例，给你讲了上下文切换问题的分析思路。碰到上下文切换次数过多的问题时，我们可以借助 `vmstat`  、  pidstat 和 /proc/interrupts 等工具，来辅助排查性能问题的根源。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210615155139678.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021061515515883.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2894b8830ae4d595ae76c3c86b5a1d08.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0973e0cdaadd6189fbd80422711c6f2a.png)
 

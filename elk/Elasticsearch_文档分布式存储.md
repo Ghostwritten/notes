@@ -29,8 +29,8 @@ shard = hash(_routing) % number_of_primary_shards
 ## 3. 更新文档
 顺序： `index -> hash -> route -> delete -> index -> success -> response`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303162300906.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/09e8cac7f51b30cb9bec58f61d246fdf.png)
 ## 4. 删除一个文档
 顺序 ：`detele -> hash&route -> delete -> delete replica -> success -> deleted -> response`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303162501532.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dc05fed40bc79c6dcacc6dfd385ac998.png)
 

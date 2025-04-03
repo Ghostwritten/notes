@@ -1,6 +1,6 @@
 #  Go 库 pflag 命令行参数解析
 
-![](https://img-blog.csdnimg.cn/df2409c6893f41e4888b8bfa97855f09.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/9dedc49ce5d7890150d7a62e393ee3bf.png)
 
 
 
@@ -170,7 +170,7 @@ var ip = pflag.IntP("flagname", "f", 1234, "help message")
 pflag.Lookup("flagname").NoOptDefVal = "4321"
 ```
 上面的代码会产生结果，具体你可以参照下表
-![](https://img-blog.csdnimg.cn/83fb14e8cd374531aa81863fcecf1b32.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/04960bfdf45c2146b6f3865ade5476a6.png)
 ### 6.5 弃用标志或者标志的简写
 Pflag 可以弃用标志或者标志的简写。弃用的标志或标志简写在帮助文本中会被隐藏，并在使用不推荐的标志或简写时打印正确的用法提示。例如，弃用名为 logmode 的标志，并告知用户应该使用哪个标志代替：
 

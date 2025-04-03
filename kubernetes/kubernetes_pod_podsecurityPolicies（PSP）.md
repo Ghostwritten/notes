@@ -4,7 +4,7 @@ tags: 资源对象，pod
 
 
 [
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8c23b6f31d9b4eefb45a052286b136c8.jpeg#pic_center)](https://www.rottentomatoes.com/tv/devs)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fa6d8cdcf85bcfc60478dd9a86344dcf.jpeg#pic_center)](https://www.rottentomatoes.com/tv/devs)
 
 *美剧《开发者》（Devs）颠覆感藏在最后。*
 
@@ -49,7 +49,7 @@ tags: 资源对象，pod
 ##  4. 实例
 ###   4.1 控制是否允许超出父进程特权
 `allowPrivilegeEscalation`：控制进程是否可以获得超出其父进程的特权。 此布尔值直接控制是否为容器进程设置 `no_new_privs`标志。 当容器满足一下条件之一时，`allowPrivilegeEscalation` 总是为 true： 以特权模式运行，或者 具有 `CAP_SYS_ADMIN` 权能 `readOnlyRootFilesystem`：以只读方式加载容器的根文件系统。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210515233718292.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8433068411e788457a61c1bd4c6203f5.png)
 
 ```c
 root@master:~/cks/securitytext# vim /etc/kubernetes/manifests/kube-apiserver.yaml

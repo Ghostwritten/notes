@@ -3,7 +3,7 @@ tags: 分析
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9ced35d680764269b04246022bc02b15.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f8d138b76d09fe589a63794a6333095a.png)
 
 
 
@@ -96,7 +96,7 @@ args 命令参数
 
 ## 4. 实例
 ### 4.1 ps 不带任何选项
-![在这里插入图片描述](https://img-blog.csdnimg.cn/73314173eb4b47fbac363020a315ef9b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f88b6b3b06789415a58242accbb418a5.png)
 
 默认输出包括以下类别：
 
@@ -106,7 +106,7 @@ args 命令参数
 - CMD：启动进程的命令的名称。
 
 ###  4.2 a、u、x组合
-![a产生u更x详细的输出](https://img-blog.csdnimg.cn/eb857f2418704c89b35832d4e8ae6d9f.png)
+![a产生u更x详细的输出](https://i-blog.csdnimg.cn/blog_migrate/f3228da55f6847f38291ca936b1c0ba8.png)
 
 扩展输出的新类别包括：
 
@@ -123,7 +123,7 @@ args 命令参数
 ```bash
 ps -axjf
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1d17b17583d444bb98964da2e390c0d4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/099f52a536c386f6f04b0030f5c7106c.png)
 
 ### 4.4 按用户过滤进程列表
 
@@ -136,7 +136,7 @@ ps -U [real user ID or name] -u [effective user ID or name] u
 ```bash
 ps -U phoenixnap -u phoenixnap u
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/95556d10191e47758f59e71b407b9ca8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/94bceb05364cd5e50ce6dde395e8a16e.png)
 
 ### 4.5 其他选项
 

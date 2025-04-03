@@ -1,6 +1,6 @@
 #  javascript 数组
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/507a9fb2b0244a79b138fcda0fd2bcfa.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/da3c903c0d15df8725f8c291d2aca38a.png)
 
 
 
@@ -114,7 +114,7 @@ myArray[2]=myCars;
 var x=myCars.length             // myCars 中元素的数量
 var y=myCars.indexOf("Volvo")   // "Volvo" 值的索引值
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/00e496e05c254d51ac5fb1341676b230.jpeg#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/512e7f36bf38c3d84b88aae6d43abbd7.jpeg#pic_center)
 
 ## 5. 创建新方法
 
@@ -147,7 +147,7 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/efb27e90566a4140bf8c6ca1e78953d9.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a1246faf92dfae5cf7d0f65b7fe29401.gif#pic_center)
 
 ## 6. 实例
 ###  6.1 合并两个数组 - concat()
@@ -258,7 +258,7 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a93be687799141ac9dd63100d023b91d.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/089e3a43013876f5e3b0b89f1c666a32.gif#pic_center)
 ### 6.5 数组的末尾添加新的元素 - push()
 
 ```bash
@@ -285,7 +285,7 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/78c4080b520e432cba93acdff35f6a72.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0923acaaeb37738f07c65ced541da4a7.gif#pic_center)
 ### 6.6 将一个数组中的元素的顺序反转排序 - reverse()
 
 ```bash
@@ -312,7 +312,7 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d17f7d36e087454aa97727345c8ba65f.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/81c95f882601efa435c775b77d19f31d.gif#pic_center)
 ### 6.7 删除数组的第一个元素 - shift()
 
 ```bash
@@ -341,7 +341,7 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d1b8e31b8b564cbc8a0bd5f4aa8ecad9.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7205c1cc4abd094665ea641b88b3cb45.gif#pic_center)
 ### 6.8 从一个数组中选择元素 - slice()
 
 ```bash
@@ -368,7 +368,7 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/756c54881331454f891c479e61550336.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c3c1dc82b16a4a5bc54ee273205cc15d.gif#pic_center)
 ### 6.9 数组排序（按字母顺序升序）- sort()
 
 ```bash
@@ -395,7 +395,7 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a47e66f3ab9249a58f00508aae2af3aa.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a1c061b85a80c16579a2298aa7e924c6.gif#pic_center)
 
 ### 6.10 数字排序（按数字顺序升序）- sort()
 
@@ -423,7 +423,7 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7810fb509e574a10a6ba4c1e14250405.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9f745ac61face168faa9b25267ef2ebd.gif#pic_center)
 ### 6.11 数字排序（按数字顺序降序）- sort()
 
 ```bash
@@ -450,7 +450,7 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/55811c913c2842ba99ccc9500233adef.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2cac61a3f2f4d87fb0b55402793f2af9.gif#pic_center)
 
 ### 6.12 在数组的第2位置添加一个元素 - splice()
 ```bash
@@ -477,7 +477,7 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ad43cf8867ed48d8a53703f3d7c88f44.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/161679d212b3df1fd9457e871aceaa7f.gif#pic_center)
 
 ### 6.13 转换数组到字符串 -toString()
 
@@ -505,7 +505,7 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7024e66773344bb6b8a434a0800c2d2a.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dc9c8986fbcf13d5b4f910bb105dde69.gif#pic_center)
 ### 6.14 在数组的开头添加新元素 - unshift()
 
 ```bash
@@ -533,5 +533,5 @@ function myFunction(){
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/42671bc6302f48519f51073a4822e311.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/61eaabf92dc92a2ff49a834c55822b0c.gif#pic_center)
 

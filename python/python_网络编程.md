@@ -1,6 +1,6 @@
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/927e36586e3146b4a5847c1e59ec0e30.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4d821e6158e5da1a2ef05d26979f98c9.png)
 
 
 ## 1. 前言
@@ -18,9 +18,9 @@
 ## 2. Socket 类型
 套接字格式为：`socket（family，type[，protocal]）`，使用给定的地址族、套接字类型（如表1-2所示）、协议编号（默认为0）来创建套接字
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/46a4490df7aa44d990e33c71299de161.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/44618394be1e623cd53526ec514b8d13.png)
 Python网络编程常用的函数，其中包括了TCP和UDP
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4c3da96aef9c432fa25d230fa4fbfe28.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4ac216926f7d6fa006cbab292797f62b.png)
 ## 3. TCP编程
 网络编程一般包括两部分：**服务端和客户端**。TCP是一种面向连接的通信方式，主动发起连接的叫客户端，被动响应连接的叫服务端。首先说一下服务端，创建和运行TCP服务端一般需要五个步骤：
 - 1）创建Socket，绑定Socket到本地IP与端口。
@@ -89,7 +89,7 @@ s.send(b'exit')
 s.close()
 ```
 最后看一下运行结果，先启动服务端，再启动客户端。服务端打印的信息如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ef1bdea085604672b229bd0d7d03f995.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/31c7cb2edd52d020f59ee09f6a303485.gif#pic_center)
 
 ## 4. UDP编程
 TCP通信需要一个建立可靠连接的过程，而且通信双方以流的形式发送数据。相对于TCP，UDP则是面向无连接的协议。使用UDP协议时，不需要建立连接，只需要知道对方的IP地址和端口号，就可以直接发数据包，但是不关心是否能到达目的端。虽然用UDP传输数据不可靠，但是由于它没有建立连接的过程，速度比TCP快得多，对于不要求可靠到达的数据，就可以使用UDP协议。使用UDP协议，和TCP一样，也有服务端和客户端之分。UDP编程相对于TCP编程比较简单，服务端创建和运行只需要三个步骤：
@@ -130,7 +130,7 @@ for data in [b'liming', b'jack']:
     print(s.recv(1024).decode('utf-8'))
 s.close()
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/301647f8ed024acca025624a7f94659f.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a397e44ab06e463f4ffbcadf5df2b88b.gif#pic_center)
 以上就是UDP服务端和客户端数据交互的流程，UDP的使用与TCP类似，但是不需要建立连接。此外，服务器绑定UDP端口和TCP端口互不冲突，即UDP的9999端口与TCP的9999端口可以各自绑定。
 
 参考：

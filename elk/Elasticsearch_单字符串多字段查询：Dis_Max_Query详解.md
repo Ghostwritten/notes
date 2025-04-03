@@ -1,6 +1,6 @@
 
 ## 1. 单字符串查询
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201118152837989.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a01af340661a010631eda4e0ae075cdb.png#pic_center)
 DEMO
 
 ```bash
@@ -77,7 +77,7 @@ POST /blogs/_search
 结果
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201118154710116.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a2f28ff5ef424bbb8efe38c038ec5a71.png#pic_center)
 ## 3. Disjunction Max Query 查询
 上列中，`title` 和 `body` 相互竞争
 

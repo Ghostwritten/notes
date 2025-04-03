@@ -1,6 +1,6 @@
 #  Go 如何获取文件的大小
 
-![](https://img-blog.csdnimg.cn/0ea10c9a9763440bb7b54ba2432cfa2a.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/9b665d4b35e14aa0837a45e5a2fda415.png)
 
 
 

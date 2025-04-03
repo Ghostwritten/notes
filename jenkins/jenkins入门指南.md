@@ -7,11 +7,11 @@
 -----
 
 ## 1. 简介
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fbd91a41c5c24df29edce25fab7c5d50.png#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9d8cd27c00bf45258435e6a64d24453e.png#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b5588dfb018e4068a17e1ec71ddaa072.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fc068601f4ddfb3f70ac8577625d8e2d.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fbfd5eb34c310a2ca344a54b43f9bff3.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/01b45be2e8f18947db314bab5464c065.png#pic_center)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d30dda4b604d4ab88b158ffb90112da6.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8510e30e388debdb1a5ca0c9d78dc81b.png#pic_center)
 
 
 ##  2. Jenkins安装
@@ -74,19 +74,19 @@ LISTEN     0      50          :::8090                    :::*                   
 
 在web上进行访问`http://192.168.137.100:8090`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6cf9cddd80014bc38e4be8b5bfa430cd.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/82c4b6985d1fa3270c26ec23b5e7d781.png#pic_center)
 
 
 ```c
 # cat /var/lib/jenkins/secrets/initialAdminPassword
 6445fe48a5f34f06801937fd1fa44668
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/582437fe0cd74c37b0c961581e3d2697.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0974baca4354167ae2066044fb4182d2.png#pic_center)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/83b56a2bddc24bc18fe25e062190f9ca.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/208e0a224c4e0dbd836e6083826bf063.png#pic_center)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a18f7a0ddb65477ab83fad4028362d3f.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/463376c40d8a1c0e9596e2f6fc899e1c.png#pic_center)
 
 
 要重新启动下jenkins
@@ -100,12 +100,12 @@ http://192.168.137.100:8090/login
  - 账号：admin
  - 密码：6445fe48a5f34f06801937fd1fa44668
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/aec8bc7b972f45829d01a734b4306b24.png#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/43b96a8895a34da886f013398904beac.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/36f098fc5e70d50e6a655513ff8795f2.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2cb970f78f543b2744f9e3167a1c557a.png#pic_center)
 
 修改admin的密码
-![在这里插入图片描述](https://img-blog.csdnimg.cn/72e856d1dc074233bf76002d91512c15.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9c0111ed98cf44d589e026f2215c9d97.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ac73abaab170e65be12d9ca89e32fd80.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3dffe6511e9d128f18e1d54dbb2eed1d.png#pic_center)
 
 
 ## 3. Jenkins插件管理
@@ -114,12 +114,12 @@ Jenkins本身是一个引擎、一个框架，只是提供了很简单功能，�
 1、自动插件安装
 在jenkins主页面，点击系统管理
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f8a8e6360c894c7da402a846a4813771.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ffd5e975ab816af411271f611092b582.png#pic_center)
 
 出现问题：解决“该Jenkins实例似乎已离线”
 There were errors checking the update sites: SocketTimeoutException: connect timed out
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7677e861559e463480839a4c36d6a1d1.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/69f821f18bec6acb77b8f2583f3bda39.png#pic_center)
 
 解决方法： 修改更新地址的https为http
 
@@ -139,26 +139,26 @@ There were errors checking the update sites: SocketTimeoutException: connect tim
 
 然后刷新页面
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d716800663364d3f85948b7f9d790c4e.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a4350725ca484384cd1a46d6510e8fac.png#pic_center)
 
 2、手工安装插件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ee8c5ee588b54db8b34ca44a1d9835d4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ff65c8a93c408a62d61f129138fa1fd2.png)
 [https://mirrors.tuna.tsinghua.edu.cn/jenkins/plugins/ssh/latest/](https://mirrors.tuna.tsinghua.edu.cn/jenkins/plugins/ssh/latest/)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/61fa788d7b834c7fa7029f83c66c5d35.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f5355043cffaffcf09741e3b81c71f41.png#pic_center)
 
 下载`ssh.hpi`后，手动安装ssh插件，进入到插件管理页面
 提前下载在win电脑上
 Web页面添加插件
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d7ac1085a74e4299afedd13acbd697ac.png#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4035b4aafea145d08b96c0b5acdf2fcc.png#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/35e6e354257b48aeae9aac0dbe42cd19.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d63fbae13c88f9967085c5c8ada81a6b.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/23357b07124bbdc416fda3819e0ef022.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/004c4358b9d662381293411d87c13c65.png#pic_center)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4db085439f3045268ca1da3600292b74.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cf9254da01d072031f4f00878f18c4ac.png#pic_center)
 
 安装成功后
-![在这里插入图片描述](https://img-blog.csdnimg.cn/47ae369a9f4342a99fff7ac48e4c41f4.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/da3a462c97f51c61ee751f576677823a.png#pic_center)
 
 ## 4. Jenkins 目录与文件
 
@@ -218,8 +218,8 @@ Jenkins启动文件 ：`/etc/init.d/jenkins`
 在jenkins中，构建作业是很容易建立的，而且可以根据需求安装各种插件，来创建多种形式的构建作业，下面是创建自由式作业
 自由式构建作业是最灵活和可配置的选项，并且可以用于任何类型的项目，它的配置相对简单，其中很多配置在选项也可以用在其他构建作业中
 在jenkins主页面，点击左侧菜单栏的“新建”或者“`New job`”
-![在这里插入图片描述](https://img-blog.csdnimg.cn/874eb6183e424844b789db0ffeeb419a.png#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/df30dc39fa09469cbc5c8a855e444892.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f3d2bf415ba70580a10288e695569e5a.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b71d55a76633211a51973bae35b586ef.png#pic_center)
 
 
 
@@ -242,11 +242,11 @@ Job的配置页面，主要是包括通用配置、源码管理、构建触发�
 
 执行linux命令、脚本实验
 先看通用配置选项
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bb7be667dd5b40b29eced8f9859c4fc0.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e7f5f58523580762dd2dfacf2d098381.png#pic_center)
 
 
 勾选“**丢弃旧的构建**”，这是必须提前考虑的重要方面，就是如何处理构建历史，构建作业会消耗大量的磁盘空间，尤其是存储的构建产物(比如执行java构建时会生成的JAR、WAR等)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6e04343019be490db686bc131bc16183.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2b1d267b46c0989125f0d5ad385456a0.png#pic_center)
 
 
 该选项允许你限制在构建历史记录的作业数。可以设置jenkins只保留最近几次的构建，或者只保留指定数量的构建，此外，jenkins永远不会删除最后一个稳定和成功的构建。
@@ -257,23 +257,23 @@ Job的配置页面，主要是包括通用配置、源码管理、构建触发�
  - 添加构建操作
  - 选择“执行shell”
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f3e70adaca0c464d88e561846a2b46ae.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8c1d51a93ceb0168098c1f72c9676de3.png#pic_center)
 
 在Command窗口
 输入要执行的命令。每一行一条，可以输入多条
 `Add build step`、添加其它构建
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1f20715c179f43df91048512e803023f.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/147e6f082c52150eed49146aa475440b.png#pic_center)
 
 直接点击保存
-![在这里插入图片描述](https://img-blog.csdnimg.cn/56a5c444cdb74370b89f3ea37eebb569.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3068e20dabb9d066127b4f6427f6edff.png#pic_center)
 
 回到job主页面
 点击立即构建
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b6d545286ecb4edeb00db356d4fa49a3.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/83b90f512b5d701a9f68afcf14b97258.png#pic_center)
 
 
 点击立即构建，执行job的构建任务，此时的job就是执行一条linux命令
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b585635deee644e78f1986e2be27a735.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6e6f3f71f6031fccd5996da5cfbd6d30.png#pic_center)
 
 
  - 1：点击工作区，右侧就会列出工作的内容
@@ -281,7 +281,7 @@ Job的配置页面，主要是包括通用配置、源码管理、构建触发�
  - 3：点击这个可以查看本次构建的详细输出
 
 点击`Console Output`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5f7319e7732a45948c28498d21658621.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c875d10baa1db59b0eba851fc32d6361.png#pic_center)
 
 
 Job执行时的当前工作目录为`jenkins`主目录`+workspaces+`以`job`名称命名的文件夹，知道这一点对于后面写脚本执行部署任务时非常重要。
@@ -290,7 +290,7 @@ Job执行时的当前工作目录为`jenkins`主目录`+workspaces+`以`job`名�
 
 ## 6. 连接gitlab获取仓库代码
 在gitlab上复制仓库的地址
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b81b13ca8c7e4a41b90f0ba899b3a9eb.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c768b6f79044b56e12d40456f522dcb4.png#pic_center)
 
 
 选择ssh的方式
@@ -300,11 +300,11 @@ git@192.168.137.100:xmlgrg_test/xm.git
 ```
 
 然后再`jenkins`上的`My-Freestyle-job`的配置页面，下拉到“源码管理”部分
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1118998770084896ab9f53ef5e758a67.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c3b1c58fbabb4eb999c31cf3ee3a2b2a.png#pic_center)
 
 
 发现没有
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6c9125d2cc454d348ae15a23514b3f8a.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/05fda54199dd72f0ec1ea2118d184191.png#pic_center)
 
 
 那我们就去安装一个git的插件
@@ -316,11 +316,11 @@ git@192.168.137.100:xmlgrg_test/xm.git
 然后再去源码管理页面
 然后再`jenkins`上的`My-Freestyle-job`的配置页面，下拉到“源码管理”部分，勾选git选项
 输入git的URL
-![在这里插入图片描述](https://img-blog.csdnimg.cn/62305c78e513418aa467816220ad00c3.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7880fe294f80e0afeabb403083f6f34c.png#pic_center)
 
 发现仓库地址被粘贴后，出现如图错误
 显示信息为`key`认证失败，因为使用的是ssh方式连接仓库，所以需要配置ssh认证，因为jenkins服务启动的用户是`jenkins`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cd68f60f96534b5e9644293afdd794a7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/223d3dd2d75dea0791cf177cb3b5ec57.png)
 因为在gitlab上配置的是root用户的公钥，处理这个报错有2个方法。
 
 1. 在jenkins上配置使用root用户的私钥连接gitlab
@@ -328,7 +328,7 @@ git@192.168.137.100:xmlgrg_test/xm.git
 
 方式1
 点击添加认证、选择jenkins
-![在这里插入图片描述](https://img-blog.csdnimg.cn/590d79bb88bc4b83b0036ed290436967.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e18af4cfd129e23ed4a8c5287cf466b1.png#pic_center)
 
 进入认证添加页面
 查看root的ssh私钥
@@ -340,25 +340,25 @@ MIIEpAIBAAKCAQEAwva0K+f7IexCRjJknCCZ8hvr1ml6Y4mwOIvNYpNeKXcnlfNA
 YnUn+WU4vTDBBMhVjkp3yPpl0l/U1tdvK6mA6g4GKbVpZRDISlQ6rQ==
 -----END RSA PRIVATE KEY-----
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e66748e804434fab9aae9e36a1bf0018.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b84a797404cb9ea5b957802f65ddc17c.png#pic_center)
 
 点击添加
 然后会自动回到源码管理页面
 选择认证方式为刚才新建的即可
 点击保存
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ae180f07645d4eb895fbbdf03bf1af6e.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4b037f969e7fbc12f2978bbf8679d7ee.png#pic_center)
 
 回到job的主页面，点击“立即构建”，构建完成后，就可以在工作区看到从gitlab仓库拉取的代码了
-![在这里插入图片描述](https://img-blog.csdnimg.cn/64101e85f7ae4466a4a2d9fc30600de7.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6e70311e34e51e9fa46a6088754e9e09.png#pic_center)
 
 在console output可以看到整个控制台的输出内容
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bcd7b3eca30c4dec9d85e68e4635df86.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8b6e6cc3718b5dfaa91d071caa6de7cc.png#pic_center)
 
 其实在“源码管理”配置部分，可以配置从分支获取代码，也可以配置从标签获取代码、还可以配置从某一次commit获取代码，
 
 分支dev
-![在这里插入图片描述](https://img-blog.csdnimg.cn/aa75a8796fc2407ca2d05c8a0adbc5ed.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/190d4d24c060cfaf1d50b0e8ee990e42.png#pic_center)
 
 保存，点击立即构建
 ## 7. linux脚本部署httpd服务
@@ -369,9 +369,9 @@ YnUn+WU4vTDBBMhVjkp3yPpl0l/U1tdvK6mA6g4GKbVpZRDISlQ6rQ==
 # systemctl start httpd.service 
 #  ss -lntp | grep httpd
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/152793c2978a46429e5f58591367734c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a232f6178fcf9f002f534ae5b8e0659b.png)
 测试
-![在这里插入图片描述](https://img-blog.csdnimg.cn/585db19954ce47a3aa5ab987fc4b8219.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b7987abf4fd4bc8fe9a47df2b51959e5.png)
 Httpd服务的默认网站放在`/var/www/html`目录下
 创建一个页面
 
@@ -383,7 +383,7 @@ Httpd服务的默认网站放在`/var/www/html`目录下
 this one
 </h1>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/393aac0c49b4418880d639ca4425388e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9a5ffdcbac7dc68fb1f20f38f8b2ceff.png)
 配置ssh免密登录
 因为要使用脚本将100 gitlab服务器上的程序代码推送到101 httpd服务器上，所以需要配置100到101的ssh免密码登录。
 
@@ -448,7 +448,7 @@ sh /data/deploy.sh 192.168.137.101 ${JOB_NAME}
 ```
 
 最后点击保存
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a4036116a1574fb6a9e2e1e809b7bb01.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b45f2b75bd0816b7d09698e977abdca9.png#pic_center)
 
 在job页面、点击立即构建
 由于权限的问题，我没有解决
@@ -456,33 +456,33 @@ sh /data/deploy.sh 192.168.137.101 ${JOB_NAME}
 
 
 点击立即构建
-![在这里插入图片描述](https://img-blog.csdnimg.cn/841d26a216df4565a6402b3cbb040aab.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5498198586236ad448f02d8943f2bf55.png#pic_center)
 
 
 构建成功后
 在httpd服务器上查看
 相应的目录下已经有项目里的数据了
-![在这里插入图片描述](https://img-blog.csdnimg.cn/415758a062704594958e6e90c5fd33df.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e40708afc23d0bdf4245a54d3d048964.png#pic_center)
 
 ##  8. Git push触发自动构建
 在上面的job中，已经成功实现了将`gitlab`中`monitor`仓库的代码部署到`httpd`服务中，但是每次部署还需要手动去点击“立即构建”，下面将实现当`gitlab`收到`push`请求后，就触发`jenkins`构建，将仓库的变化部署到`httpd`服务中。
 
 Jenkins job配置构建触发器
 回到`My-Freestyle-job`的配置页面，下拉到构建触发器部分
-![在这里插入图片描述](https://img-blog.csdnimg.cn/44228738a6314be08c62cd542f321263.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eb7b4a6e94aee9122a98e84973093c25.png#pic_center)
 
 
 最后点击保存
-![在这里插入图片描述](https://img-blog.csdnimg.cn/001ab7e891d0480a99a5827cad747113.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/616b013be716d6884d2ebc00a8b69de8.png#pic_center)
 
 
 Gitlab仓库配置`webhooks`
 进入gitlab中`monitor`仓库的设置页面
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fc3dd1d5b0ec4104a2a365952b138074.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/387ffe98d8ee13c98d73fb82d3711fcb.png#pic_center)
 
 
 点击`Integrations`、进入集成配置页面
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a60ebf7cd1d14032a51c9609af7d1e38.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3606f454dfe59ef737200cae4f41905c.png#pic_center)
 
 
 进入集成配置页面、复制`jenkins`触发器的配置页面`url`及`Token`信息
@@ -491,7 +491,7 @@ Gitlab仓库配置`webhooks`
 http://192.168.137.100:8090/project/My-Freestyle-job
 862c1ea8d1e70436351d4b32e9091742
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f120db62c1534680a60b599a25d7bf43.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d9d3b4aa554c106d3d0421124ee9f84f.png#pic_center)
 
 
 点击`Add webhook` 按钮
@@ -502,15 +502,15 @@ Url is blocked: Requests to localhost are not allowed
 ```
 
 在主区域设置允许本地连接即可
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f083f813a26341298e5a894323d84331.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b5245e9551e8f93211e387b8d03eb87d.png#pic_center)
 
 
 添加成功
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f77170ffa7054e8eb5a6b470506856a2.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fe5c1723c801dec26cd8366c5e8ec905.png#pic_center)
 
 
 克隆仓库到101本地
-![在这里插入图片描述](https://img-blog.csdnimg.cn/898927f10d5241e295dfb487544d8c65.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9e463f5d6bea04d07500b207fed51bfc.png#pic_center)
 
 更改a文件，push至gitlab
 
@@ -546,22 +546,22 @@ To 192.168.137.100:xmlgrg_test/xm.git
 ```
 
 然后在jenkins上查看，构建已经完成了
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d0e2f71c3c8446b3888ea879b31b8142.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cbc312e0fe3e9fa37e17a927fd71817c.png#pic_center)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b9a42ca2b4ba48588cdce3036e5a0b78.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ee2982cf762ab7d31c9cc7390d2120e7.png#pic_center)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e6e921f8c2764fc499f6a4cca481014d.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/82230bebb8b8b3635f45e727b3c56bea.png#pic_center)
 
 
 检测httpd服务下的文件也已经同步更新了
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c119168366d34385aede179eee1b85b7.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3d2e9fa6f6b51ad1561fa9e7d417f03a.png#pic_center)
 
 ##  9. 升级jenkins
 [https://mirrors.tuna.tsinghua.edu.cn/jenkins/war/latest/](https://mirrors.tuna.tsinghua.edu.cn/jenkins/war/latest/)
 下载新版`Jenkins.war`文件，替换旧版本war文件，重启即可。
 `Jenkins.war`文件的位置一般为`/usr/lib/jenkins/Jenkins.war`。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bb2e2d08838345a6928387f10dbbc835.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d3a8b3ec06fe96c1b77fc29a7be5b7d0.png)
 
 ```c
 # cd /usr/lib/jenkins
@@ -570,16 +570,16 @@ To 192.168.137.100:xmlgrg_test/xm.git
 # rz
 # systemctl  start jenkins
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a2004646a6314ed1a50a17ab8e52f240.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e59b7468ddc909f33c026a1c8ee045c2.png)
 
 ##  10. Jenkinsfile文件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ac50959df6094ff0932f99c86239df39.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f4102793be6ce0dfbe5037f57a3ade04.png#pic_center)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a63e88aac5e0419ab04a8e3790942b5e.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/effd6b53c0f08274864d5d1bd2552f1d.png#pic_center)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c950d3a7bd5748dfb8fd052c160288cf.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b2d07ead78a0c198806ee9cd413a2577.png#pic_center)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2c7136acbbd2412180edc75042bd5746.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9bd92b32deebee313d120e06a9b853cd.png#pic_center)
 
 
 ```bash
@@ -602,16 +602,16 @@ node {
     }
 }
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/70c87f231ec3498ca1673aa963184f2c.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/989be3fea561513d56eaf486a44c2ec5.png#pic_center)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f97e96c4c25e4ea087d9ea235adb44ea.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c961fe03c4a4bc2a1a233cce216190bb.png#pic_center)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7f31de6883c543dcaf95727cc3fd15f7.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/68aed1383ddf3bdbeea89bec7536cea6.png#pic_center)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ff677fd2509e4ac0af4551d32fb5c993.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/56420fbec925ed2b1fc60b858c05bd8a.png#pic_center)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f2462bed21f448c09f8d4abca67db9c7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e68efde9855211a143c35470b79e0c97.png)
 进一步改良命令
 
 ```c
@@ -648,7 +648,7 @@ pipeline {
 }
 ```
 测试Git push 就会更新101服务器上的html文件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/76bcf25a48554823ba6f5f1b235e2f30.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c6787f137d28626054d898c7d42e38c5.png)
 修改jenkinsfile
 
 ```c
@@ -688,11 +688,11 @@ pipeline {
 }
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d8fa87d14bd44793bb3194102de8a4b5.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1376ebcaabf61611885574df6caf0953.png#pic_center)
 设置scm   方法在上面
 设置Git push触发自动构建 方法在上面
 结果如图
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9576a53808e34668958240b5288a07e2.png#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/527716523c06404f899f39aea7a40d16.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e014d3e121ca96421682fd00238a96d3.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9c123e6c257672b2fff4bbbfbc8b1b82.png)
 

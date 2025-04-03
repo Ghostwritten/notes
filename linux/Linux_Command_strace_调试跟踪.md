@@ -5,7 +5,7 @@ tags: 分析,进程
 
 ----
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/aa98936c07a74f5383acfadd324261ad.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/83f141fbad86e3fc8a0e8b3ea95949b9.gif#pic_center)
 
 
 ##  1. strace 是什么？
@@ -15,7 +15,7 @@ strace底层使用内核的ptrace特性来实现其功能。
 
 在运维的日常工作中，故障处理和问题诊断是个主要的内容，也是必备的技能。`strace`作为一种动态跟踪工具，能够帮助运维高效地定位进程和服务故障。它像是一个侦探，通过系统调用的蛛丝马迹，告诉你异常的真相。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cbb3d8851abd4bfba3fd45e01841ed51.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ce7bd8252d364012960af671883cc615.png)
 
 
 ## 2. strace 能做什么？
@@ -364,9 +364,9 @@ find linux-4.5.4 -type f  ( -iname ‘.c’ -o -iname ‘.h’ -o -iname ‘*.S�
 而进程创建和销毁的代价是相当高的，性能不差才怪。
 
 ###  5.4 strace 对进程的性能影响
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e6099f61e27746309c9b4c8b7be6d32a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9b26fd9caf30bd259f7531ff92dd4f53.png)
 dd 在 0.268796 秒内完成。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/15fa2d35deb2495f80e2453723669c08.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c016c43448f594c7236ca96295e88d9d.png)
 现在用 strace 运行它（我们正在寻找一个不会发生的调用），我们可以看到它花了 13.7205 秒。增加了 5434%！不用说，这对任何应用程序都是毁灭性的。虽然这是最坏的情况，但我只是想向您展示它对正在运行的应用程序的影响，并确保您在有问题的应用程序上运行 strace。
 
 ###  5.5 strace 调试连接问题
@@ -374,13 +374,13 @@ dd 在 0.268796 秒内完成。
 ```bash
 strace -e poll,connect,select,recvfrom,sendto -o trace.txt nc yahoo.com 80
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b922bbae2f214c15a925b768be0b4713.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/edb3040e9adfc7d362c1f62dac87506b.png)
 首先我们看到 connect 调用试图连接到 /var/run/nscd/socket。这是名称服务缓存守护程序，用于诸如 LDAP、NIS 或 YP 或其他目录协议之类的名称查找。在尝试了两次并失败后，它转到了 DNS（htons(53) 表示它正在连接端口 53，即 DNS）。但是我们可以看到它重试了这个并且失败了。我们可以确定我们的 `ifcfg-eth0`文件可能有问题。在这种情况下，我只是从未打开 eth0 :)
 
 迅速运行和`ifup eth0`和rerunning strace，我们可以看到有很大的不同！
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bd39a563faee4004931db8bb7de107aa.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d2693abe9600accb62b5b4a25372d7a4.png)
 我们可以看到，在尝试 NSCD 后，我们成功连接到 DNS，它通过 `poll` 和 `sendto` 调用以及相应的 `recvfrom` 调用向 `yahoo.com` 发送了一个 DNS 数据包。为了确认它已成功连接，我们可以检查 `EINPROGRESS` 调用。这表明该进程没有被阻塞并且将继续处理。这可以在这里看到：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/df775570e14b413a91f4ae7fc5e14c27.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eed2bb72accbdb85ac9ef6ec431f00c6.png)
 
 
 更多阅读：

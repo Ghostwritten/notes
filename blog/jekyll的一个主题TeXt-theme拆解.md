@@ -2,7 +2,7 @@
 
 ##  _config.yaml设置
 ### 改变背景颜色
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8635e073edfa4cd788683359ad062d46.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/42d3d85d86a5d08c5572f3e077cb2407.png)
 _config.yaml
 ```bash
 text_skin: forest
@@ -10,7 +10,7 @@ title   : 幽灵代笔
 ```
 
 ### 改变代码颜色
-![在这里插入图片描述](https://img-blog.csdnimg.cn/97d860d7716a4147b8e144a13d1bb781.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b38bad953b8aa2520a7a9b47f8a99d67.png)
 
 ```bash
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
@@ -18,7 +18,7 @@ highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "t
 
 
 ### 改变名字描述
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3a55fba82a3b445592b2ceb1c4d9ad31.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1d57417f4bd2f79d00aa97b8bab373c5.png)
 _config.yaml
 
 ```bash
@@ -26,8 +26,8 @@ description: > # this means to ignore newlines until "Language & timezone"
    源于一位名叫大卫·米切尔于1999年创作的第一部小说名字
 ```
 ## 设置语言
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e224e5c3744048aa96b0bf4667071a04.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5dd9f2a561024f9b80f006d611a48743.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9de11db8012da7913f1421ee4ecf3a95.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0dfb6270c85b902da6e4d7f058ebe9e4.png)
 
 ```bash
 lang: en # the language of your site, default as "en"
@@ -38,7 +38,7 @@ lang: zh-Hans # the language of your site, default as "en"
 
 ### 添加博主联系方式
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/34e7f5eb64884616b64b2844f158db59.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/86436210ebaede851c3ca24368254685.png)
 _config.yaml
 ```bash
 author:
@@ -62,7 +62,7 @@ author:
 ```
 
 ### 几个文章分页
-![在这里插入图片描述](https://img-blog.csdnimg.cn/68fc4e9461c941c3bc358913789a9051.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2d853e13b688c1d45b65f69532edc989.png)
 
 ```bash
 paginate: 8
@@ -71,7 +71,7 @@ paginate: 8
 
 ###  添加统计用户访问
 -------------
-![在这里插入图片描述](https://img-blog.csdnimg.cn/049729565e72443c89a32a521fd8b7e6.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/90ce778382af5dc21c62860012ee2224.png)
 
 ```bash
 pageview:
@@ -83,7 +83,7 @@ pageview:
     app_key   : # LeanCloud App key
     app_class : # LeanCloud App class
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f9acb739368b4806a6a611e1691803e9.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1a63ee9d3ffaf1d8a93b1106f1514096.png)
 
 ```bash
 pageview:
@@ -95,8 +95,8 @@ pageview:
 ```
 
 ##  _data/navigation.yml
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a5437ef14e0d4becad5cfb8f6b59f7c1.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a99dbb37625146369902e8a5fb79db42.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/16b6a6703c14673a9c130f23e6f77f1a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/201df81ebe3de072e691a77c46123969.png)
 
 ```bash
   - titles:

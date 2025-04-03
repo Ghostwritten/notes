@@ -4,7 +4,7 @@ tags: pod,策略
 
 
 
-[![在这里插入图片描述](https://img-blog.csdnimg.cn/527b3df82f1642bfbbf3d7840468d418.png)](https://for-all-mankind.fandom.com/wiki/Season_3)
+[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bbaded3f47d51e682ef30c5770bb7a5c.png)](https://for-all-mankind.fandom.com/wiki/Season_3)
 *《为全人类》第三季*
 
 ## 1. 背景

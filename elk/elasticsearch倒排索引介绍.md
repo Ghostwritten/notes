@@ -1,9 +1,9 @@
 
 ## 1. 倒排索引
 ### 1.1 书的目录就是书的索引
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201101225727960.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2b1ebec7a602c0f9c052c4b7c505cab2.png#pic_center)
 ### 1.2 倒排索引
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201101225802502.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f68902679107d283567b2acb312c23d4.png#pic_center)
 ### 1.3 图书和索引引擎的类比
 图书
 
@@ -14,7 +14,7 @@
 
  - 正排索引 - 文档 id 到文档内容和单词的关联
  - 倒排索引 - 单词到文档 id 的关系
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201101225908763.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8df1d1064c94a72680c8b5ccc24ef479.png#pic_center)
 ### 1.4 倒排索引的核心组成
 倒排索引包含两个部分
  - 单词词典（Term Dictionary） ，记录所有文档的单词，记录单词到倒排列表的关联关系 单词词典比较大，可以通过 B + 树 或者哈希拉链法实现，以满足高性能的插入与查询
@@ -27,7 +27,7 @@
  - 偏移（Offset） - 记录单词的开始结束时间，实现高亮显示
 
 ### 1.5 Elasticsearch倒排索引实例
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201101232000662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9100fada26c804b889c7be8a612739dd.png#pic_center)
 ### 1.6 Elasticsearch 倒排索引特点
 Elasticsearch 的 JSON 文档中的每个字段，都有自己的倒排索引
 可以指定对某些字段不做索引

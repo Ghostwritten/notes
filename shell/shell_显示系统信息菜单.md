@@ -5,7 +5,7 @@ tags: 监控
 
 ---
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8d1be848585e417a9bb9b5f896ad6ef7.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fd82da0ec1acafe6ea2198d367245607.gif#pic_center)
 
 
 ## 1. 一次交互

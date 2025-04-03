@@ -3,11 +3,11 @@
 
 ---
 ## 1. 介绍
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210421135110812.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210421135426748.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e08be0f45f2539bb853ccfca92667cbc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/57b7c62b1b45aac248117fc9650e7816.png)
 
 ## 2. Practice - create an Ingress
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210421135529616.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/382e8224f6b0b6917423ed4d66486ba2.png)
 部署链接：[https://kubernetes.github.io/ingress-nginx/deploy/#bare-metal](https://kubernetes.github.io/ingress-nginx/deploy/#bare-metal)
 
 ```c
@@ -125,7 +125,7 @@ root@master:~/cks/nginx-ingress# curl  http://192.168.211.40:31459/service2
 
 ## 3. Practice - Secure an Ingress
 参考链接：[https://kubernetes.io/docs/concepts/services-networking/ingress/#tls](https://kubernetes.io/docs/concepts/services-networking/ingress/#tls)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210421154945142.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c6ee1b7b78e90d400c38d447db064d5c.png)
 
 ```c
 root@master:~/cks/nginx-ingress# curl  https://192.168.211.40:32300/service1 -kv

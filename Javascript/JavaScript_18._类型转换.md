@@ -1,7 +1,7 @@
 #  JavaScript 类型转换
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/84ffd79ba8394eb482f91a964144086c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/61bb1a8ac66659973055caa27ca3eb8a.png)
 
 
 
@@ -377,7 +377,7 @@ function myFunction() {
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/38d6ad30cb264cbcb8cc3e1ed8be8efc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f8c8b463a11d5f1b0aba38c43eb4543b.png)
 如果变量不能转换，它仍然会是一个数字，但值为 NaN (不是一个数字):
 
 ```bash
@@ -405,7 +405,7 @@ function myFunction() {
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/aaa28bb141924f30aab4ee1ddd68da15.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4df233f7f2031ee85a75d1ad345676df.png)
 ## 7.  将布尔值转换为数字
 全局方法 Number() 可将日期转换为数字。
 

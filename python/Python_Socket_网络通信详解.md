@@ -68,7 +68,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 | s\.setblocking\(flag\)                      | 如果flag为0，则将套接字设置为非阻塞模式，否则将套接字设置为阻塞模式（默认值）。非阻塞模式下，如果调用recv\(\)没有发现任何数据，或send\(\)调用无法立即发送数据，那么将引起socket\.error异常。 |
 | s\.makefile\(\)                             | 创建一个与该套接字相关的文件                                                                                                  |
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200625172929487.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c3589a5a96d310bd90440b58cbde8238.png)
 ## 4. Socket 编程思想
 ### 4.1 操作ip
 ```powershell

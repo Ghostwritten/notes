@@ -39,7 +39,7 @@ Strict
  - Cookie 的键值对很多
  - 当 Dynamic 设置为 True
  - 同时采用扁平化的设计，必然导致字段数量的膨胀
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310150955162.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fe2a82a4c5636ca75dfe1be144966a60.png)
 
 ```bash
 ###### Cookie Service

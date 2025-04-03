@@ -1,4 +1,4 @@
-![在这里插入图片描述](https://img-blog.csdnimg.cn/16f1c6f250474160ba0ba7ef0ee59ed7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/87904dcb3cd9c330c79e2dc2c371aeda.png)
 写出k3d部署命令步骤
 ----------
 K3d是一个快速部署Kubernetes的工具，部署步骤如下：

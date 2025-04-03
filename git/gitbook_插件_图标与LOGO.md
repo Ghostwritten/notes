@@ -24,7 +24,7 @@ npm i gitbook-plugin-custom-favicon
 把`.ico` 格式的图标放进项目中。这个路径可以使用相对路径，比如`./images/a.ico`
 
 ###  1.4 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7503355dfa4948529c418117717fc445.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/266f8953f109c994ae13d1a7b131b814.png)
 
 ##  2. favicon 插件
 favicon 插件 ：修改网站图标
@@ -78,5 +78,5 @@ npm i gitbook-plugin-insert-logo
 }
 ```
 ###  3.3 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c6833ebfe676494f8ac1826548a93c39.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a84f7ea693f6bcc95715fa5503a1d9e3.png)
 

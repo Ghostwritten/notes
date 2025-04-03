@@ -53,7 +53,7 @@ for i in range(20):
     print(".",end = '',flush = True)
     time.sleep(0.5)
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200518140606701.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/28bcd7399011eaf7a88cd753ab8f8b36.png)
 ### 2.3 输出各类数据类型
 
 ```bash

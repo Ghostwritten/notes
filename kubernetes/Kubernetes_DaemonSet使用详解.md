@@ -2,7 +2,7 @@
 tags: DaemonSet
 
 [
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0f9a370fdd4741c6bcdd41d80742c785.png#pic_center)](https://www.rottentomatoes.com/m/blade_runner_2049)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ead205aeec9072179710a5e31295edd0.png#pic_center)](https://www.rottentomatoes.com/m/blade_runner_2049)
 
 *有时候如果你爱一个人，就要形同陌路。   ——《银翼杀手2049》*
 

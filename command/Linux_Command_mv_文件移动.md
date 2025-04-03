@@ -4,7 +4,7 @@
 
 ----
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/52df4bdd0dfd4faebd1922d758ab5507.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b5b03818205d92518b045a5a8d812019.gif#pic_center)
 
 ### 1. 移动文件
 

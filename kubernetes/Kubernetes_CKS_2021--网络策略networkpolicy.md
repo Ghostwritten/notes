@@ -8,14 +8,14 @@ tags: NetworkPolicy
 ## 1. NetworkPolicy 策略
 k8s官网： [network policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021041311404622.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8d326ab92b32081339b54549d7b54cb3.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021041311401950.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/84c0ce0b03b3d232bf42cc3bfedfc42b.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210413114213734.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8fcdab43d9c4c3725c76493d3748563a.png)
 ## 2. Practice - Frontend to Backend traffic
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210413114444451.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210420144613907.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/16e11dd26fcdac2a1525e4a754c909e5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/72f25d3ca41e7253c4aed75f10e45b7a.png)
 ```C
 root@master:~# k run frontend --image=nginx
 pod/frontend created
@@ -239,7 +239,7 @@ Commercial support is available at
 
 
 ## 3. Practice - Backend to Database traffic
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210420145522837.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fe285765f913b2e299cace22a560b7d3.png)
 
 ```bash
 kubectl create ns cassandra

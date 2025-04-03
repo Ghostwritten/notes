@@ -76,5 +76,5 @@ $ updatedb
 $ locate new.txt
 /root/new.txt
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4da666199de14665a80d1dfb42a33cd4.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/900d346970ce409807fa2898d285f53c.gif#pic_center)
 

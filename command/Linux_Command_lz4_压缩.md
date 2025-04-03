@@ -1,5 +1,5 @@
 #  Linux Command lz4 压缩
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d57974856682420a90bdb3accb51c1c5.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e7d720318e60efe6ddf85f331e4e19ef.gif#pic_center)
 
 
 
@@ -162,7 +162,7 @@ $ lz4 -d kevin.lz4 -q
 $ ls
 bobo  bobo.lz4  kevin  kevin.lz4
 ```
-![](https://img-blog.csdnimg.cn/fbc5767b60d44cb783138f4a98c31585.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/54d12a8b62bbc2533b3018198dfb54e7.png)
 
 
 

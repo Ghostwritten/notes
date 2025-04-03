@@ -1,5 +1,5 @@
 # Linux Command tar 压缩
-![在这里插入图片描述](https://img-blog.csdnimg.cn/198d920091864869b38ab6f36b096846.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/be102254d6c0ace5f1deb358c045834d.gif#pic_center)
 
 
 
@@ -204,5 +204,5 @@ $ cat logs.tar.bz2* | tar jx
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2710c9506f1741298f9563614b4cbae9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/50ccb9c82ede5ebe51735624de5aff68.png)
 

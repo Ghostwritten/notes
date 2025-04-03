@@ -1,4 +1,4 @@
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3043bdfb8701404fbbe4551b63f634b4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d885c70c6f8a1c8002d20fdc768e5294.png)
 
 ## 问题
 调研一下国内外K8s平台软件，哪个具有创建标准的K8s集群的功能？
@@ -79,7 +79,7 @@
  Red Hat 于2020 年 7 月 30 日推出了适用于 Kubernetes 的高级集群管理。Red Hat Advanced Cluster Management for Kubernetes 作为 Red Hat OpenShift 集群的附加组件进行安装，并使用此集群作为其所有操作的中央控制器。此集群称为集线器集群，它会为用户提供一个管理平面以连接到高级集群管理。通过高级集群管理控制台导入或创建的所有其他 OpenShift 集群均由集线器集群管理，称为受管集群。
 
 Red Hat Advanced Cluster Management （acm）生命周期如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4a7ef94018e444d0879248cc0ec1c806.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bfa3ebe1c3bf76975ee35ffb37907059.png)
 
 
 使用 Red Hat Advanced Cluster Management for Kubernetes 可以执行以下任务：
@@ -92,7 +92,7 @@ Red Hat Advanced Cluster Management （acm）生命周期如下：
 
 - 监控并强制实施多个集群的安全合规性。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9767b7ae98394df297fa30089aa30eec.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c6b4dec955af020225f2012039ce38ae.png)
 
 ## Suse rancher
 

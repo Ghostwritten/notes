@@ -27,7 +27,7 @@ traceroute详解
 　　[data size]:每次测试包的数据字节长度(缺省为38)
 
 traceroute 命令的基本用法是，在命令提示符后键入 “tracert host_name” 或 “tracert ip_address”，其中，tracert 是 traceroute 在 Windows 操作系统上的称呼。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200220112251308.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9ef0e9029497441041d48d141e574bd3.png)
 输出有 5 列：
 
 第一列是描述路径的第 n 跳的数值，即沿着该路径的路由器序号；

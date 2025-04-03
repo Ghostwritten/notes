@@ -1,5 +1,5 @@
 
-![](https://img-blog.csdnimg.cn/8d6f241cb564459ca229f5d11cb98c83.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/70819eddac614d89ca32339eab95c29b.png)
 
 
 
@@ -265,7 +265,7 @@ systemctl disable firewalld.service
 ## 7. 登陆
 访问：`http://192.168.10.90:8080
 
-![](https://img-blog.csdnimg.cn/d7e6759e6ef0472bbcb039c10609d999.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/bc52c0cbf7a1ab58b6dc48918850b30a.png)
 获取自动生成的密码
 
 ```bash
@@ -273,39 +273,39 @@ $ sudo  cat /var/lib/jenkins/secrets/initialAdminPassword
 92b6f311ba9b433e894b5242cd4ab23c
 ```
 安装插件
-![](https://img-blog.csdnimg.cn/94d64e765765419785e921f80264f328.png)
-![](https://img-blog.csdnimg.cn/8ef285f2f7f147e0962dc6917ce5eb13.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/760a3f6ded2a2e925483154f8e8e0fb3.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/02ae589992af64959ef264fd3d6ce5d9.png)
 设置管理用户
-![](https://img-blog.csdnimg.cn/0aa999f5f3c0418794872e1ffb933d0d.png)
-![](https://img-blog.csdnimg.cn/1b0ce9ab2b6a4ae8ab0ec3cb52f163cd.png)
-![](https://img-blog.csdnimg.cn/30cfa80d0a94444fb9e9ab29a56d2333.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/f1d26ed0849be2487bbde0dbda49ce01.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/71d00779eebd22d23b329f1f968b6efe.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/26a45b7e53a423dc39a760ea685fbb50.png)
 界面
-![](https://img-blog.csdnimg.cn/d8c66c6bd987491a9802478ae599b7ee.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/9d8cacfdc2daa0bde0f8002fdfbca736.png)
 用户状态
-![](https://img-blog.csdnimg.cn/6549d4b3d9d84c70ab34ac82740cb211.png)
-![](https://img-blog.csdnimg.cn/ff5cea026e7d463a85c673971f823b97.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/33528cbef675fbf2b34e4ef9b952c677.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/d8ddfe48a549f8714ce227addd0933a4.png)
 
 ## 8. 安装插件
 ### 8.1 kubernets 插件
-![](https://img-blog.csdnimg.cn/cf897ce761e04d90b5c17ed94b83e76f.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/73698fecb62bd4d5e5c294fadd88bfd5.png)
 
 ### 8.2 git 插件
-![](https://img-blog.csdnimg.cn/4ca9617580bb493a9a0f17c225044cd5.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/d63839ad7246fc124ce8c73909bd0477.png)
 ### 8.3 docker 插件
-![](https://img-blog.csdnimg.cn/54b3379ecab64049a5e718e8f4b83413.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/a3ef06065107f337e80e75c85e86cbb0.png)
 安装完插件进行重启
-![](https://img-blog.csdnimg.cn/5a5294e913064cc7b7c3df0f7a071e20.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/f0db71e65e0ca6e94096469db07c2231.png)
 
 ## 9. 创建 pipeline job
 
-![](https://img-blog.csdnimg.cn/a0d00df432ef41f9a25cf6158e479313.png)
-![](https://img-blog.csdnimg.cn/5388258204d7480185d69c5fe17c4349.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/66f0dd9c4ccce4375ab1be8391a7866c.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/0e1d8649d52677bf23e17de5c051b167.png)
 ### 9.1 加载本地 Jenkinsfile 构建
 如果SCM 选择 `None`
-![](https://img-blog.csdnimg.cn/a3779bbf6ead47bdaf529f979efc8ffa.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/04871737409cb2ac3914e65f541f5a14.png)
 保存后，点击`build`构建。
 console output：
-![](https://img-blog.csdnimg.cn/9d344eb3156744c89e0333f762e8098c.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/3abd0946623008c2840c27cfd103baf2.png)
 
 ```bash
 /var/lib/jenkins/workspace/hello@script/bc6d5aaac091397cf6a4e48610337eabdad7c6ec8ff38cf8699e4e8a0aaaa1c8/Jenkinsfile
@@ -329,16 +329,16 @@ pipeline {
 }
 ```
 保存后再次构建
-![](https://img-blog.csdnimg.cn/4f02463b9876443ebfda3b2a6ba99914.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/d6dd973bd7f35982e765add0a946ad49.png)
 ### 9.2 git 构建
 仓库地址：[https://github.com/Ghostwritten/jenkins-example-private-repo.git](https://github.com/Ghostwritten/jenkins-example-private-repo.git)
-![](https://img-blog.csdnimg.cn/b62fb0a451fc4c3fb96bdd362b20f1ca.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/bc4654a3981a4e4271e298a6613e8fd3.png)
 
-![](https://img-blog.csdnimg.cn/43ed02554fae42cb93046122d7fbb6d2.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/a2d3e4ef9ae2fb4f9d78a7e5c316747b.png)
 获取 `github Token`
-![](https://img-blog.csdnimg.cn/5bedc51b442d405b9551740a369d5a05.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/42bdf36337c22b41394b6578a41613cb.png)
 加载`Credentials`，选择好分支，确认 `Script path`，保存。
-![](https://img-blog.csdnimg.cn/0bd0b6467bf14d2c82af708ac4f94495.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/2a715f01f8ef8371cb8c3285030f3ce8.png)
 
 点击构建，查看`console output`：
 
@@ -393,7 +393,7 @@ Finished: SUCCESS
 
 ## 10. 问题
 加载下载插件失败：
-![](https://img-blog.csdnimg.cn/918b92aa3dba408e9143eb87e598d84b.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/71eb13fadd77a7ce8eecb27099631886.png)
 尝试 `systemctl restart jenkins`
 
 参考：

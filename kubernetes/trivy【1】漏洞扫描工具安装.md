@@ -14,7 +14,7 @@ https://www.youtube.com/watch?v=bgYrhQ6rTXA
 ##  1. 简介
 [Trivy](https://aquasecurity.github.io/trivy/dev/) 是一个简单而全面的漏洞/错误配置/秘密扫描器，用于容器和其他工件。 检测操作系统包（Alpine、RHEL、CentOS 等）和特定语言包（Bundler、Composer、npm、yarn 等）的漏洞。此外，扫描Terraform 和 Kubernetes 等基础架构即代码 (IaC) 文件，以检测使您的部署面临攻击风险的潜在配置问题。 还扫描硬编码的秘密vyTrivyTrivyTrivy比如密码、API 密钥和令牌。 Trivy易于使用。只需安装二进制文件，您就可以扫描了。扫描所需要做的就是指定一个目标，例如容器的image名称
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/562d6fc0627c4d9db4b32189b6d4b243.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3d59f0892b33cebb26a56451c29419f7.png)
 
 
 Trivy 检测到两种类型的安全问题：
@@ -208,4 +208,4 @@ $ helm install my-release . \
  - [trivy 官方](https://aquasecurity.github.io/trivy/dev/getting-started/installation/#__tabbed_4_2)
 
 [
-![在这里插入图片描述](https://img-blog.csdnimg.cn/02a8d300bbef4ada98fb415ce27e00d7.png)](https://zhuanlan.zhihu.com/p/539696760)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e7ba8073fe9730540fba576aa01fcdc2.png)](https://zhuanlan.zhihu.com/p/539696760)

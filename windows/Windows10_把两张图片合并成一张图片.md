@@ -7,14 +7,14 @@
 
 要访问该功能，只需按 `Ctrl + Shift + S` 或从菜单中选择「网页捕获」。然后，您可以选择 “任意选择” 或 “整页”。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d92d205018214c57b0024618ec7e8a05.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/de13a2272432786baf72f1a8ad2915a0.png)
 
 
 也可以点击设置“`页面捕捉`”。
 
 另外还可以右击鼠标，选择“检查”，然后`ctrl + shift + p`， 搜索“`截图`”，可以看到四中截图方式
 。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c0d99cc5889d4559a171b1fdb6831d35.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6869268f7f701e1140f9cf7d71f71443.png)
 以上这几种关于截图还不能满足一种情况，那就是如何把滚动鼠标选中的范围进行截图呢。
 
 也没仔细搜目前的第三方软件。
@@ -23,14 +23,14 @@
 
 ## 2. "画图"实现多图拼接
 选中你需要合并的第一张图片，然后“右击->打开方式->画图”
-![在这里插入图片描述](https://img-blog.csdnimg.cn/82a7f7114b274b52a5e5a33d4f0e6015.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e55512a8a5edc5a76f718ecf247fba04.png)
 选中图片右下角边框（如下图，红色框内），拉取你合并图片的所需位置。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3c0c9dab653f482daafc77e8268702f1.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2612db85d4b34895b09d9a790c6b8619.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9b4a953e4a64a2beb56fbe79353582a1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/38e2c745e9c39269c7044483c71f8611.png)
 点击“`粘贴`->`粘贴来源`”，选择第二张需要合并的图片。第二张图片不要放开，移动至你拉取的空位。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5fc4c34e979748239238b25300086f5e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9ec97fc919ffce43ed8771e24f4c5e97.png)
 选择你所需要的格式进行保存。
 
 图片效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2dc62358d9814808b2c5de7dd486ff09.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eaaf5859754d36fb502244d304727bf7.png)
 

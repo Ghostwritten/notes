@@ -28,7 +28,7 @@ document.getElementById("myP").innerHTML="This is my first paragraph.";
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/beb869d997704c4eab14434209920e79.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_19,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f2bdb319dd599a2f21688b40dcb1591c.png)
 
 多行注释以 /* 开始，以 */ 结尾。
 
@@ -104,7 +104,7 @@ document.write(z + "<br>");
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/aac94edabcbe4d039785aaf06d8b7184.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2c9cf9a7c3b0e860514b7a8ccad8ef77.png)
 变量规范：
 
  - 变量必须以字母开头
@@ -133,7 +133,7 @@ document.write(answer + "<br>");
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b7c4e1fe7b334b40bebce3de0c8a7103.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5cdaccf0157ac405628ea974f5eb3116.png)
 ##  数据类型
 值类型(基本类型)：字符串（String）、数字(Number)、布尔(Boolean)、对空（Null）、未定义（Undefined）、Symbol。
 
@@ -219,7 +219,7 @@ document.write(z + "<br>")
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a75a7ff1dfaf48c5ab277ac30a40b2ba.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f8d288c6d93c6183357b94cd5b21ee4e.png)
 ### JavaScript 布尔
 
 ```bash
@@ -263,7 +263,7 @@ document.write(cars[i] + "<br>");
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4dce56e67f1c41828fd022da0f6bc59e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f40be1860b55b06fced8019451b93cc5.png)
 ###  JavaScript 对象
 对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔：
 
@@ -306,7 +306,7 @@ document.write(person["lastname"] + "<br>");
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c0c90bb25a564346af856e88d348426c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5258122a5d1b51ae434a2d40adb87ee9.png)
 ###  Undefined 和 Null
 Undefined 这个值表示变量不含有值。
 
@@ -333,7 +333,7 @@ document.write(car + "<br>");
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c78b5716303d45ce99b25b79cf0b2645.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/507cb4d25bee278cd3142ac84fd4ab1f.png)
 ###  声明变量类型
 当您声明新变量时，可以使用关键词 "new" 来声明其类型：
 
@@ -352,7 +352,7 @@ var person= new Object;
 
 对象有它的属性，如重量和颜色等，方法有启动停止等:
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9f7068d2ea664479b9dd6fd5af2d1383.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cebc9b8f65b0cd52d3278f767367b661.png)
 在 JavaScript中，几乎所有的事物都是对象。
 
 ```bash
@@ -388,7 +388,7 @@ document.getElementById("demo").innerHTML =
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0ccdcf8fb49e421a9ea6276f3ce1935b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f2871c79c08d557fa91602b1eab661df.png)
 
 
 定义 JavaScript 对象可以跨越多行，空格跟换行不是必须的：
@@ -418,7 +418,7 @@ document.getElementById("demo").innerHTML =
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f7f10d976d7a408d9f979f66a45ccb12.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8412a3f2c0c210aa3cc1aead7448760d.png)
 ###  对象属性
 可以说 "JavaScript 对象是变量的容器"。
 
@@ -468,7 +468,7 @@ document.getElementById("demo").innerHTML =
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0c78fa7880124baa8981e1ddaa592ad8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b3588f27367f3187f89df62d858b88c0.png)
 ###  对象方法
 对象的方法定义了一个函数，并作为对象的属性存储。
 
@@ -504,7 +504,7 @@ document.getElementById("demo").innerHTML = person.fullName();
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b369695b985f4fc9a8d1e1d0bf974d9b.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_16,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2c0a6f73b382df4ce71c7a9c413d9752.png)
 如果你要访问 person 对象的 fullName 属性，它将作为一个定义函数的字符串返回：
 ```bash
 <!DOCTYPE html>
@@ -536,7 +536,7 @@ document.getElementById("demo2").innerHTML = "加括号输出函数执行结果�
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c3176329e3fa4615ab3e75b4632b64af.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2beefb3633a7c737006184c46ee22287.png)
 ##  函数
 函数是由事件驱动的或者当它被调用时执行的可重复使用的代码块。
 
@@ -559,8 +559,8 @@ function myFunction()
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5bfd80fc12474ea682b4722eae2ca6ec.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6ff59312614348e9a0b643626b26f7b6.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bb5338af54f6270c979b6a6ff88b6c25.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6b5646a696527c0ad0e1990e9d95b8e1.png)
 ###  JavaScript 函数语法
 
 格式：
@@ -606,7 +606,7 @@ function myFunction(name,job){
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0a007326c47d4d2f8dc00e3ac51d4627.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5266b99a4b31132f95ee41241b5a5e4e.png)
 
 ```bash
 <!DOCTYPE html>
@@ -630,7 +630,7 @@ function myFunction(name,job)
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ac9828e8dc26420b888491a0d2c6932f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e7d5eb5cba29e15632abee654f0e889e.png)
 
 ###  带有返回值的函数
 有时，我们会希望函数将值返回调用它的地方。通过使用 return 语句就可以实现。在使用 return 语句时，函数会停止执行，并返回指定的值。
@@ -683,7 +683,7 @@ document.getElementById("demo").innerHTML=myFunction(4,3);
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/70c4e0c26e4d46f999e77de980452c59.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2ab52f59192e8db7bc6eb989f74eed95.png)
 在您仅仅希望退出函数时 ，也可使用 return 语句。返回值是可选的：
 
 ```bash
@@ -772,7 +772,7 @@ function myFunction()
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8374df18b3ff45c285db71a52556f395.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3bb60dd9c32ebd3939b2ae2cc6338a95.png)
 因为局部变量只作用于函数内，所以不同的函数可以使用相同名称的变量。
 局部变量在函数开始执行时创建，函数执行完后局部变量会自动销毁。
 
@@ -806,7 +806,7 @@ function myFunction()
 </body>
 </html> 
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/27a885c36caa43c2836594eca0177102.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6e8cca662c2b5fbcc5b8ff88047d178b.png)
 ###  JavaScript 变量生命周期
 JavaScript 变量生命周期在它声明时初始化。
 
@@ -842,7 +842,7 @@ function myFunction()
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ab690311b3974a33980bd3d97882dfea.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7a823e18c241b4fea524874e6481baf1.png)
 ##  事件
 HTML 事件是发生在 HTML 元素上的事情。当在 HTML 页面中使用 JavaScript 时， JavaScript 可以触发这些事件。
 
@@ -889,7 +889,7 @@ HTML 元素中可以添加事件属性，使用 JavaScript 代码来添加 HTML 
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4c2fd67f60254078b4808c9b12d06333.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e5d338c4a245a29fc4bd6b93c742e13d.png)
 以上实例中，JavaScript 代码将修改 id="demo" 元素的内容。
 
 在下一个实例中，代码将修改自身元素的内容 (使用 this.innerHTML):
@@ -908,8 +908,8 @@ HTML 元素中可以添加事件属性，使用 JavaScript 代码来添加 HTML 
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d5a535acc4e34cc5a39984102fbf206c.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/45f8e609cf554e78ab3cf23be80fc349.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/59f6c352835e0b6faf221ced69858158.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/32936e1d4273c4af29afb33e6b2687cd.png)
 
 ```bash
 <!DOCTYPE html>
@@ -932,5 +932,5 @@ function displayDate(){
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6ffd259a78ed4c02b0ae3c0250c002b1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c6449eda8b0888a11fca6b0f9e8b934c.png)
 

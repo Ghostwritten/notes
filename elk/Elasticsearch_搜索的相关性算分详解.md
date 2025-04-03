@@ -4,7 +4,7 @@
 
  - 搜索的相关性算分，描述了一个文档和查询语句匹配的程度。ES 会对每个匹配查询条件的结构进行算分_score
  - 打分的本质是排序 , 需要把最符合用户需求的文档排在前面。ES 5 之前，默认的相关性打分采用 TF-IDF，现在采用 BM25
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020111614351998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4cb5296a3d9930a6a06bd75fd9a87c9b.png#pic_center)
 ## 2. 词频 TF
  - Term Frequency ：检查词在一篇文档里出现的频率
 检查词出现的次数除以文档的总字数
@@ -35,11 +35,11 @@ IDF 的概念，最早是剑桥大学的 “斯巴达。琼斯” 提出
 现代搜索引擎，对 TF-IDF 进行了大量细微的优化
 
 ## 5. Lucene 中的 TF-IDF 评分公式
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020111615112686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cfe9aa4a373ec9ae345dd671774b4235.png#pic_center)
 ## 6. BM25
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201116151212255.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eb49c346753ee80a285f33237e0f6513.png#pic_center)
 ## 7. 定制 Similarity
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201116151258325.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/48d3bd686643320c8c38f3e43335a23a.png#pic_center)
 ## 8. 通过 Explain API 查看 TF-IDF
 
 ```bash

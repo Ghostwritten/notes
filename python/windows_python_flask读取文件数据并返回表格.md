@@ -2,12 +2,12 @@
 tags: flask
 <!--  catalog: ~ flask 文本数据转表格~ -->
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/26ed975cf2c94396b8f07dc124bcf8ca.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/af9b8c3098d08fbb93063d36213c04b3.png)
 
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200718144338939.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b9cd254d802d32d1b329552407e594f2.jpeg)
 
 
 ## data/puuv.txt
@@ -92,7 +92,7 @@ def pvuv():
 </html>
 ```
 访问界面：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020071722371147.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4087ee491c21ffc0e770cccd12dd8d70.png)
 更多阅读：
 
  - [linux python web flask Hello World实战](https://blog.csdn.net/xixihahalelehehe/article/details/106111115)

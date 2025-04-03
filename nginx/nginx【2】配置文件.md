@@ -1,4 +1,4 @@
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c32c9de860274e64aa25741c7dfe7dec.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/00c1bedde6563e8f6f518fa220ad6cd3.png)
 
 Nginx配置语法
 
@@ -17,7 +17,7 @@ Nginx配置语法
  - location
  - upstream
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e5259d34ac134dec93e68c6421068f78.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a0cb4dff044065ac76a11060cc9bc959.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1fd11325f483462ab5907002009cdcea.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/21a26ed3d881ef8be731ab8c5576c42f.png)
 

@@ -72,10 +72,10 @@ Rather than deleting the zip-with-src-path app, let's rename it to something mor
 ```bash
 cf rename zip-with-src-path static-app
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dff14452480d430f9d6ea12042446037.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7db17e4a9f4144139ba1c63f004e2ae0.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1f29f7dc3f1a4acd9c18c4fd4bc26ce9.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b907cda1363b48459b67889f3142f8be.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e1491779e0c263e40a0d9cd7e20e7615.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0655d8be5939dfd38f4c20f3b65ee50f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bd273a718b8f2a2f1e0fcd50b6a0c60d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e53197cd6b5c9f9e80c0e3bb764b6362.png)
 ### 3.  Manifests Overview
 Manifests have been mentioned a handful of times already in this course. In the Source Paths section, the static-app was deployed and configured entirely via command-line arguments. And while this worked fine for our first deployment, if we wanted to deploy it again in another space or share the configuration with a colleague, we'd need to recall the CLI arguments we used. Sharing CLI commands isn't a very reliable way to deploy our app, especially if something changes in our configuration.
 
@@ -159,8 +159,8 @@ And then push with:
 ```bash
 cf push -f static-app_manifest.yml -p app.zip --vars-file=static-app_dev.yml
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/479f3d3956c0438b9496a5d1aba8764e.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3e7b7ec356384a4ebff89a549f67460b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0ac75d9d40b97375831e299b8705c525.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7f9f4208776ce33ede95a7968eb23aa7.png)
 ##  4. Buildpack Basics: Overview
 Before we continue, let's briefly discuss this "buildpack" thing we have referenced a few times. Buildpacks are responsible for containerizing your application. Essentially, they provide the runtime environment your application needs. The Python buildpack knows how to construct runtimes for Python apps, the Java buildpack for Java, and Go buildpack for Go-lang, etc. The staticfile buildpack we have used so far uses nginx to serve static content.
 
@@ -190,7 +190,7 @@ cf push -b htt‌ps://github.com/cloudfoundry/staticfile-buildpack.git#v1.5.21
 
 Of course, you would want to add this value to your manifest if you planned to use it. We'll look more at buildpacks later in this course.
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1fc144504a424a16a34c41ddaedc02fa.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8a1162d0adff799afa82c0aef96e8313.png)
 ## 5. Environment Variables: Overview
 Environment variables inject configuration values into applications. As the [12-factor app](https://12factor.net/config) principles state, we should "store config in the environment". In this section, we'll test out passing environment variables to a training-app.
 
@@ -277,13 +277,13 @@ cf staging-environment-variable-group
 
 These commands will retrieve the contents of any running and staging variable groups.
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5dc35d26f19a468a861a069b01e24a2f.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c7c623e87b794555991259b8222aec12.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bed2ac8431d145ec89b7017e893a0562.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fd7fa724336c432bab65a20b6c5d1f54.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0ea8f4dd270d343bdfbbd856d6a0c946.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cc85db5f3642999ad33dbea202359db9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eed1f487d11abb0fbeb3418e3d5a4493.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2a0801c8d698b9abb7f6d83f8f2ebdb4.png)
 修改环境变量
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d4d7e12f63f74c1c8c695af517d3822a.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f45cd8fae30d42ada5720a40b4e901aa.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f9e492e5f30b02be00bd12a3479e386b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/30b02f95e6b6313e708ef660efc19086.png)
 
 ##  6. Metadata: Overview
 Cloud Foundry provides the ability to add metadata to resources such as spaces and apps. This metadata provides additional information about the resources in your Cloud Foundry deployment. This can be a useful tool when `operating`, `monitoring`, and `auditing` Cloud Foundry.
@@ -346,7 +346,7 @@ metadata:
   labels:
     env: dev
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/456c305a927e44ad81b6d1febc89987c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3e4ea7343c668b067bd9088b82606958.png)
 ##  7. scale
 ###  7.1 Horizontal Scaling
 When you scale an application horizontally, you manipulate the number of instances of that application up or down, usually in response to an increased or reduced user load.
@@ -396,8 +396,8 @@ Here are a few examples:
 
 The [App Autoscaler](https://github.com/cloudfoundry/app-autoscaler) is outside the scope of this course, but you can learn more online.
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1409d70b399a40fdafbe57678a49e5af.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/50aa1ee3a6324fcf943bdf7018a73916.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0f87e9484c3afe393fdfb12fb1556e38.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dedb0f2151ffe3fc10082a36051e833b.png)
 
 ##  8. Logs: Overview
 As a developer, you will frequently access application logs to debug your apps. Cloud Foundry uses a component called 'Loggregator' for streaming log output from applications and Cloud Foundry system components (in this course, we'll focus on application logs). Logs are incredibly helpful when troubleshooting. Common issues you might see are apps running out of memory, route collisions, or pushing the wrong application payload.
@@ -446,8 +446,8 @@ Optional information on events is available here: [https://docs.cloudfoundry.org
 
 Metrics for Cloud Foundry application containers can be made available for viewing via CLI plugins (more on these later). While container metrics are outside the scope of this course, it is useful to know of their existence. Optional information on metrics is available here: [https://docs.cloudfoundry.org/loggregator/container-metrics.html](https://docs.cloudfoundry.org/loggregator/container-metrics.html).
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5aea05474f164d6aa327c34197952884.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8cd3c0035783422893a13c33e9318fa2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/40da7e9b3238e26d6ad35f00e7acce67.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/af74870cf6986dff6881894643d33191.png)
 ##  9. Resiliency: Overview
 By performing cf scale, you asked Cloud Foundry to ensure you have two instances of the app running. Behind the scenes, Cloud Foundry is ensuring this is so. Let's test it.
 
@@ -473,7 +473,7 @@ Cloud Foundry is constantly monitoring the actual count of the running applicati
 And what didn't happen?
 A lot. All apps get this level of care from Cloud Foundry. You don't have to do anything other than use Cloud Foundry.
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b0f8049aa4cd4875b2d4217b2b57ffad.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2ea2d2b6cb3ef892f9ae2993e93d186c.png)
 ##  10. Quotas: Review
 Quotas are named sets of memory, service, and instance usage limits. They can be applied at the org level or the space level. Org quotas are mandatory, while space quotas are optional. Org-level quotas are shared across all spaces in that org.
 
@@ -509,7 +509,7 @@ cf space-quota <quota-name>
 ```
 
 to see the details of that quota.
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3ebea14462464a3bac08b8299d791a18.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b77b2ea60090ddf57e771ce436044754.png)
 ##  11. Application Security Groups: Overview
 Application Security Groups (ASGs) are a collection of egress rules that list protocols, ports, and IP address ranges where an app or task is allowed to connect to (where your app can reach out to). ASGs define 'allow' rules. When ASGs are applied to the same space or deployment, their order of evaluation is unimportant; ASG's are additive.
 
@@ -582,6 +582,6 @@ cf bind-security-group <SECURITY-GROUP> <ORG> --space <SPACE>
 
 By default, this will apply the ASG as a running security group in the space. To instead set it as a staging security group use the `--lifecycle` flag.
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/756c948891e14ec6aadbe9e3ee5e1c93.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e709c82af0e445469df7bcb1ca613f70.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/87b96691296e4b9183b642d20d2eb56c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dd8e53d6dad84838572b0b3969542200.png)
 

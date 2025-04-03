@@ -177,12 +177,12 @@ $ /usr/local/haproxy/sbin/haproxy -f /usr/local/haproxy/haproxy.cfg
 ```
 ### 3.7 查看Haproxy状态监控
 浏览器：http://192.168.1.121:8000/status
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200428203956693.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/760032a97a4687ae8de3e18be2b36d81.png)
 ### 3.8 查看haproxy代理的web
 浏览器：http://192.168.1.121:8080
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200428204509542.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/08f6cc4576f45533929ef96176432f26.png)
 刷新一次
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200428204545854.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f804dc6fe42cb9356a9e583740bc7d7e.png)
 ## 4. 模板配置文件详解
 
 ```c

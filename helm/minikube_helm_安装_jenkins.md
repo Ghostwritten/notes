@@ -1,6 +1,6 @@
 
 
-![](https://img-blog.csdnimg.cn/cc7dab24c6ab4a39b610bf46e8374e7e.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/1399031b9f7572873799383a083a6374.png)
 
 
 <font color=#FFA500 size=3 face="楷体">"Jenkins是一个著名的可扩展开源 CI/CD 工具，用于自动化部署。Jenkins 完全用 Java 编写，并在 MIT 许可下发布。它具有一组强大的功能，可以自动执行与软件构建、测试、部署、集成和发布相关的任务。这种用于测试的自动化 CI/CD 工具可用于 macOS、Windows 和各种 UNIX 版本，例如 OpenSUSE、Ubuntu、Red Hat 等。除了通过本机安装包安装外，它还可以作为独立安装或作为 Docker 安装在任何安装了 Java Runtime Environment (JRE) 的机器上。
@@ -263,9 +263,9 @@ http://192.168.10.26:32000/login
 ```
 界面登陆
 
-![](https://img-blog.csdnimg.cn/016d16fdaf6d47baac7eb12151053694.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/3a9a033768bb7db4fd856fcc713f465b.png)
 首页
-![](https://img-blog.csdnimg.cn/75fce536a5e54b729679b425ef557103.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/e76c32311866c04f0ce8854ac8378ac7.png)
 ### 3.7 确认版本
 Jenkins 版本
 ```bash

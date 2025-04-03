@@ -3,7 +3,7 @@ tags: api-server
 <!-- catalog: ~kube-apiserver~ -->
 
 
-[![在这里插入图片描述](https://img-blog.csdnimg.cn/071d2010a873483d9956f37016a6ca65.jpeg#pic_center)](https://www.hacker101.com/)
+[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ba43b3a5ef4647e8eef1dde52d307baf.jpeg#pic_center)](https://www.hacker101.com/)
 
 
 
@@ -34,12 +34,12 @@ API Server输出的日志可能非常健谈。它为接收到的每个请求至�
 ##  4. 原理
 kube-apiserver 提供了 Kubernetes 的 REST API，实现了认证、授权、准入控制等安全校验功能，同时也负责集群状态的存储操作（通过 etcd）。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9e87c366b3704888b66a9fd90283fbec.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0d06619ab162dbee55c45921272249c9.png)
 以 `/apis/batch/v2alpha1/jobs` 为例，GET 请求的处理过程如下图所示：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8f23cb4d5cf14b199a589167e6a4f99e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a187d1af6c2c3be90920a8f2090a1cc6.png)
 POST 请求的处理过程为：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3ec4f18286494450a9f388ca3835a0c5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1435522117830260910543ea2ea99ed7.png)
 （图片来自 [OpenShift Blog](https://blog.openshift.com/kubernetes-deep-dive-api-server-part-1/)）
 
 
@@ -129,7 +129,7 @@ Kubernetes 中 API Server的主要用途是接收和处理 HTTP 请求形式的 
 为了更好地理解 API Server对每个不同的请求做了什么，我们将拆开并描述对 API Server的单个请求的处理。
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/93eb029ab71743c6a34de8965782f2a1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8ef89b8de0b6a861082e1f9a2ba19c3e.png)
 
 ####  7.2.1 Authentication（认证）
 
@@ -169,7 +169,7 @@ API Server还支持基于远程 webhook 的身份验证配置，其中身份验�
 第一类重要的操作是与 API Server的开放的、长时间运行的连接。这些请求提供流数据而不是立即响应。
 
 该logs操作是我们描述的第一个流式请求，因为它最容易理解。事实上，默认情况下，logs根本不是流式传输请求。`/logs`客户端通过附加到特定 Pod 的路径末尾（例如 `/api/v1/namespaces/default/pods/some-pod/logs`）然后指定容器名称来请求获取 Pod 的日志作为 HTTP 查询参数和 `HTTP GET`请求。给定一个默认请求，API Server会以纯文本形式返回截至当前时间的所有日志，然后关闭 HTTP 请求。但是，如果客户端请求跟踪日志（通过指定follow查询参数），HTTP 响应由 API Server保持打开状态，并且在通过 API Server从 kubelet 接收新日志时将新日志写入 HTTP 响应。这种连接如图 4-1所示。。
-![图 4-1。容器日志 HTTP 请求的基本流程](https://img-blog.csdnimg.cn/8e7e106262614d5999788cebde57c0c1.png)
+![图 4-1。容器日志 HTTP 请求的基本流程](https://i-blog.csdnimg.cn/blog_migrate/9f39fe93430f9da8faef64654f3b635f.png)
 
 
 
@@ -184,7 +184,7 @@ API Server实际上支持两种不同的流协议。它支持 SPDY 协议，以�
 此流的基本协议如下：为每个流分配一个从 0 到 255 的数字。该流编号用于输入和输出，它在概念上模拟单个双向字节流。
 
 对于通过 WebSocket 协议发送的每一帧，第一个字节是流号（例如，0），帧的其余部分是在该流上传输的数据（图 4-2）。
-![图 4-2。Kubernetes WebSocket 多通道框架的示例](https://img-blog.csdnimg.cn/afcd4847319d4325ab95c6f02af41653.png)
+![图 4-2。Kubernetes WebSocket 多通道框架的示例](https://i-blog.csdnimg.cn/blog_migrate/b0103d609f698895c912b5bfb348f6cb.png)
 *图 4-2。Kubernetes WebSocket 多通道框架的示例*
 
 使用此协议和 WebSockets，API Server可以在单个 WebSocket 会话中同时多路复用 256 字节流。
@@ -200,7 +200,7 @@ stdin用于写入进程的流。不会从此流中读取数据。
 用于从进程stderr读取的输出流。stderr不应将数据写入此流。
 
 endpoint用于在/proxy客户端与集群内运行的容器和服务之间转发网络流量，而这些`endpoint`不会暴露在外部。为了流式传输这些 TCP 会话，协议稍微复杂一些。除了多路复用各种流之外，流的前两个字节（在流号之后，所以实际上是 WebSockets 帧中的第二和第三个字节）是正在转发的端口号，因此单个 WebSockets 帧用于/proxy查找如图4-3 所示。
-![图 4-3。基于 WebSockets 的端口转发的数据帧示例](https://img-blog.csdnimg.cn/af2f595fbb134831852948f43c325921.png)
+![图 4-3。基于 WebSockets 的端口转发的数据帧示例](https://i-blog.csdnimg.cn/blog_migrate/e79a6c611b5c6f56a29000cecb58a756.png)
 ### 7.4 Watch operations
 除了流式数据，API Server还支持 watch API。watch监视更改的路径。因此，不是在某个时间间隔轮询可能的更新，这会引入额外的负载（由于快速轮询）或额外的延迟（由于慢速轮询），使用watch使用户能够通过单个连接获得低延迟更新。当用户通过向?watch=true某个 API Server请求添加查询参数来建立到 API Server的监视连接时，API Server切换到监视模式，并保持客户端和服务器之间的连接打开。同样，API Server返回的数据不再只是 API 对象——它是一个Watch包含更改类型（创建、更新、删除）和 API 对象本身的对象。通过这种方式，客户端可以观察和观察对该对象或对象集的所有更改。
 
@@ -486,7 +486,7 @@ Kubernetes 使用 leveled  logging  `github.com/golang/glog`  包进行日志记
 此外，如果您想直接戳 API Server，我们之前用于探索 API 发现的方法效果很好。Running `kubectl proxy`在 localhost 上创建一个代理服务器，它会根据本地`$HOME/.kube/config`文件自动提供您的身份验证和授权凭据。运行代理后，使用该curl命令查看各种 API 请求相当简单。
 
 ##  10. API 版本
-![在这里插入图片描述](https://img-blog.csdnimg.cn/195dcc72e83d41ae85ff89b0e2f93c91.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8cb2edecbe3241a852a51f67de1a5b94.png)
 在 Kubernetes 中，API 最初是一个 `alpha API`（例如，`v1alpha1`）。alpha 名称表示 API 不稳定且不适合生产用例。采用 alpha API 的用户应该预料到 API 表面区域可能会在 Kubernetes 版本之间发生变化，并且 API 本身的实现可能会不稳定，甚至可能会破坏整个 Kubernetes 集群的稳定性。因此，在生产 Kubernetes 集群中禁用了 Alpha API。
 
 一旦 API 成熟，它就会成为 `beta API`（例如，`v1beta1`）。Beta 指定表明 API 通常是稳定的，但可能存在错误或最终的 API 表面改进。通常，假设 Kubernetes 版本之间的 beta API 是稳定的，并且向后兼容是一个目标。但是，在特殊情况下，Beta API 可能仍然在 Kubernetes 版本之间不兼容。同样，beta API 旨在保持稳定，但可能仍然存在错误。Beta API 通常在生产 Kubernetes 集群中启用，但应谨慎使用。

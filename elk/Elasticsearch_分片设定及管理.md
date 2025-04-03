@@ -71,5 +71,5 @@ ES 的分片策略会尽量保证节点上的分片数大 致相同
 扩容的新节点没有数据，导致新索引集中在新 的节点
 热点数据过于集中，可能会产生新能问题
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312142647653.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/817c0bb3cd670e5a8a335e76354dc58c.png)
 

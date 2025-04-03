@@ -33,7 +33,7 @@
 ###  1.4 CPU 缓存的命中率
 除了上面几种，还有一个指标，CPU 缓存的命中率。由于 CPU 发展的速度远快于内存的发展，CPU 的处理速度就比内存的访问速度快得多。这样，CPU 在访问内存的时候，免不了要等待内存的响应。为了协调这两者巨大的性能差距，CPU 缓存（通常是多级缓存）就出现了。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210624101017166.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eb46b682af08fb364a76e0333606a7bb.png)
 
 就像上面这张图显示的，CPU 缓存的速度介于 CPU 和内存之间，缓存的是热点的内存数据。根据不断增长的热点数据，这些缓存按照大小不同分为 `L1、L2、L3` 等三级缓存，其中 L1 和 L2 常用在单核中， L3 则用在多核中。
 
@@ -41,7 +41,7 @@
 这些指标都很有用，需要我们熟练掌握，所以我总结成了一张图，帮你分类和记忆。你可以保存打印下来，随时查看复习，也可以当成 CPU 性能分析的“指标筛选”清单。
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210624101229650.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d636aea725e26c4f4c7418ff0c082e03.png)
 ##  2. 性能工具
 
 掌握了 CPU 的性能指标，我们还需要知道，怎样去获取这些指标，也就是工具的使用。你还记得前面案例都用了哪些工具吗？这里我们也一起回顾一下 CPU 性能工具。
@@ -71,13 +71,13 @@
 
 其实，我在前面的案例中已经多次用到了这个思路。比如用 top 发现了软中断 CPU 使用率高后，下一步自然就想知道具体的软中断类型。那在哪里可以观察各类软中断的运行情况呢？当然是 proc 文件系统中的 /proc/softirqs 这个文件。紧接着，比如说，我们找到的软中断类型是网络接收，那就要继续往网络接收方向思考。系统的网络接收情况是什么样的？什么工具可以查到网络接收情况呢？在我们案例中，用的正是 dstat。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210624114538408.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f095ef621549c1fa3c67d83f70e30076.png)
 下面，我们再来看第二个维度。
 **第二个维度，从工具出发。也就是当你已经安装了某个工具后，要知道这个工具能提供哪些指标。**
 
 这在实际环境特别是生产环境中也是非常重要的，因为很多情况下，你并没有权限安装新的工具包，只能最大化地利用好系统中已经安装好的工具，这就需要你对它们有足够的了解。具体到每个工具的使用方法，一般都支持丰富的配置选项。不过不用担心，这些配置选项并不用背下来。你只要知道有哪些工具、以及这些工具的基本功能是什么就够了。真正要用到的时候，  通过 man 命令，查它们的使用手册就可以了。同样的，我也将这些常用工具汇总成了一个表格，方便你区分和理解，自然，你也可以当成一个“工具指标”指南使用，需要时查表即可。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210624114658521.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2a5344b84f4ae44985c6aec5a5cbfe1c.png)
 ##  3. 如何迅速分析 CPU 的性能瓶颈
 在实际生产环境中，我们通常都希望尽可能快地定位系统的瓶颈，然后尽可能快地优化性能，也就是要又快又准地解决性能问题。那有没有什么方法，可以又快又准找出系统瓶颈呢？答案是肯定的。
 
@@ -87,7 +87,7 @@
 
 所以，为了缩小排查范围，我通常会先运行几个支持指标较多的工具，如 top、vmstat 和 pidstat 。为什么是这三个工具呢？仔细看看下面这张图，你就清楚了。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210624195110276.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/122681b02c7d31cfac94315867ba3c86.png)
 这张图里，我列出了 top、vmstat 和 pidstat 分别提供的重要的 CPU 指标，并用虚线表示关联关系，对应出了性能分析下一步的方向。通过这张图你可以发现，这三个命令，几乎包含了所有重要的 CPU 性能指标，比如：
 
  - 从 top 的输出可以得到各种 CPU 使用率以及僵尸进程和平均负载等信息。

@@ -3,7 +3,7 @@
 -----
 
 ## 1. 需求：修复与增强写入的数据
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210308105720602.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/34a40017f4a20d2210ef8f01bcd29bb3.png)
 
 Tags 字段中，逗号分割的文本应该是数组，而不是一个字符串
 
@@ -25,9 +25,9 @@ Elasticsearch 5.0 后，引入的一种新的节点类型。默认配置下，�
 `Processor` - Elasticsearch 对一些加工的行为进行了抽象包装
 Elasticsearch 有很多内置的 Processors。也支持通过插件的方式，实现自己的 Processsor
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210308105944661.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1e8b37efcaa763d8256e6c3ecd47fbad.png)
 ## 4. 使用 Pipeline 切分字符串
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210308110012603.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c8e02248186ea97bf40a98615e9a1f95.png)
 
 ```bash
 DELETE tech_blogs
@@ -214,9 +214,9 @@ POST _ingest/pipeline/blog_pipeline/_simulate
 }
 ```
 ## 6. Pipeline API
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310140822641.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f0f879185115f03fa436b284e66dc339.png)
 ## 7. 添加 Pipeline 并测试
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310140901556.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4c1c6bfb4f85ae2e9f8ebff62015a4c9.png)
 
 ```bash
 # 为ES添加一个 Pipeline
@@ -254,7 +254,7 @@ POST _ingest/pipeline/blog_pipeline/_simulate
 ```
 
 ## 8. Index & Update By Query
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310141009175.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b0de64c4f541bfd50f9a3b6a89378bb3.png)
 
 ```bash
 #不使用pipeline更新数据

@@ -166,10 +166,10 @@ multi-fields是上面所有知识点的综合，一个知识点覆盖了Mapping 
    会自动根据文档信息，推算出字段的类型
  - 但是会有时候推算不对。例如地理位置信息
  - 当类型如果设置不对时，会导致一些功能无法正常运行，例如 Range 查询
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201103140315848.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2696472d2b4e578668fdd49eee39d092.png#pic_center)
 
 ## 4. 类型的自动识别
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201103140404832.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2a40abebf7335d2c8c668a3f26b34fda.png#pic_center)
 
    
 

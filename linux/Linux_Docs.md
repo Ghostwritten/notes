@@ -1,7 +1,7 @@
 #  Linux Docs
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4de63f2154264a4ca40f902d1b505db6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/43b2a69b2cf5976e5486e567ca560799.png)
 
 
 
@@ -25,6 +25,8 @@
 ##  命令
 - [Linux Command Docs](https://blog.csdn.net/xixihahalelehehe/article/details/115229161)
 
+## 内核参数
+- [Linux内核参数 rp_filter](https://www.cnblogs.com/dissipate/p/13741595.html) 
 ## 性能优化
 ### CPU优化
 
@@ -108,5 +110,5 @@
 ##  面试
 - [面试测试题-Linux-RHEL7（标准答案和评分标准）](https://ghostwritten.blog.csdn.net/article/details/127254745)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/18bc191335774bf8b06063c5b07bf297.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/024dedc2d7ea0614979940c95870409a.png)
 

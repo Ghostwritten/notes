@@ -50,7 +50,7 @@ cpu1 135834 3226 109383 86476907 31525 0 282 0 0 0
 
 
 而我们通常所说的 CPU 使用率，就是除了空闲时间外的其他时间占总 CPU 时间的百分比，用公式来表示就是：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210615160814416.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c86f88f5eb6304491535598e32deca1a.png)
 
 根据这个公式，我们就可以从 /proc/stat 中的数据，很容易地计算出 CPU 使用率。当然，也可以用每一个场景的 CPU 时间，除以总的 CPU 时间，计算出每个场景的 CPU 使用率。
 
@@ -59,7 +59,7 @@ cpu1 135834 3226 109383 86476907 31525 0 282 0 0 0
 看到这里，你应该想起来了，这是开机以来的节拍数累加值，所以直接算出来的，是开机以来的平均 CPU 使用率，一般没啥参考价值。
 
 事实上，为了计算 CPU 使用率，性能工具一般都会取间隔一段时间（比如 3 秒）的两次值，作差后，再计算出这段时间内的平均 CPU 使用率，即
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021061516094153.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/739d0d748a910fba3b9cee6d15ece0d6.png)
 这个公式，就是我们用各种性能工具所看到的 CPU 使用率的实际计算方法。
 
 现在，我们知道了系统 CPU 使用率的计算方法，那进程的呢？跟系统的指标类似，Linux 也给每个进程提供了运行情况的统计信息，也就是 `/proc/[pid]/stat`。不过，这个文件包含的数据就比较丰富了，总共有 52 列的数据。
@@ -188,7 +188,7 @@ Ubuntu 18.04
 
 我先简单介绍一下这次新使用的工具 [ab](https://ghostwritten.blog.csdn.net/article/details/108978794)。ab（apache bench）是一个常用的 HTTP 服务性能测试工具，这里用来模拟 Ngnix 的客户端。由于 Nginx 和 PHP 的配置比较麻烦，我把它们打包成了两个 Docker 镜像，这样只需要运行两个容器，就可以得到模拟环境。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021061614584536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/32c396a971cbfcba79af9961d11fe80e.png)
 你可以看到，其中一台用作 Web 服务器，来模拟性能问题；另一台用作 Web 服务器的客户端，来给 Web 服务增加压力请求。使用两台虚拟机是为了相互隔离，避免“交叉感染”。
 
 
@@ -255,7 +255,7 @@ $ top
 $ perf top -g -p 21515
 ```
 按方向键切换到 php-fpm，再按下回车键展开 php-fpm 的调用关系，你会发现，调用关系最终到了 `sqrt` 和 `add_function`。看来，我们需要从这两个函数入手了。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/202106161530443.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fc6ca37ff34ebaae9a5067398de22464.png)
 
 我们拷贝出 [Nginx 应用的源码](https://github.com/feiskyer/linux-perf-examples/blob/master/nginx-high-cpu/app/index.php)，看看是不是调用了这两个函数：
 

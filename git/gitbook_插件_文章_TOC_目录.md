@@ -30,7 +30,7 @@ npm i gitbook-plugin-simple-page-toc
 }
 ```
 这个插件生成目录以后，下面有一行关于版权的文字。如果想去掉的话，找到插件目录下的index.js文件：`***/node_modules/gitbook-plugin-page-treeview/lib/index.js` 找到如下这段代码
-![在这里插入图片描述](https://img-blog.csdnimg.cn/04c1ae2c75a047189edfd8fd062de00e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b6f803569d40624e05850e08d87dbbb6.png)
 
 
 ##  2. page-treeview-simple 插件
@@ -42,7 +42,7 @@ npm i gitbook-plugin-simple-page-toc
 
 
 效果图
-![在这里插入图片描述](https://img-blog.csdnimg.cn/77a476ec9fe44d379c8ab85d8b0be4ac.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a1c639583ea1470fc2f6bb60ddd88f3d.png)
 
 ##  3. simple-page-toc 插件
 [simple-page-toc](https://www.npmjs.com/package/gitbook-plugin-simple-page-toc) 插件生成本页目录 需要在文章中插入标签，支持1-3级目录 页面顶端生成。另外 GitBook 在处理重复的标题时有些问题，所以尽量不适用重复的标题。
@@ -72,9 +72,9 @@ npm i gitbook-plugin-simple-page-toc
 |"skipFirstH1": true|	排除文件中的第一个h1级标题。|
 
 使用方法: 在需要生成目录的地方用下面的标签括起来，全文都生成的话就在首尾添加
-![在这里插入图片描述](https://img-blog.csdnimg.cn/69b03f7c58834e09b9d5584c4104653f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ac1b4749770395facaae62e371658266.png)
 效果图：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8f54c5805d0e4e98afe45444bdc347fd.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eafe943c04ff1be6409a0f7ff40b0ce8.png)
 
 ##  4. page-toc 插件
 [page-toc](https://www.npmjs.com/package/gitbook-plugin-page-toc-af) 插件在你的 Gitbook 的每个页面上添加了一个目录 (TOC)。您可以设置目录是否默认显示在所有页面上，您可以启用或禁用个别页面上的目录以覆盖默认值。
@@ -97,5 +97,5 @@ npm i gitbook-plugin-page-toc-af
   }
 }
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e373d300df9f456f935b6e2aa0bcd512.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/acd48afc84ad97b46539175da780edcc.png)
 

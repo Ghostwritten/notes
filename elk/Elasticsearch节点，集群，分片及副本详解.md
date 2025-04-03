@@ -31,7 +31,7 @@ ElasticSearch的分布式架构
  - 每一个节点在启动之后，会分配一个UID，保存在data目录下
 
 **不同的节点承担了不同的角色**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201031193854461.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9b1cf5174ba800bbb2949086c10e70ef.png#pic_center)
 
 ### 2.1 Master-eligible nodes和Master Node
 
@@ -86,7 +86,7 @@ ElasticSearch的分布式架构
 2.增加副本数，还可以在一定程度上提高服务的可用性（读取的吞吐）
  - 一个三节点的集群中，blogs索引的分片分布情况
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201101135836563.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/97c9d7e1e5bf356cd8bc0ef48769f1c0.png#pic_center)
 一个主分片分散到三个节点上，每个节点存在一个副本分片
 ### 3.1 分片的设定
 
@@ -152,7 +152,7 @@ GET /_cluster/settings?include_defaults=true
 GET _cat/shards
 GET _cat/shards?h=index,shard,prirep,state,unassigned.reason
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201101152930299.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8331db487b1d70b73a4ea56aed0ee436.png#pic_center)
 参考资料：
 极客时间：Elasticsearch核心技术与实战
 

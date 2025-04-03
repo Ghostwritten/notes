@@ -18,7 +18,7 @@
  - 文档字段名：JSON 格式由 name/value pairs 组成，对应的 name 就是文档字段名
  - 文档字段类型：每个字段都有对应的字段类型：String、integer、long 等，并支持数据&嵌套
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201031190536623.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e818d30acb362bd458d44c158d8a7a05.png#pic_center)
 
 ### 1.3 文档id
 每个文档都会有一个 Unique ID，其字段名称为 `_id` ：
@@ -27,24 +27,24 @@
  - 其值不会被索引
 
 注意：该 id 字段的值可以在某些查询 term, terms, match, querystring, simplequerystring 等中访问，但不能在 aggregations，scripts 或 sorting 中使用。如果需要对 id 字段进行排序或汇总，建议新建一个文档字段复制 id 字段的内容
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201031190439773.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7fc0198017bfc2814c10dff270d07080.png#pic_center)
 
 ### 1.4 文档元数据
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201031190805125.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ab1c2168c80f4a2a2ac1e27ee58c0e9e.png#pic_center)
 
 
 ## 2. 索引
 ### 2.1 什么是索引
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201031191110831.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/77443d17dcd70f994ba9ede754961d36.png#pic_center)
 type不同版本差异：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201031191740795.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e4c32a62a4d11db4afabe2d4cd1a615b.png#pic_center)
 
 其中 _type 文档所属类型名，需要关注版本不同之间区别：
 
  - 7.0 之前，一个索引可以设置多个 types
  - 7.0 开始，被 Deprecated 了。一个索引只能创建一个 type，值为 _doc
 ### 2.2 索引的不同意思
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201031191148722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/42711745009264e69ffe36f5067eea69.png#pic_center)
 ### 2.3 索引测试
 
 ```bash
@@ -110,10 +110,10 @@ GET http://localhost:9200/kibana_sample_data_flights
 aliases 别名大有作为，比如 myindex 迁移到 myindex_new , 数据迁移后，只需要保持一致的别名配置。那么通过别名访问索引的业务方都不需要修改，直接迁移即可。
 
 ### 2.4 索引与mysql比对
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201031191902506.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b3b080f3474e1eeeb74cd8b3f139ca42.png#pic_center)
 ## 3. REST API
 各种语言很方便调用
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201031192117379.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9ff39ce1082d24b4a9409ec6f55d1a16.png#pic_center)
 如图，Elasticsearch 提供了 REST API，方便，相关索引 API 如下：
 
 ```bash
@@ -145,7 +145,7 @@ GET /_cat/indices/kibana*?pri&v&h=health,index,pri,rep,docs.count,mt
 GET /_cat/indices?v&h=i,tm&s=tm:desc
 ```
 kibana执行效果：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201031192630903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ad74b2d6afa4862c6b53f4017ade4342.png#pic_center)
 参考资料：
 极客时间：Elasticsearch核心技术与实战
 

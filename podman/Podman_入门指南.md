@@ -24,9 +24,9 @@ Podman 控制下的容器可以由 root 或非特权用户运行。Podman 使用
 
 如果您完全不熟悉容器，我们建议您查看[简介](https://docs.podman.io/en/latest/Introduction.html)。对于高级用户或来自 Docker 的用户，请查看我们的[教程](https://docs.podman.io/en/latest/Tutorials.html)。对于高级用户和贡献者，您可以通过查看我们的命令页面来获取有关 [Podman CLI](https://docs.podman.io/en/latest/Commands.html) 的非常详细的信息。最后，对于寻求如何与 Podman API 交互的开发人员，请参阅我们的 [API 文档](https://docs.podman.io/en/latest/Reference.html)参考。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/942b660fe96e48bb98eec4c6d34c2216.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2b33587d1addbbfb2fe2adab25812e49.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1a2a324fe8dd4d96a781580aba914191.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6481122952323c51a344eea6fbdcbc64.png)
 
 ##  2. 安装
 

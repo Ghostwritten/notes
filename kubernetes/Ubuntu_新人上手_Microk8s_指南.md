@@ -1,4 +1,4 @@
-![](https://img-blog.csdnimg.cn/4203182b2a794155ab3abd9d27038a43.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/ea09d8a8785491508eea8ef0e4a2a21c.png)
 
 
 
@@ -188,7 +188,7 @@ nodered-service    NodePort     10.152.183.46   <none>        1880:30663/TCP 5s
 
 示例：`http://192.168.1.222:30663/`
 
-![](https://img-blog.csdnimg.cn/b42868b3d0a64a75a20ed0129086b143.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/735bf6b0a51acd51bf0ace5f87d8b0eb.png)
 ## 11. 管理镜像
 ###  11.1 拉取
 

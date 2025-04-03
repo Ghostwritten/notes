@@ -71,7 +71,7 @@ CREATE DATABASE IF NOT EXISTS QingScan;
 1.	fortify 涉及许可证问题，镜像内不包含，需要自己将Linux版本的fortify放到/data/tools文件夹中
 2.	AWVS 调用主要通过API，需要自己将API配置系统，配置管理中去
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/55f24544f68740b29cac0f0b7bc70b97.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9aa242fb7860363c353ec42e3f76fe19.png)
 
 
 

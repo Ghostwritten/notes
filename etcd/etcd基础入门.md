@@ -30,7 +30,7 @@ etcd比较多的应用场景是用于**服务发现**，服务发现(Service Dis
  - **一种查找和连接服务的机制**。
    通过在etcd指定的主题下注册的服务业能在对应的主题下查找到。为了确保连接，我们可以在每个服务机器上都部署一个proxy模式的etcd，这样就可以确保访问etcd集群的服务都能够互相连接。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210407111100698.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/07d6e52c95d69061ece0202d654f1111.png)
 ## 3. etcd部署
 etcd在生产环境中一般推荐集群方式部署。本文定位为入门，主要讲讲单节点安装和基本使用。
 

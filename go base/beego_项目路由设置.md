@@ -13,7 +13,7 @@ func main() {
 }
 ```
 们看到main函数是入口函数，但是我们知道Go的执行过程是如下图所示的方式：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020080300224780.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/81b8c23b0bb00e9afa9d3d2e01c8ea3b.png)
 这里我们就看到了我们引入了一个包_ "quickstart/routers",这个包只引入执行了里面的init函数，那么让我们看看这个里面做了什么事情：
 
 ```bash

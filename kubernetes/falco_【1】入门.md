@@ -6,7 +6,7 @@ tags： 安全
 
 ---
 
-[![印度电影已经在《宿敌》中将教材政治渗透问题得到体现](https://img-blog.csdnimg.cn/7906f1d234cc4c858152ea10bca15be6.png)](https://movie.douban.com/subject/35882880/)
+[![印度电影已经在《宿敌》中将教材政治渗透问题得到体现](https://i-blog.csdnimg.cn/blog_migrate/cd360c4ab2a4b772717c3652c5ef4e4d.png)](https://movie.douban.com/subject/35882880/)
 *印度电影已经在《宿敌》中将教材政治渗透问题得到体现。*
 
 
@@ -82,7 +82,7 @@ Falco 由四个主要组件组成：
 
 ##  7. 架构
 Falco 可以检测任何涉及进行 Linux 系统调用的行为并发出警报。Falco 警报是根据调用进程的特定系统调用、参数和属性触发的。Falco 在用户空间和内核空间运行。系统调用由 Falco 内核模块解释。然后使用用户空间中的库分析系统调用。然后使用配置了 Falco 规则的规则引擎过滤事件。然后向配置为 Syslog、文件、标准输出等的输出警告可疑事件。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a513d409570e4128991465974d02078b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e34a3a59ddeda55d32e1c747eecfecd4.png)
 
 ##  8. 下载
 两种下载和运行 Falco 的方式：
@@ -92,10 +92,10 @@ Falco 可以检测任何涉及进行 Linux 系统调用的行为并发出警报�
 
 || development | stable  |
 |-|-------------|---------|
-| rpm         | [![rpm-dev](https://img-blog.csdnimg.cn/7eeacbe2c432462eaa6f34d6523f65fe.png) ](https://download.falco.org/?prefix=packages/rpm-dev/)|[![在这里插入图片描述](https://img-blog.csdnimg.cn/7733df4c62404b95a2646afa364f3b87.png)](https://download.falco.org/?prefix=packages/rpm/)
-| deb         | [![deb-dev](https://img-blog.csdnimg.cn/025cb1bb5a5c44e2b8c2d4f4168e36ae.png)](https://download.falco.org/?prefix=packages/deb-dev/stable/) |[![在这里插入图片描述](https://img-blog.csdnimg.cn/a6312eced7174ff086d8e349df3346db.png)](https://download.falco.org/?prefix=packages/deb/stable/)
+| rpm         | [![rpm-dev](https://i-blog.csdnimg.cn/blog_migrate/c2e4ad9c0be39605d451f644def0ac70.png) ](https://download.falco.org/?prefix=packages/rpm-dev/)|[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e579392976ff06bd4a07aa91005800f7.png)](https://download.falco.org/?prefix=packages/rpm/)
+| deb         | [![deb-dev](https://i-blog.csdnimg.cn/blog_migrate/c2b1a66e1eff35287b1a91038285a308.png)](https://download.falco.org/?prefix=packages/deb-dev/stable/) |[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2a9dff4e6dd3ecaf41d0a64cf48223d8.png)](https://download.falco.org/?prefix=packages/deb/stable/)
 |
-| binary      | [![bin-dev](https://img-blog.csdnimg.cn/4727d3779a834bc2ba1d5c73ee1d2d16.png)](https://download.falco.org/?prefix=packages/bin-dev/x86_64/)|[![在这里插入图片描述](https://img-blog.csdnimg.cn/1e89a9d6da2440a88bc0434672f8e1db.png)](https://download.falco.org/?prefix=packages/bin/x86_64/)
+| binary      | [![bin-dev](https://i-blog.csdnimg.cn/blog_migrate/6e27ea82788119b0bd55c119c5c20d61.png)](https://download.falco.org/?prefix=packages/bin-dev/x86_64/)|[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/59dfbe6a56756ca0e0bdd184d89cc501.png)](https://download.falco.org/?prefix=packages/bin/x86_64/)
 |
 
 

@@ -1,12 +1,12 @@
 
 ## 1. 什么是Redis持久化?
 Redis作为一个键值对内存数据库(NoSQL)，数据都存储在内存当中，在处理客户端请求时，所有操作都在内存当中进行，如下所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201119100156973.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/18b02b37b1fd96765d634aaa8d30b684.png#pic_center)
 其实，只要稍微有点计算机基础知识的人都知道，存储在内存当中的数据，只要服务器关机(各种原因引起的)，内存中的数据就会消失了，不仅服务器关机会造成数据消失，Redis服务器守护进程退出，内存中的数据也一样会消失。
 对于只把Redis当缓存来用的项目来说，数据消失或许问题不大，重新从数据源把数据加载进来就可以了，但如果直接把用户提交的业务数据存储在Redis当中，把Redis作为数据库来使用，在其放存储重要业务数据，那么Redis的内存数据丢失所造成的影响也许是毁灭性。
 为了避免内存中数据丢失，Redis提供了对持久化的支持，我们可以选择不同的方式将数据从内存中保存到硬盘当中，使数据可以持久化保存。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201119100227574.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/559d87b0293908d67b268f0d6785a0df.png#pic_center)
 Redis提供了RDB和AOF两种不同的数据持久化方式，下面我们就来详细介绍一下这种不同的持久化方式吧。
 ## 2. RDB
 RDB是一种快照存储持久化方式，具体就是将Redis某一时刻的内存数据保存到硬盘的文件当中，默认保存的文件名为`dump.rdb`，而在Redis服务器启动时，会重新加载dump.rdb文件的数据到内存当中恢复数据。
@@ -20,7 +20,7 @@ save命令是一个同步操作。
 # 同步数据到磁盘上
 > save
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201119100323694.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/774d34ed10b3ceb21b75223b881cdfd3.png#pic_center)
 当客户端向服务器发送save命令请求进行持久化时，服务器会阻塞save命令之后的其他客户端的请求，直到数据同步完成。
 
 如果数据量太大，同步数据会执行很久，而这期间Redis服务器也无法接收其他请求，所以，最好不要在生产环境使用save命令。
@@ -32,7 +32,7 @@ save命令是一个同步操作。
 # 异步保存数据集到磁盘上
 > bgsave
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201119103853445.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/83772af2bbacbdc93fc99eb7532b0c5f.png#pic_center)
 当客户端发服务发出bgsave命令时，Redis服务器主进程会forks一个子进程来数据同步问题，在将数据保存到rdb文件之后，子进程会退出。
 
 所以，与save命令相比，Redis服务器在处理bgsave采用子线程进行IO写入，而主进程仍然可以接收其他请求，但forks子进程是同步的，所以forks子进程时，一样不能接收其他请求，这意味着，如果forks一个子进程花费的时间太久(一般是很快的)，bgsave命令仍然有阻塞其他客户的请求的情况发生。
@@ -95,7 +95,7 @@ dir ~/redis/
 ## 3. AOF
 聊完了RDB，来聊聊Redis的另外一个持久化方式：`AOF(Append-only file)`。
 与RDB存储某个时刻的快照不同，AOF持久化方式会记录客户端对服务器的每一次写操作命令，并将这些写操作以Redis协议追加保存到以后缀为aof文件末尾，在Redis服务器重启时，会加载并运行aof文件的命令，以达到恢复数据的目的。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201119104542814.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/279df8fbee8aee84b992be322c148bb3.png#pic_center)
 ### 开启AOF持久化方式
 Redis默认不开启AOF持久化方式，我们可以在配置文件中开启并进行更加详细的配置，如下面的redis.conf文件：
 
@@ -170,7 +170,7 @@ no-appendfsync-on-rewrite no
 # 让服务器异步重写追加aof文件命令
 > bgrewriteaof
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201119105150525.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/defcd8d32544366e8f49a4edaebc2fc9.png#pic_center)
 #### 重写aof文件的好处
 压缩aof文件，减少磁盘占用量。
 
@@ -203,7 +203,7 @@ AOF方式生成的日志文件太大，即使通过AFO重写，文件体积仍�
 通过上面的介绍，我们了解了RDB与AOF各自的优点与缺点，到底要如何选择呢？
 
 通过下面的表示，我们可以从几个方面对比一下RDB与AOF,在应用时，要根本自己的实际需求，选择RDB或者AOF，其实，如果想要数据足够安全，可以两种方式都开启，但两种持久化方式同时进行IO操作，会严重影响服务器性能，因此有时候不得不做出选择。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201119105402639.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1497a118f6b3ed006d3491c24b03be42.png#pic_center)
 当RDB与AOF两种方式都开启时，Redis会优先使用AOF日志来恢复数据，因为AOF保存的文件比RDB文件更完整
 
 参考资料：

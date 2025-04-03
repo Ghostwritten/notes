@@ -15,7 +15,7 @@ Seccomp 代表安全计算模式，自 2.6.12 版本以来一直是 Linux 内核
 
 确定工作负载所需的权限可能很困难。在本教程中，您将了解如何将 seccomp 配置文件加载到本地 Kubernetes 集群、如何将它们应用到 Pod，以及如何开始制作配置文件，只为您的容器进程提供必要的权限
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210525101359576.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/782fb3b4a7a76ebd7bd3f09d4d06b7cb.png)
 ## 2. 目标
 
  - 了解如何在节点上加载 seccomp 配置文件

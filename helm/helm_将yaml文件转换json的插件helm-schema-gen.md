@@ -214,6 +214,6 @@ helm-schema-gen value.yaml  > values.schema.json
 
  - [helm 快速学习手册](https://ghostwritten.blog.csdn.net/article/details/122882625)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bfa8c8f7386b4b4abdd8e32e83791daa.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cd65c4a1beab01c3cc8e1e13f556ab42.gif#pic_center)
 
 

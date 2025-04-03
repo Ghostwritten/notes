@@ -82,9 +82,9 @@ NP-FW50专用锂电池
 -----
 # 3.器件名称
 ## 正面
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200307003808532.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e159a774bca7930851a143cf0d21c869.png)
 取下镜头时
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200307003829807.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/530c7b7d7b591ca87c572bcb365f4554.png)
 
  1. AF辅助照明/自拍指示灯
  2. 前转盘
@@ -99,17 +99,17 @@ NP-FW50专用锂电池
  
 
 ## 背面
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200307004100666.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ac374573ffaf0dcb1caa06944b89e4fb.png)
  1. 眼罩
  2. 取景器
  3. MENU按钮
  4. 目镜传感器
  5. 液晶画面
             可以将显示屏调节到易于观看的角度，并从任意位置进行拍摄
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200307004210605.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b6530b0d6b61e51c11804585bd02bc6b.png)
  6. 屈光度调节旋钮
 根据您的视力调节屈光度调节旋钮，直到取景器中的显示清晰。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020030700433290.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b0b977c3f72e94bef6a7cbdd9c33c6a5.png)
  7. 拍摄时：C2（自定义2）按钮
      用于观看： （放大）按钮
  8. AF/MF/AE锁定切换杆
@@ -126,7 +126,7 @@ NP-FW50专用锂电池
  16. 播放按钮
 
 ## 顶部/侧视
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200307004819674.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/39a6736bc8b2b2ee4dda2a8a7822ed3d.png)
 1. 声器
 2. 影像传感器位置标记
 3. （麦克风）接口，  当连接了外接麦克风时，会自动打开麦克风。如果外接麦克风为插入式电源类型，本产品将为麦克风提供电源。
@@ -141,22 +141,22 @@ NP-FW50专用锂电池
 10. C1（自定义1）按钮
 11. 曝光补偿旋钮
 12. 肩带挂钩，将带子的两端安装到本产品上。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200307005106168.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ac444b3bfef98921937741bac5670e81.png)
 13. （N标记）
 该标记表示用于连接本产品和支持NFC的智能手机的接触点
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200307005131449.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eee6ee974c0ddbd1dd86b54d08e8873a.png)
 14. 存储卡盖
 15. 存储卡插槽
 
 ## 底视
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200307005238947.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cf2ce874e22055a3087323021f98d860.png)
 1. 电池插槽
 2. 电池盖
 3. 三脚架安装孔
 请使用螺丝长度小于5.5 mm的三脚架。否则，您无法牢固地固定本产品，并可能会损坏本产品
 
 ## 镜头FE 28-70 mm F3.5-5.6 OSS
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200307005409315.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bc34309b6f15c4c8e385b3aba5cb6493.png)
 1. 对焦环
 2. 变焦环
 3. 焦距刻度

@@ -10,9 +10,9 @@
 
 
 ## 2. 数据建模：功能需求 + 性能需求
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310142825453.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8fa1e1f8d7411f059a8679e0462a0dca.png)
 ## 3. 如何对字段进行建模
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021031014284598.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fe874a9a6688ec834f2408f44925b6c6.png)
 ## 4. 字段类型 ： Text v.s Keyword
 Text
 
@@ -89,9 +89,9 @@ Disable_source ： 节约磁盘，适用于指标型数据
  - 作者
  - 发行日期
  - 图书封面
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310143358567.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fb1a2418c65ded3a7c91115df31ef545.png)
 优化片段设定
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210310145607502.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0d74dbbac15a7d45f23f45fa12c4240b.png)
 
 ```bash
 PUT books/_doc/1
@@ -337,8 +337,8 @@ POST books/_search
 ## 12. Mapping 字段的相关设置
 [https://www.elastic.co/guide/en/elasticsea...](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-params.html)
 
-![映射](https://img-blog.csdnimg.cn/20210329163518920.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210329163539435.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![映射](https://i-blog.csdnimg.cn/blog_migrate/29565a9308eeef6e748f7f06e8391e6e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e9eb99d501c4ff160caa11afe7b27459.png)
 
 ## 13. 一些相关的 API
 Index Template & Dynamic Template

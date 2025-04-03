@@ -1,7 +1,7 @@
 ## 1 添加草稿
 草稿即为保存起来但又暂时不想被别人看到的文章。
 创建一个`_drafts`目录，把未写完的文章放在该目录下，就可以保存起来发布但别人看到，如何需要发布，只需将文章拷贝到`_post`目录即可。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200629152847692.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a534f29b98e1a24f53ec8124dc67f43e.png)
 ## 2 目录与配置文件说明
 .
 
@@ -99,7 +99,7 @@ git bash工具克隆此项目
 ```bash
 $ git clone https://github.com/melangue/dactl
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200629172433710.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8a160f136efee8de69c2977f0c979ff5.png)
 打开终端：
 执行安装一些gem包
 
@@ -112,5 +112,5 @@ $ bundle exec jekyll serve
 遇到的问题：[Can't install with Ruby 2.5 #598](https://github.com/ffi/ffi/issues/598)， `bundle update`解决。
 
 界面访问：[http://127.0.0.1:4000/dactl/](http://127.0.0.1:4000/dactl/)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200629172648616.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/acfe5f09b247d350b3070bdff1acbf79.png)
 把`_post`目录下博客文件换成自己的博客文章，并且`CNAME`文件修改成自己的域名，复制到自己的本地github博客目录下，上传github就可以以域名的方式访问了。

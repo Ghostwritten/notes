@@ -1,5 +1,5 @@
 # minikube & kubernetes 动手指南
-![](https://img-blog.csdnimg.cn/b041ae3e03ed4218aea0360e5ee8a18c.jpeg#pic_center)
+![](https://i-blog.csdnimg.cn/blog_migrate/3e245e05d6ff49890e6778151c28c430.jpeg#pic_center)
 
 <font color=#9400D3 size=3 face="楷体">"Minikube 可快速设置部署 Kubernetes 集群，专注于让 Kubernetes 易于学习和开发。"</font>
 
@@ -735,7 +735,7 @@ EOF
 `windows`: 在 `C:\Windows\System32\drivers\etc\hosts`添加`192.168.10.25   dashboard.com`
 访问 `dashboard.com`
 
-![](https://img-blog.csdnimg.cn/e9c5d08010f54fc9a6cb53ba423eaa81.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/f4f8edb136ed7002b82c9e027579c723.png)
 
 
 - 更多关于 [kubernetes dashboard 内容](https://blog.csdn.net/xixihahalelehehe/article/details/115913408)请参考这篇文章
@@ -765,7 +765,7 @@ $  minikube service hello-minikube
 👉  http://192.168.10.25:30578
 ```
 浏览器访问：
-![](https://img-blog.csdnimg.cn/43672f2de72040d7a131520fb98702d3.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/8849cfba107d63faa0c16d19b83e154f.png)
 查询 URL
 
 ```bash
@@ -918,7 +918,7 @@ secure-ingress-hello   nginx   minikube.nginx.com   192.168.10.25   80, 443   9m
 ```
 访问：`https://minikube.nginx.com/hello`
 
-![](https://img-blog.csdnimg.cn/6ed183a485e84dd080a6f735d26abe9e.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/3481df071330e1f27d99a2dd08001c83.png)
 
 
 
@@ -934,7 +934,7 @@ secure-ingress-hello   nginx   minikube.nginx.com   192.168.10.25   80, 443   9m
  - [kubeadm 部署 kubernetes 集群](https://blog.csdn.net/xixihahalelehehe/article/details/105567076)
  - [云原生圣经](https://ghostwritten.blog.csdn.net/article/details/108562082)
 
-![](https://img-blog.csdnimg.cn/21990cd8a38d471684ca506b604a3c38.gif#pic_center)
+![](https://i-blog.csdnimg.cn/blog_migrate/fae55181f0b02b88ee44e58179bc4683.gif#pic_center)
 
 
 

@@ -136,24 +136,24 @@ main.go主要设计两个依赖包的用法：
 
 ### 2.1 先分析cli.v1的应用
 创建一个`newapp`，`go build` 生成二进制命令则是`app.name`的值。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/999d70fe86ea438f8ab58331e4d84baa.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4bd97ba6a45543838a847fa038245e30.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e376a2756cfb2cb3d559c9fb78f5e330.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1449beb40c0a702fb50adbded8aed1f6.png)
 这里是除了配置命令的名字，用法说明，还有配置命令行参数，这里有包含四个，分别是`证书，密钥、白名单、端口。`，白名单是我们需要的仓库，即来自白名单的仓库镜像才是我们可以用的，端口是我们程序占用的端口。那证书与密钥又是用来开启`https`。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bc86d5874d944cd89f439b4e2f630138.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/95747ec2e6803dff2d7d41cf0f4979c7.png)
 每个参数进行设置详细的类型说明。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c978b38fc27d4f3dbcc1d09258d94e43.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_15,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b400493ed59c4d8faefa317b9a0bbc8c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_12,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0d793f0019d9d917d345549edd8e47af.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cfaa3dfa599a65fd6860a2c4315378ce.png)
 `app.Action`是我们要执行的操作。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/712d6348190b430c99d8946d38dd2445.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a10732a0274846148c4d3a0305e00e55.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/306c44f12aef59ad97e9061596295270.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f2a0901309b75af6febe64514ff063b0.png)
 
 `e := echo.New()`创建一个名叫e的实例。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a8d17d0b525c4f7aa8e6de869259306f.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ab798563f18942c5a87ccdc7a9ad27c3.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/62d5e0c3aabd653dfd9be933204d24cb.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/86401a40eaffb751594552dcebc27e41.png)
 `e.use`是使用将中间件添加到在路由器之后运行的链中，也就是说这里是自定义log输出。
 具体解释参考[https://studygolang.com/articles/11740](https://studygolang.com/articles/11740)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/52b77d1b44344033ad10467f76333995.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6a234afbec6940bfa3161158280b40fa.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f25d592d41c8265d56e33cc2087cb521.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6f439c86523d11c631762d777cfabaea.png)
 ### 2.2  LoggerWithConfig是这么含义？
 它来自`github.com/labstack/echo/middleware`，通过查找，在[https://github.com/labstack/echo/blob/master/middleware/logger.go](https://github.com/labstack/echo/blob/master/middleware/logger.go)文件中。描述功能为一个中间件配置的日志。如下：
 
@@ -229,10 +229,10 @@ func LoggerWithConfig(config LoggerConfig) echo.MiddlewareFunc {
 
  - 传入了什么？`config LoggerConfig`代码已写出。
  - 返回了什么？`bytes.NewBuffer(make([]byte, 256))`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0e26b52454de419595c61c76b34d46a8.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a055012fe846dd623d2cb263ab265561.png)
  - 以什么格式返回输出？ `echo.MiddlewareFunc`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c34e4a8f75c947bd9cbf63dadda8f4f3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/02e900a9aa0d3a30d45a164f7abeed9e.png)
 
 ```bash
 type Context interface {
@@ -305,24 +305,24 @@ New使用给定的`startTag`和`endTag`作为标签开始和结束来解析给�
  - `config.Format`即是`template`
  - `"${", "}"`即是开始结束标识符
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/32cef8c563a04617b61608bd4d6557ce.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a31548e878d14967802edf1937807274.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0c4504de119046d58a99011f416da46e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/74e50eefeda81338de5ba00d3dbc0c90.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8ca49f67d7fb58d64bdcd865ed7a0ee2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d94c0b8571f90cf488c0633a67787415.png)
 reset方法中重定义t结构体的变量名后，利用 `unsafeString2Bytes()`对各个变量进行了处理，那么它的逻辑什么？
 在`fasttemplate`包中的`unsafe.go`代码我们找到了。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0b675465160d4e80a1e070415e37a49b.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eca644dc2c29dcda99cc4085e9b65c89.png)
 这里用到了reflect包和unsafe包，他们的作用分别是：
 
  - `reflect`：反射就是用来检测存储在接口变量内部(值`value`；类型`concrete type) pair`对的一种机制。
  - `unsafe`: 指向不同类型数据的指针，是无法直接相互转换的，必须借助`unsafe.Pointer`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/12f9b3c7b74445eaaeeee10cecf3c42b.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/080b5c0198d62ebb682d7c021ce8cc13.png)
 `StringHeader`是字符串的运行时表示。它不能安全或便携地使用，它的表示形式可能会在以后的版本中改变。而且，Data字段不足以保证它引用的数据不会被垃圾收集，因此程序必须保持一个独立的、正确键入的指向底层数据的指针.
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a3c59d64d0de46a39f9057a347e62c80.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5e2649d9329ddab4baad05acb28ec872.png)
 `Uintptr`是一个整数类型，它大到足以容纳任何指针的位模式
 len当然是整数类型
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cd227b01386e41d8bade3c433a0b14ae.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9c0ffcd510d637c5f0d1a0d9558980a9.png)
 `SliceHeader`是片的运行时表示。它不能安全或便携地使用，它的表示形式可能会在以后的版本中改变。而且，Data字段不足以保证它引用的数据不会被垃圾收集，因此程序必须保持一个独立的、正确键入的指向底层数据的指针。
 
 `unsafeString2Bytes`其实就是将字符串的格式转换为切片类型，而go格式转换需要`unsafe.Point`方法。
@@ -353,7 +353,7 @@ len当然是整数类型
 
 #### 2.2.2  `config.colorer = color.New()`代码中`new()`又如何理解呢？
 它来自[https://github.com/labstack/gommon/blob/master/color/color.go](https://github.com/labstack/gommon/blob/master/color/color.go)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4608cd28fc864957b3060072a51968c3.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/94c4bf50d1ab242fe55e75e6c6022734.png)
 在New函数中，我们应当知道new函数的语法：`func new(Type) *Type`，**内建函数 new 用来分配内存，第一个参数是一个类型，不是一个值，返回值是一个指向分配零值的指针**。
 
 在关于c的`SetOutPut`方法中，`io.writer`利用了流的读写，bytes.Buffer是一个可变字节的类型，可以让我们很容易的对字节进行操作，比如读写，追加等。bytes.Buffer实现了io.Writer接口，所以我么可以很容易的进行读写操作。
@@ -361,8 +361,8 @@ len当然是整数类型
 
 `os.File`是打开文件
 **[https://pkg.go.dev/os](https://pkg.go.dev/os)**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/950feee663d146f386897dfa1f3de7e5.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_18,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9724631535134a4384e89d297a18319a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7597f493a5750e57eaa570e6fae412ba.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0e1ced495a0054688dbe0df1b3c2f0e8.png)
 如果文件描述符是terminal则返回true,c.disabled=true,表示如果不是终端，则不开启的标志，也就是`LoggerWithConfig`函数能用到颜色输出的地方，只有终端，当人打开去看的时候，如果是终端输出日志，就给输出特定的颜色。
 
 #### 2.2.3  sync.Pool又是什么？
@@ -371,15 +371,15 @@ len当然是整数类型
 
 ### 2.3 白名单、证书、密钥的判断
 **回到[main.go](https://github.com/kainlite/kube-image-bouncer/blob/master/main.go)代码中来。**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7a2917be127b476fa915e9740e603f10.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6832eac34f4b6b797d0f02bc83c9ec46.png)
 
  - 假如whitelist不为空，通过`“，”`分割，因为白名单仓库可能是多个的，然后打印输出
  - 如果whitelist为空，说明介绍所有的镜像仓库来源
  - 假如证书与密钥存在，开启`https server`
- - 假如证书与密钥不存在，开启http server![在这里插入图片描述](https://img-blog.csdnimg.cn/92a03fd74f0245e0825435e61e96f0ca.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_19,color_FFFFFF,t_70,g_se,x_16)
+ - 假如证书与密钥不存在，开启http server![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c7f22466f0dde0ae216b51ae8ad5e8ed.png)
 
 最后，`app.run(os.args)`启动服务并显示文本。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fa576eb07e744b2cb7034207471319a7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/41729d8a0217011be74759f1d7f021c7.png)
 
 ## 3. 总结
 编写一个webhook，[cli.v1](https://pkg.go.dev/gopkg.in/urfave/cli.v)可以帮助实现：

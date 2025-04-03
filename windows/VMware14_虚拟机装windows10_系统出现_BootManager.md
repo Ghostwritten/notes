@@ -1,7 +1,7 @@
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200420235707443.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1d5a7944d9bfee283c9abae0d560a544.png)
 解决办法：
 第一种：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020042023574019.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/973f3331c92347ea056e3aabbddfb831.png)
 删除配置参数：
 
 ```bash

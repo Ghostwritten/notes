@@ -32,7 +32,7 @@
 consul reload
 ```
 界面查看，服务载入成功
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200822113744492.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5173b4e5ac75012c10a968c310b67390.png#pic_center)
 其中，check是用来做服务的健康检查的，可以有多个，也可以没有，支持多种方式的检查。check定义在配置文件中，或运行时通过HTTP接口添加。Check是通过HTTP与节点保持一致
 
 ## check方法

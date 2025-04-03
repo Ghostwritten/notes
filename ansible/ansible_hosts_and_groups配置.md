@@ -2,7 +2,7 @@
 
 ---
 ## 1. hosts配置格式
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210205111355652.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c6f7ba9fcc40be5a2f5c2ec2c1f487d2.png)
 
 > 注意： 您可以使用逗号（,）或冒号（:）分隔主机列表。处理范围和IPv6地址时，首选逗号。
 

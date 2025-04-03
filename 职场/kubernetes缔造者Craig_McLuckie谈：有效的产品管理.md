@@ -1,6 +1,6 @@
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/45fb2707d7b549b6a5c33a0d09bc9934.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1f1002a4e8896b7c96c9d3b805d30115.jpeg#pic_center)
 
 作为 VMware 的产品管理副总裁([Craig McLuckie](https://cmcluck.medium.com/))，我花了很多时间与团队讨论产品管理学科应该是什么样子。产品管理之旅的每一步对我来说都是一种乐趣——从个人贡献者到管理一个由超过 100 名产品经理组成的团队。我试图捕捉一些对我有用的东西，以及我在这里看到的效果很好的东西。
 ## 产品管理之禅
@@ -11,7 +11,7 @@
 > “如果你想造船，不要鼓动人去拾柴、分工、发号施令。相反，教他们向往广阔无垠的大海。” ——安托万·德·圣埃克苏佩里
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0fc46b8808704f84a2c18982c81b6b0e.webp#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4ffda9716f95ab5fa35d9ae4c9a9baa0.webp?x-image-process=image/format,png#pic_center)
 
 
 ## 关键美德
@@ -59,5 +59,5 @@
 ## 对一切说“是”
 在许多方面，您的产品将更多地由您说不的事情来定义，而不是您说是的事情。对可以完成的事情要切实可行，并发号施令，这一点至关重要。说“当然，最终我们会这样做”比说“这是一个重要的能力/市场，但它不是我们希望通过该产品解决的问题”容易。要大胆，但也要专注和务实。以数据为导向，并为您的决策提供必要的备份。做这项工作，并能够证明你的决定是如何基于事实的。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/419a20e57e594af7948415d59b8c9f23.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/659a23b4e183e235546ff730ded67538.jpeg#pic_center)
 [https://siliconangle.com/2016/04/26/google-all-in-on-cloud-kubernetes-latest-impact-on-open-source-openstack/](https://siliconangle.com/2016/04/26/google-all-in-on-cloud-kubernetes-latest-impact-on-open-source-openstack/)

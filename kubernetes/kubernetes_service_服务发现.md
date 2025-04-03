@@ -4,7 +4,7 @@
 
 
 [
-![在这里插入图片描述](https://img-blog.csdnimg.cn/87cdd74f5659411e99ee8f9313c49ad3.jpeg#pic_center)](https://www.rottentomatoes.com/m/arrival_2016)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8070a7ff1f79cd102dede82423c56bd9.jpeg#pic_center)](https://www.rottentomatoes.com/m/arrival_2016)
 
 *电影《降临》根据小说《你一生的故事》改编*
 
@@ -17,7 +17,7 @@ service 解决两个问题：
 - Pod 在重启、更新、销毁的过程中，如何确保 Pod 之间的调用不受影响？
 
 pod 的 IP 是不稳定的，我们不能把 Pod IP 用作服务之间的调用地址，需要通过 DNS解析实现。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/80a522b6d8c34ab8951f27dbbf957dfb.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/81247191f12135265253106f2893a181.png)
 
 
 对 Kubernetes 集群中的应用，Kubernetes 提供了简单的 Endpoints API，只要 Service 中的一组 Pod 发生变更，应用程序就会被更新。 对非 Kubernetes 集群中的应用，Kubernetes 提供了基于 VIP 的网桥的方式访问 Service，再由 Service 重定向到 backend Pod。
@@ -478,14 +478,14 @@ Address 3: 10.97.103.223 hostnames.default.svc.cluster.local
 
 默认的策略是，通过 round-robin 算法来选择 backend Pod。 实现基于客户端 IP 的会话亲和性，可以通过设置 service.spec.sessionAffinity 的值为 "ClientIP" （默认值为 "None"）。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200813232105803.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/90030a2d4e5263d7cde81a0981102b6f.png#pic_center)
 ### 6.2 iptables 代理模式
 这种模式，kube-proxy 会监视 Kubernetes master 对 Service 对象和 Endpoints 对象的添加和移除。 对每个 Service，它会安装 iptables 规则，从而捕获到达该 Service 的 clusterIP（虚拟 IP）和端口的请求，进而将请求重定向到 Service 的一组 backend 中的某个上面。 对于每个 Endpoints 对象，它也会安装 iptables 规则，这个规则会选择一个 backend Pod。
 
 默认的策略是，随机选择一个 backend。 实现基于客户端 IP 的会话亲和性，可以将 service.spec.sessionAffinity 的值设置为 "ClientIP" （默认值为 "None"）。
 
 和 userspace 代理类似，网络返回的结果是，任何到达 Service 的 IP:Port 的请求，都会被代理到一个合适的 backend，不需要客户端知道关于 Kubernetes、Service、或 Pod 的任何信息。 这应该比 userspace 代理更快、更可靠。然而，不像 userspace 代理，如果初始选择的 Pod 没有响应，iptables 代理能够自动地重试另一个 Pod，所以它需要依赖 readiness probes。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200813232314381.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/efab20a7b284ab9c41ea7b273c08973f.png#pic_center)
 
 
 

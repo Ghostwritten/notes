@@ -19,10 +19,10 @@ tags: storage
  - 身份集成和基于角色的访问控制
 
 ##  2. Harbor的架构  
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9d488116c8204edd82aa81195f270e84.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1bbc86ef0c5189c226260ec591fe8b38.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5f22f15f5fd44e938eefeebf27245a15.png?)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0a9f034313414818873d2421a4f520aa.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d1e692affe7ab18adad60d586062b5b9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f998c80a442ac3b9d08d0c7abd11561f.png)
 
 
  - `Proxy`: `Harbor`的`registry`、`UI`、`token services`等组件，都处在一个反向代理后边。该代理将来自浏览器、`docker clients`的请求转发到后端服务上。
@@ -264,16 +264,16 @@ Login Succeeded
 ```
 ####  4.2.2 界面登陆
 界面登陆用户密码：`admin/Harbor12345`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a7a7d5549a1f40d0b65e0b7be063d534.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2b119aa24c24f2ff319e62670ae83ac4.png)
 
 ####  4.2.3 修改密码
 现在我们把admin的初始密码`Harbor12345`改为`123456`，试一试。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9d2bc5be0121467fb47e3492396e08eb.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ee7400719441f1b5865cda5a45e986bf.png)
 **发现原来admin密码的设置要支持大小写字符并且有数字**。
-![修改harbor密码](https://img-blog.csdnimg.cn/5a0b26bd78b4463ebb89e67d0bfcd0fd.png?)
+![修改harbor密码](https://i-blog.csdnimg.cn/blog_migrate/4cf593ccafba6234b531509ce535627f.png)
 那么我们把`admin`的密码改为`Ghost12345`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f14ae54830004ff1af12939af2afdcc9.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e2aedd2356ea8f815abcf498f8a86f39.png)
 修改成功，并且退出重新登陆成功了（图略）。
 当然，我们的仓库登陆密码也会随之变化。
 
@@ -296,7 +296,7 @@ Login Succeeded
 docker push 仓库名/项目名/镜像名:标签
 ```
 我们的仓库名是`192.168.211.70`,项目名当前默认是`library`，当然我们可以根据自己的需求在界面创建一个新的项目名。例如base
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9af19670e1904bd0bfb7c4227d86cf5b.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/57b7ffd6dc16ce655bdbc23bf5a389de.png)
 然后给一个镜像打一个标签。推送到仓库。
 
 ```bash
@@ -307,7 +307,7 @@ cfd97936a580: Pushed
 latest: digest: sha256:febcf61cd6e1ac9628f6ac14fa40836d16f3c6ddef3b303ff0321606e55ddd0b size: 527
 ```
 界面我们也能看到推送进来的镜像。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f4003f76b7ea4ae9b868dc6a8c0538c6.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/49a3f22a4359679215b19f6e1ba3cfab.png)
 #### 4.2.5 拉取镜像  
 我们换到另一台机器尝试一下拉取这个镜像，要怎么做呢？修改`/etc/docker/daemon.json` 添加`insecure-registries`参数是最为关键的一步。
 
@@ -345,7 +345,7 @@ Status: Downloaded newer image for 192.168.211.70/base/busybox:latest
  [配置 Harbor YML 文件](https://goharbor.io/docs/2.4.0/install-config/configure-yml-file/)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b223471adbd54a3b8b1721bd52943829.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dbc295411d8410a6bd6ab47277fe007c.png)
 
 ##  4. Harbor http 域名部署
 ### 4.1 清理杂质
@@ -441,7 +441,7 @@ C:\Windows\System32\drivers\etc\hosts
 用户名/密码：`admin`/`Harbor12345`
 
 登陆成功
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ef4e6398233b4a69be3fb4921c2db283.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/70eedecd8ffab4daad7bf4f92ae581f2.png)
 ####  4.3.3 镜像推送
 
 ```bash
@@ -688,7 +688,7 @@ Login Succeeded
 ####  5.4.2 界面登陆
 https://192.168.211.70
 用户密码：admin/Harbor12345
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cfc4bbcdfcbd477296b3d48e9e4bbfcc.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9ea99ea7ba0193a6677a3d49160eb183.png)
 #### 5.4.3 推送镜像
 
 ```bash
@@ -943,7 +943,7 @@ Login Succeeded
 ```
 
 ####  6.5.2 界面登陆
-![在这里插入图片描述](https://img-blog.csdnimg.cn/348d588802ca4ea1917ef48e778838c2.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c346af238dd107278315e6193e82776e.png)
 ####  6.5.3 推送镜像
 
 ```bash

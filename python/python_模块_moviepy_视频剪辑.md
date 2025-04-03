@@ -1,5 +1,5 @@
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1cace05af3014db5b56dc7c72e80034a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/91fc1e8e4a8d49f5721ad7fea721cdd5.png)
 
 
  - [python 3.10.0源码编译安装](https://ghostwritten.blog.csdn.net/article/details/122587523)

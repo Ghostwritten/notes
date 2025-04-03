@@ -1,6 +1,6 @@
 beego 是一个典型的 MVC 框架，它的整个执行逻辑如下图所示：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200803004353578.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7b1bf8a5902137f45d19b008e2a0032c.png)
 通过文字来描述如下：
 
  1. 在监听的端口接收数据，默认监听在 8080 端口。

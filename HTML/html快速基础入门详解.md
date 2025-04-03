@@ -16,7 +16,7 @@
 ### 2.1 HTML的基本结构
 下面从HTML的基本结构、文档设置标记、图像标记、表格和超链接五个方面讲
 解。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200908171647170.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7c31663393a39681e96c5557c32ddf2d.png#pic_center)
 
 
 
@@ -80,7 +80,7 @@
 ```
 运行效果图
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020090817263795.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fdd880930177299dcf4c6977e7e15ab3.png#pic_center)
 格式标记包括：
 
 ```bash
@@ -186,7 +186,7 @@
  - 3.搜索引擎可以通过这个属性的文字来抓取图片。
 
 我们可以在浏览器上访问博客园首页，对博客园首页的图片进行审查，就可以 看到的img标记的使用方法，如图2-5所示。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200908173857881.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3dc0b76ebf27a055264cca414ce95e20.png#pic_center)
 注意：
 
 ```bash

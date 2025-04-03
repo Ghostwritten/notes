@@ -37,7 +37,7 @@
  - 多线程
  - 字长
 ### 2.2 分析工具
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201009135835416.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9ae37849338f7eb50e74762bceb5b50d.png#pic_center)
 说明:
 
 uptime,vmstat,mpstat,top,pidstat只能查询到cpu及负载的的使用情况。
@@ -76,7 +76,7 @@ perf top -p pid -e cpu-clock
  - 用户分配器libc、glibc、libmalloc和mtmalloc
  - LINUX内核级SLUB分配器
 ### 3.2 分析工具
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201009140314252.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f108b4cdd201e8e9895115a93f3c0959.png#pic_center)
 说明：
 
 free,vmstat,top,pidstat,pmap只能统计内存信息以及进程的内存使用情况。
@@ -116,7 +116,7 @@ valgrind --tool=memcheck --leak-check=full --log-file=./log.txt  ./程序名
  - inode缓存
  - noop调用策略
 ### 4.2 分析工具
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201009140758744.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fefbc1c353cdb97d8bd1137697a41364.png#pic_center)
 ### 4.3 使用方式
 
 ```bash
@@ -135,7 +135,7 @@ perf record -e block:block_rq_issue -ag^Cperf report
 网络的监测是所有 Linux 子系统里面最复杂的，有太多的因素在里面，比如：延迟、阻塞、冲突、丢包等，更糟的是与 Linux 主机相连的路由器、交换机、无线信号都会影响到整体网络并且很难判断是因为 Linux 网络子系统的问题还是别的设备的问题，增加了监测和判断的复杂度。现在我们使用的所有网卡都称为自适应网卡，意思是说能根据网络上的不同网络设备导致的不同网络速度和工作模式进行自动调整。
 
 ### 5.2 分析工具
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201009140944385.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f63349cd640ac89c29eeb3af6c7d42e1.png#pic_center)
 ### 5.3 使用方式
 
 ```bash
@@ -168,7 +168,7 @@ tcpflow -cp host 192.168.1.1
 ### 6.1 说明
 Load 就是对计算机干活多少的度量（WikiPedia：the system Load is a measure of the amount of work that a compute system is doing）简单的说是进程队列的长度。Load Average 就是一段时间（1分钟、5分钟、15分钟）内平均Load。
 ### 6.2 分析工具
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201009141354406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f94a537b19c1189cf09b86db84d4ba85.png#pic_center)
 ### 6.3 使用方式
 
 ```bash

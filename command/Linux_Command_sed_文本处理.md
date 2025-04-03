@@ -363,6 +363,24 @@ $ nl 1.txt | sed '3,$d; s/name/mingzi/g'
 sed -i 's/!\[\[Pasted image \(.*\)\.png\]\]/(img\/Tanzu_NSX_Avi_ALB_install\/Pasted%20image%20\1.png)]/g' your_file.md
 ```
 
+## 4.12 追加行
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/198a1290fb1a4b92a4ae2dcf6cc3877e.gif#pic_center)
+每一行追加复杂的内容
+```bash
+sed 's/$/ ansible_ssh_user=deployer   ansible_ssh_pass='\''lM@@vjmVJ48Cvh%BK'\''/' input_file > output_file
+```
+以某个字符开头追加复杂的内容
+
+```bash
+sed '/^10\.226/ s/$/ ansible_ssh_user=deployer ansible_ssh_pass='\''lM@@vjmVJ48Cvh%BK'\''/' input_file > output_file
+```
+
+## 4.13 获取第一个分割符后面的内容
+
+```bash
+$ echo "cmcc-2.3.0-20230627111623" | sed 's/^[^-]*-//'
+2.3.0-20230627111623。
+```
+
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/baad1cf6831cb33c5e9d3a27a43e260a.gif#pic_center)
 

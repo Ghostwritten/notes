@@ -1,7 +1,7 @@
 #  process-exporter 容器安装部署
 tags: exporters
 <!-- catalog: ~process-exporter~ -->
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7ea9afc12d974088b12612d6ed03ea34.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/52548a9210ef459c11436f5bc748a769.png)
 
 
 

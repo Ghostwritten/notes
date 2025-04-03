@@ -38,7 +38,7 @@ $ curl http://localhost:8080
 ```
 
 但跨机器访问不了
-![在这里插入图片描述](https://img-blog.csdnimg.cn/669b81ec31f448f785fed1d896456dd4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4d5036324783be2966aebdf53167b11d.png)
 我们可以用安装OpenRestry的配置作为反向代理，[安装OpenRestry](http://openresty.org/cn/installation.html)，实现用域名`ghostwritten.com`访问
 
 修改配置
@@ -121,7 +121,7 @@ $ curl http://ghostwritten.com
 <html xmlns:gcse="googleCustomSearch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="shortcut icon" href="dlib-icon.ico"><meta name="verify-v1" content="02MiiaFNVzS5/u0eQhsy3/knioFHsia1X3DXRpHkE6I="><meta name="google-site-verification" content="DGSSJMKDomaDaDTIRJ8jDkv0YMx9Cz7OESbXHjjr6Jw"><title>dlib C++ Library</title><script type="text/javascript" src="dlib.js"></script><link rel="stylesheet" type="text/css" href="dlib.css"></head><body><a name="top"></a><div id="page_header"><a href="http://dlib.net"><img src="dlib-logo.png"></a></div><div id="top_content"><div id="main_menu" class="menu"><div class="menu_top"><b>The Library</b><ul class="tree"><li><a href="algorithms.html" class="menu">Algorithms</a></li><li><a href="api.html" class="menu">API Wrappers</a></li><li><a href="bayes.html" class="menu">Bayesian Nets</a></li><li><a href="compression.html" class="menu">Compression</a></li><li><a href="containers.html" class="menu">Containers</a></li><li><a href="graph_tools.html" class="menu">Graph Tools</a></li><li><a href="imaging.html" class="menu">Image Processing</a></li><li><a href="linear_algebra.html" class="menu">Linear Algebra</a></li><li><a href="ml.html" class="menu">Machine Learning</a></li><li><a href="metaprogramming.html" class="menu">Metaprogramming</a></li><li><a href="other.html" class="menu">Miscellaneous</a></li><li><a href="network.html" class="menu">Networking</a></li><li><a href="optimization.html" class="menu">Optimization</a></li><li><a href="parsing.html" class="menu">Parsing</a></li></ul><br><b>Help/Info</b><ul class="tree"><li><a href="http://blog.dlib.net" class="menu">Dlib Blog</a></li><li><a
 ```
 但夸机器windows即便在`C:\Windows\System32\drivers\etc`目录添加`192.168.211.100 ghostwritten.com`，也无法访问。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/aefc95d5d3b5499bb64499ebb98b40ef.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/aedf659bdaff6a3660f8b8b0faf1fe44.png)
 如果实现跨机器访问
 
 ```bash
@@ -160,7 +160,7 @@ $ ./openresty/bin/openresty -s reload
 $ ./nginx/sbin/nginx -s reload
 ```
 界面，域名访问成功，我们可以在消息头看的`OpenRestry`的版本
-![在这里插入图片描述](https://img-blog.csdnimg.cn/66321e3e334247c68ea2910f61679771.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eb563eb55f7883ca8ea37ff633539240.png)
 
 ##  3. 代理缓存
 当我们的nginx作为反向代理时，通常有动态请求，不同的用户访问同一个URL会看到不同的内容，这时会交给上游服务处理，而当不同的用户访问静态资源时，即一段时间不会发生变化的，我们可以不交给上游服务，缓存到nginx代理，我们可以设置缓存一天，或者几个小时，即便上游服务挂了，我们仍然可以浏览到一些资源。
@@ -241,12 +241,12 @@ proxy_cache_methods GET;  # 默认是get和head
 ./bin/openresty -s reload
 ```
 访问界面
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dd4d6837166b4f0c95a8bee00f6137ae.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cdb839de46a527cc5d28cf492b871f73.png)
 停止上游服务nginx
 
 ```bash
 ./nginx/sbin/nginx -s stop
 ```
 仍然可以访问
-![在这里插入图片描述](https://img-blog.csdnimg.cn/05f2002780124572a3ee2de3479c39ab.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d4a55826018277460ba6ee097ad3279f.png)
 

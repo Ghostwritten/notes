@@ -2,7 +2,7 @@
 tags: flask
 <!--  catalog: ~flask template 模板应用 ~ -->
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e0487f22ea9b44d790f87882ef5afac6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/47c6f49dc601caf52e94c7e678e754db.png)
 
 
 
@@ -36,7 +36,7 @@ def index():
 </html>'''
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200514144236981.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/18815ec4313314463c04e591f88704f0.png)
 板有助于实现页面展现和业务逻辑之间的分离。 在Flask中，模板被编写为单独的文件，存储在应用程序包内的templates文件夹中。 在确定你在microblog目录后，创建一个存储模板的目录：
 
 ```bash
@@ -134,7 +134,7 @@ $ vim app/templates/index.html
     </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200514161548771.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/abecd4a635cacf92a4f28675ed9de485.png)
 ## 4. 模板的继承
 绝大多数Web应用程序在页面的顶部都有一个**导航栏**，其中带有一些**常用的链接**，例如**编辑配置文件，登录，注销**等。我可以轻松地用HTML标记语言将导航栏添加到`index.html`模板上，但随着应用程序的增长，我将需要在其他页面重复同样的工作。尽量不要编写重复的代码，这是一个良好的编程习惯，毕竟我真的不想在诸多HTML模板上保留同样的代码。
 
@@ -175,7 +175,7 @@ Jinja2有一个模板继承特性，专门解决这个问题。从本质上来�
 ```
 
 自从基础模板base.html接手页面的布局之后，我就可以从index.html中删除所有这方面的元素，只留下内容部分。 extends语句用来建立了两个模板之间的继承关系，这样Jinja2才知道当要求呈现index.html时，需要将其嵌入到base.html中。 而两个模板中匹配的block语句和其名称content，让Jinja2知道如何将这两个模板合并成在一起。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200514162304931.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eca9c2f1aef98039d864e1ada57a9c26.png)
 参考：
 - [The-Flask-Mega-Tutorial-zh第二章](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E6%A8%A1%E6%9D%BF.md)
 

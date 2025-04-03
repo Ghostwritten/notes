@@ -6,7 +6,7 @@
 几乎每一种版本控制系统都以某种形式支持分支，一个分支代表一条独立的开发线。
 
 使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f67d4f9dadc34d2dae638d9ef7ea0141.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/17b09d6b447f2cd5ab5424d5d122462e.png)
 创建分支命令：
 
 ```bash
@@ -282,5 +282,5 @@ $ git commit
 ```
 ---
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/00a9cd9ac36d414fb2ad0e16b84291a2.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ed6dc6563b58b3e4836fd326ace8bb7b.gif#pic_center)
 

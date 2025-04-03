@@ -2,7 +2,7 @@
 
 
 ---
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7d44286d8415442c85d6a38623b7cbe6.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/06d45acf9bb59d1f63561e5a363f4daa.gif#pic_center)
 
 
 ## 1. Shell 的含义

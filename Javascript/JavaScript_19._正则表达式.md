@@ -1,7 +1,7 @@
 #  JavaScript 19. 正则表达式
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/847250ab3e274462a847419f4b4a165d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ad7a139fbf6d876a593e1737f0e8c054.png)
 
 
 ##  1. 什么是正则表达式
@@ -61,7 +61,7 @@ function myFunction() {
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fc2a9678148f4d83bad3d1b72a674e1e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a7eaa26efc1808047f1155c202a3d636.png)
 ###  2.2 replace() 方法
 replace() 方法将接收字符串作为参数：
 
@@ -89,9 +89,9 @@ function myFunction() {
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c47774d24b65452da2c47ac2af4e64c4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0e6966e1ac70184c5311eaf467f3a8b2.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/66b0f13cab494be09639e8cc311e7eac.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/066d4b7d8b074c8a84e8ea2620b2b1fa.png)
 ##  3. 正则表达式修饰符
 修饰符 可以在全局搜索中不区分大小写:
 |修饰符|	描述|

@@ -7,7 +7,7 @@
 
 
 下面这个图展示了工作区、版本库中的暂存区和版本库之间的关系：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3816a72aac26485bac1dfc579842faf0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/84e501fb817f10896aa1a2af7b694ecc.png)
 
  - 图中左侧为**工作区**，右侧为**版本库**。在版本库中标记为 "index" 的区域是**暂存区**（stage/index），标记为 "master" 的是master 分支所代表的目录树。
  - 图中我们可以看出此时 "HEAD" 实际是指向 master 分支的一个"游标"。所以图示的命令中出现 HEAD 的地方可以用 master 来替换。

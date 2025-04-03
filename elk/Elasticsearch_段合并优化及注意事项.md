@@ -8,7 +8,7 @@
  - 删除的文档信息，保存在 “`.del`” 文件中，查 询后会进行过滤。
  - Segment 会定期 `Merge`，合并成一个，同时删 除已删除文档
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210315150455534.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cd90bf4d009eef36879574ecbfcd9cab.png)
 ## 2. Merge 优化
 ES 和 Lucene 会自动进行 Merge 操作
 
@@ -30,7 +30,7 @@ Merge 操作相对比较重，需要优化，降低对系统的影响
 
  - 提升查询速度 / 减少内存开销
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210315151003812.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e5f4bbaa8acc2de100f3273a219ebabf.png)
 
 
 最终分成几个 segments 比较合适？

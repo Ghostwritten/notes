@@ -13,7 +13,7 @@ Mutex 是使用最广泛的同步原语（Synchronization primitives，有人也
 可以说，临界区就是一个被共享的资源，或者说是一个整体的一组共享资源，比如	对数据库的访问、对某一个共享数据结构的操作、对一个 I/O 设备的使用、对一个连接池中的连接的调用，等等。
 如果很多线程同步访问临界区，就会造成访问或操作错误，这当然不是我们希望看到的结果。所以，**我们可以使用互斥锁，限定临界区只能同时由一个线程持有**。
 当临界区由一个线程持有的时候，其它线程如果想进入这个临界区，就会返回失败，或者是等待。直到持有的线程退出临界区，这些等待线程中的某一个才有机会接着持有这个临界区。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201021141340935.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/33805687163b7baf8879fbd61dc3f70b.png#pic_center)
 ## 3. 同步原语
 互斥锁 Mutex
 读写锁 RWMutex
@@ -77,7 +77,7 @@ type Locker interface {
 ```
 我们使用 sync.WaitGroup 来等待所有的 goroutine 执行完毕后，再输出最终的结果。
 但是，每次运行，你都可能得到不同的结果，基本上不会得到理想中的一百万的结果。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201021152750110.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/db4a906660e5d2183191b2097f112ae9.png#pic_center)
 这是为什么呢？其实，这是因为，count++ 不是一个原子操作，它至少包含几个步骤，比如读取变量 count 的当前值，对这个值加 1，把结果再保存到 count 中。因为不是原子操作，就可能有并发的问题。
 
 比如，10 个 goroutine 同时读取到 count 的值为 9527，接着各自按照自己的逻辑加 1，值变成了 9528，然后把这个结果再写回到 count 变量。但是，实际上，此时我们增加的总数应该是 10 才对，这里却只增加了 1，好多计数都被“吞”掉了。这是并发访问共享数据的常见错误。
@@ -89,7 +89,7 @@ Go race detector 是基于 Google 的 C/C++ sanitizers 技术实现的，编译�
 
 我们来看看这个工具怎么用。在编译（compile）、测试（test）或者运行（run）Go 代码的时候，加上 race 参数，就有可能发现并发问题。比如在上面的例子中，我们可以加上 race 参数运行，检测一下是不是有并发问题。如果你 go run -race counter.go，就会输出警告信息。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201021153753576.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4a4fafe66d6ad431c91efa05f22bc1e9.png#pic_center)
 这个警告不但会告诉你有并发问题，而且还会告诉你哪个 goroutine 在哪一行对哪个变量有写操作，同时，哪个 goroutine 在哪一行对哪个变量有读操作，就是这些并发的读写访问，引起了 data race。
 例子中的 goroutine 10 对内存地址 0x00c000126010 有读的操作（counter.go 文件第 16 行），同时，goroutine 7 对内存地址 0x00c000126010 有写的操作（counter.go 文件第 16 行）。而且还可能有多个 goroutine 在同时进行读写，所以，警告信息可能会很长。虽然这个工具使用起来很方便，但是，因为它的实现方式，只能通过真正对实际地址进行读写访问的时候才能探测，所以它并不能在编译的时候发现 data race 的问题。而且，在运行的时候，只有在触发了 data race 之后，才能检测到，如果碰巧没有触发（比如一个 data race 问题只能在 2 月 14 号零点或者 11 月 11 号零点才出现），是检测不出来的。而且，把开启了 race 的程序部署在线上，还是比较影响性能的。运行 go tool compile -race -S counter.go，可以查看计数器例子的代码，重点关注一下 count++ 前后的编译后的代码：
 
@@ -163,7 +163,7 @@ package main
     }
 ```
 如果你再运行一下程序，就会发现，data race 警告没有了，系统干脆地输出了 1000000：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201021154949620.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c6045f9af1e8437bb1420418329537c2.png#pic_center)
 **这里有一点需要注意：Mutex 的零值是还没有 goroutine 等待的未加锁的状态，所以你不需要额外的初始化，直接声明变量（如 var mu sync.Mutex）即可。**
 
 

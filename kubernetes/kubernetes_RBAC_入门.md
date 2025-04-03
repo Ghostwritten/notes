@@ -1,7 +1,7 @@
 #  kubernetes RBAC 入门
 tags: 对象
 
-[![在这里插入图片描述](https://img-blog.csdnimg.cn/29e0b9307ca74225b75cf9c0f283666b.png)](https://movie.douban.com/subject/1291561/?i=0)
+[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7f6156ef9645f98818df37d18acb3fdf.png)](https://movie.douban.com/subject/1291561/?i=0)
 
 *不可以吃太胖哦，会被杀掉的！    ——《千与千寻》*
 
@@ -123,7 +123,7 @@ roleRef:
   name: secret-reader
   apiGroup: rbac.authorization.k8s.io
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201206225851402.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d92070aaf5d04005360791d55f7e1233.png)
 
 创建了绑定之后，你不能再修改绑定对象所引用的 Role 或 ClusterRole。 试图改变绑定对象的 roleRef 将导致合法性检查错误。 如果你想要改变现有绑定对象中 roleRef 字段的内容，必须删除重新创建绑定对象。
 

@@ -5,10 +5,10 @@
 
 TLS 协议究竟是怎么保证http的明文消息被加密的呢?我们可以看下TLS的通用模型
 TLS/SSL发展
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4fc092b4fdc646908fc30a18abb67b9e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/724b97f79c103055922c1bd669f39773.png)
  在OSI七层模型中,应用层是http协议;那么在http协议之下,我们的表示层也就是SSL协议所发挥作用的这一层;它通过握手,交换秘钥,告警,对称加密应用数据等方式使http层没有感知的情况下做到了数据的安全加密;那么TLS是怎么做到数据的安全加密的尼?
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/179471c48d6244a6b8c16b2eedecc44d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ce6a337602e9e988069adabcff2f7f63.png)
  当我们抓包或者观察服务器端的配置的时候,我们可以看类似于上图的配置;
 
 这个安全密码的配置决定了我们的TLS协议是怎么样保证明文被加密的?
@@ -23,16 +23,16 @@ TLS/SSL发展
 
 
 ##  2. 对称加密与非对称加密各自的应用场景
-![在这里插入图片描述](https://img-blog.csdnimg.cn/202e3c1f4ca943039e075d0190cb6ae7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e24f0df242beb22209ffc9d2bc5dba25.png)
 在对称加密中尼是指两个想通讯的人.包括Alice ,他们共同持有一段秘钥,而Bob尼,可以把原始明文的文档,通过这把秘钥加密生成加密文档;而Alice拿到这个文档以后尼他可以拿这把秘钥把加密文档转化为原始文档;而中间的任何人如果没有持有这把秘钥;即使它知道了对称加密的算法;他也没有办法把加密文档还原成原始文档;
 
 那么对称加密究竟是怎么实现的尼? 我们可以以RC4 对称加密的一个序列算法来看下;
 
 　　**采用异或算法**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d64c7987f27d40e29251c9a1e0b89252.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cbac6fa76ff45a381d32c90fd9789036.png)
 同时,密文可以经过秘钥进行解密成明文,进行逆运算;
 所以,对称加密有一个最大的优点就是它的性能非常的好,它只需要遍历一次就可以进行加密,解密也只需要遍历一次;
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3ea92a9b8f0a4fd09d0d179ce43bfcff.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9cd10e1696f588b901fec75b9de13996.png)
 非对称加密根据一个算法原理,它会生成一对秘钥;一对秘钥中,如果我们称其中一个为公钥,那么另一个就是私钥;那么公钥和私钥有什么特性尼?
 **就是同一份明文文档,如果用公钥加密了,那么只有经过私钥才能解密;同样的道理,如果文档用私钥加密了,那么用私钥才能解密;**
 
@@ -42,24 +42,24 @@ TLS/SSL发展
 必须有一个**公信机构**,那么这个机构就是**CA机构**,接下来我们看看CA是怎么样**颁发证书**和**证书过期的**?
 
 下面图中最右安CA就是**CA机构**,他负责颁发证书;而我们属于站点的维护者,就是下图最左边的**证书订阅人**;
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c6c984ba4d4a406abf0803588b4c7b3a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9c340bf79cefcbe5dcb0a46b5cb491f9.png)
 首先我们作为**证书订阅人**,要去登记机构申请一个**证书**;登记机构验证订阅人的身份之后发通过**CSR**发送给CA机构,CA机构通过以后生成一对 **公钥和私钥**,**公钥会在CA证书中保存着**;同时把公钥和私钥发放给证书订阅人;证书订阅人拿到公钥私钥以后会将其部署到Web服务器,比如Nginx;当浏览器通过第一步访问我们https站点的时候会请求证书,而我们的Web服务器会把我们的公钥证书发送给浏览器;而浏览器会经过验证我们的证书是否是合法和有效的;CA一般是一年的有效期;那么这个有效期是怎么体验的?
 
 　　CA机构会把过期的证书放到**CRL服务器**中;这个服务器会把所有的过期证书形成一条链条;所以它的性能非常非常的差;所以又推出了一个**OCSP响应程序**;OCSP可以就一个证书去查询,它是否过期;所以浏览器是可以直接去查询OCSP响应程序的;但OCSP响应程序性能还不是很高;比如我们的Nginx会有一个**OCSP开关**;当我们打开开关以后会由Nginx主动的去OCSP响应程序去查询;这样大量的客户端直接从Nginx就可以直接获取到证书是否有效;
 
 那么证书是怎样组成的呢?
-![在这里插入图片描述](https://img-blog.csdnimg.cn/502728045ff541bbbf4202397ed412a1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a333fc258bba4731c958da3f1af13756.png)
 
  - DV证书：申请快，免费
  - OV证书：3、4天，收费
  - EV证书：更麻烦
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/07724c1e67944a26ac4487beba18f2e2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1d460137bb533ed92a27c8999a5d952c.png)
 
 
 ##  4. SSL协议握手时Nginx的性能瓶颈在哪里?
 接下来我们看下TLS的通讯过程
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6a72c471e3ea4842b80bbac1b87c7fa7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/abbd7abd3015c7d25f8bd162ee2c36d3.png)
 　　通讯过程中,双方主要完成四个目的;
 
  - 验证身份
@@ -67,7 +67,7 @@ TLS/SSL发展
  - 传递秘钥
  - 加密通讯
 
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/adc7fbde93d54cbab37f4d0c7cb27e7a.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e452c78f117a4b698fe8259123539a0d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/854377f251d24d8b986478de1ff92ae8.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b664b98dac535378177c56ac4cafc973.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bb015cdf1c30c8eeb9c60ab3ba09aa89.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/58a6ba547ad89c2f8f3ea69448c8cd3b.png)
 

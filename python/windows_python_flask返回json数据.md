@@ -2,12 +2,12 @@
 tags: flask
 <!--  catalog: ~flask 返回 json~ -->
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/501d01259317413291275262667dd1e4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d942fc2790722447ffeb1b19ac7f7ee8.png)
 
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200718144252758.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5a3142e03c1b51f4e693431f1ac71cfb.jpeg)
 
 ## 实战
 ### data/pvuv.txt
@@ -68,7 +68,7 @@ if __name__ == '__main__':
     app.run(host='192.168.1.4',debug=True)
 ```
 执行，界面访问
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200718143904522.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f131fb98e3e337bdf0aa262efb75a89d.png)
 
 ### test_get_json.py
 利用api接口处理json文件

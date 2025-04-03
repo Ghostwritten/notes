@@ -33,7 +33,7 @@
  - 换入和换出速度，则表示每秒钟换入和换出内存的大小。
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210707143528954.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f2114f04c4c27f29cf9f03199e7e788d.png)
 ##  2. 内存性能工具
 所有的案例中都用到了 free。这是个最常用的内存工具，可以查看系统的整体内存和 Swap 使用情况。相对应的，你可以用 top 或 ps，查看进程的内存使用情况。
 
@@ -52,10 +52,10 @@
  - 从内存指标出发，更容易把工具和内存的工作原理关联起来。
  - 从性能工具出发，可以更快地利用工具，找出我们想观察的性能指标。特别是在工具有限的情况下，我们更得充分利用手头的每一个工具，挖掘出更多的问题。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210707150607507.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2a2d3ea0e301b707f7f39fe107074615.png)
 
 第二个表格，从性能工具出发，整理了这些常见工具能提供的内存指标。掌握了这个表格，你可以最大化利用已有的工具，尽可能多地找到你要的指标。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210707151135675.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/22721e07cdc7c2690e87772a2b0e3f63.png)
 ##  4. 如何迅速分析内存的性能瓶颈
 **实际生产环境中，又快又准地解决性能问题。**
 找关联。其实，虽然内存的性能指标很多，但都是为了描述内存的原理，指标间自然不会完全孤立，一般都会有关联。当然，反过来说，这些关联也正是源于系统的内存原理，这也是我总强调基础原理的重要性，并在文章中穿插讲解。
@@ -68,7 +68,7 @@
  - 再用 vmstat 和 pidstat，查看一段时间的趋势，从而判断出内存问题的类型。
  - 最后进行详细分析，比如内存分配分析、缓存 / 缓冲区分析、具体进程的内存使用分析等。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210707151916564.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cd3302878131d58de27d06e4dcbf5df9.png)
 
 第一个例子，当你通过 free，发现大部分内存都被缓存占用后，可以使用 vmstat 或者 sar 观察一下缓存的变化趋势，确认缓存的使用是否还在继续增大。
 

@@ -4,7 +4,7 @@ tags: apparmor,安全
 
 
 
-[![在这里插入图片描述](https://img-blog.csdnimg.cn/c7297f9f01e64f33b5a240cb9fca127c.png)](https://www.behance.net/gallery/75682725/RIGHT-A-Reverse-Film)
+[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/617fd5b1c73e7c34f83fe97117f3ab08.png)](https://www.behance.net/gallery/75682725/RIGHT-A-Reverse-Film)
 
 
 上一篇：[kubernetes apparmor 入门](https://ghostwritten.blog.csdn.net/article/details/126229173)

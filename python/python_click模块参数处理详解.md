@@ -381,7 +381,7 @@ def hello(name):
 if __name__ == '__main__':
     hello()
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200514175031776.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/17bb821d34343373d813c82f3adc4bb8.png)
 ## 5. cli.add_command
 @click.group装饰器把方法装饰为可以拥有多个子命令的Group对象。由Group.add_command()方法把Command对象关联到Group对象。 也可以直接用@Group.command装饰方法，会自动把方法关联到该Group` 对象下。
 

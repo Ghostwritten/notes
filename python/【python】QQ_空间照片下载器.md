@@ -170,5 +170,5 @@ cat -n data_photo.txt_2 |grep 26467
  - [python collections](https://zhuanlan.zhihu.com/p/343747724)
  - [python Selenium](https://zhuanlan.zhihu.com/p/111859925)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c2b2517f9b2747d6a6b1d4a17d8f8f4c.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ebf90b2195f2f04fbc640e90325091cb.gif#pic_center)
 

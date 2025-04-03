@@ -291,7 +291,11 @@ service:
 
 ```bash
 helm template stable/mysql
+获取镜像列表（并不全）
+helm template rancher rancher-2.7.8.tgz | grep 'image:' | awk '{print $2}' | sed 's/\"//g' 
 ```
+获取 helm charts 包中的镜像列表
+
 
 
 ##  5. helm install

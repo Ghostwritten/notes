@@ -1,4 +1,4 @@
-![](https://img-blog.csdnimg.cn/c291995af7d647548f7dc90176b435a0.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/9bc25f67c6c5d113369d8aed07882d10.png)
 
 
 
@@ -8,10 +8,10 @@
 
 历经两天，我学习完成了来自日本的[Takuya 🐾 devaslife](https://blog.inkdrop.app/)（独立开发者、油管博主）的视频内容：[How to set up PowerShell prompt with Oh My Posh on Windows 11](https://www.youtube.com/watch?v=5-aK2_WwrmM&t=1152s)，并对此记录了关于实践 `windows terminal` 的学习笔记，分享给大家。
 
-![](https://img-blog.csdnimg.cn/0b2ba852959b4856b3ce7024a951939c.png)
-![](https://img-blog.csdnimg.cn/86c8780f96d4461da030a208b63dedbd.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/4bca0e4047341b1e788e15c90e36d076.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/6694d43567d319e94d5ee2222725f5af.png)
 `Takuya`使用的是[min](https://minbrowser.org/) 浏览器，我也下载体验了一番，确实小巧、简洁。
-![](https://img-blog.csdnimg.cn/c243d9b681fb4554803f189e0bb572c2.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/dca990cb681515cd0e416a975219a7cf.png)
 ## 2. 安装 Windows Terminal
 直接从 `Microsoft Store` 安装[Windows Terminal](https://github.com/microsoft/terminal)即可。
 
@@ -22,13 +22,13 @@
 [ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts)是一个用大量字形（图标）修补开发人员目标字体的项目。特别是从流行的“标志性字体”（如Font Awesome、Devicons、Octicons等）添加大量额外[字形](https://github.com/ryanoasis/nerd-fonts#glyph-sets)。
 
 我们下载这个`Hack`版本
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a3b7eff30c864589b785f141d695745f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/18b0795f070a9c80a79147556ade267a.png)
 
-![](https://img-blog.csdnimg.cn/9e50c560afad4f199e30dc9f5fc858ae.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/83d1f9c9bbc3fee5710f29ac25dcd8a5.png)
 打开安装
-![](https://img-blog.csdnimg.cn/0ed05731739a4a2e885231fbfa85f132.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/691a0d13e1bf2d09c9505aa83b063dcb.png)
 配置最新字体
-![](https://img-blog.csdnimg.cn/39a697a27bab4d019862bfae909afe3e.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/2a3794d2a0b157c88eec5df3fe6e3bc9.png)
 如不这样做，后面在安装`oh-my-posh`后，会出现乱码。
 
 
@@ -40,17 +40,17 @@
 
 我们安装最新的 `Powershell`
 
-![](https://img-blog.csdnimg.cn/edc5407380224875b922b2c9d3ff336f.png)
- 查看已安装成功![](https://img-blog.csdnimg.cn/8fbdeec8629a40c684b7f9b28012596c.png)
-![](https://img-blog.csdnimg.cn/d6fdfeb2c4df450bb4a06b33553a777b.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/5580e8c36aa5a38f3e17080dbea54963.png)
+ 查看已安装成功![](https://i-blog.csdnimg.cn/blog_migrate/a49ef5978437ab3c287fae9cd4f03cbd.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/f7db480778dfbb8da6c5be628a4dc562.png)
 修改启动配置为`powershell`
-![](https://img-blog.csdnimg.cn/2ebb1942a3f04c41ac2874cc5aab6e1a.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/9b440a84936efd36e2e1407c5277842c.png)
 
 ## 5. 改变终端背景颜色
 打开配置文件`setting.json`
 绝对路径：`%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json`
 
-![](https://img-blog.csdnimg.cn/c3496d1a99b047e3a57ccb9a99cd1609.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/7fff3c129bc48cecbfab9a727d558b9d.png)
 
 
 复制一份`One Half Dark` 的背景配置并修改
@@ -102,7 +102,7 @@
             "yellow": "#E5C07B"
         },
 ```
-![](https://img-blog.csdnimg.cn/01492a2ea8314fb9841595487dabf7d2.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/c0cb7e95ae1b065dd50423346e5c9c3d.png)
 ## 6. 安装 scoop
 官网：[https://scoop.sh/](https://scoop.sh/)
 一个为`windows`而生的命令行安装工具。
@@ -209,7 +209,7 @@ Creating shortcut for Neovim (nvim-qt.exe)
 PS C:\Users\XH> nvim
 ```
 输出：
-![](https://img-blog.csdnimg.cn/ff191614afd5483eaf71202b3c812261.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/1ff3ee67855a348541087d475cef5fee.png)
 
 ```bash
 PS C:\Users\XH> mkdir .config/powershell
@@ -356,15 +356,15 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object
 ```
 安装完成后，重启 `windows terminal`  即可生效。
 
-![](https://img-blog.csdnimg.cn/552064424eb143c99b876ee1f31fe4e1.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/fd35b2b2db973b009cf1632038201176.png)
 有一点乱码，在安装fonts时，忽略了字体配置导致，改成新安装的`Hack NFM`就好了。
-![](https://img-blog.csdnimg.cn/14502f022321492babd26b3383136907.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/ba8af04d7146645abeaab57e8473534b.png)
 
 
 ## 11. 自定义 prompt（path）
 [自定义 prompt方法](https://ohmyposh.dev/docs/installation/customize)你可以看这里。
 初始命令格式：`oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"`
-![](https://img-blog.csdnimg.cn/b604a344ecb54d0caaa313d6cfc5966c.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/9d7f795c7170bdf2c624df7db3310514.png)
 
 |Name	|Type	|Description|
 |--|--|--|
@@ -507,7 +507,7 @@ pwsh> cat .\takuya.omp.json
 }
 ```
 输出效果:
-![](https://img-blog.csdnimg.cn/fae2033fda944b9589a9d9c02ee4cb3a.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/98e16c8f8483b6be0a4c44d396fc4947.png)
 编写`user_profile.ps1` 添加`oh-my-posh`功能载入配置
 ```bash
 $ nvim .\user_profile.ps1
@@ -529,7 +529,7 @@ nvm use 14.16.0
 node -v
 ```
 
-![](https://img-blog.csdnimg.cn/079ab77d8da64427ab301724c3ef2c31.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/a7a17d08eabe2f2272b9792036607f1d.png)
 
 ## 13. 安装 Terminal Icons
 
@@ -538,7 +538,7 @@ Install-Module -Name Terminal-Icons -Repository PSGallery -Force
 Import-Module Terminal-Icons
 ```
 输出效果：
-![](https://img-blog.csdnimg.cn/001a7ba774bf4f6dbf73443d6834d50d.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/1f3136656fece780938159e4915ecd66.png)
 编写`user_profile.ps1` 添加`Icons`功能载入配置
 
 ```bash
@@ -552,7 +552,7 @@ z模块是实现跳转目录的快捷方式。
 Install-Module z -force
 ```
 
-![](https://img-blog.csdnimg.cn/45db060f12054411b2ef8aac02a0c25a.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/6b83d96001663c67097cdd9db1a0c562.png)
 ## 15. 安装 PSReadLine 
 [PSReadLine](https://github.com/PowerShell/PSReadLine) 是微软创建的一个模块，用于自定义 `PowerShell` 中的命令行编辑环境。它提供了大量的定制，可以改变命令行编辑器以多种方式呈现数据的方式。这里我们实现它的命令自动补全功能。
 ```bash
@@ -561,7 +561,7 @@ Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
 ```
 输出效果：
-![](https://img-blog.csdnimg.cn/2c90364a77254d79a58e6352590d4ea5.gif#pic_center)编写`user_profile.ps1` 添加`PSReadLine`功能载入配置
+![](https://i-blog.csdnimg.cn/blog_migrate/6add7a39988ef99ae64f83d771d075a5.gif#pic_center)编写`user_profile.ps1` 添加`PSReadLine`功能载入配置
 
 ```bash
 # PSReadLine
@@ -579,7 +579,7 @@ Install-Module -Name PSFzf -Scope CurrentUser -Force
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 ```
 
-![](https://img-blog.csdnimg.cn/f63e976b89ae4a5095ac53e5da471726.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/585334d6f52b2d271b2e5b384f8c44c7.png)
 
 编写`user_profile.ps1` 添加`PSFzf`功能载入配置
 
@@ -610,10 +610,10 @@ function which ($command) {
  Set-PoshPrompt rudolfs-dark
 ```
 
-![](https://img-blog.csdnimg.cn/f4533269296845fdbf423a855861367d.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/6631b8871ea3f737d8407a07bb85ff46.png)
 如果 `Set-PoshPrompt aliens`主题没变，说明`oh-my-posh`没找到`themes`库
 错误：
-![](https://img-blog.csdnimg.cn/9e17bf1a3e224aa8997f63c8d43b7f29.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/89d2aa03dca488576fc1acaedda1a841.png)
 所有的 themes 在这
 ```bash
 $ ls C:\Users\XH\AppData\Local\Programs\oh-my-posh\themes\

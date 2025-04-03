@@ -55,7 +55,7 @@ select 使用固定长度的位相量，表示文件描述符的集合，因此�
 
 比如，最常用的反向代理服务器 Nginx 就是这么工作的。它也是由主进程和多个 worker 进程组成。主进程主要用来初始化套接字，并管理子进程的生命周期；而 worker 进程，则负责实际的请求处理。我画了一张图来表示这个关系。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c2eca1dfb97e4824ae2dc5c9a165cb7e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2a74db24645e92ff30c3784027d257d1.png)
 这里要注意，accept() 和 epoll_wait() 调用，还存在一个惊群的问题。换句话说，当网络 I/O 事件发生时，多个进程被同时唤醒，但实际上只有一个进程来响应这个事件，其他被唤醒的进程都会重新休眠。
 
  - 其中，accept() 的惊群问题，已经在 Linux 2.6 中解决了；
@@ -70,10 +70,10 @@ select 使用固定长度的位相量，表示文件描述符的集合，因此�
 
 **第二种，监听到相同端口的多进程模型**。在这种方式下，所有的进程都监听相同的接口，并且开启 SO_REUSEPORT 选项，由内核负责将请求负载均衡到这些监听进程中去。这一过程如下图所示。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/90d60dc6753c414e978b8caf11645b26.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a2660d6a08e652d90d8552209c2b01b4.png)
 由于内核确保了只有一个进程被唤醒，就不会出现惊群问题了。比如，Nginx 在 1.9.1 中就已经支持了这种模式。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7216d0e8ccc54708a03175546899d739.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c43aa2ada62faebe4c521b4979db8de3.png)
 不过要注意，想要使用 SO_REUSEPORT 选项，需要用 **Linux 3.9** 以上的版本才可以。
 
 ##  4. C1000K
@@ -94,7 +94,7 @@ select 使用固定长度的位相量，表示文件描述符的集合，因此�
 这里有两种常见的机制，DPDK 和 XDP。
 
 **第一种机制，DPDK，是用户态网络的标准**。它跳过内核协议栈，直接由用户态进程通过轮询的方式，来处理网络接收。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a0af4db3db714c8298df0d6f127b1e2c.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2db522f1896559ae49b4d83e194fe247.png)
 说起轮询，你肯定会下意识认为它是低效的象征，但是进一步反问下自己，它的低效主要体现在哪里呢？是查询时间明显多于实际工作时间的情况下吧！那么，换个角度来想，如果每时每刻都有新的网络包需要处理，轮询的优势就很明显了。比如：
 
  - 在 PPS 非常高的场景中，查询时间比实际工作时间少了很多，绝大部分时间都在处理网络包；
@@ -105,7 +105,7 @@ select 使用固定长度的位相量，表示文件描述符的集合，因此�
 **第二种机制，XDP（eXpress Data Path），则是 Linux 内核提供的一种高性能网络数据路径**。它允许网络包，在进入内核协议栈之前，就进行处理，也可以带来更高的性能。XDP 底层跟我们之前用到的 `bcc-tools` 一样，都是基于 Linux 内核的 eBPF 机制实现的。
 
 XDP 的原理如下图所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/27298b4720b84fb4b7c8020b5335e283.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/18184a5394cb8af1cc5e6959290d6160.png)
 你可以看到，XDP 对内核的要求比较高，需要的是 [Linux 4.8 以上版本](https://github.com/iovisor/bcc/blob/master/docs/kernel-versions.md#xdp)，并且它也不提供缓存队列。基于 XDP 的应用程序通常是专用的网络应用，常见的有 IDS（入侵检测系统）、DDoS 防御、 [cilium](https://github.com/cilium/cilium) 容器网络插件等。
 
 ##  6. 总结

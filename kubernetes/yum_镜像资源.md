@@ -77,5 +77,5 @@ kubelet --version
 
 ------
 图片鉴赏：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0be2f34d396742aa9e2161f32c51c159.jpg?text_Q1NETiBAZ2hvc3R3cml0dGVu,size_15,color_FFFFFF,t_70,g_se,x_16#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fbfad00ea36a35d7f010c0815c51324d.jpeg#pic_center)
 

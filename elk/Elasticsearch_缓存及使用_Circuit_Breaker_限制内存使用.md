@@ -9,7 +9,7 @@ Elasticsearch 的缓存主要分成三大类
  - Node Query Cache （Filter Context）
  - Shard Query Cache （Cache Query 的结果）
  - Fielddata Cache
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210315154625148.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8c08fdb3002601ca9a7b3a05d3ca17df.png)
 ## 2. Node Query Cache
 每一个节点有一个 Node Query 缓存
  - 由该节点的所有 Shard 共享，只缓存 Filter Context 相关内容
@@ -31,7 +31,7 @@ Cache Key
 静态配置
 
  - 数据节点：indices.requests.cache.size: “1%”
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210315154818733.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5195eef8becf261b1d48cffa4a01fe6c.png)
 ## 4. Fielddata Cache
 除了 Text 类型，默认都采用 doc_values。节约了内存
 Aggregation 的 Global ordinals 也保存在 Fielddata cache 中
@@ -109,5 +109,5 @@ GET /_nodes/stats/breaker?
 建议将集群升级到 `7.x`，更好的 `Circuit Breaker` 实现机制
 增加了 `indices.breaker.total.use_real_memory` 配置项，可以更加精准的分析内存状况，避免 OOM
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210315160024565.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0e3b8402a02b94a8582b0bbf7663810f.png)
 

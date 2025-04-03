@@ -1,7 +1,7 @@
 ##  Linux Command mount 挂载
 tags: 文件管理
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/452528ba84834c7392f5000a2e7a3900.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3dd7feacbdc86c4e358d24b4a0e7ae7e.png)
 
 
 ##  1. 简介
@@ -73,16 +73,16 @@ mount -t [type] [device] [dir]
 
 ## 5. mount 挂载
 ###  5.1 列出挂载的文件系统
-![在这里插入图片描述](https://img-blog.csdnimg.cn/610090e5de144d528193d6cbc7e7ea52.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/be7805397838149021251a06bb11df8b.png)
 ###  5.2 列出特定文件系统
 该-t选项允许用户指定运行mount命令时要显示的文件系统。例如，要仅显示 ext4 文件系统，请运行以下命令：
 
 ```bash
 mount -t ext4
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/17a92cd4aa694890a722b825dd1183e8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/af6719b6cb7b8339f30e9f2e61f0bc0e.png)
 或者加一个 `-l`参数
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c72b870746064f779929e739183f1e41.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b1b07c5a594a3aab1dc5c75588bf5d89.png)
 
 
 ###  5.3 挂载文件系统
@@ -91,7 +91,7 @@ mount -t ext4
 ```bash
 sudo mount /dev/sdb1 /mnt/media
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/951cacbba9094adbb1cfecf9cff48f58.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4de399d91a073c74d2c589c3724abcd8.png)
 要指定其他特定于文件系统的挂载选项，请-o在设备名称之前传递标志，后跟选项。使用以下语法：
 
 ```bash
@@ -111,7 +111,7 @@ mount -o [options] [device] [dir]
 <file system> <mount point> <type> <options> <dump> <pass>
 ```
 以下屏幕截图显示了/etc/fstab文件的内容：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f443a13568d5474b95c5c6324eda1274.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b6728e4f28e43ce852306f3420776abd.png)
 要挂载`/etc/fstab`文件中指定的文件系统，请使用以下语法之一：
 
 ```bash
@@ -137,7 +137,7 @@ mkdir /media/usb-drive
 ```bash
 fdisk -l
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/01fda885423f44209593449a37d58d69.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b1bd5658eb88ca73e8ec68c8142bc86f.png)
 3. 使用fdisk输出中的设备标识符，使用以下语法挂载 USB 驱动器：
 
 ```bash
@@ -282,7 +282,7 @@ fuser -m [dir]
 ```bash
 fuser -m /media/usb-drive
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7518b33eaa454abba59c562c5eb3c301.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0f51a4960ebcf33502e66e29e9c5a3b8.png)
 输出列出了当前访问设备的进程的 PID。停止进程并卸载文件系统。
 
 > 注意：了解如何列出 Linux 中正在运行的进程。

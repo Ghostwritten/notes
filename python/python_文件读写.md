@@ -25,7 +25,7 @@ IOError: [Errno 2] No such file or directory: 'C:\\qiye.txt'
 
 ## 2. 文件模式
 下面主要说一下open函数中的mode参数（如表1-1所示），通过改变mode参数可以实现对文件的不同操作。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ac8596cf089f40d385362fd6ffe21040.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/99c6fc1389cb87b920a5c4a7adecaac7.png)
 
 这里主要是提醒一下‘b’参数的使用，一般处理文本文件时，是用不到‘b’参数的，但处理一些其他类型的文件（二进制文件），比如mp3音乐或者图像，那么应该在模式参数中增加‘b’，这在爬虫中处理媒体文件很常用。参
 数‘rb’可以用来读取一个二进制文件。

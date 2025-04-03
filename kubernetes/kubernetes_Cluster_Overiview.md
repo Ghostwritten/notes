@@ -3,7 +3,7 @@ tags: cluster
 
 
 
-![Kubernetes 架构](https://img-blog.csdnimg.cn/a57e4e4f12f04eb6ad2f6c56dc083103.png)
+![Kubernetes 架构](https://i-blog.csdnimg.cn/blog_migrate/8fbe404cff54a8b3ce0300d841b9ce91.png)
 
 
 ##  1. 什么是 Kubernetes 集群？

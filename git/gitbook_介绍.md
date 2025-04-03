@@ -24,7 +24,7 @@ GitBook 特性：
 ##  2. 官方 Gitbook
 
 预览效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c85ebba2f4854af385dcbfb2a035ba41.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c0e16b553f5f7d56b8e1635e51e42d05.png)
 
 ```bash
 {% videoplayer id="myvideo" width="640" height="480" posterExt="png" %}https://www.youtube.com/watch?v=-MdyiRH6OAc{% endvideoplayer %}
@@ -33,7 +33,7 @@ GitBook 特性：
 
 ##  3. 自定义 Gitbook
 预览效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8ab16d8c9873426aa68ec4f73fa7320f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bfcd590dce9daafdb2bde9ec8c3588e3.png)
 
 ## 4. 参考
 - [https://www.gitbook.com/](https://www.gitbook.com/)

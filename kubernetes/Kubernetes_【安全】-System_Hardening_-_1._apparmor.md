@@ -277,7 +277,7 @@ The document has moved
 ```
 ##  5. Practice - AppArmor for Docker Nginx
 k8s网站： [https://v1-18.docs.kubernetes.io/zh/docs/tutorials/clusters/apparmor/](https://v1-18.docs.kubernetes.io/zh/docs/tutorials/clusters/apparmor/)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210525142040617.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b369b84b77e76413a0148a58efed60d4.png)
 
 ```c
 root@master:~/cks/apparmor# cat /etc/apparmor.d/docker-nginx
@@ -425,7 +425,7 @@ root@3f067ecff95e:/# sh
 
 ## 6. Practice - AppArmor for Kubernetes Nginx
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210525143921470.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)![在这里插入图片描述](https://img-blog.csdnimg.cn/2021052514435915.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c82a89b86d8224a120550223eb3cf1f4.png)![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0996b61379e955cee023d36df4de58f3.png)
  
 [**AppArmor Pod annotation**](https://v1-18.docs.kubernetes.io/zh/docs/tutorials/clusters/apparmor/#pod-%E6%B3%A8%E9%87%8A)
 

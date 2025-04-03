@@ -1,7 +1,7 @@
 #  node-exporter 本地与容器安装部署
 tags: exporters
 <!-- catalog: ~node-exporter~ -->
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7450c85f2d96464283b40473d7c8e376.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/df39fc900987dbcb3d97a35c5fb669af.png)
 
 
 

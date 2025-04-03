@@ -1,5 +1,5 @@
 # Go Docs
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6109190e9c7e485f8d8ce63249c98191.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/309e368fd9671a0aa12da8a575dd119c.png)
 
 ##  基础
 

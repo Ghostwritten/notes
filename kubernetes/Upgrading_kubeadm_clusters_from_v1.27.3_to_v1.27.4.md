@@ -1,10 +1,10 @@
-![](https://img-blog.csdnimg.cn/f7df35a91711478ebf7ff319c81cb574.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/92e34afa465d4b6f89285d2a4ee31347.png)
 
 
 
 
 刚刚 [kubernetes release](https://github.com/kubernetes/kubernetes/releases) 升级到 `v1.27.4` 了。相关 v1.27.4 升级内容请参考在[这里](https://github.com/kubernetes/kubernetes/releases)，迫不及待想升级一下。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d3edd02160744d10ad750e1b72261ded.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8684805f0ca01630fb5e183c9396a064.png)
 
 
 ##  1. Before you begin

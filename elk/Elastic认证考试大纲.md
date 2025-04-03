@@ -219,5 +219,5 @@ Elastic中文社区排名第一名：wood大叔第一次裸考都没有通过考
  9. 创建用户，给kibana_user权限
 
 **Elastic认证考试相关更多内容请报名：**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201026161210726.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bb9ca0f92efe7d973f583f5eb0a40453.png#pic_center)
 

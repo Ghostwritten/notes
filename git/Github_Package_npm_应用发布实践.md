@@ -1,6 +1,6 @@
 #  Github Package npm 应用发布实践
 
-![](https://img-blog.csdnimg.cn/2489179db9484552bb6c6acd3291b6be.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/048984ee94161c3c89c1d0da7aae35db.png)
 
 
 ## 1. 简介
@@ -14,7 +14,7 @@ GitHub Packages 为常用的包管理器提供不同的包仓库，例如 npm、
 
 ## 2.  创建新库 
 名字：`github-packages-npm-demo`
-![](https://img-blog.csdnimg.cn/b1fb83f6e971429aaa0ff9035159efe3.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/c8c4bc3854dd43752ca934079b931a5a.png)
 
 ## 3. 编写 index.js
 创建 `index.js` 文件，并添加指示“Hello world!”的基本警报
@@ -176,16 +176,16 @@ $ git push
 只要您的仓库中创建新版本，您创建的工作流程就会运行。 如果测试通过，则包将发布到 GitHub Packages。
 
 ## 8. 查看已发布包
-workflow 构建流程![](https://img-blog.csdnimg.cn/ba0b0e2e5eb84134a691bcddb92d223a.png)
+workflow 构建流程![](https://i-blog.csdnimg.cn/blog_migrate/2f4b7e4b833a80d14d69bcece357bbc3.png)
 
 发布的 npm 包
-![](https://img-blog.csdnimg.cn/011bb12f35904b4299019c2c18b892ad.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/024babbdb2e740f3307ec211cc5bfd79.png)
 
 ## 9. 管理 npm 包
 将默认的 `private` 包转为 `public` 包
-![](https://img-blog.csdnimg.cn/2d7ca31741f54c5a8755b328f3c2dfb5.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/7d5c664ca37393ba1d409149ac4d52a1.png)
 
-![](https://img-blog.csdnimg.cn/a42283c405fb44b9a4357c6cc7c3e16a.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/720252464001c93278d7c788df15fa1a.png)
 
 参考：
 - [GitHub Packages 快速入门](https://docs.github.com/zh/packages/quickstart#next-steps)

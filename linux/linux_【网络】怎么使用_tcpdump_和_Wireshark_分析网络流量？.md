@@ -174,10 +174,10 @@ tcpdump 为你展示了每个网络包的详细细节，这就要求，在使用
 
 为了帮你更快上手 tcpdump 的使用，我在这里也帮你整理了一些最常见的用法，并且绘制成了表格，你可以参考使用。首先，来看一下常用的几个选项。在上面的 ping 案例中，**我们用过  -nn 选项，表示不用对 IP 地址和端口号进行名称解析**。其他常用选项，我用下面这张表格来解释。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ebdad66a3b0b4798919aaf2a906090a0.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/82913ecaaaad40685cdd5f070df53d5d.png)
 接下来，我们再来看常用的过滤表达式。刚刚用过的是  udp port 53 or host 35.190.27.188 ，表**示抓取 DNS 协议的请求和响应包，以及源地址或目的地址为 35.190.27.188 的包**。其他常用的过滤选项，我也整理成了下面这个表格。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3183cbe0b5634b739a4fc52026d80cac.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/45a94ec3ba1851388e856d56c81861b7.png)
 最后，再次强调 tcpdump 的输出格式，我在前面已经介绍了它的基本格式：
 
 ```bash
@@ -199,11 +199,11 @@ $ scp host-ip/path/ping.pcap .
 ```
 然后，再用 Wireshark 打开它。打开后，你就可以看到下面这个界面：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c6c2d4a3c0734535b67045d944607e3a.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/776457e30527737e15873efea3e19cf8.png)
 从 Wireshark 的界面里，你可以发现，它不仅以更规整的格式，展示了各个网络包的头部信息；还用了不同颜色，展示 `DNS 和 ICMP` 这两种不同的协议。你也可以一眼看出，中间的两条 PTR 查询并没有响应包。
 
 接着，在网络包列表中选择某一个网络包后，在其下方的网络包详情中，你还可以看到，这个包在协议栈各层的详细信息。比如，以编号为 5 的 PTR 包为例：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0f7b39aa5c5f4af492fec8750fd539eb.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/45243715e78409c83f1c2bd6ef3217cd.png)
 你可以看到，IP 层（Internet Protocol）的源地址和目的地址、传输层的 UDP 协议（Uder Datagram Protocol）、应用层的 DNS 协议（Domain Name System）的概要信息。继续点击每层左边的箭头，就可以看到该层协议头的所有信息。
 
 比如点击 DNS 后，就可以看到 Transaction ID、Flags、Queries 等 DNS 协议各个字段的数值以及含义。
@@ -225,15 +225,15 @@ $ curl http://example.com
 ```
 最后，再回到终端一，按下 Ctrl+C 停止 tcpdump，并把得到的 web.pcap 拷贝出来。使用 Wireshark 打开 web.pcap 后，你就可以在 Wireshark 中，看到如下的界面：
 
-![最后，再回到终端一，按下 Ctrl+C 停止 tcpdump，并把得到的 web.pcap 拷贝出来。使用 Wireshark 打开 web.pcap 后，你就可以在 Wireshark 中，看到如下的界面：](https://img-blog.csdnimg.cn/5003e42d3b35455e80eca9b85aa7e22b.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![最后，再回到终端一，按下 Ctrl+C 停止 tcpdump，并把得到的 web.pcap 拷贝出来。使用 Wireshark 打开 web.pcap 后，你就可以在 Wireshark 中，看到如下的界面：](https://i-blog.csdnimg.cn/blog_migrate/bad366877310489d72999b3c6f2a4c77.png)
 由于 HTTP 基于 TCP ，所以你最先看到的三个包，分别是 TCP 三次握手的包。接下来，中间的才是 HTTP 请求和响应包，而最后的三个包，则是 TCP 连接断开时的三次挥手包。
 
 从菜单栏中，点击 Statistics -> Flow Graph，然后，在弹出的界面中的 Flow type 选择 TCP Flows，你可以更清晰的看到，整个过程中 TCP 流的执行过程：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3258a3e3d69d4725b24129d3f803d02b.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4c0a44f75db477129f4324db8574f1c2.png)
 这其实跟各种教程上讲到的，TCP 三次握手和四次挥手很类似，作为对比， 你通常看到的 TCP 三次握手和四次挥手的流程，基本是这样的：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/be6b3e9b1ba84bd69912e91d8220b1bc.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3324110ac4a73ae1e0c91541a25b1aac.png)
 不过，对比这两张图，你会发现，这里抓到的包跟上面的四次挥手，并不完全一样，实际挥手过程只有三个包，而不是四个。其实，之所以有三个包，是因为服务器端收到客户端的 FIN 后，服务器端同时也要关闭连接，这样就可以把 ACK 和 FIN 合并到一起发送，节省了一个包，变成了“三次挥手”。
 
 而通常情况下，服务器端收到客户端的 FIN 后，很可能还没发送完数据，所以就会先回复客户端一个 ACK 包。稍等一会儿，完成所有数据包的发送后，才会发送 FIN 包。这也就是四次挥手了。抓包后， Wireshark 中就会显示下面这个界面（原始网络包来自 Wireshark [TCP 4-times close](https://wiki.wireshark.org/TCP%204-times%20close) 示例，你可以点击 这里 下载）：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1fae595789314def8d5ad81a6fd66eb9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dc883fff49588a4a8d6671526058183c.png)
 

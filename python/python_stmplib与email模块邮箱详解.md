@@ -75,7 +75,7 @@ server.quit()
 [root@localhost stmplib]$ python stmp1.py
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200415224957640.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3e001dea740283793f0c5a9762c3aa7e.png)
 
 ##  3. email 简介
 [email](https://docs.python.org/3/library/email.examples.html) 模块，使用该模块可以轻松的发送带图片、视频、附件等复杂内容的邮件。
@@ -141,7 +141,7 @@ except Exception as e:
 [root@localhost stmplib]# python stmp3.py 
 邮件发送成功！
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020041523505056.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/36ce4d09fbdc2c843dedca26c3fc44f8.png)
 ### 4.2 实现接受多个图片格式邮件
 
 ```python
@@ -214,7 +214,7 @@ except Exception as e:
 [root@localhost stmplib]# python stmp4.py
 邮件发送成功！
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200416002937134.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2bc5487acc7729cc880a0ae0b0e36132.png)
 ### 4.3 实现接受单个图片格式邮件
 
 ```python
@@ -256,7 +256,7 @@ try:
 except Exception as e:
     print('邮件发送失败！'+str(e))
 ```
-![!\[在这里插入图片描述\](https://img-blog.csdnimg.cn/20200416004456753.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,siz](https://img-blog.csdnimg.cn/20200416004547616.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![!\[在这里插入图片描述\](https://img-blog.csdnimg.cn/20200416004456753.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,siz](https://i-blog.csdnimg.cn/blog_migrate/27e12689bd1178992e3d02a4ea7b22cd.png)
 ### 4.4 实现发送附件与图片格式的邮件
 
 ```python

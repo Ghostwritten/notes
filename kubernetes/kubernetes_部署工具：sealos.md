@@ -3,7 +3,7 @@ tags: 部署
 <!-- catalog: ~sealos~ -->
 
 
-![s](https://img-blog.csdnimg.cn/3fa2de64c8214dfc917a8da877f478e1.png)
+![s](https://i-blog.csdnimg.cn/blog_migrate/725660476416c734aa6bf17914b64e29.png)
 
 
 ##  1. 简介
@@ -11,7 +11,7 @@ tags: 部署
 [sealos](https://www.sealos.io/zh-Hans/) 是以 kubernetes 为内核的云操作系统发行版
 
 早期单机操作系统也是分层架构，后来才演变成 linux windows 这种内核架构，云操作系统从容器诞生之日起分层架构被击穿，未来也会朝着高内聚的"云内核"架构迁移
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c3593ab43b0c4cc287ceb79b1c4eba14.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/73bd68a7b84924c3ce928f3cd25030cc.png)
 
  - 从现在开始，把你数据中心所有机器想象成一台"抽象"的超级计算机，[sealos](https://www.sealos.io/zh-Hans/) 就是用来管理这台超级计算机的操作系统，kubernetes 就是这个操作系统的内核！
 
@@ -731,7 +731,7 @@ Writing manifest to image destination
 Storing signatures
 
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a4c36b2e609a4c81ae0be26672a100dd.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9a9add8d632bdcd01907f55c14a0042a.png)
 
 
 #### 6.2.6 运行集群镜像

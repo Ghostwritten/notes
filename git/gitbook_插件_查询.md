@@ -54,7 +54,7 @@ npm i gitbook-plugin-search-pro
 ```
 ###  2.3 效果
 见当前 book 左上角查找框 输入并搜索
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ed9a97783f3d465fa9e0a7708ef59023.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bd2f45182e50026f61f6d526b9167c9e.png)
 
 ##  3. search-plus 插件
 [search-plus](https://www.npmjs.com/package/gitbook-plugin-search-plus) 插件一个强大的 GitBook 搜索插件。
@@ -78,7 +78,7 @@ npm i gitbook-plugin-search-plus
 }
 ```
 ### 3.3 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/783f635341af4933ae6b9b1107463afc.gif#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e552314e590b4e30ba1bd81e414ef5bd.gif#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7e452d4f76b4431ab46efa11e3a7898e.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/454e059dd6c4888dbfe0ddccb6ffc211.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ac8ead9e98fae295e750f8c1ea6f798c.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a349a6d52884bc7a7645da16ee49cd00.gif#pic_center)
 

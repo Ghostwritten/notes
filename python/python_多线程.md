@@ -1,6 +1,6 @@
 #  python 多线程
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2813db4b25134c7faff1e1dce51c6346.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3cba108e6b09fdae30266b2e838a22a8.png)
 
 
 ## 1. 多线程

@@ -1,7 +1,7 @@
 #  Linux command lvextend 扩展逻辑卷设备
 tags: 设备
 
-![](https://img-blog.csdnimg.cn/b099f4089a1f4cd1b1f6d5144abe7895.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/c5d4bbe83c5f80e5fa746e019d997182.png)
 
 
 
@@ -54,8 +54,8 @@ $ resize2fs   /dev/VolGroup00/LogVol00
 ```bash
 lvextend -L +100M /dev/VolGroup00/LogVol00
 ```
-![](https://img-blog.csdnimg.cn/c8203fe3d74f4e38a0e5f205eb63f4b1.png)
-![](https://img-blog.csdnimg.cn/1995f93313134a2f8fb1cece59baca58.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/4de82a76fd42d0798fbc76d77d123096.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/d67b67e36edafc756b3f9a309458844f.png)
 我们的初始大小为 `100Mb`，但我们已将其扩展到 `200Mb`。
 
 ### 5.3 百分比扩展
@@ -65,7 +65,7 @@ lvextend 还支持指定扩展逻辑卷的百分比。指定的百分比将当�
 ```bash
  lvextend -l +5%VG /dev/vg01/lv01
 ```
-![](https://img-blog.csdnimg.cn/8880f6f5c32742ce95d83c91ac51c650.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/9c49dd245e1fe732365f65df063ccd73.png)
 
 ### 5.4 使用剩余的可用空间进行扩展
 上述方法扩展到总空间的一小部分。但是，此方法会根据可用空间的百分比进行扩展。因此，使用 100% 将扩展并使用所有可用的可用空间。
@@ -75,8 +75,14 @@ lvextend 还支持指定扩展逻辑卷的百分比。指定的百分比将当�
 lvextend -l +50%FREE /dev/vg01/lv01
 lvextend -l +100%FREE /dev/volgroup/logvol
 ```
-![](https://img-blog.csdnimg.cn/22b631fb5bce47edbb5534232c2ac616.png)
-![](https://img-blog.csdnimg.cn/6b14f895c2aa43e89b73eb895ba122ca.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/e59baca2dcfe9622e440d32c38b4cdd3.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/46706addc7f513aba1386e8c8d0c6311.png)
+
+通过xfs_growfs 才能生效
+
+```bash
+xfs_growfs /dev/vg01/lv01
+```
 
 
 参考：

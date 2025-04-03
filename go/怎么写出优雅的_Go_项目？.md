@@ -8,7 +8,7 @@
 
 先来看第一个问题。Go 项目是一个偏工程化的概念，不仅包含了 Go 应用，还包含了项目管理和项目文档：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f8f4078948104105855f52ef33177615.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0bc69a536bfa49b3f5bc4c4fb0426640.png)
 这就来到了第二个问题，一个优雅的 Go 项目，不仅要求我们的 Go 应用是优雅的，还要确保我们的项目管理和文档也是优雅的。这样，我们根据前面几讲学到的 Go 设计规范，很容易就能总结出一个优雅的 Go 应用需要具备的特点：
 
 - 符合 Go 编码规范和最佳实践；
@@ -18,12 +18,12 @@
 
 写出一个优雅的 Go 项目，在我看来，就是用“最佳实践”的方式去实现 Go 项目中的 Go 应用、项目管理和项目文档。具体来说，就是编写高质量的 Go 应用、高效管理项目、编写高质量的项目文档。为了协助你理解，我将这些逻辑绘制成了下面一张图。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/707b0b97090e404eb8ed1bdcb1b69519.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a82c2eca7c29f883b52ea7b8d143b3ec.png)
 接下来，我们就看看如何根据前面几讲学习的 Go 项目设计规范，实现一个优雅的 Go 项目。我们先从编写高质量的 Go 应用看起。
 
 ##  2. 编写高质量的 Go 应用
 基于我的研发经验，要编写一个高质量的 Go 应用，其实可以归纳为 5 个方面：**代码结构**、**代码规范**、**代码质量**、**编程哲学**和**软件设计方法**，见下图。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7d15973c73d84f00aefd82ae9cc420a1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/40568cda505208ed959a69f839781c06.png)
 ###  2.1 代码结构
 为什么先说代码结构呢？因为组织合理的代码结构是一个项目的门面。我们可以通过两个手段来组织代码结构。
 - 第一个手段是，组织一个好的目录结构。关于[如何组合一个好的目录结构](https://ghostwritten.blog.csdn.net/article/details/127850690)，你可以看这里
@@ -32,7 +32,7 @@
 那么 Go 项目开发中，如何拆分模块呢？目前业界有两种拆分方法，分别是**按层拆分**和**按功能拆分**。
 
 首先，我们看下按层拆分，最典型的是 MVC 架构中的模块拆分方式。在 MVC 架构中，我们将服务中的不同组件按访问顺序，拆分成了 `Model`、`View` 和 `Controller` 三层。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/953805ff3669489dab2d63db515457ca.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/baaafe0f123088b3ac8fb6b92e6df640.png)
 每层完成不同的功能：
 - View（视图）是提供给用户的操作界面，用来处理数据的显示。
 - Controller（控制器），负责根据用户从 View 层输入的指令，选取 Model 层中的数据，然后对其进行相应的操作，产生最终结果。
@@ -61,7 +61,7 @@ layers
 
 那什么是按功能拆分呢？我给你看一个例子你就明白了。比如，一个订单系统，我们可以根据不同功能将其拆分成用户（user）、订单（order）和计费（billing）3 个模块，每一个模块提供独立的功能，功能更单一：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a6bbf37f7f2e485d8d723f566b03d2e1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9eee722f4f10d5ab88f8fe5a06cbd780.png)
 下面是该订单系统的代码目录结构：
 
 ```bash
@@ -111,7 +111,7 @@ pkg
 
 如果函数 A 依赖数据库连接、第三方服务，那么在单元测试环境下执行单元测试就会失败，函数就没法测试，函数是不可测的。解决方法也很简单：将依赖的数据库、第三方服务等抽象成接口，在被测代码中调用接口的方法，在测试时传入 mock 类型，从而将数据库、第三方服务等依赖从具体的被测函数中解耦出去。如下图所示：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/43de489755f14dc29b3bd75d3b86abdd.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f3d009ab2c9db9d8c956c9b7fd652c1a.png)
 为了提高代码的可测性，降低单元测试的复杂度，对 `function` 和 `mock` 的要求是：
 
 - 要尽可能减少 `function` 中的依赖，让 `function` 只依赖必要的模块。
@@ -203,7 +203,7 @@ $ go test -race -cover  -coverprofile=./coverage.out -timeout=10m -short -v ./..
 $ go tool cover -func ./coverage.out
 ```
 执行结果如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/48996ceac7c042649a65d0e4c64cc4fc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1b815a8245fb17f64a2a0c73f20e0c3e.png)
 在提高项目的单元测试覆盖率时，我们可以先提高单元测试覆盖率低的函数，之后再检查项目的单元测试覆盖率；如果项目的单元测试覆盖率仍然低于期望的值，可以再次提高单元测试覆盖率低的函数的覆盖率，然后再检查。以此循环，最终将项目的单元测试覆盖率优化到预期的值为止。这里要注意，对于一些可能经常会变动的函数单元测试，覆盖率要达到 100%。
 
 说完了单元测试，我们再看看**如何通过 Code Review 来保证代码质量**。`Code Review` 可以提高代码质量、交叉排查缺陷，并且促进团队内知识共享，是保障代码质量非常有效的手段。在我们的项目开发中，一定要建立一套持久可行的 Code Review 机制。
@@ -296,7 +296,7 @@ func main() {
 - 多态通过接口来实现。
 
 至于构造函数、析构函数、方法重载和 this 指针等，Go 为了保持语言的简洁性去掉了这些特性。Go 中面向对象编程方法，见下图：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cd998b3c2a904b9fbc77e31864e92059.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d7c5937369e45e201cec0f8f2fdb2c1b.png)
 我们通过一个示例，来具体看下 Go 是如何实现面向对象编程中的类、抽象、封装、继承和多态的。代码如下：
 
 ```bash
@@ -397,16 +397,16 @@ I'm CrowA, I belong to Crow bird class!
 在软件领域，沉淀了一些比较优秀的设计模式，其中最受欢迎的是 GOF 设计模式。GOF 设计模式中包含了 3 大类（**创建型模式**、**结构型模式**、**行为型模式**），共 25 种经典的、可以解决常见软件设计问题的设计方案。这 25 种设计方案同样也适用于 Go 语言开发的项目。
 
 这里，我将这 25 种设计模式总结成了一张图。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/75f168d9229d46c68794c614572a893c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/971c2d59319f95351803beb92c413a3f.png)
 如果说设计模式解决的是具体的场景，那么 `SOLID` 原则就是我们设计应用代码时的指导方针。
 
 SOLID 原则，是由罗伯特·C·马丁在 21 世纪早期引入的，包括了面向对象编程和面向对象设计的五个基本原则：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/210588aa4ac444c7a5f0ae44c8256781.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7d5fb932d6e9424560e4bbaa3b19c026.png)
 遵循 SOLID 原则可以确保我们设计的代码是易维护、易扩展、易阅读的。SOLID 原则同样也适用于 Go 程序设计。如果你需要更详细地了解 SOLID 原则，可以参考下[SOLID 原则](https://github.com/marmotedu/geekbang-go/blob/master/SOLID%E5%8E%9F%E5%88%99%E4%BB%8B%E7%BB%8D.md)介绍这篇文章。
 
 ##  3. 高效管理项目
 一个优雅的 Go 项目，还需要具备高效的项目管理特性。那么如何高效管理我们的项目呢？不同团队、不同项目会采用不同的方法来管理项目，在我看来比较重要的有 3 点，分别是制定一个高效的开发流程、使用 Makefile 管理项目和将项目管理自动化。我们可以通过自动生成代码、借助工具、对接 CI/CD 系统等方法来将项目管理自动化。具体见下图：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/82e2705677cd41f99a2c871b366d60e8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4908a22690c237786b383ffa9d0eb24d.png)
 
 ### 3.1 高效的开发流程
 高效管理项目的第一步，就是要有一个高效的开发流程，这可以提高开发效率、减少软件维护成本。
@@ -463,7 +463,7 @@ SOLID 原则，是由罗伯特·C·马丁在 21 世纪早期引入的，包括�
 - 有利于实现自动化，可以将工具集成到 CI/CD 流程中，触发流水线自动执行。
 
 那么，Go 项目中，有哪些工具可以为我们所用呢？这里，我给你整理了一些有用的工具：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/51707d2f111a463b9960076e591aa07d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1c22bdedf0cbc7e32ce06ac0833c4d5a.png)
 所有这些工具都可以通过下面的方式安装。
 
 ```bash
@@ -480,5 +480,5 @@ IAM 项目使用了上面这些工具的绝大部分，用来尽可能提高整�
 
 ## 5. 总结
 使用 Go 语言做项目开发，核心目的其实就是开发一个优雅的 Go 项目。那么如何开发一个优雅的 Go 项目呢？Go 项目包含三大内容，即 Go 应用、项目管理、项目文档，因此开发一个优雅的 Go 项目，其实就是编写高质量的 Go 应用、高效管理项目和编写高质量的项目文档。针对每一项，我都给出了一些实现方式，这些方式详见下图：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c0edc8d21f6d422bad6edb656f7a5c5a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/919edd5309f20fa383e3e6ef88966b53.png)
 

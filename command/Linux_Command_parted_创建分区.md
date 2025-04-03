@@ -1,6 +1,6 @@
 #  Linux Command parted 创建分区
 tags: lvm
-![](https://img-blog.csdnimg.cn/cd45d09447224d90a527d81cdaadb49c.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/ca003d7b593ce9fd34cd126b6d9a478d.png)
 
 
 ##  1. 简介

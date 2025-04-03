@@ -20,7 +20,7 @@ CPU 使用率是什么，并通过一个案例教你使用 top、vmstat、pidsta
 
 注意，这个案例要用到两台虚拟机，如下图所示：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210616162316372.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4697e75f6df5dd745c56baa90f4da8dc.png)
 你可以看到，其中一台用作 Web 服务器，来模拟性能问题；另一台用作 Web 服务器的客户端，来给 Web 服务增加压力请求。使用两台虚拟机是为了相互隔离，避免“交叉感染”。
 
 首先，我们在第一个终端，执行下面的命令运行 Nginx 和 PHP 应用：
@@ -250,7 +250,7 @@ $ perf record -g
 $ perf report
 ```
 这样，你就可以看到下图这个性能报告：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210616173650500.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fbe2d19f0dca81a2a9d3cc4a9326697c.png)
 你看，stress 占了所有 CPU 时钟事件的 77%，而 stress  调用调用栈中比例最高的，是随机数生成函数 random()，看来它的确就是 CPU 使用率升高的元凶了。随后的优化就很简单了，只要修复权限问题，并减少或删除 stress 的调用，就可以减轻系统的 CPU 压力。当然，实际生产环境中的问题一般都要比这个案例复杂，在你找到触发瓶颈的命令行后，却可能发现，这个外部命令的调用过程是应用核心逻辑的一部分，并不能轻易减少或者删除。这时，你就得继续排查，为什么被调用的命令，会导致 CPU 使用率升高或 I/O 升高等问题。这些复杂场景的案例，我会在后面的综合实战里详细分析。最后，在案例结束时，不要忘了清理环境，执行下面的 Docker 命令，停止案例中用到的 Nginx 进程：
 
 
@@ -291,5 +291,5 @@ stress           30407  30405    0 /usr/local/bin/stress -t 1 -d 1
 
 对于这类进程，我们可以用 pstree 或者 execsnoop 找到它们的父进程，再从父进程所在的应用入手，排查问题的根源。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210616174416135.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e334e13d42b15b65899872d4ebb9f776.png)
 

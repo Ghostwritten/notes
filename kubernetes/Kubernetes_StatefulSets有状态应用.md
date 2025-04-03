@@ -1,7 +1,7 @@
 #  Kubernetes StatefulSet
 tags: StatefulSet
 
-[![在这里插入图片描述](https://img-blog.csdnimg.cn/460956329232480db2fd5ac90846da30.png)](https://www.rottentomatoes.com/m/alien)
+[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4a61c738f88205d48d49d672e16b2b78.png)](https://www.rottentomatoes.com/m/alien)
 
 
 

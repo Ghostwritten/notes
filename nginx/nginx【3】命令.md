@@ -2,7 +2,7 @@
 
 
 ## 1. 命令参数
-![在这里插入图片描述](https://img-blog.csdnimg.cn/673ec6a39384420e96a2f7bc5ca0372f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a0c0c1b63b4089e37d5587612aaef5d1.png)
 ## 2. 重载配置文件
 
 ```bash

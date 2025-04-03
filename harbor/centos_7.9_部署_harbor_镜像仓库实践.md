@@ -1,6 +1,6 @@
 # centos 7.9 harbor 部署镜像仓库
 tags: registry
-![](https://img-blog.csdnimg.cn/257145a26e7540fb84859725fbbcaba2.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/027d8a6a832de4598e35dfd6f3a6aecf.png)
 
 
 
@@ -276,8 +276,8 @@ Login Succeeded
 界面登陆
 - `https://harbor.demo.com`
 - admin/Harbor12345
-![](https://img-blog.csdnimg.cn/1832b220aa754cd18c504acc7686a560.png)
-![](https://img-blog.csdnimg.cn/958692a1506f465bbf229bfd742824d7.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/4b6f0ae7b8d7bdaa9f925ff0c2b25d20.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/3090b81f80ebbc19d7d2d23dd000f055.png)
 
 
 

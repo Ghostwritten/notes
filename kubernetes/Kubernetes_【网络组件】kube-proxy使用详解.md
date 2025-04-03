@@ -9,7 +9,7 @@ tags: kube-proxy
 
 
 [
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f89f89db2d1c4e1c98a7a8511b34a180.png)](https://www.rottentomatoes.com/m/gravity_2013)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/976c989c505448aeee06b99f1e623f7d.png)](https://www.rottentomatoes.com/m/gravity_2013)
 
 *《地心引力》*
 
@@ -58,15 +58,15 @@ spec:
 ```
 
 上面配置的含义是在node上暴露出30964端口。当访问node上的30964端口时，其请求会转发到service对应的cluster IP的3306端口，并进一步转发到pod的3306端口。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210401113617620.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4c2fc296601357110a4561fd4a4f397a.png)
 
 ## 3. Service, Endpoints与Pod的关系
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210401135532843.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b7f64543e4c27fe98b817a186c6eaf55.png)
 
 Kube-proxy进程获取每个Service的Endpoints,实现Service的负载均衡功能
 Service的负载均衡转发规则
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210401135605151.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/91c4d987ced76cb9d4a9923cf6c8abce.png)
 **访问Service的请求，不论是Cluster IP+TargetPort的方式；还是用Node节点IP+NodePort的方式，都被Node节点的Iptables规则重定向到Kube-proxy监听Service服务代理端口。kube-proxy接收到Service的访问请求后，根据负载策略，转发到后端的Pod。**
 
 ## 4. kubernetes服务发现
@@ -127,12 +127,12 @@ cut -f1 -d " "  /proc/modules | grep -e ip_vs -e nf_conntrack_ipv4
 ### 7.1 userspace mode
 在k8s v1.2后就已经被淘汰了，userspace的作用就是在proxy的用户空间监听一个端口，所有的svc都转到这个端口，然后proxy的内部应用层对其进行转发。proxy会为每个svc随机监听一个端口，并增加一个iptables规则，从客户端到 ClusterIP:Port 的报文都会被重定向到 Proxy Port，Kube-Proxy 收到报文后，通过 Round Robin (轮询) 或者 Session Affinity（会话亲和力，即同一 Client IP 都走同一链路给同一 Pod 服务）分发给对应的 Pod。所有流量都是在用户空间进行转发的，虽然比较稳定，但是效率不高。如下图为userspace的工作流程。
 serspace是在用户空间，通过kube-proxy来实现service的代理服务,  其原理如下:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210401211423686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/281eda55ace4c83b455302ed3194f490.png)
 可见，userspace这种mode最大的问题是，service的请求会先从用户空间进入内核iptables，然后再回到用户空间，由kube-proxy完成后端Endpoints的选择和代理工作，这样流量从用户空间进出内核带来的性能损耗是不可接受的。这也是k8s v1.0及之前版本中对kube-proxy质疑最大的一点，因此社区就开始研究iptables mode.
 
 userspace这种模式下，kube-proxy 持续监听 Service 以及 Endpoints 对象的变化；对每个 Service，它都为其在本地节点开放一个端口，作为其服务代理端口；发往该端口的请求会采用一定的策略转发给与该服务对应的后端 Pod 实体。kube-proxy 同时会在本地节点设置 iptables 规则，配置一个 Virtual IP，把发往 Virtual IP 的请求重定向到与该 Virtual IP 对应的服务代理端口上。其工作流程大体如下:
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210401211505152.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/982830a240748a92c843b8022554199a.png)
 由此分析: 该模式请求在到达 iptables 进行处理时就会进入内核，而 kube-proxy 监听则是在用户态, 请求就形成了从用户态到内核态再返回到用户态的传递过程, 一定程度降低了服务性能。
 
 ### 7.2 Iptables mode
@@ -149,7 +149,7 @@ iptabels 模式下正常的通信链路：
 在 PREROUTING的 chain里将 将经过PREROUTING里的数据包重定向到KUBE-SERVICES中
 
 在自定义链kube-services里找到dst为目标地址的ip（ps：kube-services对于相同目标地址都有2给target，对于非pod之间的访问进入KUBE-MARK-MASQ，对于pod之间的访问进入KUBE-SVC-*里)，找到对应的KUBE-SVC-*(ps:只有有对应endpoint信息的才有KUBE-SVC-*)，并找到KUBE-SVC-*对应的KUBE-SEP-*。在SEP里会对source来自自身ip的打KUBE-MARK-MASQ，对于其他的做DNAT转换
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210401112856314.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0cee1089b4cb0248b1854adce8a0afb4.png)
 
 ```bash
 # Masquerade
@@ -197,7 +197,7 @@ iptabels 模式下正常的通信链路：
 iptables mode因为使用iptable NAT来完成转发，也存在不可忽视的性能损耗。另外，如果集群中存在上万的Service/Endpoint，那么Node上的iptables rules将会非常庞大，性能还会再打折扣。这也导致目前大部分企业用k8s上生产时，都不会直接用kube-proxy作为服务代理，而是通过自己开发或者通过Ingress Controller来集成HAProxy, Nginx来代替kube-proxy。
 
 iptables 模式与 userspace 相同，kube-proxy 持续监听 Service 以及 Endpoints 对象的变化；但它并不在本地节点开启反向代理服务，而是把反向代理全部交给 iptables 来实现；即 `iptables` 直接将对 `VIP` 的请求转发给后端 Pod，通过 iptables 设置转发策略。其工作流程大体如下:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210401211721205.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ce39d1d3dca3c718526b084fe7ebc05f.png)
 
 由此分析: 该模式相比 userspace 模式，克服了请求在用户态-内核态反复传递的问题，性能上有所提升，但使用 iptables NAT 来完成转发，存在不可忽视的性能损耗，而且在大规模场景下，iptables 规则的条目会十分巨大，性能上还要再打折扣。
 
@@ -258,7 +258,7 @@ kubernetes从1.8开始增加了IPVS支持，IPVS相对于iptables来说效率会
 
 [Kube-proxy IPVS mode](https://github.com/kubernetes/kubernetes/blob/master/pkg/proxy/ipvs/README.md) 列出了各种服务在 IPVS 模式下的工作原理
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210401113020267.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/660cff9225287b0d5e950edc1a5e6f34.png)
 
 ```bash
 $ ipvsadm -ln
@@ -314,7 +314,7 @@ kube-proxy 启动项设置了 –masquerade-all=true
 为了支持NodePort类型的服务，ipvs将在iptables proxier中继续现有的实现。
 
 kubernetes中ipvs实现原理图：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210402173302972.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/281e697072fb27e47ecb1a9b212a36d1.png)
 为什么每个svc会在ipvs网卡增加vip地址：
 
 由于 IPVS 的 DNAT 钩子挂在 INPUT 链上，因此必须要让内核识别 VIP 是本机的 IP。这样才会过INPUT 链，要不然就通过OUTPUT链出去了。k8s 通过设置将service cluster ip 绑定到虚拟网卡kube-ipvs0。
@@ -341,7 +341,7 @@ kubernetes中ipvs实现原理图：
 iptables -t filter -I INPUT -d 10.222.251.98 -j DROP
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210402173703214.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fca8cdacdc1338713b87f2f922f4abe5.png)
 
 当该vip地址进入到这个input的链路的时候直接DROP 如下：
 
@@ -350,7 +350,7 @@ iptables -t filter -I INPUT -d 10.222.251.98 -j DROP
 ```bash
 watch -n 0.1 "iptables --line-number -nvxL INPUT"
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210402173738660.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3b7b712ec00470111590c69f07641472.png)
 因为当我们访问10.222.251.98这个地址的时候，ipvs会感知到这个ip是本机的vip地址，所以会线进入input的链路。所以我们在input增加了desc为10.222.251.98的DROP链路的话，会有限
 
 之后恢复的话直接删除掉指定规则
@@ -361,7 +361,7 @@ iptables -D INPUT 1
 
 ps： 1代表iptables -nL --line-number输出的行号
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210402173802286.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f1d80878667cc05a23b65913959e0409.png)
 
 
 

@@ -42,7 +42,7 @@
 
 ## 2. 问题出现
 现在假设我们想查找用户{name：john，age：34}评论过的所有博客帖子。 让我们再看一下上面的示例文档，找到评论过的用户。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210331111512614.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/df56e4f5758e41194365d369ccebddaf.png)
 
 从列表中我们可以清楚地看到，没有34岁的用户John。为简单起见，我们在elasticsearch索引中只有1个文档。让我们通过查询索引来验证它：
 
@@ -213,7 +213,7 @@ nested类型是对象数据类型的专用版本，它允许对象数组以可�
 
 
 ## 6. Nested类型的适用场景
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210331140138490.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eff6ec4f4ee8f53368a0d9526eaef129.png)
 ## 7. Nested类型的增、删、改、查、聚合操作详解
 还是以第2节的blog_new索引示例，Nested类型的增、删、改、查操作。
 ###  7.1 Nested类型——增

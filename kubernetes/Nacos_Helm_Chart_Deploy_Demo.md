@@ -1,4 +1,4 @@
-![在这里插入图片描述](https://img-blog.csdnimg.cn/69dae157665c497f8cd6917186b2614f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bc82c903ec46e9eb92ba68e3a62fa81e.png)
 
 
 
@@ -210,8 +210,8 @@ statefulset.apps/nacos   1/1     8m37s
 访问：`https://192.168.23.14`: 
 用户：nacos
 密码：nacos
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cb3b56a766db42d0b69282a01224b16a.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d2b7fb51740c480c9b9564fee70d0a20.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/843622bfac91fe02834623b05e735b07.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/965ddf1bb3a99dc5c5cce578be19851f.png)
 
 ## 默认配置
 

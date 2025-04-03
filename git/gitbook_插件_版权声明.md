@@ -27,7 +27,7 @@ npm i gitbook-plugin-tbfed-pagefooter
 }
 ```
 ###  1.3 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3b32479c48e5446480b7b3123aea1575.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/aa22a595dd707d81168ccc837c4a3326.png)
 ##  2. page-copyright 插件
 [page-copyright](https://www.npmjs.com/package/gitbook-plugin-page-copyright)插件是页面页脚版权（内容更多）
 
@@ -97,7 +97,7 @@ gitbook install
 
 ### 3.3 效果
 每一页末尾格式
-![（略）](https://img-blog.csdnimg.cn/0ce1196743994396b2509f80eb35b173.png)
+![（略）](https://i-blog.csdnimg.cn/blog_migrate/52d9c79f0fd8dade6f604c3f335ff851.png)
 
 
 ### 3.4 评价

@@ -4,7 +4,7 @@ tags: exporters
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bdb10ad4b9e64b1994290406a59b6ea3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d8349b028ad5372c2d381fcad02735b0.png)
 
 
 ##  1. 介绍
@@ -22,7 +22,7 @@ cAdvior功能已经被集成到了`kubelet`组件中，也就是说，安装好k
 容器信息从 cAdvisor 流入 Prometheus。
 
 下图显示了这些开源工具之间的数据流，一种基于 Grafana、Prometheus、cAdvisor 的仪表板监控架构流。有关如何[部署 Grafana 的更多信息，请阅读此处](https://scaleyourapp.com/what-is-grafana-why-use-it-everything-you-should-know-about-it/)。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c7a11e66f9024869a65bcfef8a0ede60.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3df83f51d2cd60d91a6cc3c0003d9c04.png)
 
 
 

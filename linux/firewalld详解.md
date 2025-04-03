@@ -1,17 +1,33 @@
 
 
+
+## firewald 与 iptables
+
+在centos7中，有几种防火墙共存：firewald , iptables . 默认情况下，CentOS是使用firewalld来管理netfilter子系统，不过底层调用的命令仍然是iptables。
+
+- firewalld 可以动态修改单挑规则，而不像iptables那样，在修改了规则后必须全部刷新才可以生效。
+
+- firewalld在使用上比iptables人性化很多，即使不明白"五张表五条链"而且对TCP/IP协议也不理解也可以实现大部分功能。
+
+- firewalld跟iptables比起来，不好的地方是每个服务都需要去设置才能放行，因为默认是拒绝。而iptables里默认每个服务是允许，需要拒绝才去限制。
+
+- firewalld自身并不具备防火墙的功能，而是和iptables一样需要通过内核的netfilter来实现，也就是说firewalld和iptables一样，他们的作用是用于维护规则，而真正使用规则干活的是内核的netfilter,只不过firewalld和iptables的结构以及使用方法不一样罢了。
+
 ## firewalld
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200316110901561.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1c9dc21b13cf7c6cdc808c0ea9dc46f2.png)
 
+注：Firewalld的默认区域是public
 
-### （1）我应该选用哪个区域?
+firewalld默认提供了九个zone配置文件：block.xml、dmz.xml、drop.xml、external.xml、 home.xml、internal.xml、public.xml、trusted.xml、work.xml，他们都保存在“/usr/lib /firewalld/zones/”目录下。
+
+###  我应该选用哪个区域?
 例如，公共的 WIFI 连接应该主要为不受信任的，家庭的有线网络应该是相当可信任的。根据与你使用的网络最符合的区域进行选择。
 如何配置或者增加区域?
 你可以使用任何一种 firewalld 配置工具来配置或者增加区域，以及修改配置。工具有例如 firewall-config 这样的图形界面工具， firewall-cmd 这样的命令行工具，以及D-BUS接口。或者你也可以在配置文件目录中创建或者拷贝区域文件。 @PREFIX@/lib/firewalld/zones 被用于默认和备用配置，/etc/firewalld/zones 被用于用户创建和自定义配置文件。
-### （2）如何为网络连接设置或者修改区域？
+### 如何为网络连接设置或者修改区域？
 区域设置以 ZONE= 选项 存储在网络连接的ifcfg文件中。如果这个选项缺失或者为空，firewalld 将使用配置的默认区域。
 如果这个连接受到 NetworkManager 控制，你也可以使用 nm-connection-editor 来修改区域。
-### （3）由 NetworkManager 控制的网络连接
+### 由 NetworkManager 控制的网络连接
 防火墙不能够通过 NetworkManager 显示的名称来配置网络连接，只能配置网络接口。因此在网络连接之前 NetworkManager 将配置文件所述连接对应的网络接口告诉 firewalld 。如果在配置文件中没有配置区域，接口将配置到 firewalld 的默认区域。如果网络连接使用了不止一个接口，所有的接口都会应用到 fiwewalld。接口名称的改变也将由 NetworkManager 控制并应用到firewalld。
 如果一个接口断开了， NetworkManager 也将告诉 firewalld 从区域中删除该接口。当 firewalld 由 systemd 或者 init 脚本启动或者重启后，firewalld 将通知 NetworkManager 把网络连接增加到区域。
 
@@ -497,7 +513,10 @@ firewall-cmd --permanent [--zone=<zone>] --query-icmp-block=<icmptype>
  firewall-cmd --permanent --get-zones
 ```
 
+更多阅读：
 
+- [Linux Commnad iptables 防火墙](https://blog.csdn.net/xixihahalelehehe/article/details/104895129)
+- [https://mp.weixin.qq.com/s/PReHkFPotG5KjOjUoyciuw](https://mp.weixin.qq.com/s/PReHkFPotG5KjOjUoyciuw)
 
 
 

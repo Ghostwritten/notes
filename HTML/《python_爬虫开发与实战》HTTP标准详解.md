@@ -2,7 +2,7 @@
 HTTP协议（HyperText Transfer Protocol，超文本传输协议）是用于从WWW 服务器传输超文本到本地浏览器的传送协议。它可以使浏览器更加高效，减少网络 传输。它不仅保证计算机正确快速地传输超文本文档，还确定传输文档中的哪一部 分，以及哪部分内容首先显示（如文本先于图形）等。之后的Python爬虫开发，主 要就是和HTTP协议打交道。
 ## HTTP请求过程
 HTTP协议采取的是请求响应模型，HTTP协议永远都是客户端发起请求，服务器 回送响应。模型如图2-8所示。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200926100028414.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6dc9552977ffb383496ff873f98b14b5.png#pic_center)
 HTTP协议是一个无状态的协议，同一个客户端的这次请求和上次请求没有对应 关系。一次HTTP操作称为一个事务，其执行过程可分为四步：
 
  - ·首先客户端与服务器需要建立连接，例如单击某个超链接，HTTP的工作就开始 了。
@@ -23,7 +23,7 @@ HTTP协议是一个无状态的协议，同一个客户端的这次请求和上�
 ```
 
 HTTP状态码由三个十进制数字组成，第一个十进制数字定义了状态码的类型。 HTTP状态码共分为5种类型，如表2-9所示。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200926100155342.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3cd21b30f672cb24fbf38d110659a7af.png#pic_center)
 ## 　HTTP头部信息
 HTTP头部信息由众多的头域组成，每个头域由一个域名、冒号（：）和域值三 部分组成。域名是大小写无关的，域值前可以添加任何数量的空格符，头域可以被 扩展为多行，在每行开始处，使用至少一个空格或制表符。
 通过浏览器访问博客园首页时，使用F12打开开发者工具，里面可以监控整个 HTTP访问的过程。下面就以访问博客园的HTTP请求进行分析，首先是浏览器发出请 求，请求头的数据如下：
@@ -85,7 +85,7 @@ HTTP消息报头主要包括普通报头、请求报头、响应报头、实体�
    器的信息和对Request-URI所标识的资源进行下一步访问的信息。
  - 4）请求和响应消息都可以传送一个实体。一个实体由实体报头域和实体正文组
    成，但并不是说实体报头域和实体正文要在一起发送，可以只发送实体报头域。实 体报头定义了关于实体正文和请求所标识的资源的元信息。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200926102018840.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200926102034896.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b34af0abb3db3f3e47beda57f60bea43.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6ecb324c71655307ac28f4141b2eabce.png#pic_center)
 参考资料：
 《python 爬虫开发与实战》

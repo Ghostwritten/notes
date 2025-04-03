@@ -4,15 +4,15 @@
 
 ---
 ## 1.简介
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cfcc7940ded7470486bee77a1b8a96a8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/011844e732354657a55b1ae97b463b20.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bf35723d90c243afa411f19c3cb13242.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f686fc2df7ec434c909000b5a56363d0.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9586c66a923d4b399ee4e2240b6d0f21.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4a5364b4494240321c135a5805ec8a21.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/24015e47738a87ddf3efb42afccad790.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/16260e6871e351e8bf802b8af8c684ff.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f001ee70be5f4e3a3927315e096c3d4b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9d7cfa586640ae4730731ee381e6e746.png)
 ## 2.CI demo
 ###  2.1 python demo
 vscode创建一下目录和文件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b2d247d7452a4735826a7848a7cbe194.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_15,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2ccd47dcd2e4e3c0bd4115e803e1f851.png)
 内容：
 test_functions.py
 
@@ -94,7 +94,7 @@ Launching subshell in virtual environment...
 clear
 ```
 创建结构文件`__init__.py`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9cbd3383ff1b4bafbadce7e0667bfa43.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_15,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/628ed2d78dde6b24b973f8683fddf98c.png)
 测试
 ```bash
 $ python -m pytest
@@ -150,7 +150,7 @@ tests\test_functions.py .                                                       
  - [配置本地与gitlab互信](https://blog.csdn.net/xixihahalelehehe/article/details/105240194?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163958422116780271511591%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=163958422116780271511591&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v2~rank_v29-2-105240194.pc_v2_rank_blog_default&utm_term=gitlab&spm=1018.2226.3001.4450)
 
 登陆gitlab，创建一个空项目`gitlab-example-demo`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a1489577c38c4195a12f59809370efd1.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7a50269b05ec73bddc492d8f5b81bc13.png)
 
 在vscode中的终端`gitlab-example-en`目录执行：
 ```bash
@@ -162,8 +162,8 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtv5pEPO+Esp14+bztwrq9dM4hD8rUF/Du/1tM6l2f
 
 ```
 赋值`/c/Users/XH/.ssh/id_rsa.pub`到gitlab的ssh_key,如图
-![/c/Users/XH/.ssh/id_rsa.pub](https://img-blog.csdnimg.cn/9aaf21b857a14c0a95a87edd285f7d60.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_11,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/08dcd4b2662c4090b6e32ed783a4f70f.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![/c/Users/XH/.ssh/id_rsa.pub](https://i-blog.csdnimg.cn/blog_migrate/e760ebb82bf29676dc277f2fe6fdaaed.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a4cf2be7d392cdb32b484a2b7ba3b27a.png)
 ### 2.3 项目上传gitlab
 
 初始化本地项目，开始上传gitlab仓库
@@ -185,7 +185,7 @@ To http://192.168.211.70:8081/root/gitlab-example-demo.git
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 ```
 上传成功
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c9aedb6dd07d4e41b9a4574d6ba456d7.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f512cd4125841f36169fdd06ffbc2039.png)
 
 ###  2.4 编排.gitlab-ci.yaml
 如果在gitlab运行自动化测试，需要用到`.gitlab-ci.yaml`，下面我们开始编写
@@ -208,10 +208,10 @@ $ git commit -m "add .gitlab-ci.yaml"
 $ git push
 ```
 当我们推送到`gitlab`发现项目无法运行自动测试。我们查明原因
-![在这里插入图片描述](https://img-blog.csdnimg.cn/27431d3a8f4a4be6a1211209d32e3738.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/38265afeb1ef4c23961f455543209ae5.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4148370c9dca4410a966d8601809ac4e.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/aa7640bdf7a4401bac2f91b7293e073a.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c2ebd2601f60258899ce0adffda79620.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/970382c7f87247aafdb721402371c222.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1408867eceaf4ea6c29e745ead4b6234.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/93b6bd2444d72d878e4f6fc8e8d3372e.png)
 
 ###  2.5. 部署gitlab-runner
 我们原来缺少一个 action runners，也就是`gitlab-runner`
@@ -248,20 +248,20 @@ ubuntu:20.04
 Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded! 
 ```
 注册完成后，gitlab界面检查`gitlab-runner`是否注册成功
-![在这里插入图片描述](https://img-blog.csdnimg.cn/50cfdba4a3ba4da2b15979b81ee8de43.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e0f8e65c7633480faada8f9ab19be308.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a67e0aee4677d4aab09895419f5a6df6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a6aadc54f1554bddecc0e34ccd059e89.png)
 绿色代表成功，回到项目界面，已经开始在跑了。
 
 ### 2.6 测试跑起来
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4133c9b6a692403fa16977cd891829c6.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2ba5d5c0cf4641e6b67598fb4880c6d6.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4c877e2dcf244632b2aca060259b9930.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e758bd464bb94bb2ac478b29b7ede5c2.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/96c65c75cceb4c768cb2d83d18e6f40e.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/89a83f6e60ee8d9aed1021932e66a4b8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3b4fb7e91546e093696621416e7f884b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d6d5fb55e63c63d9c95ca591adaf678e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/036a0f03d11b9c43cd985cf12f562547.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/98b0b5477874fe3aab3e87f15a7dd5be.png)
 
 ### 2.7 CI变得更安全
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7332937dee8143aab1231d7447adfaa3.png?shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/db76110a39dc53378ac85eb312511ed4.png)
 
 创建普通用户
 

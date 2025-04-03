@@ -4,7 +4,7 @@ tags: ResourceQuota,策略
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/affde18388c34520af101c1c0a80fe09.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c704eb2bbfea7b09bbe0fe2c96241b26.png)
 *《死亡诗社》讲述了威尔顿预科学院一向都是以传统、守旧的方法来教授学生，可是新学期来校的新文学老师基廷（Keating）却一改学校的常规，让自己班上的学生们解放思想，充分发挥学生们的能力。告诉学生们要“活在当下”，并以该原则行事。*
 
 
@@ -50,7 +50,7 @@ ResourceQuota 对象的名称必须是有效的 DNS 子域名。
 争用或更改配额都不会影响已创建的资源。
 
 ##  3. 架构图
-![在这里插入图片描述](https://img-blog.csdnimg.cn/683d71bb91214a858bb81d8c9049e1ca.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/aa709dc6cb4904093b5db8fbc9b058c7.png)
 
 
 ##  4. 启用资源配额

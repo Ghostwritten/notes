@@ -57,9 +57,9 @@ bin/elasticsearch -E node.name=node1 -E cluster.name=geektime -E path.data=node1
  - 请求可以发送到任何的节点，处理你请求的节点，叫做 Coordinating Node
  - 创建 / 删除 索引的请求，只能被 Master 节点处理
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303104819827.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303104906796.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303104930652.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5b8dba2056564eba015dd02c705f1018.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f553a084066a5d444d58015cf41c81b2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ee44bf8d3840350bd299b4a32ffae6ce.png)
 
 ## 6. Data Node
 可以保存数据的节点，叫做 `Data Node`
@@ -124,20 +124,20 @@ bin/elasticsearch -E node.name=node2 -E cluster.name=geektime -E path.data=node2
 Nodes API 看到新增节点
 发现 Replica 被分配
 仔细发现：数据节点（data node）标志是一个`立体盒子`，主节点（master node）是一个`五角星`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303152439698.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d55776b41f23edca352752a078ef3357.png)
 ## 11. 增加一个新的主节点
 虚拟机执行：
 
 ```bash
 $ bin/elasticsearch -E node.name=node3 -E cluster.name=geektime -E path.data=node3_data -E network.host=192.168.211.61 -E  http.port=9202 -E transport.tcp.port=9302  -E node.master=true -E node.data=true -E bootstrap.system_call_filter=false -E discovery.zen.minimum_master_nodes=1  -E discovery.zen.ping.unicast.hosts="192.168.211.61:9300","192.168.211.61:9301","192.168.211.61:9301" -E gateway.recover_after_nodes=1
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303153701367.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/63fef6ec18fb7512ae54f0cafb8389aa.png)
 
 ## 12. Master Eligbile Nodes & 选主的过程
 
  - 互相 ping 对方。Node Id 低的会被成为被选举的节点
  - 其他节点会加入集群，但是不承担 Master 节点的角色。一旦发现被选中的主节点丢失，救护选举除新的 Master 节点
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303154504845.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/87fdc52166b093ecc6518277c730c92a.png)
 ## 13. 脑裂问题
 `Split-Brain` ，分布式系统的经典网络问题，当出现网络问题，一个节点和其他节点无法连接
  - Node 2 和 Node 3 会被重新选举 Master
@@ -145,7 +145,7 @@ $ bin/elasticsearch -E node.name=node3 -E cluster.name=geektime -E path.data=nod
  - 导致 2 个 master，维护不同的 cluster state。当网络恢复是，无法选择正确恢复
 
 （下图疑问） 这个不是应该根据 Node Id 选 2 吗？
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303154637445.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/300e8576ce344d3045c75b20cf80108c.png)
 
 ## 14. 如何避免脑裂问题
 限定一个选举条件，这是 `quorum`（仲裁），只有在 Master eligble 节点数大于 quorum 时，才能进行选举

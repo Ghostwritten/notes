@@ -1,6 +1,6 @@
 #  docker 安装
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7a0a8052a60b4809bac2a5a65b1e66fa.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8eb04d64f4d8e51110918db84707c80a.png)
 
 
 
@@ -10,6 +10,8 @@
 
 
 ## 1. centos 安装 (yum) docker
+
+官方安装手册：[https://docs.docker.com/engine/install/centos/](https://docs.docker.com/engine/install/centos/)
 
 旧版本要卸载：
 
@@ -225,7 +227,7 @@ sudo dnf config-manager \
     --add-repo \
     https://download.docker.com/linux/fedora/docker-ce.repo
 ```
-### 6.2 安装
+### 6.2 在线安装
 安装默认版本（最新）
 
 ```bash
@@ -260,11 +262,15 @@ rm -rf /var/lib/docker/
 ```
 
 
-## 7. 二进制安装
+## 7. 二进制离线安装
 下载 docker 指定版本：[https://download.docker.com/linux/static/stable/x86_64/](https://download.docker.com/linux/static/stable/x86_64/)
 
 ```bash
-tar -xf docker-20.10.24.tgz
+wget https://download.docker.com/linux/static/stable/x86_64/docker-27.1.2.tgz
+```
+
+```bash
+tar -xf docker-27.1.2.tgz
 cp docker/* /usr/bin
 mkdir /etc/docker
 cat > /usr/lib/systemd/system/docker.service << EOF
@@ -292,15 +298,26 @@ EOF
 ```
 
 
+### 定制配置 （可选）
+
 在配置文件中新增本地镜像仓库下载地址
 
 ```bash
-cat << EOF > /etc/docker/daemon.json
+cat <<EOF> /etc/docker/daemon.json 
 {
-"insecure-registries": ["harbor.demo.com"],
-"exec-opts": ["native.cgroupdriver=systemd"]
-}
+   "exec-opts": ["native.cgroupdriver=systemd"],
+   "insecure-registries": ["harbor.demo.com"],
+   "data-root": "/data/docker",
+   "live-restore": true,
+   "log-driver": "json-file",
+   "log-opts": {
+     "max-size":  "100m",
+     "max-file": "5"
+    }
+ }
 EOF
+
+
 
 
 
@@ -309,6 +326,97 @@ docker login -u admin -p xxxx harbor.demo.com
 docker pull harbor.demo.com/library/busybox:1.28
 ```
 
+## 8. rpm 离线安装
+
+- 下载rpm包地址：[https://download.docker.com/linux/rhel/](https://download.docker.com/linux/rhel/)
+- 在列表中选择您的RHEL版本。
+- 选择适用的架构（x86_64、aarch 64或s390 x），然后转到stable/Packages/。
+- 下载Docker Engine、CLI、containerd和Docker Compose包的以下rpm文件：
+  - `containerd.io-<version>.<arch>.rpm`
+  - `docker-ce-<version>.<arch>.rpm`
+  - `docker-ce-cli-<version>.<arch>.rpm`
+  - `docker-buildx-plugin-<version>.<arch>.rpm`
+  - `docker-compose-plugin-<version>.<arch>.rpm`
+
+安装Docker Engine，将以下路径更改为您下载包的路径。
+```bash
+mkdir docker-ce && cd docker-ce
+wget https://download.docker.com/linux/rhel/9/x86_64/stable/Packages/containerd.io-1.7.24-3.1.el9.x86_64.rpm
+wget https://download.docker.com/linux/rhel/9/x86_64/stable/Packages/docker-buildx-plugin-0.19.3-1.el9.x86_64.rpm
+wget https://download.docker.com/linux/rhel/9/x86_64/stable/Packages/docker-ce-27.4.1-1.el9.x86_64.rpm
+wget https://download.docker.com/linux/rhel/9/x86_64/stable/Packages/docker-ce-cli-27.4.1-1.el9.x86_64.rpm
+wget https://download.docker.com/linux/rhel/9/x86_64/stable/Packages/docker-ce-rootless-extras-27.4.1-1.el9.x86_64.rpm
+wget https://download.docker.com/linux/rhel/9/x86_64/stable/Packages/docker-compose-plugin-2.32.1-1.el9.x86_64.rpm
+dnf -y install *.rpm
+systemctl enable docker && systemctl start docker && systemctl status docker
+```
+
+检查
+
+
+```bash
+$ docker info
+Client: Docker Engine - Community
+ Version:    27.4.1
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.19.3
+    Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v2.32.1
+    Path:     /usr/libexec/docker/cli-plugins/docker-compose
+
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 0
+ Server Version: 27.4.1
+ Storage Driver: overlay2
+  Backing Filesystem: xfs
+  Supports d_type: true
+  Using metacopy: false
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: systemd
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 88bf19b2105c8b17560993bee28a01ddc2f97182
+ runc version: v1.2.2-0-g7cb3632
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 5.14.0-503.19.1.el9_5.x86_64
+ Operating System: Rocky Linux 9.5 (Blue Onyx)
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 12
+ Total Memory: 23.22GiB
+ Name: localhost.localdomain
+ ID: 30b5a406-9060-4a5c-b31f-a33bd66a0821
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Experimental: false
+ Insecure Registries:
+  127.0.0.0/8
+ Live Restore Enabled: false
+```
+
+
+拉取不到镜像需要配置代理：[docker 配置代理](https://blog.csdn.net/xixihahalelehehe/article/details/134115905)
 
 参考：
 

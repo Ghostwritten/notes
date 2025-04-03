@@ -1,7 +1,7 @@
 #  JavaScript 26. 保留关键字
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f66df87f8d4d41bf8453486e5199d6bb.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/09a96359a1dac9c976d7bf170b25f2b1.png)
 
 
 ##  1. JavaScript 标准

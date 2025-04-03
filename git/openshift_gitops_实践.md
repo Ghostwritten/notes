@@ -85,7 +85,7 @@ Argo CD 应用程序集添加应用程序自动化
 在本练习中，您将为您的Coffee Shop应用程序创建一个新的专用项目。Argo CD的用户界面可能有点挑剔，所以请仔细遵循说明。如果您错过了某个步骤，一些看似合理的默认项实际上可能并不适用。这是一个安全特性——确保您意识到您正在“允许所有”。
 
 1.从Argo CD web控制台，点击齿轮图标进入项目管理界面:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dc0eca4d8c23408eae09bb0e8c1db6ef.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4321a23cdb16e1be9481f5de9d8e5fe1.png)
 2. Select PROJECTS → NEW PROJECT.
 
 3. Enter `coffee-shop` as the new project name and click `CREATE`.
@@ -104,7 +104,7 @@ Argo CD 应用程序集添加应用程序自动化
 8. Click SAVE.
 
 9. 点击叠纸图标进入应用管理界面:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e81ad07cd34541e7856764c492b55b49.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8a914fa3a23d13be98891245332b96bc.png)
  现在你有一个项目，你可以与新的Argo CD应用程序相关联，以指导OpenShift容器平台上的应用程序管理。
 
 ## 6. 部署 Coffee Shop 应用程序
@@ -141,7 +141,7 @@ spec:
  2. Click `CREATE`.
  3. In the pop-up window that appears, click `SYNC` → `SYNCHRONIZE`.
  4. 单击应用程序名称可以查看应用程序的滚出，并查看所有应用程序部分的表示  
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e8f7cc940d144cb6900791cf4833f116.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/936bb4f2f5665b9faa985b4c9584c9f8.png)
  5. 成功部署应用程序组件后，单击咖啡店应用程序上的`DELETE`。 您可以删除它，以便可以使用一个对象(Application集)部署两个组件
 
 ## 7. 部署 Barista Component as Knative Service with Argo CD Application Set
@@ -247,7 +247,7 @@ Argo CD监视您的源和目的地的变化。当同步时，Argo CD将目的地
  8. 紧跟在第52行之后，将- prod- coffeshop作为新数组元素插入到该YAML数组中。
  
  Expect it to look like this:
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/f1ecfc7c336b44ea88b014dd9b0dfc01.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3fbd6038922ed77d81a7b0feb4cb47ca.png)
  9. Click `Save`.
 
 ###  9.2 验证 New Logs

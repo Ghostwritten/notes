@@ -1,5 +1,5 @@
 #  Go container 容器数据类型：heap、list 、ring
-![](https://img-blog.csdnimg.cn/6a1677133e7e426f838f9c349cd2c74d.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/5c524b614031572ae01642a783858320.png)
 
 
 

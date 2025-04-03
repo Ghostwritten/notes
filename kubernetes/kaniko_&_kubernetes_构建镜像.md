@@ -3,7 +3,7 @@
 
 
 
-![](https://img-blog.csdnimg.cn/88c5a14906d74ebf946fcbc4513ccc77.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/3835f5ea0e42c0951d9c0bd323209e21.png)
 
 
 
@@ -24,7 +24,7 @@ kaniko 不依赖于 [Docker](https://www.docker.com/) 守护进程，而是完�
 
 ## 3. 工作原理
 `kaniko`作为一个容器镜像运行，它接受三个参数：**一个 Dockerfile** ，**一个构建上下文（context）**以及**将镜像推送到的镜像仓库**。它在执行程序镜像中提取基本镜像的文件系统。然后，在Dockerfile中执行任何命令，快照用户空间中的文件系统。Kaniko在每个命令后都会将一层已更改的文件附加到基本镜像。最后，执行程序将新镜像推送到指定的注册表。由于Kaniko在执行程序镜像的用户空间中完全执行了这些操作，因此它完全避免了在用户计算机上需要任何特权访问。
-![](https://img-blog.csdnimg.cn/662196e5ebc34e169c80345401c65130.png?)
+![](https://i-blog.csdnimg.cn/blog_migrate/2f47c4a6e6ee26ca174c770ca51709e7.png)
 
 
 
@@ -1097,7 +1097,7 @@ INFO[0133] No files were changed, appending empty layer to config. No layer adde
 2022/11/29 17:05:34 index.docker.io/ghostwritten/devops-toolkit:1.0.0: digest: sha256:194a89239732f85f23d30ce516edd61177eb0c602cc59369001de9482ae64028 size: 1397
 ```
 构建并推送成功
-![](https://img-blog.csdnimg.cn/c5fecc8d4e3c44458ed203b957c27bf2.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/4067910ef82b490fdfae1d848481ba20.png)
 
 ###  10.3 Local Directory 推送私有 regsitry
 创建 secret
@@ -2253,7 +2253,7 @@ curl  -k -u "registryuser:registryuserpassword" https://192.168.10.80:5000/v2/de
 
 考虑到 `CI/CD` 的业务特性，这里选用机器人用户，创建推送机器人。
 
-![](https://img-blog.csdnimg.cn/9dc83161e80f4dbdbd683249f27f8c0e.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/212c0fa2279c8bfb7d6d08d6134ee95f.png)
 测试登陆
 ```bash
 docker login -u 'robot$kaniko-user' -p YxJ3Bje3dKWoHy9EWfQ1PApzijCfvG5m https://harbor.fum
@@ -2583,7 +2583,7 @@ You should consider upgrading via the '/usr/local/bin/python -m pip install --up
 Finished: SUCCESS
 ```
 登陆 [dockerhub](https://hub.docker.com/) 查看新构建的镜像。
-![](https://img-blog.csdnimg.cn/5de4ec02d466428da389c59f9f18a03a.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/437b15de8c0301e81123ae96118d063a.png)
 
 关于 kaniko 工具使用方法到此结束，谢谢。
 

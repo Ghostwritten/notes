@@ -4,7 +4,7 @@
 
 -----------------------------
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b6c135db4f1a4155a0e306913757c345.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b5331af86b4d08c9142db1c8c96e550b.gif#pic_center)
 
 ##  1. 简介
 Linux sort 命令用于将文本文件内容加以排序。

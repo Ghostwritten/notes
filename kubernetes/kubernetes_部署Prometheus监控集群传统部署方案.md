@@ -41,7 +41,7 @@ Kubernetes的`Prometheus Operator`为Kubernetes服务和Prometheus实例的部�
 
 
 Prometheus Operator架构如图1所示。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210118144725530.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ecfdb1012f84ba345eecc2ca0826ff0e.png)
 
 架构中的各组成部分以不同的资源方式运行在Kubernetes集群中，它们各自有不同的作用。
 
@@ -55,7 +55,7 @@ Prometheus Operator架构如图1所示。
 -----
 ##  3. 在Kubernetes上部署Prometheus的传统方式
 本节详细介绍Kubernetes通过YAML文件方式部署Prometheus的过程，即按顺序部署了`Prometheus`、`kube-state-metrics`、`node-exporter`以及`Grafana`。图2展示了各个组件的调用关系。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021011814523315.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/314d60a4e8f08e538a7306ebc2488e3d.png)
 在Kubernetes Node上部署`Node exporter`，获取该节点物理机或者虚拟机的监控信息，在Kubernetes Master上部署`kube-state-metrics`获取Kubernetes集群的状态。所有信息汇聚到Prometheus进行处理和存储，然后通过Grafana进行展示。
 
 > **下载介质，也可以不用下载，直接对文章的yaml复制黏贴，当然无论怎么样都需要根据自己的环境修改恰当的配置参数。**
@@ -95,7 +95,7 @@ total 64
 
 
 部署顺序如图3所示。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210118145457830.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6e416a8babccdacb8fe963cd7b50b6f4.png)
 
 
 #### 3.1.1 创建命名空间monitoring
@@ -609,7 +609,7 @@ windows添加`C:\Windows\System32\drivers\etc\hosts`
 ```bash
 192.168.211.41 prometheus.test.com
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210119193945524.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/df3a3b1b199cb0578da65f59a4539fd9.png)
 
 
 ----
@@ -1137,6 +1137,6 @@ windows添加`C:\Windows\System32\drivers\etc\hosts`
 ```bash
 192.168.211.41 grafana.test.com
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210119193346792.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e094381da42fd03963c80cd89bdb33e0.png)
 
 

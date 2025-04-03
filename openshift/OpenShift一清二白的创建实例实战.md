@@ -2,11 +2,11 @@
 
 ##  1. 概述
 ---
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d367fb6c323c4155a53bce19ee89b56b.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/69d95260e11242c98ed563556e14d6d5.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9f21eaa896cb4cde8ae0f6b0bfaa75ce.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c0d9bd67993649f1af065b4a3e0552de.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/63e7a7c2a16e4f48b3b24988aa471236.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/221e747a55d895dc569bd7224446cf88.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/880ca50a109114b78b66d1dd415b37df.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/79ed03edf9f84957b7d01da4d6d772f5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c358994b2d3c1fe2c26880d62533321e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f94a57a7b50457898d5faa82fc8fafef.png)
 
 
 
@@ -24,60 +24,60 @@
  - **build config**（bc）
  - **routes**
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2a416b3c064d4d2ba7a7e4139fcd7da0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/71731f7e8a8aafdb75951bb070ac1eec.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c093342c13154342a14a833e41da1ea3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/09dfacf78f8d7b008c4705e4949e3daf.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/eafd85550fe14ff180e030e466a801c5.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/428ec89ee91c495bacc5561b1befb3d7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/96884236f6c416d295c579512fd389bc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/092966de1332547e4e1e2a5242203d1d.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/52c35b9b0b9f4333aa1f9dfc3ae47f6c.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/db9f07d02727404399100aceffdd018b.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4e3cf27491d3477a943bae9f46af898a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a166a4b8599468815e8dd5e41ee2bf04.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ff61737554ef1c58f0165527e04a2dae.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e824c3d39c04515862b4fc82c1dabd16.png)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/06ad29989aa5476e8ed36316aabc89d6.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/82958f1b9e614612924742615c12ea5d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4d51d9413d1a40009b643d4dd92ac54c.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a9715e24d6034e68b9aeed7b5474efb6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5f97bce6f2648fdb8fc52543093ecd58.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/33ada071f4034a39908d6bf1cbf3cf6e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f6af6199a34a88711d3234583ae5b6a4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0865fe3914100611d62e69d916cc8ad7.png)
 
 ```bash
 oc  describe pod  mysql-openshift-1-jg6bk
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0855e4a0819a4bd58882d1f5cccfcd55.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c2d7db8112a7464caeda8fae6a1527f8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/698c8f06cd0f01ac4d2bab1f8a17c614.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3eb185a6cce95546c62d97807f374e52.png)
 
 
 ##  2. 创建路由
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a724fd925c3a44d78278b16e2382d372.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a0aa9135e8ae59bf96e9d9a396f4c5e5.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ea9ae8b164c44d5281545da99a567270.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0b5866b9ad5e4f01a95d3fa7931be168.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1f4b55d3fd0c4f538e9f11b8929c94b3.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/91bd62dc9c724cc0ab14bddd032d765d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ed02e250c8ae4be48fa931d994e1cee4.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/87a537b421bf44c5a97be620646b2ced.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/72706b7527af459cb44cef82f7d84a70.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0b7466a561961787a82d49e48197f439.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3d2be2d23e5f49e9778b6392c4c2cfec.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2358d564d18f8d1c51de5c418bcfef53.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b2f59d72d3ba1bc9803fead8cd6aa5b0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f0b3a44faa5e1ce4f3fb1f4efe0f5aa7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/821529a3fd552a3919fdbadc4e414258.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bffecea2f5bbb2a015a8b6a3b3ca8d9f.png)
 ##  3. 命令行创建实例application 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/181200f4423b4d7ea434a9d304d93070.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/da6bdf1b5bd54a059b56f69a5caaee7a.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a9127c4e4454484189dad63c9b45f6ae.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6adc080599414d76b07bb03f3d337334.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3c10204edca54a4c8aabe5d4251ebe14.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2af06ef359eb468e8ef400f0d02395a4.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/84b06917d165432f9b4109d581740e77.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1e402fe731be4834807e629a95b9e66d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/232d40e3f5b74dfd97de5ced1a22980f.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/677397877163466b9b903a25d38a9f1b.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f283bea815484ad399158dd1c84a9617.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dc2f6e5b26614d69805c66dc01abb476.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7ec19ae990244e00aded2c8aa20be482.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/06ef6f4dc6eb60637659128eb2201ddf.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1e0520a27e78c4c6d24f86c1060d2944.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/51dcdb603e4ced237b48889aebbffc74.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4c5e48eb34d76bf5cd4e323c5ecb199b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b35bb1c94e56533e9e9f9e9cac559d54.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9569ab71a5d1151350d077f705b527ba.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a62b55f930b97b8c5fdd2038a9345df1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c331e771fcce3e848ba6733d936b4731.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/825e07af981106367abcb3de61a70651.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/70d08d5bb49308f6f87266a18addf8d7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b9af4714ad48a4d0db6c70e9784e11e9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/247c048ef9411515931258135d8a52a8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9453fcd73ab22ccefe097020325a0f1e.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a09c8a1934484288bdaa663e850cc6b3.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/74de598ca33a4637a7b9a9c349b39328.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8561323985d142848cc5a4ddc071a358.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/79b72b779017a62074d37219cb958a18.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2b59c9630178e14e76b835c5498275ca.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4c0d8c61d1ab192dc1c5422277faf7db.png)
 
 命令总结：
 ```bash
@@ -102,14 +102,14 @@ curl php-helloworld-s2i.apps.cluster.lab.example.com
 ## 4. 界面创建实例applitcation
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bebe0da48e5b4fa1a4afe1889afd607a.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4aa5d5be9db84c8bafeb72828eaac18f.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/eeda9be0860d40ea9182228a5b18a85d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a61e08f8a6994275a0334987d887b05b.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9888b36fc5174a158b9fa643311e5012.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bb42701efbc844cbb828249aad3c8635.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dbcb28fd5d074eea86107acd527b11d9.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3fb9b9ad70ad41a6abfe60c97efe3923.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/26e638b205a482a7270bf7d5bbf14822.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a4e93867a60acda47fdd81c2464e1406.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3e8533b407a526850e9925e24378b595.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cb2aa049f9f30f4abdad4e4cbb5e7d7d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/519f66899cd15836e197499f534418de.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6bb056425022e860a07f5583ca5b15d8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2a841e1e068a67cfe17a5abaf695f955.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3bea8447d9b4ef3b48d45c662353529d.png)
 
 ```bash
 oc clone http://service.lab.example.com/php-helloworld
@@ -117,14 +117,14 @@ cd php-helloworld/
 vim index.php
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5974d9e76e5c47dfacfd319ed0cd4557.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/376d50230a59332b9ece513523c43c92.png)
 
 ```bash
 oc commit -am "add a print something!"
 git push
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/db9c599f6c0c4691902c59c1b3257db5.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ac3adfa0d05e4e3db470ff2829b99959.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f185269b3b0529e44fdff44983288ca7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/550658c6e298f848cc976e9d76368512.png)
 
 结束。

@@ -19,7 +19,7 @@ Traceroute在送出UDP datagrams到目的地时，它所选择送达的port numb
 Traceroute提取发 ICMP TTL到期消息设备的IP地址并作域名解析。每次 ，Traceroute都打印出一系列数据,包括所经过的路由设备的域名及 IP地址,三个包每次来回所花时间。
 
  原理过程
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200526235329146.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/361f08143cc340a85ca807e374b671d0.png)
 
  - 从源地址发出一个UDP探测包到目的地址，并将TTL设置为1；
 

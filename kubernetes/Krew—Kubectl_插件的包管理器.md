@@ -1,5 +1,5 @@
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9f09d13870fc411fb94bbce124b2c677.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c42744f1e73f46cef58f6551082b562d.png)
 
 ## 1.  Krew 是什么？
 [Krew](https://github.com/kubernetes-sigs/krew) 是一个 Kubernetes 的插件管理器，它能够帮助用户轻松安装和管理 kubectl 插件。在使用 kubectl 命令时，插件可以为用户提供额外的功能和扩展，使用户更加高效地管理 Kubernetes 集群。。它类似于[apt](https://ghostwritten.blog.csdn.net/article/details/105641494)、[dnf](https://blog.csdn.net/xixihahalelehehe/article/details/123168620) 或 [brew](https://brew.sh/) 等工具。有很多非常有用的 kubectl 插件，如 kubectl-who-can、kubectl-tree、kubectl-ctx 等。但是手动安装和管理这些插件可能会比较麻烦。Krew 的出现就解决了这个问题。今天，Krew上有 [超过200个kubectl插件](https://krew.sigs.k8s.io/plugins/)。

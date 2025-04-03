@@ -1,6 +1,6 @@
 # Podman 部署私有镜像仓库
 tags: registry
-![](https://img-blog.csdnimg.cn/81136404287e48ae892c8282a0a82400.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/95eb24558d60f622c16b3048ef39e41c.png)
 
 
 

@@ -70,7 +70,7 @@ POST /blogs/_search
 ```
 ## 4. 使用 Modifier 平滑曲线
 新的算分 = 老的算分 * log（1 + 投票数）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210223141059977.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d6fc288c17e38fbe620d91d45bc89956.png)
 
 ```bash
 POST /blogs/_search
@@ -96,7 +96,7 @@ POST /blogs/_search
 
 新的算分 = 老的算分 * log（1 + factor * 投票数）
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210223141253165.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a0354da5bb1e28d10ce4762373e1994a.png)
 
 ```bash
 POST /blogs/_search

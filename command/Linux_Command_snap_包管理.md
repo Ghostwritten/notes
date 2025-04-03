@@ -71,7 +71,7 @@ $ sudo systemctl status snapd.socket
 $ sudo systemctl is-enabled snapd.socket
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f45edf47f1f644448e214946078685e1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/236e30d51504b961e78618d03ffcc903.png)
 接下来，通过在`/var/lib/snapd/snap`和`/snap`之间创建符号链接来启用经典快照支持，如下所示。
 
 ```bash
@@ -83,7 +83,7 @@ $ sudo ln -s /var/lib/snapd/snap /snap
 $ snap version 
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c3aada650f4c4c42825436c43d75ed14.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/518e51a563542a55356d70e51a09ea1f.png)
 snap命令允许您安装、配置、刷新和删除快照，并与更大的快照生态系统进行交互。
 
 在安装snap之前，您可以检查它是否存在于 snap store 中。例如，如果应用程序属于“`chat servers`”或“`media players`”类别，您可以运行这些命令来搜索它，这将在稳定频道中向商店查询可用包。
@@ -92,20 +92,20 @@ snap命令允许您安装、配置、刷新和删除快照，并与更大的快�
 $ snap find "chat servers"
 $ snap find "media players"
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/56ecc2a161e9492592a941d7fccf7a08.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/416f0f389b0d4714b75fe74aebb29cbb.png)
 显示有关snap的详细信息
 
 ```bash
 $ snap info rocketchat-server
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1d4dc98699cf4781b3183424db269c6f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0b940338ee975c650e0580b9365bf55d.png)
 安装snap包，例如，`rocketchat-server`
 
 ```bash
 $ sudo snap install rocketchat-server
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a3fa53c37a224c49a3c1c98939aedca3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/65b37fbf9ecf0be816e2763f2ac381f6.png)
 您可以选择从不同的渠道安装：`edge`、`beta`或`Candidate`，出于某种原因，分别使用`--edge`、`--beta`或`--candidate`选项。或使用该`--channel`
 
 ```bash
@@ -120,7 +120,7 @@ $ sudo snap install --candidate rocketchat-server
 $ snap list
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ba8fa8dd0d004928b19b65286aea9062.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dbf5edbacf13d45c47ea9d7549bfc0c8.png)
 要列出正在使用的快照的当前版本，请指定其名称。您还可以通过添加`--all`选项列出其所有可用的修订。
 
 ```bash
@@ -128,7 +128,7 @@ $ snap list mailspring
 OR
 $ snap list --all mailspring
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/369b0304cf9e4fd2bd9d83bfde8a485c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eb824b4ba8f0f07890122e9cfc811887.png)
 ###  3.2 更新和恢复
 refresh命令检查快照跟踪的通道，如果可用，它会下载并安装更新版本的快照。
 
@@ -137,19 +137,19 @@ $ sudo snap refresh mailspring
 OR
 $ sudo snap refresh		#update all snaps on the local system
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/62b95f3ced0945c389f3d77484840f0b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d5c5c1fa6538656d4e29a5753d5ef848.png)
 将应用程序更新到新版本后，您可以使用revert命令恢复到以前使用的版本。请注意，与软件关联的数据也将被还原。
 
 ```bash
 $ sudo snap revert mailspring
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f8e8c7327799400a8445d2929e3a06d0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1b1fe6ecea179344e5f5cc9301a3907e.png)
 现在，当您检查`mailspring`的所有修订版时，最新修订版被禁用，以前使用的修订版现在处于活动状态。
 
 ```bash
 $ snap list --all mailspring
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/55caac914c22430a84081d557d94d334.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/43e28c73774905b7c791a4592df4edd3.png)
 ###  3.3 禁用/启用和删除
 
 ```bash
@@ -184,7 +184,7 @@ OR
 ```c
 # echo $PATH
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/441d5b3b886440b695548d4d88cebb6d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e5effec849680daacf5a2b715548539e.png)
 如果`/snap/bin/`或`/var/lib/snapd/snap/bin/`目录在您的`PATH`中，您只需键入应用程序的名称/命令即可运行应用程序：
 
 ```bash
@@ -195,13 +195,13 @@ $ mailspring
 ```bash
 $ snap info mailspring
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bdba13594bec4445802cc43e061d286b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9dbec745ac8ece1ef7a9ace2c2f130c0.png)
 which命令查找应用程序或命令的绝对路径名。
 
 ```bash
 which mailspring
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3702e85e34a24f6fbcc50e9226d71c1e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/415cfef3b9bc2bfebab62edd4982f488.png)
 ###  3.5 创建和使用 Snap Aliases
 Snap还支持为应用程序创建别名。快照的默认（或标准）别名在启用之前必须经过公共审查过程，但您可以为本地系统创建别名。
 
@@ -211,20 +211,20 @@ Snap还支持为应用程序创建别名。快照的默认（或标准）别名�
 snap alias mailspring mls
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5e038d490a6846dd9cc42fdae5ce472a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1fb6eb99944efaae77b695381a2bb183.png)
 要列出快照的别名，例如`mailspring`，请运行以下命令。从现在开始，您可以使用别名来运行 snap。
 
 ```bash
 snap aliases mailspring
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0de514d8a9964820bb7d87d45e9cf03e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/384d1260b26dd8116e032cbb31556454.png)
 要删除snap的别名，请使用unalias命令。
 
 ```bash
 snap unalias mls
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/70cd2ce051304af786b014b9b195d8c2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3bf8bfdd9d424a28afe765ee48b2eb3b.png)
 
 ###  3.6 管理 Snap 的服务
 对于某些快照，底层功能通过作为守护程序或服务运行的应用程序公开，一旦安装快照，它们会自动启动在后台连续运行。此外，这些服务还可以在系统启动时自动启动。重要的是，单个快照可能包含多个应用程序和服务，它们协同工作以提供该快照的整体功能。
@@ -232,13 +232,13 @@ snap unalias mls
 ```bash
 snap info rocketchat-server
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b374e5cd8bc84c25bc5e38a8819b93b5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/59e7da4f9ac57c4cc25f5eecd767b7cb.png)
 您可以使用services命令交叉检查服务的快照。命令输出显示一个服务，它是否启用在系统启动时自动启动，以及它是否处于活动状态。
 
 ```bash
 snap services rocketchat-server
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1f05b8088b6a484b8cf9086829194cc4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/70abfd6bf7c7b98904dd3acf8d4a933e.png)
 要停止服务运行，例如Rocketchat，请使用stop命令。请注意，不建议执行此操作，因为手动停止快照服务可能会导致快照发生故障。
 
 ```bash
@@ -275,13 +275,13 @@ Snapd为一个或多个快照存储用户、系统和配置数据的副本。您
 ```bash
 snap save mailspring
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/72b0662bb4c142ad9cea4d207b3e7582.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/210c9e175dc8b09612c553719d2ae065.png)
 如果未指定快照名称，snapd将为所有已安装的快照生成快照（添加`--no-wait`选项以在后台运行进程以释放终端并允许您运行其他命令）。
 
 ```bash
 snap save
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1e69e806f41547e78e63509395e88cd2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/083793a4dcaddaf7ed0665365fbf3504.png)
 要查看所有快照的状态，请使用`saved`命令。您可以使用该`--id`标志来显示特定快照的状态：
 
 ```bash
@@ -289,13 +289,13 @@ snap saved
 OR
 snap saved --id=2
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f64033c656814d40a2a77cedd17ab0db.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1ac19ca2ee1de0ff7952b86725666326.png)
 您可以使用`check-snapshot`命令和快照标识符（集 ID）验证快照的完整性：
 
 ```bash
 snap check-snapshot 2
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b01e92912f7241bc8d283de18d9a2426.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a72e5d3a8e9dbe564fa60706c1cd60f4.png)
 要使用特定快照中的相应数据恢复当前用户、系统和配置数据，请使用`restore`命令并指定快照集 ID：
 
 ```bash

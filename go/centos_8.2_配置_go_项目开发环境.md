@@ -1,5 +1,5 @@
 # centos 8.2 配置 go 项目开发环境
-![在这里插入图片描述](https://img-blog.csdnimg.cn/96b873e7508a48169971dfd5444cc082.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cb84ef682139f10e94401771ab8de0f9.png)
 
 
 ##  1. 创建普通用户  
@@ -167,7 +167,7 @@ export GOSUMDB=off # 关闭校验 Go 依赖包的哈希值
 EOF
 ```
 什么要增加这么多环境变量呢？这是因为，Go 语言是通过一系列的环境变量来控制 Go 编译器行为的。因此，我们一定要理解每一个环境变量的含义。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dfda26d335774a0087d43dbe23eb700f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3a49c9f0c120cdb7c3c754e4d2f6a7e2.png)
 因为 Go 以后会用 `Go modules` 来管理依赖，所以我建议你将 `GO111MODULE` 设置为 `on`。
 
 在使用模块的时候，`$GOPATH` 是无意义的，不过它还是会把下载的依赖储存在 `$GOPATH/pkg/mod` 目录中，也会把 `go install` 的二进制文件存放在 `$GOPATH/bin` 目录中。
@@ -227,10 +227,10 @@ $ git clone --depth=1 https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/st
 vim-go 会用到一些 Go 工具，比如在函数跳转时会用到 guru、[godef](https://github.com/rogpeppe/godef) 工具，在格式化时会用到 [goimports](https://pkg.go.dev/golang.org/x/tools/cmd/goimports)，所以你也需要安装这些工具。安装方式如下：执行 `vi /tmp/test.go`，然后输入 `:GoInstallBinaries` 安装 vim-go 需要的工具。
 
 安装后的 Go IDE 常用操作的按键映射如下表所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e13d8da7c3654ad184cad22e3ab3b9e8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8ae83315baf362c6b851550da5d8454f.png)
 ## 9. 总结
 这一讲，我们一起安装和配置了一个 Go 开发环境，为了方便你回顾，我将安装和配置过程绘制成了一个流程图，如下所示。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/86ca3a87b4da4e85b97f0b845f63c5d7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0eba6ace5916af3001db60b35827c289.png)
 
 ## 10. 练习
 

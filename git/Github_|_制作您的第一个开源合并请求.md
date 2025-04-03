@@ -1,6 +1,6 @@
 #  Github | 制作您的第一个开源合并请求
 
-![](https://img-blog.csdnimg.cn/a6a1f4191b574403a987c4e8583f99f5.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/0f841413d163111372505eaf1a07057c.png)
 
 
 
@@ -32,24 +32,24 @@
 一旦您决定了要贡献的存储库或要处理的问题，请按照以下步骤发出您的第一个拉取请求：
 
 1. 阅读 CONTRIBUTING.md 指南（如果存在）
-![](https://img-blog.csdnimg.cn/571c4d3bbf4e4198aecc2d87b6e01b87.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/f5b7c4824f1d6e25d213fec1347e276a.png)
 2. 与维护者讨论这个问题，提出问题（如果有的话）并清除疑虑。他们是可爱的人，随时准备提供帮助。您还可以通过他们的 IRC 或邮件列表 ping 他们。
 3. 继续并 Fork 存储库
-![](https://img-blog.csdnimg.cn/f9eef8e76b2042f18decf2e0f3f5a051.png)
-![](https://img-blog.csdnimg.cn/2fa7fb9a39f046c5be5941e7420eb95d.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/acc5acb20729c189e888db73135b1a95.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/52b3967ddb57836b84cadb93e120aac9.png)
 4. Clone the repo：`git clone https://github.com/YOUR_USERNAME/PROJECT.git`
 
-![](https://img-blog.csdnimg.cn/8a8db4b88196412681e7a06c868409c3.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/05922072e6a57037c94290ed55f0a08d.png)
 
 5. Add Upstream: `git remote add upstream https://github.com/PROJECT_USERNAME/PROJECT.git`
 6. Create new branch: `git checkout -b BRANCH_NAME`
 
-![](https://img-blog.csdnimg.cn/33ea27323f0d4705bfa0ad642141f120.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/fd68a5bfd64f79b0a3666fbe03b1df1e.png)
 
 7. 代码代码代码：进行必要的更改
 8. 推送更改：`git push origin BRANCH_NAME`
 9. 通过 Github 创建拉取请求
- ![](https://img-blog.csdnimg.cn/539de6dbd6e6406c913b529358ef0d31.png)
+ ![](https://i-blog.csdnimg.cn/blog_migrate/bffd44dda8d6bda25a98b1a6b0c5d550.png)
 其他一些有用的命令：
 
 - 检查远程链接：`git remote -v`

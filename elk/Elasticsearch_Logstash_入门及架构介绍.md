@@ -5,7 +5,7 @@
 
 ● ELT 工具 / 数据搜集处理引擎。支持 200 多个插件
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316161248450.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f4255031c2540b7b396db609fa2c1e98.png)
 ## 2. Logstash Concepts
 ● Pipeline
 ○ 包含了 `input-filter-output` 三个阶段的处理流程
@@ -19,14 +19,14 @@
 ## 3. Logstash 架构简介
 
 Codec（Code / Decode）：将原始数据 `decode` 成 `Event`；将 Event encode 成目标。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316161422177.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/24ce7e64f37ced9f06850fe677f98026.png)
 ## 4. Logstash 配置文件结构
 ● Bin/logstash –f demo.conf
 ● Pipeline
 ○ Input / Filter / Output
 ● Codec
 ○ Line / js
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021031616145157.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c81a04369606a969b136c775bd37c3fd.png)
 ## 5. Input Plugins
 ● 一个 `Pipeline` 可以有多个 `input` 插件
 ○ Stdin / File
@@ -58,9 +58,9 @@ Codec（Code / Decode）：将原始数据 `decode` 成 `Event`；将 Event enco
 ○ Ruby – 执行 Ruby
 
 ## 9. Queue
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316165502367.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4853e1d0e49e3cb290da37ddd8aa9876.png)
 ## 10. 多 Pipelines 实例
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316165536714.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bf954c5fd276a26aaaf05361908baacc.png)
 ● `Pipeline.works`: Pipeline 线程数，默认是 CPU 核数
 ● `Pipeline.batch.size`：Batcher 一次批量获取等待处理的文档数，默认 125。需结合 jvm.options
 调节
@@ -111,7 +111,7 @@ hello world
 ■ True 
 
 ## 14. Codec Plugin – Multiline(异常日志）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316170010587.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bb6dfd305841b6a2079bbdefeafbfe6d.png)
 ```bash
 $ cat multiline-exception.conf 
 input {

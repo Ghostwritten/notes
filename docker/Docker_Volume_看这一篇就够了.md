@@ -3,7 +3,7 @@
 
 
 ---
-[![在这里插入图片描述](https://img-blog.csdnimg.cn/ed5ef84c1fc448d5acfa3d02757d206f.png#pic_center)](https://www.rottentomatoes.com/m/men_2022)
+[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/073b9928879548fd73c345e932b13f4a.png#pic_center)](https://www.rottentomatoes.com/m/men_2022)
 
 
 
@@ -24,16 +24,16 @@ Docker 还支持将文件存储在主机内存中的容器。此类文件不会�
  - `bind mounts`：可以存储在主机系统的任何位置。它们甚至可能是重要的系统文件或目录。Docker 主机或 Docker 容器上的非 Docker 进程可以随时修改它们。
  - `tmpfs mounts`：挂载仅存储在主机系统的内存中，永远不会写入主机系统的文件系统
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/426664884f1142498c1efaee8caf6567.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c04692a1f26f00bf91301bd62ec9a0e6.png)
 
 ##  2. 原理
 
 在 linux 系统上，docker 将images, containers, volumes等相关的数据存储在`/var/lib/docker`下。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/66bd0ef34a584c5cacedae853ada7e54.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2b4ac9177eccb44320d97cef6a476da0.png)
 当我们运行`docker build`命令时，docker 会为 dockerfile 中的每条指令构建一层。这些图像层是只读层。当我们运行`docker run`命令时，docker 会构建容器层，它们是读写层。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/139dd00b11864310bf81a154b57097ab.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/70970a1aedaec700aed43f44ffae28f1.png)
 您可以在容器上创建新文件，例如下图中的temp.txt。您还可以修改容器上属于图像层的文件，例如下图中的app.py。执行此操作时，会在容器层上创建该文件的本地副本，并且更改仅存在于容器上——这称为 Copy-on-Write 机制。这很重要，因为多个容器和子图像使用相同的图像层。容器上的文件的生命周期与容器的生命周期一样长。当容器被销毁时，其上的文件/修改也会被销毁。为了持久化数据，我们可以使用我们在上一节中看到的卷映射技术。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0a29b8992e77406cac9febdecd0f5bdf.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e6e4be3aa103cf45f9c0c6251e5aa266.png)
 ## 3. 命令
 
 您可以使用`docker volume create`命令创建 docker 卷。此命令将在`/var/lib/docker/volumes`目录中创建一个卷。
@@ -55,7 +55,7 @@ docker run -v data_volume:/var/lib/postgres postgres
 ```bash
 docker run -v /data/postgres:/var/lib/postgres postgres
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/29aadb9d251f4c46ba15015e564e0cd1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/eb8c3939c7e967f0766d6de9c31aedc9.png)
 删除
 
 ```bash
@@ -84,7 +84,7 @@ ls /var/lib/docker/volumes/target/_data/demo-earthly
 #查看卷内容
 docker run -it --rm -v demo-earthly:/opt/demo-earthly ubuntu ls /opt/demo-earthly
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/94819ff51ba74c8d962af9c8b5867397.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9f418f5de5b764b8dca017db76cfad62.png)
 ###  4.3 显式创建 Docker 卷
 
 ```bash

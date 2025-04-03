@@ -1,6 +1,6 @@
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/93ee053e5ddb4e60bde6e21b0c0dc768.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/38acec3ef9d1cb5ea78a658d61c65ee5.png)
 
 
 ## 1. 触发器特性

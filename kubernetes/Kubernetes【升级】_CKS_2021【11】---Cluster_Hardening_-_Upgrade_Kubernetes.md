@@ -3,12 +3,12 @@
 ----
 ## 1. 介绍
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210426160433953.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210426160538349.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210426160658283.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c9b11fa272eab77cb6ce9cf850f1ad18.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dd16c8418d79bfaa38b6ce084400a6b4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2e2e3bd15be0857289e8e60064b2fad9.png)
 
 ## 2. Practice - Create outdated cluster
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210426161148535.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/126603fc75a638c1a61cbe1338598379.png)
 参考链接：
 [https://github.com/killer-sh/cks-course-environment/tree/master/cluster-setup/previous](https://github.com/killer-sh/cks-course-environment/tree/master/cluster-setup/previous)
 ```bash
@@ -19,7 +19,7 @@ bash <(curl -s https://raw.githubusercontent.com/killer-sh/cks-course-environmen
 bash <(curl -s https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/cluster-setup/previous/install_worker.sh)
 ```
 ## 3. Upgrade master node
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210427135546416.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ed8de70cdddb73c9a64e4b524539f615.png)
 
 ```c
 root@master:~/cks/create_cluster# k drain   master --ignore-daemonsets

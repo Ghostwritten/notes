@@ -136,7 +136,7 @@ run: sidekiq: (pid 5439) 53424s; run: log: (pid 3906) 53705s
 run: unicorn: (pid 5451) 53423s; run: log: (pid 3875) 53709s
 ```
 
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/8ac14087ba9d4f2fa85d5bc342db48df.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/771dc1a72c856303d6ebf9d9e518273b.png)
 
 ### 5.1 gitlab shell 
 Gitlab Shell有两个作用：**为Gitlab处理git命令、修改authorized keys列表**。
@@ -223,11 +223,11 @@ gitlab是通过组（group）的概念来统一管理仓库(project)和用户（
  - 在管理员页面顶部的`Admin area`按钮，进入管理员区域
  - 点击`new group`按钮
 
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/bdddd51971d34943a6cef8be128c989a.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b1e8cf8089c279111215711f9025c367.png)
 
 填写必要的信息
 组名、组路径、组描述
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/94f41a80f0644e8487f3982d6d4e601a.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/41039c70811f8f5f03147a0b21fdae6e.png)
 
 
 组可见级别
@@ -240,14 +240,14 @@ gitlab是通过组（group）的概念来统一管理仓库(project)和用户（
  - `Public`：The group and any public projects can be viewed without any
    authentication. 只要是可以访问gitlab web页面的人都可以看到
 
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/f6bb8cdeb78349bdb14236ac861a8595.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6b2dbc382db4d745b74be655910f88e2.png)
 
 信息填完、点击创建组
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/15cbffb9682b4a3eafea2434d248462d.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/552c0b9b4d6c95475357eb8ddc261a06.png)
 
 进入创建好的组管理界面
 可以再找个界面下创建组用户的
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/8170de22e25e4440be0b51539a751374.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6f0ef10db2ac1e7a4dda470858dcd4b3.png)
 
 
 
@@ -257,25 +257,25 @@ gitlab是通过组（group）的概念来统一管理仓库(project)和用户（
 ## 9. 创建用户create user
 在管理员页面点击页面顶部的Admin Area按钮，进入管理员区域
 点击创建用户
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/ec6657e85ddf4e66b8c29fca55e9ab24.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c5e984f2e9686444c9a19aee20b8c547.png)
 
 填写必要的信息
 用户名昵称、用户名、电子邮箱、选择用户级别
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/3ba4d813fef54d61ad8aecdfc196612b.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8593618930e03078da0b2fb88c5eaf61.png)
 
 点击创建用户
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/257b8dd35466460787577a4e6d9a7fe1.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a756c66df0923becbcf6bd3408a7f2a4.png)
 
 进入用户的管理界面
 点击页面的右上页的Edit按钮，为用户设置初始密码
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/b8aa3c2af6d94340aad120ac90aa6067.png)
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/8a0ddf8a6265456ca0b8e6ade0d45e43.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c4061fdefd1ff95459d0d3aed4160ef5.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/90ff828c02bb7b7a1bdfa602c4ed3ce5.png)
 
 
  
 也可以设置用户的其他信息
 最后点击save更改
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/1044379514c041d787c0426b9d97e05d.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fdcb9aee1e983c1b61b934bf235030e8.png)
 
 
 
@@ -284,17 +284,17 @@ gitlab是通过组（group）的概念来统一管理仓库(project)和用户（
 用户创建完成后，我们就需要对用户进行授权，从而使用户可以管理仓库，有两种方式，一 是 将用户加入到组，这样用户可以管理组内的仓库；二是 直接授权用户管理仓库。通常我们采用的方式是将用户加入到相应的组，并赋予不同的角色。Gitlab中用户的角色是系统定义好的，不能更改，这一点可能不符合我们正常的思维习惯。
 下面将刚创建好的nqt用户添加到xmlgrg_test组，并赋予developer的权限
 在管理员区域、点击创建的组，进入组管理界面
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/73f89c8a2ddb43c69624e0809344112a.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2821054f8fe640d1b472a09365cf08c7.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a5f673ad2553142b7f1f3d891915d73f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/db5a659a4a2133cacdab1eae1d4d3d4d.png)
 
 
  
 
 选择用户、给予权限，点击添加
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/2d60c834093343c8aff185e7d431a18c.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/12fbe2b910b2501b3a8257a7c713e9d1.png)
 
 添加成功
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/68416b944658426e84699e550b6ad3e4.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/26249d564c0c7e490713fb0a9c03aa1b.png)
 
 相应权限的官方文档说明：[https://docs.gitlab.com/ee/user/permissions.html](https://docs.gitlab.com/ee/user/permissions.html)
 
@@ -303,15 +303,15 @@ gitlab是通过组（group）的概念来统一管理仓库(project)和用户（
 在gitlab中，创建project用来存储你的程序代码、作为一个问题的跟踪器、用于代码协作、用于持续集成中的构建、测试和部署等服务。
 
 在管理员区域点击New project
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/f51279ed12a045b78ef771a2db643181.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d8dc08f7339ff07b44e80ee08fbe6fcb.png)
 
 填写新建仓库的信息
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/48f147a3540c42cc916eb90f3f64f40d.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ec387ba59bbc331ecc21e9a3e88bbf1c.png)
 
 创建完成后页面有这2个提示、先不要管
  
 仓库的管理页面左侧为仓库操作的相关菜单栏、右侧空仓库下显示如何在命令行连接该仓库、非空时显示仓库内容
-![在这里插入图片描述](https://img-blog.csdnimg.cn/80f48a5df36448fbb07793d303469cb3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/30c184447a6968c0834949e0f08fc568.png)
 
 ```c
 Command line instructions
@@ -346,7 +346,7 @@ Existing Git repository
 
 将仓库加入到组后，组内的成员就可以看到该仓库
 使用`nqt`用户登录。可以看到仓库`xm`
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/4a178b4943a848ae85ed0ab3cf1c18f2.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b3be5e1beeba98f90588b7f04afd4f47.png)
 
 
 
@@ -391,15 +391,15 @@ KftLnWashuO85vKiZ5hmv9THMW/Zn1NhiCuh3Ixj2PqEiUGxLLMb4NltJSoJOrOkKYZKd6FyLqXoLNJ9
 
 将该用户与gitlab的root用户绑定
 点击gitlab用户的图标、找到setting
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/5c16a350de7b40dba17f9798a5bea8ad.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0e24de18de39c89e931f12ef2ac0355b.png)
 
 进入到用户的设置页面、点击左侧菜单栏的ssh keys
 这个页面还可以设置用户的其它信息
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/80537455cb7c48faa917f8ad9e2c1577.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cb66cd406d0d9b130e053ab09d9dc469.png)
 
 Ssh的配置页面
 此处只能添加公钥，注意、一个公钥在整个gitlab系统中只能添加一次，但是一个gitlab用户可以添加多个公钥
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/aface3c86663476897453d66f51ad40d.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e74c29d3274d7d5e2af94141e5a3941f.png)
 
 
 
@@ -523,7 +523,7 @@ To git@192.168.137.100:xmlgrg_test/xm.git
 分支 master 设置为跟踪来自 gitlab 的远程分支 master。
 提示推送成功，我们在gitlab上的xm仓库上可以看到推送上来的内容
  
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0ea7984927a84b96901abbe708ef69a0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/18d70fc4d43a192b7a6815c5381cf0f0.png)
 
 
 
@@ -591,8 +591,8 @@ NHe+X8YUYtpMfMngtLl5XL0yHRvMoPVaUPT9FlejfRtrj3Qh8+vKiN4q9c36tC8eoyEnKE656yboTNkY
 
 然后配置192.168.211.91客户端与gitlab上的nqt用户绑定
  
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/168386b85ca14472b354a3667d0c7a5d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/13ea1e13e48a4787816359697b7f06d2.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f0bf2792ae732e6328d15a9af9614b09.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5f92385cdf1fbe99098a7f52a2264580.png)
 
 使用git clone命令克隆仓库到192.168.211.91服务器本地
 
@@ -657,29 +657,29 @@ To 192.168.137.100:xmlgrg_test/xm.git
 
 分支 'dev' 设置为跟踪来自 'origin' 的远程分支 'dev'。
 完成后，在gitlab上可以看到推上来的dev分支
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/3160e5f0763f4fe29c147d761b175a75.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/62fbe8c50a30e8bc27a03ab4f9057ec4.png)
 
 
 ## 15. 设置分支保护
 在实际使用过程中，通常会保持master分支的稳定，用于生产环境的版本发布，只有授权的用户才可以向master合并代码。要实现此功能，需要将master设置为保护分支，同时授权什么用户可以向master用户推送代码。
 
 使用root用户登录gitlab，点击xm仓库页面左下角的setting
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/c6052fbff4844b52a57011c5778a6cec.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/acefc1b61188a7b00989ab348766c11e.png)
 
 进入设置页面，选择设置菜单栏下面的Repository选项
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/46d869dd3f7843ccbb790e85b2192d2d.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/917af9a19319155f4a82b8686c5790b2.png)
 
 找到Protected Branches、点击展开
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/6dc2fac086054f939e8cd7f258a32953.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a92b7747581bb7083daa553f01f9bead.png)
 
 展开Protected Branches
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/d1ddf0bff7d54c4586b5976f5bc1c755.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cb7854ab0f0b4f9ca7a7434d6016c5b9.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/41f579cb71634c00dfc0d452bbba889b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e2b6acb0ca21e8ebcda0174f5ab8ca0a.png)
 
 
  
 设置完dev为保护的后，在仓库的分支页面，可看到分支后出现一个绿色的protected
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/f597e25b23d24e24819997220288b7db.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4a2d45ed4f31b8ce3a5783380c0256c5.png)
 默认的情况下，master分支是不允许developer角色向其推送内容的
 
 

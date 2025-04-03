@@ -1,7 +1,7 @@
 #  JavaScript 25. 验证 API
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9179f7d845cc419c8ef2913489b37719.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f0a01d12c97127fd5f1e93b4515d163c.png)
 
 
 ##  1. 约束验证 DOM 方法
@@ -65,9 +65,9 @@ function myFunction() {
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/645a26685e4e4b9aa89c08e1eb8d42d3.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c6e69b9c9c3645b391df315b005a2f57.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5d2c8ff6a066433f8ba83dca3fce5912.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/868b2b49cfc7f5c4a640b2bb4d71fab3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/614eeeace7427e82b3add3a9820c286b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c680fea8c103fa1f5c9fb8bcb40e2cbb.png)
 ##  2. 约束验证 DOM 属性
 |属性	|描述|
 |--|--|
@@ -125,8 +125,8 @@ function myFunction() {
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/212ef979577f4fad8642fd4ae212bcf0.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8f96db742de5466bbc8431cc681139e1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/84fe79e53d2d80652b34af57e625392b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/be38a26fbf1373d532842877182ea300.png)
 ### 3.2 实例 2
 如果输入的值小于 100，显示一个信息：
 
@@ -170,8 +170,8 @@ function isNumeric(n) {
 </html>
 ```
 输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7c72f7cd63d64295b1ecc78eb8e6fe1a.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c179d0e8dd464cb5876187024b7cecea.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a942b4e187684e0d986f9bf2be629215.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d18ebd949b4b4a64828ca8505f3d80ac.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7ea173ca286d3b11879ef80bbcc01e3b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/74c6150e98b2b066e6db39911aafc133.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9141a2e4e6f6d994f15d6a9599413226.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b53a8a35736b10bd076472f8a0425475.png)
 

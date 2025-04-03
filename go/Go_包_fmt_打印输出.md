@@ -1,6 +1,6 @@
 #  Go 包 fmt 打印输出
 
-![](https://img-blog.csdnimg.cn/2c714f9145cd4597b7c6002b0fca379e.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/5d7250574565d6617e1ad2174d0fe82c.png)
 
 
 ## 1. 格式化输出函数

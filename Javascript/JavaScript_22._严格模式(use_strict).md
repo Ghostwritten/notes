@@ -1,7 +1,7 @@
 #  JavaScript 22. 严格模式(use strict)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8071e6f388714ff9b63a019b108967ee.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/51ac864c21357a636973770c48ef54e0.png)
 
 
 ##  1. 使用 "use strict" 指令
@@ -20,9 +20,9 @@ Opera 12+。
 严格模式通过在脚本或函数的头部添加 `use strict;` 表达式来声明。
 
 实例中我们可以在浏览器按下 `F12` (或点击"工具>更多工具>开发者工具") 开启调试模式，查看报错信息。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/544063c237d2431e8f889af421153a02.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/842f94b4555f6be7faf92c224e140aad.png)
 也可以通过右击鼠标，选择 "检查" 来查看，Gif 图演示如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/912fbfa5ac724803a3ec9c4baad2187f.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9b6cb6bbc8a95757455a8b55b5154c22.gif#pic_center)
 
 实例
 

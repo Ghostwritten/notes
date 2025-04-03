@@ -41,10 +41,10 @@ $ kubectl describe rc nginx-latest  #警告不允许有latest标签的镜像
 搜索关键报错语句：`Images using latest tag are not allowed`
 
 我们在`image_policy.go`的37行找到了
-![在这里插入图片描述](https://img-blog.csdnimg.cn/47b2282b93a64845b54fe173af7784ec.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7c690fdf1527f2cf59aeab88f03118e5.png)
 ### `review.Status.Reason`是什么？
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5a96ef2dbef74cd7a5416568c7415de1.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bad136d991add782650162c3c1ae3c21.png)
 从代码中：
 
  - `review.Status.Reason`可能是一个字符串类型，存储我们表达的信息。
@@ -54,8 +54,8 @@ $ kubectl describe rc nginx-latest  #警告不允许有latest标签的镜像
 #### `v1alpha1.ImageReview`是什么？
 从图中我们知道他来自专属[k8s.io/api/imagepolicy/v1alpha](https://pkg.go.dev/k8s.io/api/imagepolicy/v1alpha1)`的包。那我们只能去它的源代码库查看了。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e7bffb6796ee48eb8a5b8393620d15a0.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/11d80a734de64df5b3856d09c06db0de.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f33d0627135b1fbc2915eb0195f9549d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f6cbce89e1cfb03f2f3de1adc029f851.png)
 看到这里我们知道了，`v1alpha1.ImageReview`是个结构体，结构体顾名思义是形容一类物体的统称范畴，结构体肯定包含特定属性的组成部分，它即可以抽象的，也可以是具体的。例如：
 
 ```bash
@@ -101,8 +101,8 @@ type  人  struct {
 包v1包含所有版本都通用的API类型，但它们分为两类，一类是对外的，也就是能为我们开发定制的，另一部分是内部的。总之，我们纵观全览，这个包定义了k8s许多对象。我们继续往下看
 
 `metav1.TypeMeta`中的`TypeMeta`包含了什么？
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cb5ddbb6dfd04f769648a64b05a06e41.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b1ba385c79984eaead68fc20bfbe0ef1.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/72b64321b5989feccac5e9ab44d10344.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a1f72f3c808dc80a76aab89ca7a9ed76.png)
 原来，`TypeMeta`也是结构体，里边包含：
 
  - `kind`: 对象类型，这个我们非常常见，描述资源对象的类型。专业术语描述就是：Kind是一个字符串值，表示该对象所表示的REST资源，不能被更新。
@@ -174,30 +174,30 @@ type ImageReviewStatus struct {
 **奥，看到这里终于明白了。回到我们的代码中，原来`review.Status.Reason`是留给我们设置输出报错信息的。**
 
 同时呢，我们也根据`review.Status.Allowed`的源代码库的解释，也明白了它在我们代码中的意义。即是否允许镜像运行的一个判断标志，其实根据代码含义我们也能推测出来。假如`allow=true`，表达运行镜像运行容器，`allow=false`，输出错误，并`break`停止运行程序。
-![review.Status.Reason](https://img-blog.csdnimg.cn/985789b30f2d41629bb991c9a6e8822a.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![review.Status.Reason](https://i-blog.csdnimg.cn/blog_migrate/c1c6b4e234402b0fc92f912ef0ef172f.png)
 同时，我们也发现了for循环中的`imageReview.Spec.Containers`，如果你浏览了代码库，定也明白它的含义，那就是显示正在创建的Pod的每个容器中的信息子集的列表。
 
 我们注意到for循环中有一个`container.Image`，它是怎么来的呢？
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dd1f9af1b8d94a75b6fc6c17ba864943.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a247532fb648e5c41ec289c8074e6a35.png)
 发现 `ImageReviewContainerSpec`是有结构体的，里边包含`image`,同时，`ImageReviewContainerSpec`作为`containers`的切片对象，所以我们知道`container.Image`只是显示pod里的容器镜像，通过`apped`方法把所有镜像添加`images`切片中，当然，要提前做好切片初始化`images := []string{}`。
 
 ## 3.  rule目录的not_latest.go
 毫无疑问，代码中`rule`的方法，我们是引用的不是源代码库，而是本项目中的另一个代码文件的方法，它在`rule`目录中。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/18e91639bf7f41b9a33484d52e806766.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/933b40872c518694dd6c885da669b474.png)
 rules目录下有：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c32bd4d3e8224c958a1ddb161f471a12.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b9789a04c372926e763ef53d46241819.png)
 
 
 我们找到了，**它不叫方法，它叫函数调用**。我们看看这个函数里写了什么逻辑。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c5f0faa9f8eb4edc8ef08eb42440e3fb.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/206c2a7a1e927a4955692fa5aae9275e.png)
 传入镜像参数，通过调用`reference.ParseNormalizedNamed`函数返回名字，我们又要看看这个`reference.ParseNormalizedNamed`到底是什么逻辑，能明白它的准确意思，不能靠猜。所以，我们还有继续寻找代码的源头。
 
 我们找到了这个函数所在的目录，具体是哪个文件呢？
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ed60675e4a2a40bbad30c0e4d370a674.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/849b92e58b2e4f994bac513b5c77dd32.png)
 #### normalize.go
 
 找关键词`ParseNormalizedNamed`和`normalize.go`有点关联。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4e1668cbb54d4b8e895a81ab64578234.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3688cdc62b9b39fd21f46b6e83316e3f.png)
 果然找到了，注释翻译是：`ParseNormalizedNamed`将字符串解析为命名引用，将Docker UI中的熟悉名称转换为完全限定引用。如果值可能是一个标识符，则使用`ParseAnyReference`。
 
 没看明白，还是看具体代码逻辑吧
@@ -205,15 +205,15 @@ rules目录下有：
 #####  anchoredIdentifierRegexp.MatchString
 
 `anchoredIdentifierRegexp.MatchString`又是什么？在这个`normalize.go`没有发现，通过关键词Regexp找，应该同目录下的`regexp.go`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/50e90efec7c749c0be252ff41451a45f.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d80aede5bd234368f67be69794cabcbc.png)
 果然又找到了，注释翻译：`anchoredIdentifierRegexp`用于检查或匹配标识符值，锚定在字符串的开始和结束。问题又来了，`anchored(IdentifierRegexp)`又是啥，我点慌了，我像个鼹鼠挖地洞。
 
 这个函数翻译描述是通过添加开始和结束分隔符锚定正则表达式。**类似传达一个正则表达式的意思。就是分隔符匹配**
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a450c6eedbf94f80857a0f6492a63e7a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/efe8854ed28104527c06889aff87f4b1.png)
 `regexp.Regexp`是包`regexp`的结构体，看看是啥,是个空结构体，**空结构体不占据内存空间，因此被广泛作为各种场景下的占位符使用。一是节省资源，二是空结构体本身就具备很强的语义，即这里不需要任何值，仅作为占位符。**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3431bb16a5534fc3bc41893c471f726b.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a7eabf3dcdcf4c8a98b7b5be730af3b4.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/54568bcb2903038b3023a19914108d6f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e4ff6c350066a12516644f94f53051ea.png)
 奥，看到这里明白一件事，`MatchString`是`Regexp`的方法，也就是，`Regexp.MatchString`是可以调用，而`Regexp`结构体本身是`anchored`函数的传参，`anchored(ShortIdentifierRegexp)`又被定义`anchoredShortIdentifierRegexp`，所以，根据go语言的传递规则，anchoredShortIdentifierRegexp可以直接调用`Regexp`的`MatchString`，即`anchoredIdentifierRegexp.MatchString(s)`，它是什么意思呢？那就 得明白anchored的return的正则匹配规则，负责检查s（字符串）格式是否负责这个规则。也就是说看看这个规则`match(`^` + expression(res...).String() + `$`)`是什么意思。
 代码中
 
@@ -229,16 +229,16 @@ regexp.MustCompile(`^` + expression(res...).String() + `$`)
  - ^ 代表匹配首
  - $ 代表匹配尾
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/eadc4a6a3b7644efa90a55d60677ff3f.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c0e9500e8dac07fb7720072db564fab4.png)
 express函数对传递的res的正则符合字符串化，并与字符串s拼接。这里好像是闭包函数的使用。与我们的代码中使用的场景联想一下，正是镜像的格式例如：`nginx:latest` 、`kainlite/kube-image-bouncer:latest`，其实**express作用的就是镜像中特殊字符为了避免被识别为正则表达式**。
 
 回头来看，`nchoredIdentifierRegexp.MatchString(s)`的作用就是判断s是不是一个镜像。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3db055bdc4e14c6494de0ab6f6bec708.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9e4f4ca30752281cdeea7e41c4cfcf77.png)
 #####  splitDockerDomain(s)
 `splitDockerDomain(s)`在第90行，通过字段其实大概就能明白它的意思。字段切分。具体怎么实现的呢？
-![在这里插入图片描述](https://img-blog.csdnimg.cn/437337723baa406c950253d88f4400e4.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0a1d8abcca4b6b05776676671eb7eaef.png)
 `strings.IndexRune(name, '/')`方法，可以参考[go strings方法](https://ghostwritten.blog.csdn.net/article/details/105097087)，`IndexRune`返回字符`/`在字符串s中第一次出现的位置,如果找不到，则返回-1。`domain`就等于`docker.io`,在代码中已初始化好，`name`等于`remainder`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b2f1a94e813842489a0062a5677e8368.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/41dd7ac4da8e270f446d67f91caaa5f8.png)
 如果镜像中有‘/’呢，例如：`kainlite/kube-image-bouncer:latest`,`domain`取`kainlite`,`remainder`取`kube-image-bouncer:latest`
 
 假如`domain`等于`index.docker.io`，就重定义为`docker.io`
@@ -260,33 +260,33 @@ tagSep等于镜像的标签，否则，就等于镜像的名字
  `Parse(domain + "/" + remainder)`是什么意思呢?
  
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/56c5188bc74147b7a84eafdfbd0ea6de.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/208722098d0d2012aa47c57d415535d6.png)
 
 又是好大的一个函数。
 那我们慢慢来分析吧
 ######  referenceRegexp.FindStringSubmatch(s)
 `referenceRegexp.FindStringSubmatch(s)`是啥意思？翻译过来就是`ReferenceRegexp`是完全支持的引用格式。regexp被锚定，并具有名称、标记和摘要组件的捕获组。描述看不懂。还是具体代码逻辑吧
-![在这里插入图片描述](https://img-blog.csdnimg.cn/43dc021d4bc24d8cbfd47271c719aef8.png)
-`anchored`大体明白了，就是通过添加开始和结束分隔符锚定正则表达式并作为返回值。![在这里插入图片描述](https://img-blog.csdnimg.cn/fdac8671358f45edb0ce5d29b9481cb7.png)将含有正则表达式字符的字符串转换字符串形式。
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a9593b40c212fa5158655d8cf56eb62c.png)
+`anchored`大体明白了，就是通过添加开始和结束分隔符锚定正则表达式并作为返回值。![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/37146579a5aac4d14d58f032643f4352.png)将含有正则表达式字符的字符串转换字符串形式。
 
 `capture`函数与`anchored`大同小异，只是将含有正则表达式字符的字符串转换数组形式并作为返回值。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3c96ae53cab74d54ad6f5c05e6ea1634.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5699406942b7f2fb60ba78efaf3b999d.png)
 
 `optional`似乎是对字符串可有可无的一种设定,并且`optional`字面意思是可选的。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/faf055fa4dc3490ba75e0d2a538a3e0e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7ac825dcf4877c7d91ee18216ee5515d.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/63f02d9ad5b44c73952bc9a8232cbf21.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/670307117a029c82c2c9e5f3720526da.png)
 
 `literal`函数是什么意思？翻译是**将文本编译为文本正则表达式，转义任何regexp保留字符**。字面非常容易理解。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ac2266313cf14df9b2a1f71a5463b522.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3d742c0805382e4f225a185e2c228583.png)
 
  - `QuoteMeta`返回一个字符串，该字符串转义参数文本中的所有正则表达式元字符;返回的字符串是与文本匹配的正则表达式。
  - var match = regexp.MustCompile
  - re := regexp.MustCompile(正则字符串)
  - re就是单纯的正则表达式了。
- - ![在这里插入图片描述](https://img-blog.csdnimg.cn/f5a1d0593f9341779d7d112ad2ff285a.png)
+ - ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c3fe082c00b64321f0c370ed8542490a.png)
 `LiteralPrefix`返回一个字面值字符串，该字符串必须以正则表达式re的任何匹配项开始。如果字面值字符串包含整个正则表达式，则返回布尔值true。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a5815a9a281446afb61bc6d4d92c5aec.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4ee22b636bb8a6b4f9056120a53e3ab2.png)
 
 后面的函数方法其实大同小异，这里不一一拆解。
 回到函数`ReferenceRegexp.FindStringSubmatch(s)`，`FindStringSubmatch(s)`是regexp的方法`FindStringSubmatch`返回一个字符串切片，其中包含正则表达式在s中最左匹配的文本，以及它的子表达式的匹配(如果有的话)，如包注释中的'Submatch'描述中定义的那样。返回值为nil表示没有匹配。
@@ -321,12 +321,12 @@ if matches[3] != "" {
 }
 ```
 digest包正是处理哈希字符串的。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7cc778e657fb4e928bd2157f36b1bb7a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6f600516323eea42ae2ca7a7fe5954b2.png)
 
 `getBestReferenceType(ref)`是什么？字面推断是对`ref`再次处理。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e47ebe71058545a8b4e96137a9ad1171.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fcde66ae75266e610a94c5fe35cb9451.png)
 对包含镜像的仓库、标签、哈希值的ref结构体再次检查判断，有什么输出什么。并重构还有该特性的结构体。一共有三类结构体。如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/54424ce7e98a479c8068298d087fca0a.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fa420614fec4b8b7b2a1e6b03151e898.png)
 到这里，关于`parse`的函数分析已经结束了，这一路下来学到了不少方法，不能说全盘了解，但调用的机理已经摸透。
 
 `named, isNamed := ref.(Named)`是个非常有趣的值得摸索记住的。**我不懂，结构体跟点跟括号。后续研究。**，但根据下面的代码逻辑推理，可能：
@@ -336,32 +336,32 @@ digest包正是处理哈希字符串的。
 ```
 
 **`Named`是管道，ref是结构体r`eference`结构体的定义，那么自然会承接`Reference`管道中的`refence`的`String()`**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9b4ed87f120c484488f108c4d5f160e7.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/08aee34d5cf04e00b91a8d75ac18c409.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bc711050f48a4ef3ba84c9e1e4533643.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3e61aefb5e1421593c97d286d2968b1d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f001c4d411b1cc739e32a4d89ac0ea40.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/672ae3f38a6a19b9b477e79cda10cba1.png)
 
-![named](https://img-blog.csdnimg.cn/e4042c417e314ac8bde8ff1486036f67.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/55e57042306b435da925d9cdb9ef95ae.png)
+![named](https://i-blog.csdnimg.cn/blog_migrate/c91f570a83648372e493785d61d6346b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bb8b0649fe21d3cd446346c532c08051.png)
 
 
 剩下要做的就是看看这个parse函数返回值被如何用了，自然可以推理出来，如下
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b10f3f3d1fc94af2a5b53cb097d0573e.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7143d59827fe561d2a68bc8bfddc414c.png)
 `strings.HasSuffix`判断字符串s是否以某个字符串结尾,
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1407286a1cfc40528d69b35735ed6124.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/defd79c4c4929ae9a5275dec8a53dba2.png)
 `TagNameOnly`函数很好理解，就是判断镜像有没有标签，如果没有标签就添加默认"`latest`"。
 那我们来看看他怎么实现的吧。
 
-`IsNameOnly`函数在`helpers.go`![在这里插入图片描述](https://img-blog.csdnimg.cn/41a6e37b18ba4b5d8360b287082af830.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+`IsNameOnly`函数在`helpers.go`![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/41f4c41d5de9b556418b465b629a5799.png)
 来到这里我们又遇到了`ref.(NamedTagged)`，看到这里，也许有一丝明白过来，这个对ref的结构体属性的判断，根据结构体中的属性是否包含值，通过接口组合成一个判断类型。之前，`named, isNamed := ref.(Named)`代表返回一个完整的镜像+标签的内容，并判断是否正常返回，这里代表是否只返回标签，也就是只判断是否有标签。下面的`ref.(Canonical)`则是判断标签是否有哈希值。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5ac5ebfca23f4f0aad73233e6799922e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/26076963a63e4f45f98bcf0d402948c9.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8a80395b8d76421a9c057e976ae1044b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/87ab9908fc2b5c28c02c3e2a84279c99.png)
 最后，如果没有任何标签，即为true，继续执行`namedTagged, err := WithTag(ref, defaultTag)`
-![amedTagged, err := WithTag(ref, defaultTag)](https://img-blog.csdnimg.cn/a24e50093ab44332a20fd452928ad581.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![amedTagged, err := WithTag(ref, defaultTag)](https://i-blog.csdnimg.cn/blog_migrate/654a7880e86661788ef4285dbd3b458b.png)
 `withtag`函数传递两个函数，获取的镜像的信息，和latest标签。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a945e18b011849d286af03f1d357851a.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/789bdc179c9185846b5b884e560049fb.png)
 
 这个对已经获取的`Named`的对象重新进行定义，目的是为了把默认没有标签的镜像打上`latest`标签。
 
@@ -374,17 +374,17 @@ digest包正是处理哈希字符串的。
 下面就是根据判断是否有latest做出终端日志输出判断，并且打个是否allow的标签。
 
 我们完成了哪些部分的代码分析呢？真的是九牛一毛。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c62dc3d82f5843049a7f0dbb359225de.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/021fba1c02b5568409c7da1ddd35a4b7.png)
 ## 4. echo包
 
 下面只需要分析明白如下内容。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/56918ed697694654a683f0b0d0d9fcab.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2b688bf3dc65d9b16526a3774391965e.png)
 `echo` web框架是go语言开发的一种高性能，可扩展，轻量级的web框架。
 echo框架真的非常简单，几行代码就可以启动一个高性能的http服务端。
 `echo.Context`表示当前 HTTP 请求的上下文。它保存请求和响应引用、路径、路径参数、数据、注册处理程序和 API 以读取请求和写入响应。由于 `Context` 是一个接口，因此很容易使用自定义 API 对其进行扩展。
 `handlerFunc`定义http请求，匿名函数像变量一样返回给`echo.HandlerFunc`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b23cd0a5aa2b48a092abeacaac5db7d1.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_20,color_FFFFFF,t_70,g_se,x_16)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4db74b46dd138c3b1baf1db9178381e5.png)
 
 
 

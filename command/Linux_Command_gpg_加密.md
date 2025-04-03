@@ -6,7 +6,7 @@ ABC
 $ gpg -c test
 
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3cf048c7a3de44a8b77f238136fbce1e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/573cd6e63ba2f4ade280f0e90e550b9a.png)
 
 ```bash
 $ ls 
@@ -28,5 +28,5 @@ ABC
  - [GPG入门教程](https://www.ruanyifeng.com/blog/2013/07/gpg.html)
 
 ----
-![在这里插入图片描述](https://img-blog.csdnimg.cn/38bf1860b14041b99fbf0aec108bedda.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e90293c4165484b6736e03b6c17fef2c.gif#pic_center)
 

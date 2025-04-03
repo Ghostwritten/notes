@@ -2,7 +2,7 @@
 tags: exporters
 <!-- catalog: ~couchbase-exporter~ -->
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bc529ae6d81649918d61a9eae812c28b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c8001dc6f3c56268386b47b16dcdb333.png)
 
 
 

@@ -1,6 +1,6 @@
 #  Go Modules 管理包工具
 
-![](https://img-blog.csdnimg.cn/a991176170d54174b07c1bb731a57e06.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/ab96175207f4f201a78816896d601622.png)
 
 
 
@@ -183,7 +183,7 @@ $ git checkout -b v1
 $ git push -u origin v1
 ```
 
-![](https://img-blog.csdnimg.cn/20200508232014387.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![](https://i-blog.csdnimg.cn/blog_migrate/0cbb2a96763963b909b4c0daf80556b9.png)
 ### 4.2 语义化版本
 什么是语义化版本？语义化版本是一套由 Gravatars 创办者兼 GitHub 共同创办者 Tom Preston-Werner 所建立的约定。在这套约定下，语义化版本号及其更新方式包含了很多有用的信息。
 语义化版本号格式为：X.Y.Z（主版本号.次版本号.修订号），使用方法如下：

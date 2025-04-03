@@ -5,7 +5,7 @@ tags: trivy,安全
 
 
 ---
-[![在这里插入图片描述](https://img-blog.csdnimg.cn/b123158028954aa8b256df24d69c89e9.png)](https://www.rottentomatoes.com/tv/for_all_mankind)
+[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8f73d40820025efdd2a7d5cb11727fb8.png)](https://www.rottentomatoes.com/tv/for_all_mankind)
 
 
 ##  1. 简介

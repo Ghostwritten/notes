@@ -145,7 +145,7 @@ book.json配置：
 > "!type":`NOTE`、"style":`flat`、"lable":`自定义标签`、图标不可见
 
 ###  2.4 效果1
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8f29023966f84cb6896fcb4dcaccb164.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/252d0f8f2dc126ee0f735e0812d109d7.png)
 
 
 ###  2.5  自定义一个COMMENT类型

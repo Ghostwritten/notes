@@ -7,11 +7,11 @@
 
 ----
 ## 1. 介绍
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210421185458486.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210421185743988.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210421185832634.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0c0035f1e628c387d06959d1e8dec708.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c1be000e171434d7cf769bb7163d9c50.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/19a37f5f1596cb5349f7a1bd426e6a68.png)
 ## 2. Practice: Access Node Metadata
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021042211194795.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/085739c4ceb0569ca81eee981abd68aa.png)
 
 参考链接：
 [https://cloud.google.com/compute/docs/storing-retrieving-metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata)

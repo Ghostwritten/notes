@@ -2,16 +2,16 @@
 
 ----
 ## 1. 介绍
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210428112622210.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210428112815835.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210428112947410.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210428113046172.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3fd9dd793e22eb23d40ac4840fb6fc3c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fefdb7fe77bcff1df02d2fb7a5b94f3d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f9cf5cbbdf8fb3d5c88d8a5b3ca15384.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8b0395b5aba53538ae6b04cf40bdc1ea.png)
 technical overview : container and system calls
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210428113240513.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ca359799bbbcee8b03fed457eb5b91cf.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210428113420498.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6a4c2e4fa9acfe8a1e3a1fad84fea589.png)
 ## 2. Container calls Linux Kernel
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210428113450542.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3808110d405f7ded5bd35dc2c3d09172.png)
 
 ```c
 root@master:~# k run pod --image=nginx
@@ -72,10 +72,10 @@ exit_group(0)                           = ?
 
 
 ## 3. Open Container Initiative OCI
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210428114202980.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210428114224306.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210428114243920.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021042811431298.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3963252af916bd8e1b6e95ad1effeedf.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3f14a8242a9cbd41947a732e988c2cf1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5e2f51340be9624fdd4a68509771dd4a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/62d94d5a96722695e240f2cbf8f6c550.png)
 ## 4. Crictl
 参考链接：
 [https://kubernetes.io/zh/docs/tasks/debug-application-cluster/crictl/](https://kubernetes.io/zh/docs/tasks/debug-application-cluster/crictl/)
@@ -128,18 +128,18 @@ root@master:~#
 [https://github.com/kata-containers/kata-containers](https://github.com/kata-containers/kata-containers)
 [https://www.hi-linux.com/posts/23259.html](https://www.hi-linux.com/posts/23259.html)
 [Kubernetes kata-container 介绍](https://ghostwritten.blog.csdn.net/article/details/116596343)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210428115019523.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021042811512853.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/69c8e49966723f117ca4daec0623d8fc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/730e01c4b832117db1c7fd8c1cd2ac6c.png)
 ## 6. Sandbox Runtime gVisor
 参考链接：
 [https://github.com/google/gvisor](https://github.com/google/gvisor)
 [https://gvisor.dev/](https://gvisor.dev/)
-[https://gvisor.dev/docs/](https://gvisor.dev/docs/)![在这里插入图片描述](https://img-blog.csdnimg.cn/20210428115252824.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210428115304359.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+[https://gvisor.dev/docs/](https://gvisor.dev/docs/)![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bdc1378294bad0bf297431e8c4c9f395.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e8e695000681a791772dbbe864540b84.png)
 ## 7. Create and use RuntimeClasses
 参考链接：
 [https://kubernetes.io/docs/concepts/containers/runtime-class/](https://kubernetes.io/docs/concepts/containers/runtime-class/)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210428115502244.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fdb32424c66f3b688a17ba719b9fd101.png)
 
 ```c
 root@master:~/cks/runtimeclass# vim rc.yaml
@@ -178,7 +178,7 @@ Events:
 ```
 需要接下来的步骤
 ## 8. Install and use gVisor
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210514103631796.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e89df52ce19bd5ea5c4e72f8d4242fe0.png)
 
 ```c
 root@master:~# bash <(curl -s https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/course-content/microservice-vulnerabilities/container-runtimes/gvisor/install_gvisor.sh)
@@ -265,5 +265,5 @@ root@master:~/cks/runtimeclass# systemctl status kubelet
 
 
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210514140401660.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ad1701d096d1381ed2cab9c7b1f8cc0a.png)
 

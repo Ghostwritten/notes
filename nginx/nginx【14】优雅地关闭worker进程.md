@@ -7,7 +7,7 @@
 　　　　对于某些请求 Nginx 无法做到优雅地关闭 worker 进程，比如当 Nginx 代理 websocket 协议的时候，在 websocket 后面进行通讯的 `frame` 桢里面，Nginx 是不解析他的桢的；Nginx 做 TCP 层或者 UDP 层反向代理的时候，也没有办法识别一个请求需要经历多少报文才算是结束；但是对于 `HTTP` 请求，Nginx 可以做到，所以优雅地关闭主要针对的是 HTTP 请求。
 
 　　那么所谓的优雅的关掉nginx到底是怎样的一个过程尼？
-![在这里插入图片描述](https://img-blog.csdnimg.cn/87e89490a76a4b59ad55590fde140b15.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0a97e4230de151a3e29500fa5867eac4.png)
 首先第一步会设置一个定时器，在 `nginx.conf` 中可以配置一个 `worker_shutdown_timeout`，配置完 `worker_shutdown_timeout` 之后，会加一个标志位，表示进入优雅关闭流程了。
 
 第二步会先关闭监听句柄，要保证所在的 `worker` 进程不会再去处理新的连接。

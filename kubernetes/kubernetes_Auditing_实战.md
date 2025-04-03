@@ -4,7 +4,7 @@ tags:   Auditing
 
 
 
-[![在这里插入图片描述](https://img-blog.csdnimg.cn/10f20b77ee5d4fedaf45cb77430da99d.gif#pic_center)](https://www.behance.net/gallery/87137241/Terminator-x-Game-for-peace)
+[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b3e0d22c2d4fe194c5da6412852c92c3.gif#pic_center)](https://www.behance.net/gallery/87137241/Terminator-x-Game-for-peace)
 
 
 
@@ -148,7 +148,7 @@ volumeMounts:
 kubectl get pods -n kube-system -w
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/97f18267ff524fdaa02edde4389fc58b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/82a07458eb82264085d7aba025e1434d.png)
 创建一个新的 pod，看看 Kubernetes 是否会将请求记录在日志文件中。
 
 ```bash
@@ -161,7 +161,7 @@ sudo cat /var/log/kubernetes/audit/audit.log | grep -i "nginx"
 ```
 如果您在日志文件中看到类似于下图的内容，则说明您的 Kubernetes 集群上现已启用并配置了审计。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5275889f8e2b45a899bf7f3d273fdc45.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4eefc95461c4b604eab0e5c8c16e44d8.png)
 ##  5. ContainIQ 监控 Kubernetes 审计日志
 您可以在 Kubernetes 集群中安装多种工具，以在收集和查看日志时提供更丰富的体验。一个这样的工具是 ContainIQ，一个[K8s 监控平台](https://www.containiq.com/feature/logs)。ContainIQ 让您和您的团队可以轻松监控集群内的 Kubernetes 指标、日志和事件。它提供了改进的查看和过滤选项，以帮助您查看[日志中真正重要的内容](https://www.containiq.com/post/kubernetes-logging)。
 
@@ -183,7 +183,7 @@ kubectl apply -f deployment.yaml
 ```
 在集群上实施 ContainIQ 可使您的日志记录更上一层楼。虽然 Kubernetes 审计日志提供了有价值的信息，但它们仅以原始数据日志的形式提供访问，这些日志难以阅读且筛选耗时。但是，使用 ContainIQ，您拥有一个用户界面，允许您根据 pod、时间戳和搜索查询轻松过滤日志，从而更轻松地提取您要查找的信息。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/63c0de5eddc744bf9a87eea776b92953.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/72488431acbb1ab13964fe97d0ebf886.png)
 
 
 ##  6. demo
@@ -298,7 +298,7 @@ $ cat /etc/kubernetes/audit/logs/audit.log |grep very-secure | jq .
 ```
 
 ###  6.3 restrict amount of Audit logs to collect
-![在这里插入图片描述](https://img-blog.csdnimg.cn/85f2c5b3c84149e6a9a4acdea667e816.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6c2d8e49fb7ec307fc8a4b3667897e1f.png)
 
 ```bash
 $ cat policy.yaml 

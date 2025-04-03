@@ -1,5 +1,5 @@
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2ab0bdc033c94cafb760f1b9ea30eb54.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/64b1b9cd0f41dd3d4647acc381b8f0cc.png)
 
 
 
@@ -868,39 +868,39 @@ systemctl status --now cockpit.socket
 - 用户名：root
 - 密码：<你设置的主机密码>
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/60063612e9ee4034992a98e4859538f4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6d6836916dfd1c398cf21fb36167fcab.png)
 
 概览
-![在这里插入图片描述](https://img-blog.csdnimg.cn/42291094f75f4f1fbc51d79d4f4638e1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1e2288f361a8b4cc3e1a4e7a5dddd3ef.png)
 磁盘、cpu、内存、网络监控
-![在这里插入图片描述](https://img-blog.csdnimg.cn/833ae32e98364f8f93934690f6d2ce8b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4f7cf1af6521d653862afee315abb7a2.png)
 安装软件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1a7b90b17410458ab2ffaed424238161.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/58f3b851e3b8dcb10c2b6ea95ee26857.gif#pic_center)
 
 
 
 
 日志
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a588cca5157a4599ac98ccb17f683c7c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/af271e870958d1c4922158e25ce9b20d.png)
 磁盘存储
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c01255283b67423891693d2b76270e52.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8ec6df5c46b8e16c9907a8b87bcd2ca7.png)
 
 网络
-![在这里插入图片描述](https://img-blog.csdnimg.cn/22877a6ef4434ea0827f862c058d0ac9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c9aeb581a1f9e025a1cd6cd604e58837.png)
 用户
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f8fd01e30c224107b8cbd759938a1477.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/49bb8f8bf5948ae9f72dc925f3b740a6.png)
 服务
-![在这里插入图片描述](https://img-blog.csdnimg.cn/10a512d6e3284b9d94b78494c72920dd.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/baf1164a727379743bd1fc550e6cb04e.png)
 应用
-![在这里插入图片描述](https://img-blog.csdnimg.cn/873386cf704b4779bc229833740aee61.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f51d6b4e02e45fc4cd734e1f2ced177a.png)
 诊断报表
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0002acb6831c4a43a7a910428245acd4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/abaef7161926d71143b9a3984672407e.png)
 
 
 kdump
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ea4116041cb14c2aac60cf87543f2a6c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7e6d6c08baa69e4ea7d9d92646f7effd.png)
 软件更新
-![在这里插入图片描述](https://img-blog.csdnimg.cn/62155f16603e494aac7ac522efccb8d0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/147166742d8e9b602d19fe0bf4d8a647.png)
 界面终端
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ffe202b607054c248d9ae7e38a137389.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f090de489560fac12e7a9770ee60dc84.png)
 

@@ -1,7 +1,7 @@
 # JavaScript 33. Promise
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/820e1fa04fcf4e8e9f08215acf7fe57e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d3f2ece8cb46244f114f0ffaac2a2ca3.png)
 
 
 ##  1. 前言
@@ -21,7 +21,7 @@ Promise对象有以下两个特点：
 由于 Promise 是 ES6 新增加的，所以一些旧的浏览器并不支持，苹果的 Safari 10 和 Windows 的 Edge 14 版本以上浏览器才开始支持 ES6 特性。
 
 以下是 Promise 浏览器支持的情况：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/62f75b90fd3246a7ac0d129d8aa89e86.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dbacafbdd350a02e28446b0d15706808.png)
 
 ##  4. 构造 Promise
 现在我们新建一个 Promise 对象：

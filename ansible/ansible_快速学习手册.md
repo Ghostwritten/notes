@@ -1,5 +1,5 @@
 #  Ansible Docs
-![在这里插入图片描述](https://img-blog.csdnimg.cn/33aa1bcd6e4647aa8d69bca1fc50a744.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/81ae7353c6b03708b6483fe679409b7d.png)
 
 
  1. [Ansible官方文档](https://docs.ansible.com/)
@@ -9,17 +9,22 @@
 
  1. [ansible 介绍](https://blog.csdn.net/AhhSong/article/details/78757363)
  2. [ansible 安装](https://ghostwritten.blog.csdn.net/article/details/113883476)
- 3. [ansible 配置](https://ghostwritten.blog.csdn.net/article/details/113884467)
- 4. [ansible 【参数】hosts and groups配置](https://ghostwritten.blog.csdn.net/article/details/113684783)
- 5. [ansible 【参数】gather_facts配置](https://ghostwritten.blog.csdn.net/article/details/113696617)
- 6. [ansible 【参数】become配置](https://ghostwritten.blog.csdn.net/article/details/113696931)
- 7. [ansible 【参数】serial配置](https://blog.csdn.net/Man_In_The_Night/article/details/88552703)
- 8. [ansible 变量【1】](https://ghostwritten.blog.csdn.net/article/details/104349920)
- 9. [ansible 变量【2】](https://blog.csdn.net/weixin_43935079/article/details/86531335)
- 10. [ansible yaml详解](https://blog.csdn.net/lilun517735159/article/details/79230732)
- 11. [ansible-playbook 基础详解](https://blog.51cto.com/13630803/2154192)
- 12. [ansible-playbook role角色](https://ghostwritten.blog.csdn.net/article/details/113703214)
- 13. [ansible jinja2【1】详解](https://ghostwritten.blog.csdn.net/article/details/113863994)
+ 3. [红帽8.7 安装 ansible](https://ghostwritten.blog.csdn.net/article/details/134407885)
+ 4. [容器 ansible 伪装本地 ansible](https://ghostwritten.blog.csdn.net/article/details/135484717)
+ 5. [ansible 配置](https://ghostwritten.blog.csdn.net/article/details/113884467)
+ 6. [ansible 【参数】hosts and groups配置](https://ghostwritten.blog.csdn.net/article/details/113684783)
+ 7. [ansible 【参数】gather_facts配置](https://ghostwritten.blog.csdn.net/article/details/113696617)
+ 8. [ansible 【参数】become配置](https://ghostwritten.blog.csdn.net/article/details/113696931)
+ 9. [ansible 【参数】serial配置](https://blog.csdn.net/Man_In_The_Night/article/details/88552703)
+ 10. [ansible 变量【1】](https://ghostwritten.blog.csdn.net/article/details/104349920)
+ 11. [ansible 变量【2】](https://blog.csdn.net/weixin_43935079/article/details/86531335)
+ 12. [ansible yaml详解](https://blog.csdn.net/lilun517735159/article/details/79230732)
+ 13. [ansible-playbook 基础详解](https://blog.51cto.com/13630803/2154192)
+ 14. [ansible-playbook role角色](https://ghostwritten.blog.csdn.net/article/details/113703214)
+ 15. [ansible jinja2【1】详解](https://ghostwritten.blog.csdn.net/article/details/113863994)
+ 16. [ansible-playbook task 指定位置执行](https://ghostwritten.blog.csdn.net/article/details/130096634)
+ 17. [ansible-playbook 实战](https://ghostwritten.blog.csdn.net/article/details/121998253)
+ 18. [Ansible模块开发-自定义模块](https://www.cnblogs.com/biglittleant/p/12857484.html)
 
 ---
  1. [**ansible【模块】总览**](https://blog.csdn.net/Jack_Yangyj/article/details/86494219)
@@ -55,3 +60,9 @@
  22. [ansible 远程容器机种方法](https://ghostwritten.blog.csdn.net/article/details/104346728)
  23. 
 -----
+
+批量执行一组，某节点除外
+```bash
+ansible 'all:!kube_node01' -m command -a "df -Th"
+```
+

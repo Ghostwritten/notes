@@ -1,4 +1,4 @@
-![](https://img-blog.csdnimg.cn/6196361850c0490eb3d2fe7b7e875c74.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/1744ec13473e813566bb1409efb24636.png)
 
 
 
@@ -16,7 +16,7 @@ Cert-manager 还提供了一个 Webhook API，使您可以将自定义证书颁�
 
 
 ##  2. 架构
-![](https://img-blog.csdnimg.cn/698f7351fde04acc92458c96ba804df4.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/5f4c443897aa04fe22e3c263859a6cb7.png)
 
 Cert-manager 通过 Kubernetes 中的 Custom Resource Definitions (CRDs) 来定义证书的请求和颁发，以及与之相关的资源，如私钥和证书链。Cert-manager 运行在 Kubernetes 集群中，作为一个 Deployment 或者 StatefulSet，包含以下三个主要组件：
 

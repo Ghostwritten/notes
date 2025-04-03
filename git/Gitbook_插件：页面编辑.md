@@ -21,5 +21,5 @@ npm i gitbook-plugin-edit-link
 ```
 
 ###  1.3 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4cd02a85ea4e4f72a542d531b44e8f10.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1956106427b836035b7f58d739397fd9.png)
 

@@ -1,6 +1,6 @@
 # Windows Docs
 
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/8c70e6e988cd465899408b2dbcf1c0ad.png)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/51b7c246e515a7633a16d255f55aa0e3.png)
 
 
 
@@ -33,7 +33,9 @@
  - [VMware14 虚拟机装windows10 系统出现 BootManager](https://ghostwritten.blog.csdn.net/article/details/105648157)
  - [VMwa e vCenter Server 6.7 安装](https://blog.csdn.net/xixihahalelehehe/article/details/127103192)
  - [vsphere client 6.7安装 linux centos 7.9.2009](https://blog.csdn.net/xixihahalelehehe/article/details/127616480)
-
+ - [VMware vCenter Server Appliance重置root密码](https://www.dinghui.org/vmware-vcenter-server-appliance-reset-root-password.html)
+ - [Vcenter 定制创建 Rocky Linux 虚拟机](https://ghostwritten.blog.csdn.net/article/details/136652999)
+ - [EXSI create datastore](https://ghostwritten.blog.csdn.net/article/details/136563542)
 ## Windows Terminal
 
  - [windows Terminal 与linux 配置 openssh ssh-copy-id 互信](https://ghostwritten.blog.csdn.net/article/details/127572728)
@@ -43,3 +45,9 @@
 - [Windows Terminal 命令面板](https://blog.csdn.net/xixihahalelehehe/article/details/127839950)
 - [Windows 定制 Terminal 上手实践](https://ghostwritten.blog.csdn.net/article/details/127870666)
 
+
+## office
+
+### word
+
+- [关于Word目录英文自动大写无法更改问题的处理办法](https://blog.csdn.net/cczx139/article/details/124704723)

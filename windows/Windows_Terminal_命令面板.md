@@ -13,7 +13,7 @@
 ##  2. 命令行模式
 如果您要输入wt 命令插入到命令调色板中，可以通过删除> 字符。这将运行wt 命令。有关wt 命令可以在[命令行参数页面](https://learn.microsoft.com/en-us/windows/terminal/command-line-arguments?tabs=windows)。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/67ee899429c24454b3d732aba47c95d8.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/655c71fd42dd236e350d093f79ad8ea6.gif#pic_center)
 您可以添加自定义键绑定，以便直接在命令行模式下调用命令调色板。
 
 ```bash
@@ -42,7 +42,7 @@
     ]
 }
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0dae8c1b139045538e51fc148ef86ab1.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bf72b09a490e8ff3c0238212f24f4577.gif#pic_center)
 ##  5. 可迭代命令
 可迭代命令允许您同时创建多个命令，这些命令是从您的设置中定义的其他对象生成的。目前，您可以为您的配置文件和配色方案创建可迭代的命令。在运行时，这些命令将扩展为针对给定类型的每个对象的一个命令。
 
@@ -111,7 +111,7 @@
     ]
 }
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0a9de243e86244daa5b78b892a678a76.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/10520b344f8bb61cca2e0b1020c993be.gif#pic_center)
 ##  6. 隐藏命令
 如果你想在你的键绑定列表中保留一个命令但不让它出现在命令面板中，你可以通过将其设置name为隐藏它null。下面的示例隐藏了命令面板中的“新建选项卡”操作。
 

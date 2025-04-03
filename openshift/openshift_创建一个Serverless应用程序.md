@@ -36,7 +36,7 @@ Serverless服务
  4. In the navigation menu, click `Topology.`
 
 A graphical representation of your application appears, displaying the app components, plus a cron job that orders drinks every minute:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b9fde7bff8384bee9486486245d54331.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/126c947945b35afb1356aaee87fb952a.png)
 
  1. Click `D barista` to display the details panel.
  2. You need to delete this barista OpenShift service and the baristadeployment before you can deploy a Knative service by the same name.
@@ -95,7 +95,7 @@ Expect to see three running pods.
 
 ###  3.3 Access coffee-shop Web Application
 要确保`coffee-shop`应用程序工作，请在coffee-shop应用程序上单击Open URL，而不是`barista`应用程序:
-![在这里插入图片描述](https://img-blog.csdnimg.cn/241c0a34aaa54c5fb26a44b68564072f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/16d015b725afc9ef0a44af1079efb545.png)
 预计会出现一两行JSON输出。
 
  2. Add `/index.html` to the end of the URL to access the application.

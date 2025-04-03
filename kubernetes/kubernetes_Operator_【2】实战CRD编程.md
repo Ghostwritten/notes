@@ -14,7 +14,7 @@ coreos推出的简化复杂的有状态的应用管理框架。
 operator基于third Party Resources 扩展新的应用资源
 通过控制器来保证应用于预期状态
 operator 就是通过CRD实现定制化的Controller，它与k8s内建的controller遵循同样的运行模式。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200824114152438.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/834cec88f5074bea4c3d3f76cdd4bbea.png#pic_center)
 
 ## 5. etcd operator
 通过kubernetes API观察etcd集群的当前状态
@@ -25,7 +25,7 @@ operator 就是通过CRD实现定制化的Controller，它与k8s内建的control
 [部署安装](https://blog.csdn.net/xixihahalelehehe/article/details/107406198)
 
 ## 7. operator开发流程
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020082422251073.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/663d225a7be8eb309fb1b724899a1651.png#pic_center)
 开发准备
 
 ```bash
@@ -37,9 +37,9 @@ $ git checkout master
 $ make dep
 $ make install
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200824223859796.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3a0a7d14c48264be631c3a9a41239c7a.png#pic_center)
 k8s.io依赖包放到GOPATH/src目录下
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200824223947956.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200824232401138.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200824232814429.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/de63e47b4b9aaba705389ca92dfdae4e.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/435f857640d6f6922311d800087270a1.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a8de7f4ce80829a248265d9d269de043.png#pic_center)
 

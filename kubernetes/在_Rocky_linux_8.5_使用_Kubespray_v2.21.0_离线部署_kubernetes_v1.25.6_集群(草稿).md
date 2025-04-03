@@ -468,7 +468,7 @@ ansible -i inventory/local/inventory.ini all -m copy -a "src=/tmp/yum.repos.d/of
 
 $ ansible-playbook -i inventory/local/inventory.ini offline-repo.yml
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1f54f4277ca24fa0bb06e51b81616211.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1b8ef0d65133156e506f2f5c58dedf20.png)
 
 ```bash
 ansible -i inventory/local/inventory.ini all -m shell -a "yum install conntrack"
@@ -486,7 +486,7 @@ $ ansible-playbook -i inventory/local/inventory.ini --become --become-user=root 
 
 
 ###  报错1：Install packages requirements
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c8d96d04a3f54e05a885da3893fe284c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/475d2ba56709b6982d0bbe83f7eba5e6.png)
 
 
 

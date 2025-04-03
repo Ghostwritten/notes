@@ -119,7 +119,7 @@ https://github.com/gaia-pipeline/gaia
 
 
 三. 网络工具
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200726231606727.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f18616792a2e3800c6764481a451f940.png)
 
 
 四. 常用网站

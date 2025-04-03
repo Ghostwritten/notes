@@ -1,6 +1,6 @@
 #  Go 运算符总结
 
-![](https://img-blog.csdnimg.cn/f76e9eba9061424dad8784519d071f0c.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/465a954e749b56eed862a44f613d441f.png)
 
 
 

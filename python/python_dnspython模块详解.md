@@ -145,7 +145,7 @@ www.a.shifen.com.
 
  - 1）实现域名的解析，获取域名所有的A记录解析IP列表；
  - 2）对IP列表进行HTTP级别的探测
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200331124038458.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+ ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9f89bc9bb7b1e56dc659fc9c7a02cd10.png)
 #### 2.代码解析
 本示例第一步通过**dns.resolver.query（）方法获取业务域名A记录 信息，查询出所有IP地址列表，再使用httplib模块的request（）方法以 GET方式请求监控页面，监控业务所有服务的IP是否服务正常。**
 

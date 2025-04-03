@@ -4,7 +4,7 @@
 
 ----
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3d4a795045ee40c98ca47c90dbd2f7a9.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e015eb370a7b969c716cb6453e38589e.gif#pic_center)
 
 
 ## 1. 简介
@@ -16,7 +16,7 @@ diff是`svn、cvs、git`等版本控制工具不可或缺的一部分。
 $ diff <变动前的文件> <变动后的文件>
 ```
 ## 2. 如何读懂
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200507230417936.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/14ce50b7df95a0a0783ff947f78a6315.png)
 ## 3. 三种格式
 
 由于历史原因，diff有三种格式：

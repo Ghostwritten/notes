@@ -3,7 +3,7 @@
 一个例子：Pipeline： `min_bucket`
 在员工数最多的工种里，找出平均工资最低的工种
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305192836273.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/335c1e9bb0e86ce093b8e31a22fd9938.png)
 
 关键词：`buckets_path`
 ## 1. Pipeline
@@ -103,7 +103,7 @@ POST employees/_search
 }
 ```
 返回输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305193901319.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/00667d73a52b809db1452918ef13bc91.png)
 
 
 ### 2.3 平均工资最高的工作类型
@@ -135,7 +135,7 @@ POST employees/_search
 }
 ```
 返回输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305193939955.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/312b6a35d212a6a7481174c11e076086.png)
 
 
 ### 2.4 平均工资的平均工资
@@ -167,7 +167,7 @@ POST employees/_search
 }
 ```
 返回输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305194019178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/469b64c9fbe0991a8c581511c2c03240.png)
 
 
 ### 2.5 平均工资的统计分析
@@ -199,7 +199,7 @@ POST employees/_search
 }
 ```
 返回输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305194512653.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/013c964e87e087adfa317dbe62ffe7d3.png)
 
 ### 2.6 平均工资的百分位数
 
@@ -350,7 +350,7 @@ POST employees/_search
 }
 ```
 返回输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305194832714.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e076418999221f1cc6f187028181e0fa.png)
 
 
 ### 2.8 Cumulative_sum（累计求和）
@@ -383,7 +383,7 @@ POST employees/_search
 }
 ```
 返回输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305194938265.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e2982c93167246bd1101436a3ddd6480.png)
 
 ### 2.9 Moving Function（移动平均）
 
@@ -418,7 +418,7 @@ POST employees/_search
 ```
 
 返回输出：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305195013746.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/297d7bcfdb3f07df3535ec87f3b3fb2d.png)
 
 
 

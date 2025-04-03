@@ -1,7 +1,7 @@
 #  kubernetes 学习污点和容忍度
 tags: 策略
 
-![](https://img-blog.csdnimg.cn/67870a8edbca48059eb6784f36e26f0a.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/59a8f59d34c8f22f8dd3f4f7324a47fb.png)
 
 
 

@@ -2,7 +2,7 @@
 tags: flask
 <!--  catalog: ~flask 搭建 WEB 实战~ -->
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/338f90deee5342e69c60e781ba45ee7d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/056f3a82e9ee6081e428c552196a0dcd.png)
 
 
 
@@ -42,7 +42,7 @@ if __name__=='__main__':
 运行
 访问：http://127.0.0.1:8080
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/41a9185bf1d34288afa76cc8545d69d6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/216bc5460227775e2eb854e4060367db.png)
 ##  2. views.py配置首页
 app.py
 
@@ -71,13 +71,13 @@ def home():
     return "home page"
 ```
 运行app.py，此效果调用views.py的blueprint
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a64b78458f4b4c60bb8c7263461aa8c1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/49a2c36a06ffb8a4ccd32d32207aed31.png)
 
 ##  3. templates配置首页
 ```c
 mkdir templates/index.html
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cf8314d6f91b499589b58cccd0814f18.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a0d2a958293e5c10a3a8f812171c7bcb.png)
 
 自动创建html模板文件
 ```bash
@@ -124,7 +124,7 @@ def home():
 ```
 app.py不变
 运行：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cd59d606ccfb454589697385b978e9ba.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4f2d3b162461a10b119de95fcdbfc9c3.png)
 ## 4. 设置变量
 views.py
 
@@ -155,7 +155,7 @@ index.html
 </body>
 </html>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9639c33f1879420bb5699c58ce24dc56.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7c97a5f652245c6e2cdeddaf1f623e8f.png)
 
 ## 5. 接口变量
 
@@ -194,10 +194,10 @@ index.html
 ```
 运行：
 死的用户
-![在这里插入图片描述](https://img-blog.csdnimg.cn/73cc629311ca45abaa49fe48cbbd0a89.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3b5b9f415b4805171323bbf6c62d3fb3.png)
 动态
-![在这里插入图片描述](https://img-blog.csdnimg.cn/538274ffc11240ffa87f47bde65021df.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cb18487ce5014aca92e17c6006041d45.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1e406f21ab9f99d21aeb0cdd6e327256.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8cb24c63529eb53b11d99709d8f708b3.png)
 
 ##  6. 接口传参
 
@@ -217,9 +217,9 @@ def profile():
     name = args.get('name')
     return render_template("index.html",name=name)
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4ee1882d7d764744a76278251efc4854.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1c0942c62b164c4691ccd714804273f0.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/60d0a12b28a84dc2b22e7a9d68e076a3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c58f48e08295f5ee787067cca1222c89.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7acd2e5997a560aba08da598e5412816.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/80f01716bcbc4c9f2040d81e45a1a905.png)
 ##  7. 接口返回json
 views.py
 ```bash
@@ -243,7 +243,7 @@ def profile():
 def get_json():
     return jsonify({'name': 'liming','coolness': 10})
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f60fb13d5ab54a1d82214fd7968f6469.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/54eafc5a78085bf4b686f1ac93bef0d7.png)
 
 ##  8. 接口跳转
 views.py
@@ -278,16 +278,16 @@ def go_to_home():
     return redirect(url_for("views.get_json"))
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b64b4c6bf8fa4d1fb774adf21fc9ab99.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3cd0c2c838ea579b986e5e6a27d199d8.png)
 回车go-to-home跳转json
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7fb3d390ec4c4bd69751787699596f69.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6cafa8bcea9efd5754361aee768c1dc9.png)
 修改为views.py：
 
 ```bash
 return redirect(url_for("views.home"))
 ```
 go-to-home跳转home
-![在这里插入图片描述](https://img-blog.csdnimg.cn/98fe0484187a4766b27a59463c47e0b7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/74c61cf35bcf8f25b08538c844d24f93.png)
 
 ##  9. index.html添加javascript
 index.html
@@ -323,7 +323,7 @@ index.js写入console日志
 console.log("I am running");
 ```
 运行：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1f138fb21d884baebb794c50b0f99802.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f22d26cd5b0d19122da454f728441d0c.png)
 
 ##  10. 设置风格
 
@@ -377,7 +377,7 @@ def go_to_home():
 ```
 
 运行：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f382a6313ca243a0a4d70b6fa3823941.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fb651b3f39da044e1b67a678e7daafae.png)
 更多阅读：
 
  - [linux python web flask 编写 Hello World](https://blog.csdn.net/xixihahalelehehe/article/details/106111115)

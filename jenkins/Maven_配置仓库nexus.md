@@ -3,11 +3,11 @@
 
 ---
 ##   1. Maven仓库nexus 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5a7b38a1da7d40439033b46813786ad1.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bab45246aa6eb4626219d25300cf1d1b.png#pic_center)
 
 
 本地仓库
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5198e63f9712469a890620a93440c1ef.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/41a7db11d4fbf512bbbd16489460a021.png#pic_center)
 
 
 在setting.xml文件中，设置localRepository元素的值为你想连接的仓库地址即可
@@ -23,7 +23,7 @@
 
 ```
 远程仓库
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4ca9a3bde4f443b2a7e22eb8d2b13620.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/53154acc858287e439ef84ce2f9f9aeb.png#pic_center)
 
 
 需要解压`maven-model-builder-3.6.1.jar`文件
@@ -53,11 +53,11 @@ maven-model-builder-3.6.1\org\apache\maven\model\pom-4.0.0.xml
     </repository>
   </repositories>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1b8d591dbbef46c0b9b7168aa6e9dab2.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/88117dc76cd4d7f6f652ae1e61bf4569.png#pic_center)
 配置使用远程仓库
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f899c4610e764e268a186b995f59c9e3.png#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/32c4616d2fee4eb5b14aca30d8ed4760.png#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3173dd53d23c4502bb8da9a3b6843512.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1e7e5272a07989c2b3d969d15dd1833b.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b76b4956703b7cff6231a1c7b87e7afc.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f20319b9aec80b4f51f219f80a816914.png#pic_center)
 ## 2. maven中配置jboss仓库
 
 有两种方式，一种是在项目的`pom.xml`中`<repositories>`中添加,这是配置是针对具体的某一个项目,更多时候,我们想把`jboss`仓库作为所有项目的仓库,这就需要在`maven`的`setting.xml`中配置了.建议将`maven/conf/setting.xml`文件拷贝一份到你本地仓库的目录,作为用户配置文件。打开`setting.xml`文件,在里面添加一下内容：
@@ -127,7 +127,7 @@ maven-model-builder-3.6.1\org\apache\maven\model\pom-4.0.0.xml
 ##  3. 利用nexus搭建私有maven库
 
 ###  3.1 Nexus介绍
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f3c54e5838f6444c82c70eb52e4fb728.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5167d5b00bd0082d424aad2e6ce2839d.png#pic_center)
 
 ### 3.2 部署 nexus
 
@@ -272,20 +272,20 @@ EG：尝试使用其他用户来启动，发现都失败了，反正私服就是
 # sudo systemctl start nexus.service  启动服务
 ```
 	
-![在这里插入图片描述](https://img-blog.csdnimg.cn/71b566e784e949d6a09d9de4d89e868b.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ba0feb76bd276d967a9c2cbdaecd79a4.png#pic_center)
 
 
 这里提个醒，一定要注意java的版本，以及8081端口是否被占用等
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f468722204884c7482ee2cfa4f3efe62.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/df7d056ab8a37d95d89b9c96734bc0f3.png#pic_center)
 一切顺利的话，我们在浏览器输入`http://192.168.56.103:8081`（这里192.168.56.103是nexus安装的服务器ip），即可访问nexus客户端，默认的用户名和密码：`admin admin123`
  
 如下图：
 http://192.168.56.103:8081/
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6f3bc067e7ae4a94972c70545fc50b7a.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a4347924c5c5fd8d5cece2d5aaae3882.png#pic_center)
 
 配置maven项目使用nexus仓库
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7b0b25edd729467c9c0bcc26ae4abf4c.png#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/83db5ef1b54340c3839621353a6784af.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/526de266bf25fda309b144fbe2f0e14d.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/81305cb5a5089827890c8d72c06cad2b.png#pic_center)
 
 ```c
 # vim /usr/local/maven/conf/settings.xml
@@ -299,7 +299,7 @@ http://192.168.56.103:8081/
 </mirror>
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f2bbe73c21d344dfba0f3e1b8180f57c.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8186fba6636f2e60e076797ab7677843.png#pic_center)
 在<profiles></profiles>之间加入配置信息
 
 ```bash
@@ -334,7 +334,7 @@ http://192.168.56.103:8081/
          </pluginRepositories>
 </profile>
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/795f3d4f96594f7c93614b08be978da4.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ed664ce05bd5d4733b9d3a1a6a5117ae.png#pic_center)
 在`<settings></settings>`之间加入下面的配置，激活使用上面的配置信息
 注意：`Profile`名称要和上面的相对应
 
@@ -352,7 +352,7 @@ http://192.168.56.103:8081/
 ```
 
 当我们再次执行mvn命令的时候，下载构件的地址就变为我们的地府地址了
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9c7efb2b673349b3ac2407072ee9d37d.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/865e790c59b5444ff90ec69eb9019215.png#pic_center)
 私服也缓存了相对应的构件在本地仓库
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dc297acb28a744a79f86b4a27cb9c8af.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/22258995834a61d02634d24ae7de4cbb.png#pic_center)
 

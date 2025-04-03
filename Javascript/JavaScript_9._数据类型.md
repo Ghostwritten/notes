@@ -2,7 +2,7 @@
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0d05fff47bd34f1598800795ebf990c0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/871f90e61d7022be719ddef05f0ddad8.png)
 
 
 
@@ -10,7 +10,7 @@
 
 - 引用数据类型（对象类型）：**对象(Object)、数组(Array)、函数(Function)，还有两个特殊的对象：正则（RegExp）和日期（Date）**。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7f5b331b13a1454d986cf1b793998117.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f38dfb7906c43074fccab7b33efc1f0a.png)
 
 ##   1. JavaScript 拥有动态类型
 JavaScript 拥有动态类型。这意味着相同的变量可用作不同的类型：

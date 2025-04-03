@@ -11,7 +11,7 @@
 一定值后，创建新的
 ● Rollup Index：对数据进行处理后，重新写入，减少数据量
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316102315801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/da6696ebedb622b5ca4ccb00ac3ff529.png)
 ## 2. Open / Close Index API
 ● 索引关闭后，对集群的相关开销基本降低为 0
 ● 但是无法被读取和搜索
@@ -57,7 +57,7 @@ POST test/_count
 ● 完成后，可以删除源索引
 
 
-![## Shrink API](https://img-blog.csdnimg.cn/20210316102804715.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![## Shrink API](https://i-blog.csdnimg.cn/blog_migrate/fa9e9c16cbec32de058aa78efc3ee86a.png)
 • 分片必须只读
 • 所有的分片必须在同一个节点上
 • 集群健康状态为 Green
@@ -183,8 +183,8 @@ PUT my_target_index/_doc/1
 ```
 
 ## 5. Split API
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316103428309.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316103534528.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8683df00e48b7f3d15a2a087fe1e70f8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ee5cfaa00af6176a145a2bec9fd2b57f.png)
 
 ```bash
 # Split Index
@@ -252,7 +252,7 @@ PUT my_target_index/_doc/1
 ```
 
 ## 6. 一个时间序列索引的实际场景	
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316103734159.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5adb38263e44fd6659aabca4fc16ce0a.png)
 ## 7. Rollover API
 
 

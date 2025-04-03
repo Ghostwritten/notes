@@ -82,7 +82,7 @@ RAID0 有最优的读写性能，但不提供数据冗余的功能。而其他�
 
 我们可以把 Linux 存储系统的 I/O 栈，由上到下分为三个层次，分别是文件系统层、通用块层和设备层。这三个 I/O 层的关系如下图所示，这其实也是 Linux 存储系统的 I/O 栈全景图。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210712153623222.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d4275023fcef5f43ead96bb63c9994fa.png)
 根据这张 I/O 栈的全景图，我们可以更清楚地理解，存储系统 I/O 的工作原理。
 
  - **文件系统层**，包括虚拟文件系统和其他各种文件系统的具体实现。它为上层的应用程序，提供标准的文件访问接口；对下会通过通用块层，来存储和管理磁盘数据。
@@ -135,7 +135,7 @@ loop1            0.00    0.00      0.00      0.00     0.00     0.00   0.00   0.0
 sda              0.00    0.00      0.00      0.00     0.00     0.00   0.00   0.00    0.00    0.00   0.00     0.00     0.00   0.00   0.00 
 sdb              0.00    0.00      0.00      0.00     0.00     0.00   0.00   0.00    0.00    0.00   0.00     0.00     0.00   0.00   0.00 
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210713140236462.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c31e92836033eb8c3435f0fb98758817.png)
 这些指标中，你要注意：
 
  - %util  ，就是我们前面提到的磁盘 I/O 使用率；

@@ -1,6 +1,6 @@
 #  docker inspect --format 
 
-![](https://img-blog.csdnimg.cn/e3d2ada78d5845df8323f1e94e91332e.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/f6f8b72e16301c0dd5da87647c72eb5e.png)
 
 
 
@@ -8,7 +8,7 @@
 <font color=#FFA500 size=2 face="楷体">"大家好，我是幽灵代笔，这篇文章主要介绍`Docker inspect -f(--format)` 命令的实战应用，`docker --format`其实是提供了基于 Go模板 的日志格式化输出辅助功能，并提供了一些内置的增强函数，这篇文章原文来自博客园 `散尽浮华` 博主，再次基础上增添了命令场景应用案例。"</font>
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/46b28f683ef04ce3b416cb12e2d18a73.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2555e543e6a408a749964bcfb1765fac.png)
 
 ## 1. 什么是模板
 上图是大家熟悉的 MVC 框架（Model View Controller）： `Model（模型，通常在服务端）用于处理数据、View（视图，客户端代码）用于展现结果、Controller（控制器）`用于控制数据流，确保 M 和 V 的同步，即一旦 M 改变，V 也应该同步更新。

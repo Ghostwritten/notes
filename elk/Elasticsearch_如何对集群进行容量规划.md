@@ -96,7 +96,7 @@
 
  - 容易使用
  - 如果时间发生变化，需要重新部署代码
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312144848504.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d5e1600cdee348c15eae6e0ba136411d.png)
 
 ```c
 # POST /<logs-{now/d}/_search 
@@ -110,7 +110,7 @@ Time-based 索引
 
  - 创建索引，每天 / 每周 / 每月
  - 在索引的名字中增加时间信息
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210312145147827.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e4bc8dc8b00536f821c9370a8a469f67.png)
 ## 12. 集群扩容
 增加 Coordinating / Ingest Node
  - 解决 CPU 和 内存开销的问题

@@ -1042,7 +1042,7 @@ Context “default” created.
 [root@k8smaster ~]# kubectl config use-context default --kubeconfig=bootstrap.kubeconfig
 Switched to context “default”.
 ```
-`kubectl config` 设置别名
+### `kubectl config` 设置别名
 ```bash
 # Get current context
 alias krc='kubectl config current-context'
@@ -1077,6 +1077,19 @@ deployment.apps/metrics-server condition met
 打印 kubeadm 加入集群的命令
 ```bash
 kubectl token create --print-join-command
+```
+
+## kubectl top
+
+内存排名
+```bash
+kubectl top pod --sort-by=memory -A | head -n 10
+kubectl top pods -A | sort --reverse --key 4 --numeric | head -n 10
+```
+cpu排名
+
+```bash
+kubectl top pods -A | sort --reverse --key 3 --numeric | head -n 10
 ```
 
 ##  综合
@@ -1121,6 +1134,20 @@ kubectl run nginx-deploy --image=nginx:1.16 --replias=1 --record
 kubectl config set-context $(kubectl config current-context) --namespace=default
 ```
 
+# kubectl 简写
+
+```bash
+cat >> ~/.bashrc << EOF 
+alias kg='kubectl get'
+alias k='kubectl'
+alias kd='kubectl describe pods'
+alias ke='kubectl explain'
+alias ka='kubectl apply'
+EOF
+
+source ~/.bashrc
+
+```
 
 ✈<font color=	#FF4500 size=4 style="font-family:Courier New">更多阅读：</font>
 

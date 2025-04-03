@@ -32,20 +32,20 @@
 ## 4. 单节点集群
 副本无法分片，集群状态为黄色
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021030316014920.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7de140f83ec472e0846c6596d2f2ea2a.png)
 
 ## 5. 增加一个数据节点
 
  - 集群状态转为绿色
  - 集群具备故障转移能力
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303160231950.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2d3a0efa4c4e52c3a77ecb3a37a99d62.png)
 ## 6. 故障转移
  - 3 个节点共同组成。包含 1 个索引，索引设置了 3 个 Primary Shard 和 1 个 Replica 节点 1 是 Master 节点，节点意外出现故障。集群重新选举 Master 节点
  - Node3 上的 R0 提升成 P0 ，集群变黄
  - R0 R1 分配，集群变绿
  - 需要集群具备能力，必须将索引的副本分片设置为 1，否则一丢失节点，就会造成数据丢失
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303160602545.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ebb457053410b860559dbb200df81064.png)
 ## 7. 集群健康状态
 
  - Green : 健康状态，所有的主分片和副本分片都可用
@@ -79,8 +79,8 @@ GET /_cluster/health
  - 关闭 Node 1（Master）
  - 查看 Master Node 重新选举
  - 集群变黄，然后重新分配
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303161221407.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6f3a2fc49e31426f4129baf2406377e1.png)
 我杀掉第三个节点
 效果图：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210303161437296.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/31d35a2e0e7605a2592813e1dde52587.png)
 

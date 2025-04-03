@@ -1,6 +1,6 @@
 #  Go 包 os 文件操作
 
-![--------](https://img-blog.csdnimg.cn/8218d086d67e463685edece261f29cc8.png)
+![--------](https://i-blog.csdnimg.cn/blog_migrate/d432911b4c301d3292aadcbb6ac45123.png)
 
 
 

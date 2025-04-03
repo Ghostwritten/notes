@@ -108,7 +108,7 @@ CF包括AVERAGE、MAX、MIN、LAST，要求必须是建库时RRA中定义的类�
 ## 4. 实践
 ### 4.1 实现网卡流量图表绘制
 在日常运营工作当中，观察数据的变化趋势有利于了解我们的服务质量，比如在系统监控方面，网络流量趋势图直接展现了当前网络的吞吐。CPU、内存、磁盘空间利用率趋势则反映了服务器运行健康状态。通过这些数据图表管理员可以提前做好应急预案，对可能存在的风险点做好防范。本次实践通过rrdtool模块实现服务器网卡流量趋势图的绘制，即先通过create方法创建一个rrd数据库，再通过update方法实现数据的写入，最后可以通过graph方法实现图表的绘制，以及提供last、first、info、fetch方法的查询。图3-12为rrd创建到输出图表的过程。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200422004952321.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f093ae99b085d046584f241e522ccc07.png)
 #### 4.1.1 第一步： `create`方法创建rrd数据库
 采用`create`方法创建rrd数据库，参数指定了一个rrd文件、更新频率step、起始时间–start、数据源DS、数据源类型DST、数据周期定义RRA等。
 【/python/rrdtool/create.py】
@@ -219,7 +219,7 @@ rrdtool.graph( "Flow.png", "--start", "-1d","--vertical-label=Bytes/s",
  "GPRINT:outbits:MIN:MIN Out traffic\: %6.2lf %Sbps\\r")    #绘制出流量最小值
 ```
 以上代码将生成一个Flow.png文件，如图3-13所示。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210117182624995.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bb3bd87acb87c896f2a4ce0a6bcb08b3.png)
 
 
 查看rrd文件内容有利于观察数据的结构、更新等情况.

@@ -1,7 +1,7 @@
 #  JavaScript 29. let 和 const
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6030ac71dba140c191a689c76eb419c3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7343851fd6ace6dd25bba0202903f2bb.png)
 
 
 ##  前言
@@ -130,7 +130,7 @@ var x = 10;
 Internet Explorer 11 及更早版本的浏览器不支持 let 关键字。
 
 下表列出了各个浏览器支持 let 关键字的最低版本号。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bd6f56cd7ab14b5ea874291e307b1403.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/95507fa0c6bf3b6ea133fbc7c2499b55.png)
 ##  var 与 let 循环作用域
 使用 var 关键字：
 
@@ -311,7 +311,7 @@ var carName;
 ```
 输出
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d42e4660dda4416a8aa0ad70e2c34bbb.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/71527cb61db029820090fedbbd386f08.png)
 
 ##  const 关键字
 const 用于声明一个或多个常量，声明时必须进行初始化，且初始化后值不可再修改：
@@ -460,7 +460,7 @@ cars = ["Toyota", "Volvo", "Audi"];    // 错误
 Internet Explorer 10 及更早版本的浏览器不支持 const 关键字。
 
 下表列出了各个浏览器支持 const 关键字的最低版本号。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3a6a8e3016ee412291d6a7ae59cad143.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/88f4c1397ca5db60fa5e2a7efedabd41.png)
 ## var、let、const 重置变量
 使用 var 关键字声明的变量在任何地方都可以修改：
 

@@ -197,7 +197,7 @@ _book  book.json  gitbook  Github  index.html  README.md  search_index.json  SUM
 
 ## 3. 脚本发布
 新建 `Person Access Token`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/29f21037bfc44e37b55b3ef6e4d76ee7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6439407e4c04d6631d63232e7f9b5eca.png)
 复制token
 ```bash
 #!/bin/bash

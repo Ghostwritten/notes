@@ -3,7 +3,7 @@
 
 ---
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3dd355e4403b45a38456df33e1082cb7.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fc3162f4ca852a88a822af5c70543ae6.gif#pic_center)
 
 
 ##  1. theme-default 插件
@@ -31,9 +31,9 @@ npm i gitbook-plugin-theme-default
 ```
 
 ###  1.3 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6051abe6064e48eeb7a0cb5c69abd064.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e5c35ca716a1daa39e6b6d85c466e50c.png)
 
-![showLevel": true，可以显示层级数字](https://img-blog.csdnimg.cn/4d928cc828ce44cab2d394bee6365f05.png)
+![showLevel": true，可以显示层级数字](https://i-blog.csdnimg.cn/blog_migrate/aff76c511d7128e2b5b6d51ff425e0d7.png)
 
 ##  2. theme-comscore 插件
 theme-default 插件默认主题是黑白的,而[theme-comscore](https://www.npmjs.com/package/gitbook-plugin-theme-comscore)插件 主题是彩色的,即标题和正文颜色有所区分.
@@ -59,7 +59,7 @@ gitbook install
 ```
 
 ###  2.3 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/db1fc1c6889b4521863d62eec23b02ef.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bbfc41bbb51ba291189f92d19cbc61d4.png)
 
 ##  3. theme-api 插件
 使用 GitBook 发布 API 文档的主题。
@@ -134,8 +134,8 @@ $ go get github.com/GitbookIO/go-gitbook-api
 ```
 
 ### 3.4 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cfc2ef47ab5f4e8bb2b3a0b9776c95d3.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9cb010a0f2884bb1acded6ea2db71ed3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5b8f2769e7694c980a01b7b9b641c7b0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/41181bb4f9bb54ecc38139ec65249597.png)
 ###  3.5 布局
 该主题提供了两种布局来显示您的示例：一列或两列（拆分）。当"split": true时为拆分布局。
 ```bash
@@ -149,7 +149,7 @@ $ go get github.com/GitbookIO/go-gitbook-api
 }
 ```
 一栏布局
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6d14bd09993149bdbf20c1cf05864192.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2a1a722977d87e7088c6cfe84d995c2e.png)
 拆分布局
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f939649c2dc34a7e8426141a2501267e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/90f0b189d62470c7756fc4d1cad0a5df.png)
 

@@ -4,7 +4,7 @@
 ##  1. 性能指标
 描述 I/O 的性能指标有哪些？你可以先回想一下文件系统和磁盘 I/O 的原理，结合下面这张 Linux 系统的 I/O 栈图
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210720164948578.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5453c0b6b970893e4913074d2cf83bb4.png)
 学了这么久的 I/O 性能知识，一说起 I/O 指标，你应该首先会想到分类描述。我们要区分开文件系统和磁盘，分别用不同指标来描述它们的性能。
 
 ##  2. 文件系统 I/O 性能指标
@@ -32,7 +32,7 @@
 
 不过，这里有个大忌，就是把不同场景的 I/O 性能指标，直接进行分析对比。这是很常见的一个误区，你一定要避免。除了这些指标外，在前面 **Cache 和 Buffer** 原理的文章中，我曾多次提到，**缓冲区（Buffer）**也是要重点掌握的指标，它经常出现在内存和磁盘问题的分析中。文件系统和磁盘 I/O 的这些指标都很有用，需要我们熟练掌握，所以我总结成了一张图，帮你分类和记忆。你可以保存并打印出来，方便随时查看复习，也可以把它当成 I/O 性能分析的“指标筛选”清单使用。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210720165608618.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e1ecc009f3999cd3397f0da1e6bf998b.png)
 ##  4. 性能工具
 
 第一，在文件系统的原理中，我介绍了查看文件系统容量的工具 `df`。它既可以查看文件系统数据的空间容量，也可以查看索引节点的容量。至于文件系统缓存，我们通过 `/proc/meminfo`、`/proc/slabinfo` 以及 `slabtop` 等各种来源，观察页缓存、目录项缓存、索引节点缓存以及具体文件系统的缓存情况。
@@ -62,10 +62,10 @@
 
 根据不同的性能指标，对提供指标的性能工具进行分类和理解。这样，在实际排查性能问题时，你就可以清楚知道，什么工具可以提供你想要的指标，而不是毫无根据地挨个尝试，撞运气。虽然你不需要把所有相关的工具背下来，但如果能记清楚每个指标对应的工具特性，实际操作起来，一定能更高效、灵活。这里，我把提供 I/O 性能指标的工具做成了一个表格，方便你梳理关系和理解记忆。你可以把它保存并打印出来，随时记忆。当然，你也可以把它当成一个“指标工具”指南来使用。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210720170400271.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0f8c547dcf2d9034cb4369702155f7ae.png)
 **第二个维度，从工具出发。也就是当你已经安装了某个工具后，要知道这个工具能提供哪些指标。**
 同样的，我也将这些常用工具汇总成了一个表格，方便你区分和理解。自然，你也可以当成一个“工具指标”指南使用，需要时查表即可。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/img_convert/72d4c1ab345f0f5b93b81d708d047034.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2f42146156598bd382f2e17e10c00ea1.png)
 ## 6. 如何迅速分析 I/O 的性能瓶颈
 
 **想弄清楚性能指标的关联性，就要通晓每种性能指标的工作原理。**
@@ -81,5 +81,5 @@
 所以，为了缩小排查范围，我通常会先运行那几个支持指标较多的工具，如 iostat、vmstat、pidstat 等。然后再根据观察到的现象，结合系统和应用程序的原理，寻找下一步的分析方向。我把这个过程画成了一张图，你可以保存下来参考使用。
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/img_convert/d917ae1f1d0948a94f581749d472dafa.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ff47cd25c27484c79db8b82509e9a2bf.png)
 

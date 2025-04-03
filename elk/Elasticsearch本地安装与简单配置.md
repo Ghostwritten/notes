@@ -1,6 +1,6 @@
 
 ## 1.部署架构
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201030144739754.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8fd3fbb927f8faf076b4d7ca560addd9.png#pic_center)
 ## 2. 安装java
 安装java
 
@@ -170,12 +170,12 @@ $ nohup ./bin/kibana & > /dev/null 2>&1
 访问：`192.168.211.60：5601`
 可以导入样板数据
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020103016245988.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0ba21ad4919a5625475ae84f491c09be.png#pic_center)
 查看样板dashboard效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201030162657209.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/128af1a40b53e72523c98c59329e9459.png#pic_center)
 
 kibanna查用得工具：dev tools
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201030164354129.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8a5d68a09516c6d4a5b834f3d663b0ac.png#pic_center)
 
 ## 10. kibana安装插件
 格式
@@ -220,7 +220,7 @@ $ source /etc/profile
 
 ### 11.2  logstash下载安装
 [logstash 官方下载](https://www.elastic.co/cn/downloads/past-releases#logstash)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201031183608252.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0c551c687669c71f7b47bbef64018320.png#pic_center)
 解压
 
 ```bash
@@ -281,10 +281,10 @@ output {
 ```bash
 /logstash-7.2.0/bin/logstash -f /logstash-7.2.0/config/logstash.conf
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201031182736491.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b5d802b03f58a79cc6b64a6de1e88608.png#pic_center)
 
 kibanna查看movie 索引
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201031183317522.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e477726861ed8a6899fce210c34a5ebd.png#pic_center)
 #### 注意：
 **问题1**
 ```bash
@@ -293,8 +293,8 @@ OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in ve
 因jdk版本兼容问题，使用jdk 1.8.0没有，但使用过高的11版本有该问题，但该类问题并不影响正常使用logstash。
 
 **问题2：**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201031181845498.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201031181902345.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d8dc6809760146cf191eed48e4d9565c.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f216c4aa27b61fd3b2228ecf3f08b9c0.png#pic_center)
 解决方法：
 **要分清logstash的配置文件.xxx.conf与设置文件logstash.yml。**
 

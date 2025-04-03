@@ -2,7 +2,7 @@
 tags: prometheus
 <!-- catalog: ~config~ -->
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6fe0e6735eda4463997ab871cb423b07.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3299a04a01d97572cd240651f0da17c8.png)
 
 
 
@@ -14,7 +14,7 @@ tags: prometheus
 PromQL 的学习你将能够有效地构建、分享和理解 PromQL 查询，可以帮助我们从容应对报警规则、仪表盘可视化等需求，还能够避免一些在使用 PromQL 表达式的时候遇到的一些陷进。
 
 ## 3. 架构
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fd4cba17683f4a1da97b4c2dbf31511c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2c1d200cb0de6074db8f03d012e63a3e.png)
 当 `Prometheus` 从系统和服务收集指标数据时，它会把数据存储在内置的时序数据库（TSDB）中，要对收集到的数据进行任何处理，我们都可以使用 PromQL 从 TSDB 中读取数据，同时可以对所选的数据执行过滤、聚合以及其他转换操作。
 
 PromQL 的执行可以通过两种方式来触发：
@@ -28,11 +28,11 @@ PromQL 可以用于许多监控场景，下面简单介绍几个相关案例。
 ### 4.1 临时查询
 
 我们可以用 PromQL 来对收集的数据进行实时查询，这有助于我们去调试和诊断遇到的一些问题，我们一般也是直接使用内置的表达式查询界面来执行这类查询：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a0c9797ff8a341bb84ab4a096faa4a27.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2bf3cf83ad1813dd6ca5dabdcf337d0c.png)
 ### 4.2 仪表盘
 
 同样我们也可以基于 `PromQL` 查询来创建可视化的图形、表格等面板，当然一般我们都会使用 Grafana：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fcd6ae52c5b847b69bc59e1d88342813.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/df651a0db36728e6e184dea0965e750b.png)
 Grafana 原生支持 Prometheus 作为数据源，并内置支持了 PromQL 表达式的查询。
 
 ### 4.3 报警
@@ -64,14 +64,14 @@ groups:
 除了构成报警规则核心的 PromQL 表达式（上面 YAML 文件中的 expr 属性），报警规则还包含其他的一些元数据字段。
 
 然后，Prometheus 可以通过一个名为 Alertmanager 的组件来发送报警通知，可以配置一些接收器来接收这些报警，比如用钉钉来接收报警：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2da94635d339485b9f235e04ce0591d2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/98ff3192ccded44375c51ff1622e029b.png)
 ### 4.4 自动化
 
 此外我们还可以构建自动化流程，针对 PromQL 执行的查询结果来做出决策，比如 Kubernetes 中基于自定义指标的 HPA。
 
 ## 5. 数据模型
 在开始学习 PromQL 的知识之前，我们先重新来熟悉下 Prometheus 的数据模型
-![在这里插入图片描述](https://img-blog.csdnimg.cn/623cb1de04be484daa8a58186e1c35cb.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b5e3086bf2e0c1a8e573bc683413fe10.png)
 Prometheus 会将所有采集到的样本数据以时间序列的方式保存在**内存数据库**中，并且定时保存到硬盘上。时间序列是按照时间戳和值的序列顺序存放的，我们称之为**向量**(vector)，每条时间序列通过指标名称(metrics name)和一组标签集(labelset)命名。如下所示，可以将时间序列理解为一个以时间为 X 轴的数字矩阵：
 
 ```bash
@@ -140,7 +140,7 @@ node_cpu_seconds_total{cpu="cpu0",mode="idle"} 362812.7890625
 ```
 ### 6.1 Counter
 Counter (只增不减的计数器) 类型的指标其工作方式和计数器一样，**只增不减**，所以它对于存储诸如服务的 HTTP 请求数量或使用的 CPU 时间之类的信息非常有用。常见的监控指标，如 `http_requests_total`、`node_cpu_seconds_total` 都是 `Counter` 类型的监控指标。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8eea2c5f065048f887c738a8072ce589.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e8336aadb627b5fc6193baf6b8316eff.png)
 可能你会觉得一直增加的数据没什么用处，了解服务从开始有多少请求有什么价值吗？但是需要记住，每个指标都存储了时间戳的，所有你的 HTTP 请求数现在可能是 1000 万，但是 Prometheus 也会记录之前某个时间点的值，我们可以去查询过去一个小时内的请求数，当然更多的时候我们想要看到的是请求数增加或减少的速度有多快，因此通常情况对于 Counter 指标我们都是去查看变化率而不是本身的数字。PromQL 内置的聚合操作和函数可以让用户对这些数据进行进一步的分析，例如，通过 `rate()` 函数**获取 HTTP 请求的增长率**：
 
 ```bash
@@ -150,9 +150,9 @@ rate(http_requests_total[5m])
 ### 6.2 Gauge
 与 `Counter` 不同，`Gauge`（可增可减的仪表盘）类型的指标侧重于反应系统的当前状态，因此这类指标的样本数据可增可减。常见指标如 `node_memory_MemFree_bytes`（当前主机空闲的内存大小）、`node_memory_MemAvailable_bytes`（可用内存大小）都是 Gauge 类型的监控指标。由于 Gauge 指标仍然带有时间戳存储，所有我们可以看到随时间变化的值，通常可以直接把它们绘制出来，这样就可以看到值本身而不是变化率了，通过 Gauge 指标，用户可以直接查看系统的当前状态。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ed2b8503ad8d4ca9a681cd24962c6f4c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ec8effa1f20b01173427b4d9921fbbc2.png)
 这些简单的指标类型都只是为每个样本获取一个数字，但 Prometheus 的强大之处在于如何让你跟踪它们，比如我们绘制了两张图，一个是 **HTTP 请求的变化率**，另一个是**分配的 gauge 类型的实际内存**，直接从图上就可以看出这两个之间有一种关联性，当请求出现峰值的时候，内存的使用也会出现峰值，但是我们仔细观察也会发现在峰值过后，内存使用量并没有恢复到峰值前的水平，整体上它在逐渐增加，这表明很可能应用程序中存在内存泄露的问题，通过这些简单的指标就可以帮助我们找到这些可能存在的问题。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3050c9d40b73493fb97e679c7b4a52d2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/294fcbaf295bf8fe2e0607e88c5c3faa.png)
 对于 Gauge 类型的监控指标，通过 PromQL 内置函数 `delta()` 可以获取样本在一段时间范围内的变化情况。例如，计算 CPU 温度在两个小时内的差异：
 
 ```bash
@@ -175,7 +175,7 @@ predict_linear(node_filesystem_free_bytes[1h], 4 * 3600)
 
 摘要用于记录某些东西的平均大小，可能是计算所需的时间或处理的文件大小，摘要显示两个相关的信息：`count（事件发生的次数）`和 `sum（所有事件的总大小）`，如下图计算摘要指标可以返回次数为 3 和总和 15，也就意味着 3 次计算总共需要 15s 来处理，平均每次计算需要花费 5s。下一个样本的次数为 10，总和为 113，那么平均值为 11.3，因为两组指标都记录有时间戳，所以我们可以使用摘要来构建一个图表，显示平均值的变化率，比如图上的语句表示的是 5 分钟时间段内的平均速率。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fe0fd2246843488a8b67a57c0bd2d411.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8589faabd1a4d395bed10229ba5ac2d9.png)
 例如，指标 `prometheus_tsdb_wal_fsync_duration_seconds` 的指标类型为 `Summary`，它记录了 `Prometheus Server` 中 `wal_fsync` 的处理时间，通过访问 `Prometheus Server` 的 `/metrics` 地址，可以获取到以下监控样本数据：
 
 
@@ -195,7 +195,7 @@ prometheus_tsdb_wal_fsync_duration_seconds_count 216
 
 摘要非常有用，但是平均值会隐藏一些细节，上图中 10 与 113 的总和包含非常广的范围，如果我们想查看时间花在什么地方了，那么我们就需要直方图了。直方图以 bucket 桶的形式记录数据，所以我们可能有一个桶用于需要 1s 或更少的计算，另一个桶用于 5 秒或更少、10 秒或更少、20 秒或更少、60 秒或更少。该指标返回每个存储桶的计数，其中 3 个在 5 秒或更短的时间内完成，6 个在 10 秒或更短的时间内完成。Prometheus 中的直方图是累积的，因此所有 10 次计算都属于 60 秒或更少的时间段，而在这 10 次中，有 9 次的处理时间为 20 秒或更少，这显示了数据的分布。所以可以看到我们的大部分计算都在 10 秒以下，只有一个超过 20 秒，这对于计算百分位数很有用。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/766f0bfd94fc44279ebdd49e0398a444.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/106ae617f7593dc191b2a872e1d9ff2d.png)
 在 Prometheus Server 自身返回的样本数据中，我们也能找到类型为 Histogram 的监控指标`prometheus_tsdb_compaction_chunk_range_seconds_bucket`：
 
 ```bash
@@ -284,14 +284,14 @@ scrape_configs:
 192.168.31.46 demo-service-1
 192.168.31.46 demo-service-2
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1421278f05004c4086220029f70d37bb.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/973c3bb904ae3e86ae679d22a08a37ce.png)
 配置完成后直接启动 Prometheus 服务即可：
 
 ```bash
 ☸ ➜ ./prometheus
 ```
 启动后可以在 `/targets` 页面查看是否在正确抓取监控指标：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6b7bf1e4fa59445989a53cc579208ef3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1fa4d396e1f265c40dd1fcc2894043bd.png)
 该演示服务模拟了一些用于我们测试的监控指标，包括：
 
  - 暴露请求计数和响应时间（以 path、method 和响应状态码为标签 key）的 HTTP API 服务
@@ -363,18 +363,18 @@ PromQL 查询中对时间的引用只有相对引用，比如 `[5m]`，表示过
  - 一个评估的时间戳
 
 在查询的时候可以选择查询过去的数据，比如 `foo[1h]` 表示查询 `foo` 序列最近 1 个小时的数据，访问过去的数据，对于计算一段时间内的比率或平均数等聚合会非常有用。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5e013001ec2344d491096d8b15cdef54.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fe038a91fd3d538691b87c716fd6b1f1.png)
 在 `Prometheus` 的 WebUI 界面中表格视图中的查询就是瞬时查询，API 接口 `/api/v1/query?query=xxxx&time=xxxx` 中的 `query` 参数就是 PromQL 表达式，`time` 参数就是评估的时间戳。瞬时查询可以返回任何有效的 PromQL 表达式类型（字符串、标量、即时和范围向量）。
 
 下面来看一个瞬时查询的示例，看看它是如何进行评估工作的。比如 `http_requests_total` 在指定的时间戳来评估表达式，`http_requests_total` 是一个瞬时向量选择器，它可以选择该时间序列的最新样本，最新意味着查询最近 5 分钟的样本数据。
 
 如果我们在一个有最近样本的时间戳上运行此查询，结果将包含两个序列，每个序列都有一个样本：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/98768da6ed7945a087f955fca32ef04e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/98d05d0c56b7cfcfd886eddb5fd2e5d5.png)
 注意每个返回的样本输出时间戳不再是原始样本被采集的时间戳，而会被设置为评估的时间戳。
 
 如果在时间戳之前有一个 `>5m` 的间隙，这个时候如果我们执行相同的查询：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3a451aeebd74470b82d88b9c985069bb.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/63bafa7ddc077b014277ef51ec07252d.png)
 这个情况下查询的结果将返回为空，因为很显然在最近 5 分钟内没有能够匹配的样本。
 
 ####  8.3.2 区间查询
@@ -391,9 +391,9 @@ PromQL 查询中对时间的引用只有相对引用，比如 `[5m]`，表示过
 
 在 Prometheus 的 WebUI 界面中图形视图中的查询就是区间查询，API 接口 `/api/v1/query_range?query=xxx&start=xxxxxx&end=xxxx&step=14` 中的 `query` 参数就是 PromQL 表达式，`start` 为开始时间，`end` 为结束时间，`step` 为评估的步长。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1080b937a9d14355b668fadb731ac391.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0de8681a38dc5113e32317d2f07b52f2.png)
 比如把上面的 `http_requests_total` 表达式作为一个范围查询来进行评估，它的评估结果如下所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/97912557a0134416b6711b2261eea20d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0feea1924d4ed664b6e2253bce0d9780.png)
 注意每个评估步骤的行为与独立的瞬时查询完全一样，而且每个独立的瞬时查询都没有查询的总体范围的概念，在我们这个示例中最终的结果将是一个区间向量，其中包含两个选定序列在一定时间范围内的样本，但也将包含某些时间步长的序列数据的间隙。
 
 ## 9. 选择时间序列
@@ -406,7 +406,7 @@ demo_api_request_duration_seconds_count
 ```
 
 该查询将返回许多具有相同指标名称的序列，但有不同的标签组合 `instance`、`job`、`method`、`path` 和 `status` 等。输出结果如下所示：  
-![在这里插入图片描述](https://img-blog.csdnimg.cn/243f269b59a24ac59977eac455df90f7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f5d5a52dfb185934ffb19188b95cdbd9.png)
 ###  9.2 根据标签过滤
 如果我们只查询 `demo_api_request_duration_seconds_count` 中具有 `method="GET"` 标签的那些指标序列，则可以在指标名称后用大括号加上这个过滤条件：
 
@@ -423,7 +423,7 @@ demo_api_request_duration_seconds_count{instance="demo-service-0:10000",method="
 ```
 
 上面将得到 demo 任务下面 `demo-service-0:10000` 这个实例且 `method="GET"` 的指标序列数据：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5863ab01167342b3af53b2cef6970eaf.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9829b23224d3ffaecfa50223c1c9a999.png)
 需要注意的是组合使用多个匹配条件的时候，是过滤所有条件都满足的时间序列。
 
 除了相等匹配之外，Prometheus 还支持其他几种匹配器类型：
@@ -439,7 +439,7 @@ demo_api_request_duration_seconds_count{instance="demo-service-0:10000",method="
 ```
 
 该查询会得到一些具有不同指标名称的序列：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9aec23b9f9c149f4908423e909e850f9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2cf322b9ed093e19139336ba33f9b837.png)
 
 > 注意： Prometheus 中的正则表达式总是针对完整的字符串而不是部分字符串匹配。因此，在匹配任何以 /api 开通的路径时，不需要以 ^ 开头，但需要在结尾处添加 .*，这样可以匹配 path="/api" 这样的序列。
 
@@ -460,7 +460,7 @@ demo_memory_usage_bytes{type="free"}[5m]
 ```
 
 将得到如下所示的查询结果：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9dcdada64b404c8e8b4a4539e92e4c8b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/629857cd734a0614b912ec7dd78124e2.png)
 可以使用的有效的时间单位为：
 
  - ms -毫秒
@@ -480,7 +480,7 @@ demo_memory_usage_bytes{type="free"} offset 1h
 ```
 
 这个时候查询的值则是一个小时之前的数据：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/734be5b3244d453a9e3690bfe28c1ed9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/137525313939976188125a809ca3743d.png)
 练习：
 
 1.构建一个查询，选择所有时间序列。
@@ -509,7 +509,7 @@ demo_memory_usage_bytes{type="free"}[1m] offset 1h
 demo_api_request_duration_seconds_count{job="demo"}
 ```
 可以得到下图所示的图形：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3ff3556ef98848f8be7926a1ed6363f4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/14132801d3c9c99c1a847e7faabfc6a6.png)
 可以看到所有的都是不断增长的，一般来说我们更想要知道的是 Counter 指标的变化率，PromQL 提供了不同的函数来计算变化率。
 
 ###  10.1 rate
@@ -523,17 +523,17 @@ rate(demo_api_request_duration_seconds_count[5m])
 ```
 
 可以得到如下所示的图形：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a2952f6573ed413f9238118a8d04a097.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e0151faa94c3905db76cf700a1364091.png)
 现在绘制的图形看起来显然更加有意义了，进行 rate 计算的时候是选择指定时间范围下的第一和最后一个样本进行计算，下图是表示瞬时计算的计算方式：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f3f7c2d9ad204bcb8b91ef1e00c2795e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/494cc4635a2801e3b6aeeb683e782d0d.png)
 往往我们需要的是绘制一个图形，那么就需要进行区间查询，指定一个时间范围内进行多次计算，将结果串联起来形成一个图形：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2ae84bc4b3d941c7970efb96596570e3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f106d48f81a982b278033b8aa6321ffb.png)
 对于 `rate()` 和相关函数有几个需要说明的：
 
 - 当被抓取指标进的程重启时，Counter 指标可能会重置为 0，但 `rate()` 函数会自动处理这个问题，它会假设 Counter 指标的值只要是减少了就认为是被重置了，然后它可以调整后续的样本，例如，如果时间序列的值为[5,10,4,6]，则将其视为[5,10,14,16]。
 - 变化率是从指定的时间范围下包含的样本进行计算的，需要注意的是这个时间窗口的边界并不一定就是一个样本数据，可能会不完全对齐，所以，即使对于每次都是增加整数的 Counter，也可能计算结果是非整数。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ae9dc5ba704d40d19036b6d2a5369981.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ebc15a8496c4ce4265fe47a4e1058fcd.png)
 另外我们需要注意当把 `rate()` 与一个聚合运算符（例如 `sum()`）或一个随时间聚合的函数（任何以 `_over_time` 结尾的函数）结合起来使用时，总是先取用 `rate()` 函数，然后再进行聚合，否则，当你的目标重新启动时，`rate()` 函数无法检测到 `Counter` 的重置。
 
 > 注意：`rate()` 函数需要在指定窗口下至少有两个样本才能计算输出。一般来说，比较好的做法是选择范围窗口大小至少是抓取间隔的`4`倍，这样即使在遇到窗口对齐或抓取故障时也有可以使用的样本进行计算，例如，对于 1 分钟的抓取间隔，你可以使用 4 分钟的 `Rate` 计算，但是通常将其四舍五入为 5 分钟。所以如果使用 `query_range` 区间查询，例如在绘图中，那么范围应该至少是步长的大小，否则会丢失一些数据。
@@ -548,12 +548,12 @@ rate(demo_api_request_duration_seconds_count[5m])
 
 `irate` 函数是通过区间向量中最后两个样本数据来计算区间向量的增长速率。这种方式可以避免在时间窗口范围内的长尾问题，并且体现出更好的灵敏度，通过 `irate` 函数绘制的图标能够更好的反应样本数据的瞬时变化状态。那既然是使用最后两个点计算，那为什么还要指定类似于 `[1m]` 的时间范围呢？这个 `[1m]` 不是用来计算的，irate 在计算的时候会最多向前在 `[1m]` 范围内找点，如果超过 [1m] 没有找到数据点，这个点的计算就放弃了。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/41b3d167aaae49b1b259546cf7be9042.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7844ea6ac58f5856b0b8abacaa63ae9f.png)
 由于 `rate()` 提供了更平滑的结果，因此在长期趋势分析或者告警中更推荐使用 `rate` 函数，因为当速率只出现一个短暂的峰值时，不应该触发该报警。
 
 使用 `irate()` 函数上面的表达式会出现一些短暂下降的图形：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/15b3ec5716f34ba4b1fc564c0f76f151.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/51fac684b68cbd0aff138e3a6d792e7b.png)
 除了计算每秒速率，你还可以使用 `increase()` 函数查询指定时间范围内的总增量，它基本上相当于**速率乘以时间范围选择器中的秒数**：
 
 
@@ -565,14 +565,14 @@ increase(demo_api_request_duration_seconds_count{job="demo"}[1h])
 
 `deriv()` 函数可以计算一个区间向量中各个时间序列二阶导数，使用简单线性回归，`deriv(v range-vector)` 的参数是一个区间向量，返回一个瞬时向量，这个函数一般只用在 `Gauge` 类型的时间序列上。例如，要计算在 15 分钟的窗口下，每秒钟磁盘使用量上升或下降了多少：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/659d53d84a044a9181ecdce079045d3e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4e5336eda309aedbdf0609b428aa18a7.png)
 还有另外一个 `predict_linear()` 函数可以**预测一个 Gauge 类型的指标在未来指定一段时间内的值**，例如我们可以根据过去 15 分钟的变化情况，来预测一个小时后的磁盘使用量是多少，可以用如下所示的表达式来查询：
 
 
 ```bash
 predict_linear(demo_disk_usage_bytes{job="demo"}[15m], 3600)
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/36cd6acc93b544de8571024f3a54fa8d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3e146f5cacf0c0c0e8b27a51e036a09c.png)
 这个函数可以用于报警，告诉我们磁盘是否会在几个小时候内用完。
 
 ## 11. 聚合
@@ -586,7 +586,7 @@ sum(rate(demo_api_request_duration_seconds_count{job="demo"}[5m]))
 ```
 
 可以得到如下所示的结果：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4dea16e2df5c4d4c843e0c70bbe33d55.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/26f232a63d3cc63357d20665c891fc5f.png)
 但是我们可以看到绘制出来的图形没有保留任何标签维度，一般来说可能我们希望保留一些维度，例如，我们可能更希望计算每个 `instance` 和 `path` 的变化率，但并不关心单个 `method` 或者 `status` 的结果，这个时候我们可以在 `sum()` 聚合器中添加一个 `without()` 的修饰符：
 
 
@@ -603,7 +603,7 @@ sum by(instance, path, job) (rate(demo_api_request_duration_seconds_count{job="d
 
 现在得到的 `sum` 结果是就是按照 `instance`、`path`、`job` 来进行分组去聚合的了：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b1ff9ac17b2e41b58fa02763424a5f66.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a028eb907326ba1e01410c6e1f02d7c7.png)
 这里的分组概念和 SQL 语句中的分组去聚合就非常类似了。
 
 除了 `sum()` 之外，`Prometheus` 还支持下面的这些聚合器：
@@ -656,19 +656,19 @@ count by (job, __name__) ({__name__ != ""})
 
 例如，我们查询 `demo` 实例中使用的 `goroutine` 的原始数量，可以使用查询语句 `go_goroutines{job="demo"}`，这会产生一些尖锐的峰值图：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/37812dcc1990412e9d0acc3e7962552e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e184b2383109f2d2b49e18f4c6ef4e61.png)
 我们可以通过对图中的每一个点来计算 10 分钟内的 `goroutines` 数量进行平均来使图形更加平滑：
 ```bash
 avg_over_time(go_goroutines{job="demo"}[10m])
 ```
 这个查询结果生成的图表看起来就平滑很多了：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/76b5e6cc32b947c595be63421866f48f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bdd38b23f4f034cfd5551f11ae603d48.png)
 比如要**查询 1 小时内内存的使用率**则可以用下面的查询语句：
 
 ```bash
 100 * (1 - ((avg_over_time(node_memory_MemFree_bytes[1h]) + avg_over_time(node_memory_Cached_bytes[1h]) + avg_over_time(node_memory_Buffers_bytes[1h])) / avg_over_time(node_memory_MemTotal_bytes[1h])))
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c45541c753944b28b7d6854bd3019bc4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d13d026b3dc9568e963193905b546528.png)
 ### 11.3 子查询 [max_over_time()]
 上面所有的 `_over_time()` 函数都需要一个范围向量作为输入，通常情况下只能由一个区间向量选择器来产生，比如 `my_metric[5m]`。但是如果现在我们想使用例如 `max_over_time()` 函数来找出过去一天中 `demo` 服务的最大请求率应该怎么办呢？
 
@@ -750,7 +750,7 @@ Prometheus 的查询语言支持基本的逻辑运算和算术运算。
 ```
 
 可以得到如下所示的结果：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/871f537665b94c1c99fca1985c29306c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e9f1ea59d713fc7dd5c0cbab90c7569f.png)
 图形中返回的是一个值为 10 的标量（scalar）类型的数据。
 
 二元运算同样适用于向量和标量之间，例如我们可以将一个字节数除以两次 1024 来转换为 MiB，如下查询语句：
@@ -761,7 +761,7 @@ demo_batch_last_run_processed_bytes{job="demo"} / 1024 / 1024
 
 最后计算的结果就是 `MiB` 单位的了：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e401cc82005c43daab47542df008549a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e7b6c749b2c060f59c93e9558a858e5f.png)
 
 另外 PromQL 的一个强大功能就是可以让我们在向量与向量之间进行二元运算。
 
@@ -773,11 +773,11 @@ rate(demo_api_request_duration_seconds_sum{job="demo"}[5m])
 rate(demo_api_request_duration_seconds_count{job="demo"}[5m])
 ```
 PromQL 会通过相同的标签集自动匹配操作符左边和右边的元素，并将二元运算应用到它们身上。由于上面两个指标的标签集合都是一致的，所有可以得到相同标签集的平均请求延迟结果：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c448c825d12241cf841fa472312f2d7f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/28ca64ed93da88e47c36aae165a722da.png)
 ###  12.2 向量匹配
 #### 12.2.1  一对一
 上面的示例其实就是一对一的向量匹配，但是一对一向量匹配也有两种情况，就是是否按照所有标签匹配进行计算，下图是匹配所有标签的情况：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7813be7b3d654590ab085104338092c2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/43f5ae9ac18a63ffafc2c67c8321dec9.png)
 图中我们两个指标 `foo` 和 `bar`，分别生成了 3 个序列：
 
 ```bash
@@ -795,7 +795,7 @@ bar{color="red", size="small"} 5
 
 上面例子中其中不匹配的标签主要是因为第二个 size 标签不一致造成的，那么如果我们在计算的时候忽略掉这个标签可以吗？如下图所示：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/76b7d90d003249cd8f040e2ec8fa9f3c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/20549c8010c0dc6719cc82440a861959.png)
 同样针对上面的两个指标，我们在进行计算的时候可以使用 `on` 或者 `ignoring` 修饰符来指定用于匹配的标签进行计算，由于示例中两边的标签都具有 color 标签，所以在进行计算的时候我们可以基于该标签（on (color)）或者忽略其他的标签（ignoring (size)）进行计算，这样得到的结果就是所以匹配的标签序列相加的结果，要注意结果中的标签也是匹配的标签。
 
 #### 12.2.2 一对多与多对一 [by, on, group_left]
@@ -804,11 +804,11 @@ bar{color="red", size="small"} 5
 多对一和一对多两种匹配模式指的是一侧的每一个向量元素可以与多侧的多个元素匹配的情况，在这种情况下，必须使用 `group` 修饰符：`group_left` 或者 `group_right` 来确定哪一个向量具有更高的基数（充当多的角色）。多对一和一对多两种模式一定是出现在操作符两侧表达式返回的向量标签不一致的情况，因此同样需要使用 ignoring 和 on 修饰符来排除或者限定匹配的标签列表。
 
 例如 `demo_num_cpus` 指标告诉我们每个实例的 CPU 核心数量，只有 `instance` 和 `job` 这两个标签维度。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e69ead419c4a403e926814041c7a6ab2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e25c5b883287aae3fbbcaaf16f679429.png)
 
 而 `demo_cpu_usage_seconds_total` 指标则多了一个 `mode` 标签的维度，将每个 `mode` 模式（`idle`、`system`、`user`）的 CPU 使用情况分开进行了统计。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0613a2e6667040b0a32044adbb94386e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7793fa0747609d7520c68559c3c4dc49.png)
 如果要计算每个模式的 CPU 使用量除以核心数，我们需要告诉除法运算符按照 `demo_cpu_usage_seconds_total` 指标上额外的 `mode` 标签维度对结果进行分组，我们可以使用 `group_left`（表示左边的向量具有更高的基数）修饰符来实现。同时，我们还需要通过 `on()` 修饰符明确将所考虑的标签集减少到需要匹配的标签列表：
 
 
@@ -819,7 +819,7 @@ demo_num_cpus{job="demo"}
 ```
 
 上面的表达式可以正常得到结果：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/66af8271b0eb46ac96a7566408557d67.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ccd9b97b55b367a6e544f226d4233ce5.png)
 除了 `on()` 之外，还可以使用相反的 `ignoring()` 修饰符，可以用来将一些标签维度从二元运算操作匹配中忽略掉，如果在操作符的右侧有额外的维度，则应该使用 group_right（表示右边的向量具有更高的基数）修饰符。
 
 比如上面的查询语句同样可以用 ignoring 关键字来完成：
@@ -877,7 +877,7 @@ rate(demo_api_request_duration_seconds_count{status="500",job="demo"}[15m]) > 0.
 ```
 
 这个查询只会将错误率大于 20% 的数据过滤出来。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7ecefec9fd7743aea2544c9c5d65cf7f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/50da9a836a80429a4af657f893bebe92.png)
 
 > 注意：由于在图形中的每个步长都是完全独立评估表达式的，因此根据每个步骤的过滤条件，某些比率会出现或消失（因此存在间隙）。一般来说，二元过滤运算符在图形中并不常见，大多数在报警条件中出现，用来表示阈值。
 
@@ -895,7 +895,7 @@ rate(demo_api_request_duration_seconds_count{status="500",job="demo"}[15m]) > 0.
 
 不过需要注意的是我们必须忽略匹配中的 `status` 标签，因为在左边一直有这个标签，而右边没有这个标签。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fb4aafb5416f4b63bfddaa9ff134bd17.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/91aa2c78fc5f1fa33317b856426e2f64.png)
 比如我们还可以计算 demo 演示服务实例在一小时内的预测磁盘使用量，但要过滤只有那些预测磁盘已满的实例。
 
 
@@ -922,7 +922,7 @@ rate(demo_api_request_duration_seconds_count{job="demo"}[5m]) > bool 0.2
 
 我们可以看到输入序列的结果为 0 或 1，把数字条件转换为了布尔输出值。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/017e5e4e394244eba704628faf31e93f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/829eddacd315da41e8c3cb2673542167.png)
 **练习：**
 
 1.构建一个查询，显示使用少于 20MB 内存的目标（process_resident_memory_bytes 指标）。
@@ -946,7 +946,7 @@ rate(prometheus_http_requests_total[5m]) == 0
  - `or`（集合并集）：对序列进行并集计算
  - `unless`（除非）：比如要对磁盘空间不足进行告警，除非它是只读文件系统。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/61232d9c90fd47aea16e909d627c2029.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/69c28781274b82b5c52212e281578c1f.png)
 
 与算术和过滤二元运算符类似，这些集合运算符会尝试根据相同的标签集在左侧和右侧之间查找来匹配序列，除非你提供 `on()` 或 `ignoring()` 修饰符来指定应该如何找到匹配。
 
@@ -961,7 +961,7 @@ rate(prometheus_http_requests_total[5m]) == 0
 and
   rate(demo_api_request_duration_seconds_count{job="demo"}[5m]) > 1
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/94b7ab36483447c48a8eb403fc2d88b8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bd8448609cfd30cff9202d8be7f2fe31.png)
 有的时候我们也需要对两组时间序列进行合并操作，而不是交集，这个时候我们可以使用 or 集合运算符，产生的结果是运算符左侧的序列，加上来自右侧但左侧没有匹配标签集的时间序列。比如我们要列出所有低于 10 或者高于 30 的请求率，则可以用下面的表达式来查询：
 
 
@@ -970,7 +970,7 @@ and
 or
   rate(demo_api_request_duration_seconds_count{job="demo"}[5m]) > 30
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0630a114944b4b13a9c52b24f7963727.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7b8319f592cecbe5fca514cbd4f85cc1.png)
 们可以看到在图中使用值过滤器和集合操作会导致时间序列在图中有断点现象，这取决于他们在图中的时间间隔下是否能够与过滤器进行匹配，所以一般情况下，我们建议只在告警规则中使用这种过滤操作。
 
 还有一个 `unless` 操作符，它只会保留左边的时间序列，如果右边不存在相等的标签集合的话。
@@ -993,14 +993,14 @@ unless
 ```bash
 sort_desc(sum by(path) (rate(demo_api_request_duration_seconds_count{job="demo"}[5m])))
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a7372b2e99304260b2c063385556ab59.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b507072be8de997694304e87a84eb8fb.png)
 有的时候我们并不是对所有的时间序列感兴趣，只对最大或最小的几个序列感兴趣，我们可以使用 `topk()` 和 `bottomk()` 这两个运算符来操作，可以返回 K 个最大或最小的序列，比如只显示每个 `path` 和 `method` 的前三的请求率，我们可以使用下面的语句来查询。
 
 
 ```bash
 topk(3, sum by(path, method) (rate(demo_api_request_duration_seconds_count{job="demo"}[5m])))
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/398ad7c5808f4b46943de3acd9e92e51.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/46020e8c4403b80906b82eb124b7d526.png)
 **练习：**
 
 
@@ -1019,11 +1019,11 @@ bottomk(3, sum by(method, path, status) (rate(demo_api_request_duration_seconds_
 在这一节中，我们将学习直方图指标，了解如何根据这些指标来计算**分位数**。Prometheus 中的直方图指标允许一个服务记录一系列数值的分布。直方图通常用于**跟踪请求的延迟或响应大小**等指标值，当然理论上它是可以跟踪任何根据某种分布而产生波动数值的大小。Prometheus 直方图是在客户端对数据进行的采样，它们使用的一些可配置的（例如延迟）bucket 桶对观察到的值进行计数，然后将这些 bucket 作为单独的时间序列暴露出来。
 
 下图是一个非累积直方图的例子：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9ecd5956e6244144981605d297c38aed.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d77de5fbab7666a28d90c8543ed473b3.png)
 在 Prometheus 内部，直方图被实现为一组时间序列，每个序列代表指定**桶的计数**（例如10ms以下的请求数、25ms以下的请求数、50ms以下的请求数等）。 在 Prometheus 中每个 bucket 桶的计数器是累加的，这意味着较大值的桶也包括所有低数值的桶的计数。在作为直方图一部分的每个时间序列上，相应的桶由特殊的 le 标签表示。le 代表的是小于或等于。
 
 与上面相同的直方图在 Prometheus 中的累积直方图如下所示：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9bd22bf6b9a547fc95fcddd2dcb5b710.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ac9ae5764a660f0265915738b95ea578.png)
 可以看到在 Prometheus 中直方图的计数是累计的，这是很奇怪的，因为通常情况下非累积的直方图更容易理解。Prometheus 为什么要这么做呢？想象一下，如果直方图指标中加入了额外的标签，或者划分了更多的 bucket，那么样本数据的分析就会变得越来越复杂，如果直方图是累积的，在抓取指标时就可以根据需要丢弃某些 `bucket`，这样可以在降低 Prometheus 维护成本的同时，还可以粗略计算样本值的**分位数**。通过这种方法，用户不需要修改应用代码，便可以动态减少抓取到的样本数量。另外直方图还提供了 `_sum` 指标和 `_count` 指标，所以即使你丢弃了所有的 bucket，仍然可以通过这两个指标值来计算请求的平均响应时间。通过累积直方图的方式，还可以很轻松地计算某个 bucket 的样本数占所有样本数的比例。
 
 我们在演示的 `demo` 服务中暴露了一个直方图指标 `demo_api_request_duration_seconds_bucket`，用于跟踪 API 请求时长的分布，由于这个直方图为每个跟踪的维度导出了 `26` 个 bucket，因此这个指标有很多时间序列。我们可以先来看下来自**一个服务实例的一个请求维度组合的直方图**，查询语句如下所示：
@@ -1034,7 +1034,7 @@ demo_api_request_duration_seconds_bucket{instance="demo-service-0:10000", method
 ```
 
 正常我们可以看到 26 个序列，每个序列代表一个 bucket，由 le 标签标识：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/83b03cff14aa4139aed378238e6214a8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8957888541b885baaf9b7eb11c70f142.png)
 直方图可以帮助我们了解这样的问题，比如"**我有多少个请求超过了100ms的时间？**" (当然需要直方图中配置了一个以 100ms 为边界的桶)，又比如"**我99%的请求是在多少延迟下完成的？**"，这类数值被称为**百分位**数或**分位数**。在 Prometheus 中这两个术语几乎是可以通用，只是百分位数指定在 0-100 范围内，而分位数表示在 0 和 1 之间，所以第 99 个百分位数相当于目标分位数 0.99。
 
 如果你的直方图桶粒度足够小，那么我们可以使用 `histogram_quantile(φ scalar, b instant-vector)` 函数用于计算历史数据指标一段时间内的分位数。该函数将目标分位数 `(0 ≤ φ ≤ 1)` 和直方图指标作为输入，就是大家平时讲的 pxx，`p50` 就是中位数，参数 `b` 一定是包含 `le` 这个标签的瞬时向量，不包含就无从计算分位数了，但是计算的分位数是一个预估值，并不完全准确，因为这个函数是假定每个区间内的样本分布是线性分布来计算结果值的，预估的准确度取决于 `bucket` 区间划分的粒度，粒度越大，准确度越低。
@@ -1057,7 +1057,7 @@ histogram_quantile(0.9, rate(demo_api_request_duration_seconds_bucket{job="demo"
 ```
 
 这个查询就好很多了。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d74a3cdd29f54e81bb5de8a6655e25f9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ad91af479a4c052e9a3b6c45916d09bb.png)
 
 这个查询会显示每个维度（`job`、`instance`、`path`、`method` 和 `status`）的第 90 个百分点，但是我们可能对单独的这些维度并不感兴趣，想把他们中的一些指标聚合起来，这个时候我们可以在查询的时候使用 Prometheus 的 `sum` 运算符与 `histogram_quantile()` 函数结合起来，**计算出聚合的百分位**，假设在我们想要聚合的维度之间，直方图桶的配置方式相同（桶的数量相同，上限相同），**我们可以将不同维度之间具有相同 le 标签值的桶加在一起，得到一个聚合直方图**。然后，我们可以使用该聚合直方图作为 `histogram_quantile()` 函数的输入。
 
@@ -1065,7 +1065,7 @@ histogram_quantile(0.9, rate(demo_api_request_duration_seconds_bucket{job="demo"
 
 下面的查询计算了第 90 个百分位数的延迟，但只按 job、instance 和 path 维度进行聚合结果：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2dedd277401f44ec810c6217106c1e71.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c3e41c5647db698886843f43f01147d9.png)
  **练习：**
 
 1.构建一个查询，计算在 `0.0001` 秒内完成的 `demo` 服务 API 请求的总百分比，与过去 5 分钟内所有请求总数的平均值。
@@ -1104,10 +1104,10 @@ histogram_quantile(0.5, sum by(status, method, le) (rate(demo_api_request_durati
 ```bash
 rate(demo_items_shipped_total{instance="demo-service-0:10000"}[1m])
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/075f0713a9bd437eb5ff776e9ecd8389.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a1b6013a55ac5cf9b723d347c7dc654e.png)
 该服务还暴露了一个 0 或 1 的布尔指标，告诉我们现在是否是假期：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b8f83da0c0244e9e8f4c69d4e01b22b5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c349e4c58745543d4b2719b2ff2dac82.png)
 将假期与发货商品率进行比较，注意到节假日时它会减少!我们可以尝试将当前的发货速度与 7"天"（7 * 5 分钟）前的速度进行比较，看看是否有什么不正常的情况。
 
 
@@ -1119,7 +1119,7 @@ rate(demo_items_shipped_total{instance="demo-service-0:10000"}[1m])
 
 通常情况下，该比率约为 1，但当当天或前一天是假期时，我们得到的比率比正常情况下要略低或高。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/684fbd39184b4f79bec8f9843a011095.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7ca3cc502ff4aafbd9a2383e6b446a40.png)
 但是，如果原因只是假期，我们想忽略这个较低或较高的比率。我们可以在过去或现在是假期的时候过滤掉这个比率，方法是附加一个 `unless` 集合操作符。
 
 
@@ -1156,7 +1156,7 @@ unless
 
 这样我们就可以过滤掉当前时间有假期或过去有假期的结果。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7c3d6a0ab24f46bd91a1f65d89c9aeda.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/12f2a622d3996f42228f3c9620d5a87e.png)
  **练习：**
 
 1.构建一个查询，计算每个 `path` 路径的总请求率和 `35` 分钟前的差异。
@@ -1177,11 +1177,11 @@ up{job="demo"}
 ```
 
 正常三个演示服务实例都处于正常状态，所以应该都为1。如果我们将第一个实例停掉，重新查询则第一个实例结果为0：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fa44d25f4fda424abb727426db0d5db5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a8fa9102d25db19f8f3e3c7ddd69db23.png)
 
 如果只希望显示 down 掉的实例，可以通过过滤0值来获取：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5eb6d9ca03904d8fadc12d5bb2afd369.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ddc7777f11baea7f9a32344b549d3934.png)
 一般情况下这种类型的查询会用于指标抓取健康状态报警。
 
 > 注意：因为 `count()` 是一个聚合运算符，它期望有一组维度的时间序列作为其输入，并且可以根据 `by` 或 `without` 子句将输出序列分组。任何输出组只能基于现有的输入序列，如果根本没有输入序列，就不会产生输出。
@@ -1193,7 +1193,7 @@ up{job="demo"}
 
 例如，查询语句 `absent(up{job="demo"})` 将得到一个空的输出结果，如果测试一个没有被抓取的 job 是否存在的时候，将得到样本值1。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7add0454764d48d1ba224901bd28295e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f294958bb3144282c4085d1e25f888aa.png)
 这可以帮助我们检测序列是否存在的情况。此外还有一个 `absent()` 的变种，叫做 `absent_over_time()`，它接受一个区间向量，告诉你在该输入向量的整个时间范围内是否有样本。
 
 **练习：**

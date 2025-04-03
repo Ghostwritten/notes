@@ -14,7 +14,7 @@
 
 ## 第 3 步
 现在转到`Preferences >Package Settings > Terminus > Command Palette`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/24d86a4e08984d0e9913543091438dbd.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6802107f501128fd1949836150738643.png)
 代码粘贴至文件
 
 ```bash
@@ -36,7 +36,7 @@
 
 ##  第 4 步
 现在转到`Preferences >Package Settings > Terminus > Key Bindings`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/223336e39a6040f5aac549fdb6681e10.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fc5cd36d46c65431f5295c9700506b99.png)
 将此代码粘贴到 `Default sublime Keymap` 并保存：
 
 ```bash
@@ -57,7 +57,7 @@
 
 ##  第 5 步
 每当您想使用终端时，请按`alt+1`并在终端中关闭终端类型 `exit` 并按 `Enter`。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/814402466df74de1b1739eadf39c2c5d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0107daeec1fdd849bc31488f815004fc.png)
 ✈<font color=	#FF4500 size=4 style="font-family:Courier New">推荐阅读：</font>
 
  - [How to Use Terminal in Sublime Text Editor ?](https://www.geeksforgeeks.org/how-to-use-terminal-in-sublime-text-editor/)

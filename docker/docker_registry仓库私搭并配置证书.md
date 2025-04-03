@@ -1,5 +1,5 @@
 #  docker  registry 私搭
-![](https://img-blog.csdnimg.cn/23e8b95a92f3473484ef883c8caaa900.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/6d09a7922cf3f34f450e3af51b5423e8.png)
 
 
 
@@ -18,6 +18,13 @@
 默认情况下，[Docker  engine](https://docs.docker.com/engine/)与 [Docker Hub](https://hub.docker.com/) 交互，Docker 的公共仓库实例。但是，可以在本地运行开源 [Docker registry](https://docs.docker.com/registry/) 。
 
 接下来，我们开始在本地环境部署 `docker-registry`。
+
+## 预备条件
+
+- [设置 docker 存储目录](https://blog.csdn.net/xixihahalelehehe/article/details/134633286)
+- [安装 docker](https://blog.csdn.net/xixihahalelehehe/article/details/104293170)
+
+
 ## 4. 简单部署私有仓库
 
 **初级**：快速部署简单的私有 registry sever
@@ -42,10 +49,10 @@ $ systemctl restart docker
 $ docker pull registry
 ```
 ### 4.2 创建私有仓库
+- `REGISTRY_COMPATIBILITY_SCHEMA1_ENABLED=true`：可以通过接口API进行调用，查看、删除、拉取、推送。
 
 ```bash
-$ docker run -d --restart=always --name registry -p 5000:5000 -v /storage/registry:/var/lib/registry registry：2.3.0
-$ docker ps
+docker run -tid --restart=always --name registry -p 5000:5000 -e REGISTRY_COMPATIBILITY_SCHEMA1_ENABLED=true -v /storage/registry:/var/lib/registry registry:latest
 ```
 
 ### 4.3 测试镜像推入私有仓库
@@ -75,6 +82,18 @@ $ vim /usr/lib/systemd/system/docker.service
 .........
 ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry 192.168.211.15:5000 
 ...........
+#或者创建
+$ vim /etc/docker/daemon.json 
+{
+  "live-restore": true,
+  "dns": ["8.8.8.8"],
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size":  "100m",
+    "max-file": "5"
+   },
+  "insecure-registries": ["192.168.211.15:5000"]
+}
 
 #重启docker并启动registry
 $ systemctl restart docker
@@ -195,6 +214,7 @@ docker run -d \
     -v /var/lib/registry:/var/lib/registry \
     -v /auth:/auth \
     -v /certs:/certs \
+    -e REGISTRY_COMPATIBILITY_SCHEMA1_ENABLED=true \
     -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/server-crt.pem \
     -e REGISTRY_HTTP_TLS_KEY=/certs/server-key.pem \
     -e REGISTRY_AUTH=htpasswd \
@@ -588,65 +608,35 @@ acl:
 ```bash
  
 dockerauth:
- 
   image: cesanta/docker_auth:stable
- 
   container_name: docker_auth
- 
   ports:
- 
     - "5001:5001"
- 
   volumes:
- 
     - /data/volumes/auth_server/config:/config:ro
- 
     - /var/log/docker_auth:/logs
- 
     - /data/volumes/auth_server/ssl:/ssl
- 
   command: /config/auth_config.yml
- 
   restart: always
- 
- 
- 
+  
 registry:
- 
   image: registry:2
- 
   container_name: docker_registry
- 
-  ports:
- 
-    - "5000:5000"
- 
-  volumes:
- 
+  ports: 
+    - "5000:5000" 
+  volumes: 
     - /data/volumes/auth_server/ssl:/ssl
- 
     - /data/volumes/docker_registry/data:/var/lib/registry
- 
   restart: always
- 
   environment:
- 
     - REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY=/var/lib/registry
- 
     - REGISTRY_AUTH=token
- 
     - REGISTRY_AUTH_TOKEN_REALM=https://192.168.211.15:5001/auth
- 
     - REGISTRY_AUTH_TOKEN_SERVICE="Docker registry"
- 
     - REGISTRY_AUTH_TOKEN_ISSUER="Auth Service"
- 
     - REGISTRY_AUTH_TOKEN_ROOTCERTBUNDLE=/ssl/server.pem
- 
     - REGISTRY_HTTP_TLS_CERTIFICATE=/ssl/server.pem
- 
     - REGISTRY_HTTP_TLS_KEY=/ssl/server.key
- 
 ```
 执行：
 
@@ -673,9 +663,13 @@ Login Succeeded
 
 
 ##  8. docker registry API 使用
-![在这里插入图片描述](https://img-blog.csdnimg.cn/95b75ac05fdf40a090d74f29694e5a80.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/aebd46b54ab7ca8bec10bf9a7f474262.png)
 
 ```bash
+#无用户密码
+$ curl -k  http://192.168.21.183:5000/v2/registry/tags/list
+{"name":"registry","tags":["latest"]}
+
 #查看API是否可用，返回200 OK代表可用
 curl -I -X GET localhost:5000/v2/
 
@@ -695,7 +689,15 @@ $ curl  -k -u "testuser:testpassword" https://192.168.211.15:5000/v2/centos/tags
 {"name":"centos","tags":["latest"]}
 
 #获取一个镜像的manifest，<name>代表镜像名，reference可以使用tag或digest
-curl -I -X GET localhost:5000/v2/<name>/manifests/<reference>
+$ curl-I  -X GET 192.168.21.183:5000/v2/registry/manifests/latest
+HTTP/1.1 200 OK
+Content-Length: 7859
+Content-Type: application/vnd.docker.distribution.manifest.v1+prettyjws
+Docker-Content-Digest: sha256:d2e81c877d28a0e2bbe1e8c0e9b4608739404d14cfa0c28c6d8703a818b7bdc5
+Docker-Distribution-Api-Version: registry/2.0
+Etag: "sha256:d2e81c877d28a0e2bbe1e8c0e9b4608739404d14cfa0c28c6d8703a818b7bdc5"
+X-Content-Type-Options: nosniff
+Date: Mon, 26 Feb 2024 06:41:26 GMT
 
 #查看一个镜像是否存在
 curl -I -X HEAD localhost:5000/v2/<name>/manifests/<reference>
@@ -729,7 +731,7 @@ docker exec -it -u root registry bin/registry garbage-collect --delete-untagged 
 ```
 
 ## 10. 镜像存储结构 
-![](https://img-blog.csdnimg.cn/2749496090974fe79151579fdc186cd9.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/94b4d7e5977d538d5cdc4950756fcb7a.png)
 目录分为两层：`blobs`和`repositories`。
 
 - `blobs`：镜像所有内容的实际存储，包括了镜像层和镜像元信息`manifest`；

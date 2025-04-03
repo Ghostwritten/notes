@@ -226,5 +226,5 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/k3s.service to 
 NAME         STATUS   ROLES                  AGE   VERSION
 k3s-master   Ready    control-plane,master   34s   v1.23.6+k3s1
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7a9210c447514273bd508b5b13a2006e.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1e5e31da344940a39d79a002f7866515.gif#pic_center)
 

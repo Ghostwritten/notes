@@ -1,7 +1,7 @@
 视频：[Kubernetes 安全专家(CKS)](https://space.bilibili.com/400114617/channel/collectiondetail?sid=666460)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b240f3186993451a88a7437dcb1d22fb.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ea9393cbaf4e03acae777be9d610a092.png#pic_center)
 
 
 ##  1. CIS benchmarking
@@ -39,8 +39,8 @@ kubectl log xxxx
 ```
 
 ##  2. ingress-nginx with TLS
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2d53388372ad4785a4bc637fb3377a9d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/38e2dced251d4d48b4e2ebaeac350f8f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/37565d34ee420a9f8b8a89dbb804f9f8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1f80a3ac2a7ada05a4886246d54e0540.png)
 
 ### 2.1 create svc & pod
 ```bash
@@ -128,7 +128,7 @@ curl --cacert tls.crt https://learnwithgvr.com
 
 
 ## 3. network policy
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9323e1d8caeb4f68b307bc47ce4189a8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a849b268f65a60064a62c5cd1118547b.png)
 
  - 限制控制平面端口（6443、2379、2380、10250、10251、10252）
  - 限制工作节点端口（10250、30000-32767）
@@ -1130,7 +1130,7 @@ users:
 
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1aa958b037084d7f8d6cdbdaa5cb9120.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cd29dd73a63d43bc4f8bbe4b4a5c5570.png)
 
 ```bash
 curl -k  https://192.168.211.40:6443
@@ -1179,9 +1179,9 @@ users:
 
 
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0bd281732c594b06b0cdbeb500bab56f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/76153b3653ddb933d8ada15ef66a483a.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/450f669ff7c44ca390cb058ae0561ec0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/070ca623a5d6ffe39656bfe237cabcd1.png)
 
 ```bash
 $ kubectl config current-context
@@ -1486,9 +1486,9 @@ namespace:  3 bytes
 
 ```
 token 一致。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5e05e4310e7441ef8c1876908f8b3e6d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8eb6a60cb396468687dee45d8210a058.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/df0a1b1501b4420c8e065e644c5902ab.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c658cd9303a0df51923b0f0050d8f64b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c8acf8e0298d76167a1b3ec3b2b2f691.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0a806479aad1fbc6d6cc2fc389391d3b.png)
 ### 7.1 创建服务账户：test-dev 
 ```bash
 $ k create sa test-svc -n dev --dry-run=client -o yaml > svc.yaml
@@ -1560,8 +1560,8 @@ kubectl create rolebinding cluster-test-binding -n dev --role=test-role --servic
 
 
 ##  8. Minimize host OS footprint Reduce Attack Surface
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7b34ac31836a46c5b3f55155b1392e41.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3974710d12564ba3bed664bf6b1ec952.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/925d3d1deeb2c6fcfe66a6ab498f040a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fd4e1084a538245368e093d89d133ef2.png)
 
 ```bash
  k explain Pod.spec.hostIPC
@@ -1586,7 +1586,7 @@ DESCRIPTION:
 ```
 
 ###  8.1 limit node access to users
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c556d1bfb427451f9a27a1fbeb6411f6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0bba55d800c083d8d282fef166a8ef23.png)
 
 ```bash
 userdel user1
@@ -1597,7 +1597,7 @@ useradd -d /opt/sam -s /bin/bash -G admin -u 2328 sam
 
 
 ###  8.2 remove obsolete/unnecessary software
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e7915a13842d4a26944cab297aaf91d5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/90fd85250334bbc82b49a1bb9483e555.png)
 
 ```bash
 systemctl list-units --type service
@@ -1607,7 +1607,7 @@ apt remove squid
 ```
 
 ###  8.3 ssh hardening
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ba39144816734a7f9c4c072d1a786aa1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/03c68771d4c83dc34b583dfb55f84123.png)
 
 ```bash
 ssh-keygen -t rsa
@@ -1621,7 +1621,7 @@ systemctl restart sshd
 
 
 ###  8.4 ldentify & fix open ports
-![在这里插入图片描述](https://img-blog.csdnimg.cn/59b00622dbc440ec83b656730f81f516.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/81fd25aab261b5a5a474c1594bf9f189.png)
 
 ```bash
 apt list --installed
@@ -1638,7 +1638,7 @@ netstat -natulp |grep -i light
 ```
 
 ###  8.5 Restrict Obsolete kernel modules
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ac860a464bc54edfaced5ffa2acf75ce.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/98066022faff3ecde9694a9763895c9a.png)
 
 ```bash
 lsmod
@@ -1650,7 +1650,7 @@ shutdown -r now
 
 
 ###  8.6 restrict allowed hostPath using PSP
-![在这里插入图片描述](https://img-blog.csdnimg.cn/401e76df0b95495eaf7fbbd7cb0a723a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6fff3fb16a5cd22b9b6ad9981fd918f9.png)
 
 ### 8.7 UFW
 
@@ -1670,9 +1670,9 @@ ufw delete 5
 
 
 ##  9. Restrict Container Access with AppArmor
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a9f117d739f546f3b110886f5521dcc1.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/18a77ea208ca4b26a48e8b62fd1113fd.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3f6cb2a216294de4af8130621784b965.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8f46e845891d21bd58c86b26d282e4a6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8b58be98d8b6480f837aa85079d01a9a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/575b19cff289ba119b61bb533fe8918c.png)
 
  - Kernel Security Module to granular access control for programs on Host OS
  - AppArmor Profile - Set of Rules, to be enabled in nodes
@@ -1772,27 +1772,27 @@ apparmor module is loaded.
 ```
 
 ##  10. Restrict a Container's Syscalls with seccomp
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fa7524504c204904a9b3658706c8b157.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/451e81fb522941a2ab8295f2456341e3.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6b454ca667684d268c5f86b78db3eb55.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9c6f589eeb9a4216a4c17713c1ab8822.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/61329487bfad4f0bab10af82a846a56a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/533d5c4c0789496c201f84e26aea9cb7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/06e8a304217ca531f462632d333c2577.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e681a5c2b0715be292dfed984cb5ea86.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fcf5e8037a4b26b48da36d3339498c25.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/91b77255cd527f9059d948da04ed5c51.png)
 k create deployment web --image nginx --replicas 1
 k get po
 k 
 
 
 ## 11. Pod Security Policies (PodSecurityPolicy)
- ![](https://img-blog.csdnimg.cn/48181d8e5eee465e97585a86c2a4b4d4.png)
+ ![](https://i-blog.csdnimg.cn/blog_migrate/b3d3e7d838530084c25ba47e915315d2.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fbf1ee13e4e048a0bcd84b016eb6007a.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/741d04cda7334e94a713c0df904ae6f4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cee5c0df8620fe14e986099605af15de.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f50f56baa200c6e45727a9beb599464b.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/004f698387c14eccb12d17e9a573e7e4.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/64c4d20af1714a2986f4ce7206324655.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/19933086571243708393a005081c33e4.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/986cc87c645345f796d3e8a5865067e5.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0556c8d4645642aaa21cdef116486032.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/add0332200d697f0cc4bf9a067a9bd4d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/012a8b696a434df0180df0d31299f420.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/79c8945917a168a718fcac283eb30f6f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3edc040a96903ac38e325a59544aaa07.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/91d7e82825b210b95b5e447de0558fe3.png)
 
 ```bash
 k create ns dev
@@ -1884,17 +1884,17 @@ k create rolebinding dev-binding -n dev --role=dev-cr --serviceaccount=dev:dev-s
 ```
 
 ##  12. Open Policy Agent - OPA Gatekeeper
-![在这里插入图片描述](https://img-blog.csdnimg.cn/30d22f0841a444e091cd1fc233ab452f.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1fd718c6e0f54775b35593f8dd328ab3.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/38c5657df432424b94873c054ec9cfc0.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5f05eb253f83463e8a53a744584b336e.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cf0d475cf3a947bd8842f904c291061d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f0d3843464da4445aaf9bb5fb4987671.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c2db0d6dd6d74545b18611e42b4e557b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ec5c22c6245160fd68e5300a802c6f18.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c5c78a06fdb0891a146bc734f1772b6a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/404f40ec83e77969798828043792b89a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/41b89f99632ec5c6ac2493aeebf89d80.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5ba458dd46ad8ac1d6ad0a983e142107.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/829bbbff917bcbff3880ff2a55b73f02.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9df195014aa4d29f0ff68cb2f287eee1.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/11a68239f2054539bbc1d4042b5f125b.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/80335c5625f94377918e92e269e72f46.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/687ba6f3e2dd4a67b84a11fae7b586c3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/74197be695916fab2af032bdb28fa31d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f2ed4b676e7c9a4e2296ac936f472f60.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d30e5835dc200ef3661a37866254542f.png)
 
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/open-policy-agent/gatekeeper/release-3.7/deploy/gatekeeper.yaml
@@ -2278,10 +2278,10 @@ test                   Active   47s
 ```
 
 ##  13. Security Context for a Pod or Container
-![在这里插入图片描述](https://img-blog.csdnimg.cn/78c225b1e9e044adaf5c79142b540093.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b20738f2ad37468aa4ef6d7d86b4d411.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/69e8d084a33559d31733dc3b44cc9871.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/48450432b20f47bfc5f530ec75277585.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/591069f783d64e2e80ca1e2951356177.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7f65a1bde6afdc2daea184fe2d261b93.png)
 
 ```bash
 apiVersion: v1
@@ -2317,14 +2317,14 @@ uid=1000 gid=3000 groups=2000
 ```
 
 ##  14.  Manage Kubernetes secrets
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f65cdd08e8d04d46bb675daadb52d7ac.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0953ef3976ad8990d8139a3f87839a09.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4e62aebf95204f5d9b10b9825d505b69.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6d919f01b35a4bf9b33ba196a3aeaf64.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/90ed140a93f648b697001f6c89465bd9.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/94552cfde4f84614bd4e66cd3cb41efe.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/578d79eb90824abfa0a5ebf690aeaebe.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1926be344c2e4f33a9fa15f5e4a7df49.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7ee0860e58fd2d3d218a86e9180e383c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9ddd50efa9c60d09fc21e8f1e234f099.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/92751f2b68e3e0d0bff70f439511d8a3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d65c938b024b0a0c6767be01818e716f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bb2f9ec54454c88039b2997e8129d898.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7e97b0daf76354ac906163e8d28d1bec.png)
 
 
  - Opaque(Generic) secrets -
@@ -2404,8 +2404,8 @@ Ref: [https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-ku
 
 
 ##  15. Container  Runtime Sandboxes gVisor runsc kata containers
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d526247c0b7441e0ac8a624b7adcc0ae.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/635c18128b894cc58ee1a15f47769f8f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/35b092c3150bf0881dda829afe7603c7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/095309b348b51aec16d6d3d0db6cb794.png)
 
 
 
@@ -2482,16 +2482,16 @@ EOF
 ```
 
 ##  16. mTLS实现pod到pod加密
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c1810796a3a744df98c37a4a1efff554.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/70076e56c2424a3cbdacd0323eca2e40.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d22cbc0e28f84532a0627668ad8f5f97.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7fdf0f7830904b4099f1644abf0b2743.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b3893dc819c9426eb345c45253e7294d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ff20fbc47093482ea5e5d4958c75329c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/16741d5bfa25f45105a1f684719eea78.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e8940d141f04a00f7f8d7054fc3c9e7b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c350c35f11addb3aa9f039f442182a14.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/61a2e3722233dd48a8c9da19269d28f6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6ab1e0632ee0ec5197d12bc5d2122569.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8f7ed105a63339183fe08e83373656e3.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6bd28f3d144540c09dbabd53986b38ab.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3203a05b210046288a46183549963ffe.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/821cba15ab1344078a44ea05c491db17.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/35ec026bd58431e8d1cdb14c3d77130d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b875e9068db253872a7f394f46ba6ad3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d528aed5013bf34de828633ab9092dd3.png)
 
 
 
@@ -2545,7 +2545,7 @@ kubectl get csr
 
 ##  17. 最小化基本镜像(images)占用空间
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f803861163c94474a263740b8ff6ecfb.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/45a27ed84b3bfa9448b43a0673c58310.png)
 使用Slim/Minimal图像而不是基本图像
 使用 Docker多阶段构建实现精益
 使用无发行版：
@@ -2559,17 +2559,17 @@ Distroless 镜像非常小
 
 ## 18. 允许Registries使用ImagePolicyWebhook
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d6fa17391c104f86a5231eb677ac0df8.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9ebaa96921a84a5cb21d28b1cda0ccef.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c194e75cf52e4311aa058ed1cf708bb0.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c8df3fd50c2d48e5b6b74724e1c027e8.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/56eaca32a95245a498eea3feea537ab3.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/57aff4d8c5a749c28cafd7bfaa1ddd9c.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d2071db2013843ce992787ab2a9181ab.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3983be4e6d7249eab5b9c10ad4c8571f.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a1462abc23e14a1faa758aa553e6e913.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/244b4eb88d7944a7a97781c4d8623a0b.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0aa1b155a52943b48bfa29af53775da1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ebf62f43aabb6755ac511c78b7f1752f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/09b071f5e89fd329a5c20693c8b45578.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5c1cb9e692d065cdd558c6fb5e9b5c4f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/979169afd9acad8622698c7da8891f4a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a2d3d2b2f50afd363ac9fc21da37f160.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3b5e7b6b36d936d214dbc341201f862c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/414bd3e6a83bb6fdc25ef58f41fa17a3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9994a815a0a779d55776ad81a92f6f6a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/597fae28239b336e2004f5f6949debc4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8dc787ebc064b2229422bf8ca2bc9a40.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/71de3077688358fc88513e9ab3118655.png)
 ###  18.1 using ImagePolicyWebhook Admission Controller
 
 ```bash
@@ -2757,25 +2757,25 @@ spec:
 参考：[https ://computingforgeeks.com/how-to-install-cloudflare-cfssl-on-linux-macos/](https://computingforgeeks.com/how-to-install-cloudflare-cfssl-on-linux-macos/)
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/562de71e6daf4a17b0bda0cae1ee2c4f.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/642ae4e77f8d4250a67efd0e79e946fa.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/776401a17a8c4cb24707890a9a2f953f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/449d4f4695788e4d9111581a720892f8.png)
 ##  19. 对镜像(images)进行签名和验证
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5363cb6954a042bda03709bb13847417.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5d9456701804432b94efba4c05193ae8.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b5b2f3db3c7a44caa5df57e4b4faf1c8.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f7af8c9b23224492a97f889613ccbc50.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2bb82f96e04c4f129b1d53a5ea080e4e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6216c1296694c2be02090dd810c78198.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fb62dc7d2aa07dd75ba69603e1f596a3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/da5cdd5134b938cdf246f068b2ad1be0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/27cdfd394a5ea94194f6ae4e73e7be5c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1c4db3dd769da9e84ef351888aa68999.png)
 
 ##  20. Static analysis using Kubesec, Kube-score, KubeLinter, Checkov & KubeHunter
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/813d35094e4946f38fbed4461484122d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ac2716e9762d45ddb860a35b79527a5c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3ea2ff5f99802876590427df63a8abf1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/10c1474cb5fd52cfa9ee72bc6a6fa9a1.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/56caf1f643f745fa8d3ca978d69ba4a2.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dbbfd5ee18ef45d0bbd9b493e20ba94f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/819798c357b735084f6c17559aa67480.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0cd18216222ab6e8ad875c4f2c815f0f.png)
 
 ###  20.1 kubesec
-![在这里插入图片描述](https://img-blog.csdnimg.cn/97c6d5d2bab844498dcb01e79e011cb7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ecb825d6b5521967da7fe750345c9e30.png)
 
  - [Docker container image](https://hub.docker.com/r/kubesec/kubesec/tags) at `docker.io/kubesec/kubesec:v2`
  - Linux/MacOS/Win binary ([get the latest release](https://github.com/controlplaneio/kubesec/releases))
@@ -2838,30 +2838,30 @@ brew install kube-score
 kube-score score pod.yaml
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/573cfeb58b85401bb295e685db09029e.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2dfe6f33a18745f985afc85ba09553a1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4f73810a7af8b88c35126c227cc609ad.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5c32ae37cf74dfafb497142df5e8b442.png)
 
 ###  20.3 checkov
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e54d6589cf8644e5acb27f4067f19940.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c46da22f820d96e2d5705b7d0eeeaee5.png)
 
 ###  20.4 kube-linter
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d190dabfaf6c49e1a01cf6b337d93d69.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d0225a58e12c26e5523b4034f769a1c9.png)
 
 ### 20.5 kube-hunter
-![在这里插入图片描述](https://img-blog.csdnimg.cn/aa71681650c84075acd51be0377528a6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3d814e66c87265c1d18c48b3b37af7c3.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8d83b21d8099491e86b128b46475beb2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1fbbbe47fdc591aec334bb9b1e961f99.png)
 
 
 ##  21. 扫描镜像查找已知漏洞
 ### 21.1 Trivy 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6fa517ce98134944ae624c0b262bac63.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/63861593037a4563972b004bc5690637.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a76b8636c9aa7c99b59c34fd3ad58892.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/029f07bcd101d8306afc422646a0e6df.png)
 ###  21.2 Anchore CLI
-![在这里插入图片描述](https://img-blog.csdnimg.cn/99cceae39bae4e3c8cb73a607a4e07f4.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/49f32b3c7ca04d699a58740966d60bb6.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7972ccb0f12b47a197c9fc21770f2236.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8109444aeb8d412381e7f50fe19697ce.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/71bf534f67b7daee639c909512255457.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/409e9e8eab5f6c4797fdf4069d0861e0.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/97210a31f121133edb0750f504e2a2a8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4ae0a9ba7da85016255ee5ee006bf47b.png)
 
 Anchore CLI in mac using Docker Compose command
 ```bash
@@ -2904,14 +2904,14 @@ Ref: [https://docs.anchore.com/3.0/docs/installation/](https://docs.anchore.com/
 
 
 ##  22. 用Falco & Slack警报检测系统调用等文件恶意活动
-![在这里插入图片描述](https://img-blog.csdnimg.cn/610d9e0ba47d43198b4f06f0165f3f10.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/386aeaa0e5ed4f3e8e6170c28429577c.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f3a317e0eec549f0894f35b9f593d9a1.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ef2bfbf5250c48ee8251418941195ead.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/22e57dc3b77e4c7eba0ed330a3aa4b66.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b99f99bb2a034c8bb7b92772e4e4c300.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7671598b72bba0649a38d0ab6aac6035.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/795b9100df827582ad4925ca5fb4618e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/597f2056f11dba73fbffd309a123f5ea.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1a8274839ae44ac1755ff4105eef7241.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e4cb1831fdf75854a146076bf329e2b8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7b5fc1fa331bc42c6289292cc332719f.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3f9c0f2332054e689d22bec4b283fb3e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4982fcc1b7f8099a10638da313f60f25.png)
 
 
 
@@ -2926,89 +2926,89 @@ Falco在用户空间和内核空间运行，主要组件...
 
 
 ##  23. Ensure immutability of containers at runtime
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6fff952e6b5346ae90f6ddc317e5edad.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5759812cb4c77b4c2fa6a57d69673705.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/305c6611ee794138bfb126c49e8ac77b.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1c59907fe0fe40a89bf75d0ff5bb814d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/999968747878f70b38e76e2142a83e57.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/205db680e828bf1b9a33ffeee3cf6a46.png)
 
 ##  24. 使用 Audit Logs 监控访问情况
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9149711961e74e689a76db490a3cccfb.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/03c46e63a618411d828cb30461f96606.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fc0bc4e098b7459bb65daea493d9e725.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c8ab69b9cbd349a2b779d20fa769aa5c.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ca9c3cda8b8b429fab612cf342659e58.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4f1230dd980945e0bee8c581b353b95a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/92c4d793eebb0ece0a129032ef4d036c.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/034e00f67229e58a3d0c33ea577c8adf.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2a26eb6ed360d3bd5d3ec197bf574d76.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/386c131e16a782e66cacfd955ca96aa5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3a59b3885e7e3482c6a1c6658d013de5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/de3feaf8a51579afa890352f33d69e0c.png)
 
 
 ##  25. Pod安全准入控制- PodSecurityPolicy
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e1b34ba6a6c341e48af9ded4d9826674.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/672a9900b1d1477188bc9a15fee7dcf2.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/774a9306c9f744fe94192776ba380c67.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b8d4015662f443e2ab8661ac93ca6335.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6ee24b1847714cdb9cb8d94af90bde71.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e3f5ec4e4e8340cb9bea854a597a8d9e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1bfce9d8ed79448ee265ec6b90812460.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3fbbbceb0a9d4b467ae7e70a2d5c00d4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c57f9c6fda82f79ddbbde8029c65f05f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c448dfc56b33898935572de7e677da2e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0f03187a4ccd6acfe5d02247efab7a02.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a4d01481a07b4ef42e15e371ddfde484.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2b682eab6b014a6ea0ee7895ac392d2c.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/52409f051e124789a2734dabf45d7bc3.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fdf316e187584f4c96cb1c088ebb3da6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6d6df9e80dddb87b721280893147b7ef.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bee594b05e5e00f24979e5850b77d175.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4c1b667654963abb372a6dcc6bba791f.png)
 ###  enforce
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d3af3813ba8246aa85e63831e9c2f1b8.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b0a042fe163c49d68054ad04abbbb5ef.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c037ad1a52b19e29c0609c44bb2ab0db.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e8a15cc2520bc3cdb23c7a80ecc17b25.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d578500a27b74597958f797b8a1be025.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b4be3f7b30ab43829d65ae9e129a6757.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f4c16ed02218f0e8b38ee6445ce699f8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1b49e905cfebaec4ed3e72b9d188c787.png)
 ###  warn
-![在这里插入图片描述](https://img-blog.csdnimg.cn/036603ca5dbf440bbaf99250304bdef1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/976d042e340163c2a01dba90f1f533b3.png)
 ###  audit
-![在这里插入图片描述](https://img-blog.csdnimg.cn/10175e62f95045b88cd14c20612b1a2a.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0c32f6d14ae04e829c8c530abd82024f.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/25cc636d9c7544fc908d2d5cfd47cee2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ade902a13bd907c20e57693ba73ccdfe.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e9fbcf222ee9ca837eda4fe6001d0ff4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3765b16111c2779d175e3bec943f34f0.png)
 
 ##  26.  CKS Exam Experience, Topics to Focus & Tips
-![在这里插入图片描述](https://img-blog.csdnimg.cn/83bdbdc5290640be89c5b71405d517a2.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7b25773ee09a4ef6bd7fee34c3d29ab2.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b63a4a31556e4f7185853edeb2b3646a.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/56589b173a1a4b378c1ad106b099989e.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5dcdfc5e741d48169e3243c9c41e5206.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d523fc3fed714fd7aa133f9c5e20c499.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d34cee908ad84bec8baff5274c50704d.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2e7615cb1bc84e9cb8ad66e9954ef20e.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b9905b4ab3bb4c92982e4ac89ec628f1.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f7aadeb332084af89ed353444101622b.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f758e2aad31e4142bc8293d4b6d3d569.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f4c8eee8665f4db1b5cbadb04ec28735.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f9e5e6ab28fb472ab097b4cf8df3f5fb.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9930f90c1cbd41bcbbc8ff3d945154c3.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f4a02f17cd9341cebd95ebad5475859c.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/de563503328a44678576e0aab0f506a4.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5babf904514e47e88d8a227c0ac41efb.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b0c84f59fa004575a5fb64f162fa45e1.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/74cf16f47c5841eb9212ff496a3c96e0.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a103c6c722d145a992c1a7a878271bfc.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b9452f5611794ccbac2903c7a97b7ea3.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/76b2029effb444d6acaf31b99cc183b9.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/54098d72ee134df8952d80279fb54da8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/75ed65a1fe57d6ae7fbd322d394243e5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e29f497e3d27e659b9b11c9585ac9c95.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/40c869214721c291136dc934e3625e79.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/086c0bef75339458ed6baf67b0bee92f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/263346c9c31a7151f65110f3fb13e712.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/efdc14178cb4ad5413c96057a67b7706.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/68c98203bbd19a33045b53ecb09031d3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ccc20b208e6e614c8641169e97bc2ea5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bbd05152114b2eea7d1898f81fc9df4a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b0dba5181d045cc6083bd0b5b6a976a2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7f1d588b4732bd63603cbe8fb38a0a77.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/44b5515fe552a9e46913bbf267056adc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/18039fe618b90d8e5087fc3a47e7d243.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/dc914623500ea3fdb8d3b21a6d7750e3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c69f3285078faab1a9ed27c3d8cf9fa1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/75a5dea3e548b9a75823c16f1af8ad1f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/85bb17aed7af43481c0357adc18766ab.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4e6032a849da3e73eed19c022fd32ea6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/299363863112d6494bb4d8e92e8773d7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/18537d3b2c80fa8258b6c9668bdffda9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/defa6d50e87b544fe65830edbf586204.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3fee94b3648776e0813bf46ad098b273.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8302076d042601d9a2ac19accf056eca.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4eb31ebd26774336ae1af4b1da9ec034.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9a0605901f994ce780945acb68c04770.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/aaef1fdb6a674d91b36e8e3a85a33cb0.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8cc9db44f0354ce6aee57078dc647819.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2b2d03b0f26840b1b1978b97d23eff0d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/37391a86fc0b710010524b648cd563f3.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a271a1ab0972f00c5fe5f88b03b8e1a5.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e6e396b949860dbae900b2a9ca639b85.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e40dfc8fb40ab228fe348de660cee383.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fd61df3f17935e8c8a383f6f2d9937de.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/691cc27068ec479683b4da3b0b324828.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/058080a8f66b4c96914751bd7740f37b.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6ea35b12715742c9be8340e3896eb3f8.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0fb762039a2b4b8d9a9bcfbf99e19b02.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2910657ffeec4465aa0d48884a7c2d34.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2f679710cbeb487ba0de65d5b91009c5.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/754ce264cece417792c360e331e1eee3.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8360fbcd075e49b9a0251f957a2551be.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d0455dcea253258a8197cf1d0e0718eb.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4de353e2eb4b041347cba77b2890355e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5a31a99e2d26394aa10584a7322b79da.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4a9fcdc42ac65462d5b145864cf490a6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8a756fab448ba6a61e20e1c44b14db92.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/88e70e043d162a6ce8bf64e618efb809.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1e43b3404be6fb211eaf3e45bb0cfa39.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e6d882409f66b02d8f539e562be45ecb.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/550218898eb245a5b7aaee57e3ecafa5.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/606671f1082c4b81876ca0f472e722bc.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5bbc3f23e09341528953bda3f63fef31.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/95c253b536324db8ae41a0680fe15b28.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/71d93d7ebd548c31c1e8b7fce63fc95f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/daa78dd74096d386c6b27afc1770e044.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f52dd1a2760fead1ea73639383ece311.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2bbc2071d1eb63b2a909480c609f48a2.png)
 
 ```bash
 echo "set ts=2 sw=2 sts=2 expandtab" > ~/.vimrc

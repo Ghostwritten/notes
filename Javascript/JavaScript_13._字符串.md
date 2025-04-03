@@ -1,7 +1,7 @@
 #  JavaScript 13. 字符串
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2ef80786f6ed45019b228ac86039d916.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f2ec95b948c9ed854c4f36c667a6dc1e.png)
 
 
 ##  JavaScript 字符串

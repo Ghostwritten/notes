@@ -182,7 +182,7 @@ logger目录：logadmin/redhat
 shared目录：admin/redhat
 ```
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200427200838795.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/df99064c024321206c8ede4bf9656f4c.png)
 #### 2.4.2 linux
 `smbclient`命令 属于samba套件，它提供一种命令行使用交互式方式访问samba服务器的共享资源。
  语法

@@ -31,7 +31,7 @@ git 用来拉取本次案例所需脚本，这些脚本存储在 Github 代码�
 
 
 今天的案例需要两台虚拟机，其中一台作为案例分析的目标机器，运行 Flask 应用，它的 IP 地址是 192.168.0.10；另一台则是作为客户端，请求单词的热度。我画了一张图表示它们的关系。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210714141637778.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8d5376c0c4451637c6aa6e5f3862e9d2.png)
 
 首先，我们在第一个终端中执行下面命令，拉取本次案例所需脚本：
 

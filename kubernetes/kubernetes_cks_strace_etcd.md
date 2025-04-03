@@ -7,14 +7,14 @@
 ```bash
 $ ps aux | grep etcd
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f28bf67365414acd8bc2488e891e6cde.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/99a14972c8ad992315af24bf4426f252.png)
 
 从上面的结果来看，第一个进程 ID 将是我们的目标，因为第二个进程是 kube-apiserver，第三个是我们刚刚执行的“grep”
 
 ```bash
 sudo strace -p 4295
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3f605b330f484170a137f5be484dbcab.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/527baf3078d142c4eaf7ef18be59cd74.png)
 我们应该看到很多操作被列出来。从这里，我们可以前往进程目录并查看其中包含的内容。
 
 ```bash
@@ -22,7 +22,7 @@ sudo strace -p 4295
 - cd /proc/4295/fd
 - ls -l | grep 7
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5f11817bf0ce49388450e24fe192a6bd.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/37f28c8633947559b2e285daac7354b7.png)
 此时，目录“7”似乎包含了 K8s 需要的信息。我们可以创建一个简单的秘密并尝试在其中找到值。
 
 ```bash
@@ -31,5 +31,5 @@ sudo strace -p 4295
 #"-A10" and "-B10" mean show 10 lines before and after the searching string.
 - cat 7 | strings | grep 1111222233334444 -A10 -B10
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c058c59389204574966af8b12c6625de.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1522aa8eccbddddf8f5f65eb0ca78f81.png)
 

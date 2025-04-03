@@ -112,7 +112,7 @@ date.file  split_file000  split_file001  split_file002  split_file003  split_fil
  - [Split Command in Linux with Examples](https://www.geeksforgeeks.org/split-command-in-linux-with-examples/)
  - [split(1) — Linux manual page](https://man7.org/linux/man-pages/man1/split.1.html)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c93a5b789b5149449e9ea45e5d354328.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/baf4cd57f4aa9e853a8408cb59b259e2.gif#pic_center)
 
 
 

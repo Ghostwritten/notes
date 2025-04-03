@@ -62,21 +62,21 @@ POST  _reindex
 
  - 索引的 `mapping _source` 要开启
  - 先创建一个新索引，然后在执行 reindex
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210308104628541.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/43ad049b6b9acae7ab00e4cdc6e471c9.png)
 ### 3.2. OP Type
  - `_reindex` 指挥创建不存在的文档
  - 文档如果存在，会导致版本冲突
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210308104708553.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/cc39dd37dc8be5039d3672a2da13b394.png)
 ### 3.3. 跨集群 ReIndex
  - 需要修改 `elasticsearch.yml` , 并且重启节点
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210308104753722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210308104814851.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/03f4381a5b07a09a65b1162a9c74293d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/13fe8ca5d0740b71216e3193683b0650.png)
 ### 3.4 查看 Task API
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210308105116805.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8378135df62c410d0dfd4227d689a4cc.png)
 
  - Reindex API 支持一步操作，执行只返回 Task Id
  - POST _reindex?wait_for_completion=false
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210308105105108.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fe8ab30bdec80f2f58342d8f4193a892.png)
 ## 4. 数据迁移
 1、创建新的索引(可以通过java程序也可以直接在head插件上创建)
 

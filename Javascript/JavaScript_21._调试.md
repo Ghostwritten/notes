@@ -1,7 +1,7 @@
 # JavaScript 21. 调试
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dcfd7fe4ddbf48498aa45dca1c9d4e59.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d165b9ec088de08637688934191ede4d.png)
 
 
 ##  1. 简介
@@ -108,7 +108,7 @@ document.getElementById("demo").innerHTML = x;
 
 开启调试工具，在代码执行到第三行前会停止执行。
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3bf922dca332445790604d76a5b7f2a9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9e8c63d676fbdfe21949da7561bfb7c5.png)
 ##  6. 浏览器的调试工具
 通常，浏览器启用调试工具一般是按下 F12 键，并在调试菜单中选择 "Console" 。
 

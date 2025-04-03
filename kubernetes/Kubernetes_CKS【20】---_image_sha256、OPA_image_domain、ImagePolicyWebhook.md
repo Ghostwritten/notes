@@ -2,12 +2,12 @@
 
 
 ## 1. 介绍
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521162315240.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521162413722.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521162625720.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521163827152.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7ee75ea9aafbaf767a4529c0a572d34b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/80c9bddcec030ffad4f3b1b3b9d2dda4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f896eb5c77acfc956290d2a0a2eaab97.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a47430550ae8948d331dee86f14ff41e.png)
 ## 2. Image 摘要
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021052116390744.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7cfad6828d417e3398a73cf409f8c237.png)
 
 ```bash
 root@master:~# k get pods -A -oyaml |grep image: |grep -v f:
@@ -98,7 +98,7 @@ kube-apiserver-master                      1/1     Running   0          2m42s
 
 
 ## 3. OPA注册白名单
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521165928411.png?xshadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4108f9d409bb6c1fd1ec3272af5bf776.png)
 
 ```bash
 
@@ -280,10 +280,10 @@ pod/nginx created
 
 ##  4. ImagePolicyWebhook
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521172745471.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521172804290.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/49fd3814f62b915d41ad86541a4bdd6d.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/382bfa4791552c786b1bd4e14baac5b6.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210521172908435.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/510473932e4ce9e0c895608b807efcc5.png)
 
 ```bash
 $ ls cks/cks-course-environment-master/course-content/supply-chain-security/secure-the-supply-chain/whitelist-registries/ImagePolicyWebhook/

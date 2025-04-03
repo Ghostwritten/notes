@@ -1,7 +1,7 @@
 #  JavaScript 7. 注释
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5cfa92d98e264bd39399a7b36b692db4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fea542a363d6fdef2408570a92c108fd.png)
 
 
 ##  1. JavaScript 注释

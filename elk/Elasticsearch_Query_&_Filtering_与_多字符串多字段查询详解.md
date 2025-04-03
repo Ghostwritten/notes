@@ -1,6 +1,6 @@
 
 ## 1. Query Context & Filter Context
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201118144741841.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f2241027221dca01b444f98503f747e3.png#pic_center)
 
 高级搜索的功能，支持多想文本输入，针对多个字段进行搜索
 搜索引擎一般也提供时间，价格等条件过滤
@@ -21,7 +21,7 @@
 一个 bool 查询，是一个或者多个查询子句的组合
 总共包含 4 种子句，其中 2 种会影响算分，2 种不影响算分
 相关性并不只是全文本搜索的专利。也适合 yes | no 的子句，匹配的子句越多，相关性评分越高。如果多条查询子句被合并为一条复合查询语句，比如 bool 查询，则每个查询子句计算得出的评分会被合并到总的相关性评分中。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201118144815247.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f84162e0b703a56859847796c65f9b69.png#pic_center)
 ## 4. bool 查询语句
  - 子查询可以任意顺序出现
  - 可以嵌套多个查询
@@ -113,7 +113,7 @@ POST /newmovies/_search
 }
 ```
 ## 6 Filter Context - 不影响算分
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201118145736604.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/74663e88588c57fa410844ede74551f8.png#pic_center)
 ## 7. Query Context - 影响算分
 
 ```bash
@@ -180,18 +180,18 @@ POST /products/_search
   }
 ```
 ## 8. bool 嵌套
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020111814593618.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9291c4c0aaa25c8178a135d131f5b362.png#pic_center)
 ## 9. 查询语句的结构，会对相关度算分产生影响
 同一层级下的竞争字段，具有相同的权重
 通过嵌套 bool 查询，可以改变对算分的影响
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201118150019820.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fbe42f30f9a4009ec9ed957b7d357de8.png#pic_center)
 ## 10. 控制字段的 Boosting
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201118151000382.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2a78b629d36cbdd1c6e86ebce635e61e.png#pic_center)
 
 ## 11. Not Quite Not
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201118151043167.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/386b416a24570382623f8f447067604f.png#pic_center)
 ## 12 Boosting Query
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201118151233758.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ad1f060b1c55e73ef25926b2130e8b96.png#pic_center)
 ## 13 知识点回顾
 
  - Query Context vs Filter Context

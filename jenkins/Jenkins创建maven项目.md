@@ -3,7 +3,7 @@
 
 ----
 ##  1. maven简介
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e8c6317397d64e778750b3bbcb17d671.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3d05e26feb88cc2f166531403fa83e18.png#pic_center)
 
 [https://mirrors.tuna.tsinghua.edu.cn/apache/maven/](https://mirrors.tuna.tsinghua.edu.cn/apache/maven/)
 
@@ -33,7 +33,7 @@ OS name: "linux", version: "3.10.0-862.el7.x86_64", arch: "amd64", family: "unix
 # vim /etc/profile
 export PATH=/usr/local/maven/bin/:$PATH
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ff626a71c43f48ea93f1e9fd56c960f7.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/043af5e67651367595d75e5711a6bcb8.png#pic_center)
 
 ```c
 # source /etc/profile
@@ -46,7 +46,7 @@ OS name: "linux", version: "3.10.0-862.el7.x86_64", arch: "amd64", family: "unix
 ```
 ###认识maven安装目录
 安装完成后。Maven的安装目录结构如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/eb2e4faf55b54a93a3c21a3d9dc3309c.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/7b3df2c10ef867829e359159fac932f4.png#pic_center)
 
 
 
@@ -57,20 +57,20 @@ OS name: "linux", version: "3.10.0-862.el7.x86_64", arch: "amd64", family: "unix
 
 ## 3. Jenkins构建一个maven项目
 首先在管理员的全局配置里配置maven的路径信息
-![在这里插入图片描述](https://img-blog.csdnimg.cn/32456f66392943d3a45abc0249025370.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ed75cb754bc3801208375b98eb6c21d8.png#pic_center)
 
 
 
 添加maven
-![在这里插入图片描述](https://img-blog.csdnimg.cn/139789f2be5540b3a558cfcb201a9e14.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e7120da606feb665e18ea0db1dce0212.png#pic_center)
 
 
 然后在线安装插件Maven Integration
-![在这里插入图片描述](https://img-blog.csdnimg.cn/76a9eb803eb94ee3b8f771a653cbbd31.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/208bce0f24750eb013b3563d2730004a.png#pic_center)
 
 
 安装完成后。在新建项目的时候，就会多一个构建maven项目的选项
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5edfd5dd06e34589ab6eaf3a0a6b1143.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3719ab01950d2f464c48a346fbe3d2dc.png#pic_center)
 
 [https://www.yiibai.com/maven](https://www.yiibai.com/maven)
 使用mvn命令构建一个java项目`hello-world`  失败了 测试命令
@@ -82,21 +82,21 @@ OS name: "linux", version: "3.10.0-862.el7.x86_64", arch: "amd64", family: "unix
 还是网上下载吧
 https://down.51cto.com/data/2462845
 解压后目录结构如下
-![在这里插入图片描述](https://img-blog.csdnimg.cn/87249f4a23834bf5ba36a4a6e9755e0d.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1162436f0a91be3f83e3733b248bc97e.png#pic_center)
 
 
 测试常用的maven命令  暂时需要联网
 `Mvn clean`命令用于清理项目生产的临时文件，一般是模块下的`target`目录
 `Mvn test` 命令用于测试，用于执行`src/test/java/`下的测试用例。使用`-Dmaven.test.skip=true`参数可以跳过测试。
 生成`target`目录。但是目录里没有生成jar或者war包
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0f37811e0f174a40b34856c779f5af7a.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f273cf95f4fe8f4ab61707d5d6fbcf0d.png#pic_center)
 
 
 Mvn package 命令用于项目打包，会在模块下的target目录生成jar或者war等文件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6009ca14d7dd470fab3d0c2bdba7b21a.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f3cb24ac727f87ba2f502f5a68d4f9d1.png#pic_center)
 Mvn install命令用于模块安装，将打包好的`jar/war`文件复制到你的本地仓库中，供其他模块使用
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9f7a2461a40145acbbe4bd7ffa6e22a1.png#pic_center)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/28999f8892434b8a80d81af615638413.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ee124e6b8ba0f8c935ff111e176a80bc.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c4b1fedff786db6e86183e71176a5f17.png#pic_center)
 
 
 

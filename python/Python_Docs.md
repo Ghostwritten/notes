@@ -1,34 +1,44 @@
-![在这里插入图片描述](https://img-blog.csdnimg.cn/93dfa60943664e5ab59a65596fe021f1.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6c0db405a1949185aec9f7f352667c3f.png)
 
 ## 基础
 
- 1. [python pip 安装](https://ghostwritten.blog.csdn.net/article/details/104273575)（updated）
- 2. [python pip 解决下载速度慢](https://ghostwritten.blog.csdn.net/article/details/105898367)（updated）
- 3. [python pip 安装模块包命令](https://ghostwritten.blog.csdn.net/article/details/106176020)（updated）
- 4. [python 3.10.0 源码编译安装](https://ghostwritten.blog.csdn.net/article/details/122587523)updated）
- 5. [python 多种运行脚本方式](https://ghostwritten.blog.csdn.net/article/details/123313135)（updated）
- 6. [Sublime text玩转python](https://ghostwritten.blog.csdn.net/article/details/123315544)
- 7. [python 文件读写](https://blog.csdn.net/xixihahalelehehe/article/details/127494371)
- 8. [python import 介绍](https://ghostwritten.blog.csdn.net/article/details/106380717)（updated）
- 9. [python list 列表](https://ghostwritten.blog.csdn.net/article/details/104437743)（updated）
- 10. [pyhon tuple 元组](https://ghostwritten.blog.csdn.net/article/details/104486159)（updated）
- 11. [python dict 字典](https://blog.csdn.net/xixihahalelehehe/article/details/104488899)（updated）
- 12. [python 异常处理](https://ghostwritten.blog.csdn.net/article/details/104793897)（updated）
- 13. [python 基本函数](https://ghostwritten.blog.csdn.net/article/details/104931491)（updated）
- 14. [python 内置函数](https://ghostwritten.blog.csdn.net/article/details/104913051)（updated）
- 15. [python 高级函数](https://ghostwritten.blog.csdn.net/article/details/105035378)（updated）
- 16. [python 装饰器](https://ghostwritten.blog.csdn.net/article/details/105170010)（updated）
- 17. [python yield 生成器](https://blog.csdn.net/xixihahalelehehe/article/details/115595588?spm=1001.2014.3001.5501)（updated）
- 18. [python 函数 print 打印](https://ghostwritten.blog.csdn.net/article/details/106191595)（updated）
- 19. [python 函数 open 文本操作](https://ghostwritten.blog.csdn.net/article/details/107872699)（updated）
- 20. [Python 函数 super 调用父类](https://ghostwritten.blog.csdn.net/article/details/106246163)（updated）
- 21. [python 面向对象之类【1】](https://ghostwritten.blog.csdn.net/article/details/106245475)（updated）
- 22. [python 面向对象之类【2】](https://ghostwritten.blog.csdn.net/article/details/106246346)（updated）
- 23. [python 多进程](https://ghostwritten.blog.csdn.net/article/details/107926031)（updated）
- 24. [python 多线程](https://ghostwritten.blog.csdn.net/article/details/127565843)
- 25. [python 协程](https://blog.csdn.net/xixihahalelehehe/article/details/127566229)
- 26. [python 分布式进程](https://blog.csdn.net/xixihahalelehehe/article/details/127567506)
- 27. [Python 应用程序布局](https://ghostwritten.blog.csdn.net/article/details/123316111)（updated）
+ 1. [为什么要学编程与python的发展历史？](https://ghostwritten.blog.csdn.net/article/details/144769682)
+ 2. [学习 Python 编程的利器：高效工具与资源推荐](https://ghostwritten.blog.csdn.net/article/details/144772831)
+ 3. [学习 Python 编程的规则与风格指南](https://blog.csdn.net/xixihahalelehehe/article/details/144773638)
+ 4. [Python 与其他编程语言区别与不适应场景](https://blog.csdn.net/xixihahalelehehe/article/details/144881147)
+ 5. [Python 3 与 Python 2 的主要区别](https://ghostwritten.blog.csdn.net/article/details/144913785)
+ 6.  [初识 Conda：一站式包管理和环境管理工具](https://ghostwritten.blog.csdn.net/article/details/144772257)
+ 7. [Conda 安装 Jupyter Notebook](https://blog.csdn.net/xixihahalelehehe/article/details/144910582)
+ 8. [使用 Jupyter Notebook：安装与应用指南](https://ghostwritten.blog.csdn.net/article/details/144884581)
+ 9. [python pip 安装](https://ghostwritten.blog.csdn.net/article/details/104273575)（updated）
+ 10. [python pip 解决下载速度慢](https://ghostwritten.blog.csdn.net/article/details/105898367)（updated）
+ 11. [python pip 安装模块包命令](https://ghostwritten.blog.csdn.net/article/details/106176020)（updated）
+ 12. [多种方式安装 Python 3.13.1 的教程](https://ghostwritten.blog.csdn.net/article/details/144909705)
+ 13. [python 3.10.0 源码编译安装](https://ghostwritten.blog.csdn.net/article/details/122587523)updated）
+ 14. [Python 3 输入与输出指南](https://ghostwritten.blog.csdn.net/article/details/144914541)
+ 15. [python 多种运行脚本方式](https://ghostwritten.blog.csdn.net/article/details/123313135)（updated）
+ 16. [Sublime text玩转python](https://ghostwritten.blog.csdn.net/article/details/123315544)
+ 17. [python 文件读写](https://blog.csdn.net/xixihahalelehehe/article/details/127494371)
+ 18. [python import 介绍](https://ghostwritten.blog.csdn.net/article/details/106380717)（updated）
+ 19. [python list 列表](https://ghostwritten.blog.csdn.net/article/details/104437743)（updated）
+ 20. [pyhon tuple 元组](https://ghostwritten.blog.csdn.net/article/details/104486159)（updated）
+ 21. [python dict 字典](https://blog.csdn.net/xixihahalelehehe/article/details/104488899)（updated）
+ 22. [python 异常处理](https://ghostwritten.blog.csdn.net/article/details/104793897)（updated）
+ 23. [python 基本函数](https://ghostwritten.blog.csdn.net/article/details/104931491)（updated）
+ 24. [python 内置函数](https://ghostwritten.blog.csdn.net/article/details/104913051)（updated）
+ 25. [python 高级函数](https://ghostwritten.blog.csdn.net/article/details/105035378)（updated）
+ 26. [python 装饰器](https://ghostwritten.blog.csdn.net/article/details/105170010)（updated）
+ 27. [python yield 生成器](https://blog.csdn.net/xixihahalelehehe/article/details/115595588?spm=1001.2014.3001.5501)（updated）
+ 28. [python 函数 print 打印](https://ghostwritten.blog.csdn.net/article/details/106191595)（updated）
+ 29. [python 函数 open 文本操作](https://ghostwritten.blog.csdn.net/article/details/107872699)（updated）
+ 30. [Python 函数 super 调用父类](https://ghostwritten.blog.csdn.net/article/details/106246163)（updated）
+ 31. [python 面向对象之类【1】](https://ghostwritten.blog.csdn.net/article/details/106245475)（updated）
+ 32. [python 面向对象之类【2】](https://ghostwritten.blog.csdn.net/article/details/106246346)（updated）
+ 33. [python 多进程](https://ghostwritten.blog.csdn.net/article/details/107926031)（updated）
+ 34. [python 多线程](https://ghostwritten.blog.csdn.net/article/details/127565843)
+ 35. [python 协程](https://blog.csdn.net/xixihahalelehehe/article/details/127566229)
+ 36. [python 分布式进程](https://blog.csdn.net/xixihahalelehehe/article/details/127567506)
+ 37. [Python 应用程序布局](https://ghostwritten.blog.csdn.net/article/details/123316111)（updated）
 
 
 模块
@@ -78,6 +88,10 @@
  - [python 模块 BeautifulSoup 抓取 Web 数据](https://blog.csdn.net/xixihahalelehehe/article/details/124152439)(updated）
  - [python 模块 Selenium 自动化测试 Web 工具](https://blog.csdn.net/xixihahalelehehe/article/details/124323082)(updated）
  - [python 模块 moviepy 视频剪辑](https://blog.csdn.net/xixihahalelehehe/article/details/127550166)
+ - [Python 模块 Uvicorn 实战指南](https://ghostwritten.blog.csdn.net/article/details/145056945)
+ - [Python 模块 PyPDF 进行 PDF 操作](https://ghostwritten.blog.csdn.net/article/details/145241285)
+ - [Python 模块 Pydantic 实战：高效数据验证与配置管理](https://ghostwritten.blog.csdn.net/article/details/145304054)
+ - [Python 模块 FastAPI 实战应用指南](https://blog.csdn.net/xixihahalelehehe/article/details/145306393)
 
 
 ##  case
@@ -105,6 +119,7 @@
  - [windows python web route路由详解](https://blog.csdn.net/xixihahalelehehe/article/details/106886851) (updated）
  - [windows python web flask获取请求参数数据](https://blog.csdn.net/xixihahalelehehe/article/details/106888653) (updated）
  - [python flask 快速搭建 WEB实战](https://ghostwritten.blog.csdn.net/article/details/122093464) (updated）
+ - 
 
 -----
 相关链接：

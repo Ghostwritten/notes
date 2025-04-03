@@ -125,12 +125,12 @@ style="color:red ; font-size:50px">Hello JSP!!!</h1>
 <body>
 
 <p>
-<img src ="https://img-blog.csdnimg.cn/5de088627c3c4b8caeef92ef6a615e26.png" align ="left" width="200" height="200"> 
+<img src ="https://i-blog.csdnimg.cn/blog_migrate/7e19f6d036855fdaa7adbcc7013af28d.png" align ="left" width="200" height="200"> 
 带有图像的一个段落。图像的 align 属性设置为 "left"。图像将浮动到文本的左侧。
 </p>
 
 <p>
-<img src ="https://img-blog.csdnimg.cn/5de088627c3c4b8caeef92ef6a615e26.png" align ="right" width="200" height="200"> 
+<img src ="https://i-blog.csdnimg.cn/blog_migrate/7e19f6d036855fdaa7adbcc7013af28d.png" align ="right" width="200" height="200"> 
 带有图像的一个段落。图像的 align 属性设置为 "right"。图像将浮动到文本的右侧。
 </p>
 

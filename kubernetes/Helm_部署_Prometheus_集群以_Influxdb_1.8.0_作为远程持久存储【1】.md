@@ -1,5 +1,5 @@
 
-![](https://img-blog.csdnimg.cn/5d07bb8aa0f549ff997f25078cec9880.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/c39ed656ac401738b2c8328f33e78745.png)
 
 
 
@@ -24,7 +24,7 @@ InfluxDB 是用Go语言编写的一个用于存储和分析时间序列数据的
 
 
 
-![](https://img-blog.csdnimg.cn/e1f827d7f6094bf19f5e54cf4185e341.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/10e7b90f3db5af98fe5c9e9f1642edd3.png)
 Prometheus 对 InfluxDB 1.x 和 2.0 进行双远程写入区别：
 
 - 当您开始向 InfluxDB 1.x 远程写入数据时，您可能已经配置了prometheus.yml包含 InfluxDB 运行端口的 URL；

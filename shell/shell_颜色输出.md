@@ -12,5 +12,5 @@ for c in 90 31 91 32 33 34 35 95 36 97; do
 done
 ```
 执行：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4bec930a0d174b0ca166eb90a02da901.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/bd31535556e190706285c3f6319c0902.gif#pic_center)
 

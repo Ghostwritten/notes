@@ -15,7 +15,7 @@ Sysdig还执行以下操作：
  - 完全融入容器化和编排环境
 
 数据处理流程：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2cc2030af3f747699219be90d07c5a7f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/113529a94ef98eeb2c3476c6d22dc959.png)
 
  1. 以下代理组件收集相关数据：系统调用、统计数据、JMX、Promscrape
  2. 存储指标以供分析。

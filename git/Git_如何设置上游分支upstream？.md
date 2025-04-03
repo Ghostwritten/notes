@@ -26,10 +26,10 @@ git checkout -b <分支名称>
 ```
 
 切换分支确认出现如下：
-![](https://img-blog.csdnimg.cn/44f0addd70c344249986a06647a715ca.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/43c1d6c6dece667945df9d1ccbcfcccb.png)
 当当前分支（'new_branch'）没有设置上游分支时，我们尝试运行命令“Git push”。在cmd中运行以下命令后：
 
-![](https://img-blog.csdnimg.cn/7e501d36bee8471fa9089515dd4c5122.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/5a1b8b9142ebf0248a5563589c1db174.png)
 现在，您需要使用带有 `-u` 选项的 Git push 命令来设置上游分支。将 `<branch name>` 替换为您的分支名称。
 
 ```bash
@@ -41,7 +41,7 @@ git push -u origin <分支名>
 ```bash
 git push --set-upstream origin <分支名称>
 ```
-![](https://img-blog.csdnimg.cn/eb49e97d4a394129850a53563c207d4f.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/a32dcb0e52762d40a0617200dd80cf9b.png)
 
 ## 6. 如何在 Git 中更改上游分支
 现在，您需要跟踪一个新的上游分支而不是刚刚设置运行的分支：
@@ -56,11 +56,11 @@ git branch main -u <源/主>
 ```
 
 终端打印出确认消息：
-![](https://img-blog.csdnimg.cn/dd0a8ecc5d8a4f65868e4d8f21a1442a.png)
-![](https://img-blog.csdnimg.cn/bd3eb484881942038b88db110919c234.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/385e611b4b33d58ffa9cfa64c63e2f2e.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/79a473e1b2f84a9945066208df1aaf9f.png)
 ## 7. 如何检查哪些 Git 分支正在跟踪哪些上游分支
 现在，您可以使用带有 -vv 选项的“Git 分支”列出所有跟踪上游分支的分支：
-![](https://img-blog.csdnimg.cn/45857cda4bac4925839bac58cb293fe8.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/472db4d5fcee83e300c6758078a8dc8f.png)
 主分支有一个 `[origin/main]` 的跟踪分支。测试分支有一个跟踪分支`[origin/test]`。`new_branch` 分支有一个跟踪分支`[origin/new_branch]`。
 
 

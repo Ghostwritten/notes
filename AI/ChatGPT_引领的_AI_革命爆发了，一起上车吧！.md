@@ -1,4 +1,4 @@
-![](https://img-blog.csdnimg.cn/eb447e2d02134e3ca241ff4caa89dd6a.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/d37bceddbc23352d55c088531d525e90.png)
 
 
 
@@ -24,7 +24,7 @@
 新专栏《AI 大模型之美》的目录如下：
 
 
-![](https://img-blog.csdnimg.cn/1d702be9b4b141d891603f9195b383c9.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/d8e64493b20059f377200a513cacd4f9.png)
 
 **首先，这门课程不是一个理论课程，而是一个实践课程。**每一节课，我们都会提出一个需要解决的实际问题。比如，用户对于商家评论的情感分析，能够记住上下文的聊天机器人，如何通过用户输入的关键词搜索图片等等。而伴随着这个问题的，则是通过几行或者几十行代码解决问题的整个过程。
 
@@ -49,7 +49,7 @@
 
 为什么我喜欢极客时间的课程。文章没有干巴巴、整齐划一的目录或者极度抽象的理论，而是亲力亲为、慢条斯理的场景描述、逻辑表达，这是极客时间最大的风格，最大特点是作者的文章涉及到不仅仅是一步一步的实践教学，而是每篇文章对讨论的话题通过一个个技术关键点构筑一个完美系统的缩影。促使每位同学自觉探索每一个技术关键点的更多细节与姿势。
 
-![](https://img-blog.csdnimg.cn/2c6d733cee99428b8eb8502b69140824.jpeg)
+![](https://i-blog.csdnimg.cn/blog_migrate/e42bc71b94957d5569a438c61cf1d466.png)
 
 ## 2.  回顾 AI 历史
 在ChatGPT问世以前，人工智能领域已经有了很长的历史和发展。在20世纪50年代初期，人工智能就已经成为了一个独立的学科，并吸引了众多的研究者和机构的关注。但是，在那个时期，由于计算机技术和算法的限制，人工智能还处于非常初级的阶段。
@@ -84,18 +84,18 @@ print(response)
 
 从 2020 年的 GPT-3 开始，拥有海量参数的大模型登上了历史舞台，直接使用 GPT-3 这样的预训练好的大语言模型，无需任何微调，就能解决情感分析、命名实体识别、机器翻译等一系列的自然语言处理问题。而对于很多 AI 没见过的问题，也只要通过自然语言给到 AI 几个例子，通过“小样本学习”（Few-Shot Learning），AI 就能给出正确的回答。
 
-![](https://img-blog.csdnimg.cn/ec276a6bcd724f4d957583758c8a3a10.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/84aef6d19105d879cc91764ed449d299.png)
 
 在计算机视觉上，像 2021 年 OpenAI 发表的 CLIP 这样的模型也有类似的效果。我们对于图片的分类不再局限于预先的人工数据标注的类别，而是可以扩展到任何类别上去。在自然语言、语音、视觉，乃至这些领域相互融合的多模态领域里，AI 同时在加速发展、在进步。
 
-![](https://img-blog.csdnimg.cn/99be8e9268594126b2ffab1fa461435e.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/7dca26ea249f2174afd91c100ad9bc9f.png)
 
 这一轮的 AI 浪潮开始让我们看见了“通用人工智能”（AGI）的雏形，AI 应用的覆盖领域被大大扩展了，几乎任何一个问题都有机会通过 AI 来解决优化。今天你所在的行业和领域，都有机会通过简单的 AI 应用开发，提升效率和产出。
 
 **第三个原因，是这个浪潮带来的变化会对我们每一个人的工作带来巨大的冲击**。在过去短短的两三个月里，在个人生活里，我已经习惯于让 AI 帮我写代码，翻译英文资料，修改我写过的文章，为文章配图。在工作上，也已经让 AI 来优化商品文案、优化商品搜索，并且进一步开始尝试让 AI 承接更多原本需要由人来进行的工作。我不知道 AI 会不会让你失业，但是善用 AI 的团队和公司接下来一定会有更高的效率和产出。无论你是产品经理还是工程师，是产品运营还是美术设计，在这一轮 AI 浪潮下，你的工作性质都会产生根本性的改变。AI 会像一个助手一样随时陪伴在我们身边，随时帮我们解决简单的知识性工作，甚至在很多时候给我们创意性的启发。
 
 
-![](https://img-blog.csdnimg.cn/d30183baa6f5415bb46ba99579d8de76.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/31f70a8c9ba1c17ff2fc0d7b3e19b577.png)
 
 
 ## 5. 我们该如何学习 AI 
@@ -107,7 +107,7 @@ print(response)
 
 为此，我也将课程里所有的代码部分，通过 Jupyter Notebook 的形式放在了 GitHub 上，你可以直接[获取](https://github.com/xuwenhao/geektime-ai-course)运行。对于没有技术背景的同学，我也在[第 01 讲](https://time.geekbang.org/column/article/641742)里，教会你如何在 Colab 这样的在线环境里运行代码，获得最直观的体验。而在运行了我给你的原始代码之后，我也建议你多试试看修改里面的代码，利用这些代码去使用你自己的数据、尝试你自己的想法。
 
-![](https://img-blog.csdnimg.cn/6dc566c6caf247a4a3faf5fb9bb13d2c.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/075002ff1277f2dde4276711bb252865.png)
 
 
 > 注：课程里的所有代码，都可以通过 Jupyter notebook 运行。
@@ -118,7 +118,7 @@ print(response)
 在每节课的最后，我还会为你推荐一些我看到的 AI 应用。注册账号、下载应用，多去体验一下最新的 AI 应用，既能够激发你学习课程的动力，也能够打开你自己利用 AI 大模型能力的思路。
 
 
-![](https://img-blog.csdnimg.cn/90bc23d20d80436884c73719e05503f9.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/ac8c8306b818c5f95bad3db1569ad4e7.png)
 
 
 > 注：如果你还没有尝试过，一定要自己去体验一下 [Midjourney](https://www.midjourney.com/home/?callbackUrl=/app/feed/)，会让你大吃一惊！
@@ -130,7 +130,7 @@ print(response)
 学习课程的目的还是“学以致用”，多和你周围对新一代 AI 应用开发有兴趣的朋友们多做做头脑风暴，看看课程里的各种方法和套路能不能有不同场景和角度的应用方式。这个才是学习这个课程的真正价值所在。
 
 
-![](https://img-blog.csdnimg.cn/bf632483962b41cbaa2bb734e24fc471.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/496f94d857a2145947baf2ebbf32cec9.png)
 
 
 > 注：基于 AI 的画图能力，有人让它创建大量的“填色本”，自动生成填色书进行售卖，[链接](https://aituts.com/ai-generated-coloring-books/)。
@@ -144,21 +144,21 @@ print(response)
 ### 6.1 让 ChatGPT 成为你学习知识的助教
 过去一段时间我最常用的自然是“万能”的 ChatGPT。我发现很多人觉得它没什么大用的原因是，总是问它一些过于宽泛的问题，比如“怎么学习 Java”，这样很难得到有针对性的回答。一个我最常用的用法，就是请它帮我解释一下你遇到的新知识。并且，和搜索不同，你可以针对它的回答中你不了解的知识进一步地追问，直到你觉得搞清楚了这个知识点。
 
-![](https://img-blog.csdnimg.cn/64a6a3d143bb4be1966e71e0a7fb74ce.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/3d60454f8c4180ca967c800e4c021580.png)
 
 
 > 注：当我研究一个新课题的时候，对于没有完全理解的名词和概念，我都请 AI 为我解释一下。
 
 而且，ChatGPT 不仅可以解释概念，还能解释代码。你可以直接贴一段代码给到 ChatGPT，让它为你详细讲解，可以说是一个非常好的助教。而且这个助教知识广博、不知疲倦、极有耐心，绝对不会因为你有什么不懂的反复提问而表示不耐烦。
 
-![](https://img-blog.csdnimg.cn/cd521f3281ef4f99b624c30e5b10b357.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/84ed5e9dce2d5c55b8b8a1ffe8eebfce.png)
 
 
 > 注：随手拿一段你觉得不太熟悉的代码让 AI 为你解释，比起自己去查文档要快上很多。
 
 如果你是一个内向的工程师，相信有很多人和我一样，其实很多时候宁愿自己查资料，也不愿意张口麻烦别人。去问别人的时候，往往也会有小小的心理压力，担心自己问的问题是不是太简单了。但是，面对 ChatGPT 这样的 AI，却不会有这样的问题，而且往往效率也比通过搜索查资料快上很多。
 
-![](https://img-blog.csdnimg.cn/75fd4ece5625486983de222ecffc3b11.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/397b2a24610aebadb71958bc956502d8.png)
 
 因为 ChatGPT 的访问限制比较严格，你也可以通过 Quora 发布的 [Poe](https://poe.com/login) 来实现同样的目标，在 Poe 里，你不仅可以使用 ChatGPT 的模型，也可以使用好几个其他的大语言模型，你也可以比较之后选择自己最喜欢的。
 
@@ -168,7 +168,7 @@ print(response)
 除了网页文章，越来越多的音视频资料，比如各种各样的播客和视频。很多时效性最强最新的资料，都只有音频或者视频，而没有文字版。但是音频和视频没法像文字一样快速浏览一遍，做个判断值不值得去读。好在随着语音识别和文本摘要的成熟，也有很多插件可以快速帮助我们将音频和视频转录成文本，然后通过 ChatGPT 背后的语言模型生成一个摘要。这样，我就可以先快速浏览一遍摘要，决定值不值得把整个视频看一遍。比如，我最近就常常用 [Glarity](https://chrome.google.com/webstore/detail/glarity-summary-for-googl/cmnlolelipjlhfkhpohphpedmkfbobjc/related) 这个浏览器插件，帮助我快速总结视频内容，再来决定是否要看。
 
 
-![](https://img-blog.csdnimg.cn/4a93778b315442499b667d3a6250b0d1.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/49df3e64ecf07daf95a7155d6a617add.png)
 
 
 > 注：大神约翰卡马克的访谈，我就是先让 AI 帮我总结一下，再决定要不要完整地看整个视频。
@@ -176,11 +176,11 @@ print(response)
 ### 6.3 通过 AI 辅助你来读论文
 通过 [scispace](https://typeset.io/) 这个网站，把我要读的论文先传上去。然后我们可以直接向 AI 提问题，快速了解论文讲解了什么东西，然后再来决定是不是有必要进行精读。
 
-![](https://img-blog.csdnimg.cn/d5d7796264d44a448a02357624ab0070.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/ae89f981eb60a96054167544598106ac.png)
 
 而在精读的过程中，针对公式、图表，你也可以框选出来，让 AI 给你做详细的解释。这些工具，都可以大大降低你去学习论文的门槛，提升掌握这些复杂的知识的效率。
 
-![](https://img-blog.csdnimg.cn/c41b8479ffa047098356071384a29ed5.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/5393b9d0700d69b32aa93c9a922b40b6.png)
 
 市场上，也有许多其他类似的工具。比如 [ChatPDF](https://www.chatpdf.com/) 就可以让你上传一个 PDF 文件，然后针对这个 PDF 进行小结和提问。你可以把各种各样你要研究的分析报告交给它，快速获取到想要知道的信息。
 
@@ -189,18 +189,18 @@ print(response)
 
 当我有一个小需求需要实验一下，我就会找 ChatGPT 来帮忙。通过直接把具体的需求描述给 ChatGPT，往往我就得到了一段可用的代码。比起自己慢慢读教程、查文档，这是一个快得多的方法。虽然有时候，这个代码不一定够完美，但是以它为基础改造一下比起从头写起来要快得多。特别是需要用到一些新的我不熟悉的包的时候，就特别有用。
 
-![](https://img-blog.csdnimg.cn/4c7098d540c54ff58861d267fb0b917e.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/1cf30a9f3395c71ab5e6e2ad1cf06f13.png)
 
 而在 VS Code 里使用 Copilot 的体验也非常棒，往往只是输入了注释或者代码的开头，它就能把后面的代码直接帮你写了。如果只是一些简单的函数调用的胶水代码，Copilot 十有八九是对的。我有一些原来在 ACM 区域赛拿过金牌的朋友，都说自己现在大部分代码都是让 Copilot 来写，自己只需要负责在一些情况下修修 Bug 就好了。
 
 ### 6.5  没有创作灵感？让 AI 给些建议
 现在也已经有了很多 AI 的写作工具，但是在实际的写作上，我倒是并不依赖 AI 来产出内容。不过，在没有灵感的时候，让 AI 帮助我头脑风暴一下还是很有帮助的。当我围绕一个主题想要写点新内容的时候，我往往可以通过 [notion.ai](https://notion.ai/) 来寻找灵感。虽然它的很多主意了无新意，但也会有很多时候给出我没有思考过的角度。我们不应当依赖 AI 给我们一个答案，但是把它当成一个助手，让它给我们多出些主意，是一个非常好的使用方法。
 
-![](https://img-blog.csdnimg.cn/5e45d84d3aa24d87a94a55ab9e0a613a.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/7825dfe6c8dbb18780fd9095aaad5f12.png)
 
 同样的，你还可以尝试给 ChatGPT 设置一个不同的人设，让它从另外一个角度帮助你思考题问题。这个时候，尽管你只有一个人，但是你还是可以组织一个各路大神汇聚的团队帮助你做头脑风暴。
 
-![](https://img-blog.csdnimg.cn/b2d98495c40b46b1abaf4af91313ece3.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/3ac48ac1e52c05724a29a3c8c9199b46.png)
 
 
 > 注：让 Sam Altman 给你出出主意，如何创建一个优秀的孵化器。只要在这个头脑风暴的过程里，能得到 1-2 个对你有价值的点，就足够了。

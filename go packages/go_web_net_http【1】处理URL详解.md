@@ -107,7 +107,7 @@ func main() {
 ```go
 $ go run web1.go //运行
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200429183233848.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b2d7f3c79b9966148c6368f97feea920.png)
 ### 启动一个可以传参的web
 web2.go
 

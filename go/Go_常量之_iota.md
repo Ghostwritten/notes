@@ -1,6 +1,6 @@
 #  Go 定义常量之 iota
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/78a4f204562241f1b716f5b67894676b.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4cf76cec65fde17359de80846b71e7da.png)
 
 
 

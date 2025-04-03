@@ -1,4 +1,4 @@
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8604e0c407834e29a77f1868dff4334f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8a05ae9e6df8bda58fad542123fe6b67.png)
 
 
 
@@ -8,7 +8,7 @@
 
 ----------------------------------------[《Linux Command Docs》](https://smoothies.com.cn/linux-command-docs/About.html)------------------------------------
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/69e2d526b5ef4195b0ab5f831ff2a3b7.gif#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/4cbcba32db2b29cf4e293b77c2714e49.gif#pic_center)
  11. [Linux Command 介绍](https://blog.csdn.net/xixihahalelehehe/article/details/125219295)（updated）
 
 
@@ -159,6 +159,6 @@
  -   [Linux Command vim 文本编辑器](https://ghostwritten.blog.csdn.net/article/details/105353672)（updated）
 -  [Linux Command emacs 文本编辑器](https://ghostwritten.blog.csdn.net/article/details/105647124)（updated）
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/21a430dabd9046879b8017bf183a75db.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a4466884bbe91b63a6ffe11239a3890f.png)
 
 

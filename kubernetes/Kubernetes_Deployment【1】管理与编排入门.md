@@ -1,7 +1,7 @@
 #  Kubernetes Deployment Overview
 tags: Deployment
 
-[![在这里插入图片描述](https://img-blog.csdnimg.cn/b02019d23d04457a989df5b758e1fccc.png)](https://www.rottentomatoes.com/m/one_flew_over_the_cuckoos_nest)
+[![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/de0c26a96922cf5f34e1e73581e889b2.png)](https://www.rottentomatoes.com/m/one_flew_over_the_cuckoos_nest)
 
 
 
@@ -16,11 +16,11 @@ tags: Deployment
 
 
 Deployment 结构示意图
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5da8ae04889d4330b89c03c04462e5c0.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ab5792338e8ad3049007a3c0365279c4.png)
 
 
 deployment排查拓扑图
-![在这里插入图片描述](https://img-blog.csdnimg.cn/43652c6a0da54d31afe3aa11ee5ca1aa.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d34f1623912b96940727bee07f54f25e.png)
 
 ---
 ##  1. 简介

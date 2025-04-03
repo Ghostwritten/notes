@@ -41,7 +41,7 @@ cf app first-push
 
 Because apps are scoped to a space, app names need to be unique in that space. However, they do not need to be unique outside the space. You could therefore have an app named first-push in development, staging, and production spaces. Other users may have their own app called first-push in their spaces as well.
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5b09b02686e740a3845b2d77e643781f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b23edcbf2959c6a843030683aaf82f1e.png)
 ##  Role-Based Access Control (RBAC)
 Cloud Foundry leverages Role-Based Access Control (RBAC) to restrict user actions that affect resources within the platform. Users can be assigned to roles globally (Cloud Foundry wide) or can be assigned to roles in specific orgs and spaces. Roles control what you can do and where you can do it.
 
@@ -124,8 +124,8 @@ You can also see all users assigned to org roles and space roles by running:
 ```bash
 cf org-users <ORG> -a
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/183c2211bf22490c934d28889a6d7e5c.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9848e26bf63140e5b54c74f79525fb25.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d460c96a3782d9ff55efc00b177357bc.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/589ca1a78a78ff15c1d87ce0d3c003b4.png)
 ##  Resource Names
 You may have already noticed that the objects you create in Cloud Foundry have resource names assigned. For example, we ran cf push in a previous section, and we named the application first-push (defined in the app's manifest).
 
@@ -162,5 +162,5 @@ cf delete -r renamed-app
 
 The -r flag tells Cloud Foundry to also delete the route. We will discuss routes more in an upcoming section.
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/85f36c0c40eb4f87bde09eb4189293f2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6f423c62d933ef502f8ada878f4b8951.png)
 

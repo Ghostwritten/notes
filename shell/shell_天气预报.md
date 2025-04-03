@@ -46,10 +46,10 @@ Option          Long Option             Description
 
 $ bash weather.sh 
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ca42d896d6d2406aac57c7dd65d7d8ff.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/934ffe77c76350276651ae0a3d0f4770.png)
 
 ```bash
 $ bash weather.sh -l shanghai
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9b34d16d6da84a6a99879a4cd1c40192.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ba6b526869fdaf193bca06e2e975ed97.png)
 

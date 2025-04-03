@@ -3,7 +3,7 @@ tags: kubelet
 <!-- catalog: ~状态更新~ -->
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f01686d787a746ef960e4778b6ed7292.png#pic_center)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1bff1da010b04da5672d51ba90500968.png#pic_center)
 
 ##  1. 概览
 当 Kubernetes 中 Node 节点出现状态异常的情况下，节点上的 Pod 会被重新调度到其他节点上去，但是有的时候我们会发现节点 Down 掉以后，Pod 并不会立即触发重新调度，这实际上就是和 Kubelet 的状态更新机制密切相关的，Kubernetes 提供了一些参数配置来触发重新调度到嗯时间，下面我们来分析下 [Kubelet](https://smoothies.com.cn/kubernetes-docs/%E7%BB%84%E4%BB%B6/Kubelet/) 状态更新的基本流程。

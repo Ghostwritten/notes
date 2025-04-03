@@ -191,7 +191,7 @@ xvdf               202:80   0   10G  0 disk
   └─docker-202:1-1032-pool 253:2    0   10G  0 dm
 下图显示由 lsblk 命令输出的之前镜像的详细信息。
 ```
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210419101531367.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/436d8c8a9d580c9be40eaea88257a040.png)
 可以看出，名为 `Docker-202:1-1032-pool` 的 pool 横跨在 data 和 metadata 设备之上。pool 的命名规则为：
 
 **Docker-主设备号:二级设备号-inode号-pool**
@@ -447,15 +447,15 @@ $ mount |grep devicemapper
 使用 `devicemapper` 驱动时，容器数据层是从其创建的镜像的快照。与镜像一样，容器快照是精简置备写时拷贝快照。容器快照存储着容器的所有更改。当数据写入容器时，devicemapper 从存储池按需分配空间。
 
 下图显示一个具有一个base设备和两个镜像的精简池。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210420134735260.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/fa801206f2bd96c63ea553e89552e6f4.png)
 如果你仔细查看图表你会发现快照一个连着一个。每一个镜像数据层是它下面数据层的一个快照。每个镜像的最底端数据层是存储池中 base 设备的快照。此 base 设备是 Device Mapper 的工件，而不是 Docker 镜像数据层。
 
 一个容器是从其创建的镜像的一个快照。下图显示两个容器： 一个基于 `Ubuntu` 镜像和另一个基于 `Busybox` 镜像。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210420134826234.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1c2cd2c486c23707eedc5b5ea6c71462.png)
 ## 5. devicemapper 读写数据的过程
 ### 5.1 读数据
 我们来看下使用 `devicemapper` 存储驱动如何进行读文件。下图显示在示例容器中读取一个单独的块 [0x44f] 的过程。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210420135114145.png?)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/1693e40b272b13cbd84a8d9fe7396f29.png)
 
 
 一个应用程序请求读取容器中 0x44f 数据块。由于容器是一个镜像的一个精简快照，它没有那个数据，只有一个指向镜像存储的地方的指针。

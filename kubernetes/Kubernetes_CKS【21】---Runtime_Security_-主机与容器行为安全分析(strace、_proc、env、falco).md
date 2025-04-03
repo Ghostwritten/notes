@@ -2,16 +2,16 @@
 
 ---
 ## 1. 介绍
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524112209759.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524112336171.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/28f43ee9636ea6338c6ca8c0e6fd9a10.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/b303b2e31b7b6bcec64832d479dc00f6.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524112349590.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524112522327.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a6891c642af80ca50e32b45e004684c2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/aae1b52fd2e5ca48e3f168bb0c654b54.png)
 ## 2. Strace
 参考链接：
 [https://www.kernel.org/doc/man-pages/](https://www.kernel.org/doc/man-pages/)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524112645744.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524112657373.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/89060b082ae9701122ed2e0cff4c9153.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9635aaa9b74d80d215bafa44f0736b87.png)
 
 ```c
 root@master:~/imagev1.20.7# strace ls
@@ -197,8 +197,8 @@ exit_group(0)                           = ?
 
 ```
 ## 3. Strace and /proc on ETCD
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524113942921.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021052411400713.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/3644140ad82daa418c4e063ea3c21d55.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/402842d61e15ff78303b40f278ceec34.png)
 
 ```c
 root@master:~/imagev1.20.7# docker ps |grep etcd
@@ -513,7 +513,7 @@ kubelet
 ```
 	
 ## 4. /proc and env variables
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524140010274.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a68100c89d68fc3ee75f8ee6704c80a1.png)
 
 ```c
 root@master:~/cks/runtime-security# k run apache --image=httpd -oyaml --dry-run=client > pod.yaml
@@ -672,8 +672,8 @@ root@node2:/proc/123888#
 [falco官网](https://falco.org/)
 github: [https://github.com/falcosecurity/falco](https://github.com/falcosecurity/falco)
 k8s wtih falco: [https://v1-17.docs.kubernetes.io/docs/tasks/debug-application-cluster/falco/](https://v1-17.docs.kubernetes.io/docs/tasks/debug-application-cluster/falco/)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524141120519.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524141128843.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/629329e2fc1d2b8713f7e5bd45a75ff4.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ba73d13b56b3e6cccf3f885989c5a125.png)
 官方下载安装：[https://falco.org/docs/getting-started/installation/](https://falco.org/docs/getting-started/installation/)
 
 ```bash
@@ -723,7 +723,7 @@ May 23 23:21:00 node2 falco: Starting internal webserver, listening on port 8765
 
 ##  6. Use Falco to find malicious processes
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021052414235822.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/0735bfb070a0cdf22fc128c7c9a4b6d8.png)
 
 ```cpp
 root@master:~/cks/runtime-security# k exec -ti apache -- bash
@@ -800,12 +800,12 @@ May 23 23:33:04 node2 falco[28817]: 23:33:04.833053968: Error Package management
 
 
 ## 7. Practice - Investigate Falco rules
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524144913460.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/e2f1a50fcc724ecda4f5ecca05176b83.png)
 
 官方：[https://falco.org/docs/rules/](https://falco.org/docs/rules/)
 
 ## 8. Change Falco Rule
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210524145008291.png?shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6ae836e8c3b488bd8c1e52a44ad32df6.png)
 
 ```c
 root@master:~/cks/runtime-security# k get pods -owide

@@ -1,7 +1,7 @@
 
 
 ##  1. 准备条件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/509bfd1c231141549bcddde29aefafe2.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/c13fbe413bb375496649f954f972a3c1.png)
 
 ```bash
 bcdedit /set hypervisorlaunchtype auto

@@ -5,11 +5,11 @@
 
 
 ## cmd：dxdiag
-![在这里插入图片描述](https://img-blog.csdnimg.cn/697aa619c17e4b48905865b0b579eed8.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/337c2f69b5505398f1f9865e9a5df7af.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c5b9971ee01c4fa58415f2741190131f.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a15acdf2e84cf28d219d4a5d01195b96.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/6600eba33414423c9beca466044850d7.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d6810127799bbaa65847f22329741b4d.png)
 
 ##  开机自启
 取消开机自启动权限：

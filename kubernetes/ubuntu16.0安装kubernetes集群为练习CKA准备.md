@@ -1,7 +1,7 @@
 ## 报名
 CKA报名：[https://training.linuxfoundation.cn/](https://training.linuxfoundation.cn/)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200704104814911.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200704104834261.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5a86443c822686aa996119cb39aa3725.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5155f215dfb14ec0ac8d63ad29a22ca5.png)
 时间非常紧
 
 ## 考试注意事项
@@ -12,7 +12,7 @@ CKA报名：[https://training.linuxfoundation.cn/](https://training.linuxfoundat
 
 ## 考试流程
 jumpserver 通过公网ip远程，通过私网ip远程其他机器。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200704110746944.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5d7b41d3045e3daf8a2df172e27347fd.png)
 
 ## 基础环境配置（all）
 

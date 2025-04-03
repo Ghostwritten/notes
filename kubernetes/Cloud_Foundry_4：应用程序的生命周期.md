@@ -130,8 +130,8 @@ cf restage training-app
 重新推送时，部署配置可能会更改，具体取决于您是否更新它。 仅当提供新值时，才会覆盖现有值。 如果省略值，将使用现有的值。
 
 接下来，我们将在更新策略部分重新推送应用程序。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7d30a45d55734d07be04ed46d42d0935.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4b3e3add2de442c581f14de52ba2c95a.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d780b0746e630c604c49ee010bdd8d14.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/f1cc0dde675006636c91fd3fb0f61256.png)
 ##  更新应用程序：概述
 当您添加新功能、修复错误并总体改进您的应用程序时，您将需要部署这些更改。 无论是否停机，Cloud Foundry 都可以轻松实现这一目标。 这是你的选择。
 

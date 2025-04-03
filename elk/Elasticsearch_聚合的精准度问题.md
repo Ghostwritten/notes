@@ -5,27 +5,27 @@
 ----
 ## 1. 分布式系统的近似统计算法#
 
-## ![](https://img-blog.csdnimg.cn/20210305201721260.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+## ![](https://i-blog.csdnimg.cn/blog_migrate/7996fa13c3fff088c29c7b9d755c01e1.png)
 ## 2. Min 聚合分析的执行流程
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210305201749344.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/ae1bb3b63a6ac8126094f0a6b6583b11.png)
 ## 3. terms Aggregation 的返回值
 在 Terms Aggregation 的返回中有两个特殊的数值
 
  - `doc_count_error_upper_bound`：被遗漏的 term 分桶，包含的文档，有可能的最大值
  - `sum_other_doc_count`: 处理返回结果 bucket 的 terms 以外，其他 terms 的文档总数（总数 -返回的总数）
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210306101757584.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/580b9b397aec8adf6fb45e721548777d.png)
 ## 4. Terms 聚合分析的执行流程
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021030610190293.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a84ff18038b5b01eb21fd4ec7a4f9ff0.png)
 ## 5. Terms 不正确的案例
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210306102040826.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/842ebd99b6f60fc9bfc18adcb9f3b708.png)
 ## 6. 如何解决 Terms 不准的问题：提升 shard_size 的参数
  - Terms 聚合分析不准的原因，数据分散在多个分片上，Coordinating Node 无法获取数据全貌
  - 解决方案 1：当数据量不大时，设置 `Primary Shard` 为 1；实现准确性
  - 解决方案 2：在分布式数据上，设置 `shard_size` 参数，提高精确度
  - 原理：每次从 Shard 上额外多获取数据，提升准确率
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210306102204220.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/5fcfab6423d73e8e5dacea647feebda0.png)
 ## 7. 打开 show_term_doc_count_error
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210306102254479.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/6d671b5d22906ae56fc8f4f673677b83.png)
 ## 8. shard_size 设定
 调整 `shard size` 大小，降低 `doc_count_error_upper_bound` 来提升准确度
  - 增加整体计算量，提高了准确率，但会降低相应时间

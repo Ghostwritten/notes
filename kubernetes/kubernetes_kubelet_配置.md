@@ -5,7 +5,7 @@ tags: kubelet
 
 
 [
-![在这里插入图片描述](https://img-blog.csdnimg.cn/60087a6b79ca40e8a87cd2d0dd85a9d4.jpeg#pic_center)](https://www.callofduty.com/cn/zh)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/8a4b3c6b6d64a29b3b43bfd0e0beb478.jpeg#pic_center)](https://www.callofduty.com/cn/zh)
 
 
 

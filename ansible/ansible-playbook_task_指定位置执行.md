@@ -1,6 +1,6 @@
 
 ##  执行顺序
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ed5279bc015342aa9766968906703b73.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/386581b76ade6f08e80768beb8a730c6.png)
 1.检查play中是否存在pre_tasks定义，存在的话则顺序执行pre_tasks中定义的所有tasks
 2.如果存在pre_tasks定义，则检查是否存在触发handler，如存在则顺序执行相关触发handlers
 3.检查是否存在roles定义，如存在则顺序执行roles下的所有tasks

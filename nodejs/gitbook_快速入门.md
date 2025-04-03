@@ -167,7 +167,7 @@ Serving book on http://localhost:4000
 
 ```
 效果
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d1f24fa01cac4597b0d0bacfc7595816.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a9a84e8c6990be54c6351abcece5aa8b.png)
 图中侧栏`Introduction`的内容正是`README.md`的内容，`SUMMARY.md` 是编写界面侧栏的目录结构。
 ```bash
 $ cat README.md 
@@ -217,7 +217,7 @@ $ ls git/
 $ gitbook serve
 ```
 效果：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0815b3a0189142e38514fa050e36a66e.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/badd9776552b1dc4c665ec855a8ccab1.png)
 当 md 文件数量非常多时，我们可以利用 插件 summary 自动生成菜单 summary 文件的介绍。
 
 ##  6. README.md
@@ -259,7 +259,7 @@ book.json
 $ gitbook serve
 ```
 效果：默认的首页
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f41498785f9240f489ca325a26ca8ea9.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/18ddc3138d95a3073d136053775ac883.png)
 
 
 ##  7. book.json
@@ -327,7 +327,7 @@ Serving book on http://localhost:4000
 
 ```
 效果，只看到了一个Blog链接。
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f05532bf7a414530877a8473ad0326ce.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/d9dcd55fe59590491fa92512dd3cce50.png)
 ### 7.2 添加一个插件
 编写book.json添加新`theme-comscore`颜色插件
 
@@ -391,9 +391,9 @@ $  gitbook serve
 ```
 
 添加主题插件前：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d1f24fa01cac4597b0d0bacfc7595816.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a9a84e8c6990be54c6351abcece5aa8b.png)
 添加主题插件后：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/88eb40317f194b90ae08411d12d314a6.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/a8e00d41da50f6f8e40da0b23cfb9809.png)
 
 
 

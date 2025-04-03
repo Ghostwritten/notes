@@ -1,6 +1,6 @@
 #  go 库 Cobra 现代化的命令行框架
 
-![](https://img-blog.csdnimg.cn/de85cd5e656a4c14b9405483d1ddf3d6.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/cecb9963d89543970af3ca4262b75ad3.png)
 
 
 

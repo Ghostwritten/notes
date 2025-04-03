@@ -1,18 +1,18 @@
 
-![](https://img-blog.csdnimg.cn/2e6344937aaa48c5a240889ef5227c31.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/032ee4ca00d3d6cba2e082855b658ba7.png)
 
 
 
 ##  安装系统
 下载 [Rocky Linux 9.1 ISO](https://rockylinux.org/)
 
-![](https://img-blog.csdnimg.cn/25a457d337d8468497c3cbf2c88eab9e.png)
-![](https://img-blog.csdnimg.cn/42d3ce52eb3e49a9bf6518cd40341b23.png)
-![](https://img-blog.csdnimg.cn/57a4cdb7ad554ed7bba077438a2736ce.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/838672c90e1c5605a29fe6ddc38e0989.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/b54d41e55df0c4359d1c0a73fdb71a72.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/7436a3342e93016f6d22e2b31b084ab0.png)
 - 配置密码—— root/root
 - 配置时间和日期——上海
 - 安装目的地——默认盘
-![](https://img-blog.csdnimg.cn/d5ea62b368a34dae9ec8ea38af36fbfe.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/6f0dea0d9ff14dbe764651e4162c4ad1.png)
 自动安装后，重启即可。
 ##  配置网络
 
@@ -103,23 +103,23 @@ method=auto
 nmcli device show
 ```
 
-![](https://img-blog.csdnimg.cn/7290337d9e624cd683d1ef878068521c.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/4b798709b793f40c859655aa0bf7c9ac.png)
 
 ###  nmtui 配置 ipaddress
 执行：`nmtui`
-![](https://img-blog.csdnimg.cn/843a77fa213141fa8492333b0df76670.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/22624a9d30de0ab76de8ba444ce2391e.png)
 它已经在我们需要“编辑连接”的选择上，所以点击该`TAB`键以突出显示“`确定`”并点击`ENTER`；
 这将打开一个屏幕，显示机器上的以太网连接，并允许您选择一个。在我们的例子中，只有一个，所以它已经高亮显示了，我们只需要按下`TAB`键直到“编辑”高亮显示，然后点击`ENTER`
-![](https://img-blog.csdnimg.cn/6e6fe8e5284743c99dae4177b49fa724.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/5720898b2984969c6e17f4c898d4f472.png)
 从“Automatic”切换到“manual”
-![](https://img-blog.csdnimg.cn/2b9393fc4f814635a682a288dd678907.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/7534067c940b1011ab90903d9e75416a.png)
 
-![](https://img-blog.csdnimg.cn/23930567152a42d2b8bdfea8e74bd46a.png)
-![](https://img-blog.csdnimg.cn/ae730e44ad3d42dfb2aa2c5946a1c1a1.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/580a31a2f4bcebf0a5ec5731c5acf185.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/add3b069fe8871b6bea60d88676c3a0f.png)
 选择 ”ok“， 点击”enter“
 
 
-![](https://img-blog.csdnimg.cn/2e67f3062bda42bcbec54802d89aab33.png)
+![](https://i-blog.csdnimg.cn/blog_migrate/03636e51b70b69d901c491db942068f1.png)
 您也可以停用和重新激活您的界面`nmtui`，但让我们使用`nmcli`. 这样我们就可以把接口的去激活和接口的重新激活串起来，这样接口就不会长时间宕机了：
 
 ```bash
@@ -1146,6 +1146,16 @@ $ sed -i '/^root.*ALL=(ALL).*ALL/a\going\tALL=(ALL) \tALL' /etc/sudoers
 $ cat /etc/sudoers
 root    ALL=(ALL)       ALL
 going   ALL=(ALL)       ALL
+```
+
+
+## 安装 python
+- https://phoenixnap.com/kb/rocky-linux-python
+
+```bash
+dnf update -y
+dnf install python3 -y
+python3 -V
 ```
 
 参考：
